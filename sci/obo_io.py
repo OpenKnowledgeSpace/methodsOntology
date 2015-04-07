@@ -10,7 +10,7 @@ import os
 from collections import OrderedDict as od
 from IPython import embed
 
-n = -1  # use to define 'many ' for tag counts
+N = -1  # use to define 'many ' for tag counts
 
 od.__repr__ = dict.__repr__
 
@@ -58,8 +58,6 @@ class OboFile:
 
         with open(filename, 'wt') as f:
             f.write(str(self))
-
-
 
     def __str__(self):
         stores = [str(self.header)]
@@ -133,7 +131,14 @@ class TVPair:
     def esc(string):
         for f, r in TVPair._escapes:
             string = string.replace(f, r)
-        return string.replace('-','_')  # FIXME :/ this is different 
+        return string
+
+    @staticmethod
+    def esc_(string):
+        """ fix strings for use as names in classes """
+        if string == 'id':  # dont clobber id
+            return 'id_'
+        return string.replace('-','_').replace(':','')
 
     @staticmethod
     def parse(line):
@@ -149,55 +154,70 @@ class TVPair:
     def parse_value(value):  # TODO
         return value.strip().rstrip(), None, None
 
-
 class TVPairStore:
+    _runonce = True
+    def __new__(cls, *args, **kwargs):
+        if cls._runonce:
+            cls._tags = od()
+            for tag, limit in cls._all_tags:
+                cls._tags[tag] = limit
+            cls._runonce = False
+        return super().__new__(cls)  # FIXME somehow this is overwriting updated _tags?
+
     def __init__(self, block=None, tvpairs=None):
-        for tag, limit in self._tags:
-            self._tag_dict[tag] = limit
-            if limit == n:
-                self.__dict__[tag] = []  # may need a list
+        # keep _tags out of self.__dict__ and add new tags for all instances
+        for tag, limit in self._tags.items():
+            if limit == N:
+                self.__dict__[TVPair.esc_(tag)] = []  # may need a list
 
         if block is not None:
             lines = block.split('\n')
             for line in lines:
                 if line:
                     tvpair = TVPair(line)
-                    tag = tvpair.tag
-                    if tag == 'id':
-                        self.__dict__['id_'] = tvpair  # don't clobber id
-                    elif tag not in self._tag_dict:
-                        self._tag_dict[tag] = n  # FIXME issues with order?
-                        self.__dict__[TVPair.esc(tag)] = []
-                        self.__dict__[TVPair.esc(tag)].append(tvpair)
-                        print('NOW IN??',TVPair.esc(tag))
-                        print(self.__dict__)
-                    elif self._tag_dict[tag] == n:  # list it
-                        try:
-                            self.__dict__[TVPair.esc(tag)].append(tvpair)
-                            print(tag)
-                        except KeyError:
-                            print(tag)
-                            print(self.__dict__)
-                            raise
-                    else:
-                        self.__dict__[TVPair.esc(tag)] = tvpair
-            self.validate(warn=True)
+                    self.add_tvpair(tvpair)
+            warn = True
         else:
             for tvpair in tvpairs:
-                if tvpair.tag == 'id':
-                    self.__dict__['id_'] = tvpair  # don't clobber id
-                else:
-                    self.__dict__[tvpair.tag.replace('-','_')] = tvpair
-            self.validate()
+                self.add_tvpair(tvpair)
+            warn = False
+
+        #clean up empty tags
+        to_pop = []
+        for tag, value in self.__dict__.items():
+            if not value:
+                to_pop.append(tag)
+
+        for tag in to_pop:
+            self.__dict__.pop(tag)
+
+        self.validate(warn)
+            
+    def add_tvpair(self, tvpair):
+        tag = tvpair.tag
+        dict_tag = TVPair.esc_(tag)
+
+        if tag not in self._tags:
+            print('TAG NOT IN', tag)
+            self._tags[tag] = N  # FIXME why does this not set the value?!
+            print(self._tags[tag])
+            self.__dict__[dict_tag] = []
+
+        if self._tags[tag] == N:
+            self.__dict__[dict_tag].append(tvpair)
+        else:
+            self.__dict__[dict_tag] = tvpair
 
     @property
     def tvpairs(self):
-        #index = [c for c in zip(*self._tags)][0]  # TODO terms not in order at end?
-        index = tuple(self._tag_dict)
+        index = tuple(self._tags)
+        print(index)
 
         def key_(tvpair):
+            #print(index)
+            #print(tvpair.tag)
             out = index.index(tvpair.tag)
-            if self._tag_dict[tvpair.tag] == n:
+            if self._tags[tvpair.tag] == N:
                 sord = sorted([tvp.value for tvp in self.__dict__[tvpair.tag]])
                 #subsort multi tags by their value, +1 to ensure < next int tag
                 out += sord.index(tvpair.value) / (len(sord) + 1)
@@ -209,10 +229,13 @@ class TVPairStore:
                 # if we fail put the unknowns at the end in original order
                 #sort = len(index) + tuple(self.__dict__.keys()).index(tvpair.tag)
                 #return sort
-
         tosort = []
-
-        return sorted([tvp for tvp in self.__dict__.values()], key=key_)
+        for tvp in self.__dict__.values():
+            if type(tvp) == list:
+                tosort.extend(tvp)
+            else:
+                tosort.append(tvp)
+        return sorted(tosort, key=key_)
 
     def __str__(self):
         return '\n'.join(str(tvpair) for tvpair in self.tvpairs) + '\n'
@@ -222,13 +245,19 @@ class TVPairStore:
 
     def validate(self, warn=False):
         tags = []
-        for tvp in self.__dict__.values():
+        for tag, tvp in self.__dict__.items():
             #print(tvp)
             if tvp:
                 if type(tvp) == list:
                     tags.append(tvp[0].tag)
                 else:
-                    tags.append(tvp.tag)
+                    try:
+                        tags.append(tvp.tag)
+                    except AttributeError:
+                        embed()
+                        raise
+            else:
+                raise AttributeError('Tag %s has no values!' % tag)
 
         for tag in self._r_tags:
             if tag not in tags:
@@ -249,20 +278,19 @@ class Header(TVPairStore):
         ('date', 1),
         ('saved-by', 1),
         ('auto-generated-by', 1),
-        ('import', n),
-        ('subsetdef', n),
-        ('synonymtypedef', n),
+        ('import', N),
+        ('subsetdef', N),
+        ('synonymtypedef', N),
         ('default-namespace', 1),
-        ('remark', n),
+        ('remark', N),
         ('ontology', 1),
         #'idspace',
         #'default-relationship-id-previx',
         #'id-mapping',
     )
-    _tag_dict = od()  # XXX could just make _tags an od...
-    def __new__(cls, *args, **kwargs):
-        cls._tags = cls._all_tags
-        return super().__new__(cls)
+    #def __new__(cls, *args, **kwargs):
+        ##cls._tags = cls._all_tags
+        #return super().__new__(cls, *args, **kwargs)
 
 class Stanza(TVPairStore):
     _type_ = '<stanza>'
@@ -273,15 +301,15 @@ class Stanza(TVPairStore):
         ('is_anonymous', 1),
         ('name',1),
         ('namespace', 1),
-        ('alt_id', n), 
+        ('alt_id', N), 
         ('def', 1),
         ('comment', 1),
-        ('subset', n),
-        ('synonym', n),
-        ('acronym', n),  # i think it is just better to add this
-        ('xref', n),
+        ('subset', N),
+        ('synonym', N),
+        ('acronym', N),  # i think it is just better to add this
+        ('xref', N),
         ('instance_of', 1), ##
-        ('property_value', n), ##
+        ('property_value', N), ##
         ('domain', 1), #
         ('range', 1), #
         ('is_anti_symmetric', 1), #
@@ -291,14 +319,14 @@ class Stanza(TVPairStore):
         ('is_transitive', 1), #
         ('is_a', 1),
         ('inverse_of', 1), #
-        ('transitive_over', n), #
-        ('intersection_of', n),  # no relationships, typedefs
-        ('union_of', n),  # min 2, no relationships, typedefs
-        ('disjoint_from', n),  # no relationships, typedefs
-        ('relationship', n),
+        ('transitive_over', N), #
+        ('intersection_of', N),  # no relationships, typedefs
+        ('union_of', N),  # min 2, no relationships, typedefs
+        ('disjoint_from', N),  # no relationships, typedefs
+        ('relationship', N),
         ('is_obsolete', 1),
-        ('replaced_by', n),
-        ('consider', n),
+        ('replaced_by', N),
+        ('consider', N),
         ('created_by', 1),
         ('creation_date', 1),
     )
@@ -315,13 +343,18 @@ class Stanza(TVPairStore):
         'is_metadata_tag',
     ]
     _types = ('Term', 'Typedef', 'Instance')
-    _tag_dict = od()  # XXX could just make _tags an od...
+    def __new__(cls, *args, **kwargs):
+        if cls._runonce:
+            # if we don't wrap this it will overwrite _all_tags and ultimately update _tags
+            cls._all_tags = [tag for tag in cls._all_tags if tag[0] not in cls._bad_tags]
+        return super().__new__(cls, *args, **kwargs)
+
     def __init__(self, block=None, obofile=None, tvpairs=None):
         if block is not None and obofile is not None:
             super().__init__(block)
             type_od = getattr(obofile, self.__class__.__name__+'s')
             type_od[self.id_.value] = self  # atm we need names
-            type_od.__dict__[self.id_.value] = self
+            type_od.__dict__[TVPair.esc_(self.id_.value)] = self  # FIXME
         else:
             super().__init__(tvpairs)
 
@@ -333,15 +366,14 @@ class Term(Stanza):
     _bad_tags = ['instance_of', 'property_value']
     def __new__(cls, *args, **kwargs):
         cls._bad_tags = cls._typedef_only_tags + cls._typedef_only_tags
-        cls._tags = [tag for tag in cls._all_tags if tag[0] not in cls._bad_tags]
-        return super().__new__(cls)
+        return super().__new__(cls, *args, **kwargs)
 
 class Typedef(Stanza):
     #type_ = 'Typedef'
     _bad_tags = ('union_of', 'intersection_of', 'disjoint_from', 'instance_of', 'property_value')
-    def __new__(cls, *args, **kwargs):
-        cls._tags = [tag for tag in cls._all_tags if tag[0] not in cls._bad_tags]
-        return super().__new__(cls)
+    #def __new__(cls, *args, **kwargs):
+        #super().__new__(cls, *args, **kwargs)
+
 
 class Instance(Stanza):
     #type_ = 'Instance'
@@ -349,8 +381,8 @@ class Instance(Stanza):
     def __new__(cls, *args, **kwargs):
         cls._bad_tags = cls._typedef_only_tags + cls._typedef_only_tags
         cls._r_tags = super()._r_tags + cls._r_tags
-        cls._tags = [tag for tag in cls._all_tags if tag[0] not in cls._bad_tags]
-        return super().__new__(cls)
+        return super().__new__(cls, *args, **kwargs)
+
 
 stanza_types = {type_.__name__:type_ for type_ in (Term, Typedef, Instance)}
 
@@ -362,7 +394,8 @@ def deNone(*args):
             yield arg
 
 def main():
-    folder = '/home/tom/ni/protocols/'
+    #folder = '/home/tom/ni/protocols/'
+    folder = 'C:/Users/root/Dropbox/neuroinformatics/protocols/'
     #filename = folder + 'go.obo'
     filename = folder + 'ksm_utf8_2.obo'
     of = OboFile(filename=filename)
