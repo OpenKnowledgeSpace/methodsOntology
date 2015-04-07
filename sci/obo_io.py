@@ -144,15 +144,27 @@ class TVPair:
     def parse(line):
         try:
             tag, value = line.split(':',1)
+            esc = value.split('\!')
+            try:
+                tail, comment = esc[-1].split('!',1)
+                comment = comment.strip()
+                esc[-1] = tail.rstrip()
+                value = '\!'.join(esc)
+            except:
+                comment = None
         except ValueError:
             embed()
             raise
-        value, trailing_modifiers, comment = TVPair.parse_value(value)
+        value, trailing_modifiers = TVPair.parse_value(tag, value)
         return tag, value, trailing_modifiers, comment
 
     @staticmethod
-    def parse_value(value):  # TODO
-        return value.strip().rstrip(), None, None
+    def parse_value(tag, value):  # TODO
+        if tag =='synonym':
+            print('do special synonym stuff')
+            return value.strip().rstrip(), None
+        else:
+            return value.strip().rstrip(), None
 
 class TVPairStore:
     def __new__(cls, *args, **kwargs):
@@ -271,8 +283,6 @@ class TVPairStore:
                                          (self.__class__.__name__, tag))
 
 class Header(TVPairStore):
-    _type_ = '<header>'
-    _type_def = ('<tag-value pair>',)
     _r_tags = ('format-version', )
     _all_tags = (
         ('format-version', 1),
@@ -280,15 +290,15 @@ class Header(TVPairStore):
         ('date', 1),
         ('saved-by', 1),
         ('auto-generated-by', 1),
+        ('ontology', 1),
         ('import', N),
         ('subsetdef', N),
         ('synonymtypedef', N),
+        ('idspace', N),  # PREFIX http://uri
+        ('id-mapping', N),
+        ('default-relationship-id-previx', 1),
         ('default-namespace', 1),
         ('remark', N),
-        ('ontology', 1),
-        #'idspace',
-        #'default-relationship-id-previx',
-        #'id-mapping',
     )
 
 class Stanza(TVPairStore):
