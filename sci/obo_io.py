@@ -155,14 +155,16 @@ class TVPair:
         return value.strip().rstrip(), None, None
 
 class TVPairStore:
-    _runonce = True
     def __new__(cls, *args, **kwargs):
-        if cls._runonce:
-            cls._tags = od()
-            for tag, limit in cls._all_tags:
-                cls._tags[tag] = limit
-            cls._runonce = False
-        return super().__new__(cls)  # FIXME somehow this is overwriting updated _tags?
+        cls._tags = od()
+        for tag, limit in cls._all_tags:
+            cls._tags[tag] = limit
+        cls.__new__ = cls.___new__  # enforce runonce
+        return super().__new__(cls)
+
+    @classmethod
+    def ___new__(cls, *args, **kwargs):
+        return super().__new__(cls)
 
     def __init__(self, block=None, tvpairs=None):
         # keep _tags out of self.__dict__ and add new tags for all instances
@@ -199,7 +201,7 @@ class TVPairStore:
 
         if tag not in self._tags:
             print('TAG NOT IN', tag)
-            self._tags[tag] = N  # FIXME why does this not set the value?!
+            self._tags[tag] = N
             print(self._tags[tag])
             self.__dict__[dict_tag] = []
 
@@ -288,9 +290,6 @@ class Header(TVPairStore):
         #'default-relationship-id-previx',
         #'id-mapping',
     )
-    #def __new__(cls, *args, **kwargs):
-        ##cls._tags = cls._all_tags
-        #return super().__new__(cls, *args, **kwargs)
 
 class Stanza(TVPairStore):
     _type_ = '<stanza>'
@@ -344,10 +343,10 @@ class Stanza(TVPairStore):
     ]
     _types = ('Term', 'Typedef', 'Instance')
     def __new__(cls, *args, **kwargs):
-        if cls._runonce:
-            # if we don't wrap this it will overwrite _all_tags and ultimately update _tags
-            cls._all_tags = [tag for tag in cls._all_tags if tag[0] not in cls._bad_tags]
-        return super().__new__(cls, *args, **kwargs)
+        cls._all_tags = [tag for tag in cls._all_tags if tag[0] not in cls._bad_tags]
+        instance = super().__new__(cls, *args, **kwargs)
+        cls.__new__ = super().__new__  # enforce runonce
+        return instance  # we return here so we chain the runonce
 
     def __init__(self, block=None, obofile=None, tvpairs=None):
         if block is not None and obofile is not None:
@@ -361,27 +360,28 @@ class Stanza(TVPairStore):
     def __str__(self):
         return '['+ self.__class__.__name__ +']\n' + super().__str__()
 
+
 class Term(Stanza):
-    #type_ = 'Term'
     _bad_tags = ['instance_of', 'property_value']
     def __new__(cls, *args, **kwargs):
         cls._bad_tags = cls._typedef_only_tags + cls._typedef_only_tags
-        return super().__new__(cls, *args, **kwargs)
+        instance = super().__new__(cls, *args, **kwargs)
+        cls.__new__ = super().__new__
+        return instance
+
 
 class Typedef(Stanza):
-    #type_ = 'Typedef'
     _bad_tags = ('union_of', 'intersection_of', 'disjoint_from', 'instance_of', 'property_value')
-    #def __new__(cls, *args, **kwargs):
-        #super().__new__(cls, *args, **kwargs)
 
 
 class Instance(Stanza):
-    #type_ = 'Instance'
     _r_tags = ['instance_of',]
     def __new__(cls, *args, **kwargs):
         cls._bad_tags = cls._typedef_only_tags + cls._typedef_only_tags
         cls._r_tags = super()._r_tags + cls._r_tags
-        return super().__new__(cls, *args, **kwargs)
+        instance = super().__new__(cls, *args, **kwargs)
+        cls.__new__ = super().__new__
+        return instance
 
 
 stanza_types = {type_.__name__:type_ for type_ in (Term, Typedef, Instance)}
