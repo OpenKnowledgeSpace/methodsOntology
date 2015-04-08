@@ -6,7 +6,10 @@
     python .obo file parser and writer for the obo 1.2 spec defined at
     https://oboformat.googlecode.com/svn/trunk/doc/GO.format.obo-1_2.html
 """
+__title__ = 'obo_io'
+__author__ = 'Tom Gillespie'
 import os
+from getpass import getuser
 from collections import OrderedDict as od
 from IPython import embed
 
@@ -77,6 +80,7 @@ class TVPair:
     _type_ = '<tag-value pair>'
     _type_def = ('<tag>', '<value>', '{<trailing modifiers>}', '<comment>')
     _reserved_ids = ('OBO:TYPE','OBO:TERM','OBO:TERM_OR_TYPE','OBO:INSTANCE')
+    _datetime_fmt = '%d:%m:%Y %H:%M'  # WE USE ZULU
     _escapes = {
         '\\n':'\n',
         '\W':' ',
@@ -92,24 +96,62 @@ class TVPair:
         '\{':'{',
         '\}':'}',
               }
-    def __init__(self, line=None, tag=None, value=None, modifiers=None, comment=None):
+
+        # tag specific parsing name, encloser pairs, use for reconstruction too
+        special_children = (
+            ('subsetdef', ('name', ' ', 'desc', '"')),
+            ('synonymtypedef', ('name', ' ', 'desc', '"',  '*scope', ' ')),
+            ('idspace', ('name', ' ', 'uri', ' ', '*desc', '"')),
+            ('id-mapping', ('id', ' ', 'target', ' ')),
+
+            ('def', ('text', '"', 'xrefs', '[')),
+            ('synonym', ('text', '"', '*scope', ' ', '*synonymtypedef', ' ', 'xrefs', '[')),
+            ('xref', ('name', ' ', '*desc', '"')),
+            ('relationship', ('typedef', ' ', 'term', ' ')),
+        )
+        special_children = {k:v for k, v in special_children}
+
+        brackets = {'[':']', '{':'}', '(':')', '<':'>', '"':'"', ' ':' '}
+        brackets.update({v:k for k, v in self.brackets.items()})
+
+    def __init__(self, line=None, tag=None, value=None, modifiers=None, comment=None, **kwargs):  # TODO kwargs for specific tags
         if line is not None:
             self.parse(line)
             print(self)
             self.validate(warn=True)
         else:
-            self.tag = tag
-            self.value = value
-            self.trailing_modifiers = modifiers
-            self.comment = comment
+            self.make(tag, value, modifiers, comment, **kwargs)
             self.validate()
         #setattr(self,'__str__', self.___str__)
         #setattr(self,'__repr__', self.___repr__) # apparently __str__ defaults to __repr__ :x
+
+    def make(self, tag, value, modifiers=None, comment=None, **kwargs):
+        self.tag = tag
+        self.value = value
+        self.trailing_modifiers = modifiers
+        self.comment = comment
+        if tag in self.special_children:
+            fields = self.special_children[self.tag][::2]
+            for field in fields:
+                if field[0] == '*':
+                    try:
+                        self.__dict__[field[1:]] = kwargs[field[:1]]
+                    except KeyError:
+                        pass
+                else:  # required kwargs
+                    self.__dict__[field] = kwargs[field]
+        elif tag == 'date':
+            if value == None:
+                self._value = lambda self: datetime.strfdate(datetime.utcnow(), self._datetime_fmt)
+                self.value = property(lambda self: self._value())
+
+        #self.__dict__.update(kwargs)  # just stick the additional kwarsgs in
 
     def validate(self, warn=False):  # TODO
         if self.tag == 'id':
             if self.value in self._reserved_ids:
                 raise AttributeError('You may not use reserved term %s as an id.' % self.value)
+        # TODO validate kwargs
         # 
         #warn if we are loading an ontology and there is an error but don't fail
         #id
@@ -118,42 +160,6 @@ class TVPair:
         #synonym
         if not warn:
             print('PLS IMPLMENT ME! ;_;')
-
-    @property
-    def rest(self):
-        #return ' '.join(self._rest)  # FIXME
-        return True
-
-
-    def __str__(self):
-        string = '{}: {}'.format(self.tag, self._value())
-
-        if self.trailing_modifiers:
-            string += " " + str(self.trailing_modifiers)
-
-        if self.comment:
-            # TODO: autofill is_a comments
-            string += " ! " + self.comment
-
-        return string
-
-    def __repr__(self):
-        return str(self)
-
-    @staticmethod
-    def esc(string):
-        for f, r in TVPair._escapes:
-            string = string.replace(f, r)
-        return string
-
-    @staticmethod
-    def esc_(string):
-        """ fix strings for use as names in classes """
-        if string == 'id':  # dont clobber id
-            return 'id_'
-        elif string == 'def':  # avoid syntax errors
-            return 'def_'
-        return string.replace('-','_').replace(':','')
 
     def _value(self):  # FIXME this is super broken :/
         fields = self.special_children[self.tag][::2]
@@ -200,18 +206,18 @@ class TVPair:
             text, scope_typedef_xrefs = value[1:-1].split('" ', 1)
             scope_typedef, xrefs = scope_typedef_xrefs.split(' [', 1)
             scope_typedef.strip().rstrip()
-            print('|',scope_typedef,'|')
+
+            self.__dict__['text'] = text
+            self.__dict__['xrefs'] = self.parse_xrefs(*xrefs.split(','))
+
             if scope_typedef:  # TODO figure out which is which
                 try:
                     scope, typedef = scope_typedef.split(' ')
                 except ValueError:
                     self.parse_syno(scope_typedef)
                     return
-
-            self.__dict__['text'] = text
             self.__dict__['scope'] = scope
             self.__dict__['typedef'] = typedef
-            self.__dict__['xrefs'] = self.parse_xrefs(*xrefs.split(','))
         elif t == 'xref':  # FIXME busted as hell
             try:
                 name, description = value.split(' "', 1)
@@ -220,18 +226,18 @@ class TVPair:
                 name = value
                 description = None
             self.__dict__['name'] = name
-            self.__dict__['description'] = description  # opt
+            self.__dict__['desc'] = description  # opt
         elif t == 'subsetdef':
             name, description = value.split(' "', 1)
             description = description[:-1]
             self.__dict__['name'] = name
-            self.__dict__['description'] = description
+            self.__dict__['desc'] = description
         elif t == 'synonymtypedef':
             name, description_scope = value.split(' "', 1)
             description, scope = description_scope.split('"', 1)  # FIXME escapes :/
             scope = scope.strip
             self.__dict__['name'] = name
-            self.__dict__['description'] = description
+            self.__dict__['desc'] = description
             self.__dict__['scope'] = scope  # opt  # FIXME defaults
         elif t == 'idspace':
             name, uri_description = value.split(' ', 1)
@@ -239,7 +245,7 @@ class TVPair:
             description = description[:-1]
             self.__dict__['name'] = name
             self.__dict__['uri'] = uri
-            self.__dict__['description'] = description
+            self.__dict__['desc'] = description
         elif t == 'id-mapping':
             id_, target = value.split(' ')
             self.__dict__['id_'] = id_
@@ -268,22 +274,7 @@ class TVPair:
 
             # DEAL WITH TRAILING MODIFIERS
 
-            # tag specific parsing name, encloser pairs, use for reconstruction too
-            special_children = (
-                ('subsetdef', ('name', ' ', 'description', '"')),
-                ('synonymtypedef', ('name', ' ', 'description', '"',  '*scope', ' ')),
-                ('idspace', ('name', ' ', 'uri', ' ', '*description', '"')),
-                ('id-mapping', ('id', ' ', 'target', ' ')),
 
-                ('def', ('text', '"', 'xrefs', '[')),
-                ('synonym', ('text', '"', '*scope', ' ', '*synonymtypedef', ' ', 'xrefs', '[')),
-                ('xref', ('name', ' ', '*description', '"')),
-                ('relationship', ('typedef', ' ', 'term', ' ')),
-            )
-
-            self.special_children = {k:v for k, v in special_children}
-            self.brackets = {'[':']', '{':'}', '(':')', '<':'>', '"':'"', ' ':' '}
-            self.brackets.update({v:k for k, v in self.brackets.items()})
 
             if tag in self.special_children:  # FIXME optional fields ;_;
                 self.parse_cases(value)
@@ -374,11 +365,10 @@ class TVPair:
             raise
 
         self.tag = tag
-        #self.parse_value(value)
         self.trailing_modifiers = modifiers = None
         self.comment = comment
 
-    def brackets(self, value, brack='}'):
+    def _brackets(self, value, brack='}'):  # XXX
         back = (']','}',')','>')
         if brack in back:
             outside, inside = value.rsplit(self.brackets[brack],1)  # FIXME BAD
@@ -387,7 +377,7 @@ class TVPair:
         if brack in inside:  # too early
             TVPair.brackets(inside)
 
-    def parse_value(self, value):  # TODO
+    def _parse_value(self, value):  # XXX
         if self.tag == 'synonym':
             print('do special synonym stuff')
         elif self.tag == 'def':
@@ -396,6 +386,37 @@ class TVPair:
             pass
 
         return value.strip().rstrip()
+
+    def __str__(self):
+        string = '{}: {}'.format(self.tag, self._value())
+
+        if self.trailing_modifiers:
+            string += " " + str(self.trailing_modifiers)
+
+        if self.comment:
+            # TODO: autofill is_a comments
+            string += " ! " + self.comment
+
+        return string
+
+    def __repr__(self):
+        return str(self)
+
+    @staticmethod
+    def esc(string):
+        for f, r in TVPair._escapes:
+            string = string.replace(f, r)
+        return string
+
+    @staticmethod
+    def esc_(string):
+        """ fix strings for use as names in classes """
+        if string == 'id':  # dont clobber id
+            return 'id_'
+        elif string == 'def':  # avoid syntax errors
+            return 'def_'
+        return string.replace('-','_').replace(':','')
+
 
 
 class TVPairStore:
@@ -511,6 +532,7 @@ class TVPairStore:
 
 class Header(TVPairStore):
     _r_tags = ('format-version', )
+    _r_defaults = ('1.2',)
     _all_tags = (
         ('format-version', 1),
         ('data-version', 1),
@@ -527,6 +549,21 @@ class Header(TVPairStore):
         ('default-namespace', 1),
         ('remark', N),
     )
+    _all_defaults = {
+        'date': None,  # autogen at export?
+        'saved-by': getuser(),
+        'auto-generated-by': __title__,
+    }
+
+    def __init__(self, block=None, tvpairs=None):
+        super().__init__(block, tvpairs)
+        if block is None:
+            for tag, default in self._all_defaults.items():
+                value = self.__dict__.get(TVPair.esc_(tag), None)
+                if value is None:
+                    self.__dict__[TVPair.esc_(tag)] = TVPair(tag=tag,value=default)
+
+
 
 
 class Stanza(TVPairStore):
