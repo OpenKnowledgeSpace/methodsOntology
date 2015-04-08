@@ -96,12 +96,6 @@ class TVPair:
         if line is not None:
             self.parse(line)
             print(self)
-            return
-            tag, value, trailing_modifiers, comment = self.parse(line)
-            self.tag = tag
-            self.value = value
-            self.trailing_modifiers = trailing_modifiers
-            self.comment = comment
             self.validate(warn=True)
         else:
             self.tag = tag
@@ -109,6 +103,8 @@ class TVPair:
             self.trailing_modifiers = modifiers
             self.comment = comment
             self.validate()
+        #setattr(self,'__str__', self.___str__)
+        #setattr(self,'__repr__', self.___repr__) # apparently __str__ defaults to __repr__ :x
 
     def validate(self, warn=False):  # TODO
         if self.tag == 'id':
@@ -130,7 +126,7 @@ class TVPair:
 
 
     def __str__(self):
-        string = '{}: {}'.format(self.tag, self.value)
+        string = '{}: {}'.format(self.tag, self._value())
 
         if self.trailing_modifiers:
             string += " " + str(self.trailing_modifiers)
@@ -157,22 +153,95 @@ class TVPair:
             return 'id_'
         return string.replace('-','_').replace(':','')
 
-    @property
-    def _value(self):
+    def _value(self):  # FIXME this is super broken :/
+        raise NotImplemented('TODO BUSTER')
         fields = self.special_children[self.tag][::2]
         seps = self.special_children[self.tag][1::2]
         strings = []
         for field, sep in zip(fields, seps):
             if sep != ' ':
-                strings.apppend(sp + self.__dict__[field] + sp)
+                try:
+                    strings.append(sep + self.__dict__[field] + sep)
+                except TypeError:
+                    print('field', self.__dict__[field])
+                    raise
+                except KeyError:
+                    pass
             else:
-                strings.append(self.__dict__[field])
+                try:
+                    strings.append(self.__dict__[field])
+                except KeyError:
+                    pass
         return ' '.join(strings).strip()
+
+    def parse_xrefs(self, *xrefs):  # TODO
+        return [xref for xref in xrefs]
+
+    def parse_syno(self, scope_typedef):  # TODO 
+        self.__dict__['scope'] = scope_typedef  # FIXME
+
+    def parse_cases(self, value):
+        t = self.tag
+        if t == 'def':
+            name, xrefs = value[1:-1].split('" [')
+            self.__dict__['name'] = name
+            self.__dict__['xrefs'] = self.parse_xrefs(*xrefs.split(','))
+        elif t == 'relationship':
+            typedef, term = value.split(' ')
+            self.__dict__['typedef'] = typedef
+            self.__dict__['target_id'] = term
+        elif t == 'synonym':
+            text, scope_typedef_xrefs = value[1:-1].split('" ', 1)
+            scope_typedef, xrefs = scope_typedef_xrefs.split(' [', 1)
+            scope_typedef.strip().rstrip()
+            print('|',scope_typedef,'|')
+            if scope_typedef:  # TODO figure out which is which
+                try:
+                    scope, typedef = scope_typedef.split(' ')
+                except ValueError:
+                    self.parse_syno(scope_typedef)
+                    return
+
+            self.__dict__['text'] = text
+            self.__dict__['scope'] = scope
+            self.__dict__['typedef'] = typedef
+            self.__dict__['xrefs'] = self.parse_xrefs(*xrefs.split(','))
+        elif t == 'xref':
+            name, description = value.split(' "', 1)
+            description = description[:-1]
+            self.__dict__['name'] = name
+            self.__dict__['description'] = description  # opt
+        elif t == 'subsetdef':
+            name, description = value.split(' "', 1)
+            description = description[:-1]
+            self.__dict__['name'] = name
+            self.__dict__['description'] = description
+        elif t == 'synonymtypedef':
+            name, description_scope = value.split(' "', 1)
+            description, scope = description_scope.split('"', 1)  # FIXME escapes :/
+            scope = scope.strip
+            self.__dict__['name'] = name
+            self.__dict__['description'] = description
+            self.__dict__['scope'] = scope  # opt  # FIXME defaults
+        elif t == 'idspace':
+            name, uri_description = value.split(' ', 1)
+            uri, description  = uri_description.split(' "')
+            description = description[:-1]
+            self.__dict__['name'] = name
+            self.__dict__['uri'] = uri
+            self.__dict__['description'] = description
+        elif t == 'id-mapping':
+            id_, target = value.split(' ')
+            self.__dict__['id_'] = id_
+            self.__dict__['target'] = target
+        else:
+            raise BaseException('WHAT IS THIS I DONT EVEN')
 
     def parse(self, line):
         # we will handle extra parse values by sticking them on the tvpair instance
         try:
             tag, value = line.split(':',1)
+            self.tag = tag
             value.strip()
             comm_split = value.split('\!')
             try:
@@ -185,40 +254,52 @@ class TVPair:
             except ValueError:
                 comment = None
 
+            value = value.strip()
+
             # DEAL WITH TRAILING MODIFIERS
 
             # tag specific parsing name, encloser pairs, use for reconstruction too
             special_children = (
                 ('subsetdef', ('name', ' ', 'description', '"')),
-                ('synonymtypedef', ('name', ' ', 'description', '"',  'scope', ' ')),
-                ('idspace', ('name', ' ', 'uri', ' ', 'description', '"')),
+                ('synonymtypedef', ('name', ' ', 'description', '"',  '*scope', ' ')),
+                ('idspace', ('name', ' ', 'uri', ' ', '*description', '"')),
                 ('id-mapping', ('id', ' ', 'target', ' ')),
 
                 ('def', ('text', '"', 'xrefs', '[')),
-                ('synonym', ('text', '"', 'scope', ' ', 'synonymtypedef', ' ', 'xrefs', '[')),
-                ('xref', ('name', ' ', 'description', '"')),
+                ('synonym', ('text', '"', '*scope', ' ', '*synonymtypedef', ' ', 'xrefs', '[')),
+                ('xref', ('name', ' ', '*description', '"')),
                 ('relationship', ('typedef', ' ', 'term', ' ')),
             )
+
             self.special_children = {k:v for k, v in special_children}
-            self.brackets = {'[':']','{':'}','(':')','<':'>','"':'"',' ':' '}
+            self.brackets = {'[':']', '{':'}', '(':')', '<':'>', '"':'"', ' ':' '}
             self.brackets.update({v:k for k, v in self.brackets.items()})
 
-            if tag in self.special_children:
+            if tag in self.special_children:  # FIXME optional fields ;_;
+                self.parse_cases(value)
+                self.value = property(lambda self: self._value())
+            elif False:
                 fields = self.special_children[tag][::2]
                 seps = self.special_children[tag][1::2]
                 tail = value + ' '  #make the last split clealy
                 for sep, field in zip(seps, fields):
-                    if sep == ' ':
-                        tail = ' ' + tail
-                    self.__dict__[field], tail = tail[1:].split(self.brackets[sep], 1)
-                    tail.strip()  # derp
+                    print('TAIL', tail+'|')
+                    if field[0] == '*':
+                        field = field[1:]
+                        optional = True
 
-                embed()
-                self.value = self._value
+                    if sep == ' ':
+                        self.__dict__[field], tail = tail.split(self.brackets[sep], 1)
+                    else:
+                        self.__dict__[field], tail = tail[1:].split(self.brackets[sep], 1)
+                        tail = tail.strip()
+                    print('WORKING?',self.__dict__[field])
+                    tail.strip()  # derp
 
 
             else:
                 self.value = value.strip().rstrip()
+                self._value = lambda : self.value
 
 
             #subsetdef: NAME "desc"
@@ -380,7 +461,7 @@ class TVPairStore:
                 sord = sorted(tosort)
                 #subsort multi tags by their value, +1 to ensure < next int tag
                 out += sord.index(str(tvpair.value)) / (len(sord) + 1)
-            print(type(tvp.value))
+            print(type(tvpair.value))
             return out
             
             #try:
@@ -558,7 +639,7 @@ def main():
     filename = folder + 'ksm_utf8_2.obo'
     of = OboFile(filename=filename)
     print(of)
-    #embed()
+    embed()
 
 if __name__ == '__main__':
     main()
