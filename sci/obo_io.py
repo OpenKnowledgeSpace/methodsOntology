@@ -72,9 +72,11 @@ class OboFile:
 
         return s
 
+
 class TVPair:
     _type_ = '<tag-value pair>'
     _type_def = ('<tag>', '<value>', '{<trailing modifiers>}', '<comment>')
+    _reserved_ids = ('OBO:TYPE','OBO:TERM','OBO:TERM_OR_TYPE','OBO:INSTANCE')
     _escapes = {
         '\\n':'\n',
         '\W':' ',
@@ -92,6 +94,9 @@ class TVPair:
               }
     def __init__(self, line=None, tag=None, value=None, modifiers=None, comment=None):
         if line is not None:
+            self.parse(line)
+            print(self)
+            return
             tag, value, trailing_modifiers, comment = self.parse(line)
             self.tag = tag
             self.value = value
@@ -106,6 +111,9 @@ class TVPair:
             self.validate()
 
     def validate(self, warn=False):  # TODO
+        if self.tag == 'id':
+            if self.value in self._reserved_ids:
+                raise AttributeError('You may not use reserved term %s as an id.' % self.value)
         # 
         #warn if we are loading an ontology and there is an error but don't fail
         #id
@@ -115,13 +123,22 @@ class TVPair:
         if not warn:
             print('PLS IMPLMENT ME! ;_;')
 
+    @property
+    def rest(self):
+        #return ' '.join(self._rest)  # FIXME
+        return True
+
+
     def __str__(self):
-        string = "{}: {}".format(self.tag, self.value)
+        string = '{}: {}'.format(self.tag, self.value)
+
         if self.trailing_modifiers:
             string += " " + str(self.trailing_modifiers)
+
         if self.comment:
             # TODO: autofill is_a comments
             string += " ! " + self.comment
+
         return string
 
     def __repr__(self):
@@ -140,31 +157,155 @@ class TVPair:
             return 'id_'
         return string.replace('-','_').replace(':','')
 
-    @staticmethod
-    def parse(line):
+    @property
+    def _value(self):
+        fields = self.special_children[self.tag][::2]
+        seps = self.special_children[self.tag][1::2]
+        strings = []
+        for field, sep in zip(fields, seps):
+            if sep != ' ':
+                strings.apppend(sp + self.__dict__[field] + sp)
+            else:
+                strings.append(self.__dict__[field])
+        return ' '.join(strings).strip()
+
+    def parse(self, line):
+        # we will handle extra parse values by sticking them on the tvpair instance
         try:
             tag, value = line.split(':',1)
-            esc = value.split('\!')
+            value.strip()
+            comm_split = value.split('\!')
             try:
-                tail, comment = esc[-1].split('!',1)
+                # comment
+                tail, comment = comm_split[-1].split('!',1)
                 comment = comment.strip()
-                esc[-1] = tail.rstrip()
-                value = '\!'.join(esc)
-            except:
+                comm_split[-1] = tail
+                value = '\!'.join(comm_split)
+                
+            except ValueError:
                 comment = None
+
+            # DEAL WITH TRAILING MODIFIERS
+
+            # tag specific parsing name, encloser pairs, use for reconstruction too
+            special_children = (
+                ('subsetdef', ('name', ' ', 'description', '"')),
+                ('synonymtypedef', ('name', ' ', 'description', '"',  'scope', ' ')),
+                ('idspace', ('name', ' ', 'uri', ' ', 'description', '"')),
+                ('id-mapping', ('id', ' ', 'target', ' ')),
+
+                ('def', ('text', '"', 'xrefs', '[')),
+                ('synonym', ('text', '"', 'scope', ' ', 'synonymtypedef', ' ', 'xrefs', '[')),
+                ('xref', ('name', ' ', 'description', '"')),
+                ('relationship', ('typedef', ' ', 'term', ' ')),
+            )
+            self.special_children = {k:v for k, v in special_children}
+            self.brackets = {'[':']','{':'}','(':')','<':'>','"':'"',' ':' '}
+            self.brackets.update({v:k for k, v in self.brackets.items()})
+
+            if tag in self.special_children:
+                fields = self.special_children[tag][::2]
+                seps = self.special_children[tag][1::2]
+                tail = value + ' '  #make the last split clealy
+                for sep, field in zip(seps, fields):
+                    if sep == ' ':
+                        tail = ' ' + tail
+                    self.__dict__[field], tail = tail[1:].split(self.brackets[sep], 1)
+                    tail.strip()  # derp
+
+                embed()
+                self.value = self._value
+
+
+            else:
+                self.value = value.strip().rstrip()
+
+
+            #subsetdef: NAME "desc"
+            #synonymtypedef: NAME "desc" SCOPE
+            #idspace: NAME URI "desc"
+            #id-mapping: NAME TARGET
+
+            #def: "definition" [dbxrefs]
+            #subset: subsetdef  ! if it is not a subsetdef ParseError it
+            #synonym: "name" SCOPE synonymtypedef [xrefs]  ! parse error on no match a std
+            #xref: TODO
+            #is_a: #XXX we are not going to support all the other crazy stuff
+            #intersection_of: ! at least 2
+            #union_of: ! at least 2
+            #relationship: Typedef.id Term.id
+            #is_obsolete: ! true or false
+            #replaced_by: ! only if is_obsolete: true
+            #consider: ! only if is_obsolete: true
+
+            #dbxref: <name> "<description>" {modifiers}
+
+
+            """
+            # check for quotes  BAD
+            if value[0] == '"':
+                out = value.split('\\"')
+                if len(out) > 1:
+                    out[-1], rest = out[-1].split('"')
+                    value = '\\"'.join(out)
+                else:
+                    value, rest = value[1:].split('"', 1)
+
+                if len(rest):  # last expected is []
+                    # check for modifiers
+                    if rest[-1] == '}':
+                        rest, modifiers = rest[-1].split('{', 1)
+                        modifiers = eval('dict(' + modifiers + ')')  # danger?
+                        rest.rstrip()
+                    else:
+                        modifiers = {}  # this will make it easier to add stuff later
+
+
+
+            else:  # there is only the string value
+                self.value = value.rstrip()
+                #return
+
+
+
+
+            
+            value = value.rstrip()
+            if value[-1] == '}':
+                value, modifiers = self.brackets(value[:-1])
+                modifiers = 'dict(' + modifiers + ')'
+                modifiers = eval(modifiers)
+            else:
+                modifiers = None
+            #"""
         except ValueError:
             embed()
             raise
-        value, trailing_modifiers = TVPair.parse_value(tag, value)
-        return tag, value, trailing_modifiers, comment
 
-    @staticmethod
-    def parse_value(tag, value):  # TODO
-        if tag =='synonym':
-            print('do special synonym stuff')
-            return value.strip().rstrip(), None
+        self.tag = tag
+        #self.parse_value(value)
+        self.trailing_modifiers = modifiers = None
+        self.comment = comment
+
+    def brackets(self, value, brack='}'):
+        back = (']','}',')','>')
+        if brack in back:
+            outside, inside = value.rsplit(self.brackets[brack],1)  # FIXME BAD
         else:
-            return value.strip().rstrip(), None
+            inside, outside = value.split(match[brack],1)  # FIXME BAD
+        if brack in inside:  # too early
+            TVPair.brackets(inside)
+
+    def parse_value(self, value):  # TODO
+        if self.tag == 'synonym':
+            print('do special synonym stuff')
+        elif self.tag == 'def':
+            print('split up the []')
+        else:
+            pass
+
+        return value.strip().rstrip()
+
 
 class TVPairStore:
     def __new__(cls, *args, **kwargs):
@@ -232,9 +373,14 @@ class TVPairStore:
             #print(tvpair.tag)
             out = index.index(tvpair.tag)
             if self._tags[tvpair.tag] == N:
-                sord = sorted([tvp.value for tvp in self.__dict__[tvpair.tag]])
+                tosort = []
+                for tvp in self.__dict__[tvpair.tag]:
+                    tosort.append(str(tvp.value))
+                #sord = sorted([tvp.value for tvp in self.__dict__[tvpair.tag]])
+                sord = sorted(tosort)
                 #subsort multi tags by their value, +1 to ensure < next int tag
-                out += sord.index(tvpair.value) / (len(sord) + 1)
+                out += sord.index(str(tvpair.value)) / (len(sord) + 1)
+            print(type(tvp.value))
             return out
             
             #try:
@@ -282,6 +428,7 @@ class TVPairStore:
                     raise AttributeError('%s must have a tag of type %s' %
                                          (self.__class__.__name__, tag))
 
+
 class Header(TVPairStore):
     _r_tags = ('format-version', )
     _all_tags = (
@@ -300,6 +447,7 @@ class Header(TVPairStore):
         ('default-namespace', 1),
         ('remark', N),
     )
+
 
 class Stanza(TVPairStore):
     _type_ = '<stanza>'
@@ -404,12 +552,13 @@ def deNone(*args):
             yield arg
 
 def main():
-    #folder = '/home/tom/ni/protocols/'
-    folder = 'C:/Users/root/Dropbox/neuroinformatics/protocols/'
+    folder = '/home/tom/ni/protocols/'
+    #folder = 'C:/Users/root/Dropbox/neuroinformatics/protocols/'
     #filename = folder + 'go.obo'
     filename = folder + 'ksm_utf8_2.obo'
     of = OboFile(filename=filename)
-    embed()
+    print(of)
+    #embed()
 
 if __name__ == '__main__':
     main()
