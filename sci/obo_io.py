@@ -151,28 +151,34 @@ class TVPair:
         """ fix strings for use as names in classes """
         if string == 'id':  # dont clobber id
             return 'id_'
+        elif string == 'def':  # avoid syntax errors
+            return 'def_'
         return string.replace('-','_').replace(':','')
 
     def _value(self):  # FIXME this is super broken :/
-        raise NotImplemented('TODO BUSTER')
         fields = self.special_children[self.tag][::2]
         seps = self.special_children[self.tag][1::2]
-        strings = []
+        string = ''
+
         for field, sep in zip(fields, seps):
-            if sep != ' ':
-                try:
-                    strings.append(sep + self.__dict__[field] + sep)
-                except TypeError:
-                    print('field', self.__dict__[field])
-                    raise
-                except KeyError:
-                    pass
+            if field == 'def':
+                embed()
+            if sep == ' ':
+                extra = ''
             else:
-                try:
-                    strings.append(self.__dict__[field])
-                except KeyError:
-                    pass
-        return ' '.join(strings).strip()
+                extra = ' '
+            
+            try:
+                string += extra + sep + self.__dict__[self.esc_(field)] + self.brackets[sep]
+            except TypeError:
+                string += extra + sep
+                string += ', '.join(self.__dict__[self.esc_(field)])
+                string += self.brackets[sep]
+                #raise
+            except KeyError:
+                pass
+
+        return string.strip()
 
     def parse_xrefs(self, *xrefs):  # TODO
         return [xref for xref in xrefs]
@@ -183,8 +189,8 @@ class TVPair:
     def parse_cases(self, value):
         t = self.tag
         if t == 'def':
-            name, xrefs = value[1:-1].split('" [')
-            self.__dict__['name'] = name
+            text, xrefs = value[1:-1].split('" [')
+            self.__dict__['text'] = text
             self.__dict__['xrefs'] = self.parse_xrefs(*xrefs.split(','))
         elif t == 'relationship':
             typedef, term = value.split(' ')
@@ -206,9 +212,13 @@ class TVPair:
             self.__dict__['scope'] = scope
             self.__dict__['typedef'] = typedef
             self.__dict__['xrefs'] = self.parse_xrefs(*xrefs.split(','))
-        elif t == 'xref':
-            name, description = value.split(' "', 1)
-            description = description[:-1]
+        elif t == 'xref':  # FIXME busted as hell
+            try:
+                name, description = value.split(' "', 1)
+                description = description[:-1]
+            except ValueError:
+                name = value
+                description = None
             self.__dict__['name'] = name
             self.__dict__['description'] = description  # opt
         elif t == 'subsetdef':
@@ -447,29 +457,17 @@ class TVPairStore:
     @property
     def tvpairs(self):
         index = tuple(self._tags)
-        print(index)
 
         def key_(tvpair):
-            #print(index)
-            #print(tvpair.tag)
             out = index.index(tvpair.tag)
             if self._tags[tvpair.tag] == N:
                 tosort = []
-                for tvp in self.__dict__[tvpair.tag]:
-                    tosort.append(str(tvp.value))
-                #sord = sorted([tvp.value for tvp in self.__dict__[tvpair.tag]])
+                for tvp in self.__dict__[TVPair.esc_(tvpair.tag)]:
+                    tosort.append(tvp._value())
                 sord = sorted(tosort)
-                #subsort multi tags by their value, +1 to ensure < next int tag
-                out += sord.index(str(tvpair.value)) / (len(sord) + 1)
-            print(type(tvpair.value))
+                out += sord.index(tvpair._value()) / (len(sord) + 1)
             return out
             
-            #try:
-            #except ValueError:
-                #print('TAG FAIL',tvpair)
-                # if we fail put the unknowns at the end in original order
-                #sort = len(index) + tuple(self.__dict__.keys()).index(tvpair.tag)
-                #return sort
         tosort = []
         for tvp in self.__dict__.values():
             if type(tvp) == list:
@@ -503,8 +501,9 @@ class TVPairStore:
         for tag in self._r_tags:
             if tag not in tags:
                 if warn:
-                    raise ImportWarning('%s %s is missing a required tag %s' %
-                                        (self.__class__.__name__, str(self), tag))
+                    print('probably a multipart definition')  # TODO
+                    #raise ImportWarning('%s %s is missing a required tag %s' %
+                                        #(self.__class__.__name__, str(self), tag))
                 else:
                     raise AttributeError('%s must have a tag of type %s' %
                                          (self.__class__.__name__, tag))
@@ -633,10 +632,12 @@ def deNone(*args):
             yield arg
 
 def main():
-    folder = '/home/tom/ni/protocols/'
+    #folder = '/home/tom/ni/protocols/'
+    folder = '/home/tgillesp/projects/'
     #folder = 'C:/Users/root/Dropbox/neuroinformatics/protocols/'
+    filename = folder + 'ero.obo'
     #filename = folder + 'go.obo'
-    filename = folder + 'ksm_utf8_2.obo'
+    #filename = folder + 'ksm_utf8_2.obo'
     of = OboFile(filename=filename)
     print(of)
     embed()
