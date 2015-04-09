@@ -64,9 +64,19 @@ class OboFile:
                 block_type, block = block.split(']\n',1)
                 type_ = stanza_types[block_type]
                 type_(block, self)
+
+            self.Terms.names = {}
+            for id_, term in self.Terms.items():  # TODO for nonparse
+                if term.name.value not in self.Terms.names:
+                    self.Terms.names[term.name.value] = term
+                elif type(self.Terms.names[term.name.value]) == list:
+                    self.Terms.names[term.name.value].append(term)
+                else:
+                    existing = self.Terms.names.pop(term.name.value)
+                    self.Terms.names[term.name.value] = [existing, term]
         else:
             self.header = header
-            self.Terms = terms
+            self.Terms = terms  # TODO this should take iters not ods
             self.Typedefs = typedefs
             self.Instances = instances
 
@@ -353,6 +363,18 @@ class TVPair:
             self.value = value
             #self._value is already efault for this case
 
+    def __eq__(self, other):
+        if type(self) == type(other):
+            if self.value == other.value:
+                return True
+            else:
+                return False
+        else:
+            return False
+
+    def __ne__(self, other):
+        return not other == self
+
     def __str__(self):
         string = '{}: {}'.format(self.tag, self._value())
 
@@ -429,14 +451,21 @@ class TVPairStore:
         tag = tvpair.tag
         dict_tag = TVPair.esc_(tag)
 
-        if tag not in self._tags:
-            print('TAG NOT IN', tag)
-            self._tags[tag] = N
-            print(self._tags[tag])
-            self.__dict__[dict_tag] = []
+        if tag not in self.__dict__:
+            if tag not in self._tags:
+                print('TAG NOT IN', tag)
+                self._tags[tag] = N
+                print(self._tags[tag])
+                self.__dict__[dict_tag] = []
+            elif self._tags[tag] == N:
+                self.__dict__[dict_tag] = []
 
         if self._tags[tag] == N:
-            self.__dict__[dict_tag].append(tvpair)
+            try:
+                self.__dict__[dict_tag].append(tvpair)
+            except KeyError:
+                embed()
+                raise
         else:
             self.__dict__[dict_tag] = tvpair
 
@@ -534,7 +563,6 @@ class Header(TVPairStore):
         TVPair.factory('saved-by', getuser(), dict_=updated)
         tvpairs = self._tvpairs(updated)
         return '\n'.join(str(tvpair) for tvpair in tvpairs) + '\n'
-
 
 
 class Stanza(TVPairStore):
@@ -639,10 +667,12 @@ def deNone(*args):
         else:
             yield arg
 
+__all__ = [OboFile.__name__, TVPair.__name__, Header.__name__, Term.__name__, Typedef.__name__, Instance.__name__]
+
 def main():
-    folder = '/home/tom/ni/protocols/'
+    #folder = '/home/tom/ni/protocols/'
     #folder = '/home/tgillesp/projects/'
-    #folder = 'C:/Users/root/Dropbox/neuroinformatics/protocols/'
+    folder = 'C:/Users/root/Dropbox/neuroinformatics/protocols/'
     filename = folder + 'ero.obo'
     #filename = folder + 'badobo.obo'
     #filename = folder + 'ksm_utf8_2.obo'
