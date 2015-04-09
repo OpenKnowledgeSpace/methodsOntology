@@ -132,6 +132,8 @@ class TVPair:
         ('synonym', ('text', '"', '*scope', ' ', '*typedef', ' ', 'xrefs', '[')),
         ('xref', ('name', ' ', '*desc', '"')),
         ('relationship', ('typedef', ' ', 'target_id', ' ')),
+
+        ('property_value', ('type_id', ' ', 'val', ' ', '*datatype', ' ')),  # WAT
     )
     special_children = {k:v for k, v in special_children}
 
@@ -253,6 +255,16 @@ class TVPair:
                 description = None
             self.__dict__['name'] = name
             self.__dict__['desc'] = description  # opt
+        elif t == 'property_value':
+            type_id, val_datatype = value.split(' ', 1)
+            try:
+                val, datatype = val_datatype.split(' ', 1)
+            except ValueError:
+                val = val_datatype
+                datatype = None
+            self.__dict__['type_id'] = type_id
+            self.__dict__['val'] = val
+            self.__dict__['datatype'] = datatype
         elif t == 'subsetdef':
             name, description = value.split(' "', 1)
             description = description[:-1]
@@ -441,7 +453,7 @@ class TVPairStore:
                 tosort = []
                 for tvp in self.__dict__[TVPair.esc_(tvpair.tag)]:
                     tosort.append(tvp._value())
-                sord = sorted(tosort, key=lambda a: a.lower())
+                sord = sorted(tosort, key=lambda a: a.lower())  # FIXME isn't quit right
                 out += sord.index(tvpair._value()) / (len(sord) + 1)
             return out
             
@@ -542,7 +554,6 @@ class Stanza(TVPairStore):
         ('acronym', N),  # i think it is just better to add this
         ('xref', N),
         ('instance_of', 1), ##
-        ('property_value', N), ##
         ('domain', 1), #
         ('range', 1), #
         ('is_anti_symmetric', 1), #
@@ -557,6 +568,7 @@ class Stanza(TVPairStore):
         ('union_of', N),  # min 2, no relationships, typedefs
         ('disjoint_from', N),  # no relationships, typedefs
         ('relationship', N),
+        ('property_value', N), ##
         ('is_obsolete', 1),
         ('replaced_by', N),
         ('consider', N),
@@ -598,7 +610,7 @@ class Stanza(TVPairStore):
 class Term(Stanza):
     _bad_tags = ['instance_of']
     def __new__(cls, *args, **kwargs):
-        cls._bad_tags = cls._typedef_only_tags + cls._typedef_only_tags
+        cls._bad_tags += cls._typedef_only_tags
         instance = super().__new__(cls, *args, **kwargs)
         cls.__new__ = super().__new__
         return instance
@@ -611,7 +623,7 @@ class Typedef(Stanza):
 class Instance(Stanza):
     _r_tags = ['instance_of',]
     def __new__(cls, *args, **kwargs):
-        cls._bad_tags = cls._typedef_only_tags + cls._typedef_only_tags
+        cls._bad_tags += cls._typedef_only_tags
         cls._r_tags = super()._r_tags + cls._r_tags
         instance = super().__new__(cls, *args, **kwargs)
         cls.__new__ = super().__new__
