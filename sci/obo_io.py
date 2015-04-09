@@ -90,8 +90,9 @@ class OboFile:
             print('file exists, renaming to %s' % filename)
             self.write(filename)
 
-        with open(filename, 'wt') as f:
-            f.write(str(self))  # FIXME this is incredibly slow for big files :/
+        else:
+            with open(filename, 'wt') as f:
+                f.write(str(self))  # FIXME this is incredibly slow for big files :/
 
     def __str__(self):
         stores = [str(self.header)]
@@ -205,7 +206,7 @@ class TVPair:
         return string.strip()
 
     def parse_xrefs(self, *xrefs):  # TODO
-        return [xref for xref in xrefs]
+        return [xref.strip().rstrip() for xref in xrefs]
 
     def parse_syno(self, scope_typedef):  # TODO 
         self.__dict__['scope'] = scope_typedef  # FIXME
