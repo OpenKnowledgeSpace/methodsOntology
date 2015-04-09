@@ -23,7 +23,6 @@
 ####
 # TODO
 # location of ontology tag in header
-# sort multiple fields in a Stanza by all lowercase order
 # relationship missing target_id
 
 """
@@ -132,7 +131,7 @@ class TVPair:
         ('def', ('text', '"', 'xrefs', '[')),
         ('synonym', ('text', '"', '*scope', ' ', '*typedef', ' ', 'xrefs', '[')),
         ('xref', ('name', ' ', '*desc', '"')),
-        ('relationship', ('typedef', ' ', 'term', ' ')),
+        ('relationship', ('typedef', ' ', 'target_id', ' ')),
     )
     special_children = {k:v for k, v in special_children}
 
@@ -193,6 +192,7 @@ class TVPair:
             try:
                 value = self.__dict__[self.esc_(field)]
             except KeyError:
+                embed()
                 raise
 
             if type(value) == str:
@@ -218,7 +218,7 @@ class TVPair:
         self.__dict__['scope'] = scope_typedef  # FIXME
         self.__dict__['typedef'] = None
 
-    def parse_cases(self, value):
+    def parse_cases(self, value):  # TODO define the subfield names in one place
         t = self.tag
         if t == 'def':
             text, xrefs = value[1:-1].split('" [')
@@ -441,7 +441,7 @@ class TVPairStore:
                 tosort = []
                 for tvp in self.__dict__[TVPair.esc_(tvpair.tag)]:
                     tosort.append(tvp._value())
-                sord = sorted(tosort)
+                sord = sorted(tosort, key=lambda a: a.lower())
                 out += sord.index(tvpair._value()) / (len(sord) + 1)
             return out
             
@@ -596,7 +596,7 @@ class Stanza(TVPairStore):
 
 
 class Term(Stanza):
-    _bad_tags = ['instance_of', 'property_value']
+    _bad_tags = ['instance_of']
     def __new__(cls, *args, **kwargs):
         cls._bad_tags = cls._typedef_only_tags + cls._typedef_only_tags
         instance = super().__new__(cls, *args, **kwargs)
@@ -605,7 +605,7 @@ class Term(Stanza):
 
 
 class Typedef(Stanza):
-    _bad_tags = ('union_of', 'intersection_of', 'disjoint_from', 'instance_of', 'property_value')
+    _bad_tags = ('union_of', 'intersection_of', 'disjoint_from', 'instance_of')
 
 
 class Instance(Stanza):
@@ -631,8 +631,8 @@ def main():
     folder = '/home/tom/ni/protocols/'
     #folder = '/home/tgillesp/projects/'
     #folder = 'C:/Users/root/Dropbox/neuroinformatics/protocols/'
-    #filename = folder + 'ero.obo'
-    filename = folder + 'badobo.obo'
+    filename = folder + 'ero.obo'
+    #filename = folder + 'badobo.obo'
     #filename = folder + 'ksm_utf8_2.obo'
     of = OboFile(filename=filename)
     #print(of)
