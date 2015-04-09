@@ -22,14 +22,8 @@
 
 ####
 # TODO
-# too many spaces in xrefs
-# too many spaces between quotes and name in subset def
 # location of ontology tag in header
-# synonymtypedef is missing SCOPE
-# synonym is missing SCOPE
-# for some reason not getting multiple is_a instances on a line :/
 # sort multiple fields in a Stanza by all lowercase order
-# xref missing desc
 # relationship missing target_id
 
 """
@@ -136,7 +130,7 @@ class TVPair:
         ('id-mapping', ('id', ' ', 'target', ' ')),
 
         ('def', ('text', '"', 'xrefs', '[')),
-        ('synonym', ('text', '"', '*scope', ' ', '*synonymtypedef', ' ', 'xrefs', '[')),
+        ('synonym', ('text', '"', '*scope', ' ', '*typedef', ' ', 'xrefs', '[')),
         ('xref', ('name', ' ', '*desc', '"')),
         ('relationship', ('typedef', ' ', 'term', ' ')),
     )
@@ -186,22 +180,34 @@ class TVPair:
         string = ''
 
         for field, sep in zip(fields, seps):
-            if field == 'def':
-                embed()
             if sep == ' ':
                 extra = ''
             else:
                 extra = ' '
+
+            if field[0] == '*':
+                field = field[1:]
+                if not self.__dict__[self.esc_(field)]:
+                    continue
             
             try:
-                string += extra + sep + self.__dict__[self.esc_(field)] + self.brackets[sep]
-            except TypeError:
-                string += extra + sep
-                string += ', '.join(self.__dict__[self.esc_(field)])
-                string += self.brackets[sep]
-                #raise
+                value = self.__dict__[self.esc_(field)]
             except KeyError:
-                pass
+                raise
+
+            if type(value) == str:
+                string += extra + sep + value
+                if sep != ' ':
+                    string += self.brackets[sep]  # prevent double spaces
+            elif type(value) == list:
+                if sep != '[':
+                    raise TypeError('um what? lists should be bracketed?!')
+                string += extra + sep
+                string += ', '.join(value)
+                string += self.brackets[sep]
+            else:
+                embed()
+                raise TypeError('wtf you giving me?')
 
         return string.strip()
 
@@ -210,6 +216,7 @@ class TVPair:
 
     def parse_syno(self, scope_typedef):  # TODO 
         self.__dict__['scope'] = scope_typedef  # FIXME
+        self.__dict__['typedef'] = None
 
     def parse_cases(self, value):
         t = self.tag
@@ -254,7 +261,7 @@ class TVPair:
         elif t == 'synonymtypedef':
             name, description_scope = value.split(' "', 1)
             description, scope = description_scope.split('"', 1)  # FIXME escapes :/
-            scope = scope.strip
+            scope = scope.strip()
             self.__dict__['name'] = name
             self.__dict__['desc'] = description
             self.__dict__['scope'] = scope  # opt  # FIXME defaults
