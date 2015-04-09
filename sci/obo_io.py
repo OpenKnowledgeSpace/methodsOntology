@@ -24,8 +24,6 @@
 # TODO
 # too many spaces in xrefs
 # too many spaces between quotes and name in subset def
-# too many saved-by lines
-# too many auto-generated-by lines
 # location of ontology tag in header
 # synonymtypedef is missing SCOPE
 # synonym is missing SCOPE
@@ -79,7 +77,7 @@ class OboFile:
             self.Typedefs = typedefs
             self.Instances = instances
 
-    def write(self, filename):
+    def write(self, filename):  #FIXME this is bugged
         if os.path.exists(filename):
             name, ext = filename.rsplit('.',1)
             try:
@@ -159,7 +157,7 @@ class TVPair:
     def factory(tag, value=None, modifiers=None, comment=None, dict_=None, **kwargs):
         tvp = TVPair(tag=tag, value=value, modifiers=None, comment=None, **kwargs)
         if dict_:
-            dict_[tag] = tvp
+            dict_[TVPair.esc_(tag)] = tvp
         else:
             return tvp
 
@@ -510,6 +508,7 @@ class Header(TVPairStore):
             also overwriting the original data.
         """
         updated = {k:v for k, v in self.__dict__.items()}
+        print(updated.keys())
         TVPair.factory('date', datetime.strftime(datetime.utcnow(), self._datetime_fmt),dict_=updated)
         TVPair.factory('auto-generated-by', __title__, dict_=updated)
         TVPair.factory('saved-by', getuser(), dict_=updated)
@@ -543,7 +542,7 @@ class Stanza(TVPairStore):
         ('is_reflexive', 1), #
         ('is_symmetric', 1), #
         ('is_transitive', 1), #
-        ('is_a', 1),
+        ('is_a', N),
         ('inverse_of', 1), #
         ('transitive_over', N), #
         ('intersection_of', N),  # no relationships, typedefs
@@ -621,11 +620,11 @@ def deNone(*args):
             yield arg
 
 def main():
-    #folder = '/home/tom/ni/protocols/'
-    folder = '/home/tgillesp/projects/'
+    folder = '/home/tom/ni/protocols/'
+    #folder = '/home/tgillesp/projects/'
     #folder = 'C:/Users/root/Dropbox/neuroinformatics/protocols/'
     #filename = folder + 'ero.obo'
-    filename = folder + 'go.obo'
+    filename = folder + 'badobo.obo'
     #filename = folder + 'ksm_utf8_2.obo'
     of = OboFile(filename=filename)
     #print(of)
