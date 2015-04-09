@@ -1,5 +1,39 @@
 #!/usr/bin/env python3
 
+#subsetdef: NAME "desc"
+#synonymtypedef: NAME "desc" SCOPE
+#idspace: NAME URI "desc"
+#id-mapping: NAME TARGET
+
+#def: "definition" [dbxrefs]
+#subset: subsetdef  ! if it is not a subsetdef ParseError it
+#synonym: "name" SCOPE synonymtypedef [xrefs]  ! parse error on no match a std
+#xref: TODO
+#is_a: #XXX we are not going to support all the other crazy stuff
+#intersection_of: ! at least 2
+#union_of: ! at least 2
+#relationship: Typedef.id Term.id
+#is_obsolete: ! true or false
+#replaced_by: ! only if is_obsolete: true
+#consider: ! only if is_obsolete: true
+
+#dbxref: <name> "<description>" {modifiers}
+
+
+####
+# TODO
+# too many spaces in xrefs
+# too many spaces between quotes and name in subset def
+# too many saved-by lines
+# too many auto-generated-by lines
+# location of ontology tag in header
+# synonymtypedef is missing SCOPE
+# synonym is missing SCOPE
+# for some reason not getting multiple is_a instances on a line :/
+# sort multiple fields in a Stanza by all lowercase order
+# xref missing desc
+# relationship missing target_id
+
 """
     obo_io.py
 
@@ -53,15 +87,13 @@ class OboFile:
                 n = int(num)
                 n += 1
                 filename = prefix + '_' + str(n) + '.' + ext
-            except:
+            except ValueError:
                 filename = name + '_1.' + ext
-                raise
             print('file exists, renaming to %s' % filename)
             self.write(filename)
 
-
         with open(filename, 'wt') as f:
-            f.write(str(self))
+            f.write(str(self))  # FIXME this is incredibly slow for big files :/
 
     def __str__(self):
         stores = [str(self.header)]
@@ -117,13 +149,11 @@ class TVPair:
     def __init__(self, line=None, tag=None, value=None, modifiers=None, comment=None, **kwargs):  # TODO kwargs for specific tags
         if line is not None:
             self.parse(line)
-            print(self)
+            #print(self)
             self.validate(warn=True)
         else:
             self.make(tag, value, modifiers, comment, **kwargs)
             self.validate()
-        #setattr(self,'__str__', self.___str__)
-        #setattr(self,'__repr__', self.___repr__) # apparently __str__ defaults to __repr__ :x
 
     @staticmethod
     def factory(tag, value=None, modifiers=None, comment=None, dict_=None, **kwargs):
@@ -133,29 +163,6 @@ class TVPair:
         else:
             return tvp
 
-    def make(self, tag, value=None, modifiers=None, comment=None, **kwargs):
-        """ special children should use **kwargs on subfields instead of values
-            we should probably define those somewhere, maybe even as their own
-            classes in some future implementation??? a class Value or something
-        """
-        self.tag = tag
-        self.trailing_modifiers = modifiers
-        self.comment = comment
-        if tag in self.special_children:
-            fields = self.special_children[self.tag][::2]
-            for field in fields:
-                if field[0] == '*':  # optional kwargs
-                    try:
-                        self.__dict__[field[1:]] = kwargs[field[:1]]
-                    except KeyError:
-                        pass
-                else:  # required kwargs
-                    self.__dict__[field] = kwargs[field]
-            self._value = self.__value
-            self.value = property(self._value)
-        else:
-            self.value = value
-            self._value = lambda self: self.value
 
     def validate(self, warn=False):  # TODO
         if self.tag == 'id':
@@ -170,6 +177,9 @@ class TVPair:
         #synonym
         if not warn:
             print('PLS IMPLMENT ME! ;_;')
+
+    def _value(self):
+        return self.value
 
     def __value(self):  # FIXME this is super broken :/
         fields = self.special_children[self.tag][::2]
@@ -283,120 +293,47 @@ class TVPair:
             value = value.strip()
 
             # DEAL WITH TRAILING MODIFIERS
-
-
+            trailing_modifiers = None
 
             if tag in self.special_children:  # FIXME optional fields ;_;
                 self.parse_cases(value)
                 self._value = self.__value
                 self.value = property(lambda self: self._value())
-            elif False:
-                fields = self.special_children[tag][::2]
-                seps = self.special_children[tag][1::2]
-                tail = value + ' '  #make the last split clealy
-                for sep, field in zip(seps, fields):
-                    print('TAIL', tail+'|')
-                    if field[0] == '*':
-                        field = field[1:]
-                        optional = True
-
-                    if sep == ' ':
-                        self.__dict__[field], tail = tail.split(self.brackets[sep], 1)
-                    else:
-                        self.__dict__[field], tail = tail[1:].split(self.brackets[sep], 1)
-                        tail = tail.strip()
-                    print('WORKING?',self.__dict__[field])
-                    tail.strip()  # derp
-
-
             else:
                 self.value = value.strip().rstrip()
-                self._value = lambda : self.value
+                #self._value already default
 
-
-            #subsetdef: NAME "desc"
-            #synonymtypedef: NAME "desc" SCOPE
-            #idspace: NAME URI "desc"
-            #id-mapping: NAME TARGET
-
-            #def: "definition" [dbxrefs]
-            #subset: subsetdef  ! if it is not a subsetdef ParseError it
-            #synonym: "name" SCOPE synonymtypedef [xrefs]  ! parse error on no match a std
-            #xref: TODO
-            #is_a: #XXX we are not going to support all the other crazy stuff
-            #intersection_of: ! at least 2
-            #union_of: ! at least 2
-            #relationship: Typedef.id Term.id
-            #is_obsolete: ! true or false
-            #replaced_by: ! only if is_obsolete: true
-            #consider: ! only if is_obsolete: true
-
-            #dbxref: <name> "<description>" {modifiers}
-
-
-            """
-            # check for quotes  BAD
-            if value[0] == '"':
-                out = value.split('\\"')
-                if len(out) > 1:
-                    out[-1], rest = out[-1].split('"')
-                    value = '\\"'.join(out)
-                else:
-                    value, rest = value[1:].split('"', 1)
-
-                if len(rest):  # last expected is []
-                    # check for modifiers
-                    if rest[-1] == '}':
-                        rest, modifiers = rest[-1].split('{', 1)
-                        modifiers = eval('dict(' + modifiers + ')')  # danger?
-                        rest.rstrip()
-                    else:
-                        modifiers = {}  # this will make it easier to add stuff later
-
-
-
-            else:  # there is only the string value
-                self.value = value.rstrip()
-                #return
-
-
-
-
-            
-            value = value.rstrip()
-            if value[-1] == '}':
-                value, modifiers = self.brackets(value[:-1])
-                modifiers = 'dict(' + modifiers + ')'
-                modifiers = eval(modifiers)
-            else:
-                modifiers = None
-            #"""
-        except ValueError:
+        except BaseException as e:
             embed()
-            raise
+            raise 
 
         self.tag = tag
-        self.trailing_modifiers = modifiers = None
+        self.trailing_modifiers = trailing_modifiers
         self.comment = comment
 
-    def _brackets(self, value, brack='}'):  # XXX
-        back = (']','}',')','>')
-        if brack in back:
-            outside, inside = value.rsplit(self.brackets[brack],1)  # FIXME BAD
+    def make(self, tag, value=None, modifiers=None, comment=None, **kwargs):
+        """ special children should use **kwargs on subfields instead of values
+            we should probably define those somewhere, maybe even as their own
+            classes in some future implementation??? a class Value or something
+        """
+        self.tag = tag
+        self.trailing_modifiers = modifiers
+        self.comment = comment
+        if tag in self.special_children:
+            fields = self.special_children[self.tag][::2]
+            for field in fields:
+                if field[0] == '*':  # optional kwargs
+                    try:
+                        self.__dict__[field[1:]] = kwargs[field[:1]]
+                    except KeyError:
+                        pass
+                else:  # required kwargs
+                    self.__dict__[field] = kwargs[field]
+            self._value = self.__value
+            self.value = property(self._value)
         else:
-            inside, outside = value.split(match[brack],1)  # FIXME BAD
-        if brack in inside:  # too early
-            TVPair.brackets(inside)
-
-    def _parse_value(self, value):  # XXX
-        if self.tag == 'synonym':
-            print('do special synonym stuff')
-        elif self.tag == 'def':
-            print('split up the []')
-        else:
-            pass
-
-        return value.strip().rstrip()
+            self.value = value
+            #self._value is already efault for this case
 
     def __str__(self):
         string = '{}: {}'.format(self.tag, self._value())
@@ -469,7 +406,6 @@ class TVPairStore:
             self.__dict__.pop(tag)
 
         self.validate(warn)
-        self.tvpairs = property(lambda self: self._tvpairs())
             
     def add_tvpair(self, tvpair):
         tag = tvpair.tag
@@ -485,6 +421,10 @@ class TVPairStore:
             self.__dict__[dict_tag].append(tvpair)
         else:
             self.__dict__[dict_tag] = tvpair
+
+    @property
+    def tvpairs(self):
+        return self._tvpairs()
 
     def _tvpairs(self, source_dict=None):
         index = tuple(self._tags)
@@ -684,11 +624,11 @@ def main():
     #folder = '/home/tom/ni/protocols/'
     folder = '/home/tgillesp/projects/'
     #folder = 'C:/Users/root/Dropbox/neuroinformatics/protocols/'
-    filename = folder + 'ero.obo'
-    #filename = folder + 'go.obo'
+    #filename = folder + 'ero.obo'
+    filename = folder + 'go.obo'
     #filename = folder + 'ksm_utf8_2.obo'
     of = OboFile(filename=filename)
-    print(of)
+    #print(of)
     embed()
 
 if __name__ == '__main__':
