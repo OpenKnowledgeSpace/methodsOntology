@@ -9,6 +9,7 @@
 __title__ = 'obo_io'
 __author__ = 'Tom Gillespie'
 import os
+from datetime import datetime
 from getpass import getuser
 from collections import OrderedDict as od
 from IPython import embed
@@ -80,7 +81,6 @@ class TVPair:
     _type_ = '<tag-value pair>'
     _type_def = ('<tag>', '<value>', '{<trailing modifiers>}', '<comment>')
     _reserved_ids = ('OBO:TYPE','OBO:TERM','OBO:TERM_OR_TYPE','OBO:INSTANCE')
-    _datetime_fmt = '%d:%m:%Y %H:%M'  # WE USE ZULU
     _escapes = {
         '\\n':'\n',
         '\W':' ',
@@ -97,22 +97,22 @@ class TVPair:
         '\}':'}',
               }
 
-        # tag specific parsing name, encloser pairs, use for reconstruction too
-        special_children = (
-            ('subsetdef', ('name', ' ', 'desc', '"')),
-            ('synonymtypedef', ('name', ' ', 'desc', '"',  '*scope', ' ')),
-            ('idspace', ('name', ' ', 'uri', ' ', '*desc', '"')),
-            ('id-mapping', ('id', ' ', 'target', ' ')),
+    # tag specific parsing name, encloser pairs, use for reconstruction too
+    special_children = (
+        ('subsetdef', ('name', ' ', 'desc', '"')),
+        ('synonymtypedef', ('name', ' ', 'desc', '"',  '*scope', ' ')),
+        ('idspace', ('name', ' ', 'uri', ' ', '*desc', '"')),
+        ('id-mapping', ('id', ' ', 'target', ' ')),
 
-            ('def', ('text', '"', 'xrefs', '[')),
-            ('synonym', ('text', '"', '*scope', ' ', '*synonymtypedef', ' ', 'xrefs', '[')),
-            ('xref', ('name', ' ', '*desc', '"')),
-            ('relationship', ('typedef', ' ', 'term', ' ')),
-        )
-        special_children = {k:v for k, v in special_children}
+        ('def', ('text', '"', 'xrefs', '[')),
+        ('synonym', ('text', '"', '*scope', ' ', '*synonymtypedef', ' ', 'xrefs', '[')),
+        ('xref', ('name', ' ', '*desc', '"')),
+        ('relationship', ('typedef', ' ', 'term', ' ')),
+    )
+    special_children = {k:v for k, v in special_children}
 
-        brackets = {'[':']', '{':'}', '(':')', '<':'>', '"':'"', ' ':' '}
-        brackets.update({v:k for k, v in self.brackets.items()})
+    brackets = {'[':']', '{':'}', '(':')', '<':'>', '"':'"', ' ':' '}
+    brackets.update({v:k for k, v in brackets.items()})
 
     def __init__(self, line=None, tag=None, value=None, modifiers=None, comment=None, **kwargs):  # TODO kwargs for specific tags
         if line is not None:
@@ -125,27 +125,37 @@ class TVPair:
         #setattr(self,'__str__', self.___str__)
         #setattr(self,'__repr__', self.___repr__) # apparently __str__ defaults to __repr__ :x
 
-    def make(self, tag, value, modifiers=None, comment=None, **kwargs):
+    @staticmethod
+    def factory(tag, value=None, modifiers=None, comment=None, dict_=None, **kwargs):
+        tvp = TVPair(tag=tag, value=value, modifiers=None, comment=None, **kwargs)
+        if dict_:
+            dict_[tag] = tvp
+        else:
+            return tvp
+
+    def make(self, tag, value=None, modifiers=None, comment=None, **kwargs):
+        """ special children should use **kwargs on subfields instead of values
+            we should probably define those somewhere, maybe even as their own
+            classes in some future implementation??? a class Value or something
+        """
         self.tag = tag
-        self.value = value
         self.trailing_modifiers = modifiers
         self.comment = comment
         if tag in self.special_children:
             fields = self.special_children[self.tag][::2]
             for field in fields:
-                if field[0] == '*':
+                if field[0] == '*':  # optional kwargs
                     try:
                         self.__dict__[field[1:]] = kwargs[field[:1]]
                     except KeyError:
                         pass
                 else:  # required kwargs
                     self.__dict__[field] = kwargs[field]
-        elif tag == 'date':
-            if value == None:
-                self._value = lambda self: datetime.strfdate(datetime.utcnow(), self._datetime_fmt)
-                self.value = property(lambda self: self._value())
-
-        #self.__dict__.update(kwargs)  # just stick the additional kwarsgs in
+            self._value = self.__value
+            self.value = property(self._value)
+        else:
+            self.value = value
+            self._value = lambda self: self.value
 
     def validate(self, warn=False):  # TODO
         if self.tag == 'id':
@@ -161,7 +171,7 @@ class TVPair:
         if not warn:
             print('PLS IMPLMENT ME! ;_;')
 
-    def _value(self):  # FIXME this is super broken :/
+    def __value(self):  # FIXME this is super broken :/
         fields = self.special_children[self.tag][::2]
         seps = self.special_children[self.tag][1::2]
         string = ''
@@ -278,6 +288,7 @@ class TVPair:
 
             if tag in self.special_children:  # FIXME optional fields ;_;
                 self.parse_cases(value)
+                self._value = self.__value
                 self.value = property(lambda self: self._value())
             elif False:
                 fields = self.special_children[tag][::2]
@@ -418,7 +429,6 @@ class TVPair:
         return string.replace('-','_').replace(':','')
 
 
-
 class TVPairStore:
     def __new__(cls, *args, **kwargs):
         cls._tags = od()
@@ -459,6 +469,7 @@ class TVPairStore:
             self.__dict__.pop(tag)
 
         self.validate(warn)
+        self.tvpairs = property(lambda self: self._tvpairs())
             
     def add_tvpair(self, tvpair):
         tag = tvpair.tag
@@ -475,8 +486,7 @@ class TVPairStore:
         else:
             self.__dict__[dict_tag] = tvpair
 
-    @property
-    def tvpairs(self):
+    def _tvpairs(self, source_dict=None):
         index = tuple(self._tags)
 
         def key_(tvpair):
@@ -490,9 +500,13 @@ class TVPairStore:
             return out
             
         tosort = []
-        for tvp in self.__dict__.values():
+        if not source_dict:
+            source_dict = self.__dict__
+        for tvp in source_dict.values():
             if type(tvp) == list:
                 tosort.extend(tvp)
+            elif type(tvp) == property:
+                embed()
             else:
                 tosort.append(tvp)
         return sorted(tosort, key=key_)
@@ -549,20 +563,18 @@ class Header(TVPairStore):
         ('default-namespace', 1),
         ('remark', N),
     )
-    _all_defaults = {
-        'date': None,  # autogen at export?
-        'saved-by': getuser(),
-        'auto-generated-by': __title__,
-    }
+    _datetime_fmt = '%d:%m:%Y %H:%M'  # WE USE ZULU
 
-    def __init__(self, block=None, tvpairs=None):
-        super().__init__(block, tvpairs)
-        if block is None:
-            for tag, default in self._all_defaults.items():
-                value = self.__dict__.get(TVPair.esc_(tag), None)
-                if value is None:
-                    self.__dict__[TVPair.esc_(tag)] = TVPair(tag=tag,value=default)
-
+    def __str__(self):
+        """ When we write to file overwrite the relevant variables without
+            also overwriting the original data.
+        """
+        updated = {k:v for k, v in self.__dict__.items()}
+        TVPair.factory('date', datetime.strftime(datetime.utcnow(), self._datetime_fmt),dict_=updated)
+        TVPair.factory('auto-generated-by', __title__, dict_=updated)
+        TVPair.factory('saved-by', getuser(), dict_=updated)
+        tvpairs = self._tvpairs(updated)
+        return '\n'.join(str(tvpair) for tvpair in tvpairs) + '\n'
 
 
 
