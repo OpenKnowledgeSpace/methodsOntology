@@ -247,7 +247,7 @@ class TVPair:
             typedef, term = value.split(' ')
             self.__dict__['typedef'] = typedef
             self.__dict__['target_id'] = term
-        elif t == 'synonym':
+        elif t == 'synonym':  # TODO internally referenced xrefs need to be links
             text, scope_typedef_xrefs = value[1:-1].split('" ', 1)
             scope_typedef, xrefs = scope_typedef_xrefs.split(' [', 1)
             scope_typedef.strip().rstrip()
@@ -258,11 +258,10 @@ class TVPair:
             if scope_typedef:  # TODO figure out which is which
                 try:
                     scope, typedef = scope_typedef.split(' ')
+                    self.__dict__['scope'] = scope
+                    self.__dict__['typedef'] = typedef
                 except ValueError:
                     self.parse_syno(scope_typedef)
-                    return
-            self.__dict__['scope'] = scope
-            self.__dict__['typedef'] = typedef
         elif t == 'xref':  # FIXME busted as hell
             try:
                 name, description = value.split(' "', 1)
@@ -416,7 +415,7 @@ class TVPair:
             for field in fields:
                 if field[0] == '*':  # optional kwargs
                     try:
-                        self.__dict__[field[1:]] = kwargs[field[:1]]
+                        self.__dict__[field[1:]] = kwargs[field[1:]]
                     except KeyError:
                         pass
                 else:  # required kwargs
@@ -702,7 +701,6 @@ class Stanza(TVPairStore):
         callbacks = type_od.get(self.id_.value, None)
         if type(callbacks) == list:
             for callback in callbacks:
-                print('callback set',self)
                 callback(self)  # fill in is_a
             type_od.pop(self.id_.value)  # reset the order
         type_od[self.id_.value] = self  # atm we need names
