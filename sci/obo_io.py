@@ -168,8 +168,8 @@ class TVPair:
             self.validate()
 
     @staticmethod
-    def factory(tag, value=None, modifiers=None, comment=None, dict_=None, **kwargs):
-        tvp = TVPair(tag=tag, value=value, modifiers=None, comment=None, **kwargs)
+    def factory(tag, value=None, modifiers=None, comment=None, dict_=None, type_od=None, **kwargs):
+        tvp = TVPair(tag=tag, value=value, modifiers=comment, comment=comment, type_od=type_od, **kwargs)
         if dict_:
             dict_[TVPair.esc_(tag)] = tvp
         else:
@@ -205,7 +205,7 @@ class TVPair:
 
             if field[0] == '*':
                 field = field[1:]
-                if not self.__dict__[self.esc_(field)]:
+                if not self.__dict__.get(self.esc_(field), None):  #FIXME
                     continue
             
             try:
@@ -222,7 +222,7 @@ class TVPair:
                 if sep != '[':
                     raise TypeError('um what? lists should be bracketed?!')
                 string += extra + sep
-                string += ', '.join(value)
+                string += ', '.join([str(v) for v in value if v is not None])
                 string += self.brackets[sep]
             else:
                 embed()
@@ -348,7 +348,6 @@ class TVPair:
                 else:  # its a Term or something
                     self.__dict__['target'] = test
 
-                    
                 self._value = self._is_a_value
                 self._comment = self._is_a_comment
                 self.value = property(self._value)
@@ -358,6 +357,24 @@ class TVPair:
                 self.comment = comment
                 #self._value already default
 
+            if tag == 'relationship':
+                def _relationship_callback(target):
+                    self.__dict__['target'] = target
+                self.__dict__['target'] = self.target_id
+                test = self.type_od.get(self.target_id, None)
+                if type(test) == list:  # multiple things will need to callback
+                    self.type_od[self.target_id].append(_relationship_callback)
+                elif test is None:
+                    self.type_od[self.target_id] = [_relationship_callback]
+                else:  # its a Term or something
+                    self.__dict__['target'] = test
+
+                self._value = self._relationship_value
+                self._comment = self._is_a_comment
+                self.value = property(self._value)
+                self.comment = property(self._comment)
+                    
+
         except BaseException as e:
             embed()
             raise 
@@ -365,11 +382,22 @@ class TVPair:
         self.tag = tag
         self.trailing_modifiers = trailing_modifiers
 
+    def _relationship_value(self):
+        if type(self.target) == str:  # dangling
+            return self.typedef + ' ' + self.target
+        else:
+            rv = self.typedef + ' ' + self.target.id_.value
+            return rv
 
     def _is_a_value(self):
-        return self.target.id_.value
+        if type(self.target) == str:  # dangling
+            return self.target
+        else:
+            return self.target.id_.value
 
     def _is_a_comment(self):
+        if type(self.target) == str:
+            return 'DANGLING'
         return self.target.name.value
 
     def _comment(self):
