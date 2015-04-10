@@ -48,6 +48,13 @@ class OboFile:
     def __init__(self, filename=None, header=None, terms=None, typedefs=None, instances=None):
         self.filename = filename
         if filename is not None or header is None:  # FIXME could spec filename here?
+            self.Terms = od()
+            self.Typedefs = od()
+            self.Instances = od()
+            self.Headers = od()  #LOL STUPID FIXME
+            #od_types = {type_.__name__:type_od for type_,type_od in zip((Term, Typedef, Instance),(self.Terms,self.Typedefs,self.Instances))}
+            #LOL GETATTR
+
             with open(filename, 'rt') as f:
                 data = f.read()
             #deal with \<newline> escape
@@ -55,15 +62,13 @@ class OboFile:
             data = data.replace('\<newline>\n',' ')
             sections = data.split('\n[')
             header_block = sections[0]
-            self.header = Header(header_block)
+            self.header = Header(header_block, self)
             stanzas = sections[1:]
-            self.Terms = od()
-            self.Typedefs = od()
-            self.Instances = od()
             for block in stanzas:
                 block_type, block = block.split(']\n',1)
                 type_ = stanza_types[block_type]
-                type_(block, self)
+                #odt = od_type[block_type]
+                type_(block, self)#, type_od=odt)
 
             self.Terms.names = {}
             for id_, term in self.Terms.items():  # TODO for nonparse
@@ -150,7 +155,10 @@ class TVPair:
     brackets = {'[':']', '{':'}', '(':')', '<':'>', '"':'"', ' ':' '}
     brackets.update({v:k for k, v in brackets.items()})
 
-    def __init__(self, line=None, tag=None, value=None, modifiers=None, comment=None, **kwargs):  # TODO kwargs for specific tags
+    def __init__(self, line=None, tag=None, value=None, modifiers=None, comment=None, type_od=None, **kwargs):  # TODO kwargs for specific tags
+        if type_od:
+            self.type_od = type_od
+
         if line is not None:
             self.parse(line)
             #print(self)
@@ -166,7 +174,6 @@ class TVPair:
             dict_[TVPair.esc_(tag)] = tvp
         else:
             return tvp
-
 
     def validate(self, warn=False):  # TODO
         if self.tag == 'id':
@@ -327,8 +334,28 @@ class TVPair:
                 self.parse_cases(value)
                 self._value = self.__value
                 self.value = property(lambda self: self._value())
+                self.comment = comment
+
+            elif tag == 'is_a':
+                def _is_a_callback(target):  # TODO errors and dangling
+                    self.__dict__['target'] = target
+                self.__dict__['target'] = 'DANGLING'
+                test = self.type_od.get(value, None)
+                if type(test) == list:  # multiple things will need to callback
+                    self.type_od[value].append(_is_a_callback)
+                elif test is None:
+                    self.type_od[value] = [_is_a_callback]
+                else:  # its a Term or something
+                    self.__dict__['target'] = test
+
+                    
+                self._value = self._is_a_value
+                self._comment = self._is_a_comment
+                self.value = property(self._value)
+                self.comment = property(self._comment)
             else:
                 self.value = value.strip().rstrip()
+                self.comment = comment
                 #self._value already default
 
         except BaseException as e:
@@ -337,7 +364,16 @@ class TVPair:
 
         self.tag = tag
         self.trailing_modifiers = trailing_modifiers
-        self.comment = comment
+
+
+    def _is_a_value(self):
+        return self.target.id_.value
+
+    def _is_a_comment(self):
+        return self.target.name.value
+
+    def _comment(self):
+        return self.comment
 
     def make(self, tag, value=None, modifiers=None, comment=None, **kwargs):
         """ special children should use **kwargs on subfields instead of values
@@ -383,7 +419,7 @@ class TVPair:
 
         if self.comment:
             # TODO: autofill is_a comments
-            string += " ! " + self.comment
+            string += " ! " + self._comment()
 
         return string
 
@@ -418,8 +454,13 @@ class TVPairStore:
     def ___new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, block=None, tvpairs=None):
+    def __init__(self, block=None, obofile=None, tvpairs=None):
         # keep _tags out of self.__dict__ and add new tags for all instances
+        if obofile is not None:
+            type_od = getattr(obofile, self.__class__.__name__+'s')
+        else:
+            raise TypeError('TVPairStores need an OboFile, even if it is a fake one.')  # FIXME just don't check stuff instead?
+
         for tag, limit in self._tags.items():
             if limit == N:
                 self.__dict__[TVPair.esc_(tag)] = []  # may need a list
@@ -428,13 +469,14 @@ class TVPairStore:
             lines = block.split('\n')
             for line in lines:
                 if line:
-                    tvpair = TVPair(line)
+                    tvpair = TVPair(line, type_od=type_od)
                     self.add_tvpair(tvpair)
             warn = True
         else:
-            for tvpair in tvpairs:
+            for tvpair in tvpairs:  # FIXME, sorta need a way to get the type_od to them more naturally?
                 self.add_tvpair(tvpair)
             warn = False
+
 
         #clean up empty tags
         to_pop = []
@@ -446,7 +488,7 @@ class TVPairStore:
             self.__dict__.pop(tag)
 
         self.validate(warn)
-            
+
     def add_tvpair(self, tvpair):
         tag = tvpair.tag
         dict_tag = TVPair.esc_(tag)
@@ -624,12 +666,19 @@ class Stanza(TVPairStore):
 
     def __init__(self, block=None, obofile=None, tvpairs=None):
         if block is not None and obofile is not None:
-            super().__init__(block)
-            type_od = getattr(obofile, self.__class__.__name__+'s')
-            type_od[self.id_.value] = self  # atm we need names
-            type_od.__dict__[TVPair.esc_(self.id_.value)] = self  # FIXME
+            super().__init__(block, obofile)
         else:
-            super().__init__(tvpairs)
+            super().__init__(tvpairs=tvpairs)
+
+        type_od = getattr(obofile, self.__class__.__name__+'s')
+        callbacks = type_od.get(self.id_.value, None)
+        if type(callbacks) == list:
+            for callback in callbacks:
+                print('callback set',self)
+                callback(self)  # fill in is_a
+            type_od.pop(self.id_.value)  # reset the order
+        type_od[self.id_.value] = self  # atm we need names
+        type_od.__dict__[TVPair.esc_(self.id_.value)] = self
 
     def __str__(self):
         return '['+ self.__class__.__name__ +']\n' + super().__str__()
@@ -670,12 +719,12 @@ def deNone(*args):
 __all__ = [OboFile.__name__, TVPair.__name__, Header.__name__, Term.__name__, Typedef.__name__, Instance.__name__]
 
 def main():
-    #folder = '/home/tom/ni/protocols/'
+    folder = '/home/tom/ni/protocols/'
     #folder = '/home/tgillesp/projects/'
-    folder = 'C:/Users/root/Dropbox/neuroinformatics/protocols/'
-    filename = folder + 'ero.obo'
+    #folder = 'C:/Users/root/Dropbox/neuroinformatics/protocols/'
+    #filename = folder + 'ero.obo'
     #filename = folder + 'badobo.obo'
-    #filename = folder + 'ksm_utf8_2.obo'
+    filename = folder + 'ksm_utf8_2.obo'
     of = OboFile(filename=filename)
     #print(of)
     embed()
