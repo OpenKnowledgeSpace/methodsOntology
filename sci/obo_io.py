@@ -22,8 +22,7 @@
 
 ####
 # TODO
-# location of ontology tag in header
-# relationship missing target_id
+# figure out how to properly manage references, specfically deleting, because callback hell is NOT the right way
 
 """
     obo_io.py
@@ -116,7 +115,7 @@ class OboFile:
         return s
 
 
-class TVPair:
+class TVPair:  #TODO these need to be parented to something!
     _type_ = '<tag-value pair>'
     _type_def = ('<tag>', '<value>', '{<trailing modifiers>}', '<comment>')
     _reserved_ids = ('OBO:TYPE','OBO:TERM','OBO:TERM_OR_TYPE','OBO:INSTANCE')
@@ -155,7 +154,8 @@ class TVPair:
     brackets = {'[':']', '{':'}', '(':')', '<':'>', '"':'"', ' ':' '}
     brackets.update({v:k for k, v in brackets.items()})
 
-    def __init__(self, line=None, tag=None, value=None, modifiers=None, comment=None, type_od=None, **kwargs):  # TODO kwargs for specific tags
+    def __init__(self, line=None, tag=None, value=None, modifiers=None, comment=None, parent=None, type_od=None, **kwargs):  # TODO kwargs for specific tags
+        self.parent = parent
         if type_od:
             self.type_od = type_od
 
@@ -168,8 +168,8 @@ class TVPair:
             self.validate()
 
     @staticmethod
-    def factory(tag, value=None, modifiers=None, comment=None, dict_=None, type_od=None, **kwargs):
-        tvp = TVPair(tag=tag, value=value, modifiers=comment, comment=comment, type_od=type_od, **kwargs)
+    def factory(tag, value=None, modifiers=None, comment=None, dict_=None, parent=None, type_od=None, **kwargs):
+        tvp = TVPair(tag=tag, value=value, modifiers=comment, comment=comment, parent=None, type_od=type_od, **kwargs)
         if dict_:
             dict_[TVPair.esc_(tag)] = tvp
         else:
@@ -496,7 +496,7 @@ class TVPairStore:
             lines = block.split('\n')
             for line in lines:
                 if line:
-                    tvpair = TVPair(line, type_od=type_od)
+                    tvpair = TVPair(line, parent=self, type_od=type_od)
                     self.add_tvpair(tvpair)
             warn = True
         else:
