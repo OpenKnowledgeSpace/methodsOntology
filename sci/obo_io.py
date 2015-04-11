@@ -23,6 +23,9 @@
 ####
 # TODO
 # figure out how to properly manage references, specfically deleting, because callback hell is NOT the right way
+# figure out how to multiple terms with the same id, there was a bug in how I generated the 2nd verion due to
+    # the fact that the old ID was still used in the Terms od, on reloading we now fail
+# __setter__ validation on value for non generated values needs to happen
 
 """
     obo_io.py
@@ -707,6 +710,9 @@ class Stanza(TVPairStore):
             for callback in callbacks:
                 callback(self)  # fill in is_a
             type_od.pop(self.id_.value)  # reset the order
+        elif type(callbacks) == type(self):
+            print(self.id_)
+            raise ValueError('IT WOULD SEEM WE ALREADY EXIST! PLS HALP')  # TODO
         type_od[self.id_.value] = self  # atm we need names
         type_od.__dict__[TVPair.esc_(self.id_.value)] = self
 
