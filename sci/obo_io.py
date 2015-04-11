@@ -338,6 +338,7 @@ class TVPair:  #TODO these need to be parented to something!
             elif tag == 'is_a':
                 def _is_a_callback(target):  # TODO errors and dangling
                     self.__dict__['target'] = target
+                    #print('callback', target.id_, 'to', self)
                 self.__dict__['target'] = 'DANGLING'
                 test = self.type_od.get(value, None)
                 if type(test) == list:  # multiple things will need to callback
@@ -345,6 +346,7 @@ class TVPair:  #TODO these need to be parented to something!
                 elif test is None:
                     self.type_od[value] = [_is_a_callback]
                 else:  # its a Term or something
+                    #print('map', test.id_, 'to', tag, value)
                     self.__dict__['target'] = test
 
                 self._value = self._is_a_value
@@ -359,6 +361,7 @@ class TVPair:  #TODO these need to be parented to something!
             if tag == 'relationship':
                 def _relationship_callback(target):
                     self.__dict__['target'] = target
+                    print('callback', target.id_, 'to', self)
                 self.__dict__['target'] = self.target_id
                 test = self.type_od.get(self.target_id, None)
                 if type(test) == list:  # multiple things will need to callback
@@ -366,6 +369,7 @@ class TVPair:  #TODO these need to be parented to something!
                 elif test is None:
                     self.type_od[self.target_id] = [_relationship_callback]
                 else:  # its a Term or something
+                    #print('map', test.id_, 'to', tag, value)  # TODO parents
                     self.__dict__['target'] = test
 
                 self._value = self._relationship_value
