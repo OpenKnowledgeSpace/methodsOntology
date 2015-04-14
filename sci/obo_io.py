@@ -26,6 +26,8 @@
 # figure out how to multiple terms with the same id, there was a bug in how I generated the 2nd verion due to
     # the fact that the old ID was still used in the Terms od, on reloading we now fail
 # __setter__ validation on value for non generated values needs to happen
+# deal with how to initiailize a header (ie remove the of dependence?) maybe deferred relationshiph resolution could solve this?
+# special children need to be implemented as their own classes :/
 
 """
     obo_io.py
@@ -49,14 +51,17 @@ class OboFile:
     type_def = ('<header>','<stanza>')
     def __init__(self, filename=None, header=None, terms=None, typedefs=None, instances=None):
         self.filename = filename
-        if filename is not None or header is None:  # FIXME could spec filename here?
-            self.Terms = od()
-            self.Typedefs = od()
-            self.Instances = od()
-            self.Headers = od()  #LOL STUPID FIXME
+        self.Terms = od()
+        self.Terms.names = {}
+        self.Typedefs = od()
+        self.Typedefs.names = {}
+        self.Instances = od()
+        self.Instances.names = {}
+        self.Headers = od()  #LOL STUPID FIXME
+        self.Headers.names = {}  # FIXME do not want? what about imports?
+        if filename is not None:  # FIXME could spec filename here?
             #od_types = {type_.__name__:type_od for type_,type_od in zip((Term, Typedef, Instance),(self.Terms,self.Typedefs,self.Instances))}
             #LOL GETATTR
-
             with open(filename, 'rt') as f:
                 data = f.read()
             #deal with \<newline> escape
@@ -70,22 +75,23 @@ class OboFile:
                 block_type, block = block.split(']\n',1)
                 type_ = stanza_types[block_type]
                 #odt = od_type[block_type]
-                type_(block, self)#, type_od=odt)
+                t = type_(block, self)  # FIXME :/
+                self.add_tvpair_store(t)
 
-            self.Terms.names = {}
-            for id_, term in self.Terms.items():  # TODO for nonparse
-                if term.name.value not in self.Terms.names:
-                    self.Terms.names[term.name.value] = term
-                elif type(self.Terms.names[term.name.value]) == list:
-                    self.Terms.names[term.name.value].append(term)
-                else:
-                    existing = self.Terms.names.pop(term.name.value)
-                    self.Terms.names[term.name.value] = [existing, term]
-        else:
+        elif header is not None:
             self.header = header
             self.Terms = terms  # TODO this should take iters not ods
             self.Typedefs = typedefs
             self.Instances = instances
+        elif header is None:
+            self.header = None
+
+    def add_tvpair_store(self, tvpair_store):
+        # TODO resolve terms
+        #add store to od
+        #add store to od.__dict__
+        #add store to od.names
+        tvpair_store.append_to_obofile(self)
 
     def write(self, filename):  #FIXME this is bugged
         if os.path.exists(filename):
@@ -145,8 +151,8 @@ class TVPair:  #TODO these need to be parented to something!
         ('idspace', ('name', ' ', 'uri', ' ', '*desc', '"')),
         ('id-mapping', ('id', ' ', 'target', ' ')),
 
-        ('def', ('text', '"', 'xrefs', '[')),
-        ('synonym', ('text', '"', '*scope', ' ', '*typedef', ' ', 'xrefs', '[')),
+        ('def', ('text', '"', '*xrefs', '[')),
+        ('synonym', ('text', '"', '*scope', ' ', '*typedef', ' ', '*xrefs', '[')),
         ('xref', ('name', ' ', '*desc', '"')),
         ('relationship', ('typedef', ' ', 'target_id', ' ')),
 
@@ -159,8 +165,7 @@ class TVPair:  #TODO these need to be parented to something!
 
     def __init__(self, line=None, tag=None, value=None, modifiers=None, comment=None, parent=None, type_od=None, **kwargs):  # TODO kwargs for specific tags
         self.parent = parent
-        if type_od:
-            self.type_od = type_od
+        self.type_od = type_od
 
         if line is not None:
             self.parse(line)
@@ -339,46 +344,54 @@ class TVPair:  #TODO these need to be parented to something!
                 self.comment = comment
 
             elif tag == 'is_a':
-                def _is_a_callback(target):  # TODO errors and dangling
-                    self.__dict__['target'] = target
-                    #print('callback', target.id_, 'to', self)
-                self.__dict__['target'] = 'DANGLING'
-                test = self.type_od.get(value, None)
-                if type(test) == list:  # multiple things will need to callback
-                    self.type_od[value].append(_is_a_callback)
-                elif test is None:
-                    self.type_od[value] = [_is_a_callback]
-                else:  # its a Term or something
-                    #print('map', test.id_, 'to', tag, value)
-                    self.__dict__['target'] = test
+                if self.type_od is not None:
+                    def _is_a_callback(target):  # TODO errors and dangling
+                        self.__dict__['target'] = target
+                        #print('callback', target.id_, 'to', self)
+                    self.__dict__['target'] = 'DANGLING'
+                    test = self.type_od.get(value, None)
+                    if type(test) == list:  # multiple things will need to callback
+                        self.type_od[value].append(_is_a_callback)
+                    elif test is None:
+                        self.type_od[value] = [_is_a_callback]
+                    else:  # its a Term or something
+                        #print('map', test.id_, 'to', tag, value)
+                        self.__dict__['target'] = test
 
-                self._value = self._is_a_value
-                self._comment = self._is_a_comment
-                self.value = property(self._value)
-                self.comment = property(self._comment)
+                    self._value = self._is_a_value
+                    self._comment = self._is_a_comment
+                    self.value = property(self._value)
+                    self.comment = property(self._comment)
+                else:
+                    self.value = value.strip().rstrip()
+                    self.comment = "DANGLING"
             else:
                 self.value = value.strip().rstrip()
                 self.comment = comment
                 #self._value already default
 
             if tag == 'relationship':
-                def _relationship_callback(target):
-                    self.__dict__['target'] = target
-                    print('callback', target.id_, 'to', self)
-                self.__dict__['target'] = self.target_id
-                test = self.type_od.get(self.target_id, None)
-                if type(test) == list:  # multiple things will need to callback
-                    self.type_od[self.target_id].append(_relationship_callback)
-                elif test is None:
-                    self.type_od[self.target_id] = [_relationship_callback]
-                else:  # its a Term or something
-                    #print('map', test.id_, 'to', tag, value)  # TODO parents
-                    self.__dict__['target'] = test
+                if self.type_od is not None:
+                    def _relationship_callback(target):
+                        self.__dict__['target'] = target
+                        print('callback', target.id_, 'to', self)
+                    self.__dict__['target'] = self.target_id
+                    test = self.type_od.get(self.target_id, None)
+                    if type(test) == list:  # multiple things will need to callback
+                        self.type_od[self.target_id].append(_relationship_callback)
+                    elif test is None:
+                        self.type_od[self.target_id] = [_relationship_callback]
+                    else:  # its a Term or something
+                        #print('map', test.id_, 'to', tag, value)  # TODO parents
+                        self.__dict__['target'] = test
 
-                self._value = self._relationship_value
-                self._comment = self._is_a_comment
-                self.value = property(self._value)
-                self.comment = property(self._comment)
+                    self._value = self._relationship_value
+                    self._comment = self._is_a_comment
+                    self.value = property(self._value)
+                    self.comment = property(self._comment)
+                else:
+                    self.value = value.strip().rstrip()
+                    self.comment = "DANGLING"
                     
 
         except BaseException as e:
@@ -493,7 +506,8 @@ class TVPairStore:
         if obofile is not None:
             type_od = getattr(obofile, self.__class__.__name__+'s')
         else:
-            raise TypeError('TVPairStores need an OboFile, even if it is a fake one.')  # FIXME just don't check stuff instead?
+            type_od = None
+            #raise TypeError('TVPairStores need an OboFile, even if it is a fake one.')  # FIXME just don't check stuff instead?
 
         for tag, limit in self._tags.items():
             if limit == N:
@@ -522,6 +536,10 @@ class TVPairStore:
             self.__dict__.pop(tag)
 
         self.validate(warn)
+
+    def append_to_obofile(self, obofile):
+        raise NotImplemented('Please implement me in your subclass!')
+
 
     def add_tvpair(self, tvpair):
         tag = tvpair.tag
@@ -628,6 +646,9 @@ class Header(TVPairStore):
     )
     _datetime_fmt = '%d:%m:%Y %H:%M'  # WE USE ZULU
 
+    def append_to_obofile(self, obofile):
+        obofile.header = self
+
     def __str__(self):
         """ When we write to file overwrite the relevant variables without
             also overwriting the original data.
@@ -704,6 +725,12 @@ class Stanza(TVPairStore):
         else:
             super().__init__(tvpairs=tvpairs)
 
+        if obofile is not None:
+            self.append_to_obofile(obofile)
+        else:
+            print('Please be sure to add this to the typd_od yourself!')
+
+    def append_to_obofile(self, obofile):
         type_od = getattr(obofile, self.__class__.__name__+'s')
         callbacks = type_od.get(self.id_.value, None)
         if type(callbacks) == list:
@@ -712,10 +739,21 @@ class Stanza(TVPairStore):
             type_od.pop(self.id_.value)  # reset the order
         elif type(callbacks) == type(self):
             print(self.id_)
-            raise ValueError('IT WOULD SEEM WE ALREADY EXIST! PLS HALP')  # TODO
-        type_od[self.id_.value] = self  # atm we need names
+            if set(self.__dict__) == set(callbacks.__dict__):
+                pass
+            else:
+                callbacks.__dict__.update(self.__dict__)  # last one wins
+                #raise ValueError('IT WOULD SEEM WE ALREADY EXIST! PLS HALP')  # TODO
+        type_od[self.id_.value] = self
         type_od.__dict__[TVPair.esc_(self.id_.value)] = self
-
+        if self.name.value not in type_od.names:  # add to names
+            type_od.names[self.name.value] = self
+        elif type(type_od.names[self.name.value]) == list:
+            type_od.names[self.name.value].append(self)
+        else:
+            existing = type_od.names.pop(self.name.value)
+            type_od.names[self.name.value] = [existing, self]
+            
     def __str__(self):
         return '['+ self.__class__.__name__ +']\n' + super().__str__()
 
