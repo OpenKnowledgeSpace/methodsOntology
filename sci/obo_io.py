@@ -108,8 +108,8 @@ class OboFile:
             self.write(filename)
 
         else:
-            with open(filename, 'wb') as f:
-                f.write(str(self).encode('utf-8'))  # FIXME this is incredibly slow for big files :/
+            with open(filename, 'wt', encoding='utf-8') as f:
+                f.write(str(self))  # FIXME this is incredibly slow for big files :/
 
     def __str__(self):
         stores = [str(self.header)]
