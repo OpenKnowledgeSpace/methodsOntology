@@ -28,6 +28,7 @@
 # __setter__ validation on value for non generated values needs to happen
 # deal with how to initiailize a header (ie remove the of dependence?) maybe deferred relationshiph resolution could solve this?
 # special children need to be implemented as their own classes :/
+# nlx_qual_ is not getting split correctly to nlx_qual:
 
 """
     obo_io.py
@@ -107,8 +108,8 @@ class OboFile:
             self.write(filename)
 
         else:
-            with open(filename, 'wt') as f:
-                f.write(str(self))  # FIXME this is incredibly slow for big files :/
+            with open(filename, 'wb') as f:
+                f.write(str(self).encode('utf-8'))  # FIXME this is incredibly slow for big files :/
 
     def __str__(self):
         stores = [str(self.header)]
