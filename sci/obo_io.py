@@ -186,6 +186,10 @@ class TVPair:  #TODO these need to be parented to something!
     def _value(self):
         return self.value
 
+    @property
+    def __value(self):
+        return self._value()
+
     def parse(self, line):
         # we will handle extra parse values by sticking them on the tvpair instance
         try:
@@ -209,13 +213,11 @@ class TVPair:  #TODO these need to be parented to something!
             trailing_modifiers = None
 
             if tag in special_children:
-                print(tag, 'sc')
                 self._value = special_children[tag].parse(value, self)
-                print(self._value)
-                self.value = property(self._value)
+                self.value = self.__value
                 if type(self.value) == DynamicValue:
                     self._comment = self._value.target.name.value  # LOL
-                    self.comment = property(self._comment)
+                    self.comment = self.__comment
                 else:
                     self.comment = comment
             else:
@@ -231,6 +233,10 @@ class TVPair:  #TODO these need to be parented to something!
     def _comment(self):
         return self.comment
 
+    @property
+    def __comment(self):
+        return self._comment()
+
     def make(self, tag, value=None, modifiers=None, comment=None, **kwargs):
         self.tag = tag
         self.trailing_modifiers = modifiers
@@ -238,10 +244,10 @@ class TVPair:  #TODO these need to be parented to something!
         if tag in special_children:
             kwargs['tvpair'] = self
             self._value = special_children[tag](**kwargs)
-            self.value = property(self._value)  # TODO TEST
+            self.value = self.__value
             if type(self.value) == DynamicValue:
                 self._comment = self._value.target.name.value  # LOL
-                self.comment = property(self._comment)
+                self.comment = self.__comment
         else:
             self.value = value
             
@@ -316,8 +322,9 @@ class TVPairStore:
             lines = block.split('\n')
             for line in lines:
                 if line:
-                    tvpair = TVPair(line, parent=self, type_od=type_od)
-                    self.add_tvpair(tvpair)
+                    if line[0] != '!':  # we do not parse comments
+                        tvpair = TVPair(line, parent=self, type_od=type_od)
+                        self.add_tvpair(tvpair)
             warn = True
         else:
             for tvpair in tvpairs:  # FIXME, sorta need a way to get the type_od to them more naturally?
@@ -712,7 +719,10 @@ class Def_(Value):
 
     @classmethod
     def parse(cls, value, tvpair):
-        text, xrefs = value[1:-1].split('" [')
+        try:
+            text, xrefs = value[1:-1].split('" [')
+        except ValueError:
+            raise ValueError('No xrefs found! Please add square brackets [] at the end of each def:')  # FIXME?!?
         xrefs = [Xref.parse(xref, tvpair) for xref in xrefs.split(',')]
         split = (text, xrefs)
         return super().parse(split)
@@ -842,8 +852,14 @@ class Synonym(Value):
 
     @classmethod
     def parse(cls, value, tvpair):
-        text, scope_typedef_xrefs = value[1:-1].split('" ', 1)
-        scope_typedef, xrefs = scope_typedef_xrefs.split(' [', 1)
+        try:
+            text, scope_typedef_xrefs = value[1:-1].split('" ', 1)
+        except ValueError:
+            raise ValueError('Malformed synonym: line you are probably missing xrefs.')  # FIXME?!?
+        try:
+            scope_typedef, xrefs = scope_typedef_xrefs.split(' [', 1)
+        except ValueError:
+            raise ValueError('No xrefs found! Please add square brackets [] at the end of each synonym:')  # FIXME?!?
         xrefs = [Xref.parse(xref, tvpair) for xref in xrefs.split(',')]
         scope_typedef.strip().rstrip()
         if scope_typedef:
@@ -933,7 +949,8 @@ def main():
     #filename = folder + 'ero.obo'
     #filename = folder + 'badobo.obo'
     #filename = folder + 'ksm_utf8_2.obo'
-    filename = folder + 'ksm_com_ids_3.obo'
+    #filename = folder + 'ksm_com_ids_3.obo'
+    filename = folder + 'onts/ns_entities.obo'
     of = OboFile(filename=filename)
     #print(of)
     embed()
