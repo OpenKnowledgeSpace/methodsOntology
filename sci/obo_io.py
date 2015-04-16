@@ -39,7 +39,7 @@
 __title__ = 'obo_io'
 __author__ = 'Tom Gillespie'
 import os
-import insepect
+import inspect
 from datetime import datetime
 from getpass import getuser
 from collections import OrderedDict as od
@@ -249,9 +249,6 @@ class TVPair:  #TODO these need to be parented to something!
         self.__dict__['scope'] = scope_typedef  # FIXME
         self.__dict__['typedef'] = None
 
-    def parse_cases(self, value):
-        self.value = special_children[self.tag].parse(value)
-
     def _parse_cases(self, value):  # TODO define the subfield names in one place
         t = self.tag
         if t == 'def':
@@ -344,6 +341,20 @@ class TVPair:  #TODO these need to be parented to something!
             # DEAL WITH TRAILING MODIFIERS
             trailing_modifiers = None
 
+            if tag in special_children:
+                print(tag, 'sc')
+                self._value = special_children[tag].parse(value, self)
+                print(self._value)
+                self.value = property(self._value)
+                if type(self.value) == DynamicValue:
+                    self.comment = self._value.target.name.value  # LOL
+                else:
+                    self.comment = comment
+            else:
+                self.value = value
+                self.comment = comment
+
+            """
             if tag in self.special_children:  # FIXME optional fields ;_;
                 self.parse_cases(value)
                 self._value = self.__value
@@ -399,6 +410,7 @@ class TVPair:  #TODO these need to be parented to something!
                 else:
                     self.value = value.strip().rstrip()
                     self.comment = "DANGLING"
+            #"""
                     
 
         except BaseException as e:
@@ -810,122 +822,243 @@ class Value:
     tag = None
     seps = ' ',
     fields = 'value'
-    #def __new__(cls, tvpair, value):
-        #return super().__new__(cls, value)
-    #def __new__(cls, tvpair, **kwargs):
-        #for k, v in kwargs.items():
-            #tvpair.__dict__[k] = v
-        #tvpair.__str__ = cls.__str__  # FIXME
-        #tvpair.seps = seps
-        #tvpair._value = cls._value
-    def __init__(self, value, **kwargs):
+
+    def __init__(self, value, *args):
         self.value = value
-        #tvpair._value = self  # don't need this since tvpair is going to call it anyway just assign there
-        #tvpair.value = property(tvpair._value)
+
+    def value(self):
+        raise NotImplemented('Impl in subclass pls.')
+
+    def __str__(self):
+        return str(self.value())
+
+    def __repr__(self):
+        return str(self.value())
+
     def __call__(self):
-        return self.value
+        return self.value()
 
     @classmethod
-    def parse(cls, value):
+    def parse(cls, value, *args):
         if type(value) == tuple:  # make nice for super()
             split = value
         elif type(value) == str:
             split = value,
         #kwargs = {name:value for name, value in zip(cls.fields, split)}
         #return cls.__new__(cls, **kwargs)
-        args = split
-        return cls.__new__(cls, *args)
-
+        new_args = split
+        return cls.__new__(cls, *new_args)
 
 
 class DynamicValue(Value):
     """ callbacks need to be isolated here for relationship, is_a and internal xrefs"""
+    def __init__(self, *args, **kwargs):
+        self.args = args
+        self.kwargs = kwargs
+
+    def get_target(self, tvpair):
+        def callback(target):
+            print(target, 'calling back',self)
+            self.target = target
+
+        self.target = 'DANGLING'
+        target = tvpair.type_od.get(self.target_id, None)
+        if type(target) == list:
+            tvpair.type_od[value].append(callback)
+        elif test is None:
+            tvpair.type_od[value] = [callback]
+        else:  # its a Term or something
+            #print('map', test.id_, 'to', tag, value)
+            self.target = target
+
+    def value(self):
+        #for arg, sep in (self.args, self.seps):  # TODO
+            #print(arg, sep)
+        return str(target)
+
+
+class Property_value(Value):
+    tag = 'property_value'
+    seps = ' ', ' ', ' '
+    def __init__(self, type_id, val, datatype=None, **kwargs):
+        self.type_id = type_id
+        self.val = val
+        self.datatype = datatype
+
+    def value(self):
+        s = self.seps[0]
+        out = ''
+        out += self.type_id + s + self.val
+        if self.datatype:
+            out += s + self.datatype
+        return out 
+
+    @classmethod
+    def parse(cls, value, *args):
+        type_id, val_datatype = value.split(' ', 1)
+        try:
+            val, datatype = val_datatype.split(' ', 1)
+        except ValueError:
+            val = val_datatype
+            datatype = None
+        split = (type_id, val, datatype)
+        return super().parse(split)
 
    
 class Subsetdef(Value):
     tag = 'subsetdef'
     seps = ' ', '"'
     filed = 'name', 'desc'
-    #def __new__(cls, tvpair, name, desc):
     def __init__(self, name, desc, **kwargs):
-        #tvpair.name = name
-        #tvpair.desc = desc
         self.name = name
         self.desc = desc
 
-    def __str__(self):
-        return 
+    def value(self):
+        return self.name + self.seps[0] + self.seps[1] + self.desc + self.seps[1]
 
     @classmethod
-    def parse(cls, value):
+    def parse(cls, value, *args):
         name, description = value.split(' "', 1)
         description = description[:-1]
         split = (name, description)
-        super().parse(split)
+        return super().parse(split)
+
 
 class Synonymtypedef(Value):
     tag = 'synonymtypedef'
     seps = ' ', '"', ' '
     def __init__(self, name, desc, scope=None, **kwargs):  #FIXME '' instead of None?
-        pass
+        self.name = name
+        self.desc = desc
+        self.scope = scope
+
+    def value(self):
+        out = ''
+        out += self.name
+        out += self.seps[0]
+        out += self.seps[1]
+        out += self.desc
+        out += self.seps[1]
+        if self.scope:
+            out += self.seps[2]
+            out += self.scope
+        return  out
 
     @classmethod
-    def parse(cls, value):
+    def parse(cls, value, *args):
         name, description_scope = value.split(' "', 1)
         description, scope = description_scope.split('"', 1)  # FIXME escapes :/
         scope = scope.strip()
         split = (name, description, scope)
-        super().parse(split)
+        return super().parse(split)
+
 
 class Idspace(Value):
     tag = 'idspace'
     seps = ' ', ' ', '"'
     def __init__(self, name, uri, desc=None, **kwargs):
-        pass
+        self.name = name
+        self.uri = uri
+        self.desc = desc
+
+    def value(self):
+        out = ''
+        out += self.name
+        out += self.seps[0]
+        out += self.uri
+        if self.desc:
+            out += self.seps[1]
+            out += self.seps[2]
+            out += self.desc
+            out += self.seps[2]
 
     @classmethod
-    def parse(cls, value):
+    def parse(cls, value, *args):
         name, uri_description = value.split(' ', 1)
         uri, description  = uri_description.split(' "')
         description = description[:-1]
         split = (name, uri, description)
-        super().parse(split)
+        return super().parse(split)
+
 
 class Id_mapping(Value):
     tag = 'id-mapping'
     seps = ' ', ' '
     def __init__(self, id_, target, **kwargs):
-        pass
+        self.id_ = id_
+        self.target = target
+
+    def value(self):
+        out = ''
+        out += self.id_
+        out += self.seps[0]
+        out += self.target
+        return out
 
     @classmethod
-    def parse(cls, value):
+    def parse(cls, value, *args):
         id_, target = value.split(' ')
         split = (id_, target)
-        super().parse(split)
+        return super().parse(split)
+
 
 class Def_(Value):
     tag = 'def'
     seps = '"', '['
     def __init__(self, text, xrefs=[], **kwargs):
-        pass
+        self.text = text
+        self.xrefs = xrefs
+
+    def value(self):
+        out = ''
+        out += self.seps[0]
+        out += self.text
+        out += self.seps[0]
+        out += ' '
+        out += self.seps[1]
+        out += ', '.join([str(xref) for xref in self.xrefs])
+        out += self.seps[1]
+        return out
 
     @classmethod
-    def parse(cls, value):
+    def parse(cls, value, tvpair):
         text, xrefs = value[1:-1].split('" [')
-        xrefs = [Xref.parse(xref) for xref in xrefs.split(',')]
+        xrefs = [Xref.parse(xref, tvpair) for xref in xrefs.split(',')]
         split = (text, xrefs)
-        super().parse(split)
+        return super().parse(split)
+
 
 class Synonym(Value):
     tag = 'synonym'
     seps = '"', ' ', ' ', '['
     def __init__(self, text, scope=None, typedef=None, xrefs=[], **kwargs):
-        pass
+        self.text = text
+        self.scope = scope
+        self.typedef = typedef
+        self.xrefs = xrefs
+
+    def value(self):
+        out = ''
+        out += self.seps[0]
+        out += self.text
+        out += self.seps[0]
+        if self.scope:
+            out += self.seps[1]
+            out += self.scope
+        if self.typedef:
+            out += self.seps[2]
+            out += self.typedef
+        out += ' '
+        out += self.seps[3]
+        out += ', '.join([str(xref) for xref in self.xrefs])
+        out += self.seps[3]
+        return out
 
     @classmethod
     def parse(cls, value, tvpair):
         text, scope_typedef_xrefs = value[1:-1].split('" ', 1)
         scope_typedef, xrefs = scope_typedef_xrefs.split(' [', 1)
+        xrefs = [Xref.parse(xref, tvpair) for xref in xrefs.split(',')]
         scope_typedef.strip().rstrip()
         if scope_typedef:
             try:
@@ -934,13 +1067,25 @@ class Synonym(Value):
                 scope = scope_typedef
                 typedef = None
         split = (text, scope, typedef, xrefs)
-        super().parse(split)
+        return super().parse(split)
+
 
 class Xref(Value):
     tag = 'xref'
     seps = ' ', '"'
     def __init__(self, name, desc=None, **kwargs):
-        pass
+        self.name = name
+        self.desc = desc
+
+    def value(self):
+        out = ''
+        out += self.name
+        if self.desc:
+            out += self.seps[0]
+            out += self.seps[1]
+            out += self.desc
+            out += self.seps[1]
+        return out
 
     @classmethod
     def parse(cls, value, tvpair):
@@ -951,31 +1096,43 @@ class Xref(Value):
             name = value  # TODO dangling stuff?
             description = None
         split = (name, description)
-        super().parse(split)
+        return super().parse(split)
+
 
 class Relationship(DynamicValue):
     tag = 'relationship'
     seps = ' ', ' '
     def __init__(self, typedef, target_id, tvpair):
-        pass
+        self.typedef = typedef  #FIXME this is also an issue
+        self.target_id = target_id
+        self.get_target(tvpair)
+
+    def value(self):
+        return str(self.target.id_.value)
 
     @classmethod
     def parse(cls, value, tvpair):
         typedef, target_id = value.split(' ')
         split = (typedef, target_id, tvpair)
-        super().parse(split)
+        return super().parse(split)
+
 
 class Is_a(DynamicValue):
     tag = 'is_a'
     seps = ' ',
     def __init__(self, target_id, tvpair):
+        self.target_id = target_id
+        self.get_target(tvpair)
+        print('yes i have a target id you lying sack of shit',self.target_id)
 
+    def value(self):
+        return str(self.target.id_.value)
 
     @classmethod
     def parse(cls, value, tvpair):
         target_id = value
         split = (target_id, tvpair)
-        super().parse(split)
+        return super().parse(split)
 
 
 special_children = {sc.tag:sc for sc in (Subsetdef, Synonymtypedef, Idspace, Id_mapping, Def_, Synonym, Xref, Relationship, Is_a)}
@@ -996,7 +1153,8 @@ def main():
     #filename = folder + 'ero.obo'
     #filename = folder + 'badobo.obo'
     #filename = folder + 'ksm_utf8_2.obo'
-    #of = OboFile(filename=filename)
+    filename = folder + 'ksm_com_ids_3.obo'
+    of = OboFile(filename=filename)
     #print(of)
     embed()
 
