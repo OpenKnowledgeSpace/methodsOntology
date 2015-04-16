@@ -39,6 +39,7 @@
 __title__ = 'obo_io'
 __author__ = 'Tom Gillespie'
 import os
+import insepect
 from datetime import datetime
 from getpass import getuser
 from collections import OrderedDict as od
@@ -215,6 +216,8 @@ class TVPair:  #TODO these need to be parented to something!
             if field[0] == '*':
                 field = field[1:]
                 if not self.__dict__.get(self.esc_(field), None):  #FIXME
+                    if sep == '[':
+                        string += extra + sep + self.brackets[sep]
                     continue
             
             try:
@@ -246,7 +249,10 @@ class TVPair:  #TODO these need to be parented to something!
         self.__dict__['scope'] = scope_typedef  # FIXME
         self.__dict__['typedef'] = None
 
-    def parse_cases(self, value):  # TODO define the subfield names in one place
+    def parse_cases(self, value):
+        self.value = special_children[self.tag].parse(value)
+
+    def _parse_cases(self, value):  # TODO define the subfield names in one place
         t = self.tag
         if t == 'def':
             text, xrefs = value[1:-1].split('" [')
@@ -424,6 +430,18 @@ class TVPair:  #TODO these need to be parented to something!
         return self.comment
 
     def make(self, tag, value=None, modifiers=None, comment=None, **kwargs):
+        self.tag = tag
+        self.trailing_modifiers = modifiers
+        self.comment = comment
+        if tag in special_children:
+            kwargs['tvpair'] = self
+            self._value = special_children[tag](**kwargs)
+            self.value = property(self._value)  # TODO TEST
+        else:
+            self.value = value
+            
+
+    def _make(self, tag, value=None, modifiers=None, comment=None, **kwargs):
         """ special children should use **kwargs on subfields instead of values
             we should probably define those somewhere, maybe even as their own
             classes in some future implementation??? a class Value or something
@@ -784,6 +802,184 @@ class Instance(Stanza):
 
 stanza_types = {type_.__name__:type_ for type_ in (Term, Typedef, Instance)}
 
+###
+#   Special children
+###
+
+class Value:
+    tag = None
+    seps = ' ',
+    fields = 'value'
+    #def __new__(cls, tvpair, value):
+        #return super().__new__(cls, value)
+    #def __new__(cls, tvpair, **kwargs):
+        #for k, v in kwargs.items():
+            #tvpair.__dict__[k] = v
+        #tvpair.__str__ = cls.__str__  # FIXME
+        #tvpair.seps = seps
+        #tvpair._value = cls._value
+    def __init__(self, value, **kwargs):
+        self.value = value
+        #tvpair._value = self  # don't need this since tvpair is going to call it anyway just assign there
+        #tvpair.value = property(tvpair._value)
+    def __call__(self):
+        return self.value
+
+    @classmethod
+    def parse(cls, value):
+        if type(value) == tuple:  # make nice for super()
+            split = value
+        elif type(value) == str:
+            split = value,
+        #kwargs = {name:value for name, value in zip(cls.fields, split)}
+        #return cls.__new__(cls, **kwargs)
+        args = split
+        return cls.__new__(cls, *args)
+
+
+
+class DynamicValue(Value):
+    """ callbacks need to be isolated here for relationship, is_a and internal xrefs"""
+
+   
+class Subsetdef(Value):
+    tag = 'subsetdef'
+    seps = ' ', '"'
+    filed = 'name', 'desc'
+    #def __new__(cls, tvpair, name, desc):
+    def __init__(self, name, desc, **kwargs):
+        #tvpair.name = name
+        #tvpair.desc = desc
+        self.name = name
+        self.desc = desc
+
+    def __str__(self):
+        return 
+
+    @classmethod
+    def parse(cls, value):
+        name, description = value.split(' "', 1)
+        description = description[:-1]
+        split = (name, description)
+        super().parse(split)
+
+class Synonymtypedef(Value):
+    tag = 'synonymtypedef'
+    seps = ' ', '"', ' '
+    def __init__(self, name, desc, scope=None, **kwargs):  #FIXME '' instead of None?
+        pass
+
+    @classmethod
+    def parse(cls, value):
+        name, description_scope = value.split(' "', 1)
+        description, scope = description_scope.split('"', 1)  # FIXME escapes :/
+        scope = scope.strip()
+        split = (name, description, scope)
+        super().parse(split)
+
+class Idspace(Value):
+    tag = 'idspace'
+    seps = ' ', ' ', '"'
+    def __init__(self, name, uri, desc=None, **kwargs):
+        pass
+
+    @classmethod
+    def parse(cls, value):
+        name, uri_description = value.split(' ', 1)
+        uri, description  = uri_description.split(' "')
+        description = description[:-1]
+        split = (name, uri, description)
+        super().parse(split)
+
+class Id_mapping(Value):
+    tag = 'id-mapping'
+    seps = ' ', ' '
+    def __init__(self, id_, target, **kwargs):
+        pass
+
+    @classmethod
+    def parse(cls, value):
+        id_, target = value.split(' ')
+        split = (id_, target)
+        super().parse(split)
+
+class Def_(Value):
+    tag = 'def'
+    seps = '"', '['
+    def __init__(self, text, xrefs=[], **kwargs):
+        pass
+
+    @classmethod
+    def parse(cls, value):
+        text, xrefs = value[1:-1].split('" [')
+        xrefs = [Xref.parse(xref) for xref in xrefs.split(',')]
+        split = (text, xrefs)
+        super().parse(split)
+
+class Synonym(Value):
+    tag = 'synonym'
+    seps = '"', ' ', ' ', '['
+    def __init__(self, text, scope=None, typedef=None, xrefs=[], **kwargs):
+        pass
+
+    @classmethod
+    def parse(cls, value, tvpair):
+        text, scope_typedef_xrefs = value[1:-1].split('" ', 1)
+        scope_typedef, xrefs = scope_typedef_xrefs.split(' [', 1)
+        scope_typedef.strip().rstrip()
+        if scope_typedef:
+            try:
+                scope, typedef = scope_typedef.split(' ')
+            except ValueError:  # TODO
+                scope = scope_typedef
+                typedef = None
+        split = (text, scope, typedef, xrefs)
+        super().parse(split)
+
+class Xref(Value):
+    tag = 'xref'
+    seps = ' ', '"'
+    def __init__(self, name, desc=None, **kwargs):
+        pass
+
+    @classmethod
+    def parse(cls, value, tvpair):
+        try:
+            name, description = value.split(' "', 1)
+            description = description[:-1]
+        except ValueError:
+            name = value  # TODO dangling stuff?
+            description = None
+        split = (name, description)
+        super().parse(split)
+
+class Relationship(DynamicValue):
+    tag = 'relationship'
+    seps = ' ', ' '
+    def __init__(self, typedef, target_id, tvpair):
+        pass
+
+    @classmethod
+    def parse(cls, value, tvpair):
+        typedef, target_id = value.split(' ')
+        split = (typedef, target_id, tvpair)
+        super().parse(split)
+
+class Is_a(DynamicValue):
+    tag = 'is_a'
+    seps = ' ',
+    def __init__(self, target_id, tvpair):
+
+
+    @classmethod
+    def parse(cls, value, tvpair):
+        target_id = value
+        split = (target_id, tvpair)
+        super().parse(split)
+
+
+special_children = {sc.tag:sc for sc in (Subsetdef, Synonymtypedef, Idspace, Id_mapping, Def_, Synonym, Xref, Relationship, Is_a)}
+
 def deNone(*args):
     for arg in args:
         if arg == None:
@@ -799,8 +995,8 @@ def main():
     #folder = 'C:/Users/root/Dropbox/neuroinformatics/protocols/'
     #filename = folder + 'ero.obo'
     #filename = folder + 'badobo.obo'
-    filename = folder + 'ksm_utf8_2.obo'
-    of = OboFile(filename=filename)
+    #filename = folder + 'ksm_utf8_2.obo'
+    #of = OboFile(filename=filename)
     #print(of)
     embed()
 
