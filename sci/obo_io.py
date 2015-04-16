@@ -27,7 +27,7 @@
     # the fact that the old ID was still used in the Terms od, on reloading we now fail
 # __setter__ validation on value for non generated values needs to happen
 # deal with how to initiailize a header (ie remove the of dependence?) maybe deferred relationshiph resolution could solve this?
-# special children need to be implemented as their own classes :/
+# pass tvpairstores to tvpair so that we can walk all the way back up the chain if needs be
 # nlx_qual_ is not getting split correctly to nlx_qual:
 
 """
@@ -69,6 +69,7 @@ class OboFile:
             #deal with \<newline> escape
             data = data.replace(' \n','\n')  # FXIME need for arbitrary whitespace
             data = data.replace('\<newline>\n',' ')
+            # TODO remove \n!.+\n
             sections = data.split('\n[')
             header_block = sections[0]
             self.header = Header(header_block, self)
@@ -145,23 +146,6 @@ class TVPair:  #TODO these need to be parented to something!
         '\{':'{',
         '\}':'}',
               }
-
-    # tag specific parsing name, encloser pairs, use for reconstruction too
-    special_children = (
-        ('subsetdef', ('name', ' ', 'desc', '"')),
-        ('synonymtypedef', ('name', ' ', 'desc', '"',  '*scope', ' ')),
-        ('idspace', ('name', ' ', 'uri', ' ', '*desc', '"')),
-        ('id-mapping', ('id', ' ', 'target', ' ')),
-
-        ('def', ('text', '"', '*xrefs', '[')),
-        ('synonym', ('text', '"', '*scope', ' ', '*typedef', ' ', '*xrefs', '[')),
-        ('xref', ('name', ' ', '*desc', '"')),
-        ('relationship', ('typedef', ' ', 'target_id', ' ')),
-
-        ('property_value', ('type_id', ' ', 'val', ' ', '*datatype', ' ')),  # WAT
-    )
-    special_children = {k:v for k, v in special_children}
-
     brackets = {'[':']', '{':'}', '(':')', '<':'>', '"':'"', ' ':' '}
     brackets.update({v:k for k, v in brackets.items()})
 
@@ -202,123 +186,6 @@ class TVPair:  #TODO these need to be parented to something!
     def _value(self):
         return self.value
 
-    def __value(self):  # FIXME this is super broken :/
-        fields = self.special_children[self.tag][::2]
-        seps = self.special_children[self.tag][1::2]
-        string = ''
-
-        for field, sep in zip(fields, seps):
-            if sep == ' ':
-                extra = ''
-            else:
-                extra = ' '
-
-            if field[0] == '*':
-                field = field[1:]
-                if not self.__dict__.get(self.esc_(field), None):  #FIXME
-                    if sep == '[':
-                        string += extra + sep + self.brackets[sep]
-                    continue
-            
-            try:
-                value = self.__dict__[self.esc_(field)]
-            except KeyError:
-                embed()
-                raise
-
-            if type(value) == str:
-                string += extra + sep + value
-                if sep != ' ':
-                    string += self.brackets[sep]  # prevent double spaces
-            elif type(value) == list:
-                if sep != '[':
-                    raise TypeError('um what? lists should be bracketed?!')
-                string += extra + sep
-                string += ', '.join([str(v) for v in value if v is not None])
-                string += self.brackets[sep]
-            else:
-                embed()
-                raise TypeError('wtf you giving me?')
-
-        return string.strip()
-
-    def parse_xrefs(self, *xrefs):  # TODO
-        return [xref.strip().rstrip() for xref in xrefs]
-
-    def parse_syno(self, scope_typedef):  # TODO 
-        self.__dict__['scope'] = scope_typedef  # FIXME
-        self.__dict__['typedef'] = None
-
-    def _parse_cases(self, value):  # TODO define the subfield names in one place
-        t = self.tag
-        if t == 'def':
-            text, xrefs = value[1:-1].split('" [')
-            self.__dict__['text'] = text
-            self.__dict__['xrefs'] = self.parse_xrefs(*xrefs.split(','))
-        elif t == 'relationship':
-            typedef, term = value.split(' ')
-            self.__dict__['typedef'] = typedef
-            self.__dict__['target_id'] = term
-        elif t == 'synonym':  # TODO internally referenced xrefs need to be links
-            text, scope_typedef_xrefs = value[1:-1].split('" ', 1)
-            scope_typedef, xrefs = scope_typedef_xrefs.split(' [', 1)
-            scope_typedef.strip().rstrip()
-
-            self.__dict__['text'] = text
-            self.__dict__['xrefs'] = self.parse_xrefs(*xrefs.split(','))
-
-            if scope_typedef:  # TODO figure out which is which
-                try:
-                    scope, typedef = scope_typedef.split(' ')
-                    self.__dict__['scope'] = scope
-                    self.__dict__['typedef'] = typedef
-                except ValueError:
-                    self.parse_syno(scope_typedef)
-        elif t == 'xref':  # FIXME busted as hell
-            try:
-                name, description = value.split(' "', 1)
-                description = description[:-1]
-            except ValueError:
-                name = value
-                description = None
-            self.__dict__['name'] = name
-            self.__dict__['desc'] = description  # opt
-        elif t == 'property_value':
-            type_id, val_datatype = value.split(' ', 1)
-            try:
-                val, datatype = val_datatype.split(' ', 1)
-            except ValueError:
-                val = val_datatype
-                datatype = None
-            self.__dict__['type_id'] = type_id
-            self.__dict__['val'] = val
-            self.__dict__['datatype'] = datatype
-        elif t == 'subsetdef':
-            name, description = value.split(' "', 1)
-            description = description[:-1]
-            self.__dict__['name'] = name
-            self.__dict__['desc'] = description
-        elif t == 'synonymtypedef':
-            name, description_scope = value.split(' "', 1)
-            description, scope = description_scope.split('"', 1)  # FIXME escapes :/
-            scope = scope.strip()
-            self.__dict__['name'] = name
-            self.__dict__['desc'] = description
-            self.__dict__['scope'] = scope  # opt  # FIXME defaults
-        elif t == 'idspace':
-            name, uri_description = value.split(' ', 1)
-            uri, description  = uri_description.split(' "')
-            description = description[:-1]
-            self.__dict__['name'] = name
-            self.__dict__['uri'] = uri
-            self.__dict__['desc'] = description
-        elif t == 'id-mapping':
-            id_, target = value.split(' ')
-            self.__dict__['id_'] = id_
-            self.__dict__['target'] = target
-        else:
-            raise BaseException('WHAT IS THIS I DONT EVEN')
-
     def parse(self, line):
         # we will handle extra parse values by sticking them on the tvpair instance
         try:
@@ -347,96 +214,19 @@ class TVPair:  #TODO these need to be parented to something!
                 print(self._value)
                 self.value = property(self._value)
                 if type(self.value) == DynamicValue:
-                    self.comment = self._value.target.name.value  # LOL
+                    self._comment = self._value.target.name.value  # LOL
+                    self.comment = property(self._comment)
                 else:
                     self.comment = comment
             else:
                 self.value = value
                 self.comment = comment
-
-            """
-            if tag in self.special_children:  # FIXME optional fields ;_;
-                self.parse_cases(value)
-                self._value = self.__value
-                self.value = property(lambda self: self._value())
-                self.comment = comment
-
-            elif tag == 'is_a':
-                if self.type_od is not None:
-                    def _is_a_callback(target):  # TODO errors and dangling
-                        self.__dict__['target'] = target
-                        #print('callback', target.id_, 'to', self)
-                    self.__dict__['target'] = 'DANGLING'
-                    test = self.type_od.get(value, None)
-                    if type(test) == list:  # multiple things will need to callback
-                        self.type_od[value].append(_is_a_callback)
-                    elif test is None:
-                        self.type_od[value] = [_is_a_callback]
-                    else:  # its a Term or something
-                        #print('map', test.id_, 'to', tag, value)
-                        self.__dict__['target'] = test
-
-                    self._value = self._is_a_value
-                    self._comment = self._is_a_comment
-                    self.value = property(self._value)
-                    self.comment = property(self._comment)
-                else:
-                    self.value = value.strip().rstrip()
-                    self.comment = "DANGLING"
-            else:
-                self.value = value.strip().rstrip()
-                self.comment = comment
-                #self._value already default
-
-            if tag == 'relationship':
-                if self.type_od is not None:
-                    def _relationship_callback(target):
-                        self.__dict__['target'] = target
-                        print('callback', target.id_, 'to', self)
-                    self.__dict__['target'] = self.target_id
-                    test = self.type_od.get(self.target_id, None)
-                    if type(test) == list:  # multiple things will need to callback
-                        self.type_od[self.target_id].append(_relationship_callback)
-                    elif test is None:
-                        self.type_od[self.target_id] = [_relationship_callback]
-                    else:  # its a Term or something
-                        #print('map', test.id_, 'to', tag, value)  # TODO parents
-                        self.__dict__['target'] = test
-
-                    self._value = self._relationship_value
-                    self._comment = self._is_a_comment
-                    self.value = property(self._value)
-                    self.comment = property(self._comment)
-                else:
-                    self.value = value.strip().rstrip()
-                    self.comment = "DANGLING"
-            #"""
-                    
-
         except BaseException as e:
             embed()
             raise 
 
         self.tag = tag
         self.trailing_modifiers = trailing_modifiers
-
-    def _relationship_value(self):
-        if type(self.target) == str:  # dangling
-            return self.typedef + ' ' + self.target
-        else:
-            rv = self.typedef + ' ' + self.target.id_.value
-            return rv
-
-    def _is_a_value(self):
-        if type(self.target) == str:  # dangling
-            return self.target
-        else:
-            return self.target.id_.value
-
-    def _is_a_comment(self):
-        if type(self.target) == str:
-            return 'DANGLING'
-        return self.target.name.value
 
     def _comment(self):
         return self.comment
@@ -449,34 +239,12 @@ class TVPair:  #TODO these need to be parented to something!
             kwargs['tvpair'] = self
             self._value = special_children[tag](**kwargs)
             self.value = property(self._value)  # TODO TEST
+            if type(self.value) == DynamicValue:
+                self._comment = self._value.target.name.value  # LOL
+                self.comment = property(self._comment)
         else:
             self.value = value
             
-
-    def _make(self, tag, value=None, modifiers=None, comment=None, **kwargs):
-        """ special children should use **kwargs on subfields instead of values
-            we should probably define those somewhere, maybe even as their own
-            classes in some future implementation??? a class Value or something
-        """
-        self.tag = tag
-        self.trailing_modifiers = modifiers
-        self.comment = comment
-        if tag in self.special_children:
-            fields = self.special_children[self.tag][::2]
-            for field in fields:
-                if field[0] == '*':  # optional kwargs
-                    try:
-                        self.__dict__[field[1:]] = kwargs[field[1:]]
-                    except KeyError:
-                        pass
-                else:  # required kwargs
-                    self.__dict__[field] = kwargs[field]
-            self._value = self.__value
-            self.value = property(self._value)
-        else:
-            self.value = value
-            #self._value is already efault for this case
-
     def __eq__(self, other):
         if type(self) == type(other):
             if self.value == other.value:
@@ -821,7 +589,11 @@ stanza_types = {type_.__name__:type_ for type_ in (Term, Typedef, Instance)}
 class Value:
     tag = None
     seps = ' ',
-    fields = 'value'
+    brackets = {'[':']', '{':'}', '(':')', '<':'>', '"':'"', ' ':' '}
+    brackets.update({v:k for k, v in brackets.items()})
+
+    def __new__(cls, *args, **kwargs):
+        return super().__new__(cls)
 
     def __init__(self, value, *args):
         self.value = value
@@ -841,13 +613,14 @@ class Value:
     @classmethod
     def parse(cls, value, *args):
         if type(value) == tuple:  # make nice for super()
-            split = value
+            new_args = value
         elif type(value) == str:
-            split = value,
+            new_args = value,
         #kwargs = {name:value for name, value in zip(cls.fields, split)}
         #return cls.__new__(cls, **kwargs)
-        new_args = split
-        return cls.__new__(cls, *new_args)
+        #instance = cls.__new__(cls, *new_args)
+        instance = cls(*new_args)
+        return instance
 
 
 class DynamicValue(Value):
@@ -864,9 +637,9 @@ class DynamicValue(Value):
         self.target = 'DANGLING'
         target = tvpair.type_od.get(self.target_id, None)
         if type(target) == list:
-            tvpair.type_od[value].append(callback)
-        elif test is None:
-            tvpair.type_od[value] = [callback]
+            tvpair.type_od[self.target_id].append(callback)
+        elif target is None:
+            tvpair.type_od[self.target_id] = [callback]
         else:  # its a Term or something
             #print('map', test.id_, 'to', tag, value)
             self.target = target
@@ -875,6 +648,123 @@ class DynamicValue(Value):
         #for arg, sep in (self.args, self.seps):  # TODO
             #print(arg, sep)
         return str(target)
+
+
+class Is_a(DynamicValue):
+    tag = 'is_a'
+    seps = ' ',
+    def __init__(self, target_id, tvpair):
+        self.target_id = target_id
+        self.get_target(tvpair)
+        print('yes i have a target id you lying sack of shit',self.target_id)
+
+    def value(self):
+        if type(self.target) == str:
+            return self.target
+        else:
+            return str(self.target.id_.value)
+
+    @classmethod
+    def parse(cls, value, tvpair):
+        target_id = value
+        split = (target_id, tvpair)
+        return super().parse(split)
+
+
+class Relationship(DynamicValue):
+    tag = 'relationship'
+    seps = ' ', ' '
+    def __init__(self, typedef, target_id, tvpair):
+        self.typedef = typedef  #FIXME this is also an issue
+        self.target_id = target_id
+        self.get_target(tvpair)
+
+    def value(self):
+        if type(self.target) == str:
+            return self.target
+        else:
+            return str(self.target.id_.value)
+
+    @classmethod
+    def parse(cls, value, tvpair):
+        typedef, target_id = value.split(' ')
+        split = (typedef, target_id, tvpair)
+        return super().parse(split)
+
+
+class Def_(Value):
+    tag = 'def'
+    seps = '"', '['
+    def __init__(self, text, xrefs=[], **kwargs):
+        self.text = text
+        self.xrefs = xrefs
+
+    def value(self):
+        out = ''
+        out += self.seps[0]
+        out += self.text
+        out += self.seps[0]
+        out += ' '
+        out += self.seps[1]
+        out += ', '.join([str(xref) for xref in self.xrefs])
+        out += self.brackets[self.seps[1]]
+        return out
+
+    @classmethod
+    def parse(cls, value, tvpair):
+        text, xrefs = value[1:-1].split('" [')
+        xrefs = [Xref.parse(xref, tvpair) for xref in xrefs.split(',')]
+        split = (text, xrefs)
+        return super().parse(split)
+
+
+class Id_mapping(Value):
+    tag = 'id-mapping'
+    seps = ' ', ' '
+    def __init__(self, id_, target, **kwargs):
+        self.id_ = id_
+        self.target = target
+
+    def value(self):
+        out = ''
+        out += self.id_
+        out += self.seps[0]
+        out += self.target
+        return out
+
+    @classmethod
+    def parse(cls, value, *args):
+        id_, target = value.split(' ')
+        split = (id_, target)
+        return super().parse(split)
+
+
+class Idspace(Value):
+    tag = 'idspace'
+    seps = ' ', ' ', '"'
+    def __init__(self, name, uri, desc=None, **kwargs):
+        self.name = name
+        self.uri = uri
+        self.desc = desc
+
+    def value(self):
+        out = ''
+        out += self.name
+        out += self.seps[0]
+        out += self.uri
+        if self.desc:
+            out += self.seps[1]
+            out += self.seps[2]
+            out += self.desc
+            out += self.seps[2]
+
+    @classmethod
+    def parse(cls, value, *args):
+        name, uri_description = value.split(' ', 1)
+        uri, description  = uri_description.split(' "')
+        description = description[:-1]
+        split = (name, uri, description)
+        return super().parse(split)
 
 
 class Property_value(Value):
@@ -924,6 +814,48 @@ class Subsetdef(Value):
         return super().parse(split)
 
 
+class Synonym(Value):
+    tag = 'synonym'
+    seps = '"', ' ', ' ', '['
+    def __init__(self, text, scope=None, typedef=None, xrefs=[], **kwargs):
+        self.text = text
+        self.scope = scope  # FIXME scope defaults
+        self.typedef = typedef
+        self.xrefs = xrefs
+
+    def value(self):
+        out = ''
+        out += self.seps[0]
+        out += self.text
+        out += self.seps[0]
+        if self.scope:
+            out += self.seps[1]
+            out += self.scope
+        if self.typedef:
+            out += self.seps[2]
+            out += self.typedef
+        out += ' '
+        out += self.seps[3]
+        out += ', '.join([str(xref) for xref in self.xrefs])
+        out += self.brackets[self.seps[3]]
+        return out
+
+    @classmethod
+    def parse(cls, value, tvpair):
+        text, scope_typedef_xrefs = value[1:-1].split('" ', 1)
+        scope_typedef, xrefs = scope_typedef_xrefs.split(' [', 1)
+        xrefs = [Xref.parse(xref, tvpair) for xref in xrefs.split(',')]
+        scope_typedef.strip().rstrip()
+        if scope_typedef:
+            try:
+                scope, typedef = scope_typedef.split(' ')
+            except ValueError:  # TODO look in tvpair.parent.header for synonymtypedef
+                scope = scope_typedef
+                typedef = None
+        split = (text, scope, typedef, xrefs)
+        return super().parse(split)
+
+
 class Synonymtypedef(Value):
     tag = 'synonymtypedef'
     seps = ' ', '"', ' '
@@ -953,124 +885,7 @@ class Synonymtypedef(Value):
         return super().parse(split)
 
 
-class Idspace(Value):
-    tag = 'idspace'
-    seps = ' ', ' ', '"'
-    def __init__(self, name, uri, desc=None, **kwargs):
-        self.name = name
-        self.uri = uri
-        self.desc = desc
-
-    def value(self):
-        out = ''
-        out += self.name
-        out += self.seps[0]
-        out += self.uri
-        if self.desc:
-            out += self.seps[1]
-            out += self.seps[2]
-            out += self.desc
-            out += self.seps[2]
-
-    @classmethod
-    def parse(cls, value, *args):
-        name, uri_description = value.split(' ', 1)
-        uri, description  = uri_description.split(' "')
-        description = description[:-1]
-        split = (name, uri, description)
-        return super().parse(split)
-
-
-class Id_mapping(Value):
-    tag = 'id-mapping'
-    seps = ' ', ' '
-    def __init__(self, id_, target, **kwargs):
-        self.id_ = id_
-        self.target = target
-
-    def value(self):
-        out = ''
-        out += self.id_
-        out += self.seps[0]
-        out += self.target
-        return out
-
-    @classmethod
-    def parse(cls, value, *args):
-        id_, target = value.split(' ')
-        split = (id_, target)
-        return super().parse(split)
-
-
-class Def_(Value):
-    tag = 'def'
-    seps = '"', '['
-    def __init__(self, text, xrefs=[], **kwargs):
-        self.text = text
-        self.xrefs = xrefs
-
-    def value(self):
-        out = ''
-        out += self.seps[0]
-        out += self.text
-        out += self.seps[0]
-        out += ' '
-        out += self.seps[1]
-        out += ', '.join([str(xref) for xref in self.xrefs])
-        out += self.seps[1]
-        return out
-
-    @classmethod
-    def parse(cls, value, tvpair):
-        text, xrefs = value[1:-1].split('" [')
-        xrefs = [Xref.parse(xref, tvpair) for xref in xrefs.split(',')]
-        split = (text, xrefs)
-        return super().parse(split)
-
-
-class Synonym(Value):
-    tag = 'synonym'
-    seps = '"', ' ', ' ', '['
-    def __init__(self, text, scope=None, typedef=None, xrefs=[], **kwargs):
-        self.text = text
-        self.scope = scope
-        self.typedef = typedef
-        self.xrefs = xrefs
-
-    def value(self):
-        out = ''
-        out += self.seps[0]
-        out += self.text
-        out += self.seps[0]
-        if self.scope:
-            out += self.seps[1]
-            out += self.scope
-        if self.typedef:
-            out += self.seps[2]
-            out += self.typedef
-        out += ' '
-        out += self.seps[3]
-        out += ', '.join([str(xref) for xref in self.xrefs])
-        out += self.seps[3]
-        return out
-
-    @classmethod
-    def parse(cls, value, tvpair):
-        text, scope_typedef_xrefs = value[1:-1].split('" ', 1)
-        scope_typedef, xrefs = scope_typedef_xrefs.split(' [', 1)
-        xrefs = [Xref.parse(xref, tvpair) for xref in xrefs.split(',')]
-        scope_typedef.strip().rstrip()
-        if scope_typedef:
-            try:
-                scope, typedef = scope_typedef.split(' ')
-            except ValueError:  # TODO
-                scope = scope_typedef
-                typedef = None
-        split = (text, scope, typedef, xrefs)
-        return super().parse(split)
-
-
-class Xref(Value):
+class Xref(Value):  # TODO link internal ids, finalize will require cleanup, lots of work required here
     tag = 'xref'
     seps = ' ', '"'
     def __init__(self, name, desc=None, **kwargs):
@@ -1089,6 +904,7 @@ class Xref(Value):
 
     @classmethod
     def parse(cls, value, tvpair):
+        value.strip().rstrip()  # in case we get garbage in from a bad split
         try:
             name, description = value.split(' "', 1)
             description = description[:-1]
@@ -1096,42 +912,6 @@ class Xref(Value):
             name = value  # TODO dangling stuff?
             description = None
         split = (name, description)
-        return super().parse(split)
-
-
-class Relationship(DynamicValue):
-    tag = 'relationship'
-    seps = ' ', ' '
-    def __init__(self, typedef, target_id, tvpair):
-        self.typedef = typedef  #FIXME this is also an issue
-        self.target_id = target_id
-        self.get_target(tvpair)
-
-    def value(self):
-        return str(self.target.id_.value)
-
-    @classmethod
-    def parse(cls, value, tvpair):
-        typedef, target_id = value.split(' ')
-        split = (typedef, target_id, tvpair)
-        return super().parse(split)
-
-
-class Is_a(DynamicValue):
-    tag = 'is_a'
-    seps = ' ',
-    def __init__(self, target_id, tvpair):
-        self.target_id = target_id
-        self.get_target(tvpair)
-        print('yes i have a target id you lying sack of shit',self.target_id)
-
-    def value(self):
-        return str(self.target.id_.value)
-
-    @classmethod
-    def parse(cls, value, tvpair):
-        target_id = value
-        split = (target_id, tvpair)
         return super().parse(split)
 
 
