@@ -17,5 +17,5 @@ Other limited modeling may be added later as needed in order to serve other syst
 that will directly represent protocols themselves.
 
 ## Contributing
-If you would like to contribute changes please clone the repository and submit pull requests. Thanks!
+If you would like to contribute changes please fork the repository and submit pull requests. Thanks!
 
