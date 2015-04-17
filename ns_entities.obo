@@ -1,0 +1,484 @@
+format-version: 1.2
+ontology: ns_entities
+idspace: birnlex http://uri.neuinfo.org/nif/nifstd/birnlex "URI prefix for NIF terms, nif-, birnlex_, nxl_, nlx_inv_"
+idspace: ERO http://purl.obolibrary.org/obo/ERO "URI prefix for ERO terms"
+idspace: nlx http://uri.neuinfo.org/nif/nifstd/nlx "URI prefix for NIF terms, nif-, birnlex_, nxl_, nlx_inv_"
+idspace: nlx_inv http://uri.neuinfo.org/nif/nifstd/nlx_inv "URI prefix for NIF terms, nif-, birnlex_, nxl_, nlx_inv_"
+idspace: OBI http://purl.obolibrary.org/obo/OBI "URI prefix for OBI terms"
+default-namespace: nse
+
+
+! Tools
+
+[Term]
+id: ERO:0000439
+name: tissue culture incubator
+def: "An incubator that is used in tissue culture rooms for culturing primary cells, cell lines, or tissues. " []
+
+[Term]
+id: ERO:0000365
+name: CO2 incubator
+def: "A incubator that controls the carbon dioxide (CO2) content of the atmosphere inside." []
+
+[Term]
+id: ERO:0001947
+name: incubator microscope
+def: "A microscope fitted with an environmental control chamber used to image live samples." []
+
+[Term]
+id: OBI:0001076
+name: incubator shaker
+def: "An incubating device that provides shaking motion for biomedical applications (e.g., cell cultures)." []
+
+[Term]
+id: OBI:0000136
+name: incubator
+def: "a device in which environmental conditions (light, photoperiod, temperature, humidity, etc.) can be controlled" []
+
+[Term]
+id: IAO:0000595
+name: software script
+def: " A software script is software whose instructions can be executed using a software interpreter." []
+
+[Term]
+id: ERO:0000879
+name: surgical microscope
+def: "A microscope used to visualize fine structures within the area of a surgical procedure." []
+
+[Term]
+id: ERO:0000878
+name: fixed stage microscope
+def: "A microscope which contains a small platform on a microscope where the specimen is mounted for examination. Commonly used for electrophysiological research, such as patch clamp experiments on nerve cells, examinations of brain sections, and for measuring electrical signals on cells." []
+
+[Term]
+id: ERO:0000613
+name: field emission scanning electron microscope
+def: "A scanning electron microscope that has electromagnetic coils that form an electron beam that scans the object (scan) and secondary electrons are produced by interaction with the atoms at the surface of the sample." []
+
+[Term]
+id: ERO:0000610
+name: Raman confocal microscope
+def: "A confocal microscope that consists of of an optical microscope, an excitation laser, a monochromator, and a sensitive detector (such as a charge-coupled device or photomultiplier tube), has high spatial resolution, and relies on inelastic scattering, or Raman scattering, of monochromatic light." []
+
+[Term]
+id: ERO:0000521
+name: scanning electron microscope
+def: "An electron microscope that images the sample surface by scanning it with a high-energy beam of electrons in a raster scan pattern. The electrons interact with the atoms that make up the sample producing signals that contain information about the sample's surface topography, composition and other properties such as electrical conductivity." []
+
+[Term]
+id: ERO:0000937
+name: energy filtering transmission electron microscope
+def: "A transmission electron microscope that produces an image of an object by electron scattering. The contrast is optimized by filtering out the contrast-reducing electrons from the spectrum of transmitted electrons, or by only allowing electrons containing specific information to be used for imaging." []
+
+[Term]
+id: ERO:0000496
+name: infrared microscope
+def: "A microscope that uses the infrared region of the electromagnetic radiation spectrum, often used for the study of materials that are uniformly transparent or opaque in the visible spectrum, but have significant absorption or transmission bands in the 700 nanometer-plus wavelength region." []
+
+[Term]
+id: ERO:0000497
+name: upright microscope
+def: "A microscope that has the illumination system below the stage and the lens system above the stage." []
+
+[Term]
+id: ERO:0000463
+name: atomic force microscope
+def: "A scanning force microscope used for determining the surface topography of native biomolecules at subnanometer resolution. It allows biomolecules to be imaged not only under physiological conditions, but also while biological processes are at work." []
+
+[Term]
+id: ERO:0000324
+name: two-photon confocal microscope
+def: "A confocal microscope that uses laser-excited autofluorescence and second harmonic signals that can be analyzed to construct a three dimensional, microanatomical, structural image." []
+
+[Term]
+id: ERO:0000344
+name: inverted microscope
+def: "An optical microscope with its light source and condenser on the top, above the stage pointing down, while the objectives and turret are below the stage pointing up." []
+
+[Term]
+id: ERO:0000374
+name: deconvolution microscope
+def: "Fluorescence microscope that uses a computational method to reduce out-of-focus fluorescence in three-dimensional (3D) microscope image." []
+
+[Term]
+id: ERO:0000276
+name: microscope digital camera
+def: "A digital camera for a microscope, which records image data of a sample image obtained by the microscope in a recording medium." []
+
+[Term]
+id: ERO:0000273
+name: environmental scanning electron microscope
+def: "A scanning electron microscope that has a secondary-electron detector capable of operating in the presence of water vapour and pressure-limiting apertures with differential pumping in the path of the electron beam to separate the vacuum region (around the gun and lenses) from the sample chamber, which allows samples to be observed in low-pressure gaseous environments (e.g. 1-50 Torr) and high relative humidity (up to 100%)." []
+
+[Term]
+id: ERO:0000249
+name: fluorescence microscope
+def: "An optical microscope used to study properties of organic or inorganic substances using the phenomena of fluorescence  and phosphorescence instead of, or in addition to, reflection and absorption." []
+
+[Term]
+id: ERO:0000248
+name: transmission electron microscope
+def: "An electron microscope that uses a high voltage electron beam to create an image." []
+
+[Term]
+id: ERO:0000958
+name: dissecting surgical microscope
+def: "A microscope that allows for maneuverability around the patient during surgery." []
+
+[Term]
+id: ERO:0000978
+name: inverted stereo microscope
+def: "A stereo microscope with its light source and condenser on the top, above the stage pointing down, while the objectives and turret are below the stage pointing up." []
+
+[Term]
+id: ERO:0000934
+name: fluorescence compound microscope
+def: "A fluorescence microscope in which magnification is achieved in two stages. It utilizes an objective lens, usually several of different power on a turret and an eyepiece that is used to further magnify the image formed by the objective lens." []
+
+[Term]
+id: ERO:0000965
+name: mineralized tissue thin sectioning system
+def: "An instrument that creates precise, thin sections, down to 35µm, of a wide variety of geological specimens such as rocks and minerals, ceramics, refractories, concrete, etc." []
+
+[Term]
+id: OBI:0001110
+name: real-time PCR machine
+def: "An PCR instrument that enables both detection and quantification of one or more specific sequences in a DNA sample." []
+
+[Term]
+id: OBI:0000989
+name: PCR instrument
+def: "A device that is used to amplify a single or few copies of a piece of DNA across several orders of magnitude, generating thousands to millions of copies of a particular DNA sequence." []
+
+[Term]
+id: ERO:0001436
+name: fluid measurement device
+def: "An instrument used to characterize a static or dynamic fluid." []
+
+[Term]
+id: ERO:0001423
+name: fluid flow velocity measurement device
+def: "A fluid pressure measurement device designed to monitor flow velocity at one or more locations." []
+
+[Term]
+id: ERO:0001407
+name: fluid pressure measurement system
+def: "An instrument that quantifies fluid movement in a system." []
+
+[Term]
+id: ERO:0001471
+name: Hall effect measurement system
+def: "An instrument used to measure the Hall effect, the production of a voltage difference (the Hall voltage) across an electrical conductor, transverse to an electric current in the conductor and a magnetic field perpendicular to the current." []
+
+[Term]
+id: ERO:0001491
+name: precision measurement tool
+def: "A measurement instrument used for precise measurements." []
+
+[Term]
+id: OBI:0001086
+name: radiation measurement device
+def: "A device that consists of a radiosensitive detector and a means of recording the effects of radiation on the detector." []
+
+[Term]
+id: OBI:0001063
+name: automatic staining machine
+def: "A device that is used to automatically stain tissue sections on slides or tissue specimens." []
+
+[Term]
+id: ERO:0000614
+name: measurement instrument
+def: "An instrument that has measure function. Measure function is a function that is borne by a processed material  and realized in a process in which information about some entity is expressed relative to some reference." []
+
+[Term]
+id: ERO:0000503
+name: slide drying oven
+def: "An oven that is used for rapid drying of histology slides, typically consisting of a drying chamber, digital temperature and time controller, and internal fan." []
+
+[Term]
+id: ERO:0000949
+name: slide scanner
+def: "An instrument that allows film negatives and slides to be converted into digital files." []
+
+[Term]
+id: ERO:0001375
+name: sliding caliper
+def: "A measurement instrument used to measure the distance between two opposing sides of an object." []
+
+[Term]
+id: OBI:0001131
+name: slide warmer
+def: "A device that is used to heat microscope slides." []
+
+[Term]
+id: ERO:0000812
+name: electrophysiology data acquisition system
+def: "An instrument used to capture and record analog inputs, digital inputs, temperature, humidity, pulse and logic signals, for electrophysiology." []
+
+[Term]
+id: OBI:0001118
+name: multichannel pipette
+def: "A pipetting system that has a plurality of tip fittings and is used for multi-well plate applications." []
+
+[Term]
+id: OBI:0001101
+name: electronic repeater pipette
+def: "A micropipette that can be programmed by the user to aspirate a volume of liquid reagent or sample and dispense a series of aliquots in successive dispensing operations." []
+
+[Term]
+id: OBI:0001083
+name: multichannel electronic pipette
+def: "A multichannel pipette that can be programmed by the user to aspirate a volume of liquid reagent or sample and dispense the aspirated volume or a series of aliquots in successive dispensing operations." []
+
+[Term]
+id: ERO:0001040
+name: computer server
+def: "A computer, or series of computers, that link other computers or electronic devices together." []
+
+[Term]
+id: OBI:0001092
+name: computer cluster
+def: "A group of linked computers, working together closely so that in many respects they form a single computer." []
+
+[Term]
+id: OBI:0000636
+name: acquisition computer
+def: "A Computer used for NMR, can be divided into central processing unit (CPU), consisting of instruction, interpretation and arithmetic unit plus fast access memory, and peripheral devices such as bulk data storage and input and output devices (including, via the interface, the spectrometer). Under software control, the computer controls the RF pulses and gradients necessary to acquire data, and process the data to produce spectra or images. Note that devices such as the spectrometer may themselves incorporate small computers." []
+
+[Term]
+id: OBI:0400107
+name: computer
+def: "A computer is an instrument which manipulates (stores, retrieves, and processes) data according to a list of instructions." []
+
+[Term]
+id: ERO:0000974
+name: electrophysiology station
+def: "An instrument used to study the electrical properties of biological cells and tissues. It involves measurements of voltage change or electric current on a wide variety of scales from single ion channel proteins to whole organs like the heart. In neuroscience, it includes measurements of the electrical activity of neurons, and particularly action potential activity." []
+
+[Term]
+id: ERO:0000536
+name: patch clamp amplifier
+def: "A patch clamp amplifier is a voltage amplifier that uses a single electrode clamp, where the voltage measuring and current passing circuits are connected. The electrode is attached to a wire that contacts the current/voltage loop inside the amplifier. Thus the electrode has only an indirect influence on the feedback circuit. The amplifier reads only the voltage at the top of the electrode, and feeds back current to compensate." []
+
+[Term]
+id: ERO:0000945
+name: amplifier
+def: "An instrument that changes, usually increases, the amplitude of a signal. The relationship of the input to the output of an amplifier, usually expressed as a function of the input frequency, is called the transfer function of the amplifier, and the magnitude of the transfer function is termed the gain." []
+
+[Term]
+id: ERO:0000946
+name: microelectrode amplifier
+def: "Amplifier that measures very small currents or voltage (often in a cell or patch of membrane) and passes that measurement on for recording and analysis. Microelectrode amplifiers may also control current and voltage in current-clamp and voltage-clamp mode." []
+
+[Term]
+id: OBI:0400066
+name: logarithmic voltage amplifier
+def: "A logarithmic voltage amplifier is an analog electronic circuit that puts out a voltage or current proportional to the voltage or current at its input, with logarithmic proportionality. In an analog system, the logarithmic voltage amplifier is used to present parameters with a high dynamic range on a more useful scale." []
+
+[Term]
+id: OBI:0400101
+name: voltage_amplifier
+def: "A voltage amplifier is a device that amplifies the voltage signal." []
+synonym: "voltage amplifier" EXACT []
+
+[Term]
+id: ERO:0000888
+name: 2D gel electrophoresis apparatus
+def: "A protein separation apparatus employed for two-dimensional protein separation." []
+
+[Term]
+id: OBI:0001121
+name: gel electrophoresis system
+def: "A device that moves charged particles through a medium by using an electric field induced by electrodes." []
+
+[Term]
+id: OBI:0001134
+name: agarose gel electrophoresis system
+def: "A gel electrophoresis system that is used to separate DNA or RNA molecules by size, achieved by moving negatively charged nucleic acid molecules through an agarose matrix with an electric field." []
+
+[Term]
+id: OBI:0001106
+name: pulsed-field gel electrophoresis system
+def: "A gel electrophoresis system that is used to separate very large molecules of DNA." []
+
+[Term]
+id: ERO:0000511
+name: multicapillary electrophoresis system
+def: "A capillary electrophoresis instrument containing multiple capillaries, at least one source for the emission of a beam intended to to excite molecules lying in its path and inside the capillaries and means for detecting the fluorescence of the molecules exited by said beam, used for automated analysis of DNA fragments and RNA." []
+
+[Term]
+id: OBI:0001132
+name: capillary electrophoresis instrument
+def: "An electrophoresis system that is used to separate ionic species by their charge and frictional forces and mass." []
+
+[Term]
+id: OBI:0001053
+name: electrophoresis system
+def: "A device that moves charged particles through a medium by using an electric field induced by electrodes." []
+
+
+
+!reagents   ! FIXME many of these need to be changed because 'reagent' signifies input to protocol, when to someone else the same object is an output
+
+[Term]
+id: ERO:0000229
+name: monoclonal antibody reagent
+def: "Antibody reagent that recognizes a single epitope." []
+
+[Term]
+id: ERO:0000230
+name: polyclonal antibody reagent
+def: "Antibody reagent that recognizes multiple epitopes." []
+
+[Term]
+id: ERO:0000008
+name: antibody reagent
+def: "A reagent that is comprised of immunoglobulins produced by B cells in response to an antigen. Antibody reagents can be engineered to have specificity for specific antigens." []
+
+[Term]
+id: ERO:0000631
+name: primer
+def: "Nucleic acid reagent that is a short strand of nucleic acid that serves as a starting point for DNA or RNA synthesis." []
+
+[Term]
+id: ERO:0001145
+name: primer library
+def: "A nucleic acid molecule library that contains primer sets used for amplification of target nucleic acid sequences." []
+
+[Term]
+id: ERO:0000630
+name: nucleic acid reagent
+def: "Reagent that is a polymer comprised of nucleotides, each of which consists of three components: a nitrogenous heterocyclic base, which is either a purine or a pyrimidine; a pentose sugar; and a phosphate group." []
+
+[Term]
+id: ERO:0000423
+name: transfection reagent
+def: "A chemical reagent that introduces foreign DNA into a eukaryotic cell." []
+
+[Term]
+id: ERO:0000162
+name: chemical reagent
+def: "Reagent that is a material of pure chemical composition, either an element or a compound." []
+
+[Term]
+id: ERO:0000161
+name: protein reagent
+def: "Reagent that is a sequence of amino acids." []
+
+[Term]
+id: ERO:0000006
+name: reagent
+def: "Processed material that is used in a chemical reaction or other experimental process to detect, measure, examine, or produce other  substances." []
+
+[Term]
+id: ERO:0000922
+name: purified protein reagent
+def: "A protein reagent that contains a single species of protein." []
+
+[Term]
+id: ERO:0001200
+name: gene knockdown reagent
+def: "A reagent that is capable of reducing the expression of a target gene in a biological system." []
+
+[Term]
+id: ERO:0001201
+name: DNA reagent
+def: "A reagent that is a polymer comprised of DNA nucleotides." []
+
+[Term]
+id: ERO:0001202
+name: RNA reagent
+def: "A reagent that is a polymer comprised of RNA nucleotides." []
+
+[Term]
+id: ERO:0001210
+name: RNA interference reagent
+def: "A gene knockdown reagent that is capable of reducing the expression of a target gene in a biological system through the RNA interference pathway." []
+
+[Term]
+id: ERO:0001194
+name: reagent library
+def: "A reagent that consists of a collection of individual reagents of a given type." []
+
+! specimines
+
+[Term]
+id: GO:0032809
+name: neuronal cell body membrane
+def: "The plasma membrane of a neuron cell body - excludes the plasma membrane of cell projections such as axons and dendrites." []
+
+[Term]
+id: GO:0043025
+name: neuronal cell body
+def: "The portion of a neuron that includes the nucleus, but excludes cell projections such as axons and dendrites." []
+
+[Term]
+id: GO:0043204
+name: perikaryon
+def: "The portion of the cell soma (cell body) that excludes the nucleus." []
+
+[Term]
+id: GO:0044298
+name: cell body membrane
+def: "The plasma membrane of a cell that bears surface projections such as axons, dendrites, cilia, or flagella, excluding the plasma membrane on cell projections." []
+
+[Term]
+id: GO:0044297
+name: cell body
+def: "The portion of a cell bearing surface projections such as axons, dendrites, cilia, or flagella that includes the nucleus, but excludes all cell projections." []
+
+[Term]
+id: GO:0014069
+name: postsynaptic density
+def: "The postsynaptic density is a region that lies adjacent to the cytoplasmic face of the postsynaptic membrane at excitatory synapse. It forms a disc that consists of a range of proteins with different functions, some of which contact the cytoplasmic domains of ion channels in the postsynaptic membrane. The proteins making up the disc include receptors, and structural proteins linked to the actin cytoskeleton. They also include signalling machinery, such as protein kinases and phosphatases. The postsynaptic density may be part of a neuron or a muscle cell or a glial cell." []
+
+[Term]
+id: GO:0097482
+name: muscle cell postsynaptic density
+def: "A postsynaptic density that is part of a muscle cell." []
+
+[Term]
+id: GO:0097481
+name: neuronal postsynaptic density
+def: "A postsynaptic density that is part of a neuron." []
+
+[Term]
+id: UBERON:0008933
+name: primary somatosensory cortex
+def: "(Chapin & Lin, 1984, rat): the region considered as the SI cortex is not a cytoarchitecturally homogeneous structure but consists instead of a patchwork array of areas containing dense aggregations of layer IV granule cells, surrounded by granule-cell-sparse regions. As was shown by Welker (b71,b76), and in our own mapping studies (see Fig. 3), this discontinuous pattern of granular, or koniocortical, zones contains within itself a map of the ratbs cutaneous periphery. There are clear subtypes within this cytoarchitectural subregion, notably including the bgranular aggregateb type of cytoarchitecture characteristic of the paw, limb, and mystacial vibrissae areas, and the bbarrel-fieldb type (originally described by Woolsey and Van der Loos, b70) seen in the nose and perioral regions. In the mouse, but not the rat, such barrels also cover the whole whisker representation (Welker and Woolsey, b74)." []
+
+[Term]
+id: UBERON:0008930
+name: somatosensory cortex
+def: "Area of the parietal lobe concerned with receiving general sensations. It lies posterior to the central sulcus." []
+
+[Term]
+id: UBERON:0008934
+name: secondary somatosensory cortex
+def: "the area of the upper bank of the lateral sulcus that is involved in somatic sensation" []
+
+[Term]
+id: UBERON:0010415
+name: barrel cortex
+def: "dark-staining regions of layer four of the somatosensory cortex where somatosensory inputs from the contralateral side of the body come in from the thalamus. Barrels are found in some species of rodents and species of at least two other orders." []
+
+[Term]
+id: GO:0030425
+name: dendrite
+def: "A neuron projection that has a short, tapering, often branched, morphology, receives and integrates signals from other neurons or from sensory stimuli, and conducts a nerve impulse towards the axon or the cell body. In most neurons, the impulse is conveyed from dendrites to axon via the cell body, but in some types of unipolar neuron, the impulse does not travel via the cell body." []
+
+[Term]
+id: GO:0032839
+name: dendrite cytoplasm
+def: "All of the contents of a dendrite, excluding the surrounding plasma membrane." []
+
+[Term]
+id: GO:0005737
+name: cytoplasm
+def: "All of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures." []
+
+[Term]
+id: GO:0032838
+name: cell projection cytoplasm
+def: "All of the contents of a cell projection, excluding the plasma membrane surrounding the projection." []
+

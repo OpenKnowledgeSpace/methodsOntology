@@ -1,0 +1,1922 @@
+format-version: 1.2
+date: 11:04:2015 07:21
+saved-by: tom
+auto-generated-by: obo_io
+ontology: ksm
+idspace: birnlex http://uri.neuinfo.org/nif/nifstd/birnlex "URI prefix for NIF terms, nif-, birnlex_, nxl_, nlx_inv_"
+idspace: ERO http://purl.obolibrary.org/obo/ERO "URI prefix for ERO terms"
+idspace: nlx http://uri.neuinfo.org/nif/nifstd/nlx "URI prefix for NIF terms, nif-, birnlex_, nxl_, nlx_inv_"
+idspace: nlx_inv http://uri.neuinfo.org/nif/nifstd/nlx_inv "URI prefix for NIF terms, nif-, birnlex_, nxl_, nlx_inv_"
+idspace: OBI http://purl.obolibrary.org/obo/OBI "URI prefix for OBI terms"
+default-namespace: ksc_m
+remark: Editors: Mihail Bota, Tom Gillespie
+remark: Version: 0.3
+
+[Term]
+id: KSC_M:000001
+name: Method
+def: "A means, manner of procedure, or systematic course of actions that have to be performed in order to accomplish a particular goal." []
+created_by: mihailbota
+
+[Term]
+id: KSC_M:000002
+name: Gray matter tissue preparation
+def: "Class of methods that are used to prepare the gray matter tissue of interest for application of other methods." []
+synonym: "Brain matter tissue preparation" EXACT []
+is_a: KSC_M:000001 ! Method
+relationship: requires ERO:0000378 ! Surgery
+relationship: requires ERO:0000490 ! Tissue embedding
+relationship: requires ERO:0000677 ! Tissue fixation
+relationship: requires KSC_M:00000172 ! Slice mounting
+created_by: mihailbota
+
+[Term]
+id: OBI:0302887
+name: Staining method
+def: "Class of methods where specific substances are applied to the gray matter tissue, for identification, visualization, and measurement of objects or processes." []
+synonym: "Labeling method" EXACT []
+synonym: "staining" EXACT [OBI:0302887]
+xref: KSC_M:000003 "Staining method"
+is_a: KSC_M:000001 ! Method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:000004
+name: Visualization method
+def: "Class of methods that are used to make visible the objects of interest or physiological processes to the eye of the experimenter, unaided or using specific devices." []
+is_a: KSC_M:000001 ! Method
+created_by: mihailbota
+
+[Term]
+id: ERO:0001319
+name: Measurement method
+def: "Class of methods that are used to observe and record amount, number, quantity, size, level, extent, or magnitude, resulting in an ordinal, semiquantitative or quantitative value." []
+synonym: "measurement method" EXACT [ERO:0001319]
+synonym: "Measuring method" EXACT []
+xref: KSC_M:000005 "Measurement method"
+is_a: KSC_M:000001 ! Method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:000006
+name: Analysis method
+def: "Class of methods that are used to process and interpret the data produced by measurements, as well as to infer patterns or regularities from data." []
+is_a: KSC_M:000001 ! Method
+created_by: mihailbota
+
+[Term]
+id: ERO:0000378
+name: Surgery
+def: "Class of methods where the experimenter performs incisions into the body, to gain direct access to the tissue of interest." []
+synonym: "surgery" EXACT [ERO:0000378]
+xref: KSC_M:000007 "Surgery"
+is_a: KSC_M:000001 ! Method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:000008
+name: Stereotaxic surgery
+def: "Surgery performed according to the spatial (stereotactic) coordinates of the brain and spinal cord in a given species. These coordinates are calculated relative to a set of landmarks: bregma, lambda, and the interaural distance, and from a standard stereotaxic atlas." []
+is_a: ERO:0000378 ! Surgery
+created_by: mihailbota
+
+[Term]
+id: KSC_M:000009
+name: Basophilic stain method
+def: "Class of histochemical methods where the dyes label the nucleic acids (RNA)." []
+synonym: "Basophilic method" EXACT []
+is_a: nlx_inv:20090605 ! Histochemical method
+created_by: mihailbota
+
+[Term]
+id: birnlex:2247
+name: Nissl method
+def: "Histochemical method for labeling neurons. Application of basophilic dyes, such as Cresyl violet, Thionin and Toluidin Blue, to the brain tissue labels the nuclei of cell bodies of neurons, and of glia. These dyes bind preferentially to the RNA present in the cell, and the cell nuclei will be most stained because of the high presence of this nucleic acid." []
+synonym: "Nissl stain" EXACT []
+synonym: "Nissl staining protocol" EXACT [birnlex:2247]
+xref: KSC_M:0000010 "Nissl method"
+is_a: KSC_M:000009 ! Basophilic stain method
+created_by: mihailbota
+remark: acronym: Nissl
+
+[Term]
+id: KSC_M:0000011
+name: Hematoxilin and eosin method
+def: "Histochemical method for labeling the neurons. Hematoxilin labels the cell bodies, and eosin the cytoplasm. It is the most common method used in clinical and research labs." []
+synonym: "Hematoxilin and eosin stain" EXACT []
+is_a: nlx_inv:20090605 ! Histochemical method
+created_by: mihailbota
+remark: acronym: H&E
+
+[Term]
+id: KSC_M:0000012
+name: Luxol Fast Blue method
+def: "Histochemical method that stains in bluish color the myelin around axons." []
+synonym: "Luxol Fast Blue staining" EXACT []
+is_a: nlx_inv:20090605 ! Histochemical method
+created_by: mihailbota
+remark: acronym: LFB
+
+[Term]
+id: birnlex:2243
+name: Golgi method
+def: "Classical cytochemical method used for neurons labeling. The method is based on the absorbtion of silver nitrates into the neurons, staining them entirely in deep brown to black. The stain is taken up by only maximum of 10% of the neurons in a labeled tissue." []
+synonym: "Black reaction" EXACT []
+synonym: "Golgi staining protocol" EXACT [birnlex:2243]
+xref: KSC_M:0000013 "Golgi method"
+is_a: KSC_M:0000021 ! Cytochemical method
+created_by: mihailbota
+remark: acronym: Golgi
+
+[Term]
+id: KSC_M:0000014
+name: Golgi-Cox method
+def: "Variant of the Golgi method that uses mercury salts instead of silver. The labeling process takes 2 weeks, but the method is considered as the most reliable method from all Golgi techniques." []
+is_a: KSC_M:0000021 ! Cytochemical method
+relationship: modified_from birnlex:2243 ! Golgi method
+created_by: mihailbota
+remark: acronym: Golgi-Cox
+
+[Term]
+id: KSC_M:0000015
+name: Rapid Golgi method
+def: "Modification of the Golgi method that is faster than Golgi-Cox method. In this method osmium is added to the silver precipitation." []
+is_a: KSC_M:0000021 ! Cytochemical method
+relationship: modified_from birnlex:2243 ! Golgi method
+created_by: mihailbota
+remark: acronym: Rapid Golgi
+
+[Term]
+id: KSC_M:0000016
+name: Golgi-Kopsch method
+def: "Modification of the Golgi method where osmium that is used in rapid Golgi method is replaced by formaldehyde." []
+is_a: KSC_M:0000021 ! Cytochemical method
+relationship: modified_from birnlex:2243 ! Golgi method
+created_by: mihailbota
+remark: acronym: Golgi-Kopsch
+
+[Term]
+id: KSC_M:0000017
+name: Timm-Danschle method
+def: "Based on the property of the sulphide silver to reduce the metals present in trace amounts in cells to the corresponding metal sulphide and silver. The latter will form grains. The application of different types of chelating factors results in the bleaching of cells, or the opposite. It is suited for visualization at the light and electron microscope of synapses." []
+created_by: mihailbota
+remark: acronym: T-D
+
+[Term]
+id: OBI:0000854
+name: Western Blot
+def: "A method from the category of immunoassays that is used to separate a protein from biological samples (cell or tissue), using gel electrophoresis. The protein is then transferred on a specific membrane (blot), conjugated with a primary and many times with a secondary antibody, which is usually labeled. Finally, an enzyme is applied, and the resultant label is then visualized and quantified." []
+synonym: "western blot analysis" EXACT [OBI:0000854]
+xref: KSC_M:0000018 "Western Blot"
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+created_by: mihailbota
+remark: acronym: WB
+
+[Term]
+id: KSC_M:0000019
+name: Kluver-Barrera
+def: "Extension of the Luxol Fast Blue method; the nuclei cell bodies are counterlabeled with cresyl violet or thionin." []
+is_a: nlx_inv:20090605 ! Histochemical method
+created_by: mihailbota
+remark: acronym: K-B
+
+[Term]
+id: nlx_inv:20090605
+name: Histochemical method
+def: "A class of staining methods applied to  tissues of interest. The used substances do not require antibodies, and the labeling shows the general organization of the tissue of interest, but not details of component cells" []
+synonym: "Histochemical protocol" EXACT [nlx_inv:20090605]
+synonym: "Histochemistry" EXACT []
+xref: KSC_M:0000020 "Histochemical method"
+is_a: OBI:0302887 ! Staining method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000021
+name: Cytochemical method
+def: "Class of staining methods that label the component cells of a tissue of interest in detail." []
+is_a: OBI:0302887 ! Staining method
+created_by: mihailbota
+
+[Term]
+id: ERO:0000214
+name: Immunohistochemistry
+def: "A class of methods used to label peptides and proteins in tissues for interest, using labeled antibodies. Immunohistochemistry is used to describe the spatial distribution of the protein of interest within tissue. It also can be used to measure the amount of protein in the tissues, but other techniques are more suited for this." []
+synonym: "immunohistochemistry assay" EXACT [ERO:0000214]
+xref: KSC_M:0000022 "Immunohistochemistry"
+is_a: nlx_inv:20090605 ! Histochemical method
+created_by: mihailbota
+
+[Term]
+id: ERO:0001240
+name: Immunocytochemistry
+def: "A class of methods used to label peptides and proteins in cells of interest, using labeled antibodies. Immunocytochemistry allows the description of the distribution of proteins and peptides in cells of interest." []
+synonym: "immunocytochemistry" EXACT [ERO:0001240]
+xref: KSC_M:0000023 "Immunocytochemistry"
+is_a: KSC_M:0000021 ! Cytochemical method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000024
+name: Direct immunohistochemistry
+def: "Class of methods used to label peptides and proteins in tissues for interest using a single (primary) antibody." []
+is_a: ERO:0000214 ! Immunohistochemistry
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000025
+name: Indirect immunohistochemistry
+def: "Class of methods used to label peptides and proteins in tissues of interest using a secondary antibody, which binds specifically to the primary, for signal amplification." []
+is_a: ERO:0000214 ! Immunohistochemistry
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000026
+name: Enzymatic histochemistry
+def: "Class of methods that use enzymes of specific peptides and proteins. The result of interaction is labeled. Examples: Acetylcholinesterase, cytochrome oxidase." []
+is_a: ERO:0000214 ! Immunohistochemistry
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000027
+name: Immunohistochemistry for light microscopy
+def: "Class of immunohistochemical methods which have their byproducts visible with the light microscope." []
+is_a: ERO:0000214 ! Immunohistochemistry
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000028
+name: Avidin-Biotinylated HRP Complex method
+def: "Immunohistochemical method that uses horseradish peroxidase (HRP) for visualization with the light microscope, and biotin conjugated with secondary antibodies." []
+is_a: KSC_M:0000027 ! Immunohistochemistry for light microscopy
+created_by: mihailbota
+remark: acronym: ABC
+
+[Term]
+id: KSC_M:0000029
+name: Peroxidase-antiperoxidase method
+def: "Immunohistochemical method that uses the peroxidase-antiperoxidase complex to recognize the secondary antibody. This conjugated complex interacts enzymatically with specific molecules (e.g. HRP and DAB) and the colored product can be visualized with light microscope." []
+created_by: mihailbota
+remark: acronym: PAP
+
+[Term]
+id: KSC_M:0000030
+name: Immunohistochemistry for fluorescent microscopy
+def: "Class of immunohistochemical methods for visualization with confocal microscope. These methods generally use two antibodies, and the fluorophore is conjugated with the second antibody." []
+is_a: ERO:0000214 ! Immunohistochemistry
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000031
+name: Single labeling fluoro-immunohistochemistry
+def: "Immunohistochemical method that uses two antibodies to describe the localization of a single protein of interest, which can be visualized with the confocal microscope." []
+is_a: KSC_M:0000030 ! Immunohistochemistry for fluorescent microscopy
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000032
+name: Multiple labeling fluoro-immunohistochemistry
+def: "Immunohistochemical methods that are used to describe the co-localization of multiple proteins of interest, which can be visualized with the confocal microscope. The primary antibodies should not cross-react with each other. The fluorophores need to have minimal overlapping excitation/emission spectra one relative to the other, and from the background." []
+is_a: KSC_M:0000030 ! Immunohistochemistry for fluorescent microscopy
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000033
+name: Double labeling fluoro-immunohistochemistry
+def: "Immunohistochemical method that is used to describe the co-localization of two proteins of interest, which can be visualized with the confocal microscope. The primary antibodies should not cross-react with each other. The fluorophores need to have minimal overlapping excitation/emission spectra, one relative to the other as well as from that of the background. This method allows identification of four phenotypes of cells in the tissue of interest." []
+is_a: KSC_M:0000032 ! Multiple labeling fluoro-immunohistochemistry
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000034
+name: Triple labeling fluoro-immunohistochemistry
+def: "Immunohistochemical method that is used to describe the co-localization of three proteins of interest, which can be visualized with the confocal microscope. The primary antibody should not cross-react. The fluorophores need to have minimal overlapping excitation/emission spectra one relative to the other, and from the background. This method allows identification of nine phenotypes of cells in the tissue of interest." []
+is_a: KSC_M:0000032 ! Multiple labeling fluoro-immunohistochemistry
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000035
+name: Lucifer Yellow labeling
+def: "Cytochemical method that uses Lucifer Yellow for morphological characterization of cells. The labeling is performed by filling the cell with this fluorescent dye. It can be used in conjuction with electrophysiological experiments, and for study of gap juctions and glial cells. It is also used as in tract tracing experiments." []
+synonym: "Lucifer yellow filling" EXACT []
+is_a: birnlex:2136 ! Intracellular labeling method
+relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
+relationship: requires KSC_M:00000224 ! Iontophoretic injection
+relationship: requires OBI:0302912 ! Electroporation
+created_by: mihailbota
+remark: acronym: LY
+
+[Term]
+id: KSC_M:0000036
+name: Immunohistochemistry for electron microscopy
+def: "Immunohistochemical method similar to that for light microscopy, which is used to identify the antigen distribution into cell organelles. However, the slices for EM are very thin, they need to be better fixated, and the tissue has to be embedded in resin." []
+is_a: ERO:0000214 ! Immunohistochemistry
+created_by: mihailbota
+
+[Term]
+id: birnlex:2136
+name: Intracellular labeling method
+def: "Class of cytochemical methods that use the intracellular filling as staining technique. The filling is done either in conjunction with electrophysiological measurements, or by applying electric fields that create pores in the cellular membrane (electroporation), etc. The stains that are used include horseradish peroxidase, Lucifer yellow, biocytin, etc." []
+synonym: "Intracellular injection" EXACT [birnlex:2136]
+xref: KSC_M:0000037 "Intracellular labeling method"
+is_a: KSC_M:0000021 ! Cytochemical method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000038
+name: Biocytin labeling
+def: "Cytochemical method that uses biocytin for morphological characterization of cells. The labeling process is performed iontophoretically. The main advantages of this method are: the small size of the molecule, the molecule is (highly0 water soluble and it can be combinec with fluorescent markers. Biocytin can also be used as an anterograde tract-tracing stain." []
+synonym: "Biocytin filling" EXACT []
+synonym: "Biocytin tracing" EXACT []
+is_a: birnlex:2136 ! Intracellular labeling method
+relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
+relationship: always_requires KSC_M:00000224 ! Iontophoretic injection
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000039
+name: Autoradiographic labeling
+def: "Class of tissue and nucleic acid labeling techniques that use radioactive isotopes as labels. The isotopes can be associated with ligands of the molecules of interest or included in them." []
+is_a: OBI:0302887 ! Staining method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000040
+name: Radioligand binding assay
+def: "Tissue labeling technique using radioactively-labeled ligands to receptors of interest. The ligands need to have high specifity, high value of the ratio between the specific binding and the nonspecific one, and a high specific activity." []
+is_a: KSC_M:0000039 ! Autoradiographic labeling
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000041
+name: Competition assay
+def: "Pharmacological method used to screen an array of drugs for their ability to bind to the receptor of interest." []
+synonym: "Inhibition assay" EXACT []
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000042
+name: Inhibition assay
+def: "Synonym of the competition assay, which is used to screen a set of drugs for their ability to bind to the receptor of interest." []
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+created_by: mihailbota
+
+[Term]
+id: ERO:0000716
+name: Quantitative autoradiography
+def: "The quantitative analysis of a specific radioligand binding at the microscopic, or electron microscopy level. It involves film exposure, which depends of the density of receptors, and of the radioactive atom." []
+synonym: "autoradiography" EXACT [ERO:0000716]
+xref: KSC_M:0000043 "Quantitative autoradiography"
+is_a: KSC_M:0000039 ! Autoradiographic labeling
+created_by: mihailbota
+
+[Term]
+id: ERO:0000771
+name: In situ hybridization
+def: "Labeling and measurement of the mRNA or cDNA in neurons of a protein of interest using the complementary strand, which is labeled radioactively or non-radioactive labels such digoxygenin. It is used to define neuron classes based on the proteins or peptides it can expresses." []
+synonym: "in situ hybridization" EXACT [ERO:0000771]
+xref: KSC_M:0000044 "In situ hybridization"
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+is_a: OBI:0302887 ! Staining method
+created_by: mihailbota
+remark: acronym: ISH
+
+[Term]
+id: ERO:0001168
+name: Fluorescent in situ hybridization
+def: "Method used to examine location of DNA within chromosomes, and identify chromosomal abnormalities, such as missing, mutated, or dislocated genetic segments." []
+synonym: "fluorescent in situ hybridization " EXACT [ERO:0001168]
+xref: KSC_M:0000045 "Fluorescent in situ hybridization"
+created_by: mihailbota
+remark: acronym: FISH
+
+[Term]
+id: OBI:0000415
+name: Polymerase chain reaction
+def: "Class of methods for DNA rapid amplification. Based on the DNA pairs enzymatic amplification mediated by primers and deoxynucleoside triphosphates (dNTPs), and catalyzed by DNA polymerase. PCR-based techniques are commonly used across many fields of biology." []
+synonym: "polymerase chain reaction" EXACT [OBI:0000415]
+xref: KSC_M:0000046 "Polymerase chain reaction"
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+created_by: mihailbota
+remark: acronym: PCR
+
+[Term]
+id: ERO:0001075
+name: Real time polymerase chain reaction
+def: "PCR variant that measures the amplification at the end of each cycle i.e., in real time. Classical PCR measures the amplification at the end of the process. The RT-PCR uses a DNA-binding fluorescent dye, and its signal can be detected and measured at the end of each of amplification cycle. It is also called quantitative absolute PCR. " []
+synonym: "real-time PCR" EXACT [ERO:0001075]
+xref: KSC_M:0000047 "Real time polymerase chain reaction"
+is_a: OBI:0000415 ! Polymerase chain reaction
+created_by: mihailbota
+remark: acronym: qt-PCR
+
+[Term]
+id: KSC_M:0000048
+name: Traditional PCR
+def: "The original PCR method, where amplified PCR products are detected at the end of all cycles. The method can not provide quantitative measures, but semi-quantitative, as a ratio between the yielded signal vs. the known signal of known concentrations. " []
+is_a: OBI:0000415 ! Polymerase chain reaction
+created_by: mihailbota
+remark: acronym: t-PCR
+
+[Term]
+id: OBI:0000552
+name: Reverse transcription polymerase chain reaction
+def: "Polymerase chain reaction method for the detection and semi-quantitative measure of the RNA." []
+synonym: "reverse transcribed polymerase chain reaction" EXACT [OBI:0000552]
+xref: KSC_M:0000049 "Reverse transcription polymerase chain reaction"
+is_a: OBI:0000415 ! Polymerase chain reaction
+created_by: mihailbota
+remark: acronym: RT-PCR
+
+[Term]
+id: KSC_M:0000050
+name: Real-time PCR with DNA-binding dyes
+def: "Real time PCR method using fluorescent dyes, which intercalate within the double-strand DNA and emits fluorescence. Multiplication of the double-strands increase the fluorescence. The dyes are not DNA-sequence specific." []
+is_a: ERO:0001075 ! Real time polymerase chain reaction
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000051
+name: Real-time PCR with fluorescent primers
+def: "Real time PCR method using fluorophores directly attached to target specific primers Each time the primer is used to synthesize a new DNA strand, fluorescence intensity will increase." []
+is_a: ERO:0001075 ! Real time polymerase chain reaction
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000052
+name: Real-time PCR with fluorescent probes
+def: "A very sensitive qt-PCR that uses two target specific primers (forward and reverse), and a probe. Because the primers are specific, this qt-PCR method is also very specific." []
+is_a: ERO:0001075 ! Real time polymerase chain reaction
+is_a: ERO:0001075 ! Real time polymerase chain reaction
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000053
+name: Quantitative reverse-transcription polymerase chain reaction
+def: "A very sensitive rt-PCR method used for detection and measurement of RNA and mRNA. " []
+is_a: OBI:0000552 ! Reverse transcription polymerase chain reaction
+created_by: mihailbota
+remark: acronym: qrt-PCR
+
+[Term]
+id: KSC_M:0000054
+name: One step quantitative reverse-transcription polymerase chain reaction
+def: "Both reverse transcription and qPCR are performed in one step in a single tube that contains the RNA, the reverse transcriptase and the DNA polymerase, and the other reverse transcription and the qPCR reagents." []
+is_a: KSC_M:0000053 ! Quantitative reverse-transcription polymerase chain reaction
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000055
+name: Two steps quantitative reverse-transcription polymerase chain reaction
+def: "qrt-PCR method that first creates the DNA (cDNA) from the provided RNA using a transcriptase. In the second step, 10%-20% of the produced cDNA is used as template for the qtPCR." []
+is_a: KSC_M:0000053 ! Quantitative reverse-transcription polymerase chain reaction
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000056
+name: Multiplex polymerase chain reaction
+def: "PCR method that contains multiple primers, therefore it is used to detect and measure several genes simultaneously. It is used for gene coexpression in a single cell." []
+is_a: OBI:0000415 ! Polymerase chain reaction
+created_by: mihailbota
+remark: acronym: m-PCR
+
+[Term]
+id: KSC_M:0000057
+name: Reverse transcriptase multiple polymerase chain reaction
+def: "RT-PCR method for detection and measurement of several genes RNA." []
+synonym: "reverse transcribed polymerase chain reaction" EXACT [OBI:0000552]
+is_a: ERO:0001075 ! Real time polymerase chain reaction
+created_by: mihailbota
+remark: acronym: RT-mPCR
+
+[Term]
+id: ERO:0001298
+name: Electrophysiological method
+def: "Generic class of techniques employed to detect and measure the electrical activity of living cells (neurons), either individually or as ensembles. " []
+synonym: "electrophysiology assay" EXACT [ERO:0001298]
+xref: KSC_M:0000058 "Electrophysiological method"
+is_a: ERO:0001319 ! Measurement method
+created_by: mihailbota
+
+[Term]
+id: nlx_inv:090910
+name: Intracellular recording
+def: "Class of electrophysiological experiments (techniques) where the recording electrode is placed inside the cell (neuron)." []
+synonym: "Intracellular electrode recording assay" EXACT [nlx_inv:090910]
+xref: KSC_M:0000059 "Intracellular recording"
+is_a: ERO:0001298 ! Electrophysiological method
+created_by: mihailbota
+
+[Term]
+id: ERO:0001685
+name: Patch-clamp
+def: "Class of electrophysiological experiments where the electrode is closely apposed to the neuronal membrane, forming a tight seal with a patch of the membrane." []
+synonym: "patch clamp technique" EXACT [ERO:0001685]
+xref: KSC_M:0000060 "Patch-clamp"
+is_a: ERO:0001298 ! Electrophysiological method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000061
+name: Patch-clamp cell attached mode
+def: "Patch-clamp method where a small amount of suction is applied to the back of the pipette. This creates a very tight seal between pipette and membrane in such way that the ions will not flow between the membrane and the pipette. The single electric current will be that of a single opened ion channel in the patched membrane, and that will flow into the pipette. The resulting electrical current can be measured with an amplifier." []
+is_a: ERO:0001685 ! Patch-clamp
+created_by: mihailbota
+
+[Term]
+id: birnlex:2286
+name: Patch-clamp inside-out
+def: "Variant of the patch-clamp method where the pipette is retracted and the patch of membrane remains attached to the tip of it. It is used for studies of the influence of different intracellular molecules on the ion channels dynamics." []
+synonym: "Cell-detached inside-out single-channel recording protocol" EXACT [birnlex:2286]
+xref: KSC_M:0000062 "Patch-clamp inside-out"
+is_a: ERO:0001685 ! Patch-clamp
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000063
+name: Patch-clamp outside-out
+def: "Variant of the patch-clamp method where the pipette is retracted and the attached membrane is exposed to the extracellular environment. It is used to studie the influence of different extratracellular molecules on the ion channels dynamics." []
+is_a: ERO:0001685 ! Patch-clamp
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000064
+name: Patch-clamp perforated patch
+def: "Variant of the patch-clamp method where the glass pipette is continuous with the cell, but instead of applying suction in the cell-attached mode to transition into the whole-cell mode, a chemical (often an antibiotic) is applied from within the glass pipette, causing small perforations in the membrane. It is an intermediate between the cell-attached mode and whole-cell mode." []
+is_a: ERO:0001685 ! Patch-clamp
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000065
+name: Patch clamp whole cell
+def: "Variant of the patch-clamp method where the glass pippete is continuous with the cytoplasm of the recorded cell. Used to measure the potentials and currents of the whole cell, and to inject different substances directly into the interior of the cell." []
+is_a: ERO:0001685 ! Patch-clamp
+created_by: mihailbota
+
+[Term]
+id: birnlex:2272
+name: Extracellular recording
+def: "Class of electrophysiological methods that detect and measure field potentials such as evoked and behavior-related field potential recordings, and compound spikes (compound action potentials), as well as individual units recordings. The recording electrode is placed outside of the target neuron." []
+synonym: "Extracellular electrode recording protocol" EXACT [birnlex:2272]
+xref: KSC_M:0000066 "Extracellular recording"
+is_a: ERO:0001298 ! Electrophysiological method
+created_by: mihailbota
+
+[Term]
+id: birnlex:2276
+name: Extracellular single unit recording
+def: "Extracellular electrophysiological methods where the recording electrode is placed near the cell soma or the initial segment. It is used to record (evoked or spontaneous) action potentials and measure variables of the action potential such as amplitude and latency." []
+synonym: "Single electrode extracellular recording protocol" EXACT [birnlex:2276]
+xref: KSC_M:0000067 "Extracellular single unit recording"
+is_a: birnlex:2272 ! Extracellular recording
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000068
+name: Reporter genes method
+def: "Class of methods for visualization and measurement of gene expression patterns using non-endogenous genes that are encoding for enzymes or fluorescent proteins whose expressions are controlled by the promoters for the gene of interest (different than the reporter gene). These genes are either directly controlled by the promoters of the genes of interest, or the DNA sequence of the reporter is fused with the DNA for the gene of interest (piggy-back), and both will be under the control of the promoter." []
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+is_a: KSC_M:000004 ! Visualization method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000069
+name: Enyzme-linked immunosorbent assay
+def: "Biochemical assay where a specific antibody binds to a protein of interest to mark the presence and measure the quantity of the protein in a sample." []
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+created_by: mihailbota
+remark: acronym: ELISA
+
+[Term]
+id: ERO:0000652
+name: Radioimmunoassay
+def: "Biochemical assay where an antibody binds to radioactive proteins of known concentration. A sample containing nonradioactive proteins is added to compete with the radioactive proteins to the antibody loci, allowing determination of the protein concentration in the added sample." []
+synonym: "radioimmunoassay" EXACT [ERO:0000652]
+xref: KSC_M:0000070 "Radioimmunoassay"
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+created_by: mihailbota
+remark: acronym: RIA
+
+[Term]
+id: OBI:0000690
+name: Immunoprecipitation
+def: "Biochemical method used for proteins purification. Specific antibodies are bound to a mixture of beads and added to the solution. The antibody-conjugated beads will bind to the proteins of interest and the beads will precipitate the antibody-protein of interest from the solution. The final step will be the removal of antibodies, usually by changing the salts concentration or the pH." []
+synonym: "immunoprecipitation" EXACT [OBI:0000690]
+xref: KSC_M:0000071 "Immunoprecipitation"
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000072
+name: Chromatography
+def: "Class of purification methods applied to a wide range of biomolecules." []
+is_a: KSC_M:000001 ! Method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000073
+name: Gel filtration chromatography
+def: "Purification method where the molecules of interest are run through through a column and are separated by their size." []
+is_a: KSC_M:0000072 ! Chromatography
+created_by: mihailbota
+
+[Term]
+id: ERO:0001501
+name: Ion exchange chromatography
+def: "Purification method where the molecules are separated by their sizes of their electrical charges." []
+synonym: "ion chromatography " EXACT [ERO:0001501]
+xref: KSC_M:0000074 "Ion exchange chromatography"
+is_a: KSC_M:0000072 ! Chromatography
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000075
+name: Affinity chromatography
+def: "Purification method where the molecules are run through a matrix. Small molecules are fixed to the porous matrix to bind to molecules that may have a high affinity, such as a substrate binding to an enzyme." []
+is_a: KSC_M:0000072 ! Chromatography
+created_by: mihailbota
+
+[Term]
+id: ERO:0001034
+name: Coimmunoprecipitation
+def: "Variant (refinement) of the immunoprecipitation where a second antibody is used in addition to the primary antibody-beads complex. The second antibody is added after the protein is eluted from the solution, and in conjunction with Western blot or ELISA methods is used to detect the presence of any secondary proteins that may interact with the immunoprecipitated protein." []
+synonym: "coimmunoprecipitation" EXACT [ERO:0001034]
+xref: KSC_M:0000076 "Coimmunoprecipitation"
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+relationship: modified_from OBI:0000690 ! Immunoprecipitation
+created_by: mihailbota
+
+[Term]
+id: ERO:0000926
+name: Chromatin immunoprecipitation
+def: "Combination of immunoprecipitation and chromatography where the antibody is bound to small beads in a column. The protein is bound by the antibody and purified through the column. Polymerase chain reaction (PCR) can be used subsequently, to determine the presence of any bound DNA sequences. Used to determine whether a protein can directly interact with a specific region of DNA." []
+synonym: "chromatin immunoprecipitation" EXACT [ERO:0000926]
+xref: KSC_M:0000077 "Chromatin immunoprecipitation"
+is_a: OBI:0000690 ! Immunoprecipitation
+relationship: always_requires KSC_M:0000072 ! Chromatography
+created_by: mihailbota
+remark: acronym: ChIP
+
+[Term]
+id: KSC_M:0000078
+name: Antibody interference
+def: "Purification method where the antibody is bound to the protein, which will interfere with its function." []
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+created_by: mihailbota
+
+[Term]
+id: OBI:0000470
+name: Mass spectometry
+def: "Technique used to identify and sequence peptides and proteins done by computing the mass to charge ratio. It is used in combination with databases of proteins and their properties, to detect unknown aminoacids sequences. The solution needs to be in gaseous phase, and the aminoacids sequences charged." []
+synonym: "Mass spectrometry assay" EXACT [OBI:0000470]
+xref: KSC_M:0000079 "Mass spectometry"
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+created_by: mihailbota
+remark: acronym: MS
+
+[Term]
+id: KSC_M:0000080
+name: Matrix-assisted laser desorption ionization
+def: "Technique used to bring the aminoacids sequence solution in gaseous state and charged. The sequence of interest is mixed with a UV-absorbing organic acid and dried on a metal slide. The sample is irradiated with a UV laser, causing the solution to go into the gas phase. The aminoacids sequence also becomes charged. This method precludes the mass spectometry technique." []
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+created_by: mihailbota
+remark: acronym: MALDI
+
+[Term]
+id: ERO:0001331
+name: Electrospray ionization
+def: "Technique used to bring aminoacids sequences solutions in gaseous state and charged. The acidic solution is passed through capillaries into a heated area where the solution is transformed into gas, and molecules of interest become charged. This technique preclude the mass spectometry assay." []
+synonym: "electrospray ionization" EXACT [ERO:0001331]
+xref: KSC_M:0000081 "Electrospray ionization"
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+created_by: mihailbota
+remark: acronym: ESI
+
+[Term]
+id: KSC_M:0000082
+name: Collision induced dissociation
+def: "Technique used to fragment proteins that have the mass to charge ratio identical, by bombarding with atoms (e.g. argon, nitrogen). The resulting fragments are the run through mass spectometers. The proteins are then reconstituted by overlapping the fragments." []
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+created_by: mihailbota
+remark: acronym: CID
+
+[Term]
+id: KSC_M:0000083
+name: Kinase assay
+def: "Technique used to determine whether a protein phosphorylates another protein (the substrate), by adding radioactive ATP. The radioactive phosphorus is transferred to the protein substrate, which is then immunoprecipitated. The purified phosphorylated protein is visualized using autoradiography. " []
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+created_by: mihailbota
+
+[Term]
+id: ERO:0000907
+name: Electrophoretic mobility shift assay
+def: "Technique used to determine whether a protein can directly interact with a short and determined DNA sequence. Also known as gel shift assay." []
+synonym: "electrophoretic gel mobility shift" EXACT [ERO:0000907]
+xref: KSC_M:0000084 "Electrophoretic mobility shift assay"
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+created_by: mihailbota
+remark: acronym: EMSA
+
+[Term]
+id: KSC_M:0000085
+name: Luciferase assay
+def: "Technique used to determine whether a protein can activate or repress the expression of a target gene and the amount of the gene product, by fusing the luciferase DNA to the regulatory region of the target protein DNA. However, it cannot determine if the protein directly interacts with the DNA or indirectly affects transcription by activating or repressing an intermediary protein that controls the transcription." []
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+created_by: mihailbota
+
+[Term]
+id: ERO:0000215
+name: Light microscopy
+def: "Class of techniques involving a microscope that uses visible light to illuminate and image a specimen." []
+synonym: "light microscopy" EXACT [ERO:0000215]
+xref: KSC_M:0000086 "Light microscopy"
+is_a: ERO:0000201 ! Microscopy
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000087
+name: Brightfield microscopy
+def: "The most common and general form of light microscopy, using a simple or compound microscope. The visible light passes directly through or is reflected off a specimen. " []
+is_a: ERO:0000215 ! Light microscopy
+created_by: mihailbota
+
+[Term]
+id: ERO:0001636
+name: Phase-contrast microscopy
+def: "Phase-contrast microscopy uses indices of refraction of different media through which the light passes, or is refracted and reflected. This technique amplifies the differences in phase generated by the indices of refraction into larger intensity differences with high contrast. It is commonly used for visualization of cell cultures." []
+synonym: "phase contrast microscopy" EXACT [ERO:0001636]
+xref: KSC_M:0000088 "Phase-contrast microscopy"
+is_a: ERO:0000215 ! Light microscopy
+created_by: mihailbota
+
+[Term]
+id: KSC_M:0000089
+name: Darkfield microscopy
+def: "This method uses oblique illuminating rays of light directed from the side so that only scattered light enters the objective lens. The objects that are transparent will appear dark, while those that reflect light will be very bright. Used in neuroanatomy for visualization of fiber tracts in Nissl stained slides. Also called darkground microscopy. Also known as Nomarski method." []
+is_a: ERO:0000215 ! Light microscopy
+created_by: mihailbota
+
+[Term]
+id: ERO:0001637
+name: Differential interference contrast microscopy
+def: "Variant of the phase-contrast microscopy that uses the indices of refraction of different media to create three-dimensional textured look of the cellular components." []
+synonym: "differential interference contrast microscopy" EXACT [ERO:0001637]
+xref: KSC_M:0000090 "Differential interference contrast microscopy"
+is_a: ERO:0000215 ! Light microscopy
+created_by: mihailbota
+remark: acronym: DIC
+
+[Term]
+id: ERO:0001356
+name: Fluorescence microscopy
+def: "Class of microscopy methods that visualize and magnify cells and their parts, which are labeled or express a class of substances called fluorophores. Fluorophores absorb (are excited) by specific light wavelengths and emit light with different wavelengths, usually higher. " []
+synonym: "fluorescent microscopy" EXACT [ERO:0001356]
+xref: KSC_M:0000091 "Fluorescence microscopy"
+is_a: ERO:0000201 ! Microscopy
+created_by: mihailbota
+
+[Term]
+id: birnlex:3077
+name: Wide field fluorescence microscopy
+def: "The most common fluorescence microscopy. Also called epifluorescence." []
+synonym: "Wide-field fluorescence imaging protocol" EXACT [birnlex:3077]
+xref: KSC_M:0000092 "Wide field fluorescence microscopy"
+is_a: ERO:0001356 ! Fluorescence microscopy
+created_by: mihailbota
+
+[Term]
+id: ERO:0000200
+name: Confocal microscopy
+def: "Fluorescence microscopy method that is used to produce images of structures within specimens by selectively collecting light from thin (<1 ?m) regions. This is realized by aligning the pinhole detector aperture with the pinhole illuminating aperture in such way that they are confocal." []
+synonym: "confocal microscopy" EXACT [ERO:0000200]
+xref: KSC_M:0000093 "Confocal microscopy"
+is_a: ERO:0001356 ! Fluorescence microscopy
+created_by: mihailbota
+
+[Term]
+id: ERO:0001640
+name: Two-photon microscopy
+def: "Fluorescence microscopy method that uses 2 photons to excite the fluorophores in the specimen, each having half of the frequency (double the wavelength). Also known as two-photon laser scanning microscopy (TPLSM)." []
+synonym: "multiphoton microscopy" EXACT [ERO:0001640]
+xref: KSC_M:0000094 "Two-photon microscopy"
+is_a: ERO:0001356 ! Fluorescence microscopy
+created_by: mihailbota
+
+[Term]
+id: birnlex:2264
+name: Total internal reflection fluorescent microscopy
+def: "Fluorescence microscopy method where the section of detection is fixed at the interface between the specimen and the surface the specimen is mounted on. It is used for visualization and magnification of cell surfaces." []
+synonym: "Total internal reflection imaging protocol" EXACT [birnlex:2264]
+xref: KSC_M:0000095 "Total internal reflection fluorescent microscopy"
+is_a: ERO:0001356 ! Fluorescence microscopy
+created_by: mihailbota
+remark: acronym: TIRF
+
+[Term]
+id: ERO:0000328
+name: Electron microscopy
+def: "Microscopy method that uses focused beams of electrons instead of photons, thus reducing the minimum wavelength and increasing the resolving power to the scale of tenths of nanometers." []
+synonym: "electron microscopy" EXACT [ERO:0000328]
+xref: KSC_M:0000096 "Electron microscopy"
+is_a: ERO:0000201 ! Microscopy
+created_by: mihailbota
+remark: acronym: EM
+
+[Term]
+id: ERO:0000329
+name: Transmission electron microscopy
+def: "Electron microscopy method that uses heavy metals staining of very thin sections of the specimen. The atoms of the heavy metals will absorb or scatter the electrons beam. The variations of the electron beam intensity are transformed into photons, which will produce two-dimensional images of the thin sections." []
+synonym: "transmission electron microscopy" EXACT [ERO:0000329]
+xref: KSC_M:0000097 "Transmission electron microscopy"
+is_a: ERO:0000328 ! Electron microscopy
+created_by: mihailbota
+remark: acronym: TEM
+
+[Term]
+id: ERO:0000330
+name: Scanning electron microscopy
+def: "Electron microscopy method that uses high-energy electron beams to scan the surface of the specimen, which is coated by a gold or silver layer. The interaction between the electrons and the specimen surface is converted into electric signals that are converted in pixels on a screen. The resulting image is a 3D rendering of the specimen's surface topography." []
+synonym: "scanning electron microscopy" EXACT [ERO:0000330]
+xref: KSC_M:0000098 "Scanning electron microscopy"
+is_a: ERO:0000328 ! Electron microscopy
+created_by: mihailbota
+remark: acronym: SEM
+
+[Term]
+id: KSC_M:0000099
+name: Infrared differential interference contrast microscopy
+def: "Variant of the differentation interference contrast microscopy where the instead of light, infrared waves are used. This method is a combination of microscopy and spectrometry for infrared, which includes Fourier Transformation for transformation of IR into visible light." []
+is_a: KSC_M:000004 ! Visualization method
+created_by: mihailbota
+remark: acronym: IR-DIC
+
+[Term]
+id: birnlex:2865
+name: Multichannel recording
+def: "Multiple electrodes electrophysiological methods that are used to record neuron populations. The basic configurations are the stereotrode (2 recording wires) and tetrodes (4 recording electrodes). Combinations of these configurations allow simultaneous recordings from 32 or 64 sites. " []
+synonym: "Multiple electrode extracellular recording protocol" EXACT [birnlex:2865]
+xref: KSC_M:00000100 "Multichannel recording"
+is_a: birnlex:2272 ! Extracellular recording
+created_by: mihailbota
+
+[Term]
+id: nlx:152558
+name: Optogenetics
+def: "The combination of genetic and optical methods to achieve gain and loss of function of well-defined events in the specific cells of the living tisssue (Deisseroth, 2011)" []
+xref: KSC_M:00000101 "Optogenetics"
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+is_a: KSC_M:000004 ! Visualization method
+relationship: requires KSC_M:00000112 ! Acute gene transfer
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000102
+name: Voltage-sensitive dyes imaging
+def: "Class of methods that use different molecules to visualize and measure variations of the electric potential in tissue, either in single cells or of cellular ensembles." []
+is_a: KSC_M:000004 ! Visualization method
+is_a: OBI:0302887 ! Staining method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000103
+name: Fluorescent dyes imaging
+def: "Class of voltage-sensitive dyes imaging methods where different synthetic fluorescent probes are used. They can be further subdivided in fast- and slow-sensitive methods, depending on whether they can detect fast vs slow electrical changes." []
+is_a: KSC_M:00000102 ! Voltage-sensitive dyes imaging
+created_by: mihailbota
+
+[Term]
+id: ERO:0000634
+name: Calcium-sensitive dyes imaging
+def: "Class of voltage sensitive dyes imagining methods that use the intracellular calcium as reporter for electrical activity of single or ensembles of cells. The intracelular Ca concentration increases during an action potential, therefore the fluroescent signal given by dyes that bound with it will increase." []
+synonym: "calcium imaging assay" EXACT [ERO:0000634]
+xref: KSC_M:00000104 "Calcium-sensitive dyes imaging"
+is_a: KSC_M:00000103 ! Fluorescent dyes imaging
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000105
+name: Permeable calcium-sensitive dyes imaging
+def: "Class of calcium voltage-sensitive dyes imagining methods that use fluorescent probes that can cross the membrane." []
+is_a: ERO:0000634 ! Calcium-sensitive dyes imaging
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000106
+name: Multi-cell bolus loading
+def: "Method of labeling active neurons with membrane-permeant calcium-indicator fluorescent dyes. Used for monitorization of neuronal ensembles." []
+is_a: KSC_M:00000107 ! Impermeable calcium-sensitive dyes imaging
+relationship: always_requires OBI:0302912 ! Electroporation
+created_by: mihailbota
+remark: acronym: MCBL
+
+[Term]
+id: KSC_M:00000107
+name: Impermeable calcium-sensitive dyes imaging
+def: "Class of calcium-indicator fluorescent dyes imaging methods that use impermeable dyes, which are injected into neurons either through a recording electrode, or using electroporation." []
+is_a: ERO:0000634 ! Calcium-sensitive dyes imaging
+relationship: requires OBI:0302912 ! Electroporation
+created_by: mihailbota
+
+[Term]
+id: OBI:0302912
+name: Electroporation
+def: "Class of methods that use strong electric fields to change the membrane permeability of a cell. Depending on the intensity, mode, time of application of the external electric field, temperature and presence of specific molecules, the induced pores into the cell membrane can be transient or metastable." []
+synonym: "electroporation" EXACT [OBI:0302912]
+xref: KSC_M:00000108 "Electroporation"
+is_a: KSC_M:000001 ! Method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000109
+name: Genetic encoders of calcium imaging
+def: "Generic class of methods that use chimeric fluorescent proteins (opsins) that can be used to monitor variations of intracellular calcium concentrations. GECIs consist of a calcium-binding domain (calmodulin or troponin C), fused to one or two fluorescent proteins." []
+is_a: nlx:152558 ! Optogenetics
+created_by: mihailbota
+remark: acronym: GECI
+
+[Term]
+id: KSC_M:00000110
+name: Single fluorescent protein genetic encoder of calcium imaging
+def: "Optogenetic method that uses a single fluorescent protein to visualize intracellular calcium. Usually, the fluorescence sensitivity is increased when the fluorescent protein is split in two (circularly permutation) and its conformation is modulated by calcium bindingdependent changes in the chromophore environment." []
+is_a: KSC_M:00000109 ! Genetic encoders of calcium imaging
+created_by: mihailbota
+remark: acronym: single-FP GECI
+
+[Term]
+id: KSC_M:00000111
+name: Two fluorescent proteins genetic encoder of calcium imaging
+def: "Optogenetic method that uses two variants of a fluorescent protein modified in such way that their spectral properties allow a specific resonance transfer energy (Forster FRET)." []
+is_a: KSC_M:00000109 ! Genetic encoders of calcium imaging
+created_by: mihailbota
+remark: acronym: two-FP GECI
+
+[Term]
+id: KSC_M:00000112
+name: Acute gene transfer
+def: "Class of methods that use viruses for transfer of specific genes into the DNA of the cell of of interest. The most used viruses are retroviruses (lentiviruses) and adeno-associated viruses (AAV)." []
+is_a: KSC_M:000001 ! Method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000113
+name: Sampling method
+def: "Class of methods used to select few units that will provide the required estimates of a variable of interest for an entire population. Generally, sampling methods are statistic or non-statistic." []
+synonym: "Sampling" EXACT []
+is_a: KSC_M:000006 ! Analysis method
+created_by: mihailbota
+
+[Term]
+id: nlx_inv:090919
+name: Tract tracing
+def: "Class of methods used to unravel neuroanatomical connections at the neuronal population level." []
+synonym: "Tract tracing assay" EXACT [nlx_inv:090919]
+xref: KSC_M:00000114 "Tract tracing"
+is_a: OBI:0302887 ! Staining method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000115
+name: Degeneration method
+def: "Class of tract tracing methods that use lesions of myelinated fiber tracts to identify neuroanatomical connections. The lesions of the myelinated axons lead to their degeneration, which is visualized against the background of gray matter." []
+is_a: nlx_inv:090919 ! Tract tracing
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000116
+name: Wallerian degeneration
+def: "Tract tracing method where the course and terminations of fibers are identified by the anterograde degeneration of the myelin and of distal parts of the lesioned axons." []
+is_a: KSC_M:00000115 ! Degeneration method
+is_a: KSC_M:00000123 ! Anterograde tracing
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000117
+name: Marchi method
+def: "Anterograde degeneration tract tracing method where course and termination of neuroanatomical fibers are identified using osmic acid staining of the degenerated myelin." []
+is_a: KSC_M:00000115 ! Degeneration method
+is_a: KSC_M:00000123 ! Anterograde tracing
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000118
+name: Cell reaction method
+def: "Retrograde degeneration tract tracing method where the origin of neuroanatomical connections (axons proximal parts and cell bodies) is identified after lesioning the fiber tracts." []
+is_a: ERO:0001277 ! Retrograde tracing
+is_a: KSC_M:00000115 ! Degeneration method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000119
+name: Nauta method
+def: "Tract tracing method where the neuroanatomical connections are identified by silver impregnation of the degenerating fibers." []
+is_a: KSC_M:00000115 ! Degeneration method
+is_a: KSC_M:00000123 ! Anterograde tracing
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000120
+name: Nauta-Gygax method
+def: "Variant of the original Nauta method. The impregnated degenerating axons appear black against the background of normal fibers. Also known as the suppresive Nauta-Gygax method, or NautaGygax enhanced silver tracing method." []
+is_a: KSC_M:00000123 ! Anterograde tracing
+relationship: modified_from KSC_M:00000119 ! Nauta method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000121
+name: Glees method
+def: "Variant of the Nauta method used for identification of the silver stained degenerating axons terminations structures. Can be used in conjuction with electron microscopy." []
+is_a: KSC_M:00000123 ! Anterograde tracing
+relationship: modified_from KSC_M:00000119 ! Nauta method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000122
+name: Fink-Heimer method
+def: "Variant of the Nauta method that additionally uses potassium permanganate-uranyl nitrate sequence, which allows bettter visualization of degenerating axons, their terminations, and the terminal boutons (boutons terminaux)." []
+is_a: KSC_M:00000123 ! Anterograde tracing
+relationship: modified_from KSC_M:00000119 ! Nauta method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000123
+name: Anterograde tracing
+def: "Class of tract tracing methods that label the axons and their terminations either by anterograde axonal transport or degeneration." []
+is_a: nlx_inv:090919 ! Tract tracing
+created_by: mihailbota
+
+[Term]
+id: ERO:0001277
+name: Retrograde tracing
+def: "Class of tract tracing methods that label the origins (cell bodies) of the neuroanatomical connections either by retrograde axonal transport, or by lesions." []
+synonym: "retrograde labeling" EXACT [ERO:0001277]
+xref: KSC_M:00000124 "Retrograde tracing"
+is_a: nlx_inv:090919 ! Tract tracing
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000125
+name: Anterograde and retrograde tract tracing
+def: "Class of tract tracing methods that label both the axonal terminations and the cell bodies using both modes of axonal transport or lesions." []
+is_a: nlx_inv:090919 ! Tract tracing
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000126
+name: Tritiated aminoacids tracing
+def: "Anterograde tract tracing method using radioactive aminoacids, which are delivered by pressure injection into the region of interest. The aminoacids are transported anterogradely towards the axonal terminals, which can be visualized onto film. The course of labeled axons cannot be determined directly. The radioactive isotopes that are used usually have short decaying time (half time). Also known as orthograde axoplasmic transport autoradiographic tracing (OOAT)." []
+is_a: KSC_M:00000123 ! Anterograde tracing
+relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
+relationship: requires KSC_M:00000223 ! Pressure injection
+relationship: requires KSC_M:00000224 ! Iontophoretic injection
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000127
+name: Horseradish peroxidase tracing
+def: "Both anterograde and retrograde tract tracing method that uses horseradish peroxidase as stain for axon terminals and neuronal cell bodies, respectively. However, HRP tracing is used mostly retrogradely. The HRP presence is detected using classical immunohistochemistry" []
+is_a: KSC_M:00000125 ! Anterograde and retrograde tract tracing
+relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
+relationship: requires KSC_M:00000223 ! Pressure injection
+relationship: requires KSC_M:00000224 ! Iontophoretic injection
+created_by: mihailbota
+remark: acronym: HRP
+
+[Term]
+id: KSC_M:00000128
+name: Radioactive and non-radioactive HRP tracing
+def: "Combination of the anterograde tritiated aminoacids and of HRP tracing methods, used for visualization of axon collaterals. The radioactive HRP is enzymatically inactive, and the non-radioactive HRP is enzymatically active." []
+is_a: KSC_M:00000125 ! Anterograde and retrograde tract tracing
+relationship: always_requires KSC_M:00000126 ! Tritiated aminoacids tracing
+relationship: always_requires KSC_M:00000127 ! Horseradish peroxidase tracing
+relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
+relationship: requires KSC_M:00000223 ! Pressure injection
+relationship: requires KSC_M:00000224 ! Iontophoretic injection
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000129
+name: Retrograde fluorescent tracing
+def: "Class of tract tracing methods that use retrogradely transported fluorescent markers. Some of the most commonly used markers are Evans blue, Fast blue, Diamidino Yellow (DI), nuclear yellow, fluorogold (FG). These markers can be used as single tracers, in combinations (e.g., DI and FG),  or with toxins-based tracers, and with anterograde tracers." []
+is_a: ERO:0001277 ! Retrograde tracing
+relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
+relationship: requires KSC_M:00000223 ! Pressure injection
+relationship: requires KSC_M:00000224 ! Iontophoretic injection
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000130
+name: Wheat-germ agglutinin and horseradish peroxidase tracing
+def: "Combination of WGA and HRP as tract tracer, which can be used both anterogradely and retrogradely." []
+is_a: KSC_M:00000125 ! Anterograde and retrograde tract tracing
+relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
+relationship: requires KSC_M:00000223 ! Pressure injection
+relationship: requires KSC_M:00000224 ! Iontophoretic injection
+created_by: mihailbota
+remark: acronym: WGA-HRP
+
+[Term]
+id: KSC_M:00000131
+name: Cholera toxin tracing
+def: "Class of tracing methods that use bacterial toxins conjugated with HRP, fluorescein, or rhodamine beads. The most used bacterial toxis is  non-toxic B fragment of cholera toxin (CTB). The detection is immunohistochemical, therefore this method is more sensitive than HRP. It can be used both anterogradely and retrogradely." []
+is_a: ERO:0001277 ! Retrograde tracing
+relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
+relationship: requires KSC_M:00000223 ! Pressure injection
+relationship: requires KSC_M:00000224 ! Iontophoretic injection
+created_by: mihailbota
+remark: acronym: CTB
+
+[Term]
+id: KSC_M:00000132
+name: Micro- and nano particles retrograde tracing
+def: "Class of tracing methods that use small particles composed of a label-coated material, which can employed alone, or conjugated with other tracers." []
+is_a: ERO:0001277 ! Retrograde tracing
+relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
+relationship: requires KSC_M:00000223 ! Pressure injection
+relationship: requires KSC_M:00000224 ! Iontophoretic injection
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000133
+name: Rhodamine beads tracing
+def: "Retrograde tracing method that uses fluorescent rhodamine carrying latex beads." []
+is_a: ERO:0001277 ! Retrograde tracing
+relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
+relationship: requires KSC_M:00000223 ! Pressure injection
+relationship: requires KSC_M:00000224 ! Iontophoretic injection
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000134
+name: Gold particles coated with wheat-germ conjugated apoHRP
+def: "Retrograde tracing method that combines WGA-HRP with gold particles (10-20 nm). It can be viewed directly through a light microscope and used in EM." []
+is_a: ERO:0001277 ! Retrograde tracing
+relationship: always_requires KSC_M:00000130 ! Wheat-germ agglutinin and horseradish peroxidase tracing
+relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
+relationship: requires KSC_M:00000223 ! Pressure injection
+relationship: requires KSC_M:00000224 ! Iontophoretic injection
+created_by: mihailbota
+remark: acronym: WGAapoHRP
+
+[Term]
+id: KSC_M:00000135
+name: diOlistic labeling
+def: "Neurons labeling method with lipophilic carbocyanine dyes that are injected into the cells of interest. These dyes label efficiently the neurons membranes, providing a more accurate view of dendrites and dendritic spines. It can be used in combination with retrograde tracers." []
+is_a: birnlex:2136 ! Intracellular labeling method
+created_by: mihailbota
+remark: acronym: diOListic
+
+[Term]
+id: KSC_M:00000136
+name: Retrograde tracing of diOlistic neurons
+def: "Combination of retrograde tracing methods with microparticles or fluorescent tracers (e.g. fluorogold) with the intracellular filling of neurons with lipophilic carbocyanine dyes." []
+is_a: ERO:0001277 ! Retrograde tracing
+relationship: always_requires KSC_M:00000135 ! diOlistic labeling
+relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
+relationship: requires KSC_M:00000223 ! Pressure injection
+relationship: requires KSC_M:00000224 ! Iontophoretic injection
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000137
+name: Anterograde fluorescent tracing
+def: "Class of tract tracing methods that use anterogradely transported fluorescent markers. Some of the most commonly used markers are biotinylated dextran amine (BDA), Phaseolus vulgaris leucoagglutinin (PHAL), Lucifer yellow-dextran, fluorescein-dextran, and Fluoro Ruby (tetramethylrhodamine-dextran), neurobiotin, and biocytin. One of the advantages of these markers vs the tritiated aminoacids is that the course and terminations of labeled axons can be directly visualized." []
+is_a: KSC_M:00000123 ! Anterograde tracing
+relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
+relationship: requires KSC_M:00000223 ! Pressure injection
+relationship: requires KSC_M:00000224 ! Iontophoretic injection
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000138
+name: Biotinylated dextran amine tracing
+def: "Anterograde tracing method using BDA as marker. The 10kDA BDA is one of the best markers for anterograde tracing in different species, while the 3kDA BDA is used for cell filling, and for retrograde tracing." []
+is_a: KSC_M:00000123 ! Anterograde tracing
+created_by: mihailbota
+remark: acronym: BDA
+
+[Term]
+id: KSC_M:00000139
+name: Phaseolus vulgaris leucoagglutinin tracing
+def: "Anterograde tracing method using PHAL as marker, which is considered the "gold standard" at least in small animals. PHA-L labels the axons only anterogradely when iontophoretic injections are employed, and there very few cases of dendrites labeling when the marker was pressure-injected." []
+is_a: KSC_M:00000123 ! Anterograde tracing
+created_by: mihailbota
+remark: acronym: PHAL
+
+[Term]
+id: KSC_M:00000140
+name: Coinjection tract tracing
+def: "Tracing method that involves the injection of two markers in the same injection site. Usually, one anterograde and one retrograde tracer are injected, for simultaneous detection of both inputs and outputs of region's of interest." []
+is_a: KSC_M:00000125 ! Anterograde and retrograde tract tracing
+relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
+relationship: requires KSC_M:00000223 ! Pressure injection
+relationship: requires KSC_M:00000224 ! Iontophoretic injection
+created_by: mihailbota
+remark: acronym: COIN
+
+[Term]
+id: KSC_M:00000141
+name: Double coinjection tract tracing
+def: "Tracing method that involves injections of two pairs of stains, in two different regions. Each coinjection includes one anterograde and one retrograde tracer. This method is used for unraveling and visualization of regions' of interest networks." []
+is_a: KSC_M:00000125 ! Anterograde and retrograde tract tracing
+relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
+relationship: requires KSC_M:00000223 ! Pressure injection
+relationship: requires KSC_M:00000224 ! Iontophoretic injection
+created_by: mihailbota
+remark: acronym: DCOIN
+
+[Term]
+id: KSC_M:00000142
+name: Transsynaptic tracing
+def: "Class of tracing methods that label connections across more than 1 node." []
+is_a: nlx_inv:090919 ! Tract tracing
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000143
+name: Degeneration transsynaptic tracing
+def: "Tracing methods based on lesions of tracts that induce degeneration of fibers beyond the first synaptic station (terminal field). " []
+is_a: KSC_M:00000115 ! Degeneration method
+is_a: KSC_M:00000123 ! Anterograde tracing
+is_a: KSC_M:00000142 ! Transsynaptic tracing
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000144
+name: Viruses transsynaptic tracing
+def: "Tracing methods that use viruses (e.g., PrV and Bartha) as markers, and which label connections beyond the first synaptic station. Viruses that allow transneuronal labeling include Herpes simplex (HSV1) and pseudorabies virus (PRV), and the CSV strain of the rabies virus." []
+is_a: KSC_M:00000125 ! Anterograde and retrograde tract tracing
+is_a: KSC_M:00000142 ! Transsynaptic tracing
+relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
+relationship: requires KSC_M:00000223 ! Pressure injection
+relationship: requires KSC_M:00000224 ! Iontophoretic injection
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000145
+name: Double-virus translabeling neuron method
+def: "Virus transsynaptic tracing method that uses two different viruses to characterize functionally related networks. Each virus is genetically modified in such way that it expresses a specific antigen. The network infected by each virus is identified immunohistochemically, and the common nodes will be doubled labeled." []
+is_a: KSC_M:00000144 ! Viruses transsynaptic tracing
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000146
+name: Double recombinant viral transsynaptic tracing
+def: "Virus transsynaptic tracing method that uses two strains of recombinant rabies virus (RV), each of them modified in such that it will express an unique marker in infected neurons. The RV propagates retrogradely, and if injected in two regions, the network infected by each strain will include the associated marker. The identification of each network is performed histochemically, and the common nodes will be double labeled." []
+is_a: KSC_M:00000144 ! Viruses transsynaptic tracing
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000147
+name: Golgi-like retrograde labeling using viruses
+def: "Cytochemical labeling methods that uses retrograde tracing with retrogradely-propagating viruses followed by the antibody-based detection of the infected neuron." []
+is_a: birnlex:2136 ! Intracellular labeling method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000148
+name: Golgi-like retrograde labeling using rabies virus
+def: "Golgi-like retrograde labeling method that uses the rabies virus to label a neuron, followed by a specific antibody-based detection of the infected neuron. This method has the advantage of not labeling fibers of passage." []
+is_a: KSC_M:00000147 ! Golgi-like retrograde labeling using viruses
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000149
+name: Golgi-like retrograde labeling using herpes virus
+def: "Golgi-like retrograde labeling method that uses the herpes virus to label a neuron, followed by a specific antibody-based detection of the infected neuron." []
+is_a: KSC_M:00000147 ! Golgi-like retrograde labeling using viruses
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000150
+name: Single cell juxtacellular recording-labeling technique
+def: "Combination of the intracellular filling method and extracellular electrophysiological method. The pipette is used both for iontophoretic filling of the cell of interest, and as an electrode for monitoring the electrophysiological activity of the neuron. The pipette should be in juxtaposition with the cells' membrane. It can be used for morphological recostruction and electrophysiological monitoring of micromodules made of adjacent neurons." []
+is_a: birnlex:2136 ! Intracellular labeling method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000151
+name: Loose-patch-juxtacellular recording
+def: "Variant of the single cell juxtacellular recording-labeling technique" []
+is_a: birnlex:2136 ! Intracellular labeling method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000152
+name: Bioimaging
+def: "General class of non-invasely techniques used to visualize structures inside the body." []
+is_a: KSC_M:000004 ! Visualization method
+created_by: mihailbota
+
+[Term]
+id: ERO:0001235
+name: Magnetic resonance imaging
+def: "Imaging techniques based on application of strong magnetic fields that are used to visualize the structure and physiology of different organs or parts of them, both in healthy (normal) subjects and in diseased subjects." []
+synonym: "magnetic resonance imaging" EXACT [ERO:0001235]
+xref: KSC_M:00000153 "Magnetic resonance imaging"
+is_a: KSC_M:00000152 ! Bioimaging
+created_by: mihailbota
+remark: acronym: MRI
+
+[Term]
+id: nlx_inv:090913
+name: Diffusion magnetic resonance imaging
+def: "MRI methods that uses strong magnetic fields to visualize the diffusion process of molecules, mainly water, in biological tissues, The diffusion of magnetically oriented water molecules is influenced by the presence of objects, which interact with the former. Thus, biological structures are visualized by the contrast with the signal given by the spin relaxation of water molecules." []
+synonym: "Diffusion magnetic resonance imaging" EXACT [nlx_inv:090913]
+xref: KSC_M:00000154 "Diffusion magnetic resonance imaging"
+is_a: ERO:0001235 ! Magnetic resonance imaging
+created_by: mihailbota
+remark: acronym: dMRI
+
+[Term]
+id: nlx_inv:090916
+name: Diffusion weighted imaging
+def: "dMRI method that calculates the diffusion rate of water in a location of interest, which is then translated in voxel intensity. Best applied to isotropic volumes, such as the gray matter." []
+synonym: "Diffusion weighted magnetic resonance imaging assay" EXACT [nlx_inv:090916]
+xref: KSC_M:00000155 "Diffusion weighted imaging"
+is_a: nlx_inv:090913 ! Diffusion magnetic resonance imaging
+created_by: mihailbota
+remark: acronym: DWI
+
+[Term]
+id: nlx_inv:090915
+name: Diffusion tensor imaging
+def: "dMRI method that is used to visualize anisotropic volumes, such as myelinated fiber tracts. The water molecules align with the tracts, i.e., the diffusion along the fibers is higher than across them. Variants and refinements include the generalized diffusion imaging, and the q-space imaging." []
+synonym: "Diffusion tensor imaging assay" EXACT [nlx_inv:090915]
+xref: KSC_M:00000156 "Diffusion tensor imaging"
+is_a: nlx_inv:090913 ! Diffusion magnetic resonance imaging
+created_by: mihailbota
+remark: acronym: DTI
+
+[Term]
+id: KSC_M:00000157
+name: Metals tracing
+def: "Tract tracing methods based on the transport of metals along axons. Examples include cobalt- nickel- and magnesium-tracing." []
+is_a: KSC_M:00000125 ! Anterograde and retrograde tract tracing
+relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
+relationship: requires KSC_M:00000223 ! Pressure injection
+relationship: requires KSC_M:00000224 ! Iontophoretic injection
+created_by: mihailbota
+
+[Term]
+id: nlx:152219
+name: Array tomography
+def: "Method used to visualize tens of proteins and peptides in a reconstructed 3D tissue part, together with electron microscopy. A part of interest is fixated in resin, cut in ultrathin slices that are deposited on a single slide, and simultaneously labeled with fluorescently labeled antibodies. The images of all labeled slices are stacked by a fluorescent microscope. After this, the slide can be eluted, and labeled with a different fluorescent antibody.  Finally, after the immunofluorescent analysis, the slices can be imaged by backscatter electron microscopy, and the resulting images are registered with the immunofluorescence images. " []
+synonym: "Array tomography" EXACT [nlx:152219]
+xref: KSC_M:00000158 "Array tomography"
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000159
+name: Nucleic acids transfection in Xenopus oocytes
+def: "This method is used for functional characterization of proteins in a controlled environment. The expression of genes of interest is realized by their DNA or RNA microinjection into oocytes. This method is widely used for characterization of ion channels." []
+is_a: KSC_M:00000225 ! Nucleic acids and proteins measurement
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000160
+name: Single cell multiplex RT-PCR
+def: "Multiplex RT-PCR method applied to an individual neuron, which allows identification and semiquantitative measurement of large sets of expressed proteins and peptides mRNAs. It can be combined with whole-cell patch clamp, and with intracellular filling with dyes." []
+is_a: KSC_M:0000056 ! Multiplex polymerase chain reaction
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000161
+name: Anatomical part removal
+def: "A surgery method that separates physically (extracts) an organ or a structural part from the body." []
+is_a: ERO:0000378 ! Surgery
+created_by: mihailbota
+
+[Term]
+id: ERO:0000490
+name: Tissue embedding
+def: "Class of methods where an organ or a part of it is embedded in specific materials for further processing and long term preservation." []
+synonym: "tissue embedding" EXACT [ERO:0000490]
+xref: KSC_M:00000162 "Tissue embedding"
+is_a: KSC_M:000002 ! Gray matter tissue preparation
+relationship: always_requires ERO:0000677 ! Tissue fixation
+created_by: mihailbota
+
+[Term]
+id: ERO:0000677
+name: Tissue fixation
+def: "Class of methods that remove the water from removed organs or parts of it for further processing and long term preservation." []
+synonym: "tissue fixation" EXACT [ERO:0000677]
+xref: KSC_M:00000163 "Tissue fixation"
+is_a: KSC_M:000002 ! Gray matter tissue preparation
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000164
+name: Tissue cutting
+def: "Removal of a part of an organ." []
+is_a: KSC_M:00000161 ! Anatomical part removal
+relationship: requires OBI:0302899 ! Decapitation
+created_by: mihailbota
+
+[Term]
+id: ERO:0000491
+name: Tissue slicing
+def: "Removal of a part of an organ, or a tissue in identical part (slices) using a specific mechanical device. The most used cutting devices are vibratomes, microtomes, cryotomes, and ultratomes. The thickness of a slice is usually related to the type of experiment or measurement." []
+synonym: "tissue sectioning" EXACT [ERO:0000491]
+xref: KSC_M:00000165 "Tissue slicing"
+is_a: KSC_M:00000164 ! Tissue cutting
+created_by: mihailbota
+
+[Term]
+id: OBI:0600022
+name: Excision
+def: "Removal of a part of the gray matter in a mode designed by the experimenter. Used to separate gross divisions of the central nervous system, e.g. the hypothalamus." []
+synonym: "excision" EXACT [OBI:0600022]
+xref: KSC_M:00000166 "Excision"
+is_a: KSC_M:00000164 ! Tissue cutting
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000167
+name: Transversal slicing
+def: "Removal of a part of the gray matter along the vertical plane of the brain and spinal cord. The result is a set of slices transversal on the longitudinal plane. Also known as frontal or coronal sectioning." []
+synonym: "Coronal slicing" EXACT []
+synonym: "Frontal slicing" EXACT []
+synonym: "Transversal cutting" EXACT []
+is_a: ERO:0000491 ! Tissue slicing
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000168
+name: Longitudinal slicing
+def: "Removal of a part of the gray matter along the horizontal plane of the brain and spinal cord. The result is a set of slices transversal on the vertical or coronal plane. Also known as horizontal sectioning or cutting." []
+synonym: "Horizontal cutting" EXACT []
+synonym: "Horizontal slicing" EXACT []
+is_a: ERO:0000491 ! Tissue slicing
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000169
+name: Saggital slicing
+def: "Removal of a part of the gray matter across the horizontal plane of the brain and spinal cord, lateral to medial." []
+is_a: ERO:0000491 ! Tissue slicing
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000170
+name: Oblique slicing
+def: "Removal of a part of the gray matter in a plane oblique to any of the three standard ones." []
+is_a: ERO:0000491 ! Tissue slicing
+created_by: mihailbota
+
+[Term]
+id: sao819188787
+name: Acute slicing
+def: "Cutting method specific to electrophysiological measurements and experiments where the fresh brain is kept and cut in a "protective" solution of artificial cerebrospinal fluid." []
+synonym: "Acute Slice" EXACT [sao819188787]  ! FIXME is_obsolete: True
+xref: KSC_M:00000171 "Acute slicing"
+is_a: ERO:0000491 ! Tissue slicing
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000172
+name: Slice mounting
+def: "Method used for observation, measurement and long term preservation of brain and spinal cord slices where they are put on a support medium (glass slides or film) and covered by a transparent medium (coverslip)." []
+is_a: KSC_M:000002 ! Gray matter tissue preparation
+relationship: always_requires ERO:0000677 ! Tissue fixation
+created_by: mihailbota
+
+[Term]
+id: OBI:0302899
+name: Decapitation
+def: "Separation of the head from the body, for subsequent extraction of the brain." []
+synonym: "decapitation" EXACT [OBI:0302899]
+xref: KSC_M:00000173 "Decapitation"
+is_a: KSC_M:00000161 ! Anatomical part removal
+created_by: mihailbota
+
+[Term]
+id: ERO:0001360
+name: Stereology
+def: "Class of methods that are used to measure properties of objects usually from lower dimensional samples. A stereological method involves a sampling method, and, depending on the nature of objects and their properties, a measurement method. Stereology is the three-dimensional interpretation of two-dimensional cross sections of materials or tissues. It extracts quantitative information about a three-dimensional material from measurements made on two-dimensional planar sections of the material. Stereology utilizes random, systematic sampling to provide unbiased and quantitative data." []
+synonym: "stereology" EXACT [ERO:0001360]
+xref: KSC_M:00000175 "Stereology"
+is_a: ERO:0001319 ! Measurement method
+is_a: KSC_M:000006 ! Analysis method
+created_by: mihailbota
+
+[Term]
+id: nlx:152214
+name: Design based stereology
+def: "Class of stereological methods that are independent of geometrical features and spatial distributions of objects. Design based stereological methods are created a priori of the measured objects and their properties." []
+synonym: "Design-based stereology" EXACT [nlx:152214]
+xref: KSC_M:00000176 "Design based stereology"
+is_a: ERO:0001360 ! Stereology
+created_by: mihailbota
+
+[Term]
+id: nlx:152215
+name: Model based stereology
+def: "Class of stereological methods based on models partially made on a priori knowledge, and partially based on relationships and rules inferred from previous measurements. These methods are likely to hide biased errors." []
+synonym: "Model-based stereology" EXACT [nlx:152215]
+xref: KSC_M:00000177 "Model based stereology"
+is_a: ERO:0001360 ! Stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000178
+name: Oblique sectioning
+def: "Removal of a part of the gray matter across a lane of the brain and spinal cord that makes a nonzero angle with any of the three standard (stereotaxic) planes of cutting." []
+is_a: nlx:152215 ! Model based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000179
+name: Abercrombie method
+def: "Model based stereology method that is used to calculate the average number of cells (points) in a section as the ratio of the product between the number of counted cells and thickness of cells and the sum of the length of cell (in micrometers) and the thickness of a cell. " []
+is_a: nlx:152215 ! Model based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000180
+name: Dellese principle
+def: "Model based stereology method where the percentage of the volume of the substance is equal with the percentage of area occupied by the substance in plane sections for a homogeneous object." []
+is_a: nlx:152215 ! Model based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000181
+name: Linear analysis
+def: "Model based stereology method where a grid of equally-spaced parallel lines is superimposed on the plane section. The fraction of total length of these grid lines which lie above the phase of interest, is then an approximation to the area fraction." []
+is_a: nlx:152215 ! Model based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000182
+name: Glagolev-Thomson point-counting method
+def: "Model based stereology method where a grid of equally spaced points is superimposed over the section; the number of points that cover the region of interest is an approximation of its area." []
+is_a: nlx:152215 ! Model based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000183
+name: Gray level index method
+def: "Design based stereology method proposed by Ziller to approximate the boundaries of a region, based on the gray level index coefficient. It can be addapted to other kinds of tissue classical staining methods." []
+is_a: nlx:152214 ! Design based stereology
+created_by: mihailbota
+remark: acronym: GLI
+
+[Term]
+id: KSC_M:00000184
+name: Cavallieri principle
+def: "Method of volumes approximation. The volume of any object (brain region of interest) can be estimated without bias from the profile areas of the cut sections of the BROI. The cuts through the BROI have to systematically-random sampled. The volume is approximated as the product of the BROI's sum of the profile areas on all sections with the distance between the sections." []
+is_a: nlx:152214 ! Design based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000185
+name: Unbiased virtual counting spaces
+def: "Design-based stereological method used to count neurons in a given volume of tissue using the unbiased virtual counting spaces (optical disector, counting box), consisting of the virtual space within the section thickness and an unbiased counting frame." []
+is_a: nlx:152214 ! Design based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000186
+name: Physical disector method
+def: "Design-based stereological method used to count neurons in a given volume of tissue using a disector, and based on the analysis of two focal planes within a thick section (the thickness is taken into account, hence the section is 3D), or of two thin (the thickness of sections is negligible, hence the section is 2D] adjacent sections." []
+is_a: nlx:152214 ! Design based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000187
+name: Fractionator method
+def: "Design-based stereological method used to count neurons in a brain region of interest where the total number of neurons is product of the number of neurons counted within all unbiased virtual counting spaces with the reciprocal value of the sampling probability." []
+is_a: nlx:152214 ! Design based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000188
+name: Nuclear method
+def: "Design-based stereological method used to estimate mean nuclear volumes of neurons. The midpoint of the nucleolus is selected as sampling unit. The distance from the midpoint of the nucleolus to the nuclear boundary is measured in four mutually orthogonal directions. From the average of the third powers of these measurements an unbiased estimate of the nuclear volume can be obtained. (Gunderson 1988)." []
+is_a: nlx:152214 ! Design based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000189
+name: Rotator method
+def: "Design-based stereological method used to estimate mean nuclear volumes of neurons where the midpoint of the nucleolus is selected as sampling unit." []
+is_a: nlx:152214 ! Design based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000190
+name: Point sampled intercepts method
+def: "Design-based stereological method used to estimate mean nuclear volumes of neurons. In this method, all nuclei of neurons that are found in a focal plane are considered. A set of parallel lines is randomly drawn in the focal plane, and the volume a nucleolus is estimated from the lenghts of the intercept of the test line between its nuclear boundaries. [Gunderson, 1988]" []
+is_a: nlx:152214 ! Design based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000191
+name: Fakir probes
+def: "Design-based stereological method used for evaluation of surface areas, which is based on counting intersections between the surface and a spatial grid consisting of systematic probes of parallel test lines." []
+is_a: nlx:152214 ! Design based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000192
+name: Isotropic Fakir probes
+def: "Design-based stereological method used for evaluation of surface areas of thick sections (the thickness of the section is non-negligible, therefore the section is a 3D object]. A set of orthogonal triplets of perpendicular test lines are systematically and randomly placed within thick sections containing the surface of interest. The intersections between the surface and the test lines are counted, and the surface area is calculated from the total number of intersections." []
+is_a: nlx:152214 ! Design based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000193
+name: Space Balls method
+def: "Design-based stereological method used for evaluation of the length of fibers. Spheres of hemispheres are systematically and randomly placed in the brain region of interest.  The average density of the linear structure (fiber) is obtained from the total number of intersections between the spheres and the fiber. The length of the fiber is estimated as the product between the length density and the estimated volume of the brain region of interest." []
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000194
+name: Isotropic virtual planes
+def: "Design-based stereological method used for evaluation of the length of fibers in thick samples (the thickness is non-negligible, hence the object is 3D). The length of the fiber is evaluated using software-randomized isotropic virtual planes in volume probes, in systematically sampled microscope fields." []
+is_a: nlx:152214 ! Design based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000195
+name: Proportionator method
+def: "Design-based stereological method used for evaluation of the number of neurons in a given tissue that is similar to the fractionator method, but the sampling procedure is dependent of the neurons sizes." []
+is_a: nlx:152214 ! Design based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000196
+name: Nearest neighbor analysis
+def: "Design-based stereological method used for evaluation of the cytoarchitecture of a brain region of interest. The method is similar to the nearest-neighbor distance distribution function analysis. This method requires thick sections." []
+is_a: nlx:152214 ! Design based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000197
+name: Voronoi tesselation
+def: "Design-based stereological method used for evaluation of the cytoarchitecture of a brain region of interest. The method first computes the vicinity of a neuron, i.e., a polygon around the neuron, the Voronoi or Dirichlet polygon. This is repeated for each neuron in such way that each of them is included in a polygon, or tile (tesselation), or cell." []
+is_a: nlx:152214 ! Design based stereology
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000198
+name: Voltage clamp
+def: "Class of intracellular electrophysiological techniques where the trans-membrane difference of potential (voltage) is kept constant, and the ion currents are measured." []
+is_a: nlx_inv:090910 ! Intracellular recording
+created_by: mihailbota
+remark: acronym: VC
+
+[Term]
+id: KSC_M:00000199
+name: Two-electrode voltage clamp
+def: "Voltage clamp method that uses two intracellular electrodes instead of one, and is preferred for measuring high currents and for larger cells such as oocytes." []
+is_a: KSC_M:00000198 ! Voltage clamp
+created_by: mihailbota
+remark: acronym: TEVC
+
+[Term]
+id: KSC_M:00000200
+name: Dual cell voltage clamp
+def: "Variation of the two-electrode voltage clamp method specifically designed to study kinetics and conductance of gap junctions." []
+is_a: KSC_M:00000198 ! Voltage clamp
+relationship: modified_from KSC_M:00000200 ! Dual cell voltage clamp
+created_by: mihailbota
+remark: acronym: DCVC
+
+[Term]
+id: KSC_M:00000201
+name: Single electrode voltage clamp
+def: "Class of voltage clamp methods where a single intracellular electrod is used for both clamping the cell and for measurement. Used for small cells, or cells that are difficult to get to. Also used for study of plants cells." []
+is_a: KSC_M:00000198 ! Voltage clamp
+created_by: mihailbota
+remark: acronym: SEVC
+
+[Term]
+id: KSC_M:00000202
+name: Continuous single electrode voltage clamp method
+def: "Single electrode voltage clamp method where both measurement and clamping are performed in the same time." []
+is_a: KSC_M:00000201 ! Single electrode voltage clamp
+created_by: mihailbota
+remark: acronym: cSEVC
+
+[Term]
+id: KSC_M:00000203
+name: Discontinuous single electrode voltage clamp method
+def: "Single electrode voltage clamp method where the sharp electrode is rapid switched between the measurement mode and the clamping mode. The cell membrane needs to be enzymatically removed." []
+is_a: KSC_M:00000201 ! Single electrode voltage clamp
+created_by: mihailbota
+remark: acronym: dSEVC
+
+[Term]
+id: KSC_M:00000204
+name: Current clamp
+def: "Intracellular electrophysiological technique where the current is kept fixed by the experimenter and the voltage is measured." []
+is_a: nlx_inv:090910 ! Intracellular recording
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000205
+name: Amperometry
+def: "Extracellular method used for detection of ions in an aqueous solution, based on electric current or changes in electric current. Also known as pulsed amperometric detection." []
+is_a: birnlex:2272 ! Extracellular recording
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000206
+name: Single potential amperometry
+def: "Amperometry method where a direct current is applied into the solution. It is used to detect small currents provided by weak ions. Also known as chronoamperometry." []
+is_a: KSC_M:00000205 ! Amperometry
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000207
+name: Pulsed amperometry
+def: "Amperometry method where a working voltage is applied for a short period of time, followed by different potentials designed to clean the electrodes." []
+is_a: KSC_M:00000205 ! Amperometry
+created_by: mihailbota
+remark: acronym: PAD
+
+[Term]
+id: KSC_M:00000208
+name: Voltammetry
+def: "Extracellular electrophysiological method designed to measure currents when a continuous or variable differential of potential is applied. A small and linearly varying potential is applied between a microelectrode and the medium and the resulting current-potential curve (voltammogram) is recorded. The voltammogram is characteristic of the nature and concentration of electro-oxidizable or reducible materials close to the electrode surface. The cycle can be repetead for smaller or higher values of the applied voltage." []
+is_a: birnlex:2272 ! Extracellular recording
+created_by: mihailbota
+
+[Term]
+id: birnlex:2293
+name: Electroencephalography
+def: "Electrophysiological method designed to measure the electrical activity of the brain at the level of the scalp." []
+synonym: "Electroencephalography recording protocol" EXACT [birnlex:2293]
+xref: KSC_M:00000209 "Electroencephalography"
+is_a: birnlex:2272 ! Extracellular recording
+created_by: mihailbota
+remark: acronym: EEG
+
+[Term]
+id: KSC_M:00000210
+name: Electrocortigraphy
+def: "Also known as intracranial EEG (iEEG), it is an invasive electrophysiological method designed to measure electrical activity at the level of the surface of cortex. The electrodes are placed directly onto the surface of the cerebral cortex." []
+is_a: birnlex:2272 ! Extracellular recording
+created_by: mihailbota
+remark: acronym: ECoG
+
+[Term]
+id: KSC_M:00000211
+name: Simple random sampling
+def: "Sampling statistical method where all any member of the population is considered to have the same probability of selection. The selection of units is performed by using previously defined randomization procedures." []
+is_a: KSC_M:00000113 ! Sampling method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000212
+name: Stratified random sampling
+def: "Sampling statistical method where the units of the population are distributed over a number of non-overlaping "strata' (the population is partitioned). The members of the population will have the values of the variable used for partitioning much closer one to the other than any unit from a different stratum. The sampling procedure is applied to each stratum. Two most commonly used criteria to divide a population in strata are the spatial location, and sizes of units." []
+is_a: KSC_M:00000113 ! Sampling method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000213
+name: Systematic sampling
+def: "Sampling method that is based on ordering of the population according to a sampling frame. The method usually employs the equi-probability approach where process of choosing the sample units is circular. First, an element is sampled at random, and from here each unit that is a specific distance from the previous (the skip) will be sampled. When this process gets to the end of the list, it restarts from the beginning. This method is applied when the population is logically homogeneous, and only when the population does not has any hidden pattern." []
+is_a: KSC_M:00000113 ! Sampling method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000214
+name: Cluster sampling
+def: "Sampling method where the units are grouped together according to some criteria (clusters) are randomly sampled together and then all measured." []
+is_a: KSC_M:00000113 ! Sampling method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000215
+name: Multistage sampling
+def: "Sampling method where the units are hierarchically organized, and the units are randomly sampled at each level." []
+is_a: KSC_M:00000113 ! Sampling method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000216
+name: Unequal probability sampling
+def: "Sampling method where the probability of a unit being sampled is a function of the characteristics of that unit." []
+is_a: KSC_M:00000113 ! Sampling method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000217
+name: Adaptive cluster sampling
+def: "Sampling method that is similar with cluster sampling, but the sizes (the number of units) of clusters and their number is unknown. In this method, a prior value C is established. If a given unit is higher or equal than C, then the units in its neighborhood are sampled." []
+is_a: KSC_M:00000113 ! Sampling method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000218
+name: Line transect sampling
+def: "Sampling method that is used for objects that are difficult to observe, or are rare. In this method, the observer moves along a line acroos the considered area looking at the right and left and noting each occurence of a given object. Line transects are walked, flown, or traversed, and the perpendicular distances to all detected objects of interest are recorded. Also known as distance sampling." []
+is_a: KSC_M:00000113 ! Sampling method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000219
+name: Composite sampling
+def: "Sampling methods designed for extracting subsamples from initial samples. First, the sampled units are grouped in composite units, and these will be further sampled." []
+is_a: KSC_M:00000113 ! Sampling method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000220
+name: Clarity
+def: "Neuronal tissue vizualization method where the lipids from the membranes of neurons are eliminated through polymerization and electrophoresis. After this procedure is applied the tissue become translucid, and it can be investigated with sheet microscopy. The tissue preserves the initial form." []
+is_a: KSC_M:000004 ! Visualization method
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000221
+name: Infusion
+def: "Class of methods of administration of substances into the body. Also known as route of administration (medicine)." []
+synonym: "Route of administration" EXACT []
+is_a: KSC_M:000001 ! Method
+created_by: mihailbota
+
+[Term]
+id: birnlex:2135
+name: Injection
+def: "Class of infusion methods that use specific devices for administration of substances directly into the body. These devices (syringes with hollow needles, or pipettes) penetrate the skin of the body, and the substance is delivered mechanically, or using electric currents for micropipettes. Injections can be subdivided by the specific part of the body where the substance needs to be administrated, by the specific device of delivery, and by the mechanism of delivery." []
+synonym: "Injection" EXACT [birnlex:2135]
+xref: KSC_M:00000222 "Injection"
+is_a: KSC_M:00000221 ! Infusion
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000223
+name: Pressure injection
+def: "Injection method where a substance is delivered mechanically via a syringe or a pipette into the tissue of interest." []
+is_a: birnlex:2135 ! Injection
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000224
+name: Iontophoretic injection
+def: "Injection method where a substance is delivered in the tissue of interest by applying a small and temporary electrical current to the solution in the pipette." []
+is_a: birnlex:2135 ! Injection
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000225
+name: Nucleic acids and proteins measurement
+def: "Class of methods used for identification and measurement of nucleic acids and their products." []
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000226
+name: Fast Blue tracing
+def: "Retrograde fluorescent tract tracing method." []
+is_a: KSC_M:00000129 ! Retrograde fluorescent tracing
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000227
+name: Evans Blue tracing
+def: "Retrograde fluorescent tract tracing method." []
+is_a: KSC_M:00000129 ! Retrograde fluorescent tracing
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000228
+name: Diamidino Yellow tracing
+def: "Retrograde fluorescent tract tracing method." []
+is_a: KSC_M:00000129 ! Retrograde fluorescent tracing
+created_by: mihailbota
+
+[Term]
+id: KSC_M:00000229
+name: Fluorogold tracing
+def: "Retrograde fluorescent tract tracing method." []
+is_a: KSC_M:00000129 ! Retrograde fluorescent tracing
+created_by: mihailbota
+
+[Term]
+id: ERO:0000201
+name: Microscopy
+def: "Class of methods for visualization of objects that use a specific device, the microscope." []
+synonym: "microscopy" EXACT [ERO:0000201]
+is_a: KSC_M:000004 ! Visualization method
+created_by: mihailbota
+
+[Typedef]
+id: requires
+name: requires
+def: "Needs to be carefully spelled out; it is meant to link causally methods." []
+
+[Typedef]
+id: always_requires
+name: always_requires
+def: "Needs to be carefully spelled out; it is meant to link methods temporally and causally, one-to-one." []
+
+[Typedef]
+id: modified_from
+name: modified_from
+def: "Needs to be carefully spelled out; relates a later method that is derived to an earlier method. OBI has a similar relationship between organs in different stages of development." []
+

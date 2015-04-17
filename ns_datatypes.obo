@@ -1,0 +1,8 @@
+format-version: 1.2
+ontology: ns_datatypes
+idspace: birnlex http://uri.neuinfo.org/nif/nifstd/birnlex "URI prefix for NIF terms, nif-, birnlex_, nxl_, nlx_inv_"
+idspace: ERO http://purl.obolibrary.org/obo/ERO "URI prefix for ERO terms"
+idspace: nlx http://uri.neuinfo.org/nif/nifstd/nlx "URI prefix for NIF terms, nif-, birnlex_, nxl_, nlx_inv_"
+idspace: nlx_inv http://uri.neuinfo.org/nif/nifstd/nlx_inv "URI prefix for NIF terms, nif-, birnlex_, nxl_, nlx_inv_"
+idspace: OBI http://purl.obolibrary.org/obo/OBI "URI prefix for OBI terms"
+default-namespace: nsd
