@@ -642,6 +642,9 @@ class DynamicValue(Value):
             self.target = target
 
         self.target = 'DANGLING'
+        if tvpair.type_od is None:  # TODO need a way to fill these in on add
+            self.target += ' ' + self.target_id
+            return
         target = tvpair.type_od.get(self.target_id, None)
         if type(target) == list:
             tvpair.type_od[self.target_id].append(callback)
