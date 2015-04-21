@@ -56,10 +56,24 @@ obo_tag_to_ttl = {
     'def':' ' * TW + 'nsu:definition "%s"@en ;\n',
     'acronym':' ' * TW + 'nsu:acronym "%s"@en ;\n',
     'synonym':' ' * TW + 'nsu:synonym "%s"@en ;\n',
-    'is_a':' ' * TW + 'rdfs:subClassOf :%s .\n',
+    'is_a':' ' * TW + 'rdfs:subClassOf %s ;\n',
     #'xref':
 
 }
+def id_fix(value):
+    """ fix @prefix values for ttl """
+    if value.startswith('KSC_M'):
+        pass
+    else:
+        value = value.replace(':','_')
+        if value.startswith('ERO') or value.startswith('OBI') or value.startswith('GO') or value.startswith('UBERON') or value.startswith('IAO'):
+            value = 'obo:' + value
+        elif value.startswith('birnlex') or value.startswith('nlx'):
+            value = 'nifstd:' + value
+        else:
+            value = ':' + value
+    return value
+
 
 class OboFile:
     type_def = ('<header>','<stanza>')
@@ -297,26 +311,18 @@ class TVPair:  #TODO these need to be parented to something!
         return string
 
     def __ttl__(self):
+
         if self.tag in obo_tag_to_ttl:
             if self.tag == 'id':
-                if self.value.startswith('KSC_M'):
-                    value = self.value
-                else:
-                    value = self.value.replace(':','_')
-                    if value.startswith('ERO') or value.startswith('OBI'):
-                        value = 'obo:' + value
-                    elif value.startswith('birnlex') or value.startswith('nlx'):
-                        value = 'nifstd:' + value
-                    else:
-                        value = ':' + value
-
+                value = id_fix(self.value)
             elif self.tag == 'def':
-                value = self._value.text
+                value = self._value.text.replace('"','\\"')
             elif self.tag == 'synonym':
-                value = self._value.text
+                value = self._value.text.lower()
             elif self.tag == 'is_a':
-                value = self._value.target.id_.value
-                value = value.replace(':','_')
+                value = id_fix(self._value.target.id_.value)
+            elif self.tag == 'name':
+                value = self.value.lower()  # capitalize only proper nouns as needed
             else:
                 value = self.value
             
@@ -448,7 +454,8 @@ class TVPairStore:
         return sorted(tosort, key=key_)
 
     def __ttl__(self):
-        return ''.join(tvpair.__ttl__() for tvpair in self.tvpairs)
+        block = ''.join(tvpair.__ttl__() for tvpair in self.tvpairs)
+        return block.rstrip('\n').rstrip(';') + '.\n'
 
     def __str__(self):
         return '\n'.join(str(tvpair) for tvpair in self.tvpairs) + '\n'
