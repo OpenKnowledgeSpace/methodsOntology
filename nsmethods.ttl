@@ -5,13 +5,12 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
-@prefix KSC_M: <http://www.OLDKS.org/ksc_m_#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix nifstd: <http://uri.neuinfo.org/nif/nifstd/> .
+@prefix KSC_M: <http://www.OLDKS.org/ksc_m_#> .
 @base <http://www.FIXME.org/nsmethods> .
 
 <http://www.FIXME.org/nsmethods> rdf:type owl:Ontology ;
-                                 
                                  owl:imports <http://www.FIXME.org/nsupper> .
 
 
