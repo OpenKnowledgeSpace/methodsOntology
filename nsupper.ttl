@@ -1,0 +1,63 @@
+@prefix : <http://www.FIXME.org/nsupper#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.FIXME.org/nsupper> .
+
+<http://www.FIXME.org/nsupper> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://www.FIXME.org/nsupper#abbreviation
+
+:abbreviation rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.FIXME.org/nsupper#acronym
+
+:acronym rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.FIXME.org/nsupper#definition
+
+:definition rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.FIXME.org/nsupper#synonym
+
+:synonym rdf:type owl:AnnotationProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+:nsu_0000000 rdf:type owl:Class ;
+	rdfs:label "existence"@en .
+
+:nsu_0000002 rdf:type owl:Class ;
+        rdfs:label "being"@en ;
+        rdfs:subClassOf <http://www.FIXME.org/nsupper#nsu_0000000> .
+
+:nsu_0000001 rdf:type owl:Class ;
+        rdfs:label "concept"@en ;
+        rdfs:subClassOf <http://www.FIXME.org/nsupper#nsu_0000000> .
+
+
+
