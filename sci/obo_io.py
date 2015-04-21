@@ -46,8 +46,20 @@ from collections import OrderedDict as od
 from IPython import embed
 
 N = -1  # use to define 'many ' for tag counts
+TW = 4  # tab width
 
 od.__repr__ = dict.__repr__
+
+obo_tag_to_ttl = {
+    'id':'%s rdf:type owl:Class ;\n',
+    'name':' ' * TW + 'rdfs:label "%s"@en ;\n',
+    'def':' ' * TW + 'nsu:definition "%s"@en ;\n',
+    'acronym':' ' * TW + 'nsu:acronym "%s"@en ;\n',
+    'synonym':' ' * TW + 'nsu:synonym "%s"@en ;\n',
+    'is_a':' ' * TW + 'rdfs:subClassOf :%s .\n',
+    #'xref':
+
+}
 
 class OboFile:
     type_def = ('<header>','<stanza>')
@@ -112,6 +124,15 @@ class OboFile:
         else:
             with open(filename, 'wt', encoding='utf-8') as f:
                 f.write(str(self))  # FIXME this is incredibly slow for big files :/
+
+    def __ttl__(self):
+        #stores = [self.header.__ttl__()]
+        stores = []
+        stores += [s.__ttl__() for s in self.Terms.values()]
+        stores += [s.__ttl__() for s in self.Typedefs.values()] 
+        stores += [s.__ttl__() for s in self.Instances.values()]
+        return '\n'.join(stores)
+
 
     def __str__(self):
         stores = [str(self.header)]
@@ -275,6 +296,34 @@ class TVPair:  #TODO these need to be parented to something!
 
         return string
 
+    def __ttl__(self):
+        if self.tag in obo_tag_to_ttl:
+            if self.tag == 'id':
+                if self.value.startswith('KSC_M'):
+                    value = self.value
+                else:
+                    value = self.value.replace(':','_')
+                    if value.startswith('ERO') or value.startswith('OBI'):
+                        value = 'obo:' + value
+                    elif value.startswith('birnlex') or value.startswith('nlx'):
+                        value = 'nifstd:' + value
+                    else:
+                        value = ':' + value
+
+            elif self.tag == 'def':
+                value = self._value.text
+            elif self.tag == 'synonym':
+                value = self._value.text
+            elif self.tag == 'is_a':
+                value = self._value.target.id_.value
+                value = value.replace(':','_')
+            else:
+                value = self.value
+            
+            return obo_tag_to_ttl[self.tag] % value
+        else:
+            return ''
+
     def __repr__(self):
         return str(self)
 
@@ -397,6 +446,9 @@ class TVPairStore:
             else:
                 tosort.append(tvp)
         return sorted(tosort, key=key_)
+
+    def __ttl__(self):
+        return ''.join(tvpair.__ttl__() for tvpair in self.tvpairs)
 
     def __str__(self):
         return '\n'.join(str(tvpair) for tvpair in self.tvpairs) + '\n'
