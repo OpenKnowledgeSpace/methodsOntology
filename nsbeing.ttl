@@ -263,17 +263,17 @@ obo:OBI_0001053 rdf:type owl:Class ;
     nsu:definition "A device that moves charged particles through a medium by using an electric field induced by electrodes."@en .
 
 obo:ERO_0000229 rdf:type owl:Class ;
-    owl:deprecated "true" ;
+    owl:deprecated true ;
     rdfs:label "monoclonal antibody reagent"@en ;
     nsu:definition "Antibody reagent that recognizes a single epitope."@en .
 
 obo:ERO_0000230 rdf:type owl:Class ;
-    owl:deprecated "true" ;
+    owl:deprecated true ;
     rdfs:label "polyclonal antibody reagent"@en ;
     nsu:definition "Antibody reagent that recognizes multiple epitopes."@en .
 
 obo:ERO_0000008 rdf:type owl:Class ;
-    owl:deprecated "true" ;
+    owl:deprecated true ;
     rdfs:label "antibody reagent"@en ;
     nsu:definition "A reagent that is comprised of immunoglobulins produced by B cells in response to an antigen. Antibody reagents can be engineered to have specificity for specific antigens."@en .
 
@@ -286,22 +286,22 @@ obo:ERO_0001145 rdf:type owl:Class ;
     nsu:definition "A nucleic acid molecule library that contains primer sets used for amplification of target nucleic acid sequences."@en .
 
 obo:ERO_0000630 rdf:type owl:Class ;
-    owl:deprecated "true" ;
+    owl:deprecated true ;
     rdfs:label "nucleic acid reagent"@en ;
     nsu:definition "Reagent that is a polymer comprised of nucleotides, each of which consists of three components: a nitrogenous heterocyclic base, which is either a purine or a pyrimidine; a pentose sugar; and a phosphate group."@en .
 
 obo:ERO_0000423 rdf:type owl:Class ;
-    owl:deprecated "true" ;
+    owl:deprecated true ;
     rdfs:label "transfection reagent"@en ;
     nsu:definition "A chemical reagent that introduces foreign DNA into a eukaryotic cell."@en .
 
 obo:ERO_0000162 rdf:type owl:Class ;
-    owl:deprecated "true" ;
+    owl:deprecated true ;
     rdfs:label "chemical reagent"@en ;
     nsu:definition "Reagent that is a material of pure chemical composition, either an element or a compound."@en .
 
 obo:ERO_0000161 rdf:type owl:Class ;
-    owl:deprecated "true" ;
+    owl:deprecated true ;
     rdfs:label "protein reagent"@en ;
     nsu:definition "Reagent that is a sequence of amino acids."@en .
 
@@ -310,27 +310,27 @@ obo:ERO_0000006 rdf:type owl:Class ;
     nsu:definition "Processed material that is used in a chemical reaction or other experimental process to detect, measure, examine, or produce other  substances."@en .
 
 obo:ERO_0000922 rdf:type owl:Class ;
-    owl:deprecated "true" ;
+    owl:deprecated true ;
     rdfs:label "purified protein reagent"@en ;
     nsu:definition "A protein reagent that contains a single species of protein."@en .
 
 obo:ERO_0001200 rdf:type owl:Class ;
-    owl:deprecated "true" ;
+    owl:deprecated true ;
     rdfs:label "gene knockdown reagent"@en ;
     nsu:definition "A reagent that is capable of reducing the expression of a target gene in a biological system."@en .
 
 obo:ERO_0001201 rdf:type owl:Class ;
-    owl:deprecated "true" ;
+    owl:deprecated true ;
     rdfs:label "dna reagent"@en ;
     nsu:definition "A reagent that is a polymer comprised of DNA nucleotides."@en .
 
 obo:ERO_0001202 rdf:type owl:Class ;
-    owl:deprecated "true" ;
+    owl:deprecated true ;
     rdfs:label "rna reagent"@en ;
     nsu:definition "A reagent that is a polymer comprised of RNA nucleotides."@en .
 
 obo:ERO_0001210 rdf:type owl:Class ;
-    owl:deprecated "true" ;
+    owl:deprecated true ;
     rdfs:label "rna interference reagent"@en ;
     nsu:definition "A gene knockdown reagent that is capable of reducing the expression of a target gene in a biological system through the RNA interference pathway."@en .
 
