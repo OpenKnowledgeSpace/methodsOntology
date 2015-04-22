@@ -216,7 +216,8 @@ class TVPair:  #TODO these need to be parented to something!
         #def
         #synonym
         if not warn:
-            print('PLS IMPLMENT ME! ;_;')
+            #print('PLS IMPLMENT ME! ;_;')
+            pass  # TODO
 
     def _value(self):
         return self.value
@@ -320,7 +321,10 @@ class TVPair:  #TODO these need to be parented to something!
             elif self.tag == 'synonym':
                 value = self._value.text.lower()
             elif self.tag == 'is_a':
-                value = id_fix(self._value.target.id_.value)
+                if type(self._value.target) == str:  # we dangling
+                    value = self._value.target_id
+                else:
+                    value = id_fix(self._value.target.id_.value)
             elif self.tag == 'name':
                 value = self.value.lower()  # capitalize only proper nouns as needed
             else:
@@ -593,7 +597,8 @@ class Stanza(TVPairStore):
         if obofile is not None:
             self.append_to_obofile(obofile)
         else:
-            print('Please be sure to add this to the typd_od yourself!')
+            #print('Please be sure to add this to the typd_od yourself!')
+            pass  # TODO
 
     def append_to_obofile(self, obofile):
         type_od = getattr(obofile, self.__class__.__name__+'s')
@@ -630,6 +635,18 @@ class Term(Stanza):
         instance = super().__new__(cls, *args, **kwargs)
         cls.__new__ = super().__new__
         return instance
+
+    def dedupe_synonyms(self):
+        if getattr(self, 'synonym', None):
+            last_wins = {}
+            for s in self.synonym:
+                if type(s._value) == str:
+                    print(s._value)
+                    key = s.value
+                else:
+                    key = s._value.text
+                last_wins[key] = s
+            self.synonym = sorted(list(last_wins.values()),key=lambda a:a.value)
 
 
 class Typedef(Stanza):
@@ -725,7 +742,7 @@ class Is_a(DynamicValue):
     def __init__(self, target_id, tvpair):
         self.target_id = target_id
         self.get_target(tvpair)
-        print('yes i have a target id you lying sack of shit',self.target_id)
+        #print('yes i have a target id you lying sack of shit',self.target_id)
 
     def value(self):
         if type(self.target) == str:
