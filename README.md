@@ -16,7 +16,14 @@ nsbeing.ttl will hold entities that are subjects/specimines or tools/reagents
 nsdatatypes.ttl will hold datatypes that are the outputs of methods
 
 ### scigraph/
-Scigraph configuration yaml files.
+Scigraph configuration yaml files. To build scigraph and load the correct ontologies do the following.
+Be sure to replace `git/` with the path where you have cloned the repos.
+```
+cd git/SciGraph/SciGraph-core
+mvn exec:java -Dexec.mainClass="edu.sdsc.scigraph.owlapi.loader.BatchOwlLoader" -Dexec.args="-c git/methodsOntology/scigraph/methodsGraph.yaml"
+cd git/SciGraph/SciGraph-services
+mvn exec:java -Dexec.mainClass="edu.sdsc.scigraph.services.MainApplication" -Dexec.args="server git/methodsOntology/scigraph/methodsServices.yaml"
+```
 
 ## Basic design principles
 The objective of this ontology is to provide a lightweight framework for annotating
