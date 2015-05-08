@@ -28,6 +28,18 @@ The basic structure for each obo file will be a single parrent is_a hierarchy.
 Other limited modeling may be added later as needed in order to serve other systems
 that will directly represent protocols themselves.
 
+## Synonyms
+Within the annotation ontology synonyms will simply be text strings that are
+pulled from another more robust ontology (or other source) that is intended to
+provide full support for the large diversity of types of synonyms as needed by
+various users. Synonyms can also be entered directly as strings and we will
+maintain a list of those synonyms that are missing definitions or require more
+extensive curation and scholarship.
+
+This will enable us to create a sane workflow that can quickly address practical
+issues with production performance for scigraph annotations while also supporting
+the needs of scholarship and textmining.
+
 ## License
 Code is licensed under the MIT license and ontologies are licensed under CC3.0. Source materials
 are licensed under CC3.0 or their existing license.
