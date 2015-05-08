@@ -1,0 +1,33 @@
+server:
+  type: simple
+  applicationContextPath: /scigraph
+  adminContextPath: /admin
+  connector:
+    type: http
+    port: 9000
+
+logging:
+  level: INFO
+
+graphConfiguration:
+  location: /tmp/methodsGraph
+  curies:
+    #'MESH' : ''
+    'KSC_M' : 'http://www.OLDKS.org/ksc_m_#'
+    'obo' : 'http://purl.obolibrary.org/obo/'
+    'nifstd' : 'http://uri.neuinfo.org/nif/nifstd/'
+  indexedNodeProperties:
+    - label
+    - fragment
+    - definition
+    - synonym
+    - acronym
+    - abbreviation
+  exactNodeProperties:
+    - label
+    - fragment
+    - definition
+    - synonym
+    - acronym
+    - abbreviation
+    - deprecated
