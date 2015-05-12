@@ -1,0 +1,4 @@
+:nsb_0000000 rdf:type owl:Class ;
+    rdfs:label "generated being" ;  # This is actually completely redundant with being
+    rdfs:subClassOf <http://www.FIXME.org/nsupper#nsu_0000002> .
+

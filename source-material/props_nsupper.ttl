@@ -1,0 +1,4 @@
+:abbreviation rdf:type owl:AnnotationProperty .
+:acronym rdf:type owl:AnnotationProperty .
+:definition rdf:type owl:AnnotationProperty .
+:synonym rdf:type owl:AnnotationProperty .
