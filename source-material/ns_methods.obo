@@ -32,7 +32,7 @@ created_by: mihailbota
 
 [Term]
 id: OBI:0302887
-name: Staining method
+name: Staining
 def: "Class of methods where specific substances are applied to the gray matter tissue, for identification, visualization, and measurement of objects or processes." []
 synonym: "Labeling method" EXACT []
 synonym: "staining" EXACT [OBI:0302887]
@@ -42,14 +42,14 @@ created_by: mihailbota
 
 [Term]
 id: KSC_M:000004
-name: Visualization method
+name: Visualization
 def: "Class of methods that are used to make visible the objects of interest or physiological processes to the eye of the experimenter, unaided or using specific devices." []
 is_a: KSC_M:000001 ! Method
 created_by: mihailbota
 
 [Term]
 id: ERO:0001319
-name: Measurement method
+name: Measurement
 def: "Class of methods that are used to observe and record amount, number, quantity, size, level, extent, or magnitude, resulting in an ordinal, semiquantitative or quantitative value." []
 synonym: "measurement method" EXACT [ERO:0001319]
 synonym: "Measuring method" EXACT []
@@ -59,7 +59,7 @@ created_by: mihailbota
 
 [Term]
 id: KSC_M:000006
-name: Analysis method
+name: Analysis
 def: "Class of methods that are used to process and interpret the data produced by measurements, as well as to infer patterns or regularities from data." []
 is_a: KSC_M:000001 ! Method
 created_by: mihailbota
@@ -182,10 +182,10 @@ remark: acronym: K-B
 
 [Term]
 id: nlx_inv:20090605
-name: Histochemical method
+name: Histochemistry
 def: "A class of staining methods applied to  tissues of interest. The used substances do not require antibodies, and the labeling shows the general organization of the tissue of interest, but not details of component cells" []
 synonym: "Histochemical protocol" EXACT [nlx_inv:20090605]
-synonym: "Histochemistry" EXACT []
+synonym: "Histochemical method" EXACT []
 xref: KSC_M:0000020 "Histochemical method"
 is_a: OBI:0302887 ! Staining method
 created_by: mihailbota
@@ -253,9 +253,10 @@ remark: acronym: PAP
 
 [Term]
 id: birnlex:2136
-name: Intracellular labeling method
+name: Intracellular labeling
 def: "Class of cytochemical methods that use the intracellular filling as staining technique. The filling is done either in conjunction with electrophysiological measurements, or by applying electric fields that create pores in the cellular membrane (electroporation), etc. The stains that are used include horseradish peroxidase, Lucifer yellow, biocytin, etc." []
 synonym: "Intracellular injection" EXACT [birnlex:2136]
+synonym: "cell filling" EXACT []
 xref: KSC_M:0000037 "Intracellular labeling method"
 is_a: KSC_M:0000021 ! Cytochemical method
 created_by: mihailbota
@@ -383,7 +384,7 @@ remark: acronym: RT-mPCR
 
 [Term]
 id: ERO:0001298
-name: Electrophysiological method
+name: Electrophysiology
 def: "Generic class of techniques employed to detect and measure the electrical activity of living cells (neurons), either individually or as ensembles. " []
 synonym: "electrophysiology assay" EXACT [ERO:0001298]
 xref: KSC_M:0000058 "Electrophysiological method"
@@ -1255,14 +1256,6 @@ def: "Class of intracellular electrophysiological techniques where the trans-mem
 is_a: nlx_inv:090910 ! Intracellular recording
 created_by: mihailbota
 remark: acronym: VC
-
-[Term]
-id: KSC_M:00000199
-name: Two-electrode voltage clamp
-def: "Voltage clamp method that uses two intracellular electrodes instead of one, and is preferred for measuring high currents and for larger cells such as oocytes." []
-is_a: KSC_M:00000198 ! Voltage clamp
-created_by: mihailbota
-remark: acronym: TEVC
 
 [Term]
 id: KSC_M:00000204
