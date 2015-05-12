@@ -237,13 +237,6 @@ is_a: ERO:0000214 ! Immunohistochemistry
 created_by: mihailbota
 
 [Term]
-id: KSC_M:0000027
-name: Immunohistochemistry for light microscopy
-def: "Class of immunohistochemical methods which have their byproducts visible with the light microscope." []
-is_a: ERO:0000214 ! Immunohistochemistry
-created_by: mihailbota
-
-[Term]
 id: KSC_M:0000028
 name: Avidin-Biotinylated HRP Complex method
 def: "Immunohistochemical method that uses horseradish peroxidase (HRP) for visualization with the light microscope, and biotin conjugated with secondary antibodies." []
@@ -259,77 +252,12 @@ created_by: mihailbota
 remark: acronym: PAP
 
 [Term]
-id: KSC_M:0000030
-name: Immunohistochemistry for fluorescent microscopy
-def: "Class of immunohistochemical methods for visualization with confocal microscope. These methods generally use two antibodies, and the fluorophore is conjugated with the second antibody." []
-is_a: ERO:0000214 ! Immunohistochemistry
-created_by: mihailbota
-
-[Term]
-id: KSC_M:0000031
-name: Single labeling fluoro-immunohistochemistry
-def: "Immunohistochemical method that uses two antibodies to describe the localization of a single protein of interest, which can be visualized with the confocal microscope." []
-is_a: KSC_M:0000030 ! Immunohistochemistry for fluorescent microscopy
-created_by: mihailbota
-
-[Term]
-id: KSC_M:0000032
-name: Multiple labeling fluoro-immunohistochemistry
-def: "Immunohistochemical methods that are used to describe the co-localization of multiple proteins of interest, which can be visualized with the confocal microscope. The primary antibodies should not cross-react with each other. The fluorophores need to have minimal overlapping excitation/emission spectra one relative to the other, and from the background." []
-is_a: KSC_M:0000030 ! Immunohistochemistry for fluorescent microscopy
-created_by: mihailbota
-
-[Term]
-id: KSC_M:0000033
-name: Double labeling fluoro-immunohistochemistry
-def: "Immunohistochemical method that is used to describe the co-localization of two proteins of interest, which can be visualized with the confocal microscope. The primary antibodies should not cross-react with each other. The fluorophores need to have minimal overlapping excitation/emission spectra, one relative to the other as well as from that of the background. This method allows identification of four phenotypes of cells in the tissue of interest." []
-is_a: KSC_M:0000032 ! Multiple labeling fluoro-immunohistochemistry
-created_by: mihailbota
-
-[Term]
-id: KSC_M:0000034
-name: Triple labeling fluoro-immunohistochemistry
-def: "Immunohistochemical method that is used to describe the co-localization of three proteins of interest, which can be visualized with the confocal microscope. The primary antibody should not cross-react. The fluorophores need to have minimal overlapping excitation/emission spectra one relative to the other, and from the background. This method allows identification of nine phenotypes of cells in the tissue of interest." []
-is_a: KSC_M:0000032 ! Multiple labeling fluoro-immunohistochemistry
-created_by: mihailbota
-
-[Term]
-id: KSC_M:0000035
-name: Lucifer Yellow labeling
-def: "Cytochemical method that uses Lucifer Yellow for morphological characterization of cells. The labeling is performed by filling the cell with this fluorescent dye. It can be used in conjuction with electrophysiological experiments, and for study of gap juctions and glial cells. It is also used as in tract tracing experiments." []
-synonym: "Lucifer yellow filling" EXACT []
-is_a: birnlex:2136 ! Intracellular labeling method
-relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
-relationship: requires KSC_M:00000224 ! Iontophoretic injection
-relationship: requires OBI:0302912 ! Electroporation
-created_by: mihailbota
-remark: acronym: LY
-
-[Term]
-id: KSC_M:0000036
-name: Immunohistochemistry for electron microscopy
-def: "Immunohistochemical method similar to that for light microscopy, which is used to identify the antigen distribution into cell organelles. However, the slices for EM are very thin, they need to be better fixated, and the tissue has to be embedded in resin." []
-is_a: ERO:0000214 ! Immunohistochemistry
-created_by: mihailbota
-
-[Term]
 id: birnlex:2136
 name: Intracellular labeling method
 def: "Class of cytochemical methods that use the intracellular filling as staining technique. The filling is done either in conjunction with electrophysiological measurements, or by applying electric fields that create pores in the cellular membrane (electroporation), etc. The stains that are used include horseradish peroxidase, Lucifer yellow, biocytin, etc." []
 synonym: "Intracellular injection" EXACT [birnlex:2136]
 xref: KSC_M:0000037 "Intracellular labeling method"
 is_a: KSC_M:0000021 ! Cytochemical method
-created_by: mihailbota
-
-[Term]
-id: KSC_M:0000038
-name: Biocytin labeling
-def: "Cytochemical method that uses biocytin for morphological characterization of cells. The labeling process is performed iontophoretically. The main advantages of this method are: the small size of the molecule, the molecule is (highly0 water soluble and it can be combinec with fluorescent markers. Biocytin can also be used as an anterograde tract-tracing stain." []
-synonym: "Biocytin filling" EXACT []
-synonym: "Biocytin tracing" EXACT []
-is_a: birnlex:2136 ! Intracellular labeling method
-relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
-relationship: always_requires KSC_M:00000224 ! Iontophoretic injection
 created_by: mihailbota
 
 [Term]
@@ -429,48 +357,12 @@ created_by: mihailbota
 remark: acronym: RT-PCR
 
 [Term]
-id: KSC_M:0000050
-name: Real-time PCR with DNA-binding dyes
-def: "Real time PCR method using fluorescent dyes, which intercalate within the double-strand DNA and emits fluorescence. Multiplication of the double-strands increase the fluorescence. The dyes are not DNA-sequence specific." []
-is_a: ERO:0001075 ! Real time polymerase chain reaction
-created_by: mihailbota
-
-[Term]
-id: KSC_M:0000051
-name: Real-time PCR with fluorescent primers
-def: "Real time PCR method using fluorophores directly attached to target specific primers Each time the primer is used to synthesize a new DNA strand, fluorescence intensity will increase." []
-is_a: ERO:0001075 ! Real time polymerase chain reaction
-created_by: mihailbota
-
-[Term]
-id: KSC_M:0000052
-name: Real-time PCR with fluorescent probes
-def: "A very sensitive qt-PCR that uses two target specific primers (forward and reverse), and a probe. Because the primers are specific, this qt-PCR method is also very specific." []
-is_a: ERO:0001075 ! Real time polymerase chain reaction
-is_a: ERO:0001075 ! Real time polymerase chain reaction
-created_by: mihailbota
-
-[Term]
 id: KSC_M:0000053
 name: Quantitative reverse-transcription polymerase chain reaction
 def: "A very sensitive rt-PCR method used for detection and measurement of RNA and mRNA. " []
 is_a: OBI:0000552 ! Reverse transcription polymerase chain reaction
 created_by: mihailbota
 remark: acronym: qrt-PCR
-
-[Term]
-id: KSC_M:0000054
-name: One step quantitative reverse-transcription polymerase chain reaction
-def: "Both reverse transcription and qPCR are performed in one step in a single tube that contains the RNA, the reverse transcriptase and the DNA polymerase, and the other reverse transcription and the qPCR reagents." []
-is_a: KSC_M:0000053 ! Quantitative reverse-transcription polymerase chain reaction
-created_by: mihailbota
-
-[Term]
-id: KSC_M:0000055
-name: Two steps quantitative reverse-transcription polymerase chain reaction
-def: "qrt-PCR method that first creates the DNA (cDNA) from the provided RNA using a transcriptase. In the second step, 10%-20% of the produced cDNA is used as template for the qtPCR." []
-is_a: KSC_M:0000053 ! Quantitative reverse-transcription polymerase chain reaction
-created_by: mihailbota
 
 [Term]
 id: KSC_M:0000056
@@ -560,15 +452,6 @@ def: "Class of electrophysiological methods that detect and measure field potent
 synonym: "Extracellular electrode recording protocol" EXACT [birnlex:2272]
 xref: KSC_M:0000066 "Extracellular recording"
 is_a: ERO:0001298 ! Electrophysiological method
-created_by: mihailbota
-
-[Term]
-id: birnlex:2276
-name: Extracellular single unit recording
-def: "Extracellular electrophysiological methods where the recording electrode is placed near the cell soma or the initial segment. It is used to record (evoked or spontaneous) action potentials and measure variables of the action potential such as amplitude and latency." []
-synonym: "Single electrode extracellular recording protocol" EXACT [birnlex:2276]
-xref: KSC_M:0000067 "Extracellular single unit recording"
-is_a: birnlex:2272 ! Extracellular recording
 created_by: mihailbota
 
 [Term]
@@ -870,37 +753,6 @@ relationship: requires KSC_M:00000112 ! Acute gene transfer
 created_by: mihailbota
 
 [Term]
-id: KSC_M:00000102
-name: Voltage-sensitive dyes imaging
-def: "Class of methods that use different molecules to visualize and measure variations of the electric potential in tissue, either in single cells or of cellular ensembles." []
-is_a: KSC_M:000004 ! Visualization method
-is_a: OBI:0302887 ! Staining method
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000103
-name: Fluorescent dyes imaging
-def: "Class of voltage-sensitive dyes imaging methods where different synthetic fluorescent probes are used. They can be further subdivided in fast- and slow-sensitive methods, depending on whether they can detect fast vs slow electrical changes." []
-is_a: KSC_M:00000102 ! Voltage-sensitive dyes imaging
-created_by: mihailbota
-
-[Term]
-id: ERO:0000634
-name: Calcium-sensitive dyes imaging
-def: "Class of voltage sensitive dyes imagining methods that use the intracellular calcium as reporter for electrical activity of single or ensembles of cells. The intracelular Ca concentration increases during an action potential, therefore the fluroescent signal given by dyes that bound with it will increase." []
-synonym: "calcium imaging assay" EXACT [ERO:0000634]
-xref: KSC_M:00000104 "Calcium-sensitive dyes imaging"
-is_a: KSC_M:00000103 ! Fluorescent dyes imaging
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000105
-name: Permeable calcium-sensitive dyes imaging
-def: "Class of calcium voltage-sensitive dyes imagining methods that use fluorescent probes that can cross the membrane." []
-is_a: ERO:0000634 ! Calcium-sensitive dyes imaging
-created_by: mihailbota
-
-[Term]
 id: KSC_M:00000106
 name: Multi-cell bolus loading
 def: "Method of labeling active neurons with membrane-permeant calcium-indicator fluorescent dyes. Used for monitorization of neuronal ensembles." []
@@ -910,14 +762,6 @@ created_by: mihailbota
 remark: acronym: MCBL
 
 [Term]
-id: KSC_M:00000107
-name: Impermeable calcium-sensitive dyes imaging
-def: "Class of calcium-indicator fluorescent dyes imaging methods that use impermeable dyes, which are injected into neurons either through a recording electrode, or using electroporation." []
-is_a: ERO:0000634 ! Calcium-sensitive dyes imaging
-relationship: requires OBI:0302912 ! Electroporation
-created_by: mihailbota
-
-[Term]
 id: OBI:0302912
 name: Electroporation
 def: "Class of methods that use strong electric fields to change the membrane permeability of a cell. Depending on the intensity, mode, time of application of the external electric field, temperature and presence of specific molecules, the induced pores into the cell membrane can be transient or metastable." []
@@ -925,30 +769,6 @@ synonym: "electroporation" EXACT [OBI:0302912]
 xref: KSC_M:00000108 "Electroporation"
 is_a: KSC_M:000001 ! Method
 created_by: mihailbota
-
-[Term]
-id: KSC_M:00000109
-name: Genetic encoders of calcium imaging
-def: "Generic class of methods that use chimeric fluorescent proteins (opsins) that can be used to monitor variations of intracellular calcium concentrations. GECIs consist of a calcium-binding domain (calmodulin or troponin C), fused to one or two fluorescent proteins." []
-is_a: nlx:152558 ! Optogenetics
-created_by: mihailbota
-remark: acronym: GECI
-
-[Term]
-id: KSC_M:00000110
-name: Single fluorescent protein genetic encoder of calcium imaging
-def: "Optogenetic method that uses a single fluorescent protein to visualize intracellular calcium. Usually, the fluorescence sensitivity is increased when the fluorescent protein is split in two (circularly permutation) and its conformation is modulated by calcium bindingdependent changes in the chromophore environment." []
-is_a: KSC_M:00000109 ! Genetic encoders of calcium imaging
-created_by: mihailbota
-remark: acronym: single-FP GECI
-
-[Term]
-id: KSC_M:00000111
-name: Two fluorescent proteins genetic encoder of calcium imaging
-def: "Optogenetic method that uses two variants of a fluorescent protein modified in such way that their spectral properties allow a specific resonance transfer energy (Forster FRET)." []
-is_a: KSC_M:00000109 ! Genetic encoders of calcium imaging
-created_by: mihailbota
-remark: acronym: two-FP GECI
 
 [Term]
 id: KSC_M:00000112
@@ -1061,148 +881,6 @@ is_a: nlx_inv:090919 ! Tract tracing
 created_by: mihailbota
 
 [Term]
-id: KSC_M:00000126
-name: Tritiated aminoacids tracing
-def: "Anterograde tract tracing method using radioactive aminoacids, which are delivered by pressure injection into the region of interest. The aminoacids are transported anterogradely towards the axonal terminals, which can be visualized onto film. The course of labeled axons cannot be determined directly. The radioactive isotopes that are used usually have short decaying time (half time). Also known as orthograde axoplasmic transport autoradiographic tracing (OOAT)." []
-is_a: KSC_M:00000123 ! Anterograde tracing
-relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
-relationship: requires KSC_M:00000223 ! Pressure injection
-relationship: requires KSC_M:00000224 ! Iontophoretic injection
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000127
-name: Horseradish peroxidase tracing
-def: "Both anterograde and retrograde tract tracing method that uses horseradish peroxidase as stain for axon terminals and neuronal cell bodies, respectively. However, HRP tracing is used mostly retrogradely. The HRP presence is detected using classical immunohistochemistry" []
-is_a: KSC_M:00000125 ! Anterograde and retrograde tract tracing
-relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
-relationship: requires KSC_M:00000223 ! Pressure injection
-relationship: requires KSC_M:00000224 ! Iontophoretic injection
-created_by: mihailbota
-remark: acronym: HRP
-
-[Term]
-id: KSC_M:00000128
-name: Radioactive and non-radioactive HRP tracing
-def: "Combination of the anterograde tritiated aminoacids and of HRP tracing methods, used for visualization of axon collaterals. The radioactive HRP is enzymatically inactive, and the non-radioactive HRP is enzymatically active." []
-is_a: KSC_M:00000125 ! Anterograde and retrograde tract tracing
-relationship: always_requires KSC_M:00000126 ! Tritiated aminoacids tracing
-relationship: always_requires KSC_M:00000127 ! Horseradish peroxidase tracing
-relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
-relationship: requires KSC_M:00000223 ! Pressure injection
-relationship: requires KSC_M:00000224 ! Iontophoretic injection
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000129
-name: Retrograde fluorescent tracing
-def: "Class of tract tracing methods that use retrogradely transported fluorescent markers. Some of the most commonly used markers are Evans blue, Fast blue, Diamidino Yellow (DI), nuclear yellow, fluorogold (FG). These markers can be used as single tracers, in combinations (e.g., DI and FG),  or with toxins-based tracers, and with anterograde tracers." []
-is_a: ERO:0001277 ! Retrograde tracing
-relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
-relationship: requires KSC_M:00000223 ! Pressure injection
-relationship: requires KSC_M:00000224 ! Iontophoretic injection
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000130
-name: Wheat-germ agglutinin and horseradish peroxidase tracing
-def: "Combination of WGA and HRP as tract tracer, which can be used both anterogradely and retrogradely." []
-is_a: KSC_M:00000125 ! Anterograde and retrograde tract tracing
-relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
-relationship: requires KSC_M:00000223 ! Pressure injection
-relationship: requires KSC_M:00000224 ! Iontophoretic injection
-created_by: mihailbota
-remark: acronym: WGA-HRP
-
-[Term]
-id: KSC_M:00000131
-name: Cholera toxin tracing
-def: "Class of tracing methods that use bacterial toxins conjugated with HRP, fluorescein, or rhodamine beads. The most used bacterial toxis is  non-toxic B fragment of cholera toxin (CTB). The detection is immunohistochemical, therefore this method is more sensitive than HRP. It can be used both anterogradely and retrogradely." []
-is_a: ERO:0001277 ! Retrograde tracing
-relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
-relationship: requires KSC_M:00000223 ! Pressure injection
-relationship: requires KSC_M:00000224 ! Iontophoretic injection
-created_by: mihailbota
-remark: acronym: CTB
-
-[Term]
-id: KSC_M:00000132
-name: Micro- and nano particles retrograde tracing
-def: "Class of tracing methods that use small particles composed of a label-coated material, which can employed alone, or conjugated with other tracers." []
-is_a: ERO:0001277 ! Retrograde tracing
-relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
-relationship: requires KSC_M:00000223 ! Pressure injection
-relationship: requires KSC_M:00000224 ! Iontophoretic injection
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000133
-name: Rhodamine beads tracing
-def: "Retrograde tracing method that uses fluorescent rhodamine carrying latex beads." []
-is_a: ERO:0001277 ! Retrograde tracing
-relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
-relationship: requires KSC_M:00000223 ! Pressure injection
-relationship: requires KSC_M:00000224 ! Iontophoretic injection
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000134
-name: Gold particles coated with wheat-germ conjugated apoHRP
-def: "Retrograde tracing method that combines WGA-HRP with gold particles (10-20 nm). It can be viewed directly through a light microscope and used in EM." []
-is_a: ERO:0001277 ! Retrograde tracing
-relationship: always_requires KSC_M:00000130 ! Wheat-germ agglutinin and horseradish peroxidase tracing
-relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
-relationship: requires KSC_M:00000223 ! Pressure injection
-relationship: requires KSC_M:00000224 ! Iontophoretic injection
-created_by: mihailbota
-remark: acronym: WGAapoHRP
-
-[Term]
-id: KSC_M:00000135
-name: diOlistic labeling
-def: "Neurons labeling method with lipophilic carbocyanine dyes that are injected into the cells of interest. These dyes label efficiently the neurons membranes, providing a more accurate view of dendrites and dendritic spines. It can be used in combination with retrograde tracers." []
-is_a: birnlex:2136 ! Intracellular labeling method
-created_by: mihailbota
-remark: acronym: diOListic
-
-[Term]
-id: KSC_M:00000136
-name: Retrograde tracing of diOlistic neurons
-def: "Combination of retrograde tracing methods with microparticles or fluorescent tracers (e.g. fluorogold) with the intracellular filling of neurons with lipophilic carbocyanine dyes." []
-is_a: ERO:0001277 ! Retrograde tracing
-relationship: always_requires KSC_M:00000135 ! diOlistic labeling
-relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
-relationship: requires KSC_M:00000223 ! Pressure injection
-relationship: requires KSC_M:00000224 ! Iontophoretic injection
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000137
-name: Anterograde fluorescent tracing
-def: "Class of tract tracing methods that use anterogradely transported fluorescent markers. Some of the most commonly used markers are biotinylated dextran amine (BDA), Phaseolus vulgaris leucoagglutinin (PHAL), Lucifer yellow-dextran, fluorescein-dextran, and Fluoro Ruby (tetramethylrhodamine-dextran), neurobiotin, and biocytin. One of the advantages of these markers vs the tritiated aminoacids is that the course and terminations of labeled axons can be directly visualized." []
-is_a: KSC_M:00000123 ! Anterograde tracing
-relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
-relationship: requires KSC_M:00000223 ! Pressure injection
-relationship: requires KSC_M:00000224 ! Iontophoretic injection
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000138
-name: Biotinylated dextran amine tracing
-def: "Anterograde tracing method using BDA as marker. The 10kDA BDA is one of the best markers for anterograde tracing in different species, while the 3kDA BDA is used for cell filling, and for retrograde tracing." []
-is_a: KSC_M:00000123 ! Anterograde tracing
-created_by: mihailbota
-remark: acronym: BDA
-
-[Term]
-id: KSC_M:00000139
-name: Phaseolus vulgaris leucoagglutinin tracing
-def: "Anterograde tracing method using PHAL as marker, which is considered the "gold standard" at least in small animals. PHA-L labels the axons only anterogradely when iontophoretic injections are employed, and there very few cases of dendrites labeling when the marker was pressure-injected." []
-is_a: KSC_M:00000123 ! Anterograde tracing
-created_by: mihailbota
-remark: acronym: PHAL
-
-[Term]
 id: KSC_M:00000140
 name: Coinjection tract tracing
 def: "Tracing method that involves the injection of two markers in the same injection site. Usually, one anterograde and one retrograde tracer are injected, for simultaneous detection of both inputs and outputs of region's of interest." []
@@ -1238,52 +916,6 @@ def: "Tracing methods based on lesions of tracts that induce degeneration of fib
 is_a: KSC_M:00000115 ! Degeneration method
 is_a: KSC_M:00000123 ! Anterograde tracing
 is_a: KSC_M:00000142 ! Transsynaptic tracing
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000144
-name: Viruses transsynaptic tracing
-def: "Tracing methods that use viruses (e.g., PrV and Bartha) as markers, and which label connections beyond the first synaptic station. Viruses that allow transneuronal labeling include Herpes simplex (HSV1) and pseudorabies virus (PRV), and the CSV strain of the rabies virus." []
-is_a: KSC_M:00000125 ! Anterograde and retrograde tract tracing
-is_a: KSC_M:00000142 ! Transsynaptic tracing
-relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
-relationship: requires KSC_M:00000223 ! Pressure injection
-relationship: requires KSC_M:00000224 ! Iontophoretic injection
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000145
-name: Double-virus translabeling neuron method
-def: "Virus transsynaptic tracing method that uses two different viruses to characterize functionally related networks. Each virus is genetically modified in such way that it expresses a specific antigen. The network infected by each virus is identified immunohistochemically, and the common nodes will be doubled labeled." []
-is_a: KSC_M:00000144 ! Viruses transsynaptic tracing
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000146
-name: Double recombinant viral transsynaptic tracing
-def: "Virus transsynaptic tracing method that uses two strains of recombinant rabies virus (RV), each of them modified in such that it will express an unique marker in infected neurons. The RV propagates retrogradely, and if injected in two regions, the network infected by each strain will include the associated marker. The identification of each network is performed histochemically, and the common nodes will be double labeled." []
-is_a: KSC_M:00000144 ! Viruses transsynaptic tracing
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000147
-name: Golgi-like retrograde labeling using viruses
-def: "Cytochemical labeling methods that uses retrograde tracing with retrogradely-propagating viruses followed by the antibody-based detection of the infected neuron." []
-is_a: birnlex:2136 ! Intracellular labeling method
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000148
-name: Golgi-like retrograde labeling using rabies virus
-def: "Golgi-like retrograde labeling method that uses the rabies virus to label a neuron, followed by a specific antibody-based detection of the infected neuron. This method has the advantage of not labeling fibers of passage." []
-is_a: KSC_M:00000147 ! Golgi-like retrograde labeling using viruses
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000149
-name: Golgi-like retrograde labeling using herpes virus
-def: "Golgi-like retrograde labeling method that uses the herpes virus to label a neuron, followed by a specific antibody-based detection of the infected neuron." []
-is_a: KSC_M:00000147 ! Golgi-like retrograde labeling using viruses
 created_by: mihailbota
 
 [Term]
@@ -1346,16 +978,6 @@ xref: KSC_M:00000156 "Diffusion tensor imaging"
 is_a: nlx_inv:090913 ! Diffusion magnetic resonance imaging
 created_by: mihailbota
 remark: acronym: DTI
-
-[Term]
-id: KSC_M:00000157
-name: Metals tracing
-def: "Tract tracing methods based on the transport of metals along axons. Examples include cobalt- nickel- and magnesium-tracing." []
-is_a: KSC_M:00000125 ! Anterograde and retrograde tract tracing
-relationship: always_requires KSC_M:000002 ! Gray matter tissue preparation
-relationship: requires KSC_M:00000223 ! Pressure injection
-relationship: requires KSC_M:00000224 ! Iontophoretic injection
-created_by: mihailbota
 
 [Term]
 id: nlx:152219
@@ -1430,39 +1052,6 @@ def: "Removal of a part of the gray matter in a mode designed by the experimente
 synonym: "excision" EXACT [OBI:0600022]
 xref: KSC_M:00000166 "Excision"
 is_a: KSC_M:00000164 ! Tissue cutting
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000167
-name: Transversal slicing
-def: "Removal of a part of the gray matter along the vertical plane of the brain and spinal cord. The result is a set of slices transversal on the longitudinal plane. Also known as frontal or coronal sectioning." []
-synonym: "Coronal slicing" EXACT []
-synonym: "Frontal slicing" EXACT []
-synonym: "Transversal cutting" EXACT []
-is_a: ERO:0000491 ! Tissue slicing
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000168
-name: Longitudinal slicing
-def: "Removal of a part of the gray matter along the horizontal plane of the brain and spinal cord. The result is a set of slices transversal on the vertical or coronal plane. Also known as horizontal sectioning or cutting." []
-synonym: "Horizontal cutting" EXACT []
-synonym: "Horizontal slicing" EXACT []
-is_a: ERO:0000491 ! Tissue slicing
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000169
-name: Saggital slicing
-def: "Removal of a part of the gray matter across the horizontal plane of the brain and spinal cord, lateral to medial." []
-is_a: ERO:0000491 ! Tissue slicing
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000170
-name: Oblique slicing
-def: "Removal of a part of the gray matter in a plane oblique to any of the three standard ones." []
-is_a: ERO:0000491 ! Tissue slicing
 created_by: mihailbota
 
 [Term]
@@ -1676,39 +1265,6 @@ created_by: mihailbota
 remark: acronym: TEVC
 
 [Term]
-id: KSC_M:00000200
-name: Dual cell voltage clamp
-def: "Variation of the two-electrode voltage clamp method specifically designed to study kinetics and conductance of gap junctions." []
-is_a: KSC_M:00000198 ! Voltage clamp
-relationship: modified_from KSC_M:00000200 ! Dual cell voltage clamp
-created_by: mihailbota
-remark: acronym: DCVC
-
-[Term]
-id: KSC_M:00000201
-name: Single electrode voltage clamp
-def: "Class of voltage clamp methods where a single intracellular electrod is used for both clamping the cell and for measurement. Used for small cells, or cells that are difficult to get to. Also used for study of plants cells." []
-is_a: KSC_M:00000198 ! Voltage clamp
-created_by: mihailbota
-remark: acronym: SEVC
-
-[Term]
-id: KSC_M:00000202
-name: Continuous single electrode voltage clamp method
-def: "Single electrode voltage clamp method where both measurement and clamping are performed in the same time." []
-is_a: KSC_M:00000201 ! Single electrode voltage clamp
-created_by: mihailbota
-remark: acronym: cSEVC
-
-[Term]
-id: KSC_M:00000203
-name: Discontinuous single electrode voltage clamp method
-def: "Single electrode voltage clamp method where the sharp electrode is rapid switched between the measurement mode and the clamping mode. The cell membrane needs to be enzymatically removed." []
-is_a: KSC_M:00000201 ! Single electrode voltage clamp
-created_by: mihailbota
-remark: acronym: dSEVC
-
-[Term]
 id: KSC_M:00000204
 name: Current clamp
 def: "Intracellular electrophysiological technique where the current is kept fixed by the experimenter and the voltage is measured." []
@@ -1867,34 +1423,6 @@ created_by: mihailbota
 id: KSC_M:00000225
 name: Nucleic acids and proteins measurement
 def: "Class of methods used for identification and measurement of nucleic acids and their products." []
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000226
-name: Fast Blue tracing
-def: "Retrograde fluorescent tract tracing method." []
-is_a: KSC_M:00000129 ! Retrograde fluorescent tracing
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000227
-name: Evans Blue tracing
-def: "Retrograde fluorescent tract tracing method." []
-is_a: KSC_M:00000129 ! Retrograde fluorescent tracing
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000228
-name: Diamidino Yellow tracing
-def: "Retrograde fluorescent tract tracing method." []
-is_a: KSC_M:00000129 ! Retrograde fluorescent tracing
-created_by: mihailbota
-
-[Term]
-id: KSC_M:00000229
-name: Fluorogold tracing
-def: "Retrograde fluorescent tract tracing method." []
-is_a: KSC_M:00000129 ! Retrograde fluorescent tracing
 created_by: mihailbota
 
 [Term]
