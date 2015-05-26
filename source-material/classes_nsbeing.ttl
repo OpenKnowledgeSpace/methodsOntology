@@ -32,10 +32,6 @@ NIFMOL:nlx_mol_1012013 rdf:type owl:Class ;
 
                        nsu:defintion "Fluorescent carbocyanine dye that is highly lipophilic"@en ;
 
-                       nsu:synonym "3"@en ;
-
-                       nsu:synonym "1"@en ;
-
                        nsu:synonym "diI-C~s-(3)"@en ;
 
                        nsu:synonym "3~'-tetramethylindocarbocyanine perchlorate"@en ;
