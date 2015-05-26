@@ -106,3 +106,25 @@ NIFMOL:nlx_mol_1012017 rdf:type owl:Class ;
 
 
 
+###  http://purl.obolibrary.org/obo/PR_000021958
+
+PR:000021958 rdf:type owl:Class ;
+
+             rdfs:label "cholera enterotoxin subunit B"@en ;
+
+             nsu:defintion "A protein that is a translation product of the Vibrio cholerae CTXB gene or a 1:1 ortholog thereof."@en ;
+
+             nsu:synonym "cholera enterotoxin gamma chain"@en ;
+
+             nsu:synonym "cholera enterotoxin B chain"@en ;
+
+             nsu:synonym "ctxB"@en ;
+
+             nsu:synonym "choleragenoid"@en ;
+
+             nsu:synonym "CTXB"@en ;
+
+             nsu:synonym "toxB"@en .
+
+
+
