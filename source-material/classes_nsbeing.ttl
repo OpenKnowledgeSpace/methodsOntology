@@ -2,3 +2,107 @@
     rdfs:label "generated being" ;  # This is actually completely redundant with being
     rdfs:subClassOf <http://www.FIXME.org/nsupper#nsu_0000002> .
 
+
+
+###  http://ontology.neuinfo.org/NIF/BiomaterialEntities/NIF-Molecule.owl#nlx_mol_1012018
+
+NIFMOL:nlx_mol_1012018 rdf:type owl:Class ;
+
+                       rdfs:label "Fluorogold"@en ;
+
+                       nsu:defintion "Fluorescent dye that is used as a retrograde tracer in tract tracing studies"@en ;
+
+                       nsu:synonym "Fluoro-Gold"@en .
+
+
+
+###  http://ontology.neuinfo.org/NIF/DigitalEntities/NIF-Investigation.owl#birnlex_2138
+
+NIFINV:birnlex_2138 rdf:type owl:Class ;
+
+                    rdfs:label "Fixative"@en .
+
+
+
+###  http://ontology.neuinfo.org/NIF/BiomaterialEntities/NIF-Molecule.owl#nlx_mol_1012013
+
+NIFMOL:nlx_mol_1012013 rdf:type owl:Class ;
+
+                       rdfs:label "DiI"@en ;
+
+                       nsu:defintion "Fluorescent carbocyanine dye that is highly lipophilic"@en ;
+
+                       nsu:synonym "3"@en ;
+
+                       nsu:synonym "1"@en ;
+
+                       nsu:synonym "diI-C~s-(3)"@en ;
+
+                       nsu:synonym "3~'-tetramethylindocarbocyanine perchlorate"@en ;
+
+                       nsu:synonym "1'-dioctadecyl-3"@en .
+
+
+
+###  http://purl.obolibrary.org/obo/chebi.owl#CHEBI_52081
+
+OBO:chebi.owl#CHEBI_52081 rdf:type owl:Class ;
+
+                          rdfs:label "Fura-2"@en ;
+
+                          nsu:defintion "Organic potassium salt used as a fluorescent calcium indicator dye"@en .
+
+
+
+###  http://ontology.neuinfo.org/NIF/BiomaterialEntities/NIF-Molecule.owl#nlx_mol_1012014
+
+NIFMOL:nlx_mol_1012014 rdf:type owl:Class ;
+
+                       rdfs:label "DiO"@en ;
+
+                       nsu:defintion "Fluorescent carbocyanine dye that is highly lipophilic, used for tract tracing studies in fixed tissues"@en .
+
+
+
+###  http://ontology.neuinfo.org/NIF/BiomaterialEntities/NIF-Molecule.owl#nlx_mol_1012006
+
+NIFMOL:nlx_mol_1012006 rdf:type owl:Class ;
+
+                       rdfs:label "Biocytin"@en ;
+
+                       nsu:defintion "Biotin analog of molecular weight 372 KDa which can be used as an anterograde of retrograde tracer in the nervous system."@en .
+
+
+
+###  http://ontology.neuinfo.org/NIF/BiomaterialEntities/NIF-Molecule.owl#nlx_mol_090804
+
+NIFMOL:nlx_mol_090804 rdf:type owl:Class ;
+
+                      rdfs:label "Horse radish peroxidase"@en ;
+
+                      nsu:defintion "An enzyme found in horseradish that is used extensively in molecular biology applications primarily for its ability to amplify a weak signal and increase detectability of a target molecule."@en ;
+
+                      nsu:synonym "Horseradish peroxidase"@en ;
+
+                      nsu:abbreviation "HRP"@en .
+
+
+
+###  http://ontology.neuinfo.org/NIF/DigitalEntities/NIF-Investigation.owl#birnlex_2037
+
+NIFINV:birnlex_2037 rdf:type owl:Class ;
+
+                    rdfs:label "Contrast agent"@en .
+
+
+
+###  http://ontology.neuinfo.org/NIF/BiomaterialEntities/NIF-Molecule.owl#nlx_mol_1012017
+
+NIFMOL:nlx_mol_1012017 rdf:type owl:Class ;
+
+                       rdfs:label "Diamidino yellow"@en ;
+
+                       nsu:synonym "Fluorescent diamidino compound used as a retrograde tracer in the nervous system"@en .
+
+
+
