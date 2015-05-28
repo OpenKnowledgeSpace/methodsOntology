@@ -156,7 +156,7 @@ class OboFile:
         #add store to od.names
         tvpair_store.append_to_obofile(self)
 
-    def write(self, filename, type_='obo'):  #FIXME this is bugged
+    def write(self, filename, type_='obo'):  #FIXME this is bugged, renames even if different extension
         """ Write file, will not overwrite files with the same name
             outputs to obo by default but can also output to ttl if
             passed type_='ttl' when called.
@@ -171,7 +171,7 @@ class OboFile:
             except ValueError:
                 filename = name + '_1.' + ext
             print('file exists, renaming to %s' % filename)
-            self.write(filename)
+            self.write(filename, type_)
 
         else:
             with open(filename, 'wt', encoding='utf-8') as f:
@@ -280,10 +280,17 @@ class TVPair:  #TODO these need to be parented to something!
 
 
             # black magic to match only unquoted and unescaped ! comments
-            PATTERN = re.compile(r'''((?:(?<=\\)!|[^!"']|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')+)''')
-            _, data, _, comment, _ = PATTERN.split(value)
+            if '!' in value:
+                PATTERN = re.compile(r'''((?:(?<=\\)!|[^!"']|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')+)''')
+                split = PATTERN.split(value)[1:-1]  # 1:-1 removes empty strings start and end
+                try:
+                    value, comment = split
+                    comment = comment.strip()
+                except:
+                    comment = ''
+            else:
+                comment = ''  # FIXME None?
             value = value.strip().rstrip()
-            comment = comment.strip()
 
             # DEAL WITH TRAILING MODIFIERS
             trailing_modifiers = None
