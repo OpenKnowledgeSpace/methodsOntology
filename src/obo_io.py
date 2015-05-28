@@ -366,14 +366,14 @@ class TVPair:  #TODO these need to be parented to something!
             elif self.tag == 'def':
                 value = self._value.text.replace('"','\"')
             elif self.tag == 'synonym':
-                value = self._value.text.lower()
+                value = self._value.text
             elif self.tag == 'is_a':
                 if type(self._value.target) == str:  # we dangling
                     value = self._value.target_id
                 else:
                     value = id_fix(self._value.target.id_.value)
             elif self.tag == 'name':
-                value = self.value.lower()  # capitalize only proper nouns as needed
+                value = self.value
             else:
                 value = self.value
             
