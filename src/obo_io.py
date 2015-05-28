@@ -56,6 +56,7 @@
 __title__ = 'obo_io'
 __author__ = 'Tom Gillespie'
 import os
+import re
 import inspect
 from datetime import datetime
 from getpass import getuser
@@ -275,18 +276,14 @@ class TVPair:  #TODO these need to be parented to something!
             tag, value = line.split(':',1)
             self.tag = tag
             value.strip()
-            comm_split = value.split('\!')
-            try:
-                # comment
-                tail, comment = comm_split[-1].split('!',1)
-                comment = comment.strip()
-                comm_split[-1] = tail
-                value = '\!'.join(comm_split)
-                
-            except ValueError:
-                comment = None
+            # check if there is a comment, no \! and no "!"
 
-            value = value.strip()
+
+            # black magic to match only unquoted and unescaped ! comments
+            PATTERN = re.compile(r'''((?:(?<=\\)!|[^!"']|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')+)''')
+            _, data, _, comment, _ = PATTERN.split(value)
+            value = value.strip().rstrip()
+            comment = comment.strip()
 
             # DEAL WITH TRAILING MODIFIERS
             trailing_modifiers = None
