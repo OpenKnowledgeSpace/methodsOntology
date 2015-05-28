@@ -360,11 +360,11 @@ class TVPair:  #TODO these need to be parented to something!
 
     def __ttl__(self):
 
-        if self.tag in obo_tag_to_ttl:
+        if self.tag in obo_tag_to_ttl:  # FIXME should load this mapping
             if self.tag == 'id':
                 value = id_fix(self.value)
             elif self.tag == 'def':
-                value = self._value.text.replace('"','\\"')
+                value = self._value.text.replace('"','\"')
             elif self.tag == 'synonym':
                 value = self._value.text.lower()
             elif self.tag == 'is_a':
@@ -654,14 +654,17 @@ class Stanza(TVPairStore):
             pass  # TODO
 
     def append_to_obofile(self, obofile):
+        """ append a stanza tvpair store to the internal representation and
+            create the link structure using callbacks
+        """
         type_od = getattr(obofile, self.__class__.__name__+'s')
-        callbacks = type_od.get(self.id_.value, None)
-        if type(callbacks) == list:
+        callbacks = type_od.get(self.id_.value, None)  # get reged callbacks
+        if type(callbacks) == list:  # we reg callbacks by list.append
             for callback in callbacks:
                 callback(self)  # fill in is_a
             type_od.pop(self.id_.value)  # reset the order
-        elif type(callbacks) == type(self):
-            print(self.id_)
+        elif type(callbacks) == type(self):  # handle mult entries w/ same id???  # FIXME not sure why this is called so much
+            #print(self.id_)  # uncomment to see when this occurs, it seems to happen to frequently
             if set(self.__dict__) == set(callbacks.__dict__):
                 pass
             else:
@@ -767,7 +770,7 @@ class DynamicValue(Value):
 
     def get_target(self, tvpair):
         def callback(target):
-            print(target, 'calling back',self)
+            #print(target, 'calling back',self)  # uncomment if you need to debug callbacks
             self.target = target
 
         self.target = 'DANGLING'
