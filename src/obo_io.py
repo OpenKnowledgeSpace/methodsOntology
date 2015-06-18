@@ -35,10 +35,12 @@
     Usage:
         obo_io.py <obofile>
         obo_io.py --ttl <obofile> [<ttlfile>]
+        obo_io.py --test
         obo_io.py --help
     Options:
         -h --help       show this
         -t --ttl        convert obo file to ttl and exit
+        -e --test       run tests
 
 
 
@@ -77,6 +79,7 @@ obo_tag_to_ttl = {
     'acronym':' ' * TW + 'nsu:acronym "%s"@en ;\n',
     'synonym':' ' * TW + 'nsu:synonym "%s"@en ;\n',
     'is_a':' ' * TW + 'rdfs:subClassOf %s ;\n',
+    'part_of':' ' * TW + 'nsu:part_of %s ;\n',
     #'xref':
 
 }
@@ -231,7 +234,7 @@ class TVPair:  #TODO these need to be parented to something!
     def __init__(self, line=None, tag=None, value=None, modifiers=None, comment=None, parent=None, type_od=None, **kwargs):  # TODO kwargs for specific tags
         self.parent = parent
         self.type_od = type_od
-
+        
         if line is not None:
             self.parse(line)
             #print(self)
@@ -281,12 +284,20 @@ class TVPair:  #TODO these need to be parented to something!
 
             # black magic to match only unquoted and unescaped ! comments
             if '!' in value:
-                PATTERN = re.compile(r'''((?:(?<=\\)!|[^!"']|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')+)''')
+                PATTERN = re.compile(r'''((?:(?<=\\)!|[^!"']|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')+)''')  # FIXME fails on "part_of: 375 ! Ammon's horn"
                 split = PATTERN.split(value)[1:-1]  # 1:-1 removes empty strings start and end
+                if "'" in split:  # seem's we had a lone apostorphe in a comment
+                    idx = split.index("'")
+                    split = [v for v in split[:idx-1]] + [split[idx-1]+"'"+split[idx+1]]  #FIXME what about trailing?
+                elif '"' in split:
+                    idx = split.index('"')
+                    split = [v for v in split[:idx-1]] + [split[idx-1]+'"'+split[idx+1]]
+
                 try:
-                    value, comment = split
+                    value, _, comment = split  # FIXME FIXME
                     comment = comment.strip()
-                except:
+                except ValueError:
+                    print(split)
                     comment = ''
             else:
                 comment = ''  # FIXME None?
@@ -367,7 +378,7 @@ class TVPair:  #TODO these need to be parented to something!
                 value = self._value.text.replace('"','\"')
             elif self.tag == 'synonym':
                 value = self._value.text
-            elif self.tag == 'is_a':
+            elif self.tag == 'is_a' or self.tag == 'part_of':
                 if type(self._value.target) == str:  # we dangling
                     value = self._value.target_id
                 else:
@@ -610,6 +621,7 @@ class Stanza(TVPairStore):
         ('is_symmetric', 1), #
         ('is_transitive', 1), #
         ('is_a', N),
+        ('part_of', N),  # NOT IN SPEC FIXME Typedef needs implement
         ('inverse_of', 1), #
         ('transitive_over', N), #
         ('intersection_of', N),  # no relationships, typedefs
@@ -813,6 +825,27 @@ class Is_a(DynamicValue):
         return super().parse(split)
 
 
+class Part_of(DynamicValue):
+    tag = 'part_of'
+    seps = ' ',
+    def __init__(self, target_id, tvpair):
+        self.target_id = target_id
+        self.get_target(tvpair)
+        #print('yes i have a target id you lying sack of shit',self.target_id)
+
+    def value(self):
+        if type(self.target) == str:
+            return self.target
+        else:
+            return str(self.target.id_.value)
+
+    @classmethod
+    def parse(cls, value, tvpair):
+        target_id = value
+        split = (target_id, tvpair)
+        return super().parse(split)
+
+
 class Relationship(DynamicValue):
     tag = 'relationship'
     seps = ' ', ' '
@@ -857,7 +890,11 @@ class Def_(Value):
         try:
             text, xrefs = value[1:-1].split('" [')
         except ValueError:
-            raise ValueError('No xrefs found! Please add square brackets [] at the end of each def:')  # FIXME?!?
+            text = value.strip().rstrip()[1:-1]
+            print('VALUE ERROR TEXT:', text)
+            xrefs = ''
+            #raise ValueError
+            #print('No xrefs found! Please add square brackets [] at the end of each def:')  # FIXME?!?
         xrefs = [Xref.parse(xref, tvpair) for xref in xrefs.split(',')]
         split = (text, xrefs)
         return super().parse(split)
@@ -1067,7 +1104,7 @@ class Xref(Value):  # TODO link internal ids, finalize will require cleanup, lot
         return super().parse(split)
 
 
-special_children = {sc.tag:sc for sc in (Subsetdef, Synonymtypedef, Idspace, Id_mapping, Def_, Synonym, Xref, Relationship, Is_a)}
+special_children = {sc.tag:sc for sc in (Subsetdef, Synonymtypedef, Idspace, Id_mapping, Def_, Synonym, Xref, Relationship, Is_a, Part_of)}
 
 def deNone(*args):
     for arg in args:
@@ -1077,6 +1114,37 @@ def deNone(*args):
             yield arg
 
 __all__ = [OboFile.__name__, TVPair.__name__, Header.__name__, Term.__name__, Typedef.__name__, Instance.__name__]
+
+def test():
+    #test comments
+    lines = [
+        "id: 2 ! bob's uncle\n",  #FIXME no comment detected
+        "is_a: 1 ! you are a silly person\n",
+        "is_a: 1hello\!wut ! you are a silly person wut\n",
+        "is_a: 1hello\!wut ! you're a silly person wut\n",
+        "is_a: 1 ! bobs uncle\n",
+        "is_a: 1 ! bob's uncle\n",
+        'is_a: 3 ! bob"s uncle\n',
+        "is_a: 1 ! bob\\'s uncle\n",
+        'is_a: 3 ! bob\\"s uncle\n',
+        "is_a: 3 ! bob's uncle's cat\n",
+        'def: "PLS NO" ! bob\'s uncle\n',  # wow, this one is truly amazingly effed up! FIXME it is the [1:-1]
+        'def: "PLS NO" [] ! bob\'s uncle\n',  # such wow
+        'def: "PLS NO" [] ! bob"s uncle\n',  # very fail
+        "id: 109283uashf123123PU$P@#(*\!: 1019j#)(#\!\!h@J)j0kj ! 203fj;aosidjf30jasdf;lj!\n",  # MEGA FAIL FIXME
+        "def: \"You are a silly person!\" ! this comment is haxin\n",
+        'def: "You are a silly! person2" ! "WHAT WERE YOU TINKING"\n',
+        'def: "You are a silly! person2" [] ! "WHAT WERE YOU TINKING"\n',
+        'def: "Needs to be carefully spelled out; it is meant to link methods temporally and causally, one-to-one." []\n',
+        #"\n",  # FIXME  BAD
+
+    ]
+    tvpairs = [ TVPair(line, parent=None, type_od=None) for line in lines]
+    #of1 = OboFile('/home/tom/git/methodsOntology/source-material/ns_methods.obo')
+    #of2 = OboFile('/home/tom/Dropbox/Ontologies/hbp_abam_ontology.obo')
+    #of3 = OboFile('/home/tom/Dropbox/neuroinformatics/protocols/onts/chebi.obo')
+    print([p.value for p in tvpairs])
+    embed()
 
 def main():
     args = docopt(__doc__, version='obo_io 0')
@@ -1095,6 +1163,8 @@ def main():
             of.write(ttlfilename, type_='ttl')
         else:
             raise FileNotFoundError('No file named %s exists at that path!' % filename)
+    elif args['--test']:
+        test()
     else:
         filename = args['<obofile>']
         of = OboFile(filename=filename)
