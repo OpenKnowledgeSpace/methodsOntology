@@ -83,6 +83,23 @@ obo_tag_to_ttl = {
     #'xref':
 
 }
+
+# current horrible ttl header
+default_ttl_header = """@prefix : <http://www.FIXME.org/{filename}#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix nsu: <http://www.FIXME.org/nsupper#> .
+@base <http://www.FIXME.org/{filename}> .
+
+<http://www.FIXME.org/{filename}> rdf:type owl:Ontology ;
+                                 owl:imports <http://www.FIXME.org/nsupper> .
+
+
+"""
+
 def id_fix(value):
     """ fix @prefix values for ttl """
     if value.startswith('KSC_M'):
@@ -181,7 +198,8 @@ class OboFile:
                 if type_ == 'obo':
                     f.write(str(self))  # FIXME this is incredibly slow for big files :/
                 elif type_ == 'ttl':
-                    f.write(self.__ttl__())
+                    formatted_header = default_ttl_header.format(filename=self.filename.rsplit('.',1)[0].rsplit('/')[-1])
+                    f.write(formatted_header+self.__ttl__())
                 else:
                     raise TypeError('No exporter for file type %s!' % type_)
 
@@ -893,8 +911,8 @@ class Def_(Value):
             text = value.strip().rstrip()[1:-1]
             print('VALUE ERROR TEXT:', text)
             xrefs = ''
-            #raise ValueError
-            #print('No xrefs found! Please add square brackets [] at the end of each def:')  # FIXME?!?
+            #raise ValueError('No xrefs found! Please add square brackets [] at the end of each def:')  # FIXME?!?
+            print('No xrefs found! Please add square brackets [] at the end of each def:')  # FIXME?!?
         xrefs = [Xref.parse(xref, tvpair) for xref in xrefs.split(',')]
         split = (text, xrefs)
         return super().parse(split)
@@ -1025,10 +1043,14 @@ class Synonym(Value):
 
     @classmethod
     def parse(cls, value, tvpair):
+        print('value to parse', value)
         try:
             text, scope_typedef_xrefs = value[1:-1].split('" ', 1)
         except ValueError:
-            raise ValueError('Malformed synonym: line you are probably missing xrefs.')  # FIXME?!?
+            print('Malformed synonym: line you are probably missing xrefs.')  # FIXME?!?
+            new_value = value + " RELATED []"  # FIXME defaulting to related because who knows
+            return cls.parse(new_value, tvpair)
+            #raise ValueError('Malformed synonym: line you are probably missing xrefs.')  # FIXME?!?
         try:
             scope_typedef, xrefs = scope_typedef_xrefs.split(' [', 1)
         except ValueError:
@@ -1141,7 +1163,7 @@ def test():
     ]
     tvpairs = [ TVPair(line, parent=None, type_od=None) for line in lines]
     #of1 = OboFile('/home/tom/git/methodsOntology/source-material/ns_methods.obo')
-    #of2 = OboFile('/home/tom/Dropbox/Ontologies/hbp_abam_ontology.obo')
+    of2 = OboFile('/home/tom/Dropbox/Ontologies/hbp_abam_ontology.obo')
     #of3 = OboFile('/home/tom/Dropbox/neuroinformatics/protocols/onts/chebi.obo')
     print([p.value for p in tvpairs])
     embed()
