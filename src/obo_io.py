@@ -80,7 +80,8 @@ obo_tag_to_ttl = {
     'synonym':' ' * TW + 'nsu:synonym "%s"@en ;\n',
     'is_a':' ' * TW + 'rdfs:subClassOf %s ;\n',
     'part_of':' ' * TW + 'nsu:part_of %s ;\n',
-    #'xref':
+    'xref':' ' * TW + 'nsu:xref %s ;\n',
+    'rank':' ' * TW + 'nsu:rank %s ;\n',  # for TAXON
 
 }
 
@@ -640,6 +641,7 @@ class Stanza(TVPairStore):
         ('is_transitive', 1), #
         ('is_a', N),
         ('part_of', N),  # NOT IN SPEC FIXME Typedef needs implement
+        ('rank', 1),  # FIXME SHOULD BE TYPEDEF'D
         ('inverse_of', 1), #
         ('transitive_over', N), #
         ('intersection_of', N),  # no relationships, typedefs
