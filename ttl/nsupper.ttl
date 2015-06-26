@@ -40,6 +40,10 @@
 
 
 
+###  http://www.FIXME.org/nsupper#part_of
+
+:part_of rdf:type owl:ObjectProperty .
+
 
 
 #################################################################

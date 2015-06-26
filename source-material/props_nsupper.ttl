@@ -2,3 +2,4 @@
 :acronym rdf:type owl:AnnotationProperty .
 :definition rdf:type owl:AnnotationProperty .
 :synonym rdf:type owl:AnnotationProperty .
+:part_of rdf:type owl:ObjectProperty .
