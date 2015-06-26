@@ -42,7 +42,14 @@
 
 ###  http://www.FIXME.org/nsupper#part_of
 
-:part_of rdf:type owl:ObjectProperty .
+:part_of rdf:type owl:ObjectProperty ,
+                  owl:TransitiveProperty .
+
+
+
+###  http://www.FIXME.org/nsupper#xref
+
+:xref rdf:type owl:AnnotationProperty .
 
 
 
