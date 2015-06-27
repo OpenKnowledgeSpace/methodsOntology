@@ -73,15 +73,15 @@ od.__repr__ = dict.__repr__
 
 # this is our current (horrible) conversion from obo to ttl
 obo_tag_to_ttl = {
-    'id':'%s rdf:type owl:Class ;\n',
-    'name':' ' * TW + 'rdfs:label "%s"@en ;\n',
-    'def':' ' * TW + 'nsu:definition "%s"@en ;\n',
-    'acronym':' ' * TW + 'nsu:acronym "%s"@en ;\n',
-    'synonym':' ' * TW + 'nsu:synonym "%s"@en ;\n',
-    'is_a':' ' * TW + 'rdfs:subClassOf %s ;\n',
-    'part_of':' ' * TW + 'nsu:part_of %s ;\n',
-    'xref':' ' * TW + 'nsu:xref %s ;\n',
-    'rank':' ' * TW + 'nsu:rank %s ;\n',  # for TAXON
+    'id':'%s rdf:type owl:Class ;\n\n',
+    'name':' ' * TW + 'rdfs:label "%s"@en ;\n\n',
+    'def':' ' * TW + 'nsu:definition "%s"@en ;\n\n',
+    'acronym':' ' * TW + 'nsu:acronym "%s"@en ;\n\n',
+    'synonym':' ' * TW + 'nsu:synonym "%s"@en ;\n\n',
+    'is_a':' ' * TW + 'rdfs:subClassOf %s ;\n\n',
+    'part_of':' ' * TW + 'nsu:part_of %s ;\n\n',
+    'xref':' ' * TW + 'nsu:xref %s ;\n\n',
+    'rank':' ' * TW + 'nsu:rank :%s ;\n\n',  # for TAXON
 
 }
 
@@ -205,8 +205,10 @@ class OboFile:
                 if type_ == 'obo':
                     f.write(str(self))  # FIXME this is incredibly slow for big files :/
                 elif type_ == 'ttl':
-                    if header:
+                    if header:  # TODO autoconvert?
                         formatted_header = default_ttl_header.format(filename=self.filename.rsplit('.',1)[0].rsplit('/')[-1])
+                    else:
+                        formatted_header = ''
                     f.write(formatted_header+self.__ttl__())
                 else:
                     raise TypeError('No exporter for file type %s!' % type_)
@@ -218,7 +220,7 @@ class OboFile:
         stores += [s.__ttl__() for s in self.Terms.values()]
         stores += [s.__ttl__() for s in self.Typedefs.values()] 
         stores += [s.__ttl__() for s in self.Instances.values()]
-        return '\n'.join(stores)
+        return '\n\n'.join(stores)
 
     def __str__(self):
         stores = [str(self.header)]
@@ -417,7 +419,7 @@ class TVPair:  #TODO these need to be parented to something!
             
             return self._obo_to_ttl[self.tag] % value
         else:
-            return '    FIXME:%s %s ;\n' % (self.tag, self.value)   # TODO TEST ME
+            return '    FIXME:%s %s ;\n\n' % (self.tag, self.value)   # TODO TEST ME
 
     def __repr__(self):
         return str(self)
@@ -548,7 +550,7 @@ class TVPairStore:
 
     def __ttl__(self):
         block = ''.join(tvpair.__ttl__() for tvpair in self.tvpairs)
-        return block.rstrip('\n').rstrip(';') + '.\n'
+        return block.rstrip('\n').rstrip(';') + '.\n\n'
 
     def __str__(self):
         return '\n'.join(str(tvpair) for tvpair in self.tvpairs) + '\n'
