@@ -132,7 +132,7 @@ class OboFile:
         To output to ttl format call str_to_write = obofileinstance.__ttl__()
         and then write str_to_write to file.  TODO implement .writettl()
     """
-    def __init__(self, filename=None, header=None, terms=None, typedefs=None, instances=None):
+    def __init__(self, filename=None, header=None, terms=None, typedefs=None, instances=None, obo_to_ttl=None):
         self.filename = filename
         self.Terms = od()
         self.Terms.names = {}
@@ -142,6 +142,12 @@ class OboFile:
         self.Instances.names = {}
         self.Headers = od()  #LOL STUPID FIXME
         self.Headers.names = {}  # FIXME do not want? what about imports?
+
+        if obo_to_ttl is None:
+            self._obo_to_ttl = obo_tag_to_ttl  # set the default
+        else:
+            self._obo_to_ttl = obo_to_ttl
+
         if filename is not None:  # FIXME could spec filename here?
             #od_types = {type_.__name__:type_od for type_,type_od in zip((Term, Typedef, Instance),(self.Terms,self.Typedefs,self.Instances))}
             #LOL GETATTR
@@ -159,7 +165,7 @@ class OboFile:
                 block_type, block = block.split(']\n',1)
                 type_ = stanza_types[block_type]
                 #odt = od_type[block_type]
-                t = type_(block, self)  # FIXME :/
+                t = type_(block, self, obo_to_ttl=self._obo_to_ttl)  # FIXME :/
                 self.add_tvpair_store(t)
 
         elif header is not None:
@@ -177,7 +183,7 @@ class OboFile:
         #add store to od.names
         tvpair_store.append_to_obofile(self)
 
-    def write(self, filename, type_='obo'):  #FIXME this is bugged, renames even if different extension
+    def write(self, filename, type_='obo', header=False):  #FIXME this is bugged, renames even if different extension
         """ Write file, will not overwrite files with the same name
             outputs to obo by default but can also output to ttl if
             passed type_='ttl' when called.
@@ -199,7 +205,8 @@ class OboFile:
                 if type_ == 'obo':
                     f.write(str(self))  # FIXME this is incredibly slow for big files :/
                 elif type_ == 'ttl':
-                    formatted_header = default_ttl_header.format(filename=self.filename.rsplit('.',1)[0].rsplit('/')[-1])
+                    if header:
+                        formatted_header = default_ttl_header.format(filename=self.filename.rsplit('.',1)[0].rsplit('/')[-1])
                     f.write(formatted_header+self.__ttl__())
                 else:
                     raise TypeError('No exporter for file type %s!' % type_)
@@ -250,9 +257,10 @@ class TVPair:  #TODO these need to be parented to something!
         '\{':'{',
         '\}':'}',
               }
-    def __init__(self, line=None, tag=None, value=None, modifiers=None, comment=None, parent=None, type_od=None, **kwargs):  # TODO kwargs for specific tags
+    def __init__(self, line=None, tag=None, value=None, modifiers=None, comment=None, parent=None, type_od=None, obo_to_ttl=None, **kwargs):  # TODO kwargs for specific tags
         self.parent = parent
         self.type_od = type_od
+        self._obo_to_ttl = obo_to_ttl
         
         if line is not None:
             self.parse(line)
@@ -263,8 +271,8 @@ class TVPair:  #TODO these need to be parented to something!
             self.validate()
 
     @staticmethod
-    def factory(tag, value=None, modifiers=None, comment=None, dict_=None, parent=None, type_od=None, **kwargs):
-        tvp = TVPair(tag=tag, value=value, modifiers=comment, comment=comment, parent=None, type_od=type_od, **kwargs)
+    def factory(tag, value=None, modifiers=None, comment=None, dict_=None, parent=None, type_od=None, obo_to_ttl=None, **kwargs):
+        tvp = TVPair(tag=tag, value=value, modifiers=comment, comment=comment, parent=None, type_od=type_od, obo_to_ttl=None, **kwargs)
         if dict_:
             dict_[TVPair.esc_(tag)] = tvp
         else:
@@ -390,7 +398,7 @@ class TVPair:  #TODO these need to be parented to something!
 
     def __ttl__(self):
 
-        if self.tag in obo_tag_to_ttl:  # FIXME should load this mapping
+        if self.tag in self._obo_to_ttl:
             if self.tag == 'id':
                 value = id_fix(self.value)
             elif self.tag == 'def':
@@ -407,9 +415,9 @@ class TVPair:  #TODO these need to be parented to something!
             else:
                 value = self.value
             
-            return obo_tag_to_ttl[self.tag] % value
+            return self._obo_to_ttl[self.tag] % value
         else:
-            return ''
+            return '    FIXME:%s %s ;\n' % (self.tag, self.value)   # TODO TEST ME
 
     def __repr__(self):
         return str(self)
@@ -445,8 +453,9 @@ class TVPairStore:
     def ___new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, block=None, obofile=None, tvpairs=None):
+    def __init__(self, block=None, obofile=None, tvpairs=None, obo_to_ttl=None):
         # keep _tags out of self.__dict__ and add new tags for all instances
+        #self._obo_to_ttl = obo_to_ttl  # can't store this here :/ it also doesn't need to know about it
         if obofile is not None:
             type_od = getattr(obofile, self.__class__.__name__+'s')
         else:
@@ -462,7 +471,7 @@ class TVPairStore:
             for line in lines:
                 if line:
                     if line[0] != '!':  # we do not parse comments
-                        tvpair = TVPair(line, parent=self, type_od=type_od)
+                        tvpair = TVPair(line, parent=self, type_od=type_od, obo_to_ttl=obo_to_ttl)
                         self.add_tvpair(tvpair)
             warn = True
         else:
@@ -605,9 +614,9 @@ class Header(TVPairStore):
         """
         updated = {k:v for k, v in self.__dict__.items()}
         print(updated.keys())
-        TVPair.factory('date', datetime.strftime(datetime.utcnow(), self._datetime_fmt),dict_=updated)
-        TVPair.factory('auto-generated-by', __title__, dict_=updated)
-        TVPair.factory('saved-by', getuser(), dict_=updated)
+        TVPair.factory('date', datetime.strftime(datetime.utcnow(), self._datetime_fmt),dict_=updated, obo_to_ttl=self._obo_to_ttl)
+        TVPair.factory('auto-generated-by', __title__, dict_=updated, obo_to_ttl=self._obo_to_ttl)
+        TVPair.factory('saved-by', getuser(), dict_=updated, obo_to_ttl=self._obo_to_ttl)
         tvpairs = self._tvpairs(updated)
         return '\n'.join(str(tvpair) for tvpair in tvpairs) + '\n'
 
@@ -673,11 +682,11 @@ class Stanza(TVPairStore):
         cls.__new__ = super().__new__  # enforce runonce
         return instance  # we return here so we chain the runonce
 
-    def __init__(self, block=None, obofile=None, tvpairs=None):
+    def __init__(self, block=None, obofile=None, tvpairs=None, obo_to_ttl=None):
         if block is not None and obofile is not None:
-            super().__init__(block, obofile)
+            super().__init__(block, obofile, obo_to_ttl=obo_to_ttl)
         else:
-            super().__init__(tvpairs=tvpairs)
+            super().__init__(tvpairs=tvpairs, obo_to_ttl=obo_to_ttl)
 
         if obofile is not None:
             self.append_to_obofile(obofile)
@@ -1163,7 +1172,7 @@ def test():
         #"\n",  # FIXME  BAD
 
     ]
-    tvpairs = [ TVPair(line, parent=None, type_od=None) for line in lines]
+    tvpairs = [ TVPair(line, parent=None, type_od=None, obo_to_ttl=obo_tag_to_ttl) for line in lines]
     #of1 = OboFile('/home/tom/git/methodsOntology/source-material/ns_methods.obo')
     of2 = OboFile('/home/tom/Dropbox/Ontologies/hbp_abam_ontology.obo')
     #of3 = OboFile('/home/tom/Dropbox/neuroinformatics/protocols/onts/chebi.obo')
