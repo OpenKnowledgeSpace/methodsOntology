@@ -301,11 +301,18 @@ class TVPair:  #TODO these need to be parented to something!
             #print('PLS IMPLMENT ME! ;_;')
             pass  # TODO
 
-    def _value(self):
-        return self.value
+    def value(self):
+        """ there are too many ways to generate and modify value
+            therefore: call this to get the current value regardless
+        """
+        return self._value
 
-    @property
-    def __value(self):
+    def _callable_value(self):
+        """ Even though we could assign self.value to a callable directly
+            this makes the code more readable and understandable since it
+            may not always be obvious that the value assigned to _value is
+            indeed callable.
+        """
         return self._value()
 
     def parse(self, line):
@@ -343,14 +350,14 @@ class TVPair:  #TODO these need to be parented to something!
 
             if tag in special_children:
                 self._value = special_children[tag].parse(value, self)
-                #self.value = self.__value  # FIXME this does not do what you think it does esp prior to resolving callbacks!
-                if type(self.value) == DynamicValue:
+                self.value = self._callable_value
+                if type(self._value) == DynamicValue:  # FIXME mro?
                     self._comment = self._value.target.name.value  # LOL
                     self.comment = self.__comment
                 else:
                     self.comment = comment
             else:
-                self.value = value
+                self._value = value
                 self.comment = comment
         except BaseException as e:
             embed()
@@ -373,12 +380,12 @@ class TVPair:  #TODO these need to be parented to something!
         if tag in special_children:
             kwargs['tvpair'] = self
             self._value = special_children[tag](**kwargs)
-            self.value = self.__value
+            self.value = self._callable_value
             if type(self.value) == DynamicValue:
                 self._comment = self._value.target.name.value  # LOL
                 self.comment = self.__comment
         else:
-            self.value = value
+            self._value = value
             
     def __eq__(self, other):
         if type(self) == type(other):
@@ -393,7 +400,7 @@ class TVPair:  #TODO these need to be parented to something!
         return not other == self
 
     def __str__(self):
-        string = '{}: {}'.format(self.tag, self._value())
+        string = '{}: {}'.format(self.tag, self.value())
 
         if self.trailing_modifiers:
             string += " " + str(self.trailing_modifiers)
@@ -409,7 +416,7 @@ class TVPair:  #TODO these need to be parented to something!
 
         if self.tag in self._obo_to_ttl:
             if self.tag == 'id':
-                value = id_fix(self.value)
+                value = id_fix(self.value())
                 #tab = ''
             elif self.tag == 'def':
                 value = self._value.text.replace('"','\\"')
@@ -419,15 +426,15 @@ class TVPair:  #TODO these need to be parented to something!
                 if type(self._value.target) == str:  # we dangling
                     value = self._value.target_id
                 else:
-                    value = id_fix(self._value.target.id_.value)
+                    value = id_fix(self._value.target.id_.value())
             elif self.tag == 'name':
-                value = self.value
+                value = self.value()
             else:
-                value = self.value
+                value = self.value()
             
             return tab + self._obo_to_ttl[self.tag] % value + tvp_split
         else:
-            return tab + 'FIXME:%s %s ;' % (self.tag, self.value) + tvp_split   # TODO TEST ME
+            return tab + 'FIXME:%s %s ;' % (self.tag, self.value()) + tvp_split   # TODO TEST ME
 
     def __repr__(self):
         return str(self)
@@ -539,9 +546,9 @@ class TVPairStore:
             if self._tags[tvpair.tag] == N:
                 tosort = []
                 for tvp in self.__dict__[TVPair.esc_(tvpair.tag)]:
-                    tosort.append(tvp._value())
+                    tosort.append(tvp.value())
                 sord = sorted(tosort, key=lambda a: a.lower())  # FIXME isn't quit right
-                out += sord.index(tvpair._value()) / (len(sord) + 1)
+                out += sord.index(tvpair.value()) / (len(sord) + 1)
             return out
             
         tosort = []
@@ -627,9 +634,9 @@ class Header(TVPairStore):
         """
         updated = {k:v for k, v in self.__dict__.items()}
         print(updated.keys())
-        TVPair.factory('date', datetime.strftime(datetime.utcnow(), self._datetime_fmt),dict_=updated, obo_to_ttl=self._obo_to_ttl)
-        TVPair.factory('auto-generated-by', __title__, dict_=updated, obo_to_ttl=self._obo_to_ttl)
-        TVPair.factory('saved-by', getuser(), dict_=updated, obo_to_ttl=self._obo_to_ttl)
+        TVPair.factory('date', datetime.strftime(datetime.utcnow(), self._datetime_fmt),dict_=updated)#, obo_to_ttl=self._obo_to_ttl)
+        TVPair.factory('auto-generated-by', __title__, dict_=updated)#, obo_to_ttl=self._obo_to_ttl)
+        TVPair.factory('saved-by', getuser(), dict_=updated)#, obo_to_ttl=self._obo_to_ttl)
         tvpairs = self._tvpairs(updated)
         return '\n'.join(str(tvpair) for tvpair in tvpairs) + '\n'
 
@@ -713,11 +720,11 @@ class Stanza(TVPairStore):
             create the link structure using callbacks
         """
         type_od = getattr(obofile, self.__class__.__name__+'s')
-        callbacks = type_od.get(self.id_.value, None)  # get reged callbacks
+        callbacks = type_od.get(self.id_.value(), None)  # get reged callbacks
         if type(callbacks) == list:  # we reg callbacks by list.append
             for callback in callbacks:
                 callback(self)  # fill in is_a
-            type_od.pop(self.id_.value)  # reset the order
+            type_od.pop(self.id_.value())  # reset the order
         elif type(callbacks) == type(self):  # handle mult entries w/ same id???  # FIXME not sure why this is called so much
             #print(self.id_)  # uncomment to see when this occurs, it seems to happen to frequently
             if set(self.__dict__) == set(callbacks.__dict__):
@@ -725,15 +732,15 @@ class Stanza(TVPairStore):
             else:
                 callbacks.__dict__.update(self.__dict__)  # last one wins
                 #raise ValueError('IT WOULD SEEM WE ALREADY EXIST! PLS HALP')  # TODO
-        type_od[self.id_.value] = self
-        type_od.__dict__[TVPair.esc_(self.id_.value)] = self
-        if self.name.value not in type_od.names:  # add to names
-            type_od.names[self.name.value] = self
-        elif type(type_od.names[self.name.value]) == list:
-            type_od.names[self.name.value].append(self)
+        type_od[self.id_.value()] = self
+        type_od.__dict__[TVPair.esc_(self.id_.value())] = self
+        if self.name.value() not in type_od.names:  # add to names
+            type_od.names[self.name.value()] = self
+        elif type(type_od.names[self.name.value()]) == list:
+            type_od.names[self.name.value()].append(self)
         else:
-            existing = type_od.names.pop(self.name.value)
-            type_od.names[self.name.value] = [existing, self]
+            existing = type_od.names.pop(self.name.value())
+            type_od.names[self.name.value()] = [existing, self]
             
     def __str__(self):
         return '['+ self.__class__.__name__ +']\n' + super().__str__()
@@ -751,13 +758,13 @@ class Term(Stanza):
         if getattr(self, 'synonym', None):
             last_wins = {}
             for s in self.synonym:
-                if type(s._value) == str:
+                if type(s._value) == str:  # FIXME
                     print(s._value)
-                    key = s.value
+                    key = s.value()
                 else:
                     key = s._value.text
                 last_wins[key] = s
-            self.synonym = sorted(list(last_wins.values()),key=lambda a:a.value)
+            self.synonym = sorted(list(last_wins.values()),key=lambda a:a.value())
 
 
 class Typedef(Stanza):
@@ -901,11 +908,11 @@ class Relationship(DynamicValue):  #FIXME this ttls badly
         if type(self.target) == str:
             target = self.target
         else:
-            target = str(self.target.id_.value)
+            target = str(self.target.id_.value())
         if type(self.typedef) == str:
             typedef = self.typedef
         else:
-            target = str(self.typedef.id_.value)
+            target = str(self.typedef.id_.value())
         return typedef + ' ' + target
 
     @classmethod
