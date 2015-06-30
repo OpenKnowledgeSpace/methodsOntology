@@ -101,6 +101,12 @@ default_ttl_header = """@prefix : <http://www.FIXME.org/{filename}#> .
 
 """
 
+def callsback(*args):
+    """ A do nothing decorator for annotating callbacks :( """
+    def actual_function(function):
+        return function
+    return actual_function
+
 def id_fix(value):
     """ fix @prefix values for ttl """
     if value.startswith('KSC_M'):
@@ -337,7 +343,7 @@ class TVPair:  #TODO these need to be parented to something!
 
             if tag in special_children:
                 self._value = special_children[tag].parse(value, self)
-                self.value = self.__value
+                #self.value = self.__value  # FIXME this does not do what you think it does esp prior to resolving callbacks!
                 if type(self.value) == DynamicValue:
                     self._comment = self._value.target.name.value  # LOL
                     self.comment = self.__comment
@@ -360,7 +366,7 @@ class TVPair:  #TODO these need to be parented to something!
     def __comment(self):
         return self._comment()
 
-    def make(self, tag, value=None, modifiers=None, comment=None, **kwargs):
+    def make(self, tag, value=None, modifiers=None, comment=None, **kwargs):  # FIXME DO WE EVEN USE TIHS ANYMORE?
         self.tag = tag
         self.trailing_modifiers = modifiers
         self.comment = comment
@@ -701,6 +707,7 @@ class Stanza(TVPairStore):
             #print('Please be sure to add this to the typd_od yourself!')
             pass  # TODO
 
+    @callsback('DynamicValue','get_target')
     def append_to_obofile(self, obofile):
         """ append a stanza tvpair store to the internal representation and
             create the link structure using callbacks
@@ -882,7 +889,7 @@ class Part_of(DynamicValue):
         return super().parse(split)
 
 
-class Relationship(DynamicValue):
+class Relationship(DynamicValue):  #FIXME this ttls badly
     tag = 'relationship'
     seps = ' ', ' '
     def __init__(self, typedef, target_id, tvpair):
@@ -892,9 +899,14 @@ class Relationship(DynamicValue):
 
     def value(self):
         if type(self.target) == str:
-            return self.target
+            target = self.target
         else:
-            return str(self.target.id_.value)
+            target = str(self.target.id_.value)
+        if type(self.typedef) == str:
+            typedef = self.typedef
+        else:
+            target = str(self.typedef.id_.value)
+        return typedef + ' ' + target
 
     @classmethod
     def parse(cls, value, tvpair):
@@ -1061,7 +1073,7 @@ class Synonym(Value):
 
     @classmethod
     def parse(cls, value, tvpair):
-        print('value to parse', value)
+        #print('value to parse', value)
         try:
             text, scope_typedef_xrefs = value[1:-1].split('" ', 1)
         except ValueError:
