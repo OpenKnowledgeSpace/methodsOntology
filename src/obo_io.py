@@ -73,15 +73,15 @@ od.__repr__ = dict.__repr__
 
 # this is our current (horrible) conversion from obo to ttl
 obo_tag_to_ttl = {
-    'id':'%s rdf:type owl:Class ;\n\n',
-    'name':' ' * TW + 'rdfs:label "%s"@en ;\n\n',
-    'def':' ' * TW + 'nsu:definition "%s"@en ;\n\n',
-    'acronym':' ' * TW + 'nsu:acronym "%s"@en ;\n\n',
-    'synonym':' ' * TW + 'nsu:synonym "%s"@en ;\n\n',
-    'is_a':' ' * TW + 'rdfs:subClassOf %s ;\n\n',
-    'part_of':' ' * TW + 'nsu:part_of %s ;\n\n',
-    'xref':' ' * TW + 'nsu:xref %s ;\n\n',
-    'rank':' ' * TW + 'nsu:rank :%s ;\n\n',  # for TAXON
+    'id':'%s rdf:type owl:Class ;',
+    'name':'rdfs:label "%s"@en ;',
+    'def':'nsu:definition "%s"@en ;',
+    'acronym':'nsu:acronym "%s"@en ;',
+    'synonym':'nsu:synonym "%s"@en ;',
+    'is_a':'rdfs:subClassOf %s ;',
+    'part_of':'nsu:part_of %s ;',
+    'xref':'nsu:xref %s ;',
+    'rank':'nsu:rank :%s ;',  # for TAXON
 
 }
 
@@ -398,13 +398,15 @@ class TVPair:  #TODO these need to be parented to something!
 
         return string
 
-    def __ttl__(self):
+    def __ttl__(self, *args, tab='    '):
+        tvp_split = '\n\n'
 
         if self.tag in self._obo_to_ttl:
             if self.tag == 'id':
                 value = id_fix(self.value)
+                #tab = ''
             elif self.tag == 'def':
-                value = self._value.text.replace('"','\"')
+                value = self._value.text.replace('"','\\"')
             elif self.tag == 'synonym':
                 value = self._value.text
             elif self.tag == 'is_a' or self.tag == 'part_of':
@@ -417,9 +419,9 @@ class TVPair:  #TODO these need to be parented to something!
             else:
                 value = self.value
             
-            return self._obo_to_ttl[self.tag] % value
+            return tab + self._obo_to_ttl[self.tag] % value + tvp_split
         else:
-            return '    FIXME:%s %s ;\n\n' % (self.tag, self.value)   # TODO TEST ME
+            return tab + 'FIXME:%s %s ;' % (self.tag, self.value) + tvp_split   # TODO TEST ME
 
     def __repr__(self):
         return str(self)
@@ -549,7 +551,10 @@ class TVPairStore:
         return sorted(tosort, key=key_)
 
     def __ttl__(self):
-        block = ''.join(tvpair.__ttl__() for tvpair in self.tvpairs)
+        block = self.tvpairs[0].__ttl__(tab = '')
+        TW = len(block.split(' ')[0]) + 1
+        TAB = ' ' * TW
+        block += ''.join(tvpair.__ttl__(tab = TAB) for tvpair in self.tvpairs[1:])
         return block.rstrip('\n').rstrip(';') + '.\n\n'
 
     def __str__(self):
