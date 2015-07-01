@@ -16,6 +16,9 @@ graphConfiguration:
     'KSC_M' : 'http://www.OLDKS.org/ksc_m_#'
     'obo' : 'http://purl.obolibrary.org/obo/'
     'nifstd' : 'http://uri.neuinfo.org/nif/nifstd/'
+    'HBP' : 'http://www.hbp.FIXME.org/'
+    'ABA' : 'http://api.brain-map.org/api/v4/data/Structure/'
+
   indexedNodeProperties:
     - label
     - fragment

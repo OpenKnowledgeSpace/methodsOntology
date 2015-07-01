@@ -17,8 +17,24 @@ graphConfiguration:
 
 # A list of ontologies to import.
 ontologies:
-  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/nsmethods.ttl
+  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/bbp_molecular_complex_ontology.ttl
+  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/hbp_abam_ontology.ttl
+  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/hbp_cell_ontology.ttl
+  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/hbp_data_type_ontology.ttl
+  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/hbp_domain_aspect.ttl
+  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/hbp_file_type_ontology.ttl
+  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/hbp_human_brain_ontology.ttl
+  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/hbp_method_ontology.ttl
+  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/hbp_properties.ttl
+  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/hbp_protocol_ontology.ttl
+  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/hbp_role_ontology.ttl
+  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/hbp_scale_ontology.ttl
+  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/hbp_sex_ontology.ttl
+  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/hbp_taxonomy_ontology.ttl
+  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/hbp_whs_sd_ontology.ttl
   - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/nsbeing.ttl
+  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/nsmethods.ttl
+  - url: http://raw.githubusercontent.com/tgbugs/methodsOntology/master/ttl/nsupper.ttl
     reasonerConfiguration:
       factory: org.semanticweb.elk.owlapi.ElkReasonerFactory
 
