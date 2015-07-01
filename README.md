@@ -9,6 +9,10 @@ Source files that are inputs for generating the ttl files.
 The code that generates the ttl.
 
 ### ttl/
+#### ALERT ACHTUNG ATTENTION
+_Identifiers contained herein are currently TEMPORARY
+PLEASE do not let them into the wild!_
+
 Ontology outputs to be loaded into scigraph.
 nsupper.ttl holds an absurdly lightweight upper ontology
 nsmethods.ttl will hold the methods concepts
@@ -34,6 +38,17 @@ methods concepts that describe those protocols.
 The basic structure for each obo file will be a single parrent is_a hierarchy.
 Other limited modeling may be added later as needed in order to serve other systems
 that will directly represent protocols themselves.
+
+### Identifier naming conventions
+To make it easy to distinguish between curated and uncurated terms in raw ttl
+we will _by convention_ (as in, do not rely on this for code because it will
+not be enforced systematically) use the following:
+```
+UNCURATED:1234567
+NOTINANONTOLOGY:1234567
+CURATED:fragprefix_1234567
+```
+Curie mappings: UH OH
 
 ## Synonyms
 Within the annotation ontology synonyms will simply be text strings that are
