@@ -1,0 +1,285 @@
+### WARNING ###
+### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
+### WARNING ###
+@prefix : <http://www.hbp.FIXME.org/hbp_role_ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix nsu: <http://www.FIXME.org/nsupper#> .
+@base <http://www.hbp.FIXME.org/hbp_role_ontology> .
+
+<http://www.hbp.FIXME.org/hbp_role_ontology> rdf:type owl:Ontology ;
+                owl:imports <http://www.FIXME.org/nsupper> .
+
+
+
+:HBP_ROLE_0000000 rdf:type owl:Class ;
+
+                  rdfs:label "role"@en .
+
+
+
+:HBP_ROLE_0000001 rdf:type owl:Class ;
+
+                  rdfs:label "classification of cell morphological"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000007 .
+
+
+
+:HBP_ROLE_0000002 rdf:type owl:Class ;
+
+                  rdfs:label "classification of data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000011 .
+
+
+
+:HBP_ROLE_0000003 rdf:type owl:Class ;
+
+                  rdfs:label "classification of cell electrophysiological"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000007 .
+
+
+
+:HBP_ROLE_0000004 rdf:type owl:Class ;
+
+                  rdfs:label "acquisition of cell morphological data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000022 .
+
+
+
+:HBP_ROLE_0000005 rdf:type owl:Class ;
+
+                  rdfs:label "acquisition of electrophysiological data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000006 .
+
+
+
+:HBP_ROLE_0000006 rdf:type owl:Class ;
+
+                  rdfs:label "acquisition of data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000000 .
+
+
+
+:HBP_ROLE_0000007 rdf:type owl:Class ;
+
+                  rdfs:label "classificaion of biological entity"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000002 .
+
+
+
+:HBP_ROLE_0000008 rdf:type owl:Class ;
+
+                  rdfs:label "classification of data quality"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000002 .
+
+
+
+:HBP_ROLE_0000009 rdf:type owl:Class ;
+
+                  rdfs:label "acquisition of microscopy data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000025 .
+
+
+
+:HBP_ROLE_0000010 rdf:type owl:Class ;
+
+                  rdfs:label "curation of laboratory data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000013 .
+
+
+
+:HBP_ROLE_0000011 rdf:type owl:Class ;
+
+                  rdfs:label "processing of data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000000 .
+
+
+
+:HBP_ROLE_0000012 rdf:type owl:Class ;
+
+                  rdfs:label "acquisition of cell molecular data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000022 .
+
+
+
+:HBP_ROLE_0000013 rdf:type owl:Class ;
+
+                  rdfs:label "curation of data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000000 .
+
+
+
+:HBP_ROLE_0000014 rdf:type owl:Class ;
+
+                  rdfs:label "curation of published data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000013 .
+
+
+
+:HBP_ROLE_0000015 rdf:type owl:Class ;
+
+                  rdfs:label "acquisition of single cell electrophysiological data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000005 ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000022 .
+
+
+
+:HBP_ROLE_0000016 rdf:type owl:Class ;
+
+                  rdfs:label "acquisiiton of multi cell electrophysiological data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000005 ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000022 .
+
+
+
+:HBP_ROLE_0000017 rdf:type owl:Class ;
+
+                  rdfs:label "acquisition of regional electrophysiological data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000005 ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000025 .
+
+
+
+:HBP_ROLE_0000018 rdf:type owl:Class ;
+
+                  rdfs:label "processing of biological sample"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000000 .
+
+
+
+:HBP_ROLE_0000019 rdf:type owl:Class ;
+
+                  rdfs:label "acquisition of cell density data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000025 .
+
+
+
+:HBP_ROLE_0000020 rdf:type owl:Class ;
+
+                  rdfs:label "extraction of tissue"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000018 .
+
+
+
+:HBP_ROLE_0000021 rdf:type owl:Class ;
+
+                  rdfs:label "acquisition of region dimension data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000025 .
+
+
+
+:HBP_ROLE_0000022 rdf:type owl:Class ;
+
+                  rdfs:label "acquisition of cellular data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000006 .
+
+
+
+:HBP_ROLE_0000023 rdf:type owl:Class ;
+
+                  rdfs:label "labeling of sample"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000018 .
+
+
+
+:HBP_ROLE_0000024 rdf:type owl:Class ;
+
+                  rdfs:label "preservation of histological sample"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000018 .
+
+
+
+:HBP_ROLE_0000025 rdf:type owl:Class ;
+
+                  rdfs:label "acquisition of region data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000006 .
+
+
+
+:HBP_ROLE_0000026 rdf:type owl:Class ;
+
+                  rdfs:label "analysis of data"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000011 .
+
+
+
+:HBP_ROLE_0000027 rdf:type owl:Class ;
+
+                  rdfs:label "head of laboratory"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000000 .
+
+
+
+:HBP_ROLE_0000028 rdf:type owl:Class ;
+
+                  rdfs:label "data integration"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000000 .
+
+
+
+:HBP_ROLE_0000029 rdf:type owl:Class ;
+
+                  rdfs:label "modelling"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000000 .
+
+
+
+:HBP_ROLE_0000030 rdf:type owl:Class ;
+
+                  rdfs:label "slicer"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000000 .
+
+
+
+:HBP_ROLE_0000031 rdf:type owl:Class ;
+
+                  rdfs:label "injector"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000000 .
+
+
+
+:HBP_ROLE_0000033 rdf:type owl:Class ;
+
+                  rdfs:label "protein mapping"@en ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000000 ;
+
+                  rdfs:subClassOf :HBP_ROLE_0000000 .
+

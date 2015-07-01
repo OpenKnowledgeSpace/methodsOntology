@@ -1,0 +1,191 @@
+### WARNING ###
+### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
+### WARNING ###
+@prefix : <http://www.hbp.FIXME.org/hbp_file_type_ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix HBP_PROP: <http://www.hbp.FIXME.org/> .
+@base <http://www.hbp.FIXME.org/hbp_file_type_ontology> .
+
+<http://www.hbp.FIXME.org/hbp_file_type_ontology> rdf:type owl:Ontology ;
+                owl:imports <http://www.hbp.FIXME.org/hbp_properties> ;
+                owl:imports <http://www.FIXME.org/nsupper> .
+
+
+
+:HBP_FT_0000001 rdf:type owl:Class ;
+
+                rdfs:label "BBP Atlasing h5"@en ;
+
+                HBP_PROP:has_file_extension ".h5" .
+
+
+
+:HBP_FT_0000002 rdf:type owl:Class ;
+
+                rdfs:label "comma-separated values"@en ;
+
+                HBP_PROP:has_file_extension ".csv" ;
+
+                HBP_PROP:has_MIME_type "text/csv" .
+
+
+
+:HBP_FT_0000003 rdf:type owl:Class ;
+
+                rdfs:label "Joint Photographic Experts Group"@en ;
+
+                HBP_PROP:has_file_extension ".jfi" ;
+
+                HBP_PROP:has_file_extension ".jfif" ;
+
+                HBP_PROP:has_file_extension ".jif" ;
+
+                HBP_PROP:has_file_extension ".jpe" ;
+
+                HBP_PROP:has_file_extension ".jpeg" ;
+
+                HBP_PROP:has_file_extension ".jpg" ;
+
+                HBP_PROP:has_MIME_type "image/jpeg" .
+
+
+
+:HBP_FT_0000004 rdf:type owl:Class ;
+
+                rdfs:label "Igor BWAV"@en ;
+
+                nsu:definition "BWAV is a Igor generated file format. It stands for Igor Binary Wave Data. This files are considered equivalent to \"Igor IBW\" data format."@en ;
+
+                HBP_PROP:has_file_extension ".bwav" .
+
+
+
+:HBP_FT_0000005 rdf:type owl:Class ;
+
+                rdfs:label "Igor IBW"@en ;
+
+                nsu:definition "The data in these types of files is stored in the Igor Binary Format. It can be considered the successor to Igor BWAV files."@en ;
+
+                HBP_PROP:has_file_extension ".ibw" .
+
+
+
+:HBP_FT_0000006 rdf:type owl:Class ;
+
+                rdfs:label "IGORzip"@en ;
+
+                nsu:definition "a zip file containing IGOR files"@en .
+
+
+
+:HBP_FT_0000007 rdf:type owl:Class ;
+
+                rdfs:label "Magnetization Prepared Rapid Acquisition Gradient Echo Image Stack"@en ;
+
+                HBP_PROP:has_file_extension ".mprage" .
+
+
+
+:HBP_FT_0000008 rdf:type owl:Class ;
+
+                rdfs:label "Microsoft Office - OOXML - Spreadsheet"@en ;
+
+                HBP_PROP:has_file_extension ".xlsx" ;
+
+                HBP_PROP:has_MIME_type "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+
+
+:HBP_FT_0000009 rdf:type owl:Class ;
+
+                rdfs:label "Neuroimaging Informatics Technology Initiative File Format"@en ;
+
+                HBP_PROP:has_file_extension ".nii" .
+
+
+
+:HBP_FT_0000010 rdf:type owl:Class ;
+
+                rdfs:label "Portable document format"@en ;
+
+                HBP_PROP:has_file_extension ".pdf" .
+
+
+
+:HBP_FT_0000011 rdf:type owl:Class ;
+
+                rdfs:label "Portable Network Graphics"@en ;
+
+                HBP_PROP:has_file_extension ".png" ;
+
+                HBP_PROP:has_MIME_type "image/png" .
+
+
+
+:HBP_FT_0000012 rdf:type owl:Class ;
+
+                rdfs:label "Neurolucida ASC"@en ;
+
+                nsu:definition "Neurolucida ASC is a standard data format defined and maintained by MBF Bioscience."@en ;
+
+                HBP_PROP:has_file_extension ".asc" .
+
+
+
+:HBP_FT_0000013 rdf:type owl:Class ;
+
+                rdfs:label "Neurolucida DAT"@en ;
+
+                nsu:definition "Neurolucida DAT is a standatd data format defined and maintained by MBF Bioscience."@en ;
+
+                HBP_PROP:has_file_extension ".dat" .
+
+
+
+:HBP_FT_0000014 rdf:type owl:Class ;
+
+                rdfs:label "Scalable Vector Graphics"@en ;
+
+                HBP_PROP:has_file_extension ".svg" ;
+
+                HBP_PROP:has_file_extension ".svgz" .
+
+
+
+:HBP_FT_0000015 rdf:type owl:Class ;
+
+                rdfs:label "Text file"@en ;
+
+                HBP_PROP:has_file_extension ".txt" .
+
+
+
+:HBP_FT_0000016 rdf:type owl:Class ;
+
+                rdfs:label "Tagged Image File Format"@en ;
+
+                HBP_PROP:has_file_extension ".tiff" ;
+
+                HBP_PROP:has_MIME_type "image/tiff" .
+
+
+
+:HBP_FT_0000017 rdf:type owl:Class ;
+
+                rdfs:label "vtk"@en ;
+
+                HBP_PROP:has_file_extension ".vtk" .
+
+
+
+:HBP_FT_0000018 rdf:type owl:Class ;
+
+                rdfs:label "xml"@en ;
+
+                HBP_PROP:has_file_extension ".xml" .
+

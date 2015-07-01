@@ -1,0 +1,285 @@
+### WARNING ###
+### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
+### WARNING ###
+@prefix : <http://www.hbp.FIXME.org/hbp_protocol_ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix FIXME: <http://THIS-IS-NOT-A-VALID-URL.FIXME.org/AAAAAAAAAAAAAAAAA/> .
+@prefix HBP_MTD: <http://www.hbp.FIXME.org/HBP_MTD_> .
+@prefix HBP_PROP: <http://www.hbp.FIXME.org/> .
+@base <http://www.hbp.FIXME.org/hbp_protocol_ontology> .
+
+<http://www.hbp.FIXME.org/hbp_protocol_ontology> rdf:type owl:Ontology ;
+                owl:imports <http://www.hbp.FIXME.org/hbp_properties> ;
+                owl:imports <http://www.FIXME.org/nsupper> .
+
+
+
+:HBP_PTCL_0000000 rdf:type owl:Class ;
+
+                  rdfs:label "Protocol"@en .
+
+
+
+:HBP_PTCL_0000001 rdf:type owl:Class ;
+
+                  rdfs:label "Histological Brain Region Characterisation Protocol"@en ;
+
+                  nsu:definition "This type of protocol is trying to characterise  the properties of a brain region based on histological principals."@en ;
+
+                  rdfs:subClassOf :HBP_PTCL_0000000 .
+
+
+
+:HBP_PTCL_0000002 rdf:type owl:Class ;
+
+                  rdfs:label "Histological Brain Region Height and Cell Density Profiling Protocol"@en ;
+
+                  nsu:definition "This protocol is trying to provide a way for experimenters to measure the dimensions of Brain regions, and the cellular density."@en ;
+
+                  rdfs:subClassOf :HBP_PTCL_0000001 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000003 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000004 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000016 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000017 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000018 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000022 .
+
+
+
+:HBP_PTCL_0000003 rdf:type owl:Class ;
+
+                  rdfs:label "Cell Characterisation Protocol"@en ;
+
+                  nsu:definition "This type of protocol is centered on profiling samples at the cell scale."@en ;
+
+                  rdfs:subClassOf :HBP_PTCL_0000000 .
+
+
+
+:HBP_PTCL_0000004 rdf:type owl:Class ;
+
+                  rdfs:label "Electrophysiological Cell Characterisation Protocol"@en ;
+
+                  nsu:definition "This protocol pulls together methods which, allows an experimenter to profile a cell based on it's location and electrophysiological properties."@en ;
+
+                  rdfs:subClassOf :HBP_PTCL_0000003 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000006 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000007 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000009 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000014 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000019 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000028 .
+
+
+
+:HBP_PTCL_0000005 rdf:type owl:Class ;
+
+                  rdfs:label "Molecular Cell Characterisation Protocol"@en ;
+
+                  nsu:definition "This protocol pulls together methods which, allows an experimenter to profile a cell based on it's location and molecular properties."@en ;
+
+                  rdfs:subClassOf :HBP_PTCL_0000003 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000006 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000007 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000008 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000009 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000020 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000029 .
+
+
+
+:HBP_PTCL_0000006 rdf:type owl:Class ;
+
+                  rdfs:label "Morphological Cell Characterisation Protocol"@en ;
+
+                  nsu:definition "This protocol pulls together methods which, allows an experimenter to profile a cell based on it's location and morphological properties."@en ;
+
+                  rdfs:subClassOf :HBP_PTCL_0000003 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000006 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000008 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000009 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000015 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000021 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000029 .
+
+
+
+:HBP_PTCL_0000007 rdf:type owl:Class ;
+
+                  rdfs:label "Morpho-Electrical-Molecular Cell Characterisation Protocol"@en ;
+
+                  nsu:definition "This protocol pulls together methods which, ideally, allows an experimenter to profile a cell based on it's location, morphology, electrophysiological, and molecular properties."@en ;
+
+                  rdfs:subClassOf :HBP_PTCL_0000004 ;
+
+                  rdfs:subClassOf :HBP_PTCL_0000005 ;
+
+                  rdfs:subClassOf :HBP_PTCL_0000006 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000006 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000007 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000008 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000009 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000014 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000015 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000019 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000020 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000021 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000028 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000029 .
+
+
+
+:HBP_PTCL_0000008 rdf:type owl:Class ;
+
+                  rdfs:label "BigBrain Ultrahigh-Resolution Brain Model Protocol"@en ;
+
+                  nsu:definition "This protocol captures the process needed to produce data of the same type as shown in the publication: Amunts et al 2013, Science 340, 1472 (doi: 10.1126/science.1235381)"@en ;
+
+                  rdfs:subClassOf :HBP_PTCL_0000001 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000031 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000032 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000033 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000034 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000035 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000036 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000037 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000038 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000039 .
+
+
+
+:HBP_PTCL_0000009 rdf:type owl:Class ;
+
+                  rdfs:label "Waxholm Space atlas of the Sprague Dawley rat brain generation Protocol"@en ;
+
+                  nsu:definition "This protocol captures the process needed to produce data of the same type as shown in the publication: Papp et al. 2014, NeuroImage 97, p374-386 (doi:10.1016/j.neuroimage.2014.04.001)"@en ;
+
+                  rdfs:subClassOf :HBP_PTCL_0000000 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000040 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000041 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000042 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000043 .
+
+
+
+:HBP_PTCL_0000010 rdf:type owl:Class ;
+
+                  rdfs:label "Allen Brain Atlas - Mouse Nissl Staining and Image Aquisition Protocol"@en ;
+
+                  nsu:definition "This protocol captures the processe needed to produce data of the same type as served by the ABA to the community."@en ;
+
+                  rdfs:subClassOf :HBP_PTCL_0000000 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000044 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000045 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000046 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000047 .
+
+
+
+:HBP_PTCL_0000011 rdf:type owl:Class ;
+
+                  rdfs:label "HUST - Golgi Rat Brain Aquisition Protocol"@en ;
+
+                  rdfs:subClassOf :HBP_PTCL_0000000 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000048 ;
+
+                  HBP_PROP:has_method HBP_MTD:0000049 .
+
+
+
+:HBP_PTCL_0000012 rdf:type owl:Class ;
+
+                  rdfs:label "BBP - NLP Analysis Protocol"@en ;
+
+                  rdfs:subClassOf :HBP_PTCL_0000000 .
+
+
+
+:HBP_PTCL_0000013 rdf:type owl:Class ;
+
+                  rdfs:label "Grant protein analysis and Armstrong protein mapping"@en ;
+
+                  rdfs:subClassOf :HBP_PTCL_0000000 .
+
+
+
+:HBP_PTCL_0000014 rdf:type owl:Class ;
+
+                  rdfs:label "Armstrong lab mapping proteins in publication to stable ids"@en ;
+
+                  rdfs:subClassOf :HBP_PTCL_0000000 .
+
+
+
+:HBP_PTCL_0000015 rdf:type owl:Class ;
+
+                  rdfs:label "BBP - morphological cell modelling"@en ;
+
+                  rdfs:subClassOf :HBP_PTCL_0000000 .
+
+
+
+:has_method rdf:type owl:Class ;
+
+            rdfs:label "has_method"@en ;
+
+            FIXME:is_transitive false .
+
