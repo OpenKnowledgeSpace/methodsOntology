@@ -213,7 +213,9 @@ class OboFile:
                 if type_ == 'obo':
                     f.write(str(self))  # FIXME this is incredibly slow for big files :/
                 elif type_ == 'ttl':
-                    if header:  # TODO autoconvert?
+                    if type(header) == str:
+                        formatted_header = header.format(filename=self.filename.rsplit('.',1)[0].rsplit('/')[-1])
+                    elif header:  # TODO autoconvert?
                         formatted_header = default_ttl_header.format(filename=self.filename.rsplit('.',1)[0].rsplit('/')[-1])
                     else:
                         formatted_header = ''
