@@ -107,11 +107,13 @@ def callsback(*args):
         return function
     return actual_function
 
-def id_fix(value):
+def id_fix(value):  # FIXME THIS IS AWEFUL
     """ fix @prefix values for ttl """
     if value.startswith('KSC_M'):
         pass
     else:
+        if value[:5] == 'PASS:':  # when we want no replace
+            return value[5:]
         value = value.replace(':','_')
         if value.startswith('ERO') or value.startswith('OBI') or value.startswith('GO') or value.startswith('UBERON') or value.startswith('IAO'):
             value = 'obo:' + value
@@ -120,7 +122,7 @@ def id_fix(value):
         elif value.startswith('MESH'):
             value = ':'.join(value.split('_'))
         else:
-            value = ':' + value
+            value = ':' + value   # FIXME DO NOT WANT
     return value
 
 
@@ -415,6 +417,9 @@ class TVPair:  #TODO these need to be parented to something!
         tvp_split = '\n\n'
 
         if self.tag in self._obo_to_ttl:
+            if self._obo_to_ttl[self.tag] is None:
+                return ''
+
             if self.tag == 'id':
                 value = id_fix(self.value())
                 #tab = ''
@@ -533,6 +538,13 @@ class TVPairStore:
                 raise
         else:
             self.__dict__[dict_tag] = tvpair
+
+    def del_tvpair(self, tvpair):
+        """ need rework all the code for N tvpair cases to get this
+            to work, each tvpair needs its own identifier so it can
+            delete itself from its parent :/ (what a mess)
+        """
+        pass
 
     @property
     def tvpairs(self):
