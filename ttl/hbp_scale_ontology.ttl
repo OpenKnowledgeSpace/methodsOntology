@@ -8,7 +8,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
-@prefix FIXME: <http://THIS-IS-NOT-A-VALID-URL.FIXME.org/AAAAAAAAAAAAAAAAA/> .
 @prefix HBP_PROP: <http://www.hbp.FIXME.org/> .
 @base <http://www.hbp.FIXME.org/hbp_scale_ontology> .
 
@@ -111,10 +110,4 @@
                  HBP_PROP:is_smaller_than HBP_SCL:0000001 .
 
 
-
-:is_smaller_than rdf:type owl:Class ;
-
-                 rdfs:label "is_smaller_than"@en ;
-
-                 FIXME:is_transitive true .
 

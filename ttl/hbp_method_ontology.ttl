@@ -8,7 +8,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
-@prefix FIXME: <http://THIS-IS-NOT-A-VALID-URL.FIXME.org/AAAAAAAAAAAAAAAAA/> .
 @prefix HBP_DASP: <http://www.hbp.FIXME.org/HBP_DASP_> .
 @prefix HBP_DATT: <http://www.hbp.FIXME.org/HBP_DATT_> .
 @prefix HBP_PROP: <http://www.hbp.FIXME.org/> .
@@ -1314,34 +1313,4 @@
                  rdfs:subClassOf :HBP_MTD_0000001 .
 
 
-
-:used_scale rdf:type owl:Class ;
-
-            rdfs:label "used_scale"@en ;
-
-            FIXME:is_transitive false .
-
-
-
-:generated_scale rdf:type owl:Class ;
-
-                 rdfs:label "generated_scale"@en ;
-
-                 FIXME:is_transitive false .
-
-
-
-:generated_data rdf:type owl:Class ;
-
-                rdfs:label "generated_data"@en ;
-
-                FIXME:is_transitive false .
-
-
-
-:used_data rdf:type owl:Class ;
-
-           rdfs:label "used_data"@en ;
-
-           FIXME:is_transitive false .
 

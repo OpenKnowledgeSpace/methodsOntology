@@ -8,7 +8,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
-@prefix FIXME: <http://THIS-IS-NOT-A-VALID-URL.FIXME.org/AAAAAAAAAAAAAAAAA/> .
 @prefix HBP_MTD: <http://www.hbp.FIXME.org/HBP_MTD_> .
 @prefix HBP_PROP: <http://www.hbp.FIXME.org/> .
 @base <http://www.hbp.FIXME.org/hbp_protocol_ontology> .
@@ -276,10 +275,4 @@
                   rdfs:subClassOf :HBP_PTCL_0000000 .
 
 
-
-:has_method rdf:type owl:Class ;
-
-            rdfs:label "has_method"@en ;
-
-            FIXME:is_transitive false .
 
