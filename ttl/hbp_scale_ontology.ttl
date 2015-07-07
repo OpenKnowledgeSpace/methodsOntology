@@ -11,6 +11,7 @@
 @prefix HBP_PROP: <http://www.hbp.FIXME.org/> .
 @base <http://www.hbp.FIXME.org/hbp_scale_ontology> .
 
+
 <http://www.hbp.FIXME.org/hbp_scale_ontology> rdf:type owl:Ontology ;
                 owl:imports <http://www.hbp.FIXME.org/hbp_properties> ;
                 owl:imports <http://www.FIXME.org/nsupper> .
@@ -53,9 +54,9 @@
 
                  rdfs:subClassOf :HBP_SCL_0000002 ;
 
-                 HBP_PROP:is_smaller_than HBP_SCL:0000001 ;
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 ;
 
-                 HBP_PROP:is_smaller_than HBP_SCL:0000012 .
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000012 .
 
 
 
@@ -67,9 +68,9 @@
 
                  rdfs:subClassOf :HBP_SCL_0000002 ;
 
-                 HBP_PROP:is_smaller_than HBP_SCL:0000005 ;
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000005 ;
 
-                 HBP_PROP:is_smaller_than HBP_SCL:0000011 .
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000011 .
 
 
 
@@ -81,7 +82,7 @@
 
                  rdfs:subClassOf :HBP_SCL_0000002 ;
 
-                 HBP_PROP:is_smaller_than HBP_SCL:0000006 .
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000006 .
 
 
 
@@ -93,9 +94,9 @@
 
                  rdfs:subClassOf :HBP_SCL_0000002 ;
 
-                 HBP_PROP:is_smaller_than HBP_SCL:0000001 ;
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 ;
 
-                 HBP_PROP:is_smaller_than HBP_SCL:0000012 .
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000012 .
 
 
 
@@ -103,11 +104,11 @@
 
                  rdfs:label "organ scale"@en ;
 
-                 nsu:definition "The definition of this class is based on intact organs. Organs which are in this context defined from a biological perspective as <<a collection of tissues joined in a structural unit to serve a common function>>."@en ;
+                 nsu:definition "The definition of this class is based on intact organs. Organs which are in this context defined from a biological perspective as a collection of tissues joined in a structural unit to serve a common function."@en ;
 
                  rdfs:subClassOf :HBP_SCL_0000002 ;
 
-                 HBP_PROP:is_smaller_than HBP_SCL:0000001 .
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 .
 
 
 
