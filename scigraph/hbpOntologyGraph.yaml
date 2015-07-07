@@ -26,8 +26,7 @@ ontologies:
   - url: http://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/hbp_method_ontology.ttl
   - url: http://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/hbp_properties.ttl
   - url: http://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/hbp_role_ontology.ttl
- # - url: http://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/hbp_scale_ontology.ttl
-  - url: /Users/czwahlen/work/workspace_ontology/methodsOntology/ttl/hbp_scale_ontology.ttl
+  - url: http://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/hbp_scale_ontology.ttl
   - url: http://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/hbp_sex_ontology.ttl
   - url: http://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/hbp_taxonomy_ontology.ttl
   - url: http://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/hbp_whs_sd_ontology.ttl
