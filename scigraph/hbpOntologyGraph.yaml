@@ -18,6 +18,7 @@ graphConfiguration:
 # A list of ontologies to import.
 ontologies:
   - url: http://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/hbp_abam_ontology.ttl
+  - url: http://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/hbp_activity_ontology.ttl
   - url: http://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/hbp_cell_ontology.ttl
   - url: http://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/hbp_data_type_ontology.ttl
   - url: http://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/hbp_domain_aspect.ttl
