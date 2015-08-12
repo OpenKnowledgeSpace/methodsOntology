@@ -794,3 +794,47 @@
 
                   HBP_PROP:has_file_extension ".txt" .
 
+
+
+:HBP_DATT_0000063 rdf:type owl:Class ;
+
+                  rdfs:label "image/nii;version=0"@en ;
+
+                  rdfs:subClassOf :HBP_DATT_0000040 ;
+
+                  HBP_PROP:has_file_extension ".nii" .
+
+
+
+:HBP_DATT_0000064 rdf:type owl:Class ;
+
+                  rdfs:label "image/gii;version=0"@en ;
+
+                  rdfs:subClassOf :HBP_DATT_0000040 ;
+
+                  HBP_PROP:has_file_extension ".gii" .
+
+
+
+:HBP_DATT_0000065 rdf:type owl:Class ;
+
+                  rdfs:label "image/atlas.gii;version=0"@en ;
+
+                  rdfs:subClassOf :HBP_DATT_0000040 ;
+
+                  HBP_PROP:has_file_extension ".gii" .
+
+
+
+:HBP_DATT_0000066 rdf:type owl:Class ;
+
+                  rdfs:label "image/mesh;version=0"@en ;
+
+                  rdfs:subClassOf :HBP_DATT_0000040 ;
+
+                  HBP_PROP:has_file_extension ".mesh" .
+
+
+
+
+
