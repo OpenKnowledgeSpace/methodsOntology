@@ -112,3 +112,105 @@
 
 
 
+:HBP_SCL_0000013 rdf:type owl:Class ;
+
+                 rdfs:label "brain"@en ;
+
+                 nsu:definition "whole brain."@en ;
+
+                 rdfs:subClassOf :HBP_SCL_0000002 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 .   
+
+
+
+:HBP_SCL_0000014 rdf:type owl:Class ;
+
+                 rdfs:label "brain region"@en ;
+
+                 nsu:definition "an anatomically definied area of the brain."@en ;
+
+                 rdfs:subClassOf :HBP_SCL_0000002 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000013 .  
+
+
+
+:HBP_SCL_0000015 rdf:type owl:Class ;
+
+                 rdfs:label "partial region"@en ;
+
+                 nsu:definition "part of a brain region."@en ;
+
+                 rdfs:subClassOf :HBP_SCL_0000002 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000013 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000014 .  
+
+
+
+:HBP_SCL_0000016 rdf:type owl:Class ;
+
+                 rdfs:label "multiple cells"@en ;
+
+                 nsu:definition "more than one cell."@en ;
+
+                 rdfs:subClassOf :HBP_SCL_0000002 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000013 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000014 .  
+
+
+
+:HBP_SCL_0000017 rdf:type owl:Class ;
+
+                 rdfs:label "single cell"@en ;
+
+                 nsu:definition "one cell."@en ;
+
+                 rdfs:subClassOf :HBP_SCL_0000002 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000013 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000014 . 
+
+
+
+:HBP_SCL_0000018 rdf:type owl:Class ;
+
+                 rdfs:label "partial cell"@en ;
+
+                 nsu:definition "part of a cell, as in soma and axon, but no dendrite."@en ;
+
+                 rdfs:subClassOf :HBP_SCL_0000002 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000013 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000014 .
+
+:HBP_SCL_0000019 rdf:type owl:Class ;
+
+                 rdfs:label "paired cells"@en ;
+
+                 nsu:definition "two cells with one or more points of contact."@en ;
+
+                 rdfs:subClassOf :HBP_SCL_0000002 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000013 ;
+
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000014 .
+
