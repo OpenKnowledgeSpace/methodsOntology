@@ -54,10 +54,9 @@
 
                  rdfs:subClassOf :HBP_SCL_0000002 ;
 
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 ;
-
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000012 .
-
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000011 ;
+                
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000014 .
 
 
 :HBP_SCL_0000006 rdf:type owl:Class ;
@@ -68,10 +67,9 @@
 
                  rdfs:subClassOf :HBP_SCL_0000002 ;
 
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000005 ;
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000011 ;
 
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000011 .
-
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000014 .
 
 
 :HBP_SCL_0000007 rdf:type owl:Class ;
@@ -94,9 +92,7 @@
 
                  rdfs:subClassOf :HBP_SCL_0000002 ;
 
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 ;
-
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000012 .
+                 HBP_PROP:is_smaller_than :HBP_SCL_00000012 .
 
 
 
@@ -132,8 +128,6 @@
 
                  rdfs:subClassOf :HBP_SCL_0000002 ;
 
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 ;
-
                  HBP_PROP:is_smaller_than :HBP_SCL_0000013 .  
 
 
@@ -146,11 +140,7 @@
 
                  rdfs:subClassOf :HBP_SCL_0000002 ;
 
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 ;
-
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000013 ;
-
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000014 .  
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000014 . 
 
 
 
@@ -162,11 +152,9 @@
 
                  rdfs:subClassOf :HBP_SCL_0000002 ;
 
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 ;
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000011 ;
 
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000013 ;
-
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000014 .  
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000014 . 
 
 
 
@@ -178,9 +166,7 @@
 
                  rdfs:subClassOf :HBP_SCL_0000002 ;
 
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 ;
-
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000013 ;
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000011 ;
 
                  HBP_PROP:is_smaller_than :HBP_SCL_0000014 . 
 
@@ -194,11 +180,9 @@
 
                  rdfs:subClassOf :HBP_SCL_0000002 ;
 
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 ;
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000017 .
 
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000013 ;
 
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000014 .
 
 :HBP_SCL_0000019 rdf:type owl:Class ;
 
@@ -208,9 +192,7 @@
 
                  rdfs:subClassOf :HBP_SCL_0000002 ;
 
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000001 ;
-
-                 HBP_PROP:is_smaller_than :HBP_SCL_0000013 ;
+                 HBP_PROP:is_smaller_than :HBP_SCL_0000011 ;
 
                  HBP_PROP:is_smaller_than :HBP_SCL_0000014 .
 

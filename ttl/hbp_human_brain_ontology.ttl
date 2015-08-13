@@ -65,8 +65,6 @@
 
                  rdfs:label "central anterior frontal neocortex"@en ;
 
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_HBA_0000000 ] ;
-
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_HBA_0000005 ] .
 
 
@@ -74,8 +72,6 @@
 :HBP_HBA_0000007 rdf:type owl:Class ;
 
                  rdfs:label "medial anterior frontal neocortex"@en ;
-
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_HBA_0000000 ] ;
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_HBA_0000005 ] .
 
@@ -85,8 +81,6 @@
 
                  rdfs:label "lateral temporal neocortex"@en ;
 
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_HBA_0000000 ] ;
-
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_HBA_0000005 ] . 
 
 
@@ -94,8 +88,6 @@
 :HBP_HBA_0000009 rdf:type owl:Class ;
 
                  rdfs:label "posterior superior frontal neocortex"@en ;
-
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_HBA_0000000 ] ;
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_HBA_0000005 ] . 
 
@@ -105,8 +97,6 @@
 
                  rdfs:label "inferior parietal neocortex"@en ;
 
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_HBA_0000000 ] ;
-
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_HBA_0000005 ] .
 
 
@@ -115,8 +105,6 @@
 
                  rdfs:label "inferior temporal gyrus"@en ;
 
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_HBA_0000000 ] ;
-
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_HBA_0000005 ] .
 
 
@@ -124,7 +112,5 @@
 :HBP_HBA_0000012 rdf:type owl:Class ;
 
                  rdfs:label "anterior superior frontal neocortex"@en ;
-
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_HBA_0000000 ] ;
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_HBA_0000005 ] .
