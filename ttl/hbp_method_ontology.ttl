@@ -1308,9 +1308,64 @@
 
 :HBP_MTD_0000103 rdf:type owl:Class ;
 
-                 rdfs:label "iontophoretic administration of Phaseolus vulgaris leucoagglutin (Pha-L"@en ;
+                 rdfs:label "iontophoretic administration of Phaseolus vulgaris leucoagglutin (Pha-L)"@en ;
 
                  rdfs:subClassOf :HBP_MTD_0000001 .
 
+
+
+:HBP_MTD_0000104 rdf:type owl:Class ;
+
+                 rdfs:label "Injection with lucifer yellow and stained with antibody against lucifer yellow and DAB reaction product"@en ;
+
+                 rdfs:subClassOf :HBP_MTD_0000001 .
+
+
+
+:HBP_MTD_0000105 rdf:type owl:Class ;
+
+                 rdfs:label "Neurolucida reconstruction from slices"@en ;
+
+                 rdfs:subClassOf :HBP_MTD_0000001 .
+
+
+
+:HBP_MTD_0000106 rdf:type owl:Class ;
+
+                 rdfs:label "MRI with 3 T MRI system"@en ;
+
+                 rdfs:subClassOf :HBP_MTD_0000010 .
+
+
+
+:HBP_MTD_0000107 rdf:type owl:Class ;
+
+                 rdfs:label "Reconstruction of grey-white matter interface"@en ;
+
+                 rdfs:subClassOf :HBP_MTD_0000010 .
+
+
+
+:HBP_MTD_0000108 rdf:type owl:Class ;
+
+                 rdfs:label "Anatomical parcellation with BrainVisa, and deliniation of 47 anatomical regions of interest in each hemisphere"@en ;
+
+                 rdfs:subClassOf :HBP_MTD_0000010 .
+
+
+
+:HBP_MTD_0000109 rdf:type owl:Class ;
+
+                 rdfs:label "OMIM enrichment"@en ;
+
+                 rdfs:subClassOf :HBP_MTD_0000010 .
+
+
+
+:HBP_MTD_0000110 rdf:type owl:Class ;
+
+                 rdfs:label "dN/dS conservation enrichment"@en ;
+
+                 rdfs:subClassOf :HBP_MTD_0000010 .
 
 

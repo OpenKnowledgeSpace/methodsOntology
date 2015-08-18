@@ -279,7 +279,14 @@
 
                   rdfs:label "protein mapping"@en ;
 
-                  rdfs:subClassOf :HBP_ROLE_0000000 ;
+                  rdfs:subClassOf :HBP_ROLE_0000000 .
+
+
+
+:HBP_ROLE_0000034 rdf:type owl:Class ;
+
+                  rdfs:label "stained brain sections"@en ;
 
                   rdfs:subClassOf :HBP_ROLE_0000000 .
 
+      
