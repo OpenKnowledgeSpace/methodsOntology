@@ -1,21 +1,45 @@
-### WARNING ###
-### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
-### WARNING ###
 @prefix : <http://www.hbp.FIXME.org/hbp_taxonomy_ontology/> .
+@prefix efo: <http://www.ebi.ac.uk/efo/> .
+@prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix efo: <http://www.ebi.ac.uk/efo/> .
-@prefix obo: <http://purl.obolibrary.org/obo/> .
-@prefix nsu: <http://www.FIXME.org/nsupper#> .
 @prefix HBP_PROP: <http://www.hbp.FIXME.org/> .
 @base <http://www.hbp.FIXME.org/hbp_taxonomy_ontology> .
 
 <http://www.hbp.FIXME.org/hbp_taxonomy_ontology> rdf:type owl:Ontology ;
-                owl:imports <http://www.hbp.FIXME.org/hbp_properties> ;
-                owl:imports <http://www.FIXME.org/nsupper> .
+                                                 
+                                                 owl:imports HBP_PROP:hbp_properties .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://www.FIXME.org/nsupper#definition
+
+nsu:definition rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.FIXME.org/nsupper#synonym
+
+nsu:synonym rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.hbp.FIXME.org/has_rank
+
+HBP_PROP:has_rank rdf:type owl:AnnotationProperty .
+
+
+
 
 
 #################################################################
@@ -33,9 +57,9 @@ obo:NCBITaxon_10090 rdf:type owl:Class ;
                     
                     rdfs:subClassOf obo:NCBITaxon_9989 ;
                     
-                    HBP_PROP:has_rank :HBP_TAX_999996 ;
+                    nsu:synonym "house mouse"@en ;
                     
-                    nsu:synonym "house mouse"@en .
+                    HBP_PROP:has_rank :HBP_TAX_999996 .
 
 
 
@@ -47,9 +71,9 @@ obo:NCBITaxon_10116 rdf:type owl:Class ;
                     
                     rdfs:subClassOf obo:NCBITaxon_9989 ;
                     
-                    HBP_PROP:has_rank :HBP_TAX_999996 ;
+                    nsu:synonym "Norway rat"@en ;
                     
-                    nsu:synonym "Norway rat"@en .
+                    HBP_PROP:has_rank :HBP_TAX_999996 .
 
 
 
@@ -61,9 +85,9 @@ obo:NCBITaxon_40674 rdf:type owl:Class ;
                     
                     rdfs:subClassOf nsu:nsu_0000002 ;
                     
-                    HBP_PROP:has_rank :HBP_TAX_999997 ;
+                    nsu:synonym "mammals"@en ;
                     
-                    nsu:synonym "mammals"@en .
+                    HBP_PROP:has_rank :HBP_TAX_999997 .
 
 
 
@@ -87,9 +111,9 @@ obo:NCBITaxon_9606 rdf:type owl:Class ;
                    
                    rdfs:subClassOf obo:NCBITaxon_9443 ;
                    
-                   HBP_PROP:has_rank :HBP_TAX_999996 ;
+                   nsu:synonym "human"@en ;
                    
-                   nsu:synonym "human"@en .
+                   HBP_PROP:has_rank :HBP_TAX_999996 .
 
 
 
@@ -101,125 +125,21 @@ obo:NCBITaxon_9989 rdf:type owl:Class ;
                    
                    rdfs:subClassOf obo:NCBITaxon_40674 ;
                    
-                   HBP_PROP:has_rank :HBP_TAX_9999999 ;
+                   nsu:synonym "rodents"@en ;
                    
-                   nsu:synonym "rodents"@en .
-
-
-
-###  http://www.FIXME.org/hbp_taxonomy_ontology#HBP_TAX_0000008
-
-:HBP_TAX_0000008 rdf:type owl:Class ;
-                 
-                 rdfs:label "Han wistar"@en ;
-                 
-                 rdfs:subClassOf obo:NCBITaxon_10116 ;
-                 
-                 HBP_PROP:has_rank :HBP_TAX_9999998 .
-
-
-
-###  http://www.FIXME.org/hbp_taxonomy_ontology#HBP_TAX_0000011
-
-:HBP_TAX_0000011 rdf:type owl:Class ;
-                 
-                 rdfs:label "Long-Evans"@en ;
-                 
-                 rdfs:subClassOf obo:NCBITaxon_10116 ;
-                 
-                 HBP_PROP:has_rank :HBP_TAX_9999998 .
-
-
-
-###  http://www.FIXME.org/hbp_taxonomy_ontology#HBP_TAX_0000012
-
-:HBP_TAX_0000012 rdf:type owl:Class ;
-                 
-                 rdfs:label "VGlut Venus knockin"@en ;
-                 
-                 rdfs:subClassOf obo:NCBITaxon_10116 ;
-                 
-                 HBP_PROP:has_rank :HBP_TAX_9999998 .
-
-
-
-###  http://www.FIXME.org/hbp_taxonomy_ontology#HBP_TAX_0000013
-
-:HBP_TAX_0000013 rdf:type owl:Class ;
-                 
-                 rdfs:label "CD-1"@en ;
-                 
-                 rdfs:subClassOf obo:NCBITaxon_10116 ;
-                 
-                 HBP_PROP:has_rank :HBP_TAX_9999998 .
-
-
-
-###  http://www.FIXME.org/hbp_taxonomy_ontology#HBP_TAX_0000014
-
-:HBP_TAX_0000014 rdf:type owl:Class ;
-                 
-                 rdfs:label "5HT3EGFP"@en ;
-                 
-                 rdfs:subClassOf :HBP_TAX_0000013 ;
-                 
-                 HBP_PROP:has_rank :HBP_TAX_9999998 .
-
-
-
-###  http://www.FIXME.org/hbp_taxonomy_ontology#HBP_TAX_9999995
-
-:HBP_TAX_9999995 rdf:type owl:Class ;
-                 
-                 rdfs:label "rank"@en ;
-                 
-                 rdfs:subClassOf nsu:nsu_0000001 .
-
-
-
-###  http://www.FIXME.org/hbp_taxonomy_ontology#HBP_TAX_9999996
-
-:HBP_TAX_9999996 rdf:type owl:Class ;
-                 
-                 rdfs:label "species"@en ;
-                 
-                 rdfs:subClassOf :HBP_TAX_9999995 .
-
-
-
-###  http://www.FIXME.org/hbp_taxonomy_ontology#HBP_TAX_9999997
-
-:HBP_TAX_9999997 rdf:type owl:Class ;
-                 
-                 rdfs:label "class"@en ;
-                 
-                 rdfs:subClassOf :HBP_TAX_9999995 .
-
-
-
-###  http://www.FIXME.org/hbp_taxonomy_ontology#HBP_TAX_9999998
-
-:HBP_TAX_9999998 rdf:type owl:Class ;
-                 
-                 rdfs:label "strain"@en ;
-                 
-                 rdfs:subClassOf :HBP_TAX_9999995 .
-
-
-
-###  http://www.FIXME.org/hbp_taxonomy_ontology#HBP_TAX_9999999
-
-:HBP_TAX_9999999 rdf:type owl:Class ;
-                 
-                 rdfs:label "order"@en ;
-                 
-                 rdfs:subClassOf :HBP_TAX_9999995 .
+                   HBP_PROP:has_rank :HBP_TAX_9999999 .
 
 
 
 ###  http://www.FIXME.org/nsupper#nsu_0000001
 
 nsu:nsu_0000001 rdfs:label "concept"@en .
+
+
+
+###  http://www.FIXME.org/nsupper#nsu_0000002
+
+nsu:nsu_0000002 rdf:type owl:Class .
 
 
 
@@ -231,12 +151,12 @@ efo:EFO_0000606 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:NCBITaxon_10090 ;
                 
-                HBP_PROP:has_rank :HBP_TAX_9999998 ;
-                
                 nsu:definition "C57BL/6J is a mouse strain as described in Jackson Laboratory."@en ;
                 
                 nsu:synonym "C57BL/6j"@en ,
-                            "C57BL6J"@en .
+                            "C57BL6J"@en ;
+                
+                HBP_PROP:has_rank :HBP_TAX_9999998 .
 
 
 
@@ -248,11 +168,11 @@ efo:EFO_0001352 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:NCBITaxon_10116 ;
                 
-                HBP_PROP:has_rank :HBP_TAX_9999998 ;
-                
                 nsu:synonym "Rats, Sprague Dawley" ,
                             "Sprague-Dawley rat" ,
-                            "Sprague-Dawley rats" .
+                            "Sprague-Dawley rats" ;
+                
+                HBP_PROP:has_rank :HBP_TAX_9999998 .
 
 
 
@@ -264,24 +184,137 @@ efo:EFO_0004472 rdf:type owl:Class ;
                 
                 rdfs:subClassOf obo:NCBITaxon_10090 ;
                 
-                HBP_PROP:has_rank :HBP_TAX_9999998 ;
-                
-                nsu:definition "C57BL/6 is a mouse strain as described in Jackson Laboratory strain index."@en ;
-                
                 nsu:synonym "B6"@en ,
                             "C57"@en ,
                             "C57 Black/6"@en ,
                             "C57/B6"@en ,
                             "C57/BL6"@en ,
-                            "C57B/6"@en ,
-                            "C57BL6"@en ,
+                            "C57B/6"@en ;
+                
+                nsu:definition "C57BL/6 is a mouse strain as described in Jackson Laboratory strain index."@en ;
+                
+                nsu:synonym "C57BL6"@en ,
                             "C57Bl,"@en ,
                             "C57Bl\\6"@en ,
                             "C57Black"@en ,
                             "C57Black/6"@en ,
                             "C57Black6"@en ,
-                            "CB57"@en .
+                            "CB57"@en ;
+                
+                HBP_PROP:has_rank :HBP_TAX_9999998 .
 
 
 
+###  http://www.hbp.FIXME.org/hbp_taxonomy_ontology/HBP_TAX_0000008
+
+:HBP_TAX_0000008 rdf:type owl:Class ;
+                 
+                 rdfs:label "Han wistar"@en ;
+                 
+                 rdfs:subClassOf obo:NCBITaxon_10116 ;
+                 
+                 HBP_PROP:has_rank :HBP_TAX_9999998 .
+
+
+
+###  http://www.hbp.FIXME.org/hbp_taxonomy_ontology/HBP_TAX_0000011
+
+:HBP_TAX_0000011 rdf:type owl:Class ;
+                 
+                 rdfs:label "Long-Evans"@en ;
+                 
+                 rdfs:subClassOf obo:NCBITaxon_10116 ;
+                 
+                 HBP_PROP:has_rank :HBP_TAX_9999998 .
+
+
+
+###  http://www.hbp.FIXME.org/hbp_taxonomy_ontology/HBP_TAX_0000012
+
+:HBP_TAX_0000012 rdf:type owl:Class ;
+                 
+                 rdfs:label "VGlut Venus knockin"@en ;
+                 
+                 rdfs:subClassOf obo:NCBITaxon_10116 ;
+                 
+                 HBP_PROP:has_rank :HBP_TAX_9999998 .
+
+
+
+###  http://www.hbp.FIXME.org/hbp_taxonomy_ontology/HBP_TAX_0000013
+
+:HBP_TAX_0000013 rdf:type owl:Class ;
+                 
+                 rdfs:label "CD-1"@en ;
+                 
+                 rdfs:subClassOf obo:NCBITaxon_10116 ;
+                 
+                 HBP_PROP:has_rank :HBP_TAX_9999998 .
+
+
+
+###  http://www.hbp.FIXME.org/hbp_taxonomy_ontology/HBP_TAX_0000014
+
+:HBP_TAX_0000014 rdf:type owl:Class ;
+                 
+                 rdfs:label "5HT3EGFP"@en ;
+                 
+                 rdfs:subClassOf :HBP_TAX_0000013 ;
+                 
+                 HBP_PROP:has_rank :HBP_TAX_9999998 .
+
+
+
+###  http://www.hbp.FIXME.org/hbp_taxonomy_ontology/HBP_TAX_9999995
+
+:HBP_TAX_9999995 rdf:type owl:Class ;
+                 
+                 rdfs:label "rank"@en ;
+                 
+                 rdfs:subClassOf nsu:nsu_0000001 .
+
+
+
+###  http://www.hbp.FIXME.org/hbp_taxonomy_ontology/HBP_TAX_9999996
+
+:HBP_TAX_9999996 rdf:type owl:Class ;
+                 
+                 rdfs:label "species"@en ;
+                 
+                 rdfs:subClassOf :HBP_TAX_9999995 .
+
+
+
+###  http://www.hbp.FIXME.org/hbp_taxonomy_ontology/HBP_TAX_9999997
+
+:HBP_TAX_9999997 rdf:type owl:Class ;
+                 
+                 rdfs:label "class"@en ;
+                 
+                 rdfs:subClassOf :HBP_TAX_9999995 .
+
+
+
+###  http://www.hbp.FIXME.org/hbp_taxonomy_ontology/HBP_TAX_9999998
+
+:HBP_TAX_9999998 rdf:type owl:Class ;
+                 
+                 rdfs:label "strain"@en ;
+                 
+                 rdfs:subClassOf :HBP_TAX_9999995 .
+
+
+
+###  http://www.hbp.FIXME.org/hbp_taxonomy_ontology/HBP_TAX_9999999
+
+:HBP_TAX_9999999 rdf:type owl:Class ;
+                 
+                 rdfs:label "order"@en ;
+                 
+                 rdfs:subClassOf :HBP_TAX_9999995 .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
 
