@@ -1,12 +1,13 @@
-@prefix : <http://www.semanticweb.org/eclark/ontologies/2015/7/untitled-ontology-3#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/eclark/ontologies/2015/7/untitled-ontology-3> .
+@prefix HBP_DAMO: <http://www.hbp.FIXME.org/hbp_data_modality_ontology/> .
+@base <http://www.hbp.FIXME.org/hbp_data_modality_ontology> .
 
-<http://www.semanticweb.org/eclark/ontologies/2015/7/untitled-ontology-3> rdf:type owl:Ontology .
+<http://www.hbp.FIXME.org/hbp_data_modality_ontology> rdf:type owl:Ontology ;
+                owl:imports <http://www.FIXME.org/nsupper> .
 
 
 #################################################################
@@ -16,96 +17,39 @@
 #################################################################
 
 
-###  http://www.semanticweb.org/eclark/ontologies/2015/7/untitled-ontology-3#HBP_DAMO_0000001
-
-:HBP_DAMO_0000001 rdf:type owl:Class ;
-                  
-                  rdfs:label "Reconstruction"@en ;
-                  
+HBP_DAMO:0000001 rdf:type owl:Class ;
+                  rdfs:label "Reconstruction"@en ;                
                   rdfs:isDefinedBy "Reconstructions pertain to data which elucidate the morphology of a given entity. The scales which can be used to characterize this data modality include: brain, multiple cells, paired cells, single cell, and partial cell."@en .
 
-
-
-###  http://www.semanticweb.org/eclark/ontologies/2015/7/untitled-ontology-3#HBP_DAMO_0000002
-
-:HBP_DAMO_0000002 rdf:type owl:Class ;
-                  
+HBP_DAMO:0000002 rdf:type owl:Class ;
                   rdfs:label "Proteome"@en ;
-                  
                   rdfs:isDefinedBy "This modality includes data which delinate the identities and sometimes quantities of proteins found in an entity. Applicable scales include: brain region, partial region, multiple cells, single cell, cellular component."@en .
 
-
-
-###  http://www.semanticweb.org/eclark/ontologies/2015/7/untitled-ontology-3#HBP_DAMO_0000003
-
-:HBP_DAMO_0000003 rdf:type owl:Class ;
-                  
+HBP_DAMO:0000003 rdf:type owl:Class ;
                   rdfs:label "Transcriptome"@en ;
-                  
                   rdfs:isDefinedBy "Transcriptome includes data which characterize the entire set of transcripts that are detectable in a given entity. Scales include: brain region, partial region, multiple cells, single cell, cellular component."@en .
 
-
-
-###  http://www.semanticweb.org/eclark/ontologies/2015/7/untitled-ontology-3#HBP_DAMO_0000004
-
-:HBP_DAMO_0000004 rdf:type owl:Class ;
-                  
+HBP_DAMO:0000004 rdf:type owl:Class ;
                   rdfs:label "Parcelation"@en ;
-                  
                   rdfs:isDefinedBy "Parcelations specifically refer to data files in which brain regions and/or structures are defined. Scales include: brain, brain region."@en .
 
-
-
-###  http://www.semanticweb.org/eclark/ontologies/2015/7/untitled-ontology-3#HBP_DAMO_0000005
-
-:HBP_DAMO_0000005 rdf:type owl:Class ;
-                  
+HBP_DAMO:0000005 rdf:type owl:Class ;
                   rdfs:label "Connectivity"@en ;
-                  
                   rdfs:isDefinedBy "Connectivity includes data which elucidate the physical interactions between two or more entities. Scales include: brain region, multiple cells, cellular component."@en .
 
-
-
-###  http://www.semanticweb.org/eclark/ontologies/2015/7/untitled-ontology-3#HBP_DAMO_0000006
-
-:HBP_DAMO_0000006 rdf:type owl:Class ;
-                  
+HBP_DAMO:0000006 rdf:type owl:Class ;
                   rdfs:label "Anatomical feature characterization"@en ;
-                  
                   rdfs:isDefinedBy "This modality broadly characterizes studies which elucidate the structure of an entity. Applicable scales include: brain, brain regions, partial region, multiple cells, and single cell."@en .
 
-
-
-###  http://www.semanticweb.org/eclark/ontologies/2015/7/untitled-ontology-3#HBP_DAMO_0000007
-
-:HBP_DAMO_0000007 rdf:type owl:Class ;
-                  
+HBP_DAMO:0000007 rdf:type owl:Class ;
                   rdfs:label "Physiological feature characterization"@en ;
-                  
                   rdfs:isDefinedBy "Data in this modality characterize the chemical and physical functions which are carried out by an entity. Scales include: brain, brain regions, partial region, multiple cells, and single cell, cellular compartment."@en .
 
-
-
-###  http://www.semanticweb.org/eclark/ontologies/2015/7/untitled-ontology-3#HBP_DAMO_0000008
-
-:HBP_DAMO_0000008 rdf:type owl:Class ;
-                  
+HBP_DAMO:0000008 rdf:type owl:Class ;
                   rdfs:label "Electrical activity"@en ;
-                  
                   rdfs:isDefinedBy "This modality includes data which characterize the electrical properties of an entity, e.g. by measuring the flow of ions. Scales can include: brain region, multiple cells, single cell."@en .
 
-
-
-###  http://www.semanticweb.org/eclark/ontologies/2015/7/untitled-ontology-3#HBP_DAMO_0000009
-
-:HBP_DAMO_0000009 rdf:type owl:Class ;
-                  
+HBP_DAMO:0000009 rdf:type owl:Class ;
                   rdfs:label "Brain activity"@en ;
-                  
                   rdfs:isDefinedBy "Data which elucidate the functional organization of the brain. Scales include: brain, brain region."@en .
-
-
-
-
-###  Generated by the OWL API (version 4.0.2.20150406-2135) http://owlapi.sourceforge.net
 

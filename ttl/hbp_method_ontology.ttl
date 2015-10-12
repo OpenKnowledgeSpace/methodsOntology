@@ -1,17 +1,17 @@
 ### WARNING ###
 ### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
 ### WARNING ###
-@prefix : <http://www.hbp.FIXME.org/hbp_method_ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
-@prefix HBP_DASP: <http://www.hbp.FIXME.org/HBP_DASP_> .
-@prefix HBP_DATT: <http://www.hbp.FIXME.org/HBP_DATT_> .
+@prefix HBP_DASP: <http://www.hbp.FIXME.org/hbp_domain_aspect/> .
+@prefix HBP_DATT: <http://www.hbp.FIXME.org/hbp_data_type_ontology/> .
 @prefix HBP_PROP: <http://www.hbp.FIXME.org/> .
-@prefix HBP_SCL: <http://www.hbp.FIXME.org/HBP_SCL_> .
+@prefix HBP_SCL: <http://www.hbp.FIXME.org/hbp_scale_ontology/> .
+@prefix HBP_MTD: <http://www.hbp.FIXME.org/hbp_method_ontology/> .
 @base <http://www.hbp.FIXME.org/hbp_method_ontology> .
 
 <http://www.hbp.FIXME.org/hbp_method_ontology> rdf:type owl:Ontology ;
@@ -20,7 +20,7 @@
 
 
 
-:HBP_MTD_0000000 rdf:type owl:Class ;
+HBP_MTD:0000000 rdf:type owl:Class ;
 
                  rdfs:label "method"@en ;
 
@@ -28,7 +28,7 @@
 
 
 
-:HBP_MTD_0000001 rdf:type owl:Class ;
+HBP_MTD:0000001 rdf:type owl:Class ;
 
                  rdfs:label "sampling method"@en ;
 
@@ -36,13 +36,13 @@
 
 
 
-:HBP_MTD_0000002 rdf:type owl:Class ;
+HBP_MTD:0000002 rdf:type owl:Class ;
 
                  rdfs:label "sampling of slices for histological studies"@en ;
 
                  nsu:definition "A method used to sample slices for histological studies."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 ;
+                 rdfs:subClassOf HBP_MTD:0000001 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000001 ;
 
@@ -52,13 +52,13 @@
 
 
 
-:HBP_MTD_0000003 rdf:type owl:Class ;
+HBP_MTD:0000003 rdf:type owl:Class ;
 
                  rdfs:label "Slice Extraction for Stereology Experiments"@en ;
 
                  nsu:definition "Animals were administered a lethal intraperitoneal injection of sodium pentobarbital (40 mg/kg) and were intracranially perfused with 4 % paraformaldehyde in 0.1 M phosphate buffer (PB). The brain was then extracted from the skull, fixed overnight at 4 degree C and sliced coronally into sections (50 micro meter thick) that were collected serially."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 ;
+                 rdfs:subClassOf HBP_MTD:0000001 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000001 ;
 
@@ -70,13 +70,13 @@
 
 
 
-:HBP_MTD_0000004 rdf:type owl:Class ;
+HBP_MTD:0000004 rdf:type owl:Class ;
 
                  rdfs:label "Slice Preparation for Stereology Experiments"@en ;
 
                  nsu:definition "Free-floating sections were treated for 30 min with 1% H202 to deplete the endogenous peroxidase activity, and then non-specific binding was blocked for 1h in PB with 0.25% Triton-X and 3% horse serum (Vector laboratories Inc., Burlingame, CA, USA). The sections were incubated overnight at 4 degree C with a mouse anti-neuron specific nuclear protein (NeuN, 1: 2000, Chemicon, Temecula, CA, USA), and they were then processed by the avidin-biotin method, using a biotinylated secondary antibody (1:200, Vector Laboratories) and the Vectastain ABC immunoperoxidase kit (Vector) with DAB (Sigma-Aldrich, St Louis, MO, USA) as the chromogen. After staining, the sections were dehydrated, cleared with xylene and cover-slipped."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 ;
+                 rdfs:subClassOf HBP_MTD:0000001 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000011 ;
 
@@ -90,13 +90,13 @@
 
 
 
-:HBP_MTD_0000005 rdf:type owl:Class ;
+HBP_MTD:0000005 rdf:type owl:Class ;
 
                  rdfs:label "sampling of slices for electrophysiology studies"@en ;
 
                  nsu:definition "A method used to sample slices for electrophysiological studies."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 ;
+                 rdfs:subClassOf HBP_MTD:0000001 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000001 ;
 
@@ -108,13 +108,13 @@
 
 
 
-:HBP_MTD_0000006 rdf:type owl:Class ;
+HBP_MTD:0000006 rdf:type owl:Class ;
 
                  rdfs:label "Slice Extraction for Electrophysiology Experiments"@en ;
 
                  nsu:definition "For electrophysiology experiments, 300 micrometer thick parasaggital slices, approximately 1.7-2.2 mm lateral to the midline slices were cut on an vibratome with a 5 degree incline. The primary SSC on the slice was located by the anterior extremity of the hippocampus (bend of the CA3 region). Hind limb SSC was designated as plus/minus 1 mm from this extremity. Slices were incubated at 35 degree C for 30 min and left at room temperature in a holding chamber, until recording."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000005 ;
+                 rdfs:subClassOf HBP_MTD:0000005 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000008 ;
 
@@ -122,13 +122,13 @@
 
 
 
-:HBP_MTD_0000007 rdf:type owl:Class ;
+HBP_MTD:0000007 rdf:type owl:Class ;
 
                  rdfs:label "Targeting of Cells for Electrophysiological Profiling"@en ;
 
                  nsu:definition "Infrared Differential Interference Contrast microscopy (IR-DIC) was used for cell targeting. Slices kept on the electrophysiological setup were continuously superfused with aCSF. Somatic whole cell recordings were performed in current clamp mode. Intrinsic electrical properties of the cells were measured using different stimuli and calibrated current intensities. Calibration was performed by varying the amplitude of a square pulse of 50 or 100 pA until it elicited a single action potential. The cells were then left undisturbed at native resting membrane potentials."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 ;
+                 rdfs:subClassOf HBP_MTD:0000001 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000011 ;
 
@@ -142,13 +142,13 @@
 
 
 
-:HBP_MTD_0000008 rdf:type owl:Class ;
+HBP_MTD:0000008 rdf:type owl:Class ;
 
                  rdfs:label "Labeling of Cells for Morphological Reconstruction"@en ;
 
                  nsu:definition "Cells were reconstructed from 300 microm thick SSC slices following electrophysiological recording. "@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 ;
+                 rdfs:subClassOf HBP_MTD:0000001 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000006 ;
 
@@ -162,13 +162,13 @@
 
 
 
-:HBP_MTD_0000009 rdf:type owl:Class ;
+HBP_MTD:0000009 rdf:type owl:Class ;
 
                  rdfs:label "Slice Staining for Morphological Cell Reconstruction"@en ;
 
                  nsu:definition "This protocol is used to stain the cells filled with biocytin (after an electrophysiology experiment). Slices are fixed overnight, at +4 degree C, in PFA 4% (or PFA 2% + picric acid + glutaraldehyde - depending on experimenter wishes). The next morning, PFA is discard and replace with PBS 1x."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 ;
+                 rdfs:subClassOf HBP_MTD:0000001 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000006 ;
 
@@ -180,35 +180,35 @@
 
 
 
-:HBP_MTD_0000010 rdf:type owl:Class ;
+HBP_MTD:0000010 rdf:type owl:Class ;
 
                  rdfs:label "observation method"@en ;
 
                  nsu:definition "This method is focused on the observation of samples. It is the process usually refered to as measuring, or capturing in the laboratory environment."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000000 .
+                 rdfs:subClassOf HBP_MTD:0000000 .
 
 
 
-:HBP_MTD_0000011 rdf:type owl:Class ;
+HBP_MTD:0000011 rdf:type owl:Class ;
 
                  rdfs:label "image aquisition"@en ;
 
                  nsu:definition "This method is using imaging techniques to capture the projection of a sample."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:generated_data HBP_DATT:0000018 .
 
 
 
-:HBP_MTD_0000012 rdf:type owl:Class ;
+HBP_MTD:0000012 rdf:type owl:Class ;
 
                  rdfs:label "image aquisition from microscopy"@en ;
 
                  nsu:definition "This method used a microscopy setup to capture an image of a sample."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000011 ;
+                 rdfs:subClassOf HBP_MTD:0000011 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000011 ;
 
@@ -216,13 +216,13 @@
 
 
 
-:HBP_MTD_0000013 rdf:type owl:Class ;
+HBP_MTD:0000013 rdf:type owl:Class ;
 
                  rdfs:label "brain region dimension measurement"@en ;
 
                  nsu:definition "This method captures the dimension of a brain region."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000011 ;
 
@@ -230,13 +230,13 @@
 
 
 
-:HBP_MTD_0000014 rdf:type owl:Class ;
+HBP_MTD:0000014 rdf:type owl:Class ;
 
                  rdfs:label "Generation of Paired Electrophysiology Trace Figures"@en ;
 
                  nsu:definition "The Method uses a python script which combines the data of the channels of the presynaptic cell and the postsynaptic cell into a single side by side image"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000006 ;
 
@@ -250,13 +250,13 @@
 
 
 
-:HBP_MTD_0000015 rdf:type owl:Class ;
+HBP_MTD:0000015 rdf:type owl:Class ;
 
                  rdfs:label "Generation of Projection Figures from a Neurolucida File"@en ;
 
                  nsu:definition "The method uses a python script which opens the graph file, which contains the reconstruction an renders the projection of the cell along all 3 projection plains (xy, yz, zx). The script then saves the images as png files, retaining the orginal name of the reconstruction file, minus the file extension, and extends it with the name of the plane, using an underscore a seperator."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000006 ;
 
@@ -272,25 +272,25 @@
 
 
 
-:HBP_MTD_0000016 rdf:type owl:Class ;
+HBP_MTD:0000016 rdf:type owl:Class ;
 
                  rdfs:label "Microscopy Image capturing for Stereology"@en ;
 
                  nsu:definition "To generate the figures, images were captured with a digital camera (Olympus DP70) attached to an Olympus BX51 light microscope (Olympus, Ballerup, Denmark), and Adobe Photoshop CS4 software (Adobe systems, San Jose, CA, USA) was used to produce figure plates."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000012 ;
+                 rdfs:subClassOf HBP_MTD:0000012 ;
 
                  HBP_PROP:used_data HBP_DATT:0000018 .
 
 
 
-:HBP_MTD_0000017 rdf:type owl:Class ;
+HBP_MTD:0000017 rdf:type owl:Class ;
 
                  rdfs:label "Stereological Height Measurement of Cortical Layers"@en ;
 
                  nsu:definition "To obtain the dimensions of each cortical layer, and the total dimensions of the column (from the pia to the white matter), NeuN immunostained sections were used. HL somatosensory neocortex can be horizontally subdivided into layers and occasionally into sublayers, accordingly to the types and density of neuronal elements it contains. The height of each layer was delineated and measured according to visible transitions in cell density and cell size. To average data, three measurements per section were made for every cortical layer, and four sections were analyzed for each animal. To trace boundaries between cortical layers and to measure the distance among them, we used Neurolucida software (Neurolucida 8.0, MicroBright Field Inc. Vermont, USA)."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000013 ;
+                 rdfs:subClassOf HBP_MTD:0000013 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000011 ;
 
@@ -304,11 +304,11 @@
 
 
 
-:HBP_MTD_0000018 rdf:type owl:Class ;
+HBP_MTD:0000018 rdf:type owl:Class ;
 
                  rdfs:label "Calculation of Cell Density"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000008 ;
 
@@ -320,13 +320,13 @@
 
 
 
-:HBP_MTD_0000019 rdf:type owl:Class ;
+HBP_MTD:0000019 rdf:type owl:Class ;
 
                  rdfs:label "Electrophysiological Characteristation of a Single Cell"@en ;
 
                  nsu:definition "As soon as electrical access was obtained"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000019 ;
 
@@ -336,13 +336,13 @@
 
 
 
-:HBP_MTD_0000020 rdf:type owl:Class ;
+HBP_MTD:0000020 rdf:type owl:Class ;
 
                  rdfs:label "Molecular Characterisation of a Single Cell"@en ;
 
                  nsu:definition "Cell cytoplasm was aspirated into the recording pipette, by applying negative pressure. mRNA was reverse transcribed using an oligo-dT primer and 100 U MMLV reverse transcriptase in a final volume of 20 microl. After 50 min incubation at 42 degree C, the cDNA was frozen and stored at -20 degree C before further processing. Multiplex PCR was carried out as described in Toledo-Rodriguez et al. 2004. Briefly the first amplification round consisted of 10 min hot start at 95 degree C followed by 25 cycles (94 degree C for 40 s, 56 degree C for 40 s and 72 degree C for 1 min). A second round of PCR consisted of 40 cycles (94 degree C for 40 s, 56 degree C for 40 s and 72 degree C for 1 min) was performed. The products of the second PCR were analysed in 1.5% agarose gels stained with ethidium bromide. Genes were considered expressed if the PCR amplification produced a single band of the correct molecular weight (notice that Kv3.4 and Kv4.3 have two splice variants). The genes co-amplified in each multiplex PCR reaction were: Pool I (CB, PV, CR, NPY, VIP, SOM, CCK and GAPDH); Pool II (SP, ChAT, POMC, pENK, Dyn, nNOS, CRH, CGRP and Caa1E); (Kv1.1, Kv1.2, Kv1.6, Kv2.1, Kv2.2, Kv3.1, Kv3.2, Kv4.2, Kvb1, Kvb2, HCN1, HCN2, Gad65 and Gad67); Pool IV (Kv1.4, Kv3.3, Kv3.4, Kv4.3, KChIP1, KChIP2, KChIP3, HCN3, HCN4, Caa1A, Caa1B, Caa1G, Caa1H, Caa1I, Cab1, Cab3, Cab4, SK1, SK2 and SK3). Primers and the detailed steps taken to obtain these samples are described in Toledo-Rodriguez et al. 2004 and Toledo-Rodriguez & Markram 2007."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000024 ;
 
@@ -354,13 +354,13 @@
 
 
 
-:HBP_MTD_0000021 rdf:type owl:Class ;
+HBP_MTD:0000021 rdf:type owl:Class ;
 
                  rdfs:label "Morphological Reconstruction of a Single Cell"@en ;
 
                  nsu:definition "Cells are reconstructed from 300 microm thick slices following electrophysiological recording. Reconstructions are performed using the Neurolucida system (MBF Bioscience, Williston, VT, USA) and a brightfield light microscope with a water-immersion or an oil-immersion objective (magnification: 60x or 63x or 100x). The staining and mounting procedure resulted in shrinkage of the slice to ~25% of their original thickness. Reconstructions were corrected for this value. The anisotropic shrinkage along the X-Y plane was around ~10% and not corrected."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000053 ;
 
@@ -370,13 +370,13 @@
 
 
 
-:HBP_MTD_0000022 rdf:type owl:Class ;
+HBP_MTD:0000022 rdf:type owl:Class ;
 
                  rdfs:label "Stereological Marking of Cells in Cortical Layers"@en ;
 
                  nsu:definition "The cerebral cortex in all mammalian species used to be divided into six basic layers. Considering local variations, as in the HL somatosensory cortex, the six basic laminae are often divided into sublayers. In the present study the following cortical layers and sublayers were considered: I, II, III, IV, Va, Vb, and     VI. The height can be delineated according to visible transitions in cell density and cell size."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000011 ;
 
@@ -386,23 +386,23 @@
 
 
 
-:HBP_MTD_0000023 rdf:type owl:Class ;
+HBP_MTD:0000023 rdf:type owl:Class ;
 
                  rdfs:label "classification method"@en ;
 
                  nsu:definition "This method is focused on classifying entites based on data."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000000 .
+                 rdfs:subClassOf HBP_MTD:0000000 .
 
 
 
-:HBP_MTD_0000024 rdf:type owl:Class ;
+HBP_MTD:0000024 rdf:type owl:Class ;
 
                  rdfs:label "classification of brain region"@en ;
 
                  nsu:definition "These methods are aimed at classify a spatial region in the brain based on density, moleculuar, morphological, and/or electrophysiological properties."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000023 ;
+                 rdfs:subClassOf HBP_MTD:0000023 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000012 ;
 
@@ -410,13 +410,13 @@
 
 
 
-:HBP_MTD_0000025 rdf:type owl:Class ;
+HBP_MTD:0000025 rdf:type owl:Class ;
 
                  rdfs:label "classification of brain region based on cell density"@en ;
 
                  nsu:definition "This method classifies brain regions based on shared cell density profiles."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000024 ;
+                 rdfs:subClassOf HBP_MTD:0000024 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000011 ;
 
@@ -426,13 +426,13 @@
 
 
 
-:HBP_MTD_0000026 rdf:type owl:Class ;
+HBP_MTD:0000026 rdf:type owl:Class ;
 
                  rdfs:label "classification of brain region based on molecular marker expression"@en ;
 
                  nsu:definition "This method uses the expression of genes, or the proteins based on them as the basis of classifying spatial stretches in the brain."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000024 ;
+                 rdfs:subClassOf HBP_MTD:0000024 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000011 ;
 
@@ -440,13 +440,13 @@
 
 
 
-:HBP_MTD_0000027 rdf:type owl:Class ;
+HBP_MTD:0000027 rdf:type owl:Class ;
 
                  rdfs:label "classification of cell"@en ;
 
                  nsu:definition "This method is assigning an archetype profile to a cell based on location, connectivity, morphology, electrophysiology, and/or molecular properties of the cell."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000023 ;
+                 rdfs:subClassOf HBP_MTD:0000023 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000006 ;
 
@@ -464,13 +464,13 @@
 
 
 
-:HBP_MTD_0000028 rdf:type owl:Class ;
+HBP_MTD:0000028 rdf:type owl:Class ;
 
                  rdfs:label "Electrophysiological Classification of a Single Cell"@en ;
 
                  nsu:definition "This method used features described in the Petilla terminology publication to classify cells into one of 13 electrical archetypes."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000027 ;
+                 rdfs:subClassOf HBP_MTD:0000027 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000006 ;
 
@@ -482,13 +482,13 @@
 
 
 
-:HBP_MTD_0000029 rdf:type owl:Class ;
+HBP_MTD:0000029 rdf:type owl:Class ;
 
                  rdfs:label "Morphological Classification of a Single Cell"@en ;
 
                  nsu:definition "Neuronal morphologies are classified into 55 different morphological types (13 excitatory and 42 inhibitory) by observing neuronal features described in published literatures combining quantitative analysis of reconstructed neurons and other information such as the layer containing their somata, their electrical features and their specific molecular markers."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000027 ;
+                 rdfs:subClassOf HBP_MTD:0000027 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000006 ;
 
@@ -500,23 +500,23 @@
 
 
 
-:HBP_MTD_0000030 rdf:type owl:Class ;
+HBP_MTD:0000030 rdf:type owl:Class ;
 
                  rdfs:label "image processing method"@en ;
 
                  nsu:definition "This method is focused on alterations which are applied to images"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000031 rdf:type owl:Class ;
+HBP_MTD:0000031 rdf:type owl:Class ;
 
                  rdfs:label "BigBrain - Tissue Extraction and Fixation"@en ;
 
                  nsu:definition "The brain is remove during autopsy with a delay of 14 hours and fixed in 4% buffered formalin for 5 months."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 ;
+                 rdfs:subClassOf HBP_MTD:0000001 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000001 ;
 
@@ -526,13 +526,13 @@
 
 
 
-:HBP_MTD_0000032 rdf:type owl:Class ;
+HBP_MTD:0000032 rdf:type owl:Class ;
 
                  rdfs:label "BigBrain - Slice Generation and Tissue Staining"@en ;
 
                  nsu:definition "The brain was embedded into paraffin and sectioned, from posterior to anterior, with a large-scale microtome in the coronal plane (thickness: 20 micrometers; total of 7,404 sections; occipital sections have low section numbers, frontal have high numbers). For optimal quality, sections were transported on a home-made conveyor system, and then transferred to wooden plates. To make the thin sections more visible, the whole brain was stained red with eosin. Subsequently, the eosin was removed from the mounted histological sections. Every section was collected, mounted, and stained for cell bodies applying a silver staining method. The Merker staining is comparable to the classical Nissl staining, but gives a higher contrast between cell bodies and neuropil. The amount of lost sections was in the range of 0.5%."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 ;
+                 rdfs:subClassOf HBP_MTD:0000001 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000011 ;
 
@@ -542,13 +542,13 @@
 
 
 
-:HBP_MTD_0000033 rdf:type owl:Class ;
+HBP_MTD:0000033 rdf:type owl:Class ;
 
                  rdfs:label "BigBrain - MRI Stack Aquisition"@en ;
 
                  nsu:definition "A 1.5T scanner was used for MRI using a transmit body coil and a 12-channel receiver coil. The manufacturers MPRAGE sequence was used with parameters including: TR=2220 ms, TE=3 ms, IR=1200 ms, flip=15 deg, resolution 0.4 x 0.4 x 0.8mm and 6 averages. Whereas with considerable effort it was possible to produce images at a resolution of 0.3 mm3 and with high contrast and SNR even at 1.5T, the MPRAGE images with moderately high resolution were found to be adequate for brain surface reconstruction."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000011 ;
+                 rdfs:subClassOf HBP_MTD:0000011 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000041 ;
 
@@ -558,13 +558,13 @@
 
 
 
-:HBP_MTD_0000034 rdf:type owl:Class ;
+HBP_MTD:0000034 rdf:type owl:Class ;
 
                  rdfs:label "BigBrain - Blockface Image Aquisition"@en ;
 
                  nsu:definition "Each blockface of the paraffin-embedded brain was digitized using a CCD-camera (objective \"tarcus\" 35 mm 1:2,8., image matrix: 512 x 480 pixels, resolution: ~0.5 mm/pixel, dynamic range: 8 bit). The images were stored in tiff-format."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000008 ;
 
@@ -574,13 +574,13 @@
 
 
 
-:HBP_MTD_0000035 rdf:type owl:Class ;
+HBP_MTD:0000035 rdf:type owl:Class ;
 
                  rdfs:label "BigBrain - Slice Image Aquisition"@en ;
 
                  nsu:definition "Each stained histological section was scanned on a flatbed scanner at 2,400 dpi in 16 bits, resulting in an in-plane resolution of 10 micrometers."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000026 ;
 
@@ -592,61 +592,61 @@
 
 
 
-:HBP_MTD_0000036 rdf:type owl:Class ;
+HBP_MTD:0000036 rdf:type owl:Class ;
 
                  rdfs:label "BigBrain - Processing Artefact Removal"@en ;
 
                  nsu:definition "The images of the original histological sections were first repaired (at full 10 micrometer resolution) to remove sectioning artifacts. Sections with large displaced pieces were edited manually to align the major dislocated pieces prior to the application of an automatic repair procedure for correcting smaller defects. The manual editions were performed using in-house tools. The automatic repair algorithm, also developed in-house, relies on non-linear section-to-section registration of neighboring sections to detect and correct artifacts."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000030 ;
+                 rdfs:subClassOf HBP_MTD:0000030 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000031 .
 
 
 
-:HBP_MTD_0000037 rdf:type owl:Class ;
+HBP_MTD:0000037 rdf:type owl:Class ;
 
                  rdfs:label "BigBrain - Blockface to Slice Image Alignment"@en ;
 
                  nsu:definition "The stacked blockface images served as an undistorted 3D reference to which the MRI volume was registered and virtually sectioned for subsequent shape reconstruction of the stained histological sections."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000030 ;
+                 rdfs:subClassOf HBP_MTD:0000030 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000043 .
 
 
 
-:HBP_MTD_0000038 rdf:type owl:Class ;
+HBP_MTD:0000038 rdf:type owl:Class ;
 
                  rdfs:label "BigBrain - MRI to Blockface Slice Image Alignment"@en ;
 
                  nsu:definition "The 3D reconstruction of the histological sections was two-fold: first, the artifacts were corrected in the original sections; second, the corrected sections were aligned using section-to-section registration. The multi-scale registration is performed using minctracc, calibrated and optimized for 2D histological sections. For each section, its three immediate previous and post neighboring sections were registered and intensity-normalized to the middle section. These normalized registered sections were averaged and outlier voxels were detected based on the local variance of the averaged intensities. A crucial issue for the detection of outliers was not to consider the variance on a pixel-by-pixel basis (which is too sensitive to biological variations of the tissue and SNR), but to consider the total variance in a small neighborhood of n x n blocks (n=25 yields a block of 0.25mm x 0.25mm). Outliers were removed on a block-by-block basis by replacing the n x n block by the corrected average (median) of the neighboring sections, excluding outliers (outliers can be present in the reference section as well as in the neighboring sections). This process was repeated twice, using the repaired sections in the first iteration to improve the non-linear alignment and intensity normalization in the second iteration. The final repaired section has been restored with high fidelity. This artifact correction procedure consumed 6 to 8 CPU hours per section. The alignment of the repaired sections was accomplished in two steps. In the first step, the histological sections were registered to the corresponding sections of the MRI aligned to the blockface volume. This corrects for the vertical compression of the tissues in the slicing direction and aligns each section to its average position based on the MRI reference. In the second step, a multi-scale multi-resolution iterative algorithm is deployed to correct for the local displacement, distortion and stretch of sections relative to the MRI reference. In essence, the position and shape of a section are corrected to be at the mid-position of its immediate previous and next section neighbors. Finally, intensity imbalances due to staining were corrected, to first-order, within each aligned section, then globally throughout the brain by histogram equilibration. Some residual intensity imbalances, however, persist in sections with poor gray-white matter contrast."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000030 ;
+                 rdfs:subClassOf HBP_MTD:0000030 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000043 .
 
 
 
-:HBP_MTD_0000039 rdf:type owl:Class ;
+HBP_MTD:0000039 rdf:type owl:Class ;
 
                  rdfs:label "BigBrain - BigBrain to MNI Alignment"@en ;
 
                  nsu:definition "The resampled 3D stack of BigBrain sections with 400 micrometers isotropic (recursive averaging over nine consecutive sections) was normalized to MNI space. The reconstructed volume exhibited a contrast between gray and white matter similar to that of quantitative T1 MRI. Accordingly, for stereotaxic normalization, we used a group-averaged T1 map obtained from 24 normal subjects who were scanned at 700 micrometer on a 7T scanner with the MP2RAGE sequence. Individual brain volumes were co-registered to MNI space at 400 micrometers to obtain a groupwise quantitative T1 average atlas. The BigBrain volume was then processed with N3 to correct for remaining inhomogeneities in staining intensity after averaging. Non-brain regions close to brain tissue were labeled and assigned an arbitrary intensity value so as to be comparable with CSF regions in the stereotaxic T1 atlas. Finally, the processed BigBrain volume was coregistered to the T1 atlas at 400 micrometers with the SyN algorithm using a cross-correlation image similarity criterion."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000030 ;
+                 rdfs:subClassOf HBP_MTD:0000030 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000043 .
 
 
 
-:HBP_MTD_0000040 rdf:type owl:Class ;
+HBP_MTD:0000040 rdf:type owl:Class ;
 
                  rdfs:label "Waxholm SD - Tissue Extraction and Fixation"@en ;
 
                  nsu:definition "The animal was actively stained with a mixture of formalin and ProHance (Gadoteridol, Bracco Diagnostics, Inc., Princeton, NJ) to increase MRI signal to noise ratio while preserving the tissue (Johnson et al., 2002). The animal was anesthetized by intraperitoneal injection of a mixture of Nembutal (Ovation Pharmaceuticals, Inc., Lake Forest, IL) and butorphanol, and transcardially perfused with 0.9% saline and ProHance (10:1 v:v) for 4 min followed by a flush of ProHance in 10% phosphate buffered formalin (1:10 v:v). The head with the brain in situ within the cranium was removed and stored in buffered formalin for at least 24 h. Tissue was rehydrated by immersion in a 1:200 solution of ProHance/saline for 72 h. The head was trimmed to fit into an acrylic sample holder that fits in the RF coil, and surrounded by fomblin, a perfluorocarbon that minimizes susceptibility artifacts at the interface."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 ;
+                 rdfs:subClassOf HBP_MTD:0000001 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000001 ;
 
@@ -656,13 +656,13 @@
 
 
 
-:HBP_MTD_0000041 rdf:type owl:Class ;
+HBP_MTD:0000041 rdf:type owl:Class ;
 
                  rdfs:label "Waxholm SD - MRI Stack Acquisition"@en ;
 
                  nsu:definition "Microscopic MRI and DWI data were acquired at the Duke Center for In Vivo Microscopy using a 7 T small animal MRI system (Magnex Scientific, Yarnton, Oxford, UK) equipped with 650 mT/m Resonance Research gradient coils (Resonance Research, Inc., Billerica, MA, USA), and controlled with a General Electric Signa console (GE Medical Systems, Milwaukee, WI). The specimen was imaged in a custom 30 mm diameter × 50 mm long solenoid RF coil fabricated from a continuous sheet of high-frequency microwave substrate (Roger Corp, Rogers, CT, USA). T2*-weighted gradient recalled echo (GRE) anatomic images were acquired using a 3D sequence (TR = 50 ms, TE = 8.3 ms, NEX = 2, α = 60°). The acquisition matrix was 1024 × 512 × 512 over a 40 × 20 × 20 mm field of view (FOV). The Nyquist isotropic spatial resolution was 39 μm. Diffusion tensor datasets were acquired using a spin-echo pulse sequence (TR = 100 ms, TE = 16.2 ms, NEX = 1). Diffusion preparation was accomplished using a modified Stejskal–Tanner diffusion-encoding scheme with a pair of unipolar, half-sine diffusion gradient waveforms (width δ = 4 ms, separation Δ = 8.5 ms, gradient amplitude = 450 mT/m). One b0 image and six high b-value images (b = 1500 s/mm2) were acquired with diffusion sensitization along each of six non-colinear diffusion gradient vectors: [1, 1, 0], [0, 1, 1], [1, 0, 1], [1, − 1, 0], [0, 1, − 1], and [− 1, 0, 1]. The acquisition matrix was 512 × 256 × 256 over a 40 × 20 × 20 mm FOV. The Nyquist isotropic spatial resolution was 78 μm. All images were derived from fully sampled k-space data with no zero-filling. All images had a signal-to-noise-ratio (SNR) of 30 or greater. The long TR relative to T1 and the long TE relative to T2 give the b0 image strong T2-weighting. We therefore refer to the b0 image as T2-weighted below. The SNR for the average isotropic DWI was ~ 120, and the SNR for the individual DWIs was ~ 62. The SNR for the T2*-weighted gradient echo was estimated ~ 50. The DWI and anatomical images were acquired in a continuous session and were inherently co-registered."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000011 ;
+                 rdfs:subClassOf HBP_MTD:0000011 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000041 ;
 
@@ -672,13 +672,13 @@
 
 
 
-:HBP_MTD_0000042 rdf:type owl:Class ;
+HBP_MTD:0000042 rdf:type owl:Class ;
 
                  rdfs:label "Waxholm SD - Image Reconstruction and post-processing"@en ;
 
                  nsu:definition "After image reconstruction, all MRI volumes were registered to the standard T2-weighted b0 image using an Advanced Normalization Tools (http://www.picsl.upenn.edu/ANTS/) 9-parameter rigid affine registration to correct for the linear component of eddy current distortions. Diffusion tensors were calculated at each voxel with multivariate linear fitting using the TrackVis and Diffusion toolkit (http://trackvis.org). Finally, data were organized into consistent file architecture and archived in NIfTI format (http://nifti.nimh.nih.gov) in an onsite Oracle database. Fractional anisotropy (FA) values were computed from the three eigenvalues after tensor decomposition ( Le Bihan et al., 2001). All DWI images were resampled with no interpolation to match the voxel size of the higher resolution T2*-weighted anatomical dataset using the Matlab (MathWorks, Natick, MA) NIfTI Toolkit. This was necessary for co-viewing the images as overlays during segmentation. An 8-bit binary mask was generated by thresholding the DWI volume using Matlab to hide non-brain structures such as the skull and soft tissue."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000030 ;
+                 rdfs:subClassOf HBP_MTD:0000030 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000002 ;
 
@@ -688,13 +688,13 @@
 
 
 
-:HBP_MTD_0000043 rdf:type owl:Class ;
+HBP_MTD:0000043 rdf:type owl:Class ;
 
                  rdfs:label "Waxholm SD - Segmentation"@en ;
 
                  nsu:definition "Anatomical regions were delineated using ITK-SNAP software v2.2.0 (Yushkevich et al., 2006; http://www.itksnap.org). The MRI data were viewed in ITK-SNAP using the default 16-bit grayscale color map (black to white), where dark areas in the image correspond to low signal intensity and bright areas correspond to high signal intensity. Neuroanatomical boundaries were delineated on basis of image contrast observed in T2-weighted, T2*-weighted, and diffusion weighted images, including RGB maps of principal eigenvector orientation with fractional anisotropy represented by image intensity (DTI maps). Two standard rat brain atlases were used as initial anatomical reference ( Paxinos and Watson, 2007 and Swanson, 2004). Additional anatomical criteria (see the Results section) were employed to close anatomical boundaries when these were not unequivocally visible in the MRI or DTI images. The neuroanatomical nomenclature was adopted from the Paxinos and Watson (2007) atlas of the rat brain. The left and right hemispheres of the brain were delineated individually. At one location, a small unilateral magnetic field interference artifact prevented delineation (see also Neuroanatomical delineations in the Results section). The boundary in question was then manually transferred from the other side, taking into consideration a slight left–right tilt of the coronal plane, making structures on the right side of the brain appear 1–2 slices (39–78 μm) towards anterior compared to the left side. Semi-automatic segmentation was performed in adequate high-contrast regions using the intensity region based SNaP algorithm implemented in ITK-SNAP, producing a segmentation core for a limited number of structures. Manual segmentation steps were taken iteratively for all delineated regions, performed by a single investigator based on combined observations in the different dMRI maps in coronal, sagittal, and horizontal planes. Our delineation of boundaries was aided by inspection of histological maps provided in the reference atlases (Paxinos and Watson, 2007 and Swanson, 2004), as well as by series of histological sections from brains of other Sprague Dawley specimens, cut in coronal, sagittal, and horizontal planes, and stained for myelin (Woelche, 1942) and cytoarchitecture (material from Leergaard et al., 2010; S. Lillehaug, J.G. Bjaalie, and T.B. Leergaard, unpublished results). Thus, changes in T2 and T2* signal intensity were compared to changes in cell densities observed in thionine stained sections from corresponding regions, while changes in DTI color maps were interpreted based on observation of corresponding myelin stained fiber orientations. Structures from the hippocampal and parahippocampal region, delineated in the same template, were taken from a parallel study (L.J. Kjonigsen, T.B. Leergaard, M.P. Witter, and J.G. Bjaalie, in preparation)."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000030 ;
+                 rdfs:subClassOf HBP_MTD:0000030 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000056 ;
 
@@ -706,13 +706,13 @@
 
 
 
-:HBP_MTD_0000044 rdf:type owl:Class ;
+HBP_MTD:0000044 rdf:type owl:Class ;
 
                  rdfs:label "ABA - Tissue Extraction, Fixing and Staining"@en ;
 
                  nsu:definition "Standard procedures were developed to isolate, cut, fix and pre-treat tissue to preserve as much macro and cellular morphology as possible and to produce the best signal to noise ratio for ISH. Mice are transferred from the vivarium to the histology core with efforts to minimize stress during the transfer. If mouse body weight falls outside of the normal range (18.8 to 26.4g), the brain is not used in the ABA ISH process. Mice are anesthetized with 0.5% isoflurane. Brains are rapidly dissected and frozen in OCT mounting medium in a grid-lined freezing chamber designed to allow for standardized placement of the brain within the block in order to minimize variation in sectioning plane. Brains are frozen at -80 degree C prior to sectioning. The fresh frozen brains are sectioned at 25 micrometers on Leica 3050 S cryostats. This thickness is optimal for minimizing sectioning artifacts such as stretching and folding during cutting and adequate for probe penetration into the section during the ISH procedure. Each OCT block containing a fresh frozen brain is trimmed until reaching the plane of Figure 99 of the Atlas of the Mouse Brain for coronal sections, and to approximately Figure 128 for sagittal sections (The Mouse Brain in Stereotaxic Coordinates, Paxinos and Franklin, Second Edition, 2001). Starting at this plane of section, a fixed number of sections spanning the rest of the brain are collected. One sagittal-sectioned brain will generate 8 series of 5 slides (Figure 8), each containing four 25 microm thick sections. One coronal-sectioned brain will generate 8 series of 15 slides (Figure 9). Slides are grouped into series (8 series per brain, with 4 sections per slide) that contain sections 200 micrometer apart, allowing for uniform sampling every 200 microm across the entire brain for each gene. All but the smallest neuro-anatomical structures should be represented in at least one section at this sampling density. A given series is either hybridized to a single gene or used for Nissl staining for anatomical reference. After allowing the sections to air dry on the slides for a minimum of 30 minutes, the tissue is fixed in 4% neutral buffered paraformaldehyde (PFA) for 20 minutes and rinsed for 3 minutes in 1x PBS. Next, the tissue is equilibrated briefly in 0.1 M triethanolamine and acetylated for 10 minutes in 0.1 M triethanolamine with 0.25% acetic anhydride. Acetylation is necessary to reduce non-specific probe binding to the tissue sections. Several chemical functional groups in proteins, such as amine and carboxylate groups, are believed to induce nonspecific probe binding, consequently leading to higher background levels and lower signal/noise ratios. Acetylation of positively charged amine groups by treating tissue sections with acetic anhydride reduces nonspecific binding of negatively charged nucleic acid probes. Immediately following acetylation, the tissue is dehydrated through a graded series containing 50%, 70%, 95%, and 100% ethanol. Following the dehydration process, each slide is analyzed microscopically to ensure section quality. Slides that pass QC are stored at room temperature in Parafilm-sealed slide boxes. Nissl staining is a histological procedure that labels Nissl bodies, the ribosomal RNA associated with the rough endoplasmic reticulum. A series of Nissl slides serve as a cytoarchitectural reference to help identify specific cell populations detected on proximate series of slides processed by ISH. After a brain is sectioned, series 4 and 8 are baked at 37 degree C for 1-5 days, and stored in desiccated containers until staining. Sections are defatted with xylene or the xylene substitute Formula 83, and hydrated through a graded series containing 100%, 95%, 70%, and 50% ethanol. After incubation in water, the sections are stained in 0.25% thionin, which stains the Nissl bodies purple-blue. Next, the sections are differentiated and dehydrated in water and a graded series containing 50%, 70%, 95%, and 100% ethanol. Finally, the slides are incubated in xylene or Formula 83, and coverslipped with the mounting agent DPX. After drying, the slides are analyzed microscopically to ensure staining quality. Slides that have passed QC are stored at room temperature in slide boxes before being cleaned and scanned."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 ;
+                 rdfs:subClassOf HBP_MTD:0000001 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000001 ;
 
@@ -728,13 +728,13 @@
 
 
 
-:HBP_MTD_0000045 rdf:type owl:Class ;
+HBP_MTD:0000045 rdf:type owl:Class ;
 
                  rdfs:label "ABA - Image Capture"@en ;
 
                  nsu:definition "The ABA project currently utilizes ten Image Capture Systems (ICS) to provide a high throughput imaging of slides. These ICS stations operate 24 hours per day, 7 days per week with minimal operator oversight other than loading slides twice per day. The scanning platform hardware and software components are outlined below. The 10 ICS units are placed on four TMC air tables to isolate the microscopes from external sources of vibration that would affect image quality. Microscope and camera function is actuated by Image Pro 5.1 with the Scope Pro/Stage Pro 5.0 Plug-In. The scanning process is controlled by the ScopeController, a custom application developed by the ABA project team .The microscope is configured for Koehler illumination and lamp intensity is adjusted to create the brightest possible field of illumination without saturating more than 1% of image pixels on a microscope slide and coverslip. The image is white balanced and a background correction image for the 10x objective is collected using ImagePro camera controls. A background correction image is also collected for the 1.25x objective."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000011 ;
+                 rdfs:subClassOf HBP_MTD:0000011 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000008 ;
 
@@ -744,11 +744,11 @@
 
 
 
-:HBP_MTD_0000046 rdf:type owl:Class ;
+HBP_MTD:0000046 rdf:type owl:Class ;
 
                  rdfs:label "ABA - Image Annotation"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000030 ;
+                 rdfs:subClassOf HBP_MTD:0000030 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000029 ;
 
@@ -758,11 +758,11 @@
 
 
 
-:HBP_MTD_0000047 rdf:type owl:Class ;
+HBP_MTD:0000047 rdf:type owl:Class ;
 
                  rdfs:label "ABA - Mesh Generation"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000030 ;
+                 rdfs:subClassOf HBP_MTD:0000030 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000008 ;
 
@@ -774,13 +774,13 @@
 
 
 
-:HBP_MTD_0000048 rdf:type owl:Class ;
+HBP_MTD:0000048 rdf:type owl:Class ;
 
                  rdfs:label "HUST - Tissue Extraction, Fixing and Staining"@en ;
 
                  nsu:definition "The integrity of the brain was maintained throughout the entire procedure. (1) Fixation and impregnation: After the animal was anesthetized with 1% sodium pentobarbital, the whole brain was removed and tied with a thread at the medulla oblongata. The brain was then suspended in fresh Golgi-Cox solution for fixation and impregnation, after which it was placed in a brown bottle and maintained in the dark at 20–25 degree C. The brains in all of the following procedures were kept suspended before being embedded. The Cox solution was replaced the next day and then every 30 days. The impregnation was maintained for at least 180 days. The Golgi-Cox solution consisted of two solutions that were mixed uniformly and filtrated: solution A, which contained 1 g mercuric chloride (HgCl2) and 1g potassium dichromate (K2Cr2O7) dissolved in 64 g of distilled water; and solution B, which contained 0.8 g potassium chromate (K2CrO4) dissolved in 16 g distilled water. (2) Darkening: The brain was immersed in a solution of 1% lithium hydroxide (LiOH), placed in a brown bottle for 24 h and rinsed under running water for another 24 h. For darkening and the subsequent dehydration and infiltration steps, the solution was constantly kept on a rotary shaker (rotating diameter: 20 mm; speed: 1 r/s). (3) Dehydration: The rinsed brain was sequentially immersed in 50%, 70%, 85%, 95%, 100% alcohol, 100% alcohol–acetone (1:1), and 100% acetone, each for 2 h, and finally, was immersed in another 100% acetone solution for 10 h. (4) Infiltration and embedding: After dehydration, the brain was infiltrated in 50%, 75%, 100% (2×) Spurr resin, each for 8 h. The brain was then completely immersed in a silicone mould filled with 100% Spurr resin. The mould was then maintained in an oven at 60 degree C for 36 h for polymerization. After returning to room temperature, the embedded brain was kept in a desiccator before the experiments. All the Spurr reagents (SPI, USA) were freshly prepared. The 100% Spurr resin contained 10 g vinylcyclohexene dioxide (ERL-4221), 7.6 g diglycidyl ether of polypropylene glycol (DER-736), 26 g nonenyl succinic anhydride (NSA), and 0.2 g dimethylaminoethanol (DMAE). To obtain other concentrations, the Spurr resin was diluted in 100% acetone."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 ;
+                 rdfs:subClassOf HBP_MTD:0000001 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000001 ;
 
@@ -794,13 +794,13 @@
 
 
 
-:HBP_MTD_0000049 rdf:type owl:Class ;
+HBP_MTD:0000049 rdf:type owl:Class ;
 
                  rdfs:label "HUST - Image Capture"@en ;
 
                  nsu:definition "The brain sectioning and imaging were carried out on our home-made MOST system. The brain was sectioned coronally from rostral to caudal by a diamond knife (Diatome, Switzerland), while the sections were simultaneously imaged with a linear CCD camera (Dalsa, Canada). In each coronal plane, subsections that measured 0.42 mm in width and 1 micrometer in thickness were continually acquired, and these images were then spliced together afterwards to get the entire coronal image."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000011 ;
+                 rdfs:subClassOf HBP_MTD:0000011 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000008 ;
 
@@ -812,11 +812,11 @@
 
 
 
-:HBP_MTD_0000050 rdf:type owl:Class ;
+HBP_MTD:0000050 rdf:type owl:Class ;
 
                  rdfs:label "UCL - Tissue Extraction"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 ;
+                 rdfs:subClassOf HBP_MTD:0000001 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000001 ;
 
@@ -828,13 +828,13 @@
 
 
 
-:HBP_MTD_0000051 rdf:type owl:Class ;
+HBP_MTD:0000051 rdf:type owl:Class ;
 
                  rdfs:label "UCL - morphological reconstruction of a single cell"@en ;
 
                  nsu:definition "cells are reconstructed from 300 microm thick slices following electrophysiological recording. reconstructions are performed using the neurolucida system (mbf bioscience, williston, vt, usa) and a brightfield light microscope with a water-immersion or an oil-immersion objective (magnification: 60x or 63x or 100x). the staining and mounting procedure resulted in shrinkage of the slice to ~25% of their original thickness. reconstructions were corrected for this value. the anisotropic shrinkage along the x-y plane was around ~10% and not corrected."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000042 ;
 
@@ -846,11 +846,11 @@
 
 
 
-:HBP_MTD_0000052 rdf:type owl:Class ;
+HBP_MTD:0000052 rdf:type owl:Class ;
 
                  rdfs:label "UCL - Morphological Classification of a Single Cell"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000027 ;
+                 rdfs:subClassOf HBP_MTD:0000027 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000006 ;
 
@@ -862,59 +862,59 @@
 
 
 
-:HBP_MTD_0000053 rdf:type owl:Class ;
+HBP_MTD:0000053 rdf:type owl:Class ;
 
                  rdfs:label "Lexical Name Entity Recognition"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000054 rdf:type owl:Class ;
+HBP_MTD:0000054 rdf:type owl:Class ;
 
                  rdfs:label "Slice Joining"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000016 .
 
 
 
-:HBP_MTD_0000055 rdf:type owl:Class ;
+HBP_MTD:0000055 rdf:type owl:Class ;
 
                  rdfs:label "Pyramid Construction (BBIC)"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000016 .
 
 
 
-:HBP_MTD_0000056 rdf:type owl:Class ;
+HBP_MTD:0000056 rdf:type owl:Class ;
 
                  rdfs:label "Volume Block Resizing"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000016 .
 
 
 
-:HBP_MTD_0000057 rdf:type owl:Class ;
+HBP_MTD:0000057 rdf:type owl:Class ;
 
                  rdfs:label "Compression"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000016 .
 
 
 
-:HBP_MTD_0000058 rdf:type owl:Class ;
+HBP_MTD:0000058 rdf:type owl:Class ;
 
                  rdfs:label "Reconstruction of Multiple Cell Morphologies from an Image Stack"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000042 ;
 
@@ -924,13 +924,13 @@
 
 
 
-:HBP_MTD_0000059 rdf:type owl:Class ;
+HBP_MTD:0000059 rdf:type owl:Class ;
 
                  rdfs:label "BigBrain - Whole Brain Image Stack Generation"@en ;
 
                  nsu:definition "Data is obtained based on the method outlined in the BigBrain Publication. Please see attached reference for details."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000001 ;
 
@@ -938,13 +938,13 @@
 
 
 
-:HBP_MTD_0000060 rdf:type owl:Class ;
+HBP_MTD:0000060 rdf:type owl:Class ;
 
                  rdfs:label "BigBrain - Brain Region Parcelation"@en ;
 
                  nsu:definition "The parcelations are obtained based on the method outlined in the BigBrain Publication. Please see attached reference for details."@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:used_scale HBP_SCL:0000001 ;
 
@@ -954,31 +954,31 @@
 
 
 
-:HBP_MTD_0000061 rdf:type owl:Class ;
+HBP_MTD:0000061 rdf:type owl:Class ;
 
                  rdfs:label "Image Reslicing"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000016 .
 
 
 
-:HBP_MTD_0000062 rdf:type owl:Class ;
+HBP_MTD:0000062 rdf:type owl:Class ;
 
                  rdfs:label "Projection Extraction"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000016 .
 
 
 
-:HBP_MTD_0000063 rdf:type owl:Class ;
+HBP_MTD:0000063 rdf:type owl:Class ;
 
                  rdfs:label "Extraction of Single Cell Reconstruction from Multi Cell Reconstruction File"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000016 ;
 
@@ -990,382 +990,382 @@
 
 
 
-:HBP_MTD_0000064 rdf:type owl:Class ;
+HBP_MTD:0000064 rdf:type owl:Class ;
 
                  rdfs:label "brain extraction"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 .
+                 rdfs:subClassOf HBP_MTD:0000001 .
 
 
 
-:HBP_MTD_0000065 rdf:type owl:Class ;
+HBP_MTD:0000065 rdf:type owl:Class ;
 
                  rdfs:label "immunostaining of histological sections"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 .
+                 rdfs:subClassOf HBP_MTD:0000001 .
 
 
 
-:HBP_MTD_0000066 rdf:type owl:Class ;
+HBP_MTD:0000066 rdf:type owl:Class ;
 
                  rdfs:label "pressure injection of axonal tracer"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 .
+                 rdfs:subClassOf HBP_MTD:0000001 .
 
 
 
-:HBP_MTD_0000067 rdf:type owl:Class ;
+HBP_MTD:0000067 rdf:type owl:Class ;
 
                  rdfs:label "iontophoretic administration of axonal tracer"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 .
+                 rdfs:subClassOf HBP_MTD:0000001 .
 
 
 
-:HBP_MTD_0000068 rdf:type owl:Class ;
+HBP_MTD:0000068 rdf:type owl:Class ;
 
                  rdfs:label "Volume Block Resizing and Compression"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 ;
+                 rdfs:subClassOf HBP_MTD:0000010 ;
 
                  HBP_PROP:has_domain_aspect HBP_DASP:0000016 .
 
 
 
-:HBP_MTD_0000069 rdf:type owl:Class ;
+HBP_MTD:0000069 rdf:type owl:Class ;
 
                  rdfs:label "modeling method"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000000 .
+                 rdfs:subClassOf HBP_MTD:0000000 .
 
 
 
-:HBP_MTD_0000070 rdf:type owl:Class ;
+HBP_MTD:0000070 rdf:type owl:Class ;
 
                  rdfs:label "repair, and unravel"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000069 .
+                 rdfs:subClassOf HBP_MTD:0000069 .
 
 
 
-:HBP_MTD_0000071 rdf:type owl:Class ;
+HBP_MTD:0000071 rdf:type owl:Class ;
 
                  rdfs:label "repair, unravel, and clone"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000069 .
+                 rdfs:subClassOf HBP_MTD:0000069 .
 
 
 
-:HBP_MTD_0000072 rdf:type owl:Class ;
+HBP_MTD:0000072 rdf:type owl:Class ;
 
                  rdfs:label "repair, unravel, and scale"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000069 .
+                 rdfs:subClassOf HBP_MTD:0000069 .
 
 
 
-:HBP_MTD_0000073 rdf:type owl:Class ;
+HBP_MTD:0000073 rdf:type owl:Class ;
 
                  rdfs:label "repair, unravel, scale, and clone"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000069 .
+                 rdfs:subClassOf HBP_MTD:0000069 .
 
 
 
-:HBP_MTD_0000074 rdf:type owl:Class ;
+HBP_MTD:0000074 rdf:type owl:Class ;
 
                  rdfs:label "repair, unravel, composit"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000069 .
+                 rdfs:subClassOf HBP_MTD:0000069 .
 
 
 
-:HBP_MTD_0000075 rdf:type owl:Class ;
+HBP_MTD:0000075 rdf:type owl:Class ;
 
                  rdfs:label "repair, unravel, composit, and clone"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000069 .
+                 rdfs:subClassOf HBP_MTD:0000069 .
 
 
 
-:HBP_MTD_0000076 rdf:type owl:Class ;
+HBP_MTD:0000076 rdf:type owl:Class ;
 
                  rdfs:label "repair, unravel, composit, and scale"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000069 .
+                 rdfs:subClassOf HBP_MTD:0000069 .
 
 
 
-:HBP_MTD_0000077 rdf:type owl:Class ;
+HBP_MTD:0000077 rdf:type owl:Class ;
 
                  rdfs:label "repair, unravel, composit, scale, and clone"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000069 .
+                 rdfs:subClassOf HBP_MTD:0000069 .
 
 
 
-:HBP_MTD_0000078 rdf:type owl:Class ;
+HBP_MTD:0000078 rdf:type owl:Class ;
 
                  rdfs:label "dissection of brain region"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 .
+                 rdfs:subClassOf HBP_MTD:0000001 .
 
 
 
-:HBP_MTD_0000079 rdf:type owl:Class ;
+HBP_MTD:0000079 rdf:type owl:Class ;
 
                  rdfs:label "subcellular fractionation"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 .
+                 rdfs:subClassOf HBP_MTD:0000001 .
 
 
 
-:HBP_MTD_0000080 rdf:type owl:Class ;
+HBP_MTD:0000080 rdf:type owl:Class ;
 
                  rdfs:label "LC-MS/MS"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000081 rdf:type owl:Class ;
+HBP_MTD:0000081 rdf:type owl:Class ;
 
                  rdfs:label "LC-MS/MS, Label-free quantitation using Progenesis"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000082 rdf:type owl:Class ;
+HBP_MTD:0000082 rdf:type owl:Class ;
 
                  rdfs:label "Label-free quantitation using Progenesis"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000083 rdf:type owl:Class ;
+HBP_MTD:0000083 rdf:type owl:Class ;
 
                  rdfs:label "mapping to stable protein ids"@en ;
 
                  nsu:synonym "mapping protein to stable IDs"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000084 rdf:type owl:Class ;
+HBP_MTD:0000084 rdf:type owl:Class ;
 
                  rdfs:label "Fluorescence activated synaptosome sorting (FASS)"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 .
+                 rdfs:subClassOf HBP_MTD:0000001 .
 
 
 
-:HBP_MTD_0000085 rdf:type owl:Class ;
+HBP_MTD:0000085 rdf:type owl:Class ;
 
                  rdfs:label "LS/MS-MS, Mascot"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000086 rdf:type owl:Class ;
+HBP_MTD:0000086 rdf:type owl:Class ;
 
                  rdfs:label "spectral count, type-specific transcriptome"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000087 rdf:type owl:Class ;
+HBP_MTD:0000087 rdf:type owl:Class ;
 
                  rdfs:label "genecards database, GO"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000088 rdf:type owl:Class ;
+HBP_MTD:0000088 rdf:type owl:Class ;
 
                  rdfs:label "LS/MS-MS, iTRAQUDMSE, ISOQuant"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000089 rdf:type owl:Class ;
+HBP_MTD:0000089 rdf:type owl:Class ;
 
                  rdfs:label "Protein correlation profiling"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000090 rdf:type owl:Class ;
+HBP_MTD:0000090 rdf:type owl:Class ;
 
                  rdfs:label "slice extraction for cellular reconstruction"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 .
+                 rdfs:subClassOf HBP_MTD:0000001 .
 
 
 
-:HBP_MTD_0000091 rdf:type owl:Class ;
+HBP_MTD:0000091 rdf:type owl:Class ;
 
                  rdfs:label "Injection with lucifer yellow"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 .
+                 rdfs:subClassOf HBP_MTD:0000001 .
 
 
 
-:HBP_MTD_0000092 rdf:type owl:Class ;
+HBP_MTD:0000092 rdf:type owl:Class ;
 
                  rdfs:label "Neurolucida reconstruction"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000093 rdf:type owl:Class ;
+HBP_MTD:0000093 rdf:type owl:Class ;
 
                  rdfs:label "Sample preparation for FASS"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 .
+                 rdfs:subClassOf HBP_MTD:0000001 .
 
 
 
-:HBP_MTD_0000094 rdf:type owl:Class ;
+HBP_MTD:0000094 rdf:type owl:Class ;
 
                  rdfs:label "quantitative western blot"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000095 rdf:type owl:Class ;
+HBP_MTD:0000095 rdf:type owl:Class ;
 
                  rdfs:label "iBAQ"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000096 rdf:type owl:Class ;
+HBP_MTD:0000096 rdf:type owl:Class ;
 
                  rdfs:label "subcellular fractionation and immunoisolation"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 .
+                 rdfs:subClassOf HBP_MTD:0000001 .
 
 
 
-:HBP_MTD_0000097 rdf:type owl:Class ;
+HBP_MTD:0000097 rdf:type owl:Class ;
 
                  rdfs:label "LS/MS-MS and iTRAQ"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000098 rdf:type owl:Class ;
+HBP_MTD:0000098 rdf:type owl:Class ;
 
                  rdfs:label "tissue dissociation with Papain dissociation system"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 .
+                 rdfs:subClassOf HBP_MTD:0000001 .
 
 
 
-:HBP_MTD_0000099 rdf:type owl:Class ;
+HBP_MTD:0000099 rdf:type owl:Class ;
 
                  rdfs:label "loading of cell suspension onto C1 Single-Cell AutoPrep IFC microfluidic chip"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 .
+                 rdfs:subClassOf HBP_MTD:0000001 .
 
 
 
-:HBP_MTD_0000100 rdf:type owl:Class ;
+HBP_MTD:0000100 rdf:type owl:Class ;
 
                  rdfs:label "preparation of chips for sequencing, Illumina high-throughput sequencing, and processing of reads into molecule counts"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000101 rdf:type owl:Class ;
+HBP_MTD:0000101 rdf:type owl:Class ;
 
                  rdfs:label "pff export"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000102 rdf:type owl:Class ;
+HBP_MTD:0000102 rdf:type owl:Class ;
 
                  rdfs:label "Pressure injection of biotinylated dextran amines (BDA)"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 .
+                 rdfs:subClassOf HBP_MTD:0000001 .
 
 
 
-:HBP_MTD_0000103 rdf:type owl:Class ;
+HBP_MTD:0000103 rdf:type owl:Class ;
 
                  rdfs:label "iontophoretic administration of Phaseolus vulgaris leucoagglutin (Pha-L)"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 .
+                 rdfs:subClassOf HBP_MTD:0000001 .
 
 
 
-:HBP_MTD_0000104 rdf:type owl:Class ;
+HBP_MTD:0000104 rdf:type owl:Class ;
 
                  rdfs:label "Injection with lucifer yellow and stained with antibody against lucifer yellow and DAB reaction product"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 .
+                 rdfs:subClassOf HBP_MTD:0000001 .
 
 
 
-:HBP_MTD_0000105 rdf:type owl:Class ;
+HBP_MTD:0000105 rdf:type owl:Class ;
 
                  rdfs:label "Neurolucida reconstruction from slices"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000001 .
+                 rdfs:subClassOf HBP_MTD:0000001 .
 
 
 
-:HBP_MTD_0000106 rdf:type owl:Class ;
+HBP_MTD:0000106 rdf:type owl:Class ;
 
                  rdfs:label "MRI with 3 T MRI system"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000107 rdf:type owl:Class ;
+HBP_MTD:0000107 rdf:type owl:Class ;
 
                  rdfs:label "Reconstruction of grey-white matter interface"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000108 rdf:type owl:Class ;
+HBP_MTD:0000108 rdf:type owl:Class ;
 
                  rdfs:label "Anatomical parcellation with BrainVisa, and deliniation of 47 anatomical regions of interest in each hemisphere"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000109 rdf:type owl:Class ;
+HBP_MTD:0000109 rdf:type owl:Class ;
 
                  rdfs:label "OMIM enrichment"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
 
-:HBP_MTD_0000110 rdf:type owl:Class ;
+HBP_MTD:0000110 rdf:type owl:Class ;
 
                  rdfs:label "dN/dS conservation enrichment"@en ;
 
-                 rdfs:subClassOf :HBP_MTD_0000010 .
+                 rdfs:subClassOf HBP_MTD:0000010 .
 
 
