@@ -1,13 +1,13 @@
 ### WARNING ###
 ### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
 ### WARNING ###
-@prefix : <http://www.hbp.FIXME.org/hbp_domain_aspect/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix HBP_DASP: <http://www.hbp.FIXME.org/hbp_domain_aspect/> .
 @base <http://www.hbp.FIXME.org/hbp_domain_aspect> .
 
 <http://www.hbp.FIXME.org/hbp_domain_aspect> rdf:type owl:Ontology ;
@@ -15,7 +15,7 @@
 
 
 
-:HBP_DASP_0000001 rdf:type owl:Class ;
+HBP_DASP:0000001 rdf:type owl:Class ;
 
                   rdfs:label "2D-projection"@en ;
 
@@ -23,13 +23,13 @@
 
 
 
-:HBP_DASP_0000002 rdf:type owl:Class ;
+HBP_DASP:0000002 rdf:type owl:Class ;
 
                   rdfs:label "3D-registration"@en .
 
 
 
-:HBP_DASP_0000003 rdf:type owl:Class ;
+HBP_DASP:0000003 rdf:type owl:Class ;
 
                   rdfs:label "abstract"@en ;
 
@@ -37,7 +37,7 @@
 
 
 
-:HBP_DASP_0000004 rdf:type owl:Class ;
+HBP_DASP:0000004 rdf:type owl:Class ;
 
                   rdfs:label "anatomy"@en ;
 
@@ -45,13 +45,13 @@
 
 
 
-:HBP_DASP_0000005 rdf:type owl:Class ;
+HBP_DASP:0000005 rdf:type owl:Class ;
 
                   rdfs:label "automated reconstruction"@en .
 
 
 
-:HBP_DASP_0000006 rdf:type owl:Class ;
+HBP_DASP:0000006 rdf:type owl:Class ;
 
                   rdfs:label "bicinchoninic acid assay"@en ;
 
@@ -63,13 +63,13 @@
 
 
 
-:HBP_DASP_0000007 rdf:type owl:Class ;
+HBP_DASP:0000007 rdf:type owl:Class ;
 
                   rdfs:label "biocytin"@en .
 
 
 
-:HBP_DASP_0000008 rdf:type owl:Class ;
+HBP_DASP:0000008 rdf:type owl:Class ;
 
                   rdfs:label "brain region"@en ;
 
@@ -77,7 +77,7 @@
 
 
 
-:HBP_DASP_0000009 rdf:type owl:Class ;
+HBP_DASP:0000009 rdf:type owl:Class ;
 
                   rdfs:label "cell density"@en ;
 
@@ -85,7 +85,7 @@
 
 
 
-:HBP_DASP_0000010 rdf:type owl:Class ;
+HBP_DASP:0000010 rdf:type owl:Class ;
 
                   rdfs:label "cell distribution"@en ;
 
@@ -93,7 +93,7 @@
 
 
 
-:HBP_DASP_0000011 rdf:type owl:Class ;
+HBP_DASP:0000011 rdf:type owl:Class ;
 
                   rdfs:label "cellome"@en ;
 
@@ -101,7 +101,7 @@
 
 
 
-:HBP_DASP_0000012 rdf:type owl:Class ;
+HBP_DASP:0000012 rdf:type owl:Class ;
 
                   rdfs:label "coomassie staining"@en ;
 
@@ -109,7 +109,7 @@
 
 
 
-:HBP_DASP_0000013 rdf:type owl:Class ;
+HBP_DASP:0000013 rdf:type owl:Class ;
 
                   rdfs:label "connectome"@en ;
 
@@ -117,7 +117,7 @@
 
 
 
-:HBP_DASP_0000014 rdf:type owl:Class ;
+HBP_DASP:0000014 rdf:type owl:Class ;
 
                   rdfs:label "confocal microscopy"@en ;
 
@@ -125,7 +125,7 @@
 
 
 
-:HBP_DASP_0000015 rdf:type owl:Class ;
+HBP_DASP:0000015 rdf:type owl:Class ;
 
                   rdfs:label "cytoarchitecture"@en ;
 
@@ -133,13 +133,13 @@
 
 
 
-:HBP_DASP_0000016 rdf:type owl:Class ;
+HBP_DASP:0000016 rdf:type owl:Class ;
 
                   rdfs:label "data processing"@en .
 
 
 
-:HBP_DASP_0000017 rdf:type owl:Class ;
+HBP_DASP:0000017 rdf:type owl:Class ;
 
                   rdfs:label "dimension"@en ;
 
@@ -147,13 +147,13 @@
 
 
 
-:HBP_DASP_0000018 rdf:type owl:Class ;
+HBP_DASP:0000018 rdf:type owl:Class ;
 
                   rdfs:label "drawing tube reconstruction"@en .
 
 
 
-:HBP_DASP_0000019 rdf:type owl:Class ;
+HBP_DASP:0000019 rdf:type owl:Class ;
 
                   rdfs:label "electrophysiology"@en ;
 
@@ -161,7 +161,7 @@
 
 
 
-:HBP_DASP_0000020 rdf:type owl:Class ;
+HBP_DASP:0000020 rdf:type owl:Class ;
 
                   rdfs:label "fluorescence microscopy"@en ;
 
@@ -169,7 +169,7 @@
 
 
 
-:HBP_DASP_0000021 rdf:type owl:Class ;
+HBP_DASP:0000021 rdf:type owl:Class ;
 
                   rdfs:label "focused ion beam microscopy"@en ;
 
@@ -181,7 +181,7 @@
 
 
 
-:HBP_DASP_0000022 rdf:type owl:Class ;
+HBP_DASP:0000022 rdf:type owl:Class ;
 
                   rdfs:label "functional magnetic resonance imaging"@en ;
 
@@ -191,7 +191,7 @@
 
 
 
-:HBP_DASP_0000023 rdf:type owl:Class ;
+HBP_DASP:0000023 rdf:type owl:Class ;
 
                   rdfs:label "full text"@en ;
 
@@ -199,7 +199,7 @@
 
 
 
-:HBP_DASP_0000024 rdf:type owl:Class ;
+HBP_DASP:0000024 rdf:type owl:Class ;
 
                   rdfs:label "gene expression"@en ;
 
@@ -207,7 +207,7 @@
 
 
 
-:HBP_DASP_0000025 rdf:type owl:Class ;
+HBP_DASP:0000025 rdf:type owl:Class ;
 
                   rdfs:label "golgi stain"@en ;
 
@@ -215,7 +215,7 @@
 
 
 
-:HBP_DASP_0000026 rdf:type owl:Class ;
+HBP_DASP:0000026 rdf:type owl:Class ;
 
                   rdfs:label "histology"@en ;
 
@@ -223,7 +223,7 @@
 
 
 
-:HBP_DASP_0000027 rdf:type owl:Class ;
+HBP_DASP:0000027 rdf:type owl:Class ;
 
                   rdfs:label "homogenate"@en ;
 
@@ -231,31 +231,31 @@
 
 
 
-:HBP_DASP_0000028 rdf:type owl:Class ;
+HBP_DASP:0000028 rdf:type owl:Class ;
 
                   rdfs:label "image"@en .
 
 
 
-:HBP_DASP_0000029 rdf:type owl:Class ;
+HBP_DASP:0000029 rdf:type owl:Class ;
 
                   rdfs:label "image annotation"@en .
 
 
 
-:HBP_DASP_0000030 rdf:type owl:Class ;
+HBP_DASP:0000030 rdf:type owl:Class ;
 
                   rdfs:label "image stack"@en .
 
 
 
-:HBP_DASP_0000031 rdf:type owl:Class ;
+HBP_DASP:0000031 rdf:type owl:Class ;
 
                   rdfs:label "imaging"@en .
 
 
 
-:HBP_DASP_0000032 rdf:type owl:Class ;
+HBP_DASP:0000032 rdf:type owl:Class ;
 
                   rdfs:label "immunofluorescence labeling of cells"@en ;
 
@@ -267,7 +267,7 @@
 
 
 
-:HBP_DASP_0000033 rdf:type owl:Class ;
+HBP_DASP:0000033 rdf:type owl:Class ;
 
                   rdfs:label "intensity-based absolute quantification"@en ;
 
@@ -275,7 +275,7 @@
 
 
 
-:HBP_DASP_0000034 rdf:type owl:Class ;
+HBP_DASP:0000034 rdf:type owl:Class ;
 
                   rdfs:label "isobaric tags for relative and absolute quantification"@en ;
 
@@ -285,19 +285,19 @@
 
 
 
-:HBP_DASP_0000035 rdf:type owl:Class ;
+HBP_DASP:0000035 rdf:type owl:Class ;
 
                   rdfs:label "labeled"@en .
 
 
 
-:HBP_DASP_0000036 rdf:type owl:Class ;
+HBP_DASP:0000036 rdf:type owl:Class ;
 
                   rdfs:label "labeling"@en .
 
 
 
-:HBP_DASP_0000037 rdf:type owl:Class ;
+HBP_DASP:0000037 rdf:type owl:Class ;
 
                   rdfs:label "liquid chromatography tandem mass spectrometry"@en ;
 
@@ -315,19 +315,19 @@
 
 
 
-:HBP_DASP_0000038 rdf:type owl:Class ;
+HBP_DASP:0000038 rdf:type owl:Class ;
 
                   rdfs:label "local drug injection into tissue slice"@en .
 
 
 
-:HBP_DASP_0000039 rdf:type owl:Class ;
+HBP_DASP:0000039 rdf:type owl:Class ;
 
                   rdfs:label "local field potential"@en .
 
 
 
-:HBP_DASP_0000040 rdf:type owl:Class ;
+HBP_DASP:0000040 rdf:type owl:Class ;
 
                   rdfs:label "loose patch clamp"@en ;
 
@@ -335,7 +335,7 @@
 
 
 
-:HBP_DASP_0000041 rdf:type owl:Class ;
+HBP_DASP:0000041 rdf:type owl:Class ;
 
                   rdfs:label "magnetic resonance imaging"@en ;
 
@@ -345,13 +345,13 @@
 
 
 
-:HBP_DASP_0000042 rdf:type owl:Class ;
+HBP_DASP:0000042 rdf:type owl:Class ;
 
                   rdfs:label "manual reconstruction"@en .
 
 
 
-:HBP_DASP_0000043 rdf:type owl:Class ;
+HBP_DASP:0000043 rdf:type owl:Class ;
 
                   rdfs:label "mapping"@en ;
 
@@ -359,13 +359,13 @@
 
 
 
-:HBP_DASP_0000044 rdf:type owl:Class ;
+HBP_DASP:0000044 rdf:type owl:Class ;
 
                   rdfs:label "mesh generation"@en .
 
 
 
-:HBP_DASP_0000045 rdf:type owl:Class ;
+HBP_DASP:0000045 rdf:type owl:Class ;
 
                   rdfs:label "morphology"@en ;
 
@@ -373,7 +373,7 @@
 
 
 
-:HBP_DASP_0000046 rdf:type owl:Class ;
+HBP_DASP:0000046 rdf:type owl:Class ;
 
                   rdfs:label "multi cells"@en ;
 
@@ -383,7 +383,7 @@
 
 
 
-:HBP_DASP_0000047 rdf:type owl:Class ;
+HBP_DASP:0000047 rdf:type owl:Class ;
 
                   rdfs:label "normalized"@en ;
 
@@ -391,13 +391,13 @@
 
 
 
-:HBP_DASP_0000048 rdf:type owl:Class ;
+HBP_DASP:0000048 rdf:type owl:Class ;
 
                   rdfs:label "parcelation"@en .
 
 
 
-:HBP_DASP_0000049 rdf:type owl:Class ;
+HBP_DASP:0000049 rdf:type owl:Class ;
 
                   rdfs:label "protein expression"@en ;
 
@@ -405,7 +405,7 @@
 
 
 
-:HBP_DASP_0000050 rdf:type owl:Class ;
+HBP_DASP:0000050 rdf:type owl:Class ;
 
                   rdfs:label "proteome"@en ;
 
@@ -413,7 +413,7 @@
 
 
 
-:HBP_DASP_0000051 rdf:type owl:Class ;
+HBP_DASP:0000051 rdf:type owl:Class ;
 
                   rdfs:label "QPCR"@en ;
 
@@ -425,7 +425,7 @@
 
 
 
-:HBP_DASP_0000052 rdf:type owl:Class ;
+HBP_DASP:0000052 rdf:type owl:Class ;
 
                   rdfs:label "receptor density"@en ;
 
@@ -433,7 +433,7 @@
 
 
 
-:HBP_DASP_0000053 rdf:type owl:Class ;
+HBP_DASP:0000053 rdf:type owl:Class ;
 
                   rdfs:label "reconstruction"@en ;
 
@@ -441,7 +441,7 @@
 
 
 
-:HBP_DASP_0000054 rdf:type owl:Class ;
+HBP_DASP:0000054 rdf:type owl:Class ;
 
                   rdfs:label "scanning electron microscopy"@en ;
 
@@ -453,7 +453,7 @@
 
 
 
-:HBP_DASP_0000055 rdf:type owl:Class ;
+HBP_DASP:0000055 rdf:type owl:Class ;
 
                   rdfs:label "scientific publication"@en ;
 
@@ -461,7 +461,7 @@
 
 
 
-:HBP_DASP_0000056 rdf:type owl:Class ;
+HBP_DASP:0000056 rdf:type owl:Class ;
 
                   rdfs:label "segmentation"@en ;
 
@@ -469,7 +469,7 @@
 
 
 
-:HBP_DASP_0000057 rdf:type owl:Class ;
+HBP_DASP:0000057 rdf:type owl:Class ;
 
                   rdfs:label "single cell"@en ;
 
@@ -477,7 +477,7 @@
 
 
 
-:HBP_DASP_0000058 rdf:type owl:Class ;
+HBP_DASP:0000058 rdf:type owl:Class ;
 
                   rdfs:label "silver staining"@en ;
 
@@ -485,7 +485,7 @@
 
 
 
-:HBP_DASP_0000059 rdf:type owl:Class ;
+HBP_DASP:0000059 rdf:type owl:Class ;
 
                   rdfs:label "sodium dodecyl sulfate polyacrylamide gel electrophoresis"@en ;
 
@@ -495,19 +495,19 @@
 
 
 
-:HBP_DASP_0000060 rdf:type owl:Class ;
+HBP_DASP:0000060 rdf:type owl:Class ;
 
                   rdfs:label "stained"@en .
 
 
 
-:HBP_DASP_0000061 rdf:type owl:Class ;
+HBP_DASP:0000061 rdf:type owl:Class ;
 
                   rdfs:label "staining"@en .
 
 
 
-:HBP_DASP_0000062 rdf:type owl:Class ;
+HBP_DASP:0000062 rdf:type owl:Class ;
 
                   rdfs:label "standardized"@en ;
 
@@ -515,7 +515,7 @@
 
 
 
-:HBP_DASP_0000063 rdf:type owl:Class ;
+HBP_DASP:0000063 rdf:type owl:Class ;
 
                   rdfs:label "synaptic vesicle"@en ;
 
@@ -525,7 +525,7 @@
 
 
 
-:HBP_DASP_0000064 rdf:type owl:Class ;
+HBP_DASP:0000064 rdf:type owl:Class ;
 
                   rdfs:label "synaptome"@en ;
 
@@ -533,7 +533,7 @@
 
 
 
-:HBP_DASP_0000065 rdf:type owl:Class ;
+HBP_DASP:0000065 rdf:type owl:Class ;
 
                   rdfs:label "synaptosome"@en ;
 
@@ -549,13 +549,13 @@
 
 
 
-:HBP_DASP_0000066 rdf:type owl:Class ;
+HBP_DASP:0000066 rdf:type owl:Class ;
 
                   rdfs:label "tissue slices"@en .
 
 
 
-:HBP_DASP_0000067 rdf:type owl:Class ;
+HBP_DASP:0000067 rdf:type owl:Class ;
 
                   rdfs:label "transcriptome"@en ;
 
@@ -563,7 +563,7 @@
 
 
 
-:HBP_DASP_0000068 rdf:type owl:Class ;
+HBP_DASP:0000068 rdf:type owl:Class ;
 
                   rdfs:label "transfection"@en ;
 
@@ -571,7 +571,7 @@
 
 
 
-:HBP_DASP_0000069 rdf:type owl:Class ;
+HBP_DASP:0000069 rdf:type owl:Class ;
 
                   rdfs:label "transformed"@en ;
 
@@ -579,7 +579,7 @@
 
 
 
-:HBP_DASP_0000070 rdf:type owl:Class ;
+HBP_DASP:0000070 rdf:type owl:Class ;
 
                   rdfs:label "vasculature"@en ;
 
@@ -587,7 +587,7 @@
 
 
 
-:HBP_DASP_0000071 rdf:type owl:Class ;
+HBP_DASP:0000071 rdf:type owl:Class ;
 
                   rdfs:label "western blot"@en ;
 
@@ -597,7 +597,7 @@
 
 
 
-:HBP_DASP_0000072 rdf:type owl:Class ;
+HBP_DASP:0000072 rdf:type owl:Class ;
 
                   rdfs:label "whole brain"@en ;
 
@@ -605,7 +605,7 @@
 
 
 
-:HBP_DASP_0000073 rdf:type owl:Class ;
+HBP_DASP:0000073 rdf:type owl:Class ;
 
                   rdfs:label "whole cell patch clamp"@en ;
 
@@ -613,7 +613,7 @@
 
 
 
-:HBP_DASP_0000074 rdf:type owl:Class ;
+HBP_DASP:0000074 rdf:type owl:Class ;
 
                   rdfs:label "x-ray microscopy"@en ;
 
@@ -621,133 +621,133 @@
 
 
 
-:HBP_DASP_0000075 rdf:type owl:Class ;
+HBP_DASP:0000075 rdf:type owl:Class ;
 
                   rdfs:label "volumetric atlas"@en .
 
 
 
-:HBP_DASP_0000076 rdf:type owl:Class ;
+HBP_DASP:0000076 rdf:type owl:Class ;
 
                   rdfs:label "volumetric atlas labels"@en .
 
 
 
-:HBP_DASP_0000077 rdf:type owl:Class ;
+HBP_DASP:0000077 rdf:type owl:Class ;
 
                   rdfs:label "MBAT-ready volumetric atlas"@en .
 
 
 
-:HBP_DASP_0000078 rdf:type owl:Class ;
+HBP_DASP:0000078 rdf:type owl:Class ;
 
                   rdfs:label "anatomical MRI"@en .
 
 
 
-:HBP_DASP_0000079 rdf:type owl:Class ;
+HBP_DASP:0000079 rdf:type owl:Class ;
 
                   rdfs:label "weight gradient echo image"@en .
 
 
 
-:HBP_DASP_0000080 rdf:type owl:Class ;
+HBP_DASP:0000080 rdf:type owl:Class ;
 
                   rdfs:label "apparent diffusion coefficient map"@en .
 
 
 
-:HBP_DASP_0000081 rdf:type owl:Class ;
+HBP_DASP:0000081 rdf:type owl:Class ;
 
                   rdfs:label "DTI b0 image resampled"@en .
 
 
 
-:HBP_DASP_0000082 rdf:type owl:Class ;
+HBP_DASP:0000082 rdf:type owl:Class ;
 
                   rdfs:label "diffusion weighted image map"@en .
 
 
 
-:HBP_DASP_0000083 rdf:type owl:Class ;
+HBP_DASP:0000083 rdf:type owl:Class ;
 
                   rdfs:label "fractional anisotropy map"@en .
 
 
 
-:HBP_DASP_0000084 rdf:type owl:Class ;
+HBP_DASP:0000084 rdf:type owl:Class ;
 
                   rdfs:label "color fractional anisotropy map"@en .
 
 
 
-:HBP_DASP_0000085 rdf:type owl:Class ;
+HBP_DASP:0000085 rdf:type owl:Class ;
 
                   rdfs:label "DTI"@en .
 
 
 
-:HBP_DASP_0000086 rdf:type owl:Class ;
+HBP_DASP:0000086 rdf:type owl:Class ;
 
                   rdfs:label "volumetric mask"@en .
 
 
 
-:HBP_DASP_0000087 rdf:type owl:Class ;
+HBP_DASP:0000087 rdf:type owl:Class ;
 
                   rdfs:label "multi cell reconstruction"@en .
 
 
 
-:HBP_DASP_0000088 rdf:type owl:Class ;
+HBP_DASP:0000088 rdf:type owl:Class ;
 
                   rdfs:label "single cell reconstruction"@en .
 
 
 
-:HBP_DASP_0000089 rdf:type owl:Class ;
+HBP_DASP:0000089 rdf:type owl:Class ;
 
                   rdfs:label "stereology"@en .
 
 
 
-:HBP_DASP_0000090 rdf:type owl:Class ;
+HBP_DASP:0000090 rdf:type owl:Class ;
 
                   rdfs:label "brain region dimension"@en .
 
 
 
-:HBP_DASP_0000091 rdf:type owl:Class ;
+HBP_DASP:0000091 rdf:type owl:Class ;
 
                   rdfs:label "3d Mesh"@en .
 
 
 
-:HBP_DASP_0000092 rdf:type owl:Class ;
+HBP_DASP:0000092 rdf:type owl:Class ;
 
                   rdfs:label "single cell electrophysiology"@en .
 
 
 
-:HBP_DASP_0000093 rdf:type owl:Class ;
+HBP_DASP:0000093 rdf:type owl:Class ;
 
                   rdfs:label "rtPCR"@en .
 
 
 
-:HBP_DASP_0000094 rdf:type owl:Class ;
+HBP_DASP:0000094 rdf:type owl:Class ;
 
                   rdfs:label "single cell rtPCR"@en .
 
 
 
-:HBP_DASP_0000095 rdf:type owl:Class ;
+HBP_DASP:0000095 rdf:type owl:Class ;
 
                   rdfs:label "external RNA controls consortium"@en .
 
 
 
-:HBP_DASP_0000096 rdf:type owl:Class ;
+HBP_DASP:0000096 rdf:type owl:Class ;
 
                   rdfs:label "morphological single cell model"@en .
 

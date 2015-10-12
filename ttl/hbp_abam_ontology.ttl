@@ -15,7 +15,6 @@
                 owl:imports <http://www.FIXME.org/nsupper> .
 
 
-
 ABA:1 rdf:type owl:Class ;
 
       rdfs:label "Tuberomammillary nucleus, ventral part"@en ;
