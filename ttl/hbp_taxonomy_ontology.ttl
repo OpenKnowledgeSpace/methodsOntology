@@ -29,7 +29,7 @@
 obo:NCBITaxon_10090 rdf:type owl:Class ;
                        rdfs:label "Mus musculus"@en ;
                        rdfs:subClassOf obo:NCBITaxon_9989 ;
-                       HBP_PROP:has_rank HBP_TAX:999996 ;
+                       HBP_PROP:has_rank HBP_TAX:9999996 ;
                        nsu:synonym "house mouse"@en .
 
 
@@ -37,7 +37,7 @@ obo:NCBITaxon_10090 rdf:type owl:Class ;
 obo:NCBITaxon_10116 rdf:type owl:Class ;
                        rdfs:label "Rattus norvegicus"@en ;
                        rdfs:subClassOf obo:NCBITaxon_9989 ;
-                       HBP_PROP:has_rank HBP_TAX:999996 ;
+                       HBP_PROP:has_rank HBP_TAX:9999996 ;
                        nsu:synonym "Norway rat"@en .
 
 
@@ -60,7 +60,7 @@ obo:NCBITaxon_9443 rdf:type owl:Class ;
 obo:NCBITaxon_9606 rdf:type owl:Class ;
                      rdfs:label "Homo sapiens"@en ;
                      rdfs:subClassOf obo:NCBITaxon_9443 ;
-                     HBP_PROP:has_rank HBP_TAX:999996 ;
+                     HBP_PROP:has_rank HBP_TAX:9999996 ;
                      nsu:synonym "human"@en .
 
 
