@@ -12047,7 +12047,7 @@ ABA:996 rdf:type owl:Class ;
 
 ABA:997 rdf:type owl:Class ;
 
-        rdfs:label "root"@en ;
+        rdfs:label "mouse brain"@en ;
 
         nsu:synonym "root"@en .
 
