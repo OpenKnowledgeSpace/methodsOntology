@@ -28,9 +28,6 @@ HBP_ACT:0000002 a owl:Class ;
 	rdfs:isDefinedBy "Action of adding an annotation to any entity in a PROVenance graph."@en ;
 	rdfs:subClassOf HBP_ACT:0000001 .
 
-HBP_ACT:0000003 a owl:Class ;
-	rdfs:label "Classification"@en ;
-	rdfs:subClassOf HBP_ACT:0000002 .
 
 HBP_ACT:0000004 a owl:Class ;
 	rdfs:label "Computation"@en ;
@@ -40,7 +37,8 @@ HBP_ACT:0000004 a owl:Class ;
 HBP_ACT:0000005 a owl:Class ;
 	rdfs:label "Classification"@en ;
 	rdfs:isDefinedBy "the action or process of classifying an observation using a computational process"@en ;
-	rdfs:subClassOf HBP_ACT:0000004 .
+	rdfs:subClassOf HBP_ACT:0000004 ;
+	rdfs:subClassOf HBP_ACT:0000002 .
 
 HBP_ACT:0000006 a owl:Class ;
 	rdfs:label "Experiment"@en ;
