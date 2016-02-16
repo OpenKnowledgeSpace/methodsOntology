@@ -829,6 +829,58 @@ HBP_DATT:0000066 rdf:type owl:Class ;
                   HBP_PROP:has_file_extension ".mesh" .
 
 
+HBP_DATT:0000067 rdf:type owl:Class ;
 
+                  rdfs:label "application/vnd.hbp.imagestack.bbic.section;version=0"@en ;
+
+                  nsu:definition "Tiled image pyramid containing projections in coronal, axial and sagittal directions in BBIC file format."@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".h5" .
+
+
+HBP_DATT:0000068 rdf:type owl:Class ;
+
+                  rdfs:label "application/vnd.hbp.imagestack.bbic.annot;version=0"@en ;
+
+                  nsu:definition "Tiled image pyramid containing SVG traces in coronal, axial and sagittal directions in BBIC file format."@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".h5" .
+
+
+HBP_DATT:0000069 rdf:type owl:Class ;
+
+                  rdfs:label "application/vnd.hbp.model.recipe.sythesis;version=0"@en ;
+
+                  nsu:definition "Bundle with the structure to run the synthesis of neurons in a pre-defined space."@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".zip" .
+
+
+HBP_DATT:0000070 rdf:type owl:Class ;
+
+                  rdfs:label "application/zip;version=0"@en ;
+
+                  nsu:definition "zip archive."@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".zip" .
+
+
+HBP_DATT:0000071 rdf:type owl:Class ;
+
+                  rdfs:label "image/vnd.nrrd;version=0"@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".nrrd" .
+
+                  
 
 

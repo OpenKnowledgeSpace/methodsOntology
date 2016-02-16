@@ -54,3 +54,7 @@ HBP_DAMO:0000009 rdf:type owl:Class ;
                   rdfs:label "Brain activity"@en ;
                   rdfs:isDefinedBy "Data which elucidate the functional organization of the brain. Scales include: brain, brain region."@en .
 
+HBP_DAMO:0000010 rdf:type owl:Class ;
+                  rdfs:label "Reference atlas"@en ;
+                  rdfs:isDefinedBy "Reference atlases are full-color, high-resolution, web-based digital brain atlases accompanied by a systematic, hierarchically organized taxonomy of a specific species brain structures. "@en .                 
+
