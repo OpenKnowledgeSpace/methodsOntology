@@ -25,7 +25,7 @@ HBP_ROLE:0000000 rdf:type owl:Class ;
 HBP_ROLE:0000001 rdf:type owl:Class ;
 
                   rdfs:label "classification of cell morphological"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000007 .
 
 
@@ -33,7 +33,7 @@ HBP_ROLE:0000001 rdf:type owl:Class ;
 HBP_ROLE:0000002 rdf:type owl:Class ;
 
                   rdfs:label "classification of data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000011 .
 
 
@@ -41,7 +41,7 @@ HBP_ROLE:0000002 rdf:type owl:Class ;
 HBP_ROLE:0000003 rdf:type owl:Class ;
 
                   rdfs:label "classification of cell electrophysiological"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000007 .
 
 
@@ -49,7 +49,7 @@ HBP_ROLE:0000003 rdf:type owl:Class ;
 HBP_ROLE:0000004 rdf:type owl:Class ;
 
                   rdfs:label "acquisition of cell morphological data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000022 .
 
 
@@ -57,7 +57,7 @@ HBP_ROLE:0000004 rdf:type owl:Class ;
 HBP_ROLE:0000005 rdf:type owl:Class ;
 
                   rdfs:label "acquisition of electrophysiological data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000006 .
 
 
@@ -65,7 +65,7 @@ HBP_ROLE:0000005 rdf:type owl:Class ;
 HBP_ROLE:0000006 rdf:type owl:Class ;
 
                   rdfs:label "acquisition of data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000000 .
 
 
@@ -73,7 +73,7 @@ HBP_ROLE:0000006 rdf:type owl:Class ;
 HBP_ROLE:0000007 rdf:type owl:Class ;
 
                   rdfs:label "classificaion of biological entity"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000002 .
 
 
@@ -81,7 +81,7 @@ HBP_ROLE:0000007 rdf:type owl:Class ;
 HBP_ROLE:0000008 rdf:type owl:Class ;
 
                   rdfs:label "classification of data quality"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000002 .
 
 
@@ -89,7 +89,7 @@ HBP_ROLE:0000008 rdf:type owl:Class ;
 HBP_ROLE:0000009 rdf:type owl:Class ;
 
                   rdfs:label "acquisition of microscopy data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000025 .
 
 
@@ -97,7 +97,7 @@ HBP_ROLE:0000009 rdf:type owl:Class ;
 HBP_ROLE:0000010 rdf:type owl:Class ;
 
                   rdfs:label "curation of laboratory data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000013 .
 
 
@@ -105,7 +105,7 @@ HBP_ROLE:0000010 rdf:type owl:Class ;
 HBP_ROLE:0000011 rdf:type owl:Class ;
 
                   rdfs:label "processing of data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000000 .
 
 
@@ -113,7 +113,7 @@ HBP_ROLE:0000011 rdf:type owl:Class ;
 HBP_ROLE:0000012 rdf:type owl:Class ;
 
                   rdfs:label "acquisition of cell molecular data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000022 .
 
 
@@ -121,7 +121,7 @@ HBP_ROLE:0000012 rdf:type owl:Class ;
 HBP_ROLE:0000013 rdf:type owl:Class ;
 
                   rdfs:label "curation of data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000000 .
 
 
@@ -129,7 +129,7 @@ HBP_ROLE:0000013 rdf:type owl:Class ;
 HBP_ROLE:0000014 rdf:type owl:Class ;
 
                   rdfs:label "curation of published data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000013 .
 
 
@@ -137,7 +137,7 @@ HBP_ROLE:0000014 rdf:type owl:Class ;
 HBP_ROLE:0000015 rdf:type owl:Class ;
 
                   rdfs:label "acquisition of single cell electrophysiological data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000005 ;
 
                   rdfs:subClassOf HBP_ROLE:0000022 .
@@ -147,7 +147,7 @@ HBP_ROLE:0000015 rdf:type owl:Class ;
 HBP_ROLE:0000016 rdf:type owl:Class ;
 
                   rdfs:label "acquisiiton of multi cell electrophysiological data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000005 ;
 
                   rdfs:subClassOf HBP_ROLE:0000022 .
@@ -157,7 +157,7 @@ HBP_ROLE:0000016 rdf:type owl:Class ;
 HBP_ROLE:0000017 rdf:type owl:Class ;
 
                   rdfs:label "acquisition of regional electrophysiological data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000005 ;
 
                   rdfs:subClassOf HBP_ROLE:0000025 .
@@ -167,7 +167,7 @@ HBP_ROLE:0000017 rdf:type owl:Class ;
 HBP_ROLE:0000018 rdf:type owl:Class ;
 
                   rdfs:label "processing of biological sample"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000000 .
 
 
@@ -175,7 +175,7 @@ HBP_ROLE:0000018 rdf:type owl:Class ;
 HBP_ROLE:0000019 rdf:type owl:Class ;
 
                   rdfs:label "acquisition of cell density data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000025 .
 
 
@@ -183,7 +183,7 @@ HBP_ROLE:0000019 rdf:type owl:Class ;
 HBP_ROLE:0000020 rdf:type owl:Class ;
 
                   rdfs:label "extraction of tissue"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000018 .
 
 
@@ -191,7 +191,7 @@ HBP_ROLE:0000020 rdf:type owl:Class ;
 HBP_ROLE:0000021 rdf:type owl:Class ;
 
                   rdfs:label "acquisition of region dimension data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000025 .
 
 
@@ -199,7 +199,7 @@ HBP_ROLE:0000021 rdf:type owl:Class ;
 HBP_ROLE:0000022 rdf:type owl:Class ;
 
                   rdfs:label "acquisition of cellular data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000006 .
 
 
@@ -207,7 +207,7 @@ HBP_ROLE:0000022 rdf:type owl:Class ;
 HBP_ROLE:0000023 rdf:type owl:Class ;
 
                   rdfs:label "labeling of sample"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000018 .
 
 
@@ -215,7 +215,7 @@ HBP_ROLE:0000023 rdf:type owl:Class ;
 HBP_ROLE:0000024 rdf:type owl:Class ;
 
                   rdfs:label "preservation of histological sample"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000018 .
 
 
@@ -223,7 +223,7 @@ HBP_ROLE:0000024 rdf:type owl:Class ;
 HBP_ROLE:0000025 rdf:type owl:Class ;
 
                   rdfs:label "acquisition of region data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000006 .
 
 
@@ -231,7 +231,7 @@ HBP_ROLE:0000025 rdf:type owl:Class ;
 HBP_ROLE:0000026 rdf:type owl:Class ;
 
                   rdfs:label "analysis of data"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000011 .
 
 
@@ -239,7 +239,7 @@ HBP_ROLE:0000026 rdf:type owl:Class ;
 HBP_ROLE:0000027 rdf:type owl:Class ;
 
                   rdfs:label "head of laboratory"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000000 .
 
 
@@ -247,7 +247,7 @@ HBP_ROLE:0000027 rdf:type owl:Class ;
 HBP_ROLE:0000028 rdf:type owl:Class ;
 
                   rdfs:label "data integration"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000000 .
 
 
@@ -255,7 +255,7 @@ HBP_ROLE:0000028 rdf:type owl:Class ;
 HBP_ROLE:0000029 rdf:type owl:Class ;
 
                   rdfs:label "modelling"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000000 .
 
 
@@ -263,7 +263,7 @@ HBP_ROLE:0000029 rdf:type owl:Class ;
 HBP_ROLE:0000030 rdf:type owl:Class ;
 
                   rdfs:label "slicer"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000000 .
 
 
@@ -271,7 +271,7 @@ HBP_ROLE:0000030 rdf:type owl:Class ;
 HBP_ROLE:0000031 rdf:type owl:Class ;
 
                   rdfs:label "injector"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000000 .
 
 
@@ -279,7 +279,7 @@ HBP_ROLE:0000031 rdf:type owl:Class ;
 HBP_ROLE:0000033 rdf:type owl:Class ;
 
                   rdfs:label "protein mapping"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000000 .
 
 
@@ -287,7 +287,55 @@ HBP_ROLE:0000033 rdf:type owl:Class ;
 HBP_ROLE:0000034 rdf:type owl:Class ;
 
                   rdfs:label "stained brain sections"@en ;
-
+                  owl:deprecated "true" ;
                   rdfs:subClassOf HBP_ROLE:0000000 .
+
+
+
+HBP_ROLE:0000035 a owl:Class ;
+      rdfs:label "contact person"@en ;
+      rdfs:isDefinedBy "person within a company or organization serving as the coordinator or focal point of information concerning an activity or program" @en ;
+      rdfs:subClassOf HBP_ROLE:0000000 .
+
+HBP_ROLE:0000036 a owl:Class ;
+      rdfs:label "data analyst"@en ;
+      rdfs:isDefinedBy "person in charge of processing, analyzing, inspecting and modelling data" @en ;
+      rdfs:subClassOf HBP_ROLE:0000000 .
+
+HBP_ROLE:0000037 a owl:Class ;
+      rdfs:label "data collector"@en ;
+      rdfs:isDefinedBy "person in charge of acquiring the data including cell morphological data, microscopy data, molecular data, electrophysiological data, cellular data, and other data"@en ;
+      rdfs:subClassOf HBP_ROLE:0000000 .
+
+HBP_ROLE:0000038 a owl:Class ;
+      rdfs:label "data curator"@en ;
+      rdfs:isDefinedBy " person who performs all the processes needed for principled and controlled data creation, maintenance and management to add value to data. In charge of the curation and classification of biological, laboratory and other scientific data." @en ;
+      rdfs:subClassOf HBP_ROLE:0000000 .
+
+HBP_ROLE:0000039 a owl:Class ;
+      rdfs:label "data management"@en ;
+      rdfs:isDefinedBy "person in charge of the development, execution and supervision of plans, policies, programs and practices that control, protect, deliver and enhance the value of data and information assets" @en ;
+      rdfs:subClassOf HBP_ROLE:0000000 .
+
+HBP_ROLE:0000040 a owl:Class ;
+      rdfs:label "principal investigator"@en ;
+      rdfs:isDefinedBy "person who takes direct responsibility for completion of a funded project, directing the research and reporting directly to the funding agency" @en ;
+      rdfs:subClassOf HBP_ROLE:0000000 .
+
+HBP_ROLE:0000041 a owl:Class ;
+      rdfs:label "researcher"@en ;
+      rdfs:isDefinedBy "person who collaborates in supporting the completion of a research project" @en ;
+      rdfs:subClassOf HBP_ROLE:0000000 .
+
+HBP_ROLE:00000042 a owl:Class ;
+      rdfs:label "sponsor"@en ;
+      rdfs:isDefinedBy "a person or organization that pays the cost of a research activity" @en ;
+      rdfs:subClassOf HBP_ROLE:0000000 .
+
+HBP_ROLE:0000043 a owl:Class ;
+      rdfs:label "rights holder"@en ;
+      rdfs:isDefinedBy  "person or organization that owns the legal rights to access the data" @en ;
+      rdfs:subClassOf HBP_ROLE:0000000 .
+
 
       
