@@ -294,47 +294,47 @@ HBP_ROLE:0000034 rdf:type owl:Class ;
 
 HBP_ROLE:0000035 a owl:Class ;
       rdfs:label "contact person"@en ;
-      rdfs:isDefinedBy "person within a company or organization serving as the coordinator or focal point of information concerning an activity or program" @en ;
+      nsu:definition "person within a company or organization serving as the coordinator or focal point of information concerning an activity or program" @en ;
       rdfs:subClassOf HBP_ROLE:0000000 .
 
 HBP_ROLE:0000036 a owl:Class ;
       rdfs:label "data analyst"@en ;
-      rdfs:isDefinedBy "person in charge of processing, analyzing, inspecting and modelling data" @en ;
+      nsu:definition "person in charge of processing, analyzing, inspecting and modelling data" @en ;
       rdfs:subClassOf HBP_ROLE:0000000 .
 
 HBP_ROLE:0000037 a owl:Class ;
       rdfs:label "data collector"@en ;
-      rdfs:isDefinedBy "person in charge of acquiring the data including cell morphological data, microscopy data, molecular data, electrophysiological data, cellular data, and other data"@en ;
+      nsu:definition "person in charge of acquiring the data including cell morphological data, microscopy data, molecular data, electrophysiological data, cellular data, and other data"@en ;
       rdfs:subClassOf HBP_ROLE:0000000 .
 
 HBP_ROLE:0000038 a owl:Class ;
       rdfs:label "data curator"@en ;
-      rdfs:isDefinedBy " person who performs all the processes needed for principled and controlled data creation, maintenance and management to add value to data. In charge of the curation and classification of biological, laboratory and other scientific data." @en ;
+      nsu:definition " person who performs all the processes needed for principled and controlled data creation, maintenance and management to add value to data. In charge of the curation and classification of biological, laboratory and other scientific data." @en ;
       rdfs:subClassOf HBP_ROLE:0000000 .
 
 HBP_ROLE:0000039 a owl:Class ;
       rdfs:label "data management"@en ;
-      rdfs:isDefinedBy "person in charge of the development, execution and supervision of plans, policies, programs and practices that control, protect, deliver and enhance the value of data and information assets" @en ;
+      nsu:definition "person in charge of the development, execution and supervision of plans, policies, programs and practices that control, protect, deliver and enhance the value of data and information assets" @en ;
       rdfs:subClassOf HBP_ROLE:0000000 .
 
 HBP_ROLE:0000040 a owl:Class ;
       rdfs:label "principal investigator"@en ;
-      rdfs:isDefinedBy "person who takes direct responsibility for completion of a funded project, directing the research and reporting directly to the funding agency" @en ;
+      nsu:definition "person who takes direct responsibility for completion of a funded project, directing the research and reporting directly to the funding agency" @en ;
       rdfs:subClassOf HBP_ROLE:0000000 .
 
 HBP_ROLE:0000041 a owl:Class ;
       rdfs:label "researcher"@en ;
-      rdfs:isDefinedBy "person who collaborates in supporting the completion of a research project" @en ;
+      nsu:definition "person who collaborates in supporting the completion of a research project" @en ;
       rdfs:subClassOf HBP_ROLE:0000000 .
 
 HBP_ROLE:00000042 a owl:Class ;
       rdfs:label "sponsor"@en ;
-      rdfs:isDefinedBy "a person or organization that pays the cost of a research activity" @en ;
+      nsu:definition "a person or organization that pays the cost of a research activity" @en ;
       rdfs:subClassOf HBP_ROLE:0000000 .
 
 HBP_ROLE:0000043 a owl:Class ;
       rdfs:label "rights holder"@en ;
-      rdfs:isDefinedBy  "person or organization that owns the legal rights to access the data" @en ;
+      nsu:definition  "person or organization that owns the legal rights to access the data" @en ;
       rdfs:subClassOf HBP_ROLE:0000000 .
 
 
