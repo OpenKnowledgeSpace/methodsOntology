@@ -29,35 +29,35 @@
 
 HBP_STO:0000001 a owl:Class ;
 	rdfs:label "Storage"@en ;
-	rdfs:isDefinedBy "The retention of retrievable data on a computer or other electronic system."@en .
+	nsu:definition "The retention of retrievable data on a computer or other electronic system."@en .
 
 
 HBP_STO:0000002 a owl:Class ;
 	rdfs:label "Web"@en ;
-	rdfs:isDefinedBy "Storage accessible for web download."@en ;
+	nsu:definition "Storage accessible for web download."@en ;
 	rdfs:subClassOf HBP_STO:0000001 .
 
 
 HBP_STO:0000003 a owl:Class ;
 	rdfs:label "Archive"@en ;
-	rdfs:isDefinedBy "Storage for long term archiving of datasets."@en ;
+	nsu:definition "Storage for long term archiving of datasets."@en ;
 	rdfs:subClassOf HBP_STO:0000001 .
 
 
 HBP_STO:0000004 a owl:Class ;
 	rdfs:label "Analytics"@en ;
-	rdfs:isDefinedBy "Temporary storage to run analytics jobs."@en ;
+	nsu:definition "Temporary storage to run analytics jobs."@en ;
 	rdfs:subClassOf HBP_STO:0000001 .
 
 
 HBP_STO:0000005 a owl:Class ;
 	rdfs:label "Source"@en ;
-	rdfs:isDefinedBy "Original URL from which a dataset was downloaded prior integration in neuroinformatic platform."@en ;
+	nsu:definition "Original URL from which a dataset was downloaded prior integration in neuroinformatic platform."@en ;
 	rdfs:subClassOf HBP_STO:0000001 .
 
 HBP_STO:0000006 a owl:Class ;
 	rdfs:label "BBP Swift"@en ;
-	rdfs:isDefinedBy "Document store in Open stack infrastructure provided by Blue Brain Project."@en ;
+	nsu:definition "Document store in Open stack infrastructure provided by Blue Brain Project."@en ;
 	rdfs:subClassOf HBP_STO:0000003 ;
 	rdfs:subClassOf HBP_STO:0000004 .
 
@@ -65,7 +65,7 @@ HBP_STO:0000006 a owl:Class ;
 
 HBP_STO:0000007 a owl:Class ;
 	rdfs:label "Zenodo"@en ;
-	rdfs:isDefinedBy "Zenodo builds and operates a service that enables researchers to share and preserve research results."@en ;
+	nsu:definition "Zenodo builds and operates a service that enables researchers to share and preserve research results."@en ;
 	HBP_PROP:site_url "https://zenodo.org/" ;
 	HBP_PROP:xref_url "https://zenodo.org/${id}/file/${name}" ;
 	rdfs:subClassOf HBP_STO:0000002 .
@@ -73,7 +73,7 @@ HBP_STO:0000007 a owl:Class ;
 
 HBP_STO:0000008 a owl:Class ;
 	rdfs:label "HBP Document service"@en ;
-	rdfs:isDefinedBy "Repository maintined by Human Brain Project."@en ;
+	nsu:definition "Repository maintined by Human Brain Project."@en ;
 	HBP_PROP:site_url "https://collab.humanbrainproject.eu/#/collab/19/nav/3077" ;
 	HBP_PROP:xref_url "https://services.humanbrainproject.eu/document/v0/api/file/youruuid/content/download/?md5=${md5}&expires=${token}" ;
 	rdfs:subClassOf HBP_STO:0000002 .
