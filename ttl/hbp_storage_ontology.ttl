@@ -55,11 +55,12 @@ HBP_STO:0000005 a owl:Class ;
 	rdfs:isDefinedBy "Original URL from which a dataset was downloaded prior integration in neuroinformatic platform."@en ;
 	rdfs:subClassOf HBP_STO:0000001 .
 
-
 HBP_STO:0000006 a owl:Class ;
-	rdfs:label "Source"@en ;
-	rdfs:isDefinedBy "Original URL from which a dataset was downloaded prior integration in neuroinformatic platform."@en ;
-	rdfs:subClassOf HBP_STO:0000001 .
+	rdfs:label "BBP Swift"@en ;
+	rdfs:isDefinedBy "Document store in Open stack infrastructure provided by Blue Brain Project."@en ;
+	rdfs:subClassOf HBP_STO:0000003 ;
+	rdfs:subClassOf HBP_STO:0000004 .
+
 
 
 HBP_STO:0000007 a owl:Class ;
