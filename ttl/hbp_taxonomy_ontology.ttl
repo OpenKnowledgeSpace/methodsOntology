@@ -10,7 +10,7 @@
 @prefix efo: <http://www.ebi.ac.uk/efo/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
-@prefix HBP_PROP: <http://www.hbp.FIXME.org/> .
+@prefix HBP_PROP: <http://www.hbp.FIXME.org/hbp_properties/> .
 @prefix HBP_TAX: <http://www.hbp.FIXME.org/hbp_taxonomy_ontology/> .
 @base <http://www.hbp.FIXME.org/hbp_taxonomy_ontology> .
 

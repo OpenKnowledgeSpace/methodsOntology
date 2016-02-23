@@ -1,0 +1,79 @@
+### WARNING ###
+### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
+### WARNING ###
+@prefix : <http://www.hbp.FIXME.org/hbp_storage_ontology/> .
+@prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix HBP_PROP: <http://www.hbp.FIXME.org/hbp_properties/> .
+@prefix HBP_STO: <http://www.hbp.FIXME.org/hbp_storage_ontology/> .
+@base <http://www.hbp.FIXME.org/hbp_storage_ontology> .
+
+<http://www.hbp.FIXME.org/hbp_storage_ontology> rdf:type owl:Ontology ;
+				owl:imports <http://www.hbp.FIXME.org/hbp_properties> ;
+                owl:imports <http://www.FIXME.org/nsupper> .
+
+
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+
+
+HBP_STO:0000001 a owl:Class ;
+	rdfs:label "Storage"@en ;
+	nsu:definition "The retention of retrievable data on a computer or other electronic system."@en .
+
+
+HBP_STO:0000002 a owl:Class ;
+	rdfs:label "Web"@en ;
+	nsu:definition "Storage accessible for web download."@en ;
+	rdfs:subClassOf HBP_STO:0000001 .
+
+
+HBP_STO:0000003 a owl:Class ;
+	rdfs:label "Archive"@en ;
+	nsu:definition "Storage for long term archiving of datasets."@en ;
+	rdfs:subClassOf HBP_STO:0000001 .
+
+
+HBP_STO:0000004 a owl:Class ;
+	rdfs:label "Analytics"@en ;
+	nsu:definition "Temporary storage to run analytics jobs."@en ;
+	rdfs:subClassOf HBP_STO:0000001 .
+
+
+HBP_STO:0000005 a owl:Class ;
+	rdfs:label "Source"@en ;
+	nsu:definition "Original URL from which a dataset was downloaded prior integration in neuroinformatic platform."@en ;
+	rdfs:subClassOf HBP_STO:0000001 .
+
+HBP_STO:0000006 a owl:Class ;
+	rdfs:label "BBP Swift"@en ;
+	nsu:definition "Document store in Open stack infrastructure provided by Blue Brain Project."@en ;
+	rdfs:subClassOf HBP_STO:0000003 ;
+	rdfs:subClassOf HBP_STO:0000004 .
+
+
+
+HBP_STO:0000007 a owl:Class ;
+	rdfs:label "Zenodo"@en ;
+	nsu:definition "Zenodo builds and operates a service that enables researchers to share and preserve research results."@en ;
+	HBP_PROP:site_url "https://zenodo.org/" ;
+	HBP_PROP:xref_url "https://zenodo.org/${id}/file/${name}" ;
+	rdfs:subClassOf HBP_STO:0000002 .
+
+
+HBP_STO:0000008 a owl:Class ;
+	rdfs:label "HBP Document service"@en ;
+	nsu:definition "Repository maintined by Human Brain Project."@en ;
+	HBP_PROP:site_url "https://collab.humanbrainproject.eu/#/collab/19/nav/3077" ;
+	HBP_PROP:xref_url "https://services.humanbrainproject.eu/document/v0/api/file/youruuid/content/download/?md5=${md5}&expires=${token}" ;
+	rdfs:subClassOf HBP_STO:0000002 .
