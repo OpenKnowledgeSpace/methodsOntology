@@ -77,3 +77,10 @@ HBP_STO:0000008 a owl:Class ;
 	HBP_PROP:site_url "https://collab.humanbrainproject.eu/#/collab/19/nav/3077" ;
 	HBP_PROP:xref_url "https://services.humanbrainproject.eu/document/v0/api/file/youruuid/content/download/?md5=${md5}&expires=${token}" ;
 	rdfs:subClassOf HBP_STO:0000002 .
+
+
+
+HBP_STO:0000009 a owl:Class ;
+	rdfs:label "BBP GPFS"@en ;
+	nsu:definition "GPFS storage."@en ;
+	rdfs:subClassOf HBP_STO:0000003 .
