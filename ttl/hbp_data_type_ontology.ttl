@@ -531,7 +531,7 @@ HBP_DATT:0000039 rdf:type owl:Class ;
 HBP_DATT:0000040 rdf:type owl:Class ;
 
                   rdfs:label "MIME_type"@en .
-
+tartar
 
 
 HBP_DATT:0000041 rdf:type owl:Class ;
@@ -881,6 +881,14 @@ HBP_DATT:0000071 rdf:type owl:Class ;
 
                   HBP_PROP:has_file_extension ".nrrd" .
 
-                  
 
+HBP_DATT:0000072 rdf:type owl:Class ;
+
+                  rdfs:label "application/x-gzip;version=0"@en ;
+
+                  nsu:definition ".tar.gz, .tgz, .gz archive."@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".tar.gz, .tgz, .gz" .                  
 
