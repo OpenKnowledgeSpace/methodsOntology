@@ -531,7 +531,7 @@ HBP_DATT:0000039 rdf:type owl:Class ;
 HBP_DATT:0000040 rdf:type owl:Class ;
 
                   rdfs:label "MIME_type"@en .
-tartar
+
 
 
 HBP_DATT:0000041 rdf:type owl:Class ;
