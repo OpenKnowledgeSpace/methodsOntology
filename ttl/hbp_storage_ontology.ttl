@@ -84,3 +84,27 @@ HBP_STO:0000009 a owl:Class ;
 	rdfs:label "BBP GPFS"@en ;
 	nsu:definition "GPFS storage."@en ;
 	rdfs:subClassOf HBP_STO:0000003 .
+
+
+
+
+HBP_STO:0000010 a owl:Class ;
+	rdfs:label "External database"@en ;
+	nsu:definition "External repositories or databases."@en .
+
+
+HBP_STO:0000011 a owl:Class ;
+	rdfs:label "PubMed"@en ;
+	nsu:definition "PubMed comprises citations for biomedical literature from MEDLINE, life science journals, and online books."@en ;
+	HBP_PROP:site_url "http://www.ncbi.nlm.nih.gov/pubmed" ;
+	HBP_PROP:xref_url "http://www.ncbi.nlm.nih.gov/pubmed/${id}" ;
+	rdfs:subClassOf HBP_STO:0000010 .
+
+HBP_STO:0000012 a owl:Class ;
+	rdfs:label "DOI"@en ;
+	nsu:definition "The DOI system provides a technical and social infrastructure for the registration and use of persistent interoperable identifiers, called DOIs, for use on digital networks."@en ;
+	HBP_PROP:site_url "https://www.doi.org/" ;
+	HBP_PROP:xref_url "https://doi.org//${id}" ;
+	rdfs:subClassOf HBP_STO:0000010 .
+
+
