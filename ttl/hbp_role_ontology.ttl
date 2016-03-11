@@ -105,7 +105,7 @@ HBP_ROLE:0000010 rdf:type owl:Class ;
 HBP_ROLE:0000011 rdf:type owl:Class ;
 
                   rdfs:label "processing of data"@en ;
-                  owl:deprecated "true" ;
+                  owl:deprecated "true" ;         
                   rdfs:subClassOf HBP_ROLE:0000000 .
 
 
@@ -337,5 +337,7 @@ HBP_ROLE:0000043 a owl:Class ;
       nsu:definition  "person or organization that owns the legal rights to access the data" @en ;
       rdfs:subClassOf HBP_ROLE:0000000 .
 
-
-      
+HBP_ROLE:0000044 a owl:Class ;
+      rdfs:label "data processing"@en ;
+      nsu:definition  "the carrying out of operations on data, especially by a computer program, to retrieve, transform, or classify information." @en ;
+      rdfs:subClassOf HBP_ROLE:0000000 .
