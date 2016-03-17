@@ -892,3 +892,11 @@ HBP_DATT:0000072 rdf:type owl:Class ;
 
                   HBP_PROP:has_file_extension ".tar.gz, .tgz, .gz" .                  
 
+
+HBP_DATT:0000073 rdf:type owl:Class ;
+
+                  rdfs:label "image/png;version=0"@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".png" .                  
