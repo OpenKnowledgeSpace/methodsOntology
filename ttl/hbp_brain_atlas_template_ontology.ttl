@@ -22,18 +22,18 @@ HBP_BATT:0000000 rdf:type owl:Class ;
 HBP_BATT:0000001 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_BATT:0000000 ;
 	nsu:definition "Allen mouse common coordinate framework (CCF) version 2 released in 2011 consists of 860 structures were extracted and interpolated to create symetric 3D annotations, provided by the Allen Institute"@en ;
-	rdfs:label "Allen mouse reference atlas V2"@en .
+	rdfs:label "Allen reference atlas V2"@en .
 
 HBP_BATT:0000002 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_BATT:0000000 ;
 	nsu:definition "Allen mouse common coordinate framework (CCF) version 3 released in 2015 is based on a 3D 10um isotropic highly detailed population average of 1675 specimens, provided by the Allen Institute."@en ;
-	rdfs:label "Allen mouse reference atlas V3"@en .
+	rdfs:label "Allen reference atlas V3"@en .
 
 
 HBP_BATT:0000003 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_BATT:0000000 ;
 	nsu:definition "The rat brain atlas template consists of T2*-weighted anatomical MRI at 39 μm isotropic voxels and diffusion tensor imaging (DTI) volumes at 78 μm isotropic voxels resolution from an 80 day old male Sprague Dawley rat, provided by the University of Oslo."@en ;
-	rdfs:label "Waxholm Space rat brain atlas V2"@en .
+	rdfs:label "Waxholm Space rat brain atlas v.2.0"@en .
 
 
 HBP_BATT:0000004 rdf:type owl:Class ;
