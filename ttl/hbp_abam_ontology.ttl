@@ -9,6 +9,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
 @prefix MBA: <http://api.brain-map.org/api/v2/data/Structure/> .
+@prefix HBP_MBA: <http://www.hbp.FIXME.org/hbp_abam_ontology/> .
 @base <http://www.hbp.FIXME.org/hbp_abam_ontology> .
 
 <http://www.hbp.FIXME.org/hbp_abam_ontology> rdf:type owl:Ontology ;
