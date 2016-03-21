@@ -812,14 +812,40 @@ HBP_WHS_SD:0000114 rdf:type owl:Class ;
 
 
 HBP_WHS_SD:0000115 rdf:type owl:Class ;
-                    rdfs:label "cornu ammonis area 1"@en ;
+                    rdfs:label "Cornu Ammonis, Field CA1"@en ;
                     nsu:synonym "CA1"@en ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000090 ] .
 
 
 
 HBP_WHS_SD:0000116 rdf:type owl:Class ;
-                    rdfs:label "cornu ammonis area 3"@en ;
+                    rdfs:label "Cornu Ammonis, Field CA3"@en ;
                     nsu:synonym "CA3"@en ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000090 ] .
+
+
+HBP_WHS_SD:0000117 rdf:type owl:Class ;
+                    rdfs:label "Field CA1, stratum lacunosum-moleculare"@en ;
+                    nsu:synonym "CA1_SLM"@en ;
+                    nsu:synonym "CA1slm"@en ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000115 ].
+
+HBP_WHS_SD:0000118 rdf:type owl:Class ;
+                    rdfs:label "Field CA1, stratum oriens"@en ;
+                    nsu:synonym "CA1_SO"@en ;
+                    nsu:synonym "CA1so"@en ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000115 ].
+
+HBP_WHS_SD:0000119 rdf:type owl:Class ;
+                    rdfs:label "Field CA1, stratum pyramidale"@en ;
+                    nsu:synonym "CA1_SP"@en ;
+                    nsu:synonym "CA1sp"@en ;
+                    nsu:synonym "Field CA1, pyramidal layer"@en ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000115 ].
+
+HBP_WHS_SD:0000120 rdf:type owl:Class ;
+                    rdfs:label "Field CA1, stratum radiatum"@en ;
+                    nsu:synonym "CA1_SR"@en ;
+                    nsu:synonym "CA1sr"@en ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000115 ].
 
