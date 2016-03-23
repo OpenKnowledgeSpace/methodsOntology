@@ -31,8 +31,8 @@ HBP_DAMO:0000003 rdf:type owl:Class ;
                   rdfs:isDefinedBy "Transcriptome includes data which characterize the entire set of transcripts that are detectable in a given entity. Scales include: brain region, partial region, multiple cells, single cell, cellular component."@en .
 
 HBP_DAMO:0000004 rdf:type owl:Class ;
-                  rdfs:label "Parcelation"@en ;
-                  rdfs:isDefinedBy "Parcelations specifically refer to data files in which brain regions and/or structures are defined. Scales include: brain, brain region."@en .
+                  rdfs:label "Parcellation"@en ;
+                  rdfs:isDefinedBy "Parcellations specifically refer to data files in which brain regions and/or structures are defined. Scales include: brain, brain region."@en .
 
 HBP_DAMO:0000005 rdf:type owl:Class ;
                   rdfs:label "Connectivity"@en ;
