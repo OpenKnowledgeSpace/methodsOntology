@@ -16,47 +16,18 @@
 
 
 
-HBP_SEX:0000000 rdf:type owl:Class ;
-
-                 rdfs:label "sex"@en .
-
-
-
 HBP_SEX:0000001 rdf:type owl:Class ;
 
-                 rdfs:label "male"@en ;
-
-                 rdfs:subClassOf HBP_SEX:0000000 .
+                 rdfs:label "male"@en .
 
 
 
 HBP_SEX:0000002 rdf:type owl:Class ;
 
-                 rdfs:label "female"@en ;
-
-                 rdfs:subClassOf HBP_SEX:0000000 .
+                 rdfs:label "female"@en .
 
 
 
 HBP_SEX:0000003 rdf:type owl:Class ;
 
-                 rdfs:label "hermaphrodite"@en ;
-
-                 rdfs:subClassOf HBP_SEX:0000000 .
-
-
-
-HBP_SEX:0000004 rdf:type owl:Class ;
-
-                 rdfs:label "intersex"@en ;
-
-                 rdfs:subClassOf HBP_SEX:0000000 .
-
-
-
-HBP_SEX:0000005 rdf:type owl:Class ;
-
-                 rdfs:label "androdioetic"@en ;
-
-                 rdfs:subClassOf HBP_SEX:0000000 .
-
+                 rdfs:label "hermaphrodite"@en .
