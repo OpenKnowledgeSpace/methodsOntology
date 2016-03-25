@@ -8648,7 +8648,7 @@ MBA:69 rdf:type owl:Class ;
 
 MBA:690 rdf:type owl:Class ;
 
-        rdfs:label "mammilothalmic tract"@en ;
+        rdfs:label "mammilothalamic tract"@en ;
 
         nsu:synonym "mtt"@en ;
 

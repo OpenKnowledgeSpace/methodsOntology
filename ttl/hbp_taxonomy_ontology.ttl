@@ -181,7 +181,7 @@ nsu:nsu_0000001 rdfs:label "concept"@en .
 ###  http://www.ebi.ac.uk/efo/EFO_0000606
 
 efo:EFO_0000606 rdf:type owl:Class ;                
-                rdfs:label "C57BL/6J Dawley"@en ;
+                rdfs:label "C57BL/6J"@en ;
                 rdfs:subClassOf obo:NCBITaxon_10090 ;
                 HBP_PROP:has_rank HBP_TAX:9999998 ;
                 nsu:definition "C57BL/6J is a mouse strain as described in Jackson Laboratory."@en ;
