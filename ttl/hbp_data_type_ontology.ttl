@@ -900,3 +900,24 @@ HBP_DATT:0000073 rdf:type owl:Class ;
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".png" .                  
+
+
+HBP_DATT:0000074 rdf:type owl:Class ;
+
+                  rdfs:label "application/vnd.hbp.transcriptome.cef;version=0"@en ;
+
+                  nsu:definition "cell expression format files are human-readable, tab-delimited text files that can be easily parsed and generated from any scripting language, designed to simplify the exchange and manipulation of very large-scale transcriptomics data, particularly from single-cell RNA-seq."@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".cef" .
+
+
+
+HBP_DATT:0000075 rdf:type owl:Class ;
+
+                  rdfs:label "application/vnd.hbp.transcriptome.xlsx;version=0"@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".xlsx" .
