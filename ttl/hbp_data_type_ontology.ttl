@@ -912,12 +912,3 @@ HBP_DATT:0000074 rdf:type owl:Class ;
 
                   HBP_PROP:has_file_extension ".cef" .
 
-
-
-HBP_DATT:0000075 rdf:type owl:Class ;
-
-                  rdfs:label "application/vnd.hbp.transcriptome.xlsx;version=0"@en ;
-
-                  rdfs:subClassOf HBP_DATT:0000040 ;
-
-                  HBP_PROP:has_file_extension ".xlsx" .
