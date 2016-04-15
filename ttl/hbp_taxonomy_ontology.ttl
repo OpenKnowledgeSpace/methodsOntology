@@ -30,6 +30,7 @@ obo:NCBITaxon_10090 rdf:type owl:Class ;
                        rdfs:label "Mus musculus"@en ;
                        rdfs:subClassOf obo:NCBITaxon_9989 ;
                        HBP_PROP:has_rank HBP_TAX:9999996 ;
+                       
                        nsu:synonym "house mouse"@en .
 
 
@@ -38,6 +39,7 @@ obo:NCBITaxon_10116 rdf:type owl:Class ;
                        rdfs:label "Rattus norvegicus"@en ;
                        rdfs:subClassOf obo:NCBITaxon_9989 ;
                        HBP_PROP:has_rank HBP_TAX:9999996 ;
+                      
                        nsu:synonym "Norway rat"@en .
 
 
@@ -67,6 +69,7 @@ obo:NCBITaxon_9606 rdf:type owl:Class ;
                      rdfs:label "Homo sapiens"@en ;
                      rdfs:subClassOf obo:NCBITaxon_9443 ;
                      HBP_PROP:has_rank HBP_TAX:9999996 ;
+                     
                      nsu:synonym "human"@en .
 
 
@@ -74,6 +77,7 @@ obo:NCBITaxon_9541 rdf:type owl:Class ;
                      rdfs:label "Macaca fascicularis"@en ;
                      rdfs:subClassOf obo:NCBITaxon_9443 ;
                      HBP_PROP:has_rank HBP_TAX:9999996 ;
+                     
                      nsu:synonym "crab-eating macaque"@en .
 
 
@@ -81,6 +85,7 @@ obo:NCBITaxon_9544 rdf:type owl:Class ;
                      rdfs:label "Macaca mulatta"@en ;
                      rdfs:subClassOf obo:NCBITaxon_9443 ;
                      HBP_PROP:has_rank HBP_TAX:9999996 ;
+                     
                      nsu:synonym "Rhesus monkey"@en .
 
 
@@ -88,6 +93,7 @@ obo:NCBITaxon_13616 rdf:type owl:Class ;
                      rdfs:label "Monodelphis domestica"@en ;
                      rdfs:subClassOf obo:NCBITaxon_38605 ;
                      HBP_PROP:has_rank HBP_TAX:9999996 ;
+                     
                      nsu:synonym "gray short-tailed opossum"@en .
 
 
@@ -95,6 +101,7 @@ obo:NCBITaxon_9483 rdf:type owl:Class ;
                      rdfs:label "Callithrix jacchus"@en ;
                      rdfs:subClassOf obo:NCBITaxon_9443 ;
                      HBP_PROP:has_rank HBP_TAX:9999996 ;
+                     
                      nsu:synonym "white ear-tufted marmoset"@en .
 
 

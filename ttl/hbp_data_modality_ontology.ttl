@@ -19,42 +19,71 @@
 
 
 HBP_DAMO:0000001 rdf:type owl:Class ;
-                  rdfs:label "Reconstruction"@en ;                
-                  rdfs:isDefinedBy "Reconstructions pertain to data which elucidate the morphology of a given entity. The scales which can be used to characterize this data modality include: brain, multiple cells, paired cells, single cell, and partial cell."@en .
+                  rdfs:label "Morphology reconstruction"@en ;                
+                  rdfs:isDefinedBy "Reconstructions pertain to data which elucidate the morphology of a given entity. The scales which can be used to characterize this data modality include: brain, multiple cells, paired cells, single cell, and partial cell."@en ;
+                  rdfs:subClassOf HBP_DAMO:0000006 .
 
 HBP_DAMO:0000002 rdf:type owl:Class ;
                   rdfs:label "Proteome"@en ;
-                  rdfs:isDefinedBy "This modality includes data which delinate the identities and sometimes quantities of proteins found in an entity. Applicable scales include: brain region, partial region, multiple cells, single cell, cellular component."@en .
+                  rdfs:isDefinedBy "This modality includes data which delinate the identities and sometimes quantities of proteins found in an entity. Applicable scales include: brain region, partial region, multiple cells, single cell, cellular component."@en ;
+                  rdfs:subClassOf HBP_DAMO:0000012 .
 
 HBP_DAMO:0000003 rdf:type owl:Class ;
                   rdfs:label "Transcriptome"@en ;
-                  rdfs:isDefinedBy "Transcriptome includes data which characterize the entire set of transcripts that are detectable in a given entity. Scales include: brain region, partial region, multiple cells, single cell, cellular component."@en .
+                  rdfs:isDefinedBy "Transcriptome includes data which characterize the entire set of transcripts that are detectable in a given entity. Scales include: brain region, partial region, multiple cells, single cell, cellular component."@en ;
+                  rdfs:subClassOf HBP_DAMO:0000012 .
 
 HBP_DAMO:0000004 rdf:type owl:Class ;
                   rdfs:label "Parcellation"@en ;
-                  rdfs:isDefinedBy "Parcellations specifically refer to data files in which brain regions and/or structures are defined. Scales include: brain, brain region."@en .
+                  rdfs:isDefinedBy "Parcellations specifically refer to data files in which brain regions and/or structures are defined. Scales include: brain, brain region."@en ;
+                  rdfs:subClassOf HBP_DAMO:0000006 .
 
 HBP_DAMO:0000005 rdf:type owl:Class ;
-                  rdfs:label "Connectivity"@en ;
-                  rdfs:isDefinedBy "Connectivity includes data which elucidate the physical interactions between two or more entities. Scales include: brain region, multiple cells, cellular component."@en .
+                  rdfs:label "Anatomical connectivity"@en ;
+                  rdfs:isDefinedBy "Anatomical connectivity includes data which elucidate the physical or structural (synaptic) interactions between two or more entities. Scales include: brain region, multiple cells, cellular component."@en ;
+                  rdfs:subClassOf HBP_DAMO:0000006 .
 
 HBP_DAMO:0000006 rdf:type owl:Class ;
-                  rdfs:label "Anatomical feature characterization"@en ;
+                  rdfs:label "Anatomy"@en ;
                   rdfs:isDefinedBy "This modality broadly characterizes studies which elucidate the structure of an entity. Applicable scales include: brain, brain regions, partial region, multiple cells, and single cell."@en .
 
 HBP_DAMO:0000007 rdf:type owl:Class ;
-                  rdfs:label "Physiological feature characterization"@en ;
+                  rdfs:label "Physiology"@en ;
                   rdfs:isDefinedBy "Data in this modality characterize the chemical and physical functions which are carried out by an entity. Scales include: brain, brain regions, partial region, multiple cells, and single cell, cellular compartment."@en .
 
 HBP_DAMO:0000008 rdf:type owl:Class ;
                   rdfs:label "Electrical activity"@en ;
-                  rdfs:isDefinedBy "This modality includes data which characterize the electrical properties of an entity, e.g. by measuring the flow of ions. Scales can include: brain region, multiple cells, single cell."@en .
+                  rdfs:isDefinedBy "This modality includes data which characterize the electrical properties of an entity, e.g. by measuring the flow of ions. Scales can include: multiple cells, single cell."@en ;
+                  rdfs:subClassOf HBP_DAMO:0000007 .
 
 HBP_DAMO:0000009 rdf:type owl:Class ;
                   rdfs:label "Brain activity"@en ;
-                  rdfs:isDefinedBy "Data which elucidate the functional organization of the brain. Scales include: brain, brain region."@en .
+                  rdfs:isDefinedBy "Data which elucidate the functional organization of the brain. Scales include: brain, brain region."@en ;
+                  rdfs:subClassOf HBP_DAMO:0000007 .
 
 HBP_DAMO:0000010 rdf:type owl:Class ;
                   rdfs:label "Reference atlas"@en ;
-                  rdfs:isDefinedBy "Reference atlases are full-color, high-resolution, web-based digital brain atlases accompanied by a systematic, hierarchically organized taxonomy of a specific species brain structures. "@en .                 
+                  rdfs:isDefinedBy "Reference atlases are full-color, high-resolution, web-based digital brain atlases accompanied by a systematic, hierarchically organized taxonomy of a specific species brain structures. "@en ;
+                  rdfs:subClassOf HBP_DAMO:0000006 .
 
+HBP_DAMO:0000011 rdf:type owl:Class ;
+                  rdfs:label "Behaviour"@en ;
+                  rdfs:isDefinedBy "The systematic analysis and investigation of human or animal behaviour in response to a praticular situation or stimulus through controlled and naturalistic observation and disciplined scientific experimentation. "@en .
+
+HBP_DAMO:0000012 rdf:type owl:Class ;
+                  rdfs:label "Expression"@en ;
+                  rdfs:isDefinedBy "This modality includes data which characterize the transcripts or proteins that are detected in a given entity. Scales include: brain region, partial region, multiple cells, single cell, cellular component. "@en .
+
+HBP_DAMO:0000013 rdf:type owl:Class ;
+                  rdfs:label "Model"@en ;
+                  rdfs:isDefinedBy "This modality includes the mathematical description of the properties of nerve cells or neurons that is designed to accurately describe and predict biological processes. Scales can include: multiple cells, single cell. "@en .
+
+HBP_DAMO:0000014 rdf:type owl:Class ;
+                  rdfs:label "Functional connectivity"@en ;
+                  rdfs:isDefinedBy "Functional connectivity include data assessing the statistical dependencies (correlations or covariance, spectral coherence or phase-locking) of time-dependent activity between two brain regions. Functional connectivity does not make any explicit reference to specific directional effects or to an underlying structural model. Scales include: Brain, Brain regions."@en ;
+                  rdfs:subClassOf HBP_DAMO:0000007 .
+
+HBP_DAMO:0000015 rdf:type owl:Class ;
+                  rdfs:label "Effective connectivity"@en ;
+                  rdfs:isDefinedBy "Effective connectivity include data assessing the directed dependencies between two anatomical entities (brain regions) typically through Granger causality or by fitting of a model implying causal relationships such as Dynamical Causal Modelling or transfer entropy. Scales include: Brain, Brain regions."@en ;
+                  rdfs:subClassOf HBP_DAMO:0000007 .
