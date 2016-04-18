@@ -912,3 +912,13 @@ HBP_DATT:0000074 rdf:type owl:Class ;
 
                   HBP_PROP:has_file_extension ".cef" .
 
+
+HBP_DATT:0000075 rdf:type owl:Class ;
+
+                  rdfs:label "application/sbml+xml;version=0"@en ;
+
+                  nsu:definition "The Systems Biology Markup Language (SBML) is a machine-readable exchange format for computational models of biological processes. Its strength is in representating phenomena at the scale of biochemical reactions but it is not limited to that."@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".xml" .
