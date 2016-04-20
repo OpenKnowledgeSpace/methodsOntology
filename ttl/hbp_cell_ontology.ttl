@@ -1152,11 +1152,13 @@ HBP_CELL:0000146 rdf:type owl:Class ;
                   nsu:synonym "SP_IS1"@en.
 
 HBP_CELL:0000147 rdf:type owl:Class ;
-                  owl:equivalentClass ncel:nlx_cell_100209;  
+                  
                   rdfs:label "Hippocampus CA1 Schaffer collateral-associated cell"@en ;
                   nsu:synonym "SP_SCA"@en.
 
 
-
-
-
+HBP_CELL:0000148 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nlx_149135; 
+                  rdfs:label "Neostriatum direct pathway spiny neuron" @en ;
+                  nsu:synonym "MSNs"@en;
+                  nsu:synonym "Striatal medium spiny neuron"@en.

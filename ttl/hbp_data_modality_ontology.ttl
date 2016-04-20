@@ -87,3 +87,8 @@ HBP_DAMO:0000015 rdf:type owl:Class ;
                   rdfs:label "Effective connectivity"@en ;
                   rdfs:isDefinedBy "Effective connectivity include data assessing the directed dependencies between two anatomical entities (brain regions) typically through Granger causality or by fitting of a model implying causal relationships such as Dynamical Causal Modelling or transfer entropy. Scales include: Brain, Brain regions."@en ;
                   rdfs:subClassOf HBP_DAMO:0000007 .
+
+HBP_DAMO:0000016 rdf:type owl:Class ;
+                  rdfs:label "Kinetic model"@en ;
+                  rdfs:isDefinedBy "This modality includes the computational models of biochemical reactions that may include the rate of the reaction, substrates and products, order of binding, reaction conditions (pH, temperature, concentration, etc..) and effectors (inhibitors, activators) . "@en ;
+                  rdfs:subClassOf HBP_DAMO:0000013 .
