@@ -68,7 +68,7 @@ HBP_SCL:0000011 rdf:type owl:Class ;
                  rdfs:label "chunk of organ"@en ;
                  nsu:definition "This scale is defined base on the reality that in the process of isolating samples from smaller scales it is often more convenient to obtain sub-sample from a sample which exists at the organ scale."@en ;
                  rdfs:subClassOf HBP_SCL:0000002 ;
-                 HBP_PROP:is_smaller_than HBP_SCL:00000012 .
+                 HBP_PROP:is_smaller_than HBP_SCL:0000012 .
 
 
 
