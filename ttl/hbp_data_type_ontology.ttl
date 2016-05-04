@@ -853,7 +853,7 @@ HBP_DATT:0000068 rdf:type owl:Class ;
 
 HBP_DATT:0000069 rdf:type owl:Class ;
 
-                  rdfs:label "application/vnd.hbp.model.recipe.sythesis;version=0"@en ;
+                  rdfs:label "application/vnd.hbp.model.recipe.synthesis;version=0"@en ;
 
                   nsu:definition "Bundle with the structure to run the synthesis of neurons in a pre-defined space."@en ;
 
@@ -904,7 +904,7 @@ HBP_DATT:0000073 rdf:type owl:Class ;
 
 HBP_DATT:0000074 rdf:type owl:Class ;
 
-                  rdfs:label "application/vnd.hbp.transcriptome.cef;version=0"@en ;
+                  rdfs:label "application/cef;version=0"@en ;
 
                   nsu:definition "cell expression format files are human-readable, tab-delimited text files that can be easily parsed and generated from any scripting language, designed to simplify the exchange and manipulation of very large-scale transcriptomics data, particularly from single-cell RNA-seq."@en ;
 
@@ -922,3 +922,15 @@ HBP_DATT:0000075 rdf:type owl:Class ;
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".xml" .
+
+
+
+HBP_DATT:0000076 rdf:type owl:Class ;
+
+                  rdfs:label "application/hoc;version=0"@en ;
+
+                  nsu:definition "Programming language of the NEURON software package"@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".hoc" .

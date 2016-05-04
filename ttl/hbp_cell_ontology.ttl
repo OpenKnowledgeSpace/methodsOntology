@@ -1162,3 +1162,9 @@ HBP_CELL:0000148 rdf:type owl:Class ;
                   rdfs:label "Neostriatum direct pathway spiny neuron" @en ;
                   nsu:synonym "MSNs"@en;
                   nsu:synonym "Striatal medium spiny neuron"@en.
+
+
+HBP_CELL:0000146 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:sao383526650;  
+                  rdfs:label "Hippocampus CA3 pyramidal cell"@en ;
+                  nsu:synonym "CA3_PC"@en.
