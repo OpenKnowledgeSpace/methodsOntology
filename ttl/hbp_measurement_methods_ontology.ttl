@@ -8,7 +8,7 @@
 @prefix HBP_MEM: <http://www.hbp.FIXME.org/hbp_measurement_methods/> .
 
 <http://www.hbp.FIXME.org/hbp_measurement_methods> rdf:type owl:Ontology ;
-	owl:imports <http://www.FIXME.org/nsupper> .
+	owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
 # 
 # 
 # #################################################################

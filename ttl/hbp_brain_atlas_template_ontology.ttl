@@ -13,7 +13,7 @@
 @base <http://www.hbp.FIXME.org/hbp_brain_atlas_template_ontology> .
 
 <http://www.hbp.FIXME.org/hbp_brain_atlas_template_ontology> rdf:type owl:Ontology ;
-                owl:imports <http://www.FIXME.org/nsupper> .
+                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
 
 
 HBP_BATT:0000000 rdf:type owl:Class ;
