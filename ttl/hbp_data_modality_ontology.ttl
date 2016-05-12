@@ -4,6 +4,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix nsu: <http://www.FIXME.org/nsupper#> .
 @prefix HBP_DAMO: <http://www.hbp.FIXME.org/hbp_data_modality_ontology/> .
 @base <http://www.hbp.FIXME.org/hbp_data_modality_ontology> .
 
@@ -21,152 +22,152 @@
 
 HBP_DAMO:0000001 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000006 ;
-	rdfs:isDefinedBy "Morphology reconstruction pertain to data which elucidate the morphology of rdf:type given entity. The scales which can be used to characterize this data modality include: brain, multiple cells and paired cells."@en ;
+	nsu:definition "Morphology reconstruction pertain to data which elucidate the morphology of rdf:type given entity. The scales which can be used to characterize this data modality include: brain, multiple cells and paired cells."@en ;
 	rdfs:label "Morphology reconstruction"@en .
 # 
 
 HBP_DAMO:0000002 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000012 ;
-	rdfs:isDefinedBy "This modality includes data which delinate the identities and sometimes quantities of proteins found in an entity. Applicable scales include: brain region, partial region, multiple cells, single cell, cellular component."@en ;
+	nsu:definition "This modality includes data which delinate the identities and sometimes quantities of proteins found in an entity. Applicable scales include: brain region, partial region, multiple cells, single cell, cellular component."@en ;
 	rdfs:label "Protein expression"@en .
 # 
 
 HBP_DAMO:0000003 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000022 ;
-	rdfs:isDefinedBy "Transcriptome includes data which characterize the entire set of transcripts that are detectable in rdf:type given entity. Scales include: brain region, partial region, multiple cells, single cell, cellular component."@en ;
+	nsu:definition "Transcriptome includes data which characterize the entire set of transcripts that are detectable in rdf:type given entity. Scales include: brain region, partial region, multiple cells, single cell, cellular component."@en ;
 	rdfs:label "Transcriptomics"@en .
 # 
 
 HBP_DAMO:0000004 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000006 ;
-	rdfs:isDefinedBy "Parcellations specifically refer to data files in which brain regions and/or structures are defined. Scales include: brain, brain region."@en ;
+	nsu:definition "Parcellations specifically refer to data files in which brain regions and/or structures are defined. Scales include: brain, brain region."@en ;
 	rdfs:label "Parcellation"@en .
 # 
 
 HBP_DAMO:0000005 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000006 ;
-	rdfs:isDefinedBy "Anatomical connectivity includes data which elucidate the physical or structural (synaptic) interactions between two or more entities. Scales include: brain region, multiple cells, cellular component."@en ;
+	nsu:definition "Anatomical connectivity includes data which elucidate the physical or structural (synaptic) interactions between two or more entities. Scales include: brain region, multiple cells, cellular component."@en ;
 	rdfs:label "Anatomical connectivity"@en .
 # 
 
 HBP_DAMO:0000006 rdf:type owl:Class ;
-	rdfs:isDefinedBy "This modality broadly characterizes studies which elucidate the structure of an entity. Applicable scales include: brain, brain regions, partial region, multiple cells, and single cell."@en ;
+	nsu:definition "This modality broadly characterizes studies which elucidate the structure of an entity. Applicable scales include: brain, brain regions, partial region, multiple cells, and single cell."@en ;
 	rdfs:label "Anatomy"@en .
 # 
 
 HBP_DAMO:0000007 rdf:type owl:Class ;
-	rdfs:isDefinedBy "Data in this modality characterize the chemical and physical functions which are carried out by an entity. Scales include: brain, brain regions, partial region, multiple cells, and single cell, cellular compartment."@en ;
+	nsu:definition "Data in this modality characterize the chemical and physical functions which are carried out by an entity. Scales include: brain, brain regions, partial region, multiple cells, and single cell, cellular compartment."@en ;
 	rdfs:label "Physiology"@en .
 # 
 
 HBP_DAMO:0000008 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000007 ;
-	rdfs:isDefinedBy "This modality includes data which characterize the electrical properties of an entity, e.g. by measuring the flow of ions. Scales can include: multiple cells, single cell."@en ;
+	nsu:definition "This modality includes data which characterize the electrical properties of an entity, e.g. by measuring the flow of ions. Scales can include: multiple cells, single cell."@en ;
 	rdfs:label "Electrophysiology"@en .
 # 
 
 HBP_DAMO:0000010 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000006 ;
-	rdfs:isDefinedBy "Reference atlases are full-color, high-resolution, web-based digital brain atlases accompanied by rdf:type systematic, hierarchically organized taxonomy of rdf:type specific species brain structures. "@en ;
+	nsu:definition "Reference atlases are full-color, high-resolution, web-based digital brain atlases accompanied by rdf:type systematic, hierarchically organized taxonomy of rdf:type specific species brain structures. "@en ;
 	rdfs:label "Reference atlas"@en .
 # 
 
 HBP_DAMO:0000011 rdf:type owl:Class ;
-	rdfs:isDefinedBy "The systematic analysis and investigation of human or animal behaviour in response to rdf:type praticular situation or stimulus through controlled and naturalistic observation and disciplined scientific experimentation. "@en ;
+	nsu:definition "The systematic analysis and investigation of human or animal behaviour in response to rdf:type praticular situation or stimulus through controlled and naturalistic observation and disciplined scientific experimentation. "@en ;
 	rdfs:label "Behaviour"@en .
 # 
 
 HBP_DAMO:0000012 rdf:type owl:Class ;
-	rdfs:isDefinedBy "This modality includes data which characterize the transcripts or proteins that are detected in rdf:type given entity. Scales include: brain region, partial region, multiple cells, single cell, cellular component. "@en ;
+	nsu:definition "This modality includes data which characterize the transcripts or proteins that are detected in rdf:type given entity. Scales include: brain region, partial region, multiple cells, single cell, cellular component. "@en ;
 	rdfs:label "Expression"@en .
 # 
 
 HBP_DAMO:0000013 rdf:type owl:Class ;
-	rdfs:isDefinedBy "This modality includes the mathematical description of the properties of nerve cells or other biological entities, it is designed to accurately describe and predict biological processes. Scales can include: multiple cells, single cell, proteins. "@en ;
+	nsu:definition "This modality includes the mathematical description of the properties of nerve cells or other biological entities, it is designed to accurately describe and predict biological processes. Scales can include: multiple cells, single cell, proteins. "@en ;
 	rdfs:label "Model"@en .
 # 
 
 HBP_DAMO:0000014 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000007 ;
-	rdfs:isDefinedBy "Functional connectivity include data assessing the statistical dependencies (correlations or covariance, spectral coherence or phase-locking) of time-dependent activity between two brain regions. Functional connectivity does not make any explicit reference to specific directional effects or to an underlying structural model. Scales include: Brain, Brain regions."@en ;
+	nsu:definition "Functional connectivity include data assessing the statistical dependencies (correlations or covariance, spectral coherence or phase-locking) of time-dependent activity between two brain regions. Functional connectivity does not make any explicit reference to specific directional effects or to an underlying structural model. Scales include: Brain, Brain regions."@en ;
 	rdfs:label "Functional connectivity"@en .
 # 
 
 HBP_DAMO:0000015 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000007 ;
-	rdfs:isDefinedBy "Effective connectivity include data assessing the directed dependencies between two anatomical entities (brain regions) typically through Granger causality or by fitting of rdf:type model implying causal relationships such as Dynamical Causal Modelling or transfer entropy. Scales include: Brain, Brain regions."@en ;
+	nsu:definition "Effective connectivity include data assessing the directed dependencies between two anatomical entities (brain regions) typically through Granger causality or by fitting of rdf:type model implying causal relationships such as Dynamical Causal Modelling or transfer entropy. Scales include: Brain, Brain regions."@en ;
 	rdfs:label "Effective connectivity"@en .
 # 
 
 HBP_DAMO:0000016 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000013 ;
-	rdfs:isDefinedBy "This modality includes the computational models of biochemical reactions that may include the rate of the reaction, substrates and products, order of binding, reaction conditions (pH, temperature, concentration, etc..) and effectors (inhibitors, activators) . "@en ;
+	nsu:definition "This modality includes the computational models of biochemical reactions that may include the rate of the reaction, substrates and products, order of binding, reaction conditions (pH, temperature, concentration, etc..) and effectors (inhibitors, activators) . "@en ;
 	rdfs:label "Kinetic model"@en .
 # 
 
 HBP_DAMO:0000017 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000006 ;
-	rdfs:isDefinedBy "Structural imaging investigates the structure of the brain and can be used for the diagnosis of large scale intracranial disease, such as tumor, and injury . "@en ;
+	nsu:definition "Structural imaging investigates the structure of the brain and can be used for the diagnosis of large scale intracranial disease, such as tumor, and injury . "@en ;
 	rdfs:label "Structural imaging"@en .
 # 
 
 HBP_DAMO:0000018 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000007 ;
-	rdfs:isDefinedBy "Functional imaging reveals the activity in certain brain regions by detecting changes in metabolism, blood flow, regional chemical composition, and absorption. "@en ;
+	nsu:definition "Functional imaging reveals the activity in certain brain regions by detecting changes in metabolism, blood flow, regional chemical composition, and absorption. "@en ;
 	rdfs:label "Functional imaging"@en .
 # 
 
 HBP_DAMO:0000019 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000001 ;
-	rdfs:isDefinedBy "Morphology reconstruction pertain to data which elucidate the morphology of rdf:type given entity. The scales which can be used to characterize this data modality include: single cells and partial cells. "@en ;
+	nsu:definition "Morphology reconstruction pertain to data which elucidate the morphology of rdf:type given entity. The scales which can be used to characterize this data modality include: single cells and partial cells. "@en ;
 	rdfs:label "Single cell morphology reconstruction"@en .
 # 
 
 HBP_DAMO:0000020 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000025 ;
-	rdfs:isDefinedBy "Tracts connecting the cortex with other areas of the central nervous system"@en ;
+	nsu:definition "Tracts connecting the cortex with other areas of the central nervous system"@en ;
 	rdfs:label "Projection tracts"@en .
 # 
 
 HBP_DAMO:0000021 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000013 ;
-	rdfs:isDefinedBy "This modality includes the mathematical description of the properties of nerve cells or neurons that is designed to accurately describe and predict biological processes. Scales can include: multiple cells. "@en ;
+	nsu:definition "This modality includes the mathematical description of the properties of nerve cells or neurons that is designed to accurately describe and predict biological processes. Scales can include: multiple cells. "@en ;
 	rdfs:label "Neural network model"@en .
 # 
 
 HBP_DAMO:0000022 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000012 ;
-	rdfs:isDefinedBy "This modality includes the analysis of gene levels by identifying, quantifying or comparing mRNA transcripts by using microarrays, RNA-seq, northern blots, gene-indexed expression profiles etc.. "@en ;
+	nsu:definition "This modality includes the analysis of gene levels by identifying, quantifying or comparing mRNA transcripts by using microarrays, RNA-seq, northern blots, gene-indexed expression profiles etc.. "@en ;
 	rdfs:label "Gene expression"@en .
 # 
 
 HBP_DAMO:0000023 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000003 ;
-	rdfs:isDefinedBy "Transcriptome includes data which characterize the entire set of transcripts that are detectable in rdf:type single cell. Scales include: single cell."@en ;
+	nsu:definition "Transcriptome includes data which characterize the entire set of transcripts that are detectable in rdf:type single cell. Scales include: single cell."@en ;
 	rdfs:label "Single cell transcriptomics"@en .
 # 
 
 HBP_DAMO:0000024 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000013 ;
-	rdfs:isDefinedBy "Protein 3D structure prediction using comparative modeling or other computational methods."@en ;
+	nsu:definition "Protein 3D structure prediction using comparative modeling or other computational methods."@en ;
 	rdfs:label "3D protein structure model"@en .
 # 
 
 HBP_DAMO:0000025 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000005 ;
-	rdfs:isDefinedBy "White matter tracts also known as white matter fibres are classified into projection tracts, association tracts and commissural tracts."@en ;
+	nsu:definition "White matter tracts also known as white matter fibres are classified into projection tracts, association tracts and commissural tracts."@en ;
 	rdfs:label "White matter tracts"@en .
 # 
 
 HBP_DAMO:0000026 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000025 ;
-	rdfs:isDefinedBy "Tracts connecting different areas in the same hemisphere"@en ;
+	nsu:definition "Tracts connecting different areas in the same hemisphere"@en ;
 	rdfs:label "Association tracts"@en .
 # 
 
 HBP_DAMO:0000027 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000025 ;
-	rdfs:isDefinedBy "Tracts connecting the same cortical area in opposite hemispheres"@en ;
+	nsu:definition "Tracts connecting the same cortical area in opposite hemispheres"@en ;
 	rdfs:label "Commisural tracts"@en .
 # 
 
