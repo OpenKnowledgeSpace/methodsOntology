@@ -11,7 +11,7 @@
 @base <http://www.hbp.FIXME.org/hbp_properties/> .
 
 <http://www.hbp.FIXME.org/hbp_properties> rdf:type owl:Ontology ;
-                owl:imports <http://www.FIXME.org/nsupper> .
+                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
 
 
 :generated_data rdf:type owl:AnnotationProperty .
