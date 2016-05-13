@@ -7,7 +7,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix HBP_MEM: <http://www.hbp.FIXME.org/hbp_measurement_methods/> .
 
-	<http://www.hbp.FIXME.org/hbp_measurement_methods> rdf:type owl:Ontology ;
+		<http://www.hbp.FIXME.org/hbp_measurement_methods> rdf:type owl:Ontology ;
 	owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
 
 # 
@@ -21,350 +21,350 @@
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000001
 
-HBP_MEM:0000001 a owl:Class ;
+HBP_MEM:0000001 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000042 ;
 	rdfs:label "3H-proline"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000002
 
-HBP_MEM:0000002 a owl:Class ;
+HBP_MEM:0000002 rdf:type owl:Class ;
 	rdfs:label "Structural brain imaging"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000003
 
-HBP_MEM:0000003 a owl:Class ;
+HBP_MEM:0000003 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000002 ;
 	rdfs:label "Cerebral angiography"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000004
 
-HBP_MEM:0000004 a owl:Class ;
+HBP_MEM:0000004 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000002 ;
 	nsu:synonym "CT"@en ;
 	rdfs:label "Computerized tomography"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000005
 
-HBP_MEM:0000005 a owl:Class ;
+HBP_MEM:0000005 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000002 ;
 	nsu:synonym "MRI"@en ;
 	rdfs:label "Magnetic resonance imaging"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000006
 
-HBP_MEM:0000006 a owl:Class ;
+HBP_MEM:0000006 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000002 ;
 	nsu:synonym "Diffusion MRI"@en ;
 	rdfs:label "Diffusion magnetic resonance imaging"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000007
 
-HBP_MEM:0000007 a owl:Class ;
+HBP_MEM:0000007 rdf:type owl:Class ;
 	rdfs:label "Functional brain imaging"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000008
 
-HBP_MEM:0000008 a owl:Class ;
+HBP_MEM:0000008 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000007 ;
 	nsu:synonym "fMRI"@en ;
 	rdfs:label "Functional magnetic resonance imaging"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000009
 
-HBP_MEM:0000009 a owl:Class ;
+HBP_MEM:0000009 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000007 ;
 	nsu:synonym "PET"@en ;
 	rdfs:label "Positron emission tomography"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000010
 
-HBP_MEM:0000010 a owl:Class ;
+HBP_MEM:0000010 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000007 ;
 	nsu:synonym "SPECT"@en ;
 	rdfs:label "Single-Proton emission computerized tomography"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000011
 
-HBP_MEM:0000011 a owl:Class ;
+HBP_MEM:0000011 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000007 ;
 	nsu:synonym "EEG"@en ;
 	rdfs:label "Electroencephalography"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000012
 
-HBP_MEM:0000012 a owl:Class ;
+HBP_MEM:0000012 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000007 ;
 	nsu:synonym "MEG"@en ;
 	rdfs:label "Magnetoencephalography"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000013
 
-HBP_MEM:0000013 a owl:Class ;
+HBP_MEM:0000013 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000007 ;
 	rdfs:label "Optical imaging"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000014
 
-HBP_MEM:0000014 a owl:Class ;
+HBP_MEM:0000014 rdf:type owl:Class ;
 	rdfs:label "Electrophysiology recording"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000015
 
-HBP_MEM:0000015 a owl:Class ;
+HBP_MEM:0000015 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000014 ;
 	rdfs:label "Extracellular recording"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000016
 
-HBP_MEM:0000016 a owl:Class ;
+HBP_MEM:0000016 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000014 ;
 	rdfs:label "Intracellular recording"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000017
 
-HBP_MEM:0000017 a owl:Class ;
+HBP_MEM:0000017 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000014 ;
 	rdfs:label "Patch clamp techniques"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000018
 
-HBP_MEM:0000018 a owl:Class ;
+HBP_MEM:0000018 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000015 ;
 	rdfs:label "Multiple electrode recording"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000019
 
-HBP_MEM:0000019 a owl:Class ;
+HBP_MEM:0000019 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000015 ;
 	rdfs:label "Single electrode recording"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000020
 
-HBP_MEM:0000020 a owl:Class ;
+HBP_MEM:0000020 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000015 ;
 	rdfs:label "Field potentials"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000021
 
-HBP_MEM:0000021 a owl:Class ;
+HBP_MEM:0000021 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000016 ;
 	rdfs:label "Current clamp voltage recording"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000022
 
-HBP_MEM:0000022 a owl:Class ;
+HBP_MEM:0000022 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000016 ;
 	rdfs:label "Voltage clamp current recording"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000023
 
-HBP_MEM:0000023 a owl:Class ;
+HBP_MEM:0000023 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000016 ;
 	rdfs:label "Sharp electrode technique"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000024
 
-HBP_MEM:0000024 a owl:Class ;
+HBP_MEM:0000024 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000017 ;
 	rdfs:label "Loose patch"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000025
 
-HBP_MEM:0000025 a owl:Class ;
+HBP_MEM:0000025 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000017 ;
 	rdfs:label "Perforated patch"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000026
 
-HBP_MEM:0000026 a owl:Class ;
+HBP_MEM:0000026 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000017 ;
 	rdfs:label "Outside-out patch"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000027
 
-HBP_MEM:0000027 a owl:Class ;
+HBP_MEM:0000027 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000017 ;
 	rdfs:label "Whole-cell recording"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000028
 
-HBP_MEM:0000028 a owl:Class ;
+HBP_MEM:0000028 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000017 ;
 	rdfs:label "Inside-out patch"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000029
 
-HBP_MEM:0000029 a owl:Class ;
+HBP_MEM:0000029 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000017 ;
 	rdfs:label "Cell-attached patch"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000030
 
-HBP_MEM:0000030 a owl:Class ;
+HBP_MEM:0000030 rdf:type owl:Class ;
 	rdfs:label "Neural structure visualization"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000031
 
-HBP_MEM:0000031 a owl:Class ;
+HBP_MEM:0000031 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000030 ;
 	rdfs:label "Morphology visualization"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000032
 
-HBP_MEM:0000032 a owl:Class ;
+HBP_MEM:0000032 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000030 ;
 	rdfs:label "Circuitry visualization"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000033
 
-HBP_MEM:0000033 a owl:Class ;
+HBP_MEM:0000033 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000031 ;
 	rdfs:label "Cell body stains"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000034
 
-HBP_MEM:0000034 a owl:Class ;
+HBP_MEM:0000034 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000031 ;
 	rdfs:label "Fiber stains"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000035
 
-HBP_MEM:0000035 a owl:Class ;
+HBP_MEM:0000035 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000031 ;
 	rdfs:label "Golgi stain"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000036
 
-HBP_MEM:0000036 a owl:Class ;
+HBP_MEM:0000036 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000031 ;
 	rdfs:label "Intracellular and juxtacellular labeling"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000037
 
-HBP_MEM:0000037 a owl:Class ;
+HBP_MEM:0000037 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000032 ;
 	rdfs:label "Transsynaptic tracers"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000038
 
-HBP_MEM:0000038 a owl:Class ;
+HBP_MEM:0000038 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000032 ;
 	rdfs:label "Retrograde tracers"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000039
 
-HBP_MEM:0000039 a owl:Class ;
+HBP_MEM:0000039 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000032 ;
 	rdfs:label "Anterograde tracers"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000040
 
-HBP_MEM:0000040 a owl:Class ;
+HBP_MEM:0000040 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000039 ;
 	nsu:synonym "BDA"@en ;
 	rdfs:label "Biotinylated dextran amine"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000041
 
-HBP_MEM:0000041 a owl:Class ;
+HBP_MEM:0000041 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000039 ;
 	nsu:synonym "PHA-L"@en ;
 	rdfs:label "Phaseolus vulgaris- leucoagglutinin"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000042
 
-HBP_MEM:0000042 a owl:Class ;
+HBP_MEM:0000042 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000039 ;
 	rdfs:label "Tritiated amino acids"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000043
 
-HBP_MEM:0000043 a owl:Class ;
+HBP_MEM:0000043 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000038 ;
 	nsu:synonym "HRP"@en ;
 	rdfs:label "Horseradish peroxidase"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000044
 
-HBP_MEM:0000044 a owl:Class ;
+HBP_MEM:0000044 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000038 ;
 	rdfs:label "Fluorescent microspheres"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000045
 
-HBP_MEM:0000045 a owl:Class ;
+HBP_MEM:0000045 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000038 ;
 	rdfs:label "Fluoro-gold diamidino yellow fast blue"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000046
 
-HBP_MEM:0000046 a owl:Class ;
+HBP_MEM:0000046 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000038 ;
 	nsu:synonym "CTB"@en ;
 	rdfs:label "Cholera toxin, subunit B"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000047
 
-HBP_MEM:0000047 a owl:Class ;
+HBP_MEM:0000047 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000038 ;
 	nsu:synonym "BDA"@en ;
 	rdfs:label "Biotinylated dextran amine"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000048
 
-HBP_MEM:0000048 a owl:Class ;
+HBP_MEM:0000048 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000037 ;
 	rdfs:label "Tritiated amino acids"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000049
 
-HBP_MEM:0000049 a owl:Class ;
+HBP_MEM:0000049 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000037 ;
 	nsu:synonym "WGA"@en ;
 	rdfs:label "Wheat-germ agglutinin"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000050
 
-HBP_MEM:0000050 a owl:Class ;
+HBP_MEM:0000050 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000037 ;
 	nsu:synonym "TTC"@en ;
 	rdfs:label "Tetanus toxin, fragment C"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000051
 
-HBP_MEM:0000051 a owl:Class ;
+HBP_MEM:0000051 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000037 ;
 	nsu:synonym "PRV"@en ;
 	rdfs:label "Pseudorabies virus"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000052
 
-HBP_MEM:0000052 a owl:Class ;
+HBP_MEM:0000052 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000037 ;
 	nsu:synonym "HSV"@en ;
 	rdfs:label "Herpes simplex virus"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000053
 
-HBP_MEM:0000053 a owl:Class ;
+HBP_MEM:0000053 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000039 ;
 	rdfs:label "DiI and DiO lipophilic dyes"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000054
 
-HBP_MEM:0000054 a owl:Class ;
+HBP_MEM:0000054 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000038 ;
 	rdfs:label "DiI and DiO lipophilic dyes"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000055
 
-HBP_MEM:0000055 a owl:Class ;
+HBP_MEM:0000055 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000030 ;
 	rdfs:label "Gene and protein expression visualization"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000056
 
-HBP_MEM:0000056 a owl:Class ;
+HBP_MEM:0000056 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000055 ;
 	nsu:synonym "ISH"@en ;
 	rdfs:comment "" ;
@@ -372,527 +372,527 @@ HBP_MEM:0000056 a owl:Class ;
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000057
 
-HBP_MEM:0000057 a owl:Class ;
+HBP_MEM:0000057 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000042 ;
 	rdfs:label "3H-leucine"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000058
 
-HBP_MEM:0000058 a owl:Class ;
+HBP_MEM:0000058 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000048 ;
 	rdfs:label "3H-proline"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000059
 
-HBP_MEM:0000059 a owl:Class ;
+HBP_MEM:0000059 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000048 ;
 	rdfs:label "3H-leucine"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000060
 
-HBP_MEM:0000060 a owl:Class ;
+HBP_MEM:0000060 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000055 ;
 	nsu:synonym "IHC"@en ;
 	rdfs:label "Immunohistochemistry"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000061
 
-HBP_MEM:0000061 a owl:Class ;
+HBP_MEM:0000061 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000055 ;
 	rdfs:label "Enzymatic histochemistry"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000062
 
-HBP_MEM:0000062 a owl:Class ;
+HBP_MEM:0000062 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000055 ;
 	rdfs:label "Reporter gene"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000063
 
-HBP_MEM:0000063 a owl:Class ;
+HBP_MEM:0000063 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000060 ;
 	nsu:synonym "Direct IHC"@en ;
 	rdfs:label "Direct immunohistochemistry"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000064
 
-HBP_MEM:0000064 a owl:Class ;
+HBP_MEM:0000064 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000060 ;
 	nsu:synonym "Indirect IHC"@en ;
 	rdfs:label "Indirect immunohistochemistry"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000065
 
-HBP_MEM:0000065 a owl:Class ;
+HBP_MEM:0000065 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000060 ;
 	rdfs:label "Array tomography"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000066
 
-HBP_MEM:0000066 a owl:Class ;
+HBP_MEM:0000066 rdf:type owl:Class ;
 	rdfs:label "Neural function visualization"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000067
 
-HBP_MEM:0000067 a owl:Class ;
+HBP_MEM:0000067 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000066 ;
 	rdfs:label "Neural activity visualization"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000068
 
-HBP_MEM:0000068 a owl:Class ;
+HBP_MEM:0000068 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000066 ;
 	rdfs:label "Static markers of activity"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000069
 
-HBP_MEM:0000069 a owl:Class ;
+HBP_MEM:0000069 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000067 ;
 	rdfs:label "Imaging voltage"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000070
 
-HBP_MEM:0000070 a owl:Class ;
+HBP_MEM:0000070 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000069 ;
 	nsu:synonym "VSDI"@en ;
 	rdfs:label "Voltage-sensitive dye imaging"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000071
 
-HBP_MEM:0000071 a owl:Class ;
+HBP_MEM:0000071 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000069 ;
 	nsu:synonym "GEVIs"@en ;
 	rdfs:label "Genetically encoded voltage indicators"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000072
 
-HBP_MEM:0000072 a owl:Class ;
+HBP_MEM:0000072 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000067 ;
 	rdfs:label "Imaging calcium dynamics"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000073
 
-HBP_MEM:0000073 a owl:Class ;
+HBP_MEM:0000073 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000072 ;
 	rdfs:label "Calcium indicator dyes"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000074
 
-HBP_MEM:0000074 a owl:Class ;
+HBP_MEM:0000074 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000073 ;
 	rdfs:label "Nonratiometric calcium indicator dyes"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000075
 
-HBP_MEM:0000075 a owl:Class ;
+HBP_MEM:0000075 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000073 ;
 	rdfs:label "Ratiometric calcium indicator dyes"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000076
 
-HBP_MEM:0000076 a owl:Class ;
+HBP_MEM:0000076 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000072 ;
 	nsu:synonym "GECIs"@en ;
 	rdfs:label "Genetically encoded calcium indicators"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000077
 
-HBP_MEM:0000077 a owl:Class ;
+HBP_MEM:0000077 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000067 ;
 	rdfs:label "Imaging synaptic transmission"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000078
 
-HBP_MEM:0000078 a owl:Class ;
+HBP_MEM:0000078 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000077 ;
 	nsu:synonym "FM dyes"@en ;
 	rdfs:label "Fei Mao dyes"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000079
 
-HBP_MEM:0000079 a owl:Class ;
+HBP_MEM:0000079 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000077 ;
 	rdfs:label "pH sensitive fluorescent proteins"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000080
 
-HBP_MEM:0000080 a owl:Class ;
+HBP_MEM:0000080 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000066 ;
 	rdfs:label "Protein function visualization"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000081
 
-HBP_MEM:0000081 a owl:Class ;
+HBP_MEM:0000081 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000080 ;
 	rdfs:label "Time-lapse imaging with reporter genes"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000082
 
-HBP_MEM:0000082 a owl:Class ;
+HBP_MEM:0000082 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000080 ;
 	nsu:synonym "FRET"@en , "Förster resonance energy transfer"@en ;
 	rdfs:label "Fluorescence resonance energy transfer"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000083
 
-HBP_MEM:0000083 a owl:Class ;
+HBP_MEM:0000083 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000080 ;
 	nsu:synonym "BiFC"@en ;
 	rdfs:label "Bimolecular fluorescence complementation"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000084
 
-HBP_MEM:0000084 a owl:Class ;
+HBP_MEM:0000084 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000080 ;
 	nsu:synonym "FRAP"@en ;
 	rdfs:label "Fluorescence recovery after photobleaching"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000085
 
-HBP_MEM:0000085 a owl:Class ;
+HBP_MEM:0000085 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000080 ;
 	rdfs:label "Photoactivation and photoconversion"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000086
 
-HBP_MEM:0000086 a owl:Class ;
+HBP_MEM:0000086 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000068 ;
-	rdfs:label "Neural activity in rdf:type fixed tissue"@en .
+	rdfs:label "Neural activity in a fixed tissue"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000087
 
-HBP_MEM:0000087 a owl:Class ;
+HBP_MEM:0000087 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000068 ;
-	rdfs:label "Cellular function in rdf:type fixed tissue"@en .
+	rdfs:label "Cellular function in a fixed tissue"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000088
 
-HBP_MEM:0000088 a owl:Class ;
+HBP_MEM:0000088 rdf:type owl:Class ;
 	rdfs:label "Microscopy"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000089
 
-HBP_MEM:0000089 a owl:Class ;
+HBP_MEM:0000089 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000088 ;
 	rdfs:label "Light Microscopy"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000090
 
-HBP_MEM:0000090 a owl:Class ;
+HBP_MEM:0000090 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000089 ;
 	rdfs:label "Brightfield microscopy"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000091
 
-HBP_MEM:0000091 a owl:Class ;
+HBP_MEM:0000091 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000089 ;
 	rdfs:label "Phase-contrast microscopy"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000092
 
-HBP_MEM:0000092 a owl:Class ;
+HBP_MEM:0000092 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000089 ;
 	rdfs:label "Darkfield microscopy"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000093
 
-HBP_MEM:0000093 a owl:Class ;
+HBP_MEM:0000093 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000089 ;
 	nsu:synonym "DIC microscopy"@en , "Normarski microscopy"@en ;
 	rdfs:label "Differential interference contrast microscopy"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000094
 
-HBP_MEM:0000094 a owl:Class ;
+HBP_MEM:0000094 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000088 ;
 	rdfs:label "Fluorescence microscopy"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000095
 
-HBP_MEM:0000095 a owl:Class ;
+HBP_MEM:0000095 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000094 ;
 	rdfs:label "Epifluorescent microscopy"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000096
 
-HBP_MEM:0000096 a owl:Class ;
+HBP_MEM:0000096 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000094 ;
 	rdfs:label "Confocal microscopy"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000097
 
-HBP_MEM:0000097 a owl:Class ;
+HBP_MEM:0000097 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000094 ;
 	rdfs:label "Two-photon microscopy"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000098
 
-HBP_MEM:0000098 a owl:Class ;
+HBP_MEM:0000098 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000094 ;
 	nsu:synonym "TIRF microscopy"@en ;
 	rdfs:label "Total internal reflection fluorescence microscopy"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000099
 
-HBP_MEM:0000099 a owl:Class ;
+HBP_MEM:0000099 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000088 ;
 	rdfs:label "Electron microscopy"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000100
 
-HBP_MEM:0000100 a owl:Class ;
+HBP_MEM:0000100 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000099 ;
 	nsu:synonym "TEM"@en ;
 	rdfs:label "Transmission electron microscopy"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000101
 
-HBP_MEM:0000101 a owl:Class ;
+HBP_MEM:0000101 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000099 ;
 	nsu:synonym "SEM"@en ;
 	rdfs:label "Scanning electron microscopy"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000102
 
-HBP_MEM:0000102 a owl:Class ;
+HBP_MEM:0000102 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000099 ;
 	nsu:synonym "ET"@en ;
 	rdfs:label "Electron tomography"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000103
 
-HBP_MEM:0000103 a owl:Class ;
+HBP_MEM:0000103 rdf:type owl:Class ;
 	rdfs:label "Gene expression measurement/visualization"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000104
 
-HBP_MEM:0000104 a owl:Class ;
+HBP_MEM:0000104 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000103 ;
 	nsu:synonym "ISH"@en ;
 	rdfs:label "In situ hybridization"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000105
 
-HBP_MEM:0000105 a owl:Class ;
+HBP_MEM:0000105 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000103 ;
 	rdfs:label "Microarrays"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000106
 
-HBP_MEM:0000106 a owl:Class ;
+HBP_MEM:0000106 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000103 ;
 	nsu:synonym "NGS"@en ;
 	rdfs:label "Next generation sequencing"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000107
 
-HBP_MEM:0000107 a owl:Class ;
+HBP_MEM:0000107 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000103 ;
 	nsu:synonym "PCR"@en ;
 	rdfs:label "Polymerase chain reaction"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000108
 
-HBP_MEM:0000108 a owl:Class ;
+HBP_MEM:0000108 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000103 ;
 	nsu:synonym "NB"@en ;
 	rdfs:label "Northern blot"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000109
 
-HBP_MEM:0000109 a owl:Class ;
+HBP_MEM:0000109 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000103 ;
 	nsu:synonym "SAGE"@en ;
 	rdfs:label "Serial analysis of gene expression"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000110
 
-HBP_MEM:0000110 a owl:Class ;
+HBP_MEM:0000110 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000103 ;
 	rdfs:label "Reporter genes"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000111
 
-HBP_MEM:0000111 a owl:Class ;
+HBP_MEM:0000111 rdf:type owl:Class ;
 	rdfs:label "Protein expression measurement/visualization"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000112
 
-HBP_MEM:0000112 a owl:Class ;
+HBP_MEM:0000112 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000111 ;
 	nsu:synonym "WB"@en ;
 	rdfs:label "Western blot"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000113
 
-HBP_MEM:0000113 a owl:Class ;
+HBP_MEM:0000113 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000111 ;
 	nsu:synonym "ELISA"@en ;
 	rdfs:label "Enzyme-linked immunosorbent assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000114
 
-HBP_MEM:0000114 a owl:Class ;
+HBP_MEM:0000114 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000111 ;
 	nsu:synonym "RIA"@en ;
 	rdfs:label "Radioimmunoassay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000115
 
-HBP_MEM:0000115 a owl:Class ;
+HBP_MEM:0000115 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000111 ;
 	nsu:synonym "IHC"@en ;
 	rdfs:label "Immunohistochemistry"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000116
 
-HBP_MEM:0000116 a owl:Class ;
+HBP_MEM:0000116 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000111 ;
 	nsu:synonym "IEM"@en ;
 	rdfs:label "Immunoelectron microscopy"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000117
 
-HBP_MEM:0000117 a owl:Class ;
+HBP_MEM:0000117 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000111 ;
 	rdfs:label "Reporter proteins"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000118
 
-HBP_MEM:0000118 a owl:Class ;
+HBP_MEM:0000118 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000111 ;
 	rdfs:label "Mass spectrometry"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000119
 
-HBP_MEM:0000119 a owl:Class ;
+HBP_MEM:0000119 rdf:type owl:Class ;
 	rdfs:label "Endogenous genes manipulation"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000120
 
-HBP_MEM:0000120 a owl:Class ;
+HBP_MEM:0000120 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000119 ;
 	rdfs:label "Knockout"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000121
 
-HBP_MEM:0000121 a owl:Class ;
+HBP_MEM:0000121 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000119 ;
 	rdfs:label "Knockin"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000122
 
-HBP_MEM:0000122 a owl:Class ;
+HBP_MEM:0000122 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000119 ;
 	rdfs:label "Conditional knockout"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000123
 
-HBP_MEM:0000123 a owl:Class ;
+HBP_MEM:0000123 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000119 ;
 	nsu:synonym "RNAi"@en ;
 	rdfs:label "RNA interference"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000124
 
-HBP_MEM:0000124 a owl:Class ;
+HBP_MEM:0000124 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000119 ;
 	rdfs:label "Morpholino"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000125
 
-HBP_MEM:0000125 a owl:Class ;
+HBP_MEM:0000125 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000119 ;
 	rdfs:label "Dominant-negative inhibition"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000126
 
-HBP_MEM:0000126 a owl:Class ;
+HBP_MEM:0000126 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000195 ;
 	nsu:synonym "MALDI"@en ;
 	rdfs:label "Matrix-assisted laser desorption ionization"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000127
 
-HBP_MEM:0000127 a owl:Class ;
+HBP_MEM:0000127 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000195 ;
 	rdfs:label "Electrospray ionization"@en ;
 	owl:backwardCompatibleWith "ESI" .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000128
 
-HBP_MEM:0000128 a owl:Class ;
+HBP_MEM:0000128 rdf:type owl:Class ;
 	rdfs:label "Behaviour assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000129
 
-HBP_MEM:0000129 a owl:Class ;
+HBP_MEM:0000129 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000128 ;
 	rdfs:label "Locomotor activity assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000130
 
-HBP_MEM:0000130 a owl:Class ;
+HBP_MEM:0000130 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000128 ;
 	rdfs:label "Motor coordination assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000131
 
-HBP_MEM:0000131 a owl:Class ;
+HBP_MEM:0000131 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000128 ;
 	rdfs:label "Sensory function assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000132
 
-HBP_MEM:0000132 a owl:Class ;
+HBP_MEM:0000132 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000128 ;
 	rdfs:label "Nociception assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000133
 
-HBP_MEM:0000133 a owl:Class ;
+HBP_MEM:0000133 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000128 ;
 	rdfs:label "Spatial learning and memory assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000134
 
-HBP_MEM:0000134 a owl:Class ;
+HBP_MEM:0000134 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000128 ;
 	rdfs:label "Nonspatial learning and memory assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000135
 
-HBP_MEM:0000135 a owl:Class ;
+HBP_MEM:0000135 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000128 ;
 	rdfs:label "Attention and impulsivity assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000136
 
-HBP_MEM:0000136 a owl:Class ;
+HBP_MEM:0000136 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000128 ;
 	rdfs:label "Reward-system assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000137
 
-HBP_MEM:0000137 a owl:Class ;
+HBP_MEM:0000137 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000128 ;
 	rdfs:label "Social behavior assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000138
 
-HBP_MEM:0000138 a owl:Class ;
+HBP_MEM:0000138 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000128 ;
 	rdfs:label "Anxiety assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000139
 
-HBP_MEM:0000139 a owl:Class ;
+HBP_MEM:0000139 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000128 ;
 	rdfs:label "Depression assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000140
 
-HBP_MEM:0000140 a owl:Class ;
+HBP_MEM:0000140 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000139 ;
 	nsu:synonym "Porsolt test"@en ;
 	rdfs:label "Forced swim test"@en ;
@@ -900,393 +900,393 @@ HBP_MEM:0000140 a owl:Class ;
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000141
 
-HBP_MEM:0000141 a owl:Class ;
+HBP_MEM:0000141 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000139 ;
 	rdfs:label "Tail suspension test"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000142
 
-HBP_MEM:0000142 a owl:Class ;
+HBP_MEM:0000142 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000139 ;
 	rdfs:label "Sucrose preference test"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000143
 
-HBP_MEM:0000143 a owl:Class ;
+HBP_MEM:0000143 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000138 ;
 	rdfs:label "Open field test"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000144
 
-HBP_MEM:0000144 a owl:Class ;
+HBP_MEM:0000144 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000138 ;
 	rdfs:label "Elevated plus maze"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000145
 
-HBP_MEM:0000145 a owl:Class ;
+HBP_MEM:0000145 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000138 ;
 	rdfs:label "Geller–Seifter conflict test"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000146
 
-HBP_MEM:0000146 a owl:Class ;
+HBP_MEM:0000146 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000138 ;
 	rdfs:label "Marble burying test"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000147
 
-HBP_MEM:0000147 a owl:Class ;
+HBP_MEM:0000147 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000137 ;
 	rdfs:label "Resident–intruder assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000148
 
-HBP_MEM:0000148 a owl:Class ;
+HBP_MEM:0000148 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000137 ;
 	rdfs:label "Social approach/avoidance assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000149
 
-HBP_MEM:0000149 a owl:Class ;
+HBP_MEM:0000149 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000136 ;
 	rdfs:label "Self-administration"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000150
 
-HBP_MEM:0000150 a owl:Class ;
+HBP_MEM:0000150 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000136 ;
 	rdfs:label "Progressive ratio"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000151
 
-HBP_MEM:0000151 a owl:Class ;
+HBP_MEM:0000151 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000136 ;
 	rdfs:label "Conditioned place preference and aversion"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000152
 
-HBP_MEM:0000152 a owl:Class ;
+HBP_MEM:0000152 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000135 ;
 	rdfs:label "Go/no-go task"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000153
 
-HBP_MEM:0000153 a owl:Class ;
+HBP_MEM:0000153 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000135 ;
 	rdfs:label "Five choice serial reaction time task"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000154
 
-HBP_MEM:0000154 a owl:Class ;
+HBP_MEM:0000154 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000134 ;
 	rdfs:label "Classical conditioning"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000155
 
-HBP_MEM:0000155 a owl:Class ;
+HBP_MEM:0000155 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000134 ;
 	rdfs:label "Operant conditioning"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000156
 
-HBP_MEM:0000156 a owl:Class ;
+HBP_MEM:0000156 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000134 ;
 	rdfs:label "Novel object recognition"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000157
 
-HBP_MEM:0000157 a owl:Class ;
+HBP_MEM:0000157 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000134 ;
 	rdfs:label "Delayed match to sample"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000158
 
-HBP_MEM:0000158 a owl:Class ;
+HBP_MEM:0000158 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000134 ;
 	rdfs:label "Delayed nonmatch to sample"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000159
 
-HBP_MEM:0000159 a owl:Class ;
+HBP_MEM:0000159 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000133 ;
 	rdfs:label "Morris water maze"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000160
 
-HBP_MEM:0000160 a owl:Class ;
+HBP_MEM:0000160 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000133 ;
 	rdfs:label "Barnes maze"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000161
 
-HBP_MEM:0000161 a owl:Class ;
+HBP_MEM:0000161 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000133 ;
 	rdfs:label "Radial arm maze"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000162
 
-HBP_MEM:0000162 a owl:Class ;
+HBP_MEM:0000162 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000132 ;
 	rdfs:label "Tail flick assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000163
 
-HBP_MEM:0000163 a owl:Class ;
+HBP_MEM:0000163 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000132 ;
 	rdfs:label "Hargreaves assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000164
 
-HBP_MEM:0000164 a owl:Class ;
+HBP_MEM:0000164 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000132 ;
 	rdfs:label "Hot plate assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000165
 
-HBP_MEM:0000165 a owl:Class ;
+HBP_MEM:0000165 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000132 ;
 	rdfs:label "Von Frey assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000166
 
-HBP_MEM:0000166 a owl:Class ;
+HBP_MEM:0000166 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000132 ;
 	rdfs:label "Formalin assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000167
 
-HBP_MEM:0000167 a owl:Class ;
+HBP_MEM:0000167 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000131 ;
 	rdfs:label "Visual cliff assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000168
 
-HBP_MEM:0000168 a owl:Class ;
+HBP_MEM:0000168 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000131 ;
 	rdfs:label "Startle response"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000169
 
-HBP_MEM:0000169 a owl:Class ;
+HBP_MEM:0000169 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000131 ;
 	rdfs:label "Taste assays"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000170
 
-HBP_MEM:0000170 a owl:Class ;
+HBP_MEM:0000170 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000131 ;
 	rdfs:label "Olfactory assays"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000171
 
-HBP_MEM:0000171 a owl:Class ;
+HBP_MEM:0000171 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000129 ;
 	rdfs:label "Running wheel"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000172
 
-HBP_MEM:0000172 a owl:Class ;
+HBP_MEM:0000172 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000129 ;
 	rdfs:label "Homecage activity"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000173
 
-HBP_MEM:0000173 a owl:Class ;
+HBP_MEM:0000173 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000129 ;
 	rdfs:label "Open field test"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000174
 
-HBP_MEM:0000174 a owl:Class ;
+HBP_MEM:0000174 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000130 ;
 	rdfs:label "Rotarod test"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000175
 
-HBP_MEM:0000175 a owl:Class ;
+HBP_MEM:0000175 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000130 ;
 	rdfs:label "Footprint pattern assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000176
 
-HBP_MEM:0000176 a owl:Class ;
+HBP_MEM:0000176 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000130 ;
 	rdfs:label "Hanging wire assay"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000177
 
-HBP_MEM:0000177 a owl:Class ;
+HBP_MEM:0000177 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000130 ;
 	rdfs:label "Vertical pole test"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000178
 
-HBP_MEM:0000178 a owl:Class ;
+HBP_MEM:0000178 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000006 ;
 	nsu:synonym "DTI"@en ;
 	rdfs:label "Diffusion tensor imaging"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000179
 
-HBP_MEM:0000179 a owl:Class ;
+HBP_MEM:0000179 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000034 ;
 	rdfs:label "Weigert stain"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000180
 
-HBP_MEM:0000180 a owl:Class ;
+HBP_MEM:0000180 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000034 ;
 	rdfs:label "Weil stain"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000181
 
-HBP_MEM:0000181 a owl:Class ;
+HBP_MEM:0000181 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000034 ;
 	nsu:synonym "LFB"@en ;
 	rdfs:label "Luxon fast blue"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000182
 
-HBP_MEM:0000182 a owl:Class ;
+HBP_MEM:0000182 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000033 ;
 	rdfs:label "Basophilic stain"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000183
 
-HBP_MEM:0000183 a owl:Class ;
+HBP_MEM:0000183 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000182 ;
 	rdfs:label "Nissl stain"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000184
 
-HBP_MEM:0000184 a owl:Class ;
+HBP_MEM:0000184 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000033 ;
 	nsu:synonym "4’,6-diamidino-2-phenylindole stain"@en ;
 	rdfs:label "DAPI stain"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000185
 
-HBP_MEM:0000185 a owl:Class ;
+HBP_MEM:0000185 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000033 ;
 	rdfs:label "Propidium iodide stain"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000186
 
-HBP_MEM:0000186 a owl:Class ;
+HBP_MEM:0000186 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000182 ;
 	rdfs:label "Hematoxylin"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000187
 
-HBP_MEM:0000187 a owl:Class ;
+HBP_MEM:0000187 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000182 ;
 	rdfs:label "Thionine"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000188
 
-HBP_MEM:0000188 a owl:Class ;
+HBP_MEM:0000188 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000183 ;
 	rdfs:label "Cresyl violet"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000189
 
-HBP_MEM:0000189 a owl:Class ;
+HBP_MEM:0000189 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000183 ;
 	rdfs:label "Toluidine blue"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000190
 
-HBP_MEM:0000190 a owl:Class ;
+HBP_MEM:0000190 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000182 ;
 	rdfs:label "Eosin Y"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000191
 
-HBP_MEM:0000191 a owl:Class ;
+HBP_MEM:0000191 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000033 ;
 	rdfs:label "Methylene blue stain"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000192
 
-HBP_MEM:0000192 a owl:Class ;
+HBP_MEM:0000192 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000033 ;
 	nsu:synonym "Bis-benzamide stain"@en ;
 	rdfs:label "Hoechst stain"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000193
 
-HBP_MEM:0000193 a owl:Class ;
+HBP_MEM:0000193 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000036 ;
 	rdfs:label "Biocytin stain"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000194
 
-HBP_MEM:0000194 a owl:Class ;
+HBP_MEM:0000194 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000036 ;
 	rdfs:label "Neurobiotin stain"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000195
 
-HBP_MEM:0000195 a owl:Class ;
+HBP_MEM:0000195 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000118 ;
 	rdfs:label "Ion sources"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000196
 
-HBP_MEM:0000196 a owl:Class ;
+HBP_MEM:0000196 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000195 ;
 	nsu:synonym "FAB"@en ;
 	rdfs:label "Fast atom bombardment"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000197
 
-HBP_MEM:0000197 a owl:Class ;
+HBP_MEM:0000197 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000195 ;
 	nsu:synonym "CI"@en ;
 	rdfs:label "Chemical ionization"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000198
 
-HBP_MEM:0000198 a owl:Class ;
+HBP_MEM:0000198 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000118 ;
 	rdfs:label "Mass analyser"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000199
 
-HBP_MEM:0000199 a owl:Class ;
+HBP_MEM:0000199 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000198 ;
 	nsu:synonym "TOF"@en ;
 	rdfs:label "Time-of-flight"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000200
 
-HBP_MEM:0000200 a owl:Class ;
+HBP_MEM:0000200 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000198 ;
 	rdfs:label "Quadrupole mass analyzer"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000201
 
-HBP_MEM:0000201 a owl:Class ;
+HBP_MEM:0000201 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000198 ;
 	nsu:synonym "FTICR"@en ;
 	rdfs:label "Fourier transform ion cyclotron resonance mass analyzer"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000202
 
-HBP_MEM:0000202 a owl:Class ;
+HBP_MEM:0000202 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000198 ;
 	rdfs:label "Ion traps"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000203
 
-HBP_MEM:0000203 a owl:Class ;
+HBP_MEM:0000203 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000027 ;
 	rdfs:label "Voltage clamp current recording"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000204
 
-HBP_MEM:0000204 a owl:Class ;
+HBP_MEM:0000204 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000027 ;
 	rdfs:label "Current clamp voltage recording"@en .
 # 
