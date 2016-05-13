@@ -530,7 +530,8 @@ HBP_MEM:0000081 rdf:type owl:Class ;
 
 HBP_MEM:0000082 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000080 ;
-	nsu:synonym "FRET"@en , "Förster resonance energy transfer"@en ;
+	nsu:synonym "FRET"@en ;
+	nsu:synonym "Förster resonance energy transfer"@en ;
 	rdfs:label "Fluorescence resonance energy transfer"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000083
@@ -598,7 +599,8 @@ HBP_MEM:0000092 rdf:type owl:Class ;
 
 HBP_MEM:0000093 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_MEM:0000089 ;
-	nsu:synonym "DIC microscopy"@en , "Normarski microscopy"@en ;
+	nsu:synonym "DIC microscopy"@en ;
+	nsu:synonym "Normarski microscopy"@en ;
 	rdfs:label "Differential interference contrast microscopy"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000094
