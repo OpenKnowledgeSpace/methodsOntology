@@ -8,7 +8,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
-@prefix dc: <http://purl.org/dc/terms/>
 @base <http://www.hbp.FIXME.org/hbp_properties/> .
 
 <http://www.hbp.FIXME.org/hbp_properties> rdf:type owl:Ontology ;
@@ -28,7 +27,3 @@
 :used_scale rdf:type owl:AnnotationProperty .
 :xref_url rdf:type owl:AnnotationProperty .
 :site_url rdf:type owl:AnnotationProperty .
-:licensed_under rdf:type owl:ObjectProperty;
-                owl:sameAs dc:license .
-
-
