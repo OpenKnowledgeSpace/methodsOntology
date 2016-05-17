@@ -1,0 +1,1408 @@
+### WARNING ###
+### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
+### WARNING ###
+@prefix : <http://www.hbp.FIXME.org/hbp_marmoset_brain_ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix CJBA: <https://scalablebrainatlas.incf.org/services/listregions.php?template=PWPRT12/> .
+@prefix HBP_CJBA: <http://www.hbp.FIXME.org/hbp_marmoset_brain_ontology/> .
+@base <http://www.hbp.FIXME.org/hbp_marmoset_brain_ontology> .
+
+<http://www.hbp.FIXME.org/hbp_marmoset_brain_ontology> rdf:type owl:Ontology ;
+                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
+
+
+CJBA:00000 rdf:type owl:Class ;
+
+                 rdfs:label "Brain"@en ;
+
+                 nsu:synonym "Brain"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00000 ] .
+
+
+
+CJBA:00001 rdf:type owl:Class ;
+
+                 rdfs:label "Prosencephalon"@en ;
+
+                 nsu:synonym "ProCeph"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00000 ] .
+
+
+
+CJBA:00002 rdf:type owl:Class ;
+
+                 rdfs:label "Telencephalon"@en ;
+
+                 nsu:synonym "TelCeph"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00001 ] .
+
+
+
+CJBA:00003 rdf:type owl:Class ;
+
+                 rdfs:label "Pallium"@en ;
+
+                 nsu:synonym "Pal"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00002 ] .
+
+
+
+CJBA:00004 rdf:type owl:Class ;
+
+                 rdfs:label "Dorsal Pallium"@en ;
+
+                 nsu:synonym "DPal"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00003 ] .
+
+
+
+CJBA:00005 rdf:type owl:Class ;
+
+                 rdfs:label "Anterior Cingulate Cortex"@en ;
+
+                 nsu:synonym "ACC"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00004 ] .
+
+
+
+CJBA:00006 rdf:type owl:Class ;
+
+                 rdfs:label "area 24a of cortex"@en ;
+
+                 nsu:synonym "A24a"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00005 ] .
+
+
+
+CJBA:00007 rdf:type owl:Class ;
+
+                 rdfs:label "area 24b of cortex"@en ;
+
+                 nsu:synonym "A24b"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00005 ] .
+
+
+
+CJBA:00008 rdf:type owl:Class ;
+
+                 rdfs:label "area 24c of cortex"@en ;
+
+                 nsu:synonym "A24c"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00005 ] .
+
+
+
+CJBA:00009 rdf:type owl:Class ;
+
+                 rdfs:label "area 24d of cortex"@en ;
+
+                 nsu:synonym "A24d"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00005 ] .
+
+
+
+CJBA:00010 rdf:type owl:Class ;
+
+                 rdfs:label "Auditory Cortex"@en ;
+
+                 nsu:synonym "AUD"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00004 ] .
+
+
+
+CJBA:00011 rdf:type owl:Class ;
+
+                 rdfs:label "auditory cortex primary area"@en ;
+
+                 nsu:synonym "AuA1"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00010 ] .
+
+
+
+CJBA:00012 rdf:type owl:Class ;
+
+                 rdfs:label "auditory cortex anterolateral area"@en ;
+
+                 nsu:synonym "AuAL"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00010 ] .
+
+
+
+CJBA:00013 rdf:type owl:Class ;
+
+                 rdfs:label "auditory cortex caudolateral area"@en ;
+
+                 nsu:synonym "AuCL"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00010 ] .
+
+
+
+CJBA:00014 rdf:type owl:Class ;
+
+                 rdfs:label "auditory cortex caudomedial area"@en ;
+
+                 nsu:synonym "AuCM"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00010 ] .
+
+
+
+CJBA:00015 rdf:type owl:Class ;
+
+                 rdfs:label "auditory cortex caudal parabelt area"@en ;
+
+                 nsu:synonym "AuCPB"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00010 ] .
+
+
+
+CJBA:00016 rdf:type owl:Class ;
+
+                 rdfs:label "auditory cortex middle lateral area"@en ;
+
+                 nsu:synonym "AuML"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00010 ] .
+
+
+
+CJBA:00017 rdf:type owl:Class ;
+
+                 rdfs:label "auditory cortex rostral area"@en ;
+
+                 nsu:synonym "AuR"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00010 ] .
+
+
+
+CJBA:00018 rdf:type owl:Class ;
+
+                 rdfs:label "auditory cortex rostromedial area"@en ;
+
+                 nsu:synonym "AuRM"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00010 ] .
+
+
+
+CJBA:00019 rdf:type owl:Class ;
+
+                 rdfs:label "auditory cortex rostral parabelt"@en ;
+
+                 nsu:synonym "AuRPB"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00010 ] .
+
+
+
+CJBA:00020 rdf:type owl:Class ;
+
+                 rdfs:label "auditory cortex rostrotemporal"@en ;
+
+                 nsu:synonym "AuRT"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00010 ] .
+
+
+
+CJBA:00021 rdf:type owl:Class ;
+
+                 rdfs:label "auditory cortex rostrotemporal lateral area"@en ;
+
+                 nsu:synonym "AuRTL"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00010 ] .
+
+
+
+CJBA:00022 rdf:type owl:Class ;
+
+                 rdfs:label "auditory cortex rostrotemporal medial area"@en ;
+
+                 nsu:synonym "AuRTM"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00010 ] .
+
+
+
+CJBA:00023 rdf:type owl:Class ;
+
+                 rdfs:label "superior temporal rostral area (cortex)"@en ;
+
+                 nsu:synonym "STR"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00010 ] .
+
+
+
+CJBA:00024 rdf:type owl:Class ;
+
+                 rdfs:label "temporoparietal transitional area"@en ;
+
+                 nsu:synonym "TPt"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00010 ] .
+
+
+
+CJBA:00025 rdf:type owl:Class ;
+
+                 rdfs:label "Dorsolateral Prefrontal Cortex"@en ;
+
+                 nsu:synonym "DLP"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00004 ] .
+
+
+
+CJBA:00026 rdf:type owl:Class ;
+
+                 rdfs:label "area 10 of cortex"@en ;
+
+                 nsu:synonym "A10"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00025 ] .
+
+
+
+CJBA:00027 rdf:type owl:Class ;
+
+                 rdfs:label "area 46 of cortex dorsal part"@en ;
+
+                 nsu:synonym "A46D"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00025 ] .
+
+
+
+CJBA:00028 rdf:type owl:Class ;
+
+                 rdfs:label "area 46 of cortex ventral part"@en ;
+
+                 nsu:synonym "A46V"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00025 ] .
+
+
+
+CJBA:00029 rdf:type owl:Class ;
+
+                 rdfs:label "area 8a of cortex dorsal part"@en ;
+
+                 nsu:synonym "A8aD"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00025 ] .
+
+
+
+CJBA:00030 rdf:type owl:Class ;
+
+                 rdfs:label "area 8a of cortex ventral par"@en ;
+
+                 nsu:synonym "A8aV"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00025 ] .
+
+
+
+CJBA:00031 rdf:type owl:Class ;
+
+                 rdfs:label "area 8b of cortex"@en ;
+
+                 nsu:synonym "A8b"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00025 ] .
+
+
+
+CJBA:00032 rdf:type owl:Class ;
+
+                 rdfs:label "area 9 of cortex"@en ;
+
+                 nsu:synonym "A9"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00025 ] .
+
+
+
+CJBA:00033 rdf:type owl:Class ;
+
+                 rdfs:label "Insular Cortex"@en ;
+
+                 nsu:synonym "INS"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00004 ] .
+
+
+
+CJBA:00034 rdf:type owl:Class ;
+
+                 rdfs:label "agranular insular cortex"@en ;
+
+                 nsu:synonym "AI"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00033 ] .
+
+
+
+CJBA:00035 rdf:type owl:Class ;
+
+                 rdfs:label "dysgranular insular cortex"@en ;
+
+                 nsu:synonym "DI"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00033 ] .
+
+
+
+CJBA:00036 rdf:type owl:Class ;
+
+                 rdfs:label "granular insular cortex"@en ;
+
+                 nsu:synonym "GI"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00033 ] .
+
+
+
+CJBA:00037 rdf:type owl:Class ;
+
+                 rdfs:label "insular proisocortex"@en ;
+
+                 nsu:synonym "IPro"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00033 ] .
+
+
+
+CJBA:00038 rdf:type owl:Class ;
+
+                 rdfs:label "parainsular cortex lateral part"@en ;
+
+                 nsu:synonym "PaIL"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00033 ] .
+
+
+
+CJBA:00039 rdf:type owl:Class ;
+
+                 rdfs:label "parainsular cortex medial part"@en ;
+
+                 nsu:synonym "PaIM"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00033 ] .
+
+
+
+CJBA:00040 rdf:type owl:Class ;
+
+                 rdfs:label "retroinsular area (cortex)"@en ;
+
+                 nsu:synonym "ReI"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00033 ] .
+
+
+
+CJBA:00041 rdf:type owl:Class ;
+
+                 rdfs:label "temporal proisocortex"@en ;
+
+                 nsu:synonym "TPro"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00033 ] .
+
+
+
+CJBA:00042 rdf:type owl:Class ;
+
+                 rdfs:label "Lateral and Inferior Temporal Cortical Region"@en ;
+
+                 nsu:synonym "LIT"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00004 ] .
+
+
+
+CJBA:00043 rdf:type owl:Class ;
+
+                 rdfs:label "parietal areas PGa and IPa (fundus of superior temporal ventral area)"@en ;
+
+                 nsu:synonym "PGa-IPa"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00042 ] .
+
+
+
+CJBA:00044 rdf:type owl:Class ;
+
+                 rdfs:label "temporal area TE1 (inferior temporal cortex)"@en ;
+
+                 nsu:synonym "TE1"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00042 ] .
+
+
+
+CJBA:00045 rdf:type owl:Class ;
+
+                 rdfs:label "temporal area TE2 (inferior temporal cortex)"@en ;
+
+                 nsu:synonym "TE2"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00042 ] .
+
+
+
+CJBA:00046 rdf:type owl:Class ;
+
+                 rdfs:label "temporal area TE3 (inferior temporal cortex)"@en ;
+
+                 nsu:synonym "TE3"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00042 ] .
+
+
+
+CJBA:00047 rdf:type owl:Class ;
+
+                 rdfs:label "temporal area TE occipital part"@en ;
+
+                 nsu:synonym "TEO"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00042 ] .
+
+
+
+CJBA:00048 rdf:type owl:Class ;
+
+                 rdfs:label "temporo-parieto-occipital association area (superior temporal polysensory cortex)"@en ;
+
+                 nsu:synonym "TPO"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00042 ] .
+
+
+
+CJBA:00049 rdf:type owl:Class ;
+
+                 rdfs:label "temporopolar proisocortex"@en ;
+
+                 nsu:synonym "TPPro"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00042 ] .
+
+
+
+CJBA:00050 rdf:type owl:Class ;
+
+                 rdfs:label "Medial Prefrontal Cortex"@en ;
+
+                 nsu:synonym "MPC"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00004 ] .
+
+
+
+CJBA:00051 rdf:type owl:Class ;
+
+                 rdfs:label "area 14 of cortex caudal part"@en ;
+
+                 nsu:synonym "A14C"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00050 ] .
+
+
+
+CJBA:00052 rdf:type owl:Class ;
+
+                 rdfs:label "area 14 of cortex rostral part"@en ;
+
+                 nsu:synonym "A14R"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00050 ] .
+
+
+
+CJBA:00053 rdf:type owl:Class ;
+
+                 rdfs:label "area 25 of cortex"@en ;
+
+                 nsu:synonym "A25"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00050 ] .
+
+
+
+CJBA:00054 rdf:type owl:Class ;
+
+                 rdfs:label "area 32 of cortex"@en ;
+
+                 nsu:synonym "A32"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00050 ] .
+
+
+
+CJBA:00055 rdf:type owl:Class ;
+
+                 rdfs:label "area 32 of cortex ventral part"@en ;
+
+                 nsu:synonym "A32V"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00050 ] .
+
+
+
+CJBA:00056 rdf:type owl:Class ;
+
+                 rdfs:label "Orbital Frontal Cortex"@en ;
+
+                 nsu:synonym "OFC"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00004 ] .
+
+
+
+CJBA:00057 rdf:type owl:Class ;
+
+                 rdfs:label "area 11 of cortex"@en ;
+
+                 nsu:synonym "A11"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00056 ] .
+
+
+
+CJBA:00058 rdf:type owl:Class ;
+
+                 rdfs:label "area 13 of cortex lateral part"@en ;
+
+                 nsu:synonym "A13L"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00056 ] .
+
+
+
+CJBA:00059 rdf:type owl:Class ;
+
+                 rdfs:label "area 13 of cortex medial part"@en ;
+
+                 nsu:synonym "A13M"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00056 ] .
+
+
+
+CJBA:00060 rdf:type owl:Class ;
+
+                 rdfs:label "area 13a of cortex"@en ;
+
+                 nsu:synonym "A13a"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00056 ] .
+
+
+
+CJBA:00061 rdf:type owl:Class ;
+
+                 rdfs:label "area 13b of cortex"@en ;
+
+                 nsu:synonym "A13b"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00056 ] .
+
+
+
+CJBA:00062 rdf:type owl:Class ;
+
+                 rdfs:label "gustatory cortex"@en ;
+
+                 nsu:synonym "Gu"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00056 ] .
+
+
+
+CJBA:00063 rdf:type owl:Class ;
+
+                 rdfs:label "orbital periallocortex"@en ;
+
+                 nsu:synonym "OPAl"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00056 ] .
+
+
+
+CJBA:00064 rdf:type owl:Class ;
+
+                 rdfs:label "orbital proisocortex"@en ;
+
+                 nsu:synonym "OPro"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00056 ] .
+
+
+
+CJBA:00065 rdf:type owl:Class ;
+
+                 rdfs:label "Posterior Cingulate Medial and Retrosplenial Cortical Regions"@en ;
+
+                 nsu:synonym "PCR"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00004 ] .
+
+
+
+CJBA:00066 rdf:type owl:Class ;
+
+                 rdfs:label "area 23 of cortex ventral part"@en ;
+
+                 nsu:synonym "A23V"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00065 ] .
+
+
+
+CJBA:00067 rdf:type owl:Class ;
+
+                 rdfs:label "area 23a of cortex"@en ;
+
+                 nsu:synonym "A23a"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00065 ] .
+
+
+
+CJBA:00068 rdf:type owl:Class ;
+
+                 rdfs:label "area 23b of cortex"@en ;
+
+                 nsu:synonym "A23b"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00065 ] .
+
+
+
+CJBA:00069 rdf:type owl:Class ;
+
+                 rdfs:label "area 23c of cortex"@en ;
+
+                 nsu:synonym "A23c"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00065 ] .
+
+
+
+CJBA:00070 rdf:type owl:Class ;
+
+                 rdfs:label "area 29a-c of cortex"@en ;
+
+                 nsu:synonym "A29a-c"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00065 ] .
+
+
+
+CJBA:00071 rdf:type owl:Class ;
+
+                 rdfs:label "area 29d of cortex"@en ;
+
+                 nsu:synonym "A29d"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00065 ] .
+
+
+
+CJBA:00072 rdf:type owl:Class ;
+
+                 rdfs:label "area 30 of cortex"@en ;
+
+                 nsu:synonym "A30"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00065 ] .
+
+
+
+CJBA:00073 rdf:type owl:Class ;
+
+                 rdfs:label "area 31 of cortex"@en ;
+
+                 nsu:synonym "A31"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00065 ] .
+
+
+
+CJBA:00074 rdf:type owl:Class ;
+
+                 rdfs:label "parietal area PG medial part (cortex)"@en ;
+
+                 nsu:synonym "PGM"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00065 ] .
+
+
+
+CJBA:00075 rdf:type owl:Class ;
+
+                 rdfs:label "prostriate area"@en ;
+
+                 nsu:synonym "ProSt"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00065 ] .
+
+
+
+CJBA:00076 rdf:type owl:Class ;
+
+                 rdfs:label "Posterior Parietal Cortex"@en ;
+
+                 nsu:synonym "PPC"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00004 ] .
+
+
+
+CJBA:00077 rdf:type owl:Class ;
+
+                 rdfs:label "anterior intraparietal area of cortex"@en ;
+
+                 nsu:synonym "AIP"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00076 ] .
+
+
+
+CJBA:00078 rdf:type owl:Class ;
+
+                 rdfs:label "lateral intraparietal area of cortex"@en ;
+
+                 nsu:synonym "LIP"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00076 ] .
+
+
+
+CJBA:00079 rdf:type owl:Class ;
+
+                 rdfs:label "medial intraparietal area of cortex"@en ;
+
+                 nsu:synonym "MIP"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00076 ] .
+
+
+
+CJBA:00080 rdf:type owl:Class ;
+
+                 rdfs:label "occipito-parietal transitional area of cortex"@en ;
+
+                 nsu:synonym "OPt"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00076 ] .
+
+
+
+CJBA:00081 rdf:type owl:Class ;
+
+                 rdfs:label "parietal area PE"@en ;
+
+                 nsu:synonym "PE"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00076 ] .
+
+
+
+CJBA:00082 rdf:type owl:Class ;
+
+                 rdfs:label "parietal area PE caudal part"@en ;
+
+                 nsu:synonym "PEC"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00076 ] .
+
+
+
+CJBA:00083 rdf:type owl:Class ;
+
+                 rdfs:label "parietal area PF (cortex)"@en ;
+
+                 nsu:synonym "PF"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00076 ] .
+
+
+
+CJBA:00084 rdf:type owl:Class ;
+
+                 rdfs:label "parietal area PFG (cortex)"@en ;
+
+                 nsu:synonym "PFG"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00076 ] .
+
+
+
+CJBA:00085 rdf:type owl:Class ;
+
+                 rdfs:label "parietal area PG"@en ;
+
+                 nsu:synonym "PG"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00076 ] .
+
+
+
+CJBA:00086 rdf:type owl:Class ;
+
+                 rdfs:label "ventral intraparietal area of cortex"@en ;
+
+                 nsu:synonym "VIP"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00076 ] .
+
+
+
+CJBA:00087 rdf:type owl:Class ;
+
+                 rdfs:label "Motor and Premotor Cortical Regions"@en ;
+
+                 nsu:synonym "PRM"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00004 ] .
+
+
+
+CJBA:00088 rdf:type owl:Class ;
+
+                 rdfs:label "area 4 of cortex parts a and b (primary motor)"@en ;
+
+                 nsu:synonym "A4ab"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00087 ] .
+
+
+
+CJBA:00089 rdf:type owl:Class ;
+
+                 rdfs:label "area 4 of cortex part c (primary motor)"@en ;
+
+                 nsu:synonym "A4c"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00087 ] .
+
+
+
+CJBA:00090 rdf:type owl:Class ;
+
+                 rdfs:label "area 6 of cortex dorsocaudal part"@en ;
+
+                 nsu:synonym "A6DC"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00087 ] .
+
+
+
+CJBA:00091 rdf:type owl:Class ;
+
+                 rdfs:label "area 6 of cortex dorsorostral part"@en ;
+
+                 nsu:synonym "A6DR"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00087 ] .
+
+
+
+CJBA:00092 rdf:type owl:Class ;
+
+                 rdfs:label "area 6 of cortex medial (supplementary motor) part"@en ;
+
+                 nsu:synonym "A6M"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00087 ] .
+
+
+
+CJBA:00093 rdf:type owl:Class ;
+
+                 rdfs:label "area 6 of cortex ventral part a"@en ;
+
+                 nsu:synonym "A6Va"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00087 ] .
+
+
+
+CJBA:00094 rdf:type owl:Class ;
+
+                 rdfs:label "area 6 of cortex ventral part b"@en ;
+
+                 nsu:synonym "A6Vb"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00087 ] .
+
+
+
+CJBA:00095 rdf:type owl:Class ;
+
+                 rdfs:label "area 8 of cortex caudal part"@en ;
+
+                 nsu:synonym "A8C"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00087 ] .
+
+
+
+CJBA:00096 rdf:type owl:Class ;
+
+                 rdfs:label "Somatosensory Cortex"@en ;
+
+                 nsu:synonym "SSC"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00004 ] .
+
+
+
+CJBA:00097 rdf:type owl:Class ;
+
+                 rdfs:label "areas 1 and 2 of cortex"@en ;
+
+                 nsu:synonym "A1-2"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00096 ] .
+
+
+
+CJBA:00098 rdf:type owl:Class ;
+
+                 rdfs:label "area 3a of cortex (somatosensory)"@en ;
+
+                 nsu:synonym "A3a"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00096 ] .
+
+
+
+CJBA:00099 rdf:type owl:Class ;
+
+                 rdfs:label "area 3b of cortex (somatosensory)"@en ;
+
+                 nsu:synonym "A3b"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00096 ] .
+
+
+
+CJBA:00100 rdf:type owl:Class ;
+
+                 rdfs:label "secondary somatosensory cortex external part"@en ;
+
+                 nsu:synonym "S2E"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00096 ] .
+
+
+
+CJBA:00101 rdf:type owl:Class ;
+
+                 rdfs:label "secondary somatosensory cortex internal part"@en ;
+
+                 nsu:synonym "S2I"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00096 ] .
+
+
+
+CJBA:00102 rdf:type owl:Class ;
+
+                 rdfs:label "secondary somatosensory cortex parietal rostral area"@en ;
+
+                 nsu:synonym "S2PR"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00096 ] .
+
+
+
+CJBA:00103 rdf:type owl:Class ;
+
+                 rdfs:label "secondary somatosensory cortex parietal ventral area"@en ;
+
+                 nsu:synonym "S2PV"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00096 ] .
+
+
+
+CJBA:00104 rdf:type owl:Class ;
+
+                 rdfs:label "Visual Cortex"@en ;
+
+                 nsu:synonym "VIS"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00004 ] .
+
+
+
+CJBA:00105 rdf:type owl:Class ;
+
+                 rdfs:label "area 19 of cortex dorsointermediate part"@en ;
+
+                 nsu:synonym "A19DI"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00104 ] .
+
+
+
+CJBA:00106 rdf:type owl:Class ;
+
+                 rdfs:label "area 19 of cortex medial part"@en ;
+
+                 nsu:synonym "A19M"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00104 ] .
+
+
+
+CJBA:00107 rdf:type owl:Class ;
+
+                 rdfs:label "fundus of superior temporal sulcus area of cortex"@en ;
+
+                 nsu:synonym "FST"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00104 ] .
+
+
+
+CJBA:00108 rdf:type owl:Class ;
+
+                 rdfs:label "medial superior temporal area of cortex"@en ;
+
+                 nsu:synonym "MST"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00104 ] .
+
+
+
+CJBA:00109 rdf:type owl:Class ;
+
+                 rdfs:label "primary visual cortex"@en ;
+
+                 nsu:synonym "V1"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00104 ] .
+
+
+
+CJBA:00110 rdf:type owl:Class ;
+
+                 rdfs:label "visual area 2"@en ;
+
+                 nsu:synonym "V2"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00104 ] .
+
+
+
+CJBA:00111 rdf:type owl:Class ;
+
+                 rdfs:label "visual area 3 (ventrolateral posterior area)"@en ;
+
+                 nsu:synonym "V3"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00104 ] .
+
+
+
+CJBA:00112 rdf:type owl:Class ;
+
+                 rdfs:label "visual area 3A (dorsoanterior area)"@en ;
+
+                 nsu:synonym "V3A"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00104 ] .
+
+
+
+CJBA:00113 rdf:type owl:Class ;
+
+                 rdfs:label "visual area 4 (ventrolatereral anterior area)"@en ;
+
+                 nsu:synonym "V4"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00104 ] .
+
+
+
+CJBA:00114 rdf:type owl:Class ;
+
+                 rdfs:label "visual area 4 transitional part (middle temporal crescent)"@en ;
+
+                 nsu:synonym "V4T"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00104 ] .
+
+
+
+CJBA:00115 rdf:type owl:Class ;
+
+                 rdfs:label "visual area 5 (middle temporal area)"@en ;
+
+                 nsu:synonym "V5"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00104 ] .
+
+
+
+CJBA:00116 rdf:type owl:Class ;
+
+                 rdfs:label "visual area 6 (dorsomedial area)"@en ;
+
+                 nsu:synonym "V6"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00104 ] .
+
+
+
+CJBA:00117 rdf:type owl:Class ;
+
+                 rdfs:label "visual area 6A (posterior parietal medial area)"@en ;
+
+                 nsu:synonym "V6A"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00104 ] .
+
+
+
+CJBA:00118 rdf:type owl:Class ;
+
+                 rdfs:label "Ventrolateral Prefrontal Cortex"@en ;
+
+                 nsu:synonym "VLP"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00004 ] .
+
+
+
+CJBA:00119 rdf:type owl:Class ;
+
+                 rdfs:label "area 45 of cortex"@en ;
+
+                 nsu:synonym "A45"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00118 ] .
+
+
+
+CJBA:00120 rdf:type owl:Class ;
+
+                 rdfs:label "area 47 (old 12) of cortex lateral part"@en ;
+
+                 nsu:synonym "A47L"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00118 ] .
+
+
+
+CJBA:00121 rdf:type owl:Class ;
+
+                 rdfs:label "area 47 (old 12) of cortex medial part"@en ;
+
+                 nsu:synonym "A47M"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00118 ] .
+
+
+
+CJBA:00122 rdf:type owl:Class ;
+
+                 rdfs:label "area 47 (old 12) of cortex orbital part"@en ;
+
+                 nsu:synonym "A47O"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00118 ] .
+
+
+
+CJBA:00123 rdf:type owl:Class ;
+
+                 rdfs:label "proisocortical motor region (precentral opercular cortex)"@en ;
+
+                 nsu:synonym "ProM"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00118 ] .
+
+
+
+CJBA:00124 rdf:type owl:Class ;
+
+                 rdfs:label "Ventral Areas of the Temporal Lobe"@en ;
+
+                 nsu:synonym "VTC"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00004 ] .
+
+
+
+CJBA:00125 rdf:type owl:Class ;
+
+                 rdfs:label "area 35 of cortex"@en ;
+
+                 nsu:synonym "A35"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00124 ] .
+
+
+
+CJBA:00126 rdf:type owl:Class ;
+
+                 rdfs:label "area 36 of cortex"@en ;
+
+                 nsu:synonym "A36"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00124 ] .
+
+
+
+CJBA:00127 rdf:type owl:Class ;
+
+                 rdfs:label "entorhinal cortex"@en ;
+
+                 nsu:synonym "Ent"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00124 ] .
+
+
+
+CJBA:00128 rdf:type owl:Class ;
+
+                 rdfs:label "temporal area TF"@en ;
+
+                 nsu:synonym "TF"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00124 ] .
+
+
+
+CJBA:00129 rdf:type owl:Class ;
+
+                 rdfs:label "temporal area TF occipital part"@en ;
+
+                 nsu:synonym "TFO"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00124 ] .
+
+
+
+CJBA:00130 rdf:type owl:Class ;
+
+                 rdfs:label "temporal area TH"@en ;
+
+                 nsu:synonym "TH"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00124 ] .
+
+
+
+CJBA:00131 rdf:type owl:Class ;
+
+                 rdfs:label "temporal area TL"@en ;
+
+                 nsu:synonym "TL"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00124 ] .
+
+
+
+CJBA:00132 rdf:type owl:Class ;
+
+                 rdfs:label "temporal area TL occipital part"@en ;
+
+                 nsu:synonym "TLO"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00124 ] .
+
+
+
+CJBA:00133 rdf:type owl:Class ;
+
+                 rdfs:label "Lateropallial Part"@en ;
+
+                 nsu:synonym "LatPal"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00003 ] .
+
+
+
+CJBA:00134 rdf:type owl:Class ;
+
+                 rdfs:label "amygdalopiriform transition area"@en ;
+
+                 nsu:synonym "APir"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00133 ] .
+
+
+
+CJBA:00135 rdf:type owl:Class ;
+
+                 rdfs:label "Pallial Amygdala"@en ;
+
+                 nsu:synonym "PalAmyg"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00003 ] .
+
+
+
+CJBA:00136 rdf:type owl:Class ;
+
+                 rdfs:label "Ventral Pallium"@en ;
+
+                 nsu:synonym "VPal"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00003 ] .
+
+
+
+CJBA:00137 rdf:type owl:Class ;
+
+                 rdfs:label "Piriform Cortex"@en ;
+
+                 nsu:synonym "PirC"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00136 ] .
+
+
+
+CJBA:00138 rdf:type owl:Class ;
+
+                 rdfs:label "piriform cortex"@en ;
+
+                 nsu:synonym "Pir"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom CJBA:00137 ] .
+
+
+

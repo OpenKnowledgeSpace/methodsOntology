@@ -12,7 +12,7 @@
 @base <http://www.hbp.FIXME.org/bbp_molecular_complex_ontology> .
 
 <http://www.hbp.FIXME.org/bbp_molecular_complex_ontology> rdf:type owl:Ontology ;
-                owl:imports <http://www.FIXME.org/nsupper> .
+                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
 
 
 

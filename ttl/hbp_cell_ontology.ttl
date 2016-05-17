@@ -6,1552 +6,1165 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix nnb: <http://ontology.neuinfo.org/NIF/BiomaterialEntities/NIF-Neuron-NT-Bridge.owl#> .
+@prefix ncel: <http://ontology.neuinfo.org/NIF/BiomaterialEntities/NIF-Cell.owl#> .
+@prefix nmc: <http://ontology.neuinfo.org/NIF/BiomaterialEntities/NIF_Neuron_MolecularConstituent_Bridge.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix HBP_CELL: <http://www.hbp.FIXME.org/hbp_cell_ontology/> .
 @base <http://www.hbp.FIXME.org/hbp_cell_ontology> .
 
-<http://www.hbp.FIXME.org/hbp_cell_ontology> rdf:type owl:Ontology ;
-                owl:imports <http://www.FIXME.org/nsupper> .
+<http://www.hbp.FIXME.org/hbp_cell_ontology> rdf:type owl:Ontology ;                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
+
+
+HBP_CELL:0000000 rdf:type owl:Class ;
+                  rdfs:label "Cell"@en .
 
 
 
-:HBP_CELL_0000000 rdf:type owl:Class ;
-
-                  rdfs:label "cell"@en .
-
-
-
-:HBP_CELL_0000001 rdf:type owl:Class ;
-
-                  rdfs:label "neuron"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000000 .
+HBP_CELL:0000001 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:sao1417703748;                  
+                  rdfs:label "Neuron"@en ;
+                  rdfs:subClassOf HBP_CELL:0000000 .
 
 
 
-:HBP_CELL_0000002 rdf:type owl:Class ;
-
-                  rdfs:label "glial cell"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000000 .
+HBP_CELL:0000002 rdf:type owl:Class ;                  owl:equivalentClass ncel:sao313023570;                  rdfs:label "Glial cell"@en ;
+                  rdfs:subClassOf HBP_CELL:0000000 .
 
 
 
-:HBP_CELL_0000003 rdf:type owl:Class ;
-
-                  rdfs:label "neuron classified base morphological properties"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000001 .
+HBP_CELL:0000003 rdf:type owl:Class ;
+                  rdfs:label "Neuron classified base morphological properties"@en ;
+                  rdfs:subClassOf HBP_CELL:0000001 .
 
 
 
-:HBP_CELL_0000004 rdf:type owl:Class ;
-
-                  rdfs:label "neuron classified base electrical properties"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000001 .
+HBP_CELL:0000004 rdf:type owl:Class ;
+                  rdfs:label "Neuron classified base electrical properties"@en ;
+                  rdfs:subClassOf HBP_CELL:0000001 .
 
 
 
-:HBP_CELL_0000005 rdf:type owl:Class ;
-
-                  rdfs:label "neuron classified based on molecular expression"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000001 .
+HBP_CELL:0000005 rdf:type owl:Class ;
+                  rdfs:label "Neuron classified based on molecular expression"@en ;
+                  rdfs:subClassOf HBP_CELL:0000001 .
 
 
 
-:HBP_CELL_0000006 rdf:type owl:Class ;
-
-                  rdfs:label "neuron classified based on connection properties"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000001 .
+HBP_CELL:0000006 rdf:type owl:Class ;
+                  rdfs:label "Neuron classified based on connection properties"@en ;
+                  rdfs:subClassOf HBP_CELL:0000001 .
 
 
 
-:HBP_CELL_0000007 rdf:type owl:Class ;
-
-                  rdfs:label "neuron classified based on neurotransmitter release"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000005 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000008 .
+HBP_CELL:0000007 rdf:type owl:Class ;
+                  rdfs:label "Neuron classified based on neurotransmitter release"@en ;
+                  rdfs:subClassOf HBP_CELL:0000005 ;
+                  rdfs:subClassOf HBP_CELL:0000008 .
 
 
 
-:HBP_CELL_0000008 rdf:type owl:Class ;
-
-                  rdfs:label "neuron classified based on synaptic properties"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000006 .
+HBP_CELL:0000008 rdf:type owl:Class ;
+                  rdfs:label "Neuron classified based on synaptic properties"@en ;
+                  rdfs:subClassOf HBP_CELL:0000006 .
 
 
 
-:HBP_CELL_0000009 rdf:type owl:Class ;
-
-                  rdfs:label "neuron classified based on protein expression"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000005 .
+HBP_CELL:0000009 rdf:type owl:Class ;
+                  rdfs:label "Neuron classified based on protein expression"@en ;
+                  rdfs:subClassOf HBP_CELL:0000005 .
 
 
 
-:HBP_CELL_0000010 rdf:type owl:Class ;
-
-                  rdfs:label "neuron classified based on gene expression"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000005 .
+HBP_CELL:0000010 rdf:type owl:Class ;
+                  rdfs:label "Neuron classified based on gene expression"@en ;
+                  rdfs:subClassOf HBP_CELL:0000005 .
 
 
 
-:HBP_CELL_0000011 rdf:type owl:Class ;
-
-                  rdfs:label "neuron expressing Neuropeptide Y"@en ;
-
+HBP_CELL:0000011 rdf:type owl:Class ;
+                  rdfs:label "Neuron expressing neuropeptide y"@en ;
                   nsu:synonym "NPY+ cell"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000010 .
-
+                  rdfs:subClassOf HBP_CELL:0000010 .
 
 
-:HBP_CELL_0000012 rdf:type owl:Class ;
 
-                  rdfs:label "neuron expressing Vasoactive Intestinal Peptide"@en ;
-
+HBP_CELL:0000012 rdf:type owl:Class ;
+                  rdfs:label "Neuron expressing vasoactive intestinal peptide"@en ;
                   nsu:synonym "VIP+ cell"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000010 .
-
+                  rdfs:subClassOf HBP_CELL:0000010 .
 
 
-:HBP_CELL_0000013 rdf:type owl:Class ;
 
-                  rdfs:label "neuron expressing Cholecystokinin"@en ;
-
+HBP_CELL:0000013 rdf:type owl:Class ;
+                  rdfs:label "Neuron expressing cholecystokinin"@en ;
                   nsu:synonym "CCK+ cell"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000010 .
-
-
-
-:HBP_CELL_0000014 rdf:type owl:Class ;
-
-                  rdfs:label "neuron expressing Calbindin"@en ;
-
-                  nsu:synonym "calbindin 1 expressing cell"@en ;
-
-                  nsu:synonym "CB+ cell"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000010 .
+                  rdfs:subClassOf HBP_CELL:0000010 .
 
 
 
-:HBP_CELL_0000015 rdf:type owl:Class ;
+HBP_CELL:0000014 rdf:type owl:Class ;
+                  owl:equivalentClass nmc:nlx_cell_10061212;                  
+                  rdfs:label "Neuron expressing calbindin"@en ;
+                  nsu:synonym "Calbindin 1 expressing cell"@en ;
+                  nsu:synonym "CB+ cell"@en ;                  
+                  nsu:synonym "Calbindin neuron"@en ;                  
+                  rdfs:subClassOf HBP_CELL:0000010 .
 
-                  rdfs:label "neuron expressing Somatostatin"@en ;
 
+
+HBP_CELL:0000015 rdf:type owl:Class ;
+                  rdfs:label "Neuron expressing somatostatin"@en ;
                   nsu:synonym "SOM+ cell"@en ;
-
                   nsu:synonym "Sst+ cell"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000010 .
-
+                  rdfs:subClassOf HBP_CELL:0000010 .
 
 
-:HBP_CELL_0000016 rdf:type owl:Class ;
 
-                  rdfs:label "neuron expressing Parvalbumin"@en ;
-
+HBP_CELL:0000016 rdf:type owl:Class ;
+                  owl:equivalentClass nmc:nlx_cell_10061010;                  
+                  rdfs:label "Neuron expressing parvalbumin"@en ;
                   nsu:synonym "PV+ cell"@en ;
-
-                  nsu:synonym "Pvalb+ cell"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000010 .
-
+                  nsu:synonym "Pvalb+ cell"@en ;                  
+                  nsu:synonym "Parvalbumin neuron"@en ;                  
+                  rdfs:subClassOf HBP_CELL:0000010 .
 
 
-:HBP_CELL_0000017 rdf:type owl:Class ;
 
-                  rdfs:label "neuron expressing Calretinin"@en ;
-
+HBP_CELL:0000017 rdf:type owl:Class ;
+                  owl:equivalentClass nmc:nlx_cell_10061313;                  
+                  rdfs:label "Neuron expressing calretinin"@en ;
                   nsu:synonym "Calb2+ cell"@en ;
-
-                  nsu:synonym "CR+ cell"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000010 .
-
-
-
-:HBP_CELL_0000018 rdf:type owl:Class ;
-
-                  rdfs:label "pyramidal cell"@en ;
-
-                  nsu:synonym "PC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000003 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000021 .
+                  nsu:synonym "CR+ cell"@en ;                  
+                  nsu:synonym "Calretinin neuron"@en ;                  
+                  rdfs:subClassOf HBP_CELL:0000010 .
 
 
 
-:HBP_CELL_0000019 rdf:type owl:Class ;
+HBP_CELL:0000018 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:sao2128417084;                  
+                  rdfs:label "Pyramidal cell"@en ;
+                  nsu:synonym "PC"@en ;                  
+                  nsu:synonym "Neocortex pyramidal cell"@en ;                  
+                  rdfs:subClassOf HBP_CELL:0000003 ;
+                  rdfs:subClassOf HBP_CELL:0000021 .
 
+
+
+HBP_CELL:0000019 rdf:type owl:Class ;
                   rdfs:label "Inhibitory neuron"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000007 .
-
+                  rdfs:subClassOf HBP_CELL:0000007 .
 
 
-:HBP_CELL_0000020 rdf:type owl:Class ;
 
+HBP_CELL:0000020 rdf:type owl:Class ;
                   rdfs:label "Excitatory neuron"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000007 .
-
+                  rdfs:subClassOf HBP_CELL:0000007 .
 
 
-:HBP_CELL_0000021 rdf:type owl:Class ;
 
+HBP_CELL:0000021 rdf:type owl:Class ;
+                  owl:equivalentClass nnb:nlx_neuron_nt_090804;                  
                   rdfs:label "Glutamatergic neuron"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000020 .
-
+                  rdfs:subClassOf HBP_CELL:0000020 .
 
 
-:HBP_CELL_0000022 rdf:type owl:Class ;
 
+HBP_CELL:0000022 rdf:type owl:Class ;
+                  owl:equivalentClass nnb:nlx_neuron_nt_090803;                  
                   rdfs:label "GABAergic neuron"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000019 .
-
+                  rdfs:subClassOf HBP_CELL:0000019 .
 
 
-:HBP_CELL_0000023 rdf:type owl:Class ;
 
-                  rdfs:label "tufted pyramidal cell"@en ;
-
+HBP_CELL:0000023 rdf:type owl:Class ;
+                  rdfs:label "Tufted pyramidal cell"@en ;
                   nsu:synonym "TPC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000018 .
-
+                  rdfs:subClassOf HBP_CELL:0000018 .
 
 
-:HBP_CELL_0000024 rdf:type owl:Class ;
 
-                  rdfs:label "Untufted Pyramidal Cell"@en ;
-
-                  nsu:definition "These cells have a thin apical dendrite without a tuft. The two types of Thick Tufted pyramidal Cells have bigger and more typical pyramidal-shaped somata compared with Untufted (slender) Pyramidal Cells and the Untufted Pyramidal Cells. The Untufted (slender) Pyramidal Cells and the Untufted Pyramidal Cells are smaller neurons which have similar smaller basal dendritic clusters."@en ;
-
+HBP_CELL:0000024 rdf:type owl:Class ;
+                  rdfs:label "Untufted pyramidal cell"@en ;
+                  nsu:definition "These cells have a thin apical dendrite without a tuft. The two types of Thick Tufted pyramidal cells have bigger and more typical pyramidal-shaped somata compared with Untufted (slender) pyramidal cells and the Untufted pyramidal cells. The Untufted (slender) pyramidal cells and the Untufted pyramidal cells are smaller neurons which have similar smaller basal dendritic clusters."@en ;
                   nsu:synonym "UTPC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000018 .
-
+                  rdfs:subClassOf HBP_CELL:0000018 .
 
 
-:HBP_CELL_0000025 rdf:type owl:Class ;
-
-                  rdfs:label "Spiny Stellate Cell"@en ;
-
+HBP_CELL:0000025 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:sao1236796660;                  
+                  rdfs:label "Spiny stellate cell"@en ;
                   nsu:synonym "SS"@en ;
-
-                  nsu:synonym "SSC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000003 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000021 .
+                  nsu:synonym "SSC"@en ;                  
+                  nsu:synonym "Neocortex stellate spiny cell"@en ;                  
+                  rdfs:subClassOf HBP_CELL:0000003 ;
+                  rdfs:subClassOf HBP_CELL:0000021 .
 
 
 
-:HBP_CELL_0000026 rdf:type owl:Class ;
-
-                  rdfs:label "Layer 4 Spiny Stellate Cell"@en ;
-
-                  nsu:synonym "L4_SS"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000025 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 .
+HBP_CELL:0000026 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nifext_53;                  
+                  rdfs:label "Layer IV spiny stellate cell"@en ;
+                  nsu:synonym "L4_SS"@en ;                  
+                  nsu:synonym "Neocortex stellate layer 4 cell"@en ;                  
+                  rdfs:subClassOf HBP_CELL:0000025 ;
+                  rdfs:subClassOf HBP_CELL:0000033 .
 
 
 
-:HBP_CELL_0000027 rdf:type owl:Class ;
-
-                  rdfs:label "Star Pyramidal Cell"@en ;
-
-                  nsu:definition "Star Pyramidal Cells have a slender apical dendrite without a tuft."@en ;
-
+HBP_CELL:0000027 rdf:type owl:Class ;
+                  rdfs:label "Star pyramidal cell"@en ;
+                  nsu:definition "Star pyramidal cells have a slender apical dendrite without a tuft."@en ;
                   nsu:synonym "SP"@en ;
-
                   nsu:synonym "SPC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000018 .
-
+                  rdfs:subClassOf HBP_CELL:0000018 .
 
 
-:HBP_CELL_0000028 rdf:type owl:Class ;
 
-                  rdfs:label "Layer II/III Pyramidal Cell"@en ;
-
+HBP_CELL:0000028 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nifext_49;                  
+                  rdfs:label "Layer II/III pyramidal cell"@en ;
                   nsu:synonym "L2/3_PC"@en ;
-
-                  nsu:synonym "L23_PC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000018 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 .
+                  nsu:synonym "L23_PC"@en ;                  
+                  nsu:synonym "Neocortex pyramidal cell layer 2-3"@en ;                  
+                  rdfs:subClassOf HBP_CELL:0000018 ;
+                  rdfs:subClassOf HBP_CELL:0000033 .
 
 
 
-:HBP_CELL_0000029 rdf:type owl:Class ;
-
-                  rdfs:label "Layer VI Pyramidal Cell"@en ;
-
+HBP_CELL:0000029 rdf:type owl:Class ;
+                  rdfs:label "Layer IV pyramidal cell"@en ;
                   nsu:synonym "L4_PC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000018 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 .
+                  rdfs:subClassOf HBP_CELL:0000018 ;
+                  rdfs:subClassOf HBP_CELL:0000033 .
 
 
 
-:HBP_CELL_0000030 rdf:type owl:Class ;
-
-                  rdfs:label "Horizontal Pyramidal Cell"@en ;
-
-                  nsu:definition "Horizontal tufted Pyramidal Cells have a horizontally extended dendrite with more branches than a typical basal dendrite."@en ;
-
+HBP_CELL:0000030 rdf:type owl:Class ;
+                  rdfs:label "Horizontal pyramidal cell"@en ;
+                  nsu:definition "Horizontal tufted pyramidal cells have a horizontally extended dendrite with more branches than a typical basal dendrite."@en ;
                   nsu:synonym "HPC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000018 .
-
+                  rdfs:subClassOf HBP_CELL:0000018 .
 
 
-:HBP_CELL_0000031 rdf:type owl:Class ;
 
-                  rdfs:label "Bipolar Pyramidal Cell"@en ;
-
-                  nsu:definition "Bipolar Pyramidal Cells have a typical apical dendrite towards pial with or without a small tuft and a big inverted (towards white matter) dendrite with more branches than other basal dendrites."@en ;
-
+HBP_CELL:0000031 rdf:type owl:Class ;
+                  rdfs:label "Bipolar pyramidal cell"@en ;
+                  nsu:definition "Bipolar pyramidal cells have a typical apical dendrite towards pial with or without a small tuft and a big inverted (towards white matter) dendrite with more branches than other basal dendrites."@en ;
                   nsu:synonym "BPC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000018 .
-
+                  rdfs:subClassOf HBP_CELL:0000018 .
 
 
-:HBP_CELL_0000032 rdf:type owl:Class ;
 
-                  rdfs:label "Narrow Pyramidal Cell projecting to thalamus"@en ;
-
-                  nsu:definition "Narrow Pyramidal Cells have a narrow-looking appearance with short basal and oblique dendrites and a small tuft."@en ;
-
+HBP_CELL:0000032 rdf:type owl:Class ;
+                  rdfs:label "Narrow pyramidal cell projecting to thalamus"@en ;
+                  nsu:definition "Narrow pyramidal cells have a narrow-looking appearance with short basal and oblique dendrites and a small tuft."@en ;
                   nsu:synonym "NPC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000018 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000034 .
+                  rdfs:subClassOf HBP_CELL:0000018 ;
+                  rdfs:subClassOf HBP_CELL:0000034 .
 
 
 
-:HBP_CELL_0000033 rdf:type owl:Class ;
-
-                  rdfs:label "neuron classified based on location"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000001 .
+HBP_CELL:0000033 rdf:type owl:Class ;
+                  rdfs:label "Neuron classified based on location"@en ;
+                  rdfs:subClassOf HBP_CELL:0000001 .
 
 
 
-:HBP_CELL_0000034 rdf:type owl:Class ;
-
-                  rdfs:label "neuron classified base on regional projection"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000006 .
+HBP_CELL:0000034 rdf:type owl:Class ;
+                  rdfs:label "Neuron classified base on regional projection"@en ;
+                  rdfs:subClassOf HBP_CELL:0000006 .
 
 
 
-:HBP_CELL_0000035 rdf:type owl:Class ;
-
-                  rdfs:label "Tufted Pyramidal Cell towards Layer IV"@en ;
-
+HBP_CELL:0000035 rdf:type owl:Class ;
+                  rdfs:label "Tufted pyramidal cell towards layer IV"@en ;
                   nsu:synonym "TPC_L4"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000023 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000034 .
+                  rdfs:subClassOf HBP_CELL:0000023 ;
+                  rdfs:subClassOf HBP_CELL:0000034 .
 
 
 
-:HBP_CELL_0000036 rdf:type owl:Class ;
-
-                  rdfs:label "Tufted Pyramidal Cell towards Layer I"@en ;
-
+HBP_CELL:0000036 rdf:type owl:Class ;
+                  rdfs:label "Tufted pyramidal cell towards layer I"@en ;
                   nsu:synonym "TPC_L1"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000023 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000034 .
+                  rdfs:subClassOf HBP_CELL:0000023 ;
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000034 .
 
 
 
-:HBP_CELL_0000037 rdf:type owl:Class ;
-
-                  rdfs:label "Thick Tufted Pyramidal Cell"@en ;
-
+HBP_CELL:0000037 rdf:type owl:Class ;
+                  rdfs:label "Thick tufted pyramidal cell"@en ;
                   nsu:synonym "TTPC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000023 .
-
+                  rdfs:subClassOf HBP_CELL:0000023 .
 
 
-:HBP_CELL_0000038 rdf:type owl:Class ;
 
-                  rdfs:label "Slender Tufted Pyramidal Cell"@en ;
-
+HBP_CELL:0000038 rdf:type owl:Class ;
+                  rdfs:label "Slender tufted pyramidal cell"@en ;
                   nsu:definition "These cells have a thin apical dendrite with a small tuft."@en ;
-
                   nsu:synonym "STPC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000023 .
-
+                  rdfs:subClassOf HBP_CELL:0000023 .
 
 
-:HBP_CELL_0000039 rdf:type owl:Class ;
 
-                  rdfs:label "Early bifurcating Thick Tufted Pyramidal Cell"@en ;
-
+HBP_CELL:0000039 rdf:type owl:Class ;
+                  rdfs:label "Early bifurcating thick tufted pyramidal cell"@en ;
                   nsu:definition "These cells have a thick apical trunk with the tuft occurring more proximally."@en ;
-
                   nsu:synonym "TTPC2"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000037 .
-
+                  rdfs:subClassOf HBP_CELL:0000037 .
 
 
-:HBP_CELL_0000040 rdf:type owl:Class ;
 
-                  rdfs:label "Late bifurcating Thick Tufted Pyramidal Cell"@en ;
-
+HBP_CELL:0000040 rdf:type owl:Class ;
+                  rdfs:label "Late bifurcating thick tufted pyramidal cell"@en ;
                   nsu:definition "These cells had a thick apical dendrite with a late big tuft."@en ;
-
                   nsu:synonym "TTPC1"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000037 .
-
+                  rdfs:subClassOf HBP_CELL:0000037 .
 
 
-:HBP_CELL_0000041 rdf:type owl:Class ;
 
-                  rdfs:label "Untufted Slender Pyramidal Cell"@en ;
-
+HBP_CELL:0000041 rdf:type owl:Class ;
+                  rdfs:label "Untufted slender pyramidal cell"@en ;
                   nsu:synonym "USPC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000024 .
-
+                  rdfs:subClassOf HBP_CELL:0000024 .
 
 
-:HBP_CELL_0000042 rdf:type owl:Class ;
 
-                  rdfs:label "Inverted Pyramidal Cell"@en ;
-
-                  nsu:definition "Inverted Tufted Pyramidal Cell have a big dendrite inverted towards white matter with more branches than other basal dendrites."@en ;
-
+HBP_CELL:0000042 rdf:type owl:Class ;
+                  rdfs:label "Inverted pyramidal cell"@en ;
+                  nsu:definition "Inverted tufted pyramidal cell have a big dendrite inverted towards white matter with more branches than other basal dendrites."@en ;
                   nsu:synonym "IPC"@en ;
-
                   nsu:synonym "ITPC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000023 .
-
+                  rdfs:subClassOf HBP_CELL:0000023 .
 
 
-:HBP_CELL_0000043 rdf:type owl:Class ;
 
-                  rdfs:label "Layer VI Tufted Pyramidal Cell towards Layer IV"@en ;
-
+HBP_CELL:0000043 rdf:type owl:Class ;
+                  rdfs:label "Layer VI tufted pyramidal cell towards layer IV"@en ;
                   nsu:synonym "L6_TTPC_L4"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000035 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000035 .
 
 
 
-:HBP_CELL_0000044 rdf:type owl:Class ;
-
-                  rdfs:label "Layer V Late bifurcating Thick Tufted Pyramidal Cell"@en ;
-
+HBP_CELL:0000044 rdf:type owl:Class ;
+                  rdfs:label "Layer V late bifurcating thick tufted pyramidal cell"@en ;
                   nsu:synonym "L5_TTPC1"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000040 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000040 .
 
 
 
-:HBP_CELL_0000045 rdf:type owl:Class ;
-
-                  rdfs:label "Layer VI Untufted Pyramidal Cell"@en ;
-
+HBP_CELL:0000045 rdf:type owl:Class ;
+                  rdfs:label "Layer VI untufted pyramidal cell"@en ;
                   nsu:synonym "L6_UTPC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000024 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 .
+                  rdfs:subClassOf HBP_CELL:0000024 ;
+                  rdfs:subClassOf HBP_CELL:0000033 .
 
 
 
-:HBP_CELL_0000046 rdf:type owl:Class ;
-
-                  rdfs:label "Layer VI Inverted Pyramidal Cell"@en ;
-
+HBP_CELL:0000046 rdf:type owl:Class ;
+                  rdfs:label "Layer VI inverted pyramidal cell"@en ;
                   nsu:synonym "L6_IPC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000042 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000042 .
 
 
 
-:HBP_CELL_0000047 rdf:type owl:Class ;
-
-                  rdfs:label "Layer VI Bipolar Pyramidal Cell"@en ;
-
+HBP_CELL:0000047 rdf:type owl:Class ;
+                  rdfs:label "Layer VI bipolar pyramidal cell"@en ;
                   nsu:synonym "L6_BPC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000031 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 .
+                  rdfs:subClassOf HBP_CELL:0000031 ;
+                  rdfs:subClassOf HBP_CELL:0000033 .
 
 
 
-:HBP_CELL_0000048 rdf:type owl:Class ;
-
-                  rdfs:label "Layer V Early bifurcating Thick Tufted Pyramidal Cell"@en ;
-
+HBP_CELL:0000048 rdf:type owl:Class ;
+                  rdfs:label "Layer V early bifurcating thick tufted pyramidal cell"@en ;
                   nsu:synonym "L5_TTPC2"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000039 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000039 .
 
 
 
-:HBP_CELL_0000049 rdf:type owl:Class ;
-
-                  rdfs:label "Layer V Untufted Pyramidal Cell"@en ;
-
+HBP_CELL:0000049 rdf:type owl:Class ;
+                  rdfs:label "Layer V untufted pyramidal cell"@en ;
                   nsu:synonym "L5_UTPC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000024 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 .
+                  rdfs:subClassOf HBP_CELL:0000024 ;
+                  rdfs:subClassOf HBP_CELL:0000033 .
 
 
 
-:HBP_CELL_0000050 rdf:type owl:Class ;
-
-                  rdfs:label "Layer V Slender Tufted Pyramidal Cell"@en ;
-
+HBP_CELL:0000050 rdf:type owl:Class ;
+                  rdfs:label "Layer V slender tufted pyramidal cell"@en ;
                   nsu:synonym "L5_STPC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000038 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000038 .
 
 
 
-:HBP_CELL_0000051 rdf:type owl:Class ;
-
-                  rdfs:label "Layer VI Tufted Pyramidal Cell towards Layer I"@en ;
-
+HBP_CELL:0000051 rdf:type owl:Class ;
+                  rdfs:label "Layer VI tufted pyramidal cell towards layer I"@en ;
                   nsu:synonym "L6_TPC_L1"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000036 .
-
-
-
-:HBP_CELL_0000052 rdf:type owl:Class ;
-
-                  rdfs:label "Basket Cell"@en ;
-
-                  nsu:synonym "BC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000003 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000022 .
+                  rdfs:subClassOf HBP_CELL:0000036 .
 
 
 
-:HBP_CELL_0000053 rdf:type owl:Class ;
+HBP_CELL:0000052 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nifext_56;                  
+                  rdfs:label "Basket cell"@en ;
+                  nsu:synonym "BC"@en ;                  
+                  nsu:synonym "Neocortex basket cell"@en ;                  
+                  rdfs:subClassOf HBP_CELL:0000003 ;
+                  rdfs:subClassOf HBP_CELL:0000022 .
 
-                  rdfs:label "Bipolar Cell"@en ;
 
+
+HBP_CELL:0000053 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nifext_81;                  
+                  rdfs:label "Bipolar cell"@en ;
                   nsu:definition "Bipolar cells have bi-polar dendrites that emerged out from the two poles of a small vertical spindle soma. Some BP cells can have a third dendrite emerged out from the middle part of the soma. Their axonal clusters are narrow and vertically oriented."@en ;
-
-                  nsu:synonym "BP"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000003 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000022 .
+                  nsu:synonym "BP"@en ;                  
+                  nsu:synonym "Neocortex bipolar cell"@en ;                  
+                  rdfs:subClassOf HBP_CELL:0000003 ;
+                  rdfs:subClassOf HBP_CELL:0000022 .
 
 
 
-:HBP_CELL_0000054 rdf:type owl:Class ;
-
-                  rdfs:label "Bitufted Cell"@en ;
-
+HBP_CELL:0000054 rdf:type owl:Class ;
+                  rdfs:label "Bitufted cell"@en ;
                   nsu:definition "Bitufted cells have bitufted dendrites, and are characterized by long axonal segments typically forming a big transcolumnar and/or translaminar axonal cluster."@en ;
-
                   nsu:synonym "BTC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000003 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000022 .
+                  rdfs:subClassOf HBP_CELL:0000003 ;
+                  rdfs:subClassOf HBP_CELL:0000022 .
 
 
 
-:HBP_CELL_0000055 rdf:type owl:Class ;
-
-                  rdfs:label "Martinotti Cell"@en ;
-
-                  nsu:definition "Martinotti Cells have multipolar, bitufted, or bipolar dendrites, and are distinguished by their ascending axons that commonly give rise to two axonal arborizations, one near the cell body and the other in Layer I except of those in Layer VI. The Martinotti Cells in Layer VI have a second axonal cluster formed under Layer I. The second axonal plexus of Martinotti Cells can be very dense (axonal tuft) or more diffuse. Axonal collaterals of Martinotti Cells are characterized by spiny boutons while dendrites are bearing sparsely distributed spines that are uncommon for other interneuron types."@en ;
-
-                  nsu:synonym "MC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000003 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000022 .
+HBP_CELL:0000055 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nifext_55;                  
+                  rdfs:label "Martinotti cell"@en ;
+                  nsu:definition "Martinotti Cells have multipolar, bitufted, or bipolar dendrites, and are distinguished by their ascending axons that commonly give rise to two axonal arborizations, one near the cell body and the other in layer I except of those in layer VI. The Martinotti Cells in layer VI have a second axonal cluster formed under layer I. The second axonal plexus of Martinotti Cells can be very dense (axonal tuft) or more diffuse. Axonal collaterals of Martinotti Cells are characterized by spiny boutons while dendrites are bearing sparsely distributed spines that are uncommon for other interneuron types."@en ;
+                  nsu:synonym "MC"@en ;                  
+                  nsu:synonym "Neocortex Martinotti cell"@en ;                  
+                  rdfs:subClassOf HBP_CELL:0000003 ;
+                  rdfs:subClassOf HBP_CELL:0000022 .
 
 
 
-:HBP_CELL_0000056 rdf:type owl:Class ;
-
-                  rdfs:label "Neurogliaform Cell"@en ;
-
+HBP_CELL:0000056 rdf:type owl:Class ;
+                  rdfs:label "Neurogliaform cell"@en ;
                   nsu:definition "Neurogliaform cell have multipolar dendritic arbors, and are characterized by very small and dense local axonal arborization around the parent cell body and short axonal segments bearing high density of small boutons."@en ;
-
                   nsu:synonym "NGC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000003 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000022 .
+                  rdfs:subClassOf HBP_CELL:0000003 ;
+                  rdfs:subClassOf HBP_CELL:0000022 .
 
 
 
-:HBP_CELL_0000057 rdf:type owl:Class ;
-
-                  rdfs:label "Neurogliaform Cell with Sparse Axonal Arbours"@en ;
-
-                  nsu:definition "Visually, the Neurogliaform Cell with Sparse Axonal Arbours, appeared as a sparser variation of Neurogliaform Cell with Dense Axonal Arbours. They displayed similar axonal branching patterns in terms of segment length, tortuosity, and branch angles. However, Neurogliaform Cell with Sparse Axonal Arbours differ from Neurogliaform Cell with Dense Axonal Arbours in that they displayed significantly smaller vertical arborizations with fewer and shorter axon collaterals. On the other hand, the dendritic arborization can extend further horizontally with longer dendritic segments and smaller branching angles."@en ;
-
+HBP_CELL:0000057 rdf:type owl:Class ;
+                  rdfs:label "Neurogliaform cell with sparse axonal arbours"@en ;
+                  nsu:definition "Visually, the Neurogliaform cell with sparse axonal arbours, appeared as a sparser variation of Neurogliaform cell with dense axonal arbours. They displayed similar axonal branching patterns in terms of segment length, tortuosity, and branch angles. However, Neurogliaform cell with sparse axonal arbours differ from Neurogliaform cell with dense axonal arbours in that they displayed significantly smaller vertical arborizations with fewer and shorter axon collaterals. On the other hand, the dendritic arborization can extend further horizontally with longer dendritic segments and smaller branching angles."@en ;
                   nsu:synonym "NGC-SA"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000056 .
-
+                  rdfs:subClassOf HBP_CELL:0000056 .
 
 
-:HBP_CELL_0000058 rdf:type owl:Class ;
 
-                  rdfs:label "Neurogliaform Cell with Dense Axonal Arbours"@en ;
-
-                  nsu:definition "Neurogliaform Cell with Dense Axonal Arbours cells are very similar to the Neurogliaform Cells reported in other cortical layers showing compact axonal arborization. These neurons also typically display the shortest dendritic segments among Layer I neurons."@en ;
-
+HBP_CELL:0000058 rdf:type owl:Class ;
+                  rdfs:label "Neurogliaform cell with dense axonal arbours"@en ;
+                  nsu:definition "Neurogliaform cell with dense axonal arbours cells are very similar to the Neurogliaform cells reported in other cortical layers showing compact axonal arborization. These neurons also typically display the shortest dendritic segments among layer I neurons."@en ;
                   nsu:synonym "NGC-DA"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000056 .
-
-
-
-:HBP_CELL_0000059 rdf:type owl:Class ;
-
-                  rdfs:label "Double Bouquet Cell"@en ;
-
-                  nsu:definition "Double Bouquet Cells have multipolar or bitufted dendrites, and are distinguished by a horse-tail like axon bundle that are typically formed by one to a few long descending/ascending vertical axonal collaterals from which many short branches emerge out, or by tightly intertwined bundles of long descending vertical collaterals (corresponding to the horse-tail cells). Layer II/III Double Bouquet Cells commonly have descending axonal collaterals. Layer V and VI Double Bouquet Cells often have ascending axonal collaterals reaching LII/III even LI."@en ;
-
-                  nsu:synonym "DBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000003 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000022 .
+                  rdfs:subClassOf HBP_CELL:0000056 .
 
 
 
-:HBP_CELL_0000060 rdf:type owl:Class ;
+HBP_CELL:0000059 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nifext_59;
+                  rdfs:label "Double bouquet cell"@en ;
+                  nsu:definition "Double bouquet cells have multipolar or bitufted dendrites, and are distinguished by a horse-tail like axon bundle that are typically formed by one to a few long descending/ascending vertical axonal collaterals from which many short branches emerge out, or by tightly intertwined bundles of long descending vertical collaterals (corresponding to the horse-tail cells). Layer II/III double bouquet cells commonly have descending axonal collaterals. Layer V and VI double bouquet cells often have ascending axonal collaterals reaching layer II/III even layer I."@en ;
+                  nsu:synonym "DBC"@en ;                  
+                  nsu:synonym "Neocortex bouquet double cell"@en ; 
+                  
+                  rdfs:subClassOf HBP_CELL:0000003 ;
+                  rdfs:subClassOf HBP_CELL:0000022 .
 
-                  rdfs:label "Chandelier Cell"@en ;
 
-                  nsu:definition "Chandelier Cells have multipolar or bitufted dendritic arbors, and are distinguished by pre-terminal axon branches that form short vertical rows of boutons resembling candlesticks. These interneurons are also referred to as axo-axonic cells as they synapse on the axonal initial segment of their pyramidal targets."@en ;
 
+HBP_CELL:0000060 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nifext_57 ;                  
+                  rdfs:label "Chandelier cell"@en ;
+                  nsu:definition "Chandelier cells have multipolar or bitufted dendritic arbors, and are distinguished by pre-terminal axon branches that form short vertical rows of boutons resembling candlesticks. These interneurons are also referred to as axo-axonic cells as they synapse on the axonal initial segment of their pyramidal targets."@en ;
                   nsu:synonym "Axo-axonic cell"@en ;
-
-                  nsu:synonym "ChC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000003 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000022 .
+                  nsu:synonym "ChC"@en ;                  
+                  nsu:synonym "Neocortex chandelier cell"@en ;                  
+                  rdfs:subClassOf HBP_CELL:0000003 ;
+                  rdfs:subClassOf HBP_CELL:0000022 .
 
 
 
-:HBP_CELL_0000061 rdf:type owl:Class ;
-
+HBP_CELL:0000061 rdf:type owl:Class ;
                   rdfs:label "Cajal-Retzius cell like cell"@en ;
-
                   nsu:synonym "CrC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000003 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000022 .
+                  rdfs:subClassOf HBP_CELL:0000003 ;
+                  rdfs:subClassOf HBP_CELL:0000022 .
 
 
 
-:HBP_CELL_0000062 rdf:type owl:Class ;
-
-                  rdfs:label "Small Basket Cell"@en ;
-
-                  nsu:definition "Small Basket Cells have multipolar or bitufted dendritic arbor, and axon collaterals with numerous curved or straight short axonal segments bearing high density of boutons and often forming a dense local axonal cluster around the soma."@en ;
-
+HBP_CELL:0000062 rdf:type owl:Class ;
+                  rdfs:label "Small basket cell"@en ;
+                  nsu:definition "Small basket cells have multipolar or bitufted dendritic arbor, and axon collaterals with numerous curved or straight short axonal segments bearing high density of boutons and often forming a dense local axonal cluster around the soma."@en ;
                   nsu:synonym "SBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000052 .
-
+                  rdfs:subClassOf HBP_CELL:0000052 .
 
 
-:HBP_CELL_0000063 rdf:type owl:Class ;
 
-                  rdfs:label "Large Basket Cell"@en ;
-
-                  nsu:definition "Large Basket cells have multipolar or bitufted dendrites, an axonal cluster characterized by straight and long axonal segments with low density of boutons, and long collaterals giving branches from both sides. Layer II /III Large Basket Cells commonly have descending axonal collaterals while those in deep Layer V and Layer VI often had ascending axonal collaterals reaching Layer II/III even Layer I."@en ;
-
+HBP_CELL:0000063 rdf:type owl:Class ;
+                  rdfs:label "Large basket cell"@en ;
+                  nsu:definition "Large basket cells have multipolar or bitufted dendrites, an axonal cluster characterized by straight and long axonal segments with low density of boutons, and long collaterals giving branches from both sides. Layer II /III large basket cells commonly have descending axonal collaterals while those in deep layer V and layer VI often had ascending axonal collaterals reaching layer II/III even layer I."@en ;
                   nsu:synonym "LBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000052 .
-
+                  rdfs:subClassOf HBP_CELL:0000052 .
 
 
-:HBP_CELL_0000064 rdf:type owl:Class ;
 
-                  rdfs:label "Nest Basket Cell"@en ;
-
-                  nsu:definition "Nest Basket Cells (corresponding to arcade or willow cells) had multipolar or bitufted dendrites without long collaterals. Nest Basket Cells in superagranular layers are in general smaller in size than those in infragranular layers."@en ;
-
+HBP_CELL:0000064 rdf:type owl:Class ;
+                  rdfs:label "Nest basket cell"@en ;
+                  nsu:definition "Nest basket cells (corresponding to arcade or willow cells) had multipolar or bitufted dendrites without long collaterals. Nest basket cells in superagranular layers are in general smaller in size than those in infragranular layers."@en ;
                   nsu:synonym "arcade cell"@en ;
-
                   nsu:synonym "NBC"@en ;
-
                   nsu:synonym "willow cell"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000052 .
-
-
-
-:HBP_CELL_0000065 rdf:type owl:Class ;
-
-                  rdfs:label "Axonal Cell"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000003 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000022 .
+                  rdfs:subClassOf HBP_CELL:0000052 .
 
 
 
-:HBP_CELL_0000066 rdf:type owl:Class ;
+HBP_CELL:0000065 rdf:type owl:Class ;
+                  rdfs:label "Axonal cell"@en ;
+                  rdfs:subClassOf HBP_CELL:0000003 ;
+                  rdfs:subClassOf HBP_CELL:0000022 .
 
-                  rdfs:label "Descending Axon Cell"@en ;
 
-                  nsu:definition "Descending Axon Cells are easily distinguished due to the presence of one to a few descending axon collaterals that reaches Layer IV, and Layer V, occasionally even Layer VI. Their other striking distinguishing feature are the large horizontal (often > 1 mm) and vertical (often > 0.5 mm) extents of their axonal arborization, which was the largest as compared to any cell type in Layer I."@en ;
 
+HBP_CELL:0000066 rdf:type owl:Class ;
+                  rdfs:label "Descending axon cell"@en ;
+                  nsu:definition "Descending axon cells are easily distinguished due to the presence of one to a few descending axon collaterals that reaches layer IV, and layer V, occasionally even layer VI. Their other striking distinguishing feature are the large horizontal (often > 1 mm) and vertical (often > 0.5 mm) extents of their axonal arborization, which was the largest as compared to any cell type in layer I."@en ;
                   nsu:synonym "DAC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000065 .
-
+                  rdfs:subClassOf HBP_CELL:0000065 .
 
 
-:HBP_CELL_0000067 rdf:type owl:Class ;
 
-                  rdfs:label "Large Axon Cell"@en ;
-
-                  nsu:definition "Large Axon Cells appear visually similar to the Horizontal Axon Cells. On closer inspection, however, the axonal segments are shorter and projected more radially compared with Horizontal Axon Cells. Particularly many short branches emerged from long axonal collaterals. They display the longest total length of axon, the highest number of segments, and the highest maximum branch order among Layer I neuronal classes. The axonal collaterals of more than 50% of Large Axon Cells were often seen to project vertically into Layer II and Layer III. Their dendrites also displayed the highest segment number indicating frequently branching."@en ;
-
+HBP_CELL:0000067 rdf:type owl:Class ;
+                  rdfs:label "Large axon cell"@en ;
+                  nsu:definition "Large axon cells appear visually similar to the Horizontal axon cells. On closer inspection, however, the axonal segments are shorter and projected more radially compared with Horizontal axon cells. Particularly many short branches emerged from long axonal collaterals. They display the longest total length of axon, the highest number of segments, and the highest maximum branch order among layer I neuronal classes. The axonal collaterals of more than 50% of Large axon cells were often seen to project vertically into layer II and layer III. Their dendrites also displayed the highest segment number indicating frequently branching."@en ;
                   nsu:synonym "LAC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000065 .
-
+                  rdfs:subClassOf HBP_CELL:0000065 .
 
 
-:HBP_CELL_0000068 rdf:type owl:Class ;
 
-                  rdfs:label "Horizontal Axon Cell"@en ;
-
-                  nsu:definition "Horizontal Axon Cell are characterized by extensive horizontal axonal arborizations as compared to vertical extents, with long axonal segment lengths. Their Horizontal/Vertical extent ratio (often > 4 fold) are higher when compared to other neuron types in Layer I."@en ;
-
+HBP_CELL:0000068 rdf:type owl:Class ;
+                  rdfs:label "Horizontal axon cell"@en ;
+                  nsu:definition "Horizontal axon cell are characterized by extensive horizontal axonal arborizations as compared to vertical extents, with long axonal segment lengths. Their Horizontal/Vertical extent ratio (often > 4 fold) are higher when compared to other neuron types in layer I."@en ;
                   nsu:synonym "HAC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000065 .
-
+                  rdfs:subClassOf HBP_CELL:0000065 .
 
 
-:HBP_CELL_0000069 rdf:type owl:Class ;
 
-                  rdfs:label "Small Axon Cell"@en ;
-
-                  nsu:definition "Small Axon Cells have the smallest axonal arborization reflected in the lowest total axonal lengths among Layer I cells. The axonal arbor also displayed the lowest number of axonal segments and the lowest maximum axonal branch order. The axons have however the largest axonal branch angles with the straightest axonal segments. About 1/3 of all Small Axon Cells project one or two axonal collaterals into Layer II and Layer III."@en ;
-
+HBP_CELL:0000069 rdf:type owl:Class ;
+                  rdfs:label "Small axon cell"@en ;
+                  nsu:definition "Small axon cells have the smallest axonal arborization reflected in the lowest total axonal lengths among layer I cells. The axonal arbor also displayed the lowest number of axonal segments and the lowest maximum axonal branch order. The axons have however the largest axonal branch angles with the straightest axonal segments. About 1/3 of all Small axon cells project one or two axonal collaterals into layer II and layer III."@en ;
                   nsu:synonym "SAC"@en ;
-
                   nsu:synonym "SLAC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000065 .
-
-
-
-:HBP_CELL_0000070 rdf:type owl:Class ;
-
-                  rdfs:label "neuron classified based on firing behavior"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000004 .
+                  rdfs:subClassOf HBP_CELL:0000065 .
 
 
 
-:HBP_CELL_0000071 rdf:type owl:Class ;
-
-                  rdfs:label "neuron classified based on spike behavior"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000004 .
+HBP_CELL:0000070 rdf:type owl:Class ;
+                  rdfs:label "Neuron classified based on firing behavior"@en ;
+                  rdfs:subClassOf HBP_CELL:0000004 .
 
 
 
-:HBP_CELL_0000072 rdf:type owl:Class ;
+HBP_CELL:0000071 rdf:type owl:Class ;
+                  rdfs:label "Neuron classified based on spike behavior"@en ;
+                  rdfs:subClassOf HBP_CELL:0000004 .
 
-                  rdfs:label "Stuttering Cell"@en ;
 
-                  nsu:definition "APWaveform Spiking Response: The stuttering itself can typically not be detected from APWaveform traces. However, the characteristics should be the same as the nonaccommodating case. IDRest Spiking Response: During the different levels of IDRest stimuli, the spike firing is continuous, but is regularly interrupted by short pauses. During these pauses the voltage is around or above the resting membrane potential and shows some lower amplitude noise/oscillations."@en ;
 
+HBP_CELL:0000072 rdf:type owl:Class ;
+                  rdfs:label "Stuttering cell"@en ;
+                  nsu:definition "APWaveform spiking response: The stuttering itself can typically not be detected from APWaveform traces. However, the characteristics should be the same as the nonaccommodating case. IDRest spiking response: During the different levels of IDRest stimuli, the spike firing is continuous, but is regularly interrupted by short pauses. During these pauses the voltage is around or above the resting membrane potential and shows some lower amplitude noise/oscillations."@en ;
                   nsu:synonym "STUT"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000071 .
-
+                  rdfs:subClassOf HBP_CELL:0000071 .
 
 
-:HBP_CELL_0000073 rdf:type owl:Class ;
 
-                  rdfs:label "Non-Accomodating Cell"@en ;
-
-                  nsu:definition "Spiking Behavior Description: This type is characterized by an absence of accommodation in the spike characteristics during the IDRest stimuli. APWaveform Spiking Response:\nAccommodation is mostly clearly visible in the APWaveform spike. When it is a non-bursting cell, the height and width of the first and second spike should be very similar. When it's a bursting cell, it's important not to confuse the burst spikes with spikes in the more stationary regime. IDRest Spiking Response: After the transitory behavior after the onset of the stimulus (a burst or a delay), there should be almost no change in the spike width/height, nor should be any change in interspike interval."@en ;
-
+HBP_CELL:0000073 rdf:type owl:Class ;
+                  rdfs:label "Non-accomodating cell"@en ;
+                  nsu:definition "Spiking behavior description: This type is characterized by an absence of accommodation in the spike characteristics during the IDRest stimuli. APWaveform spiking response:\nAccommodation is mostly clearly visible in the APWaveform spike. When it is a non-bursting cell, the height and width of the first and second spike should be very similar. When it's a bursting cell, it's important not to confuse the burst spikes with spikes in the more stationary regime. IDRest spiking response: After the transitory behavior after the onset of the stimulus (a burst or a delay), there should be almost no change in the spike width/height, nor should be any change in interspike interval."@en ;
                   nsu:synonym "NAC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000071 .
-
+                  rdfs:subClassOf HBP_CELL:0000071 .
 
 
-:HBP_CELL_0000074 rdf:type owl:Class ;
 
-                  rdfs:label "Accomodating Cell"@en ;
-
-                  nsu:definition "Spiking Behavior Description: This type is characterized an accommodation in the spike characteristics during the IDRest stimuli. APWaveform Spiking Response: Accommodation is mostly clearly visible in the APWaveform spike. When it is a non-bursting cell, the second spike should be wider and less high than the first spike. When it's a bursting cell, it's important not to confuse the burst spikes with spikes in the more stationary regime, and the first and second spike of the stationary regime should be compared (if these are present during the short APWaveform stimulus) IDRest Spiking Response: After the transitory behavior after the onset of the stimulus (a burst or a delay), there should be an increase in the interspike interval, and possibly some accommodation in spike width/height."@en ;
-
+HBP_CELL:0000074 rdf:type owl:Class ;
+                  rdfs:label "Accomodating cell"@en ;
+                  nsu:definition "Spiking behavior description: This type is characterized an accommodation in the spike characteristics during the IDRest stimuli. APWaveform spiking response: Accommodation is mostly clearly visible in the APWaveform spike. When it is a non-bursting cell, the second spike should be wider and less high than the first spike. When it's a bursting cell, it's important not to confuse the burst spikes with spikes in the more stationary regime, and the first and second spike of the stationary regime should be compared (if these are present during the short APWaveform stimulus) IDRest spiking response: After the transitory behavior after the onset of the stimulus (a burst or a delay), there should be an increase in the interspike interval, and possibly some accommodation in spike width/height."@en ;
                   nsu:synonym "AC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000071 .
-
+                  rdfs:subClassOf HBP_CELL:0000071 .
 
 
-:HBP_CELL_0000075 rdf:type owl:Class ;
 
-                  rdfs:label "Irregular Spiking Cell"@en ;
-
-                  nsu:definition "APWaveform Spiking Response: The irregular spiking itself can typically not be detected from APWaveform traces. However, the characteristics should be the same as the accommodating case. IDRest Spiking Response: After the transitory behavior after the onset of the stimulus (a burst), the interspike intervals should become very irregular."@en ;
-
+HBP_CELL:0000075 rdf:type owl:Class ;
+                  rdfs:label "Irregular spiking cell"@en ;
+                  nsu:definition "APWaveform spiking response: The irregular spiking itself can typically not be detected from APWaveform traces. However, the characteristics should be the same as the accommodating case. IDRest spiking response: After the transitory behavior after the onset of the stimulus (a burst), the interspike intervals should become very irregular."@en ;
                   nsu:synonym "IR"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000071 .
-
-
-
-:HBP_CELL_0000076 rdf:type owl:Class ;
-
-                  rdfs:label "Classical Firing Cell"@en ;
-
-                  nsu:definition "Firing Behavior Description: This type is characterized by a classical/continuous/regular firing behavior of the first spikes in the IDRest protocol. IDRest Firing Response: The first few spikes (spike height, spike width, interspike interval) are very similar to the other spikes in the trace. The is virtually no delay in firing at all levels above threshold in IDRest. APWaveform Firing Response: In case of a non-accommodating cell, the first two spikes should look very identical, in accommodating cells there can be and increase in spike width."@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000070 .
+                  rdfs:subClassOf HBP_CELL:0000071 .
 
 
 
-:HBP_CELL_0000077 rdf:type owl:Class ;
-
-                  rdfs:label "Burst Firing Cell"@en ;
-
-                  nsu:definition "Firing Behavior Description: This type is characterized by a short burst of spikes at the onset of the IDRest protocol. IDRest Firing Response: The first interspike interval is very important. If this is significantly different from the other intervals in the trace, a burst is present. More than two spikes can be involved in the burst. There should be virtually no delay in spiking at the onset of the stimulus. APWaveform Firing Response: The first two spikes can look very different, the real confirmation of the burst should come from IDRest though."@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000070 .
+HBP_CELL:0000076 rdf:type owl:Class ;
+                  rdfs:label "Classical firing cell"@en ;
+                  nsu:definition "Firing behavior description: This type is characterized by a classical/continuous/regular firing behavior of the first spikes in the IDRest protocol. IDRest firing response: The first few spikes (spike height, spike width, interspike interval) are very similar to the other spikes in the trace. The is virtually no delay in firing at all levels above threshold in IDRest. APWaveform firing response: In case of a non-accommodating cell, the first two spikes should look very identical, in accommodating cells there can be and increase in spike width."@en ;
+                  rdfs:subClassOf HBP_CELL:0000070 .
 
 
 
-:HBP_CELL_0000078 rdf:type owl:Class ;
-
-                  rdfs:label "Delayed Firing Cell"@en ;
-
-                  nsu:definition "Firing Behavior Description: This type is characterized by a delay in spiking at the onset of the IDRest protocol. IDRest Firing Response: The main characteristic of this type can be seen at the lower levels of current injection of the IDRest stimuli (100-150% of threshold). At these levels a clear delay in firing should be present (50ms+). When there is long delay, it is allowed to have one spike immediately at stimulus onset (followed by a long pause). APWaveform Firing Response: The delay is not always present in the APWaveform stimuli (since the current injection can be too high)."@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000070 .
+HBP_CELL:0000077 rdf:type owl:Class ;
+                  rdfs:label "Burst firing cell"@en ;
+                  nsu:definition "Firing behavior description: This type is characterized by a short burst of spikes at the onset of the IDRest protocol. IDRest firing response: The first interspike interval is very important. If this is significantly different from the other intervals in the trace, a burst is present. More than two spikes can be involved in the burst. There should be virtually no delay in spiking at the onset of the stimulus. APWaveform firing response: The first two spikes can look very different, the real confirmation of the burst should come from IDRest though."@en ;
+                  rdfs:subClassOf HBP_CELL:0000070 .
 
 
 
-:HBP_CELL_0000079 rdf:type owl:Class ;
+HBP_CELL:0000078 rdf:type owl:Class ;
+                  rdfs:label "Delayed firing cell"@en ;
+                  nsu:definition "Firing behavior description: This type is characterized by a delay in spiking at the onset of the IDRest protocol. IDRest firing response: The main characteristic of this type can be seen at the lower levels of current injection of the IDRest stimuli (100-150% of threshold). At these levels a clear delay in firing should be present (50ms+). When there is long delay, it is allowed to have one spike immediately at stimulus onset (followed by a long pause). APWaveform firing response: The delay is not always present in the APWaveform stimuli (since the current injection can be too high)."@en ;
+                  rdfs:subClassOf HBP_CELL:0000070 .
 
-                  rdfs:label "Classical Stuttering Cell"@en ;
 
+
+HBP_CELL:0000079 rdf:type owl:Class ;
+                  rdfs:label "Classical stuttering cell"@en ;
                   nsu:synonym "cSTUT"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000072 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000076 .
+                  rdfs:subClassOf HBP_CELL:0000072 ;
+                  rdfs:subClassOf HBP_CELL:0000076 .
 
 
 
-:HBP_CELL_0000080 rdf:type owl:Class ;
-
-                  rdfs:label "Classical Irregular Cell"@en ;
-
+HBP_CELL:0000080 rdf:type owl:Class ;
+                  rdfs:label "Classical irregular cell"@en ;
                   nsu:synonym "cIR"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000075 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000076 .
+                  rdfs:subClassOf HBP_CELL:0000075 ;
+                  rdfs:subClassOf HBP_CELL:0000076 .
 
 
 
-:HBP_CELL_0000081 rdf:type owl:Class ;
-
-                  rdfs:label "Classical Non-Accomodating Cell"@en ;
-
+HBP_CELL:0000081 rdf:type owl:Class ;
+                  rdfs:label "Classical non-accomodating cell"@en ;
                   nsu:synonym "cNAC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000073 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000076 .
+                  rdfs:subClassOf HBP_CELL:0000073 ;
+                  rdfs:subClassOf HBP_CELL:0000076 .
 
 
 
-:HBP_CELL_0000082 rdf:type owl:Class ;
-
-                  rdfs:label "Classical Accomodating Cell"@en ;
-
+HBP_CELL:0000082 rdf:type owl:Class ;
+                  rdfs:label "Classical accomodating cell"@en ;
                   nsu:synonym "cAC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000074 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000076 .
+                  rdfs:subClassOf HBP_CELL:0000074 ;
+                  rdfs:subClassOf HBP_CELL:0000076 .
 
 
 
-:HBP_CELL_0000083 rdf:type owl:Class ;
-
-                  rdfs:label "Burst Stuttering Cell"@en ;
-
+HBP_CELL:0000083 rdf:type owl:Class ;
+                  rdfs:label "Burst stuttering cell"@en ;
                   nsu:synonym "bSTUT"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000072 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000077 .
+                  rdfs:subClassOf HBP_CELL:0000072 ;
+                  rdfs:subClassOf HBP_CELL:0000077 .
 
 
 
-:HBP_CELL_0000084 rdf:type owl:Class ;
-
-                  rdfs:label "Burst Non-Accomodating Cell"@en ;
-
+HBP_CELL:0000084 rdf:type owl:Class ;
+                  rdfs:label "Burst non-accomodating cell"@en ;
                   nsu:synonym "bNAC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000073 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000077 .
+                  rdfs:subClassOf HBP_CELL:0000073 ;
+                  rdfs:subClassOf HBP_CELL:0000077 .
 
 
 
-:HBP_CELL_0000085 rdf:type owl:Class ;
-
-                  rdfs:label "Burst Irregular Cell"@en ;
-
+HBP_CELL:0000085 rdf:type owl:Class ;
+                  rdfs:label "Burst irregular cell"@en ;
                   nsu:synonym "bIR"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000075 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000077 .
+                  rdfs:subClassOf HBP_CELL:0000075 ;
+                  rdfs:subClassOf HBP_CELL:0000077 .
 
 
 
-:HBP_CELL_0000086 rdf:type owl:Class ;
-
-                  rdfs:label "Burst Accomodating Cell"@en ;
-
+HBP_CELL:0000086 rdf:type owl:Class ;
+                  rdfs:label "Burst accomodating cell"@en ;
                   nsu:synonym "bAC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000074 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000077 .
+                  rdfs:subClassOf HBP_CELL:0000074 ;
+                  rdfs:subClassOf HBP_CELL:0000077 .
 
 
 
-:HBP_CELL_0000087 rdf:type owl:Class ;
-
-                  rdfs:label "Delayed Stuttering Cell"@en ;
-
+HBP_CELL:0000087 rdf:type owl:Class ;
+                  rdfs:label "Delayed stuttering cell"@en ;
                   nsu:synonym "dSTUT"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000072 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000078 .
+                  rdfs:subClassOf HBP_CELL:0000072 ;
+                  rdfs:subClassOf HBP_CELL:0000078 .
 
 
 
-:HBP_CELL_0000088 rdf:type owl:Class ;
-
-                  rdfs:label "Delayed Non-Accomodating Cell"@en ;
-
+HBP_CELL:0000088 rdf:type owl:Class ;
+                  rdfs:label "Delayed non-accomodating cell"@en ;
                   nsu:synonym "dNAC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000073 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000078 .
+                  rdfs:subClassOf HBP_CELL:0000073 ;
+                  rdfs:subClassOf HBP_CELL:0000078 .
 
 
 
-:HBP_CELL_0000089 rdf:type owl:Class ;
-
-                  rdfs:label "Delayed Accomodating Cell"@en ;
-
+HBP_CELL:0000089 rdf:type owl:Class ;
+                  rdfs:label "Delayed accomodating cell"@en ;
                   nsu:synonym "dAC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000074 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000078 .
+                  rdfs:subClassOf HBP_CELL:0000074 ;
+                  rdfs:subClassOf HBP_CELL:0000078 .
 
 
 
-:HBP_CELL_0000091 rdf:type owl:Class ;
-
-                  rdfs:label "Layer I Neurogliaform Cell with Dense Axonal Arbour"@en ;
-
+HBP_CELL:0000091 rdf:type owl:Class ;
+                  rdfs:label "Layer I neurogliaform cell with dense axonal arbour"@en ;
                   nsu:synonym "L1_NGC-DA"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000058 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000058 .
 
 
 
-:HBP_CELL_0000092 rdf:type owl:Class ;
-
-                  rdfs:label "Layer I Neurogliaform Cell with Sparse Axon Arbour"@en ;
-
+HBP_CELL:0000092 rdf:type owl:Class ;
+                  rdfs:label "Layer I neurogliaform cell with sparse axon arbour"@en ;
                   nsu:synonym "L1_NGC-SA"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000057 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000057 .
 
 
 
-:HBP_CELL_0000093 rdf:type owl:Class ;
-
-                  rdfs:label "Layer I Descending Axon Cell"@en ;
-
+HBP_CELL:0000093 rdf:type owl:Class ;
+                  rdfs:label "Layer I descending axon cell"@en ;
                   nsu:synonym "L1_DAC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000066 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000066 .
 
 
 
-:HBP_CELL_0000094 rdf:type owl:Class ;
-
-                  rdfs:label "Layer I Horizontal Axon Cell"@en ;
-
+HBP_CELL:0000094 rdf:type owl:Class ;
+                  rdfs:label "Layer I horizontal axon cell"@en ;
                   nsu:synonym "L1_HAC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000068 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000068 .
 
 
 
-:HBP_CELL_0000095 rdf:type owl:Class ;
-
-                  rdfs:label "Layer I Large Axon Cell"@en ;
-
+HBP_CELL:0000095 rdf:type owl:Class ;
+                  rdfs:label "Layer I large axon cell"@en ;
                   nsu:synonym "L1_LAC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000067 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000067 .
 
 
 
-:HBP_CELL_0000096 rdf:type owl:Class ;
-
-                  rdfs:label "Layer I Small Axon Cell"@en ;
-
+HBP_CELL:0000096 rdf:type owl:Class ;
+                  rdfs:label "Layer I small axon cell"@en ;
                   nsu:synonym "L1_SAC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000069 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000069 .
 
 
 
-:HBP_CELL_0000097 rdf:type owl:Class ;
-
-                  rdfs:label "Layer II/III Bipolar Cell"@en ;
-
+HBP_CELL:0000097 rdf:type owl:Class ;
+                  rdfs:label "Layer II/III bipolar cell"@en ;
                   nsu:synonym "L2/3_BP"@en ;
-
                   nsu:synonym "L23_BP"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000053 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000053 .
 
 
 
-:HBP_CELL_0000098 rdf:type owl:Class ;
-
-                  rdfs:label "Layer IV Bipolar Cell"@en ;
-
+HBP_CELL:0000098 rdf:type owl:Class ;
+                  rdfs:label "Layer IV bipolar cell"@en ;
                   nsu:synonym "L4_BP"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000053 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000053 .
 
 
 
-:HBP_CELL_0000099 rdf:type owl:Class ;
-
-                  rdfs:label "Layer V Bipolar Cell"@en ;
-
+HBP_CELL:0000099 rdf:type owl:Class ;
+                  rdfs:label "Layer V bipolar cell"@en ;
                   nsu:synonym "L5_BP"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000053 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000053 .
 
 
 
-:HBP_CELL_0000100 rdf:type owl:Class ;
-
-                  rdfs:label "Layer VI Bipolar Cell"@en ;
-
+HBP_CELL:0000100 rdf:type owl:Class ;
+                  rdfs:label "Layer VI bipolar cell"@en ;
                   nsu:synonym "L6_BP"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000053 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000053 .
 
 
 
-:HBP_CELL_0000101 rdf:type owl:Class ;
-
-                  rdfs:label "Layer II/III Bitufted Cell"@en ;
-
+HBP_CELL:0000101 rdf:type owl:Class ;
+                  rdfs:label "Layer II/III bitufted cell"@en ;
                   nsu:synonym "L2/3_BTC"@en ;
-
                   nsu:synonym "L23_BTC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000054 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000054 .
 
 
 
-:HBP_CELL_0000102 rdf:type owl:Class ;
-
-                  rdfs:label "Layer IV Bitufted Cell"@en ;
-
+HBP_CELL:0000102 rdf:type owl:Class ;
+                  rdfs:label "Layer IV bitufted cell"@en ;
                   nsu:synonym "L4_BTC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000054 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000054 .
 
 
 
-:HBP_CELL_0000103 rdf:type owl:Class ;
-
-                  rdfs:label "Layer V Bitufted Cell"@en ;
-
+HBP_CELL:0000103 rdf:type owl:Class ;
+                  rdfs:label "Layer V bitufted cell"@en ;
                   nsu:synonym "L5_BTC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000054 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000054 .
 
 
 
-:HBP_CELL_0000104 rdf:type owl:Class ;
-
-                  rdfs:label "Layer VI Bitufted Cell"@en ;
-
+HBP_CELL:0000104 rdf:type owl:Class ;
+                  rdfs:label "Layer VI bitufted cell"@en ;
                   nsu:synonym "L6_BTC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000054 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000054 .
 
 
 
-:HBP_CELL_0000105 rdf:type owl:Class ;
-
-                  rdfs:label "Layer II/III Chandelier Cell"@en ;
-
+HBP_CELL:0000105 rdf:type owl:Class ;
+                  rdfs:label "Layer II/III chandelier cell"@en ;
                   nsu:synonym "L2/3_ChC"@en ;
-
                   nsu:synonym "L23_ChC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000060 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000060 .
 
 
 
-:HBP_CELL_0000106 rdf:type owl:Class ;
-
-                  rdfs:label "Layer IV Chandelier Cell"@en ;
-
+HBP_CELL:0000106 rdf:type owl:Class ;
+                  rdfs:label "Layer IV chandelier cell"@en ;
                   nsu:synonym "L4_ChC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000060 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000060 .
 
 
 
-:HBP_CELL_0000107 rdf:type owl:Class ;
-
-                  rdfs:label "Layer V Chandelier Cell"@en ;
-
+HBP_CELL:0000107 rdf:type owl:Class ;
+                  rdfs:label "Layer V chandelier cell"@en ;
                   nsu:synonym "L5_ChC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000060 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000060 .
 
 
 
-:HBP_CELL_0000108 rdf:type owl:Class ;
-
-                  rdfs:label "Layer VI Chandelier Cell"@en ;
-
+HBP_CELL:0000108 rdf:type owl:Class ;
+                  rdfs:label "Layer VI chandelier cell"@en ;
                   nsu:synonym "L6_ChC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000060 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000060 .
 
 
 
-:HBP_CELL_0000109 rdf:type owl:Class ;
-
-                  rdfs:label "Layer II/III Double Bouquet Cell"@en ;
-
+HBP_CELL:0000109 rdf:type owl:Class ;
+                  rdfs:label "Layer II/III double bouquet cell"@en ;
                   nsu:synonym "L2/3_DBC"@en ;
-
                   nsu:synonym "L23_DBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000059 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000059 .
 
 
 
-:HBP_CELL_0000110 rdf:type owl:Class ;
-
-                  rdfs:label "Layer IV Double Bouquet Cell"@en ;
-
+HBP_CELL:0000110 rdf:type owl:Class ;
+                  rdfs:label "Layer IV double bouquet cell"@en ;
                   nsu:synonym "L4_DBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000059 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000059 .
 
 
 
-:HBP_CELL_0000111 rdf:type owl:Class ;
-
-                  rdfs:label "Layer V Double Bouquet Cell"@en ;
-
+HBP_CELL:0000111 rdf:type owl:Class ;
+                  rdfs:label "Layer V double bouquet cell"@en ;
                   nsu:synonym "L5_DBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000059 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000059 .
 
 
 
-:HBP_CELL_0000112 rdf:type owl:Class ;
-
-                  rdfs:label "Layer VI Double Bouquet Cell"@en ;
-
+HBP_CELL:0000112 rdf:type owl:Class ;
+                  rdfs:label "Layer VI double bouquet cell"@en ;
                   nsu:synonym "L6_DBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000059 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000059 .
 
 
 
-:HBP_CELL_0000113 rdf:type owl:Class ;
-
-                  rdfs:label "Layer II/III Neurogliaform Cell"@en ;
-
+HBP_CELL:0000113 rdf:type owl:Class ;
+                  rdfs:label "Layer II/III neurogliaform cell"@en ;
                   nsu:synonym "L2/3_NGC"@en ;
-
                   nsu:synonym "L23_NGC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000056 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000056 .
 
 
 
-:HBP_CELL_0000114 rdf:type owl:Class ;
-
-                  rdfs:label "Layer IV Neurogliaform Cell"@en ;
-
+HBP_CELL:0000114 rdf:type owl:Class ;
+                  rdfs:label "Layer IV neurogliaform cell"@en ;
                   nsu:synonym "L4_NGC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000056 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000056 .
 
 
 
-:HBP_CELL_0000115 rdf:type owl:Class ;
-
-                  rdfs:label "Layer V Neurogliaform Cell"@en ;
-
+HBP_CELL:0000115 rdf:type owl:Class ;
+                  rdfs:label "Layer V neurogliaform cell"@en ;
                   nsu:synonym "L5_NGC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000056 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000056 .
 
 
 
-:HBP_CELL_0000116 rdf:type owl:Class ;
-
-                  rdfs:label "Layer VI Neurogliaform Cell"@en ;
-
+HBP_CELL:0000116 rdf:type owl:Class ;
+                  rdfs:label "Layer VI neurogliaform cell"@en ;
                   nsu:synonym "L6_NGC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000056 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000056 .
 
 
 
-:HBP_CELL_0000117 rdf:type owl:Class ;
-
-                  rdfs:label "Layer II/III Martinotti Cell"@en ;
-
+HBP_CELL:0000117 rdf:type owl:Class ;
+                  rdfs:label "Layer II/III Martinotti cell"@en ;
                   nsu:synonym "L2/3_MC"@en ;
-
                   nsu:synonym "L23_MC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000055 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000055 .
 
 
 
-:HBP_CELL_0000118 rdf:type owl:Class ;
-
-                  rdfs:label "Layer IV Martinotti Cell"@en ;
-
+HBP_CELL:0000118 rdf:type owl:Class ;
+                  rdfs:label "Layer IV Martinotti cell"@en ;
                   nsu:synonym "L4_MC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000055 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000055 .
 
 
 
-:HBP_CELL_0000119 rdf:type owl:Class ;
-
-                  rdfs:label "Layer V Martinotti Cell"@en ;
-
+HBP_CELL:0000119 rdf:type owl:Class ;
+                  rdfs:label "Layer V Martinotti cell"@en ;
                   nsu:synonym "L5_MC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000055 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000055 .
 
 
 
-:HBP_CELL_0000120 rdf:type owl:Class ;
-
-                  rdfs:label "Layer VI Martinotti Cell"@en ;
-
+HBP_CELL:0000120 rdf:type owl:Class ;
+                  rdfs:label "Layer VI Martinotti cell"@en ;
                   nsu:synonym "L6_MC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000055 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000055 .
 
 
 
-:HBP_CELL_0000121 rdf:type owl:Class ;
-
-                  rdfs:label "Layer II/III Large Basket Cell"@en ;
-
+HBP_CELL:0000121 rdf:type owl:Class ;
+                  rdfs:label "Layer II/III large basket cell"@en ;
                   nsu:synonym "L2/3_LBC"@en ;
-
                   nsu:synonym "L23_LBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000063 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000063 .
 
 
 
-:HBP_CELL_0000122 rdf:type owl:Class ;
-
-                  rdfs:label "Layer IV Large Basket Cell"@en ;
-
+HBP_CELL:0000122 rdf:type owl:Class ;
+                  rdfs:label "Layer IV large basket cell"@en ;
                   nsu:synonym "L4_LBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000063 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000063 .
 
 
 
-:HBP_CELL_0000123 rdf:type owl:Class ;
-
-                  rdfs:label "Layer V Large Basket Cell"@en ;
-
+HBP_CELL:0000123 rdf:type owl:Class ;
+                  rdfs:label "Layer V large basket cell"@en ;
                   nsu:synonym "L5_LBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000063 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000063 .
 
 
 
-:HBP_CELL_0000124 rdf:type owl:Class ;
-
-                  rdfs:label "Layer VI Large Basket Cell"@en ;
-
+HBP_CELL:0000124 rdf:type owl:Class ;
+                  rdfs:label "Layer VI large basket cell"@en ;
                   nsu:synonym "L6_LBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000063 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000063 .
 
 
 
-:HBP_CELL_0000125 rdf:type owl:Class ;
-
-                  rdfs:label "Layer II/III Nest Basket Cell"@en ;
-
+HBP_CELL:0000125 rdf:type owl:Class ;
+                  rdfs:label "Layer II/III nest basket cell"@en ;
                   nsu:synonym "L2/3_NBC"@en ;
-
                   nsu:synonym "L23_NBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000064 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000064 .
 
 
 
-:HBP_CELL_0000126 rdf:type owl:Class ;
-
-                  rdfs:label "Layer II/III Small Basket Cell"@en ;
-
+HBP_CELL:0000126 rdf:type owl:Class ;
+                  rdfs:label "Layer II/III small basket cell"@en ;
                   nsu:synonym "L2/3_SBC"@en ;
-
                   nsu:synonym "L23_SBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000062 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000062 .
 
 
 
-:HBP_CELL_0000127 rdf:type owl:Class ;
-
-                  rdfs:label "Layer IV Small Basket Cell"@en ;
-
+HBP_CELL:0000127 rdf:type owl:Class ;
+                  rdfs:label "Layer IV small basket cell"@en ;
                   nsu:synonym "L4_SBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000062 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000062 .
 
 
 
-:HBP_CELL_0000128 rdf:type owl:Class ;
-
-                  rdfs:label "Layer V Small Basket Cell"@en ;
-
+HBP_CELL:0000128 rdf:type owl:Class ;
+                  rdfs:label "Layer V small basket cell"@en ;
                   nsu:synonym "L5_SBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000062 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000062 .
 
 
 
-:HBP_CELL_0000129 rdf:type owl:Class ;
-
-                  rdfs:label "Layer VI Small Basket Cell"@en ;
-
+HBP_CELL:0000129 rdf:type owl:Class ;
+                  rdfs:label "Layer VI small basket cell"@en ;
                   nsu:synonym "L6_SBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000062 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000062 .
 
 
 
-:HBP_CELL_0000130 rdf:type owl:Class ;
-
-                  rdfs:label "Layer IV Nest Basket Cell"@en ;
-
+HBP_CELL:0000130 rdf:type owl:Class ;
+                  rdfs:label "Layer IV nest basket cell"@en ;
                   nsu:synonym "L4_NBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000064 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000064 .
 
 
 
-:HBP_CELL_0000131 rdf:type owl:Class ;
-
-                  rdfs:label "Layer V Nest Basket Cell"@en ;
-
+HBP_CELL:0000131 rdf:type owl:Class ;
+                  rdfs:label "Layer V nest basket cell"@en ;
                   nsu:synonym "L5_NBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000064 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000064 .
 
 
 
-:HBP_CELL_0000132 rdf:type owl:Class ;
-
-                  rdfs:label "Layer VI Nest Basket Cell"@en ;
-
+HBP_CELL:0000132 rdf:type owl:Class ;
+                  rdfs:label "Layer VI nest basket cell"@en ;
                   nsu:synonym "L6_NBC"@en ;
-
-                  rdfs:subClassOf :HBP_CELL_0000033 ;
-
-                  rdfs:subClassOf :HBP_CELL_0000064 .
+                  rdfs:subClassOf HBP_CELL:0000033 ;
+                  rdfs:subClassOf HBP_CELL:0000064 .
 
 
 
-:HBP_CELL_0000133 rdf:type owl:Class ;
+HBP_CELL:0000133 rdf:type owl:Class ;
+                  rdfs:label "GABAergic interneuron"@en ;
+                  rdfs:subClassOf HBP_CELL:0000022 .
 
-                  rdfs:label "GABAergic interneuron"@en .
 
+
+HBP_CELL:0000134 rdf:type owl:Class ;
+                  rdfs:label "Layer IV star pyramidal cell"@en ;
+                  nsu:synonym "L4_SP"@en ;
+                  rdfs:subClassOf HBP_CELL:0000018 ;
+                  rdfs:subClassOf HBP_CELL:0000033 .
+
+
+HBP_CELL:0000135 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nlx_81310;  
+                  rdfs:label "Hippocampus CA1 perforant pathway-associated cell"@en ;
+                  nsu:synonym "SLM_PPA"@en .
+
+HBP_CELL:0000136 rdf:type owl:Class ;
+                  rdfs:label "Hippocampus CA1 back-projecting cell"@en ;
+                  nsu:synonym "SO_BP"@en .
+
+       
+HBP_CELL:0000137 rdf:type owl:Class ;
+                  rdfs:label "Hippocampus CA1 bistratified cell"@en ;
+                  nsu:synonym "SO_BS"@en ;
+                  nsu:synonym "SP_BS"@en .
+
+HBP_CELL:0000138 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nlx_cell_091206;  
+                  rdfs:label "Hippocampus CA1 oriens lacunosum moleculare neuron"@en ;
+                  nsu:synonym "SO_OLM"@en .
+
+HBP_CELL:0000139 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nlx_27085;  
+                  rdfs:label "Hippocampus CA1 trilaminar neuron"@en ;
+                  nsu:synonym "SO_TRI"@en .
+
+HBP_CELL:0000140 rdf:type owl:Class ;
+                  rdfs:label "Hippocampus CA1 axo-axonic neuron"@en ;
+                  nsu:synonym "SP_AA"@en .
+
+
+HBP_CELL:0000141 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nlx_cell_091205;  
+                  rdfs:label "Hippocampus CA1 basket cell"@en ;
+                  nsu:synonym "SP_BC"@en .
+
+
+HBP_CELL:0000142 rdf:type owl:Class ;
+                  rdfs:label "Hippocampus CA1 CCK+ basket cell"@en ;
+                  nsu:synonym "SP_CCKBC"@en;
+                  rdfs:subClassOf HBP_CELL:0000141.
+
+
+HBP_CELL:0000143 rdf:type owl:Class ;
+                  rdfs:label "Hippocampus CA1 PV+ basket cell"@en ;
+                  nsu:synonym "SP_PVBC"@en;
+                  rdfs:subClassOf HBP_CELL:0000141.
+
+
+HBP_CELL:0000144 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nlx_35220;  
+                  rdfs:label "Hippocampus CA1 ivy neuron"@en ;
+                  nsu:synonym "SP_IVY"@en.
+
+HBP_CELL:0000145 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:sao830368389;  
+                  rdfs:label "Hippocampus CA1 pyramidal cell"@en ;
+                  nsu:synonym "SP_PC"@en.
+
+HBP_CELL:0000146 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nlx_cell_100209;  
+                  rdfs:label "Hippocampus CA1 IS-I neuron"@en ;
+                  nsu:synonym "SP_IS1"@en.
+
+HBP_CELL:0000147 rdf:type owl:Class ;
+                  
+                  rdfs:label "Hippocampus CA1 Schaffer collateral-associated cell"@en ;
+                  nsu:synonym "SP_SCA"@en.
+
+
+HBP_CELL:0000148 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nlx_149135; 
+                  rdfs:label "Neostriatum direct pathway spiny neuron" @en ;
+                  nsu:synonym "MSNs"@en;
+                  nsu:synonym "Striatal medium spiny neuron"@en.
+
+
+HBP_CELL:0000146 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:sao383526650;  
+                  rdfs:label "Hippocampus CA3 pyramidal cell"@en ;
+                  nsu:synonym "CA3_PC"@en.

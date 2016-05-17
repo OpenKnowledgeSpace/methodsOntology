@@ -11,7 +11,7 @@
 @base <http://www.FIXME.org/nsmethods> .
 
 <http://www.FIXME.org/nsmethods> rdf:type owl:Ontology ;
-                                 owl:imports <http://www.FIXME.org/nsupper> .
+                                 owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
 
 
 #################################################################

@@ -1,0 +1,1126 @@
+### WARNING ###
+### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
+### WARNING ###
+@prefix : <http://www.hbp.FIXME.org/hbp_opossum_brain_ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix OPBA: <https://scalablebrainatlas.incf.org/services/listregions.php?template=OPSM14/> .
+@prefix HBP_OPBA: <http://www.hbp.FIXME.org/hbp_opossum_brain_ontology/> .
+@base <http://www.hbp.FIXME.org/hbp_opossum_brain_ontology> .
+
+<http://www.hbp.FIXME.org/hbp_opossum_brain_ontology> rdf:type owl:Ontology ;
+                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
+
+
+OPBA:00000 rdf:type owl:Class ;
+
+                 rdfs:label "Internal capsule"@en ;
+
+                 nsu:synonym "ic"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00001 rdf:type owl:Class ;
+
+                 rdfs:label "External capsule"@en ;
+
+                 nsu:synonym "ec"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00002 rdf:type owl:Class ;
+
+                 rdfs:label "Amygdala"@en ;
+
+                 nsu:synonym "A"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00003 rdf:type owl:Class ;
+
+                 rdfs:label "Thalamus"@en ;
+
+                 nsu:synonym "Th"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00034 ] .
+
+
+
+OPBA:00004 rdf:type owl:Class ;
+
+                 rdfs:label "Bed nucleus of stria terminalis"@en ;
+
+                 nsu:synonym "ST"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00075 ] .
+
+
+
+OPBA:00005 rdf:type owl:Class ;
+
+                 rdfs:label "Anterior commissure, anterior limb"@en ;
+
+                 nsu:synonym "aca"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00006 rdf:type owl:Class ;
+
+                 rdfs:label "Anterior commissure"@en ;
+
+                 nsu:synonym "ac"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00007 rdf:type owl:Class ;
+
+                 rdfs:label "Anterior commissure, posterior limb"@en ;
+
+                 nsu:synonym "acp"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00008 rdf:type owl:Class ;
+
+                 rdfs:label "Habenular nucleus"@en ;
+
+                 nsu:synonym "Hb"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00003 ] .
+
+
+
+OPBA:00009 rdf:type owl:Class ;
+
+                 rdfs:label "Habenular commissure"@en ;
+
+                 nsu:synonym "hbc"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00003 ] .
+
+
+
+OPBA:00010 rdf:type owl:Class ;
+
+                 rdfs:label "Olfactory nerve layer"@en ;
+
+                 nsu:synonym "ON"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00036 ] .
+
+
+
+OPBA:00011 rdf:type owl:Class ;
+
+                 rdfs:label "Piriform cortex"@en ;
+
+                 nsu:synonym "PCtx"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00012 rdf:type owl:Class ;
+
+                 rdfs:label "Molecular layer of the paraflocculi"@en ;
+
+                 nsu:synonym "1PFl"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00040 ] .
+
+
+
+OPBA:00013 rdf:type owl:Class ;
+
+                 rdfs:label "Molecular layer of the cerebellum"@en ;
+
+                 nsu:synonym "1Cer"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00040 ] .
+
+
+
+OPBA:00014 rdf:type owl:Class ;
+
+                 rdfs:label "Superior cerebellar peduncle"@en ;
+
+                 nsu:synonym "SCP"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00083 ] .
+
+
+
+OPBA:00015 rdf:type owl:Class ;
+
+                 rdfs:label "Medial lemniscus"@en ;
+
+                 nsu:synonym "ml"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00083 ] .
+
+
+
+OPBA:00016 rdf:type owl:Class ;
+
+                 rdfs:label "Ventral tegmental nucleus"@en ;
+
+                 nsu:synonym "VTg"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00083 ] .
+
+
+
+OPBA:00017 rdf:type owl:Class ;
+
+                 rdfs:label "Middle cerebellar peduncle"@en ;
+
+                 nsu:synonym "mcp"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00083 ] .
+
+
+
+OPBA:00018 rdf:type owl:Class ;
+
+                 rdfs:label "Olivar nuclei"@en ;
+
+                 nsu:synonym "O"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00083 ] .
+
+
+
+OPBA:00019 rdf:type owl:Class ;
+
+                 rdfs:label "Lateral lemniscus"@en ;
+
+                 nsu:synonym "LL"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00083 ] .
+
+
+
+OPBA:00020 rdf:type owl:Class ;
+
+                 rdfs:label "Interpenduncular nucleus"@en ;
+
+                 nsu:synonym "IP"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00083 ] .
+
+
+
+OPBA:00021 rdf:type owl:Class ;
+
+                 rdfs:label "Motor root of trigeminal nerve"@en ;
+
+                 nsu:synonym "m5"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00083 ] .
+
+
+
+OPBA:00022 rdf:type owl:Class ;
+
+                 rdfs:label "Sensory root of trigeminal nerve"@en ;
+
+                 nsu:synonym "s5"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00111 ] .
+
+
+
+OPBA:00023 rdf:type owl:Class ;
+
+                 rdfs:label "Cerebral peduncle"@en ;
+
+                 nsu:synonym "cp"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00111 ] .
+
+
+
+OPBA:00024 rdf:type owl:Class ;
+
+                 rdfs:label "Mammillary peduncle"@en ;
+
+                 nsu:synonym "mp"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00111 ] .
+
+
+
+OPBA:00025 rdf:type owl:Class ;
+
+                 rdfs:label "Inferior cerebellar peduncle"@en ;
+
+                 nsu:synonym "icp"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00111 ] .
+
+
+
+OPBA:00026 rdf:type owl:Class ;
+
+                 rdfs:label "Fasciculus retroflexus"@en ;
+
+                 nsu:synonym "fr"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00111 ] .
+
+
+
+OPBA:00027 rdf:type owl:Class ;
+
+                 rdfs:label "Mammillothalamic tract"@en ;
+
+                 nsu:synonym "mt"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00111 ] .
+
+
+
+OPBA:00028 rdf:type owl:Class ;
+
+                 rdfs:label "Optic chiasm"@en ;
+
+                 nsu:synonym "och"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00111 ] .
+
+
+
+OPBA:00029 rdf:type owl:Class ;
+
+                 rdfs:label "Optic tract"@en ;
+
+                 nsu:synonym "opt"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00111 ] .
+
+
+
+OPBA:00030 rdf:type owl:Class ;
+
+                 rdfs:label "Mesencephalic trigeminal tract"@en ;
+
+                 nsu:synonym "me5"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00111 ] .
+
+
+
+OPBA:00031 rdf:type owl:Class ;
+
+                 rdfs:label "Retromamiillary decussation"@en ;
+
+                 nsu:synonym "rmx"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00111 ] .
+
+
+
+OPBA:00032 rdf:type owl:Class ;
+
+                 rdfs:label "Granular cell layer of the olfactory bulb"@en ;
+
+                 nsu:synonym "GrO"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00036 ] .
+
+
+
+OPBA:00033 rdf:type owl:Class ;
+
+                 rdfs:label "Neocortex"@en ;
+
+                 nsu:synonym "NCtx"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00034 rdf:type owl:Class ;
+
+                 rdfs:label "Diencephalon"@en ;
+
+                 nsu:synonym "Di"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00035 rdf:type owl:Class ;
+
+                 rdfs:label "Superior colliculus"@en ;
+
+                 nsu:synonym "SC"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00050 ] .
+
+
+
+OPBA:00036 rdf:type owl:Class ;
+
+                 rdfs:label "Olfactory bulb"@en ;
+
+                 nsu:synonym "OB"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00037 rdf:type owl:Class ;
+
+                 rdfs:label "Forebrain"@en ;
+
+                 nsu:synonym "FBr"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00038 rdf:type owl:Class ;
+
+                 rdfs:label "Ventricles"@en ;
+
+                 nsu:synonym "V"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00039 rdf:type owl:Class ;
+
+                 rdfs:label "Hindbrain"@en ;
+
+                 nsu:synonym "HBr"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00040 rdf:type owl:Class ;
+
+                 rdfs:label "Cerebellum"@en ;
+
+                 nsu:synonym "Cer"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00039 ] .
+
+
+
+OPBA:00041 rdf:type owl:Class ;
+
+                 rdfs:label "Deep white matter superior colliculus"@en ;
+
+                 nsu:synonym "DpWh"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00035 ] .
+
+
+
+OPBA:00042 rdf:type owl:Class ;
+
+                 rdfs:label "Intermediate and Deep gray layer of the supeior colliculus"@en ;
+
+                 nsu:synonym "InG-DpG"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00035 ] .
+
+
+
+OPBA:00043 rdf:type owl:Class ;
+
+                 rdfs:label "Mammillary body"@en ;
+
+                 nsu:synonym "M"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00044 ] .
+
+
+
+OPBA:00044 rdf:type owl:Class ;
+
+                 rdfs:label "Hypothalamus"@en ;
+
+                 nsu:synonym "H"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00034 ] .
+
+
+
+OPBA:00045 rdf:type owl:Class ;
+
+                 rdfs:label "Medial geniculate nucleus"@en ;
+
+                 nsu:synonym "MG"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00003 ] .
+
+
+
+OPBA:00046 rdf:type owl:Class ;
+
+                 rdfs:label "Lateral geniculate nucleus"@en ;
+
+                 nsu:synonym "LGN"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00003 ] .
+
+
+
+OPBA:00047 rdf:type owl:Class ;
+
+                 rdfs:label "Intermediate white layer of the superior colliculus"@en ;
+
+                 nsu:synonym "InWh"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00035 ] .
+
+
+
+OPBA:00048 rdf:type owl:Class ;
+
+                 rdfs:label "Optic nerve layer of the superior colliculus"@en ;
+
+                 nsu:synonym "Op"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00035 ] .
+
+
+
+OPBA:00049 rdf:type owl:Class ;
+
+                 rdfs:label "Zona and Superficial gray layer of superior colliculus"@en ;
+
+                 nsu:synonym "Zo-SuG"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00035 ] .
+
+
+
+OPBA:00050 rdf:type owl:Class ;
+
+                 rdfs:label "Midbrain"@en ;
+
+                 nsu:synonym "MBr"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00035 ] .
+
+
+
+OPBA:00051 rdf:type owl:Class ;
+
+                 rdfs:label "Granule cell leyer of the cerebellum"@en ;
+
+                 nsu:synonym "GCer"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00040 ] .
+
+
+
+OPBA:00052 rdf:type owl:Class ;
+
+                 rdfs:label "Cerebellar white matter"@en ;
+
+                 nsu:synonym "WhCer"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00040 ] .
+
+
+
+OPBA:00053 rdf:type owl:Class ;
+
+                 rdfs:label "Medulla oblongata"@en ;
+
+                 nsu:synonym "MO"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00040 ] .
+
+
+
+OPBA:00054 rdf:type owl:Class ;
+
+                 rdfs:label "Cuneate nucleus"@en ;
+
+                 nsu:synonym "Cu"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00053 ] .
+
+
+
+OPBA:00055 rdf:type owl:Class ;
+
+                 rdfs:label "Area postrema"@en ;
+
+                 nsu:synonym "AP"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00053 ] .
+
+
+
+OPBA:00056 rdf:type owl:Class ;
+
+                 rdfs:label "Nuclei of the solitary tract"@en ;
+
+                 nsu:synonym "Sol"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00053 ] .
+
+
+
+OPBA:00057 rdf:type owl:Class ;
+
+                 rdfs:label "Hypoglossal nucleus and central cervical nucleus"@en ;
+
+                 nsu:synonym "12N"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00053 ] .
+
+
+
+OPBA:00058 rdf:type owl:Class ;
+
+                 rdfs:label "Cochlear nucleus"@en ;
+
+                 nsu:synonym "CN"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00053 ] .
+
+
+
+OPBA:00059 rdf:type owl:Class ;
+
+                 rdfs:label "Vestibular nucleus"@en ;
+
+                 nsu:synonym "Ve"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00053 ] .
+
+
+
+OPBA:00060 rdf:type owl:Class ;
+
+                 rdfs:label "Facial nerve"@en ;
+
+                 nsu:synonym "7n"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00053 ] .
+
+
+
+OPBA:00061 rdf:type owl:Class ;
+
+                 rdfs:label "External plexiform layer of the olfactory bulb"@en ;
+
+                 nsu:synonym "EPl"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00036 ] .
+
+
+
+OPBA:00062 rdf:type owl:Class ;
+
+                 rdfs:label "Lateral olfactory tract"@en ;
+
+                 nsu:synonym "ol"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00063 rdf:type owl:Class ;
+
+                 rdfs:label "Interventricular foramen"@en ;
+
+                 nsu:synonym "IVF"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00038 ] .
+
+
+
+OPBA:00064 rdf:type owl:Class ;
+
+                 rdfs:label "Cingulum"@en ;
+
+                 nsu:synonym "cg"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00111 ] .
+
+
+
+OPBA:00065 rdf:type owl:Class ;
+
+                 rdfs:label "Stria medullaris of the thalamus"@en ;
+
+                 nsu:synonym "st"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00111 ] .
+
+
+
+OPBA:00066 rdf:type owl:Class ;
+
+                 rdfs:label "Fornix"@en ;
+
+                 nsu:synonym "f"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00111 ] .
+
+
+
+OPBA:00067 rdf:type owl:Class ;
+
+                 rdfs:label "3rd ventricle"@en ;
+
+                 nsu:synonym "3V"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00038 ] .
+
+
+
+OPBA:00068 rdf:type owl:Class ;
+
+                 rdfs:label "Lateral ventricle"@en ;
+
+                 nsu:synonym "LV"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00038 ] .
+
+
+
+OPBA:00069 rdf:type owl:Class ;
+
+                 rdfs:label "4th ventricle"@en ;
+
+                 nsu:synonym "4V"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00038 ] .
+
+
+
+OPBA:00070 rdf:type owl:Class ;
+
+                 rdfs:label "Cerebral aqueduct"@en ;
+
+                 nsu:synonym "Aq"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00038 ] .
+
+
+
+OPBA:00071 rdf:type owl:Class ;
+
+                 rdfs:label "Hippocampus"@en ;
+
+                 nsu:synonym "Hip"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00072 rdf:type owl:Class ;
+
+                 rdfs:label "Deep cerebral white matter"@en ;
+
+                 nsu:synonym "dcw"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00073 rdf:type owl:Class ;
+
+                 rdfs:label "Oriens layer of the hippocampus"@en ;
+
+                 nsu:synonym "Or"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00071 ] .
+
+
+
+OPBA:00074 rdf:type owl:Class ;
+
+                 rdfs:label "Dentate gyrus"@en ;
+
+                 nsu:synonym "DG"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00071 ] .
+
+
+
+OPBA:00075 rdf:type owl:Class ;
+
+                 rdfs:label "Basal ganglia"@en ;
+
+                 nsu:synonym "BG"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00076 rdf:type owl:Class ;
+
+                 rdfs:label "Fimbria of the hippocampus"@en ;
+
+                 nsu:synonym "fi"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00071 ] .
+
+
+
+OPBA:00077 rdf:type owl:Class ;
+
+                 rdfs:label "Caudate nucleus"@en ;
+
+                 nsu:synonym "Cd"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00075 ] .
+
+
+
+OPBA:00078 rdf:type owl:Class ;
+
+                 rdfs:label "Septum"@en ;
+
+                 nsu:synonym "S"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00075 ] .
+
+
+
+OPBA:00079 rdf:type owl:Class ;
+
+                 rdfs:label "Nucleus accumbens"@en ;
+
+                 nsu:synonym "Acb"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00075 ] .
+
+
+
+OPBA:00080 rdf:type owl:Class ;
+
+                 rdfs:label "Putamen"@en ;
+
+                 nsu:synonym "Pu"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00075 ] .
+
+
+
+OPBA:00081 rdf:type owl:Class ;
+
+                 rdfs:label "Median raphe nuclei"@en ;
+
+                 nsu:synonym "MR"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00083 ] .
+
+
+
+OPBA:00082 rdf:type owl:Class ;
+
+                 rdfs:label "Pontine nucleus"@en ;
+
+                 nsu:synonym "Pn"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00083 ] .
+
+
+
+OPBA:00083 rdf:type owl:Class ;
+
+                 rdfs:label "Pons"@en ;
+
+                 nsu:synonym "PN"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00039 ] .
+
+
+
+OPBA:00084 rdf:type owl:Class ;
+
+                 rdfs:label "Longitudial fasciulus of the pons"@en ;
+
+                 nsu:synonym "lfp"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00083 ] .
+
+
+
+OPBA:00085 rdf:type owl:Class ;
+
+                 rdfs:label "Dorsal nucleus of lateral lemniscus"@en ;
+
+                 nsu:synonym "DLL"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00050 ] .
+
+
+
+OPBA:00086 rdf:type owl:Class ;
+
+                 rdfs:label "Periaqueductal gray"@en ;
+
+                 nsu:synonym "PAG"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00050 ] .
+
+
+
+OPBA:00087 rdf:type owl:Class ;
+
+                 rdfs:label "Commissure of the inferior colliculus"@en ;
+
+                 nsu:synonym "cic"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00090 ] .
+
+
+
+OPBA:00088 rdf:type owl:Class ;
+
+                 rdfs:label "Posterior commissure"@en ;
+
+                 nsu:synonym "pc"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00050 ] .
+
+
+
+OPBA:00089 rdf:type owl:Class ;
+
+                 rdfs:label "Commissure of the superior colliculus"@en ;
+
+                 nsu:synonym "csc"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00035 ] .
+
+
+
+OPBA:00090 rdf:type owl:Class ;
+
+                 rdfs:label "Inferior colliculus"@en ;
+
+                 nsu:synonym "IC"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00050 ] .
+
+
+
+OPBA:00091 rdf:type owl:Class ;
+
+                 rdfs:label "Glomelural layer of the olfactory bulb"@en ;
+
+                 nsu:synonym "Gl"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00036 ] .
+
+
+
+OPBA:00092 rdf:type owl:Class ;
+
+                 rdfs:label "Acessory olfactory bulb"@en ;
+
+                 nsu:synonym "AOB"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00093 rdf:type owl:Class ;
+
+                 rdfs:label "Entorhinal cortex"@en ;
+
+                 nsu:synonym "ECtx"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00037 ] .
+
+
+
+OPBA:00094 rdf:type owl:Class ;
+
+                 rdfs:label "hippocampal fissure"@en ;
+
+                 nsu:synonym "hipp.fiss"@en .
+
+
+
+OPBA:00095 rdf:type owl:Class ;
+
+                 rdfs:label "dentate gyrus"@en ;
+
+                 nsu:synonym "dent.gy"@en .
+
+
+
+OPBA:00096 rdf:type owl:Class ;
+
+                 rdfs:label "external plexiform layer"@en ;
+
+                 nsu:synonym "ext.plex.lr"@en .
+
+
+
+OPBA:00097 rdf:type owl:Class ;
+
+                 rdfs:label "olfactory bulb"@en ;
+
+                 nsu:synonym "olf.bulb.EPl"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00061 ] .
+
+
+
+OPBA:00098 rdf:type owl:Class ;
+
+                 rdfs:label "brainstem"@en ;
+
+                 nsu:synonym "brainst.L"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00061 ] .
+
+
+
+OPBA:00099 rdf:type owl:Class ;
+
+                 rdfs:label "fibres"@en ;
+
+                 nsu:synonym "fibres"@en .
+
+
+
+OPBA:00100 rdf:type owl:Class ;
+
+                 rdfs:label "piriform cortex, layer 2"@en ;
+
+                 nsu:synonym "pirif.ctx.lr2"@en .
+
+
+
+OPBA:00101 rdf:type owl:Class ;
+
+                 rdfs:label "fibres in olfactory bulb"@en ;
+
+                 nsu:synonym "olf.bulb.fibres"@en .
+
+
+
+OPBA:00102 rdf:type owl:Class ;
+
+                 rdfs:label "Spinal trigeminal nucleus"@en ;
+
+                 nsu:synonym "Sp5"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00053 ] .
+
+
+
+OPBA:00103 rdf:type owl:Class ;
+
+                 rdfs:label "Paratrigemninal nucleus"@en ;
+
+                 nsu:synonym "Pa5"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00053 ] .
+
+
+
+OPBA:00104 rdf:type owl:Class ;
+
+                 rdfs:label "Ventral spinocerebellar tract"@en ;
+
+                 nsu:synonym "vsc"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00053 ] .
+
+
+
+OPBA:00105 rdf:type owl:Class ;
+
+                 rdfs:label "Dorsal spninocerebellar tract"@en ;
+
+                 nsu:synonym "dsc"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00053 ] .
+
+
+
+OPBA:00106 rdf:type owl:Class ;
+
+                 rdfs:label "Gracile nucleus"@en ;
+
+                 nsu:synonym "Gr"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00053 ] .
+
+
+
+OPBA:00107 rdf:type owl:Class ;
+
+                 rdfs:label "Facial nucleus"@en ;
+
+                 nsu:synonym "7N"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00053 ] .
+
+
+
+OPBA:00108 rdf:type owl:Class ;
+
+                 rdfs:label "Pyramidal tract"@en ;
+
+                 nsu:synonym "py"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00053 ] .
+
+
+
+OPBA:00109 rdf:type owl:Class ;
+
+                 rdfs:label "Inferior olive"@en ;
+
+                 nsu:synonym "IO"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00053 ] .
+
+
+
+OPBA:00110 rdf:type owl:Class ;
+
+                 rdfs:label "Tectospinal tract"@en ;
+
+                 nsu:synonym "ts"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00111 ] .
+
+
+
+OPBA:00111 rdf:type owl:Class ;
+
+                 rdfs:label "Fiber tracts"@en ;
+
+                 nsu:synonym "FT"@en ;
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom OPBA:00111 ] .
+
+
+

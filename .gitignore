@@ -43,3 +43,8 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+#############
+## Mac OS
+#############
+*.DS_Store

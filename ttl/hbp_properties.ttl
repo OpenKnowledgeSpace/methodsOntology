@@ -1,17 +1,17 @@
 ### WARNING ###
 ### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
 ### WARNING ###
-@prefix : <http://www.hbp.FIXME.org/hbp_taxonomy_ontology/> .
+@prefix : <http://www.hbp.FIXME.org/hbp_properties/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
-@base <http://www.hbp.FIXME.org/> .
+@base <http://www.hbp.FIXME.org/hbp_properties/> .
 
 <http://www.hbp.FIXME.org/hbp_properties> rdf:type owl:Ontology ;
-                owl:imports <http://www.FIXME.org/nsupper> .
+                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
 
 
 :generated_data rdf:type owl:AnnotationProperty .
@@ -25,4 +25,6 @@
 :layout_type rdf:type owl:AnnotationProperty .
 :used_data rdf:type owl:AnnotationProperty .
 :used_scale rdf:type owl:AnnotationProperty .
+:xref_url rdf:type owl:AnnotationProperty .
+:site_url rdf:type owl:AnnotationProperty .
 

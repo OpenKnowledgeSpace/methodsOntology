@@ -1,0 +1,55 @@
+### WARNING ###
+### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
+### WARNING ###
+@prefix : <http://www.hbp.FIXME.org/hbp_brain_atlas_template_ontology/> .
+@prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix HBP_BATT: <http://www.hbp.FIXME.org/hbp_brain_atlas_template_ontology/> .
+@base <http://www.hbp.FIXME.org/hbp_brain_atlas_template_ontology> .
+
+<http://www.hbp.FIXME.org/hbp_brain_atlas_template_ontology> rdf:type owl:Ontology ;
+                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
+
+
+HBP_BATT:0000000 rdf:type owl:Class ;
+	rdfs:label "Brain atlas template"@en .
+
+HBP_BATT:0000001 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_BATT:0000000 ;
+	nsu:definition "Allen mouse common coordinate framework (CCF) version 2 released in 2011 consists of 860 structures were extracted and interpolated to create symetric 3D annotations, provided by the Allen Institute"@en ;
+	rdfs:label "Allen reference atlas V2"@en .
+
+HBP_BATT:0000002 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_BATT:0000000 ;
+	nsu:definition "Allen mouse common coordinate framework (CCF) version 3 released in 2015 is based on a 3D 10um isotropic highly detailed population average of 1675 specimens, provided by the Allen Institute."@en ;
+	rdfs:label "Allen reference atlas V3"@en .
+
+
+HBP_BATT:0000003 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_BATT:0000000 ;
+	nsu:definition "The rat brain atlas template consists of T2*-weighted anatomical MRI at 39 μm isotropic voxels and diffusion tensor imaging (DTI) volumes at 78 μm isotropic voxels resolution from an 80 day old male Sprague Dawley rat, provided by the University of Oslo."@en ;
+	rdfs:label "Waxholm Space rat brain atlas v.2.0"@en .
+
+
+HBP_BATT:0000004 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_BATT:0000000 ;
+	nsu:definition "High 20 microns resolution whole human brain volumetric data release 2015 based on January 2015, provided by Montreal Neurological Institute and Forschungszentrum Jülich GmbH."@en ;
+	rdfs:label "BigBrain"@en .
+
+
+HBP_BATT:0000005 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_BATT:0000000 ;
+	nsu:definition "Atlas built from one individual scanned 27 times, the images are linearly registered to create an average with high SNR and structure definition. Not originnally intended but adopted by many groups as a stereotaxic template. Provided by the McConnell Brain Imaging Centre, Montreal Neurological Institute, McGill University."@en ;
+	rdfs:label "MNI Colin 27"@en .
+
+
+HBP_BATT:0000006 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_BATT:0000000 ;
+	nsu:definition "Infant template parecelled in 94 regions (47 on each hemisphere) from a7.1 week-old girl, provided by the Commissariat a l'énergie atomique et aux énergies alternatives (CEA)."@en ;
+	rdfs:label "Infant atlas"@en .
+	

@@ -10,7 +10,7 @@
 @base <http://www.FIXME.org/nsbeing> .
 
 <http://www.FIXME.org/nsbeing> rdf:type owl:Ontology ;
-                               owl:imports <http://www.FIXME.org/nsupper> .
+                               owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
 
 :nsb_0000000 rdf:type owl:Class ;
     rdfs:label "generated being" ;  # This is actually completely redundant with being

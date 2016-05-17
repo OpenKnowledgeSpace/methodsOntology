@@ -1,0 +1,50 @@
+### WARNING ###
+### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
+### WARNING ###
+@prefix : <http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/> .
+@prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix HBP_DTAT: <http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/> .
+@base <http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology> .
+
+<http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology> rdf:type owl:Ontology ;
+                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
+
+
+HBP_DTAT:0000000 rdf:type owl:Class ;
+	nsu:definition "Attribute associated with a dataset"@en ;
+	rdfs:label "attribute"@en .
+
+HBP_DTAT:0000001 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	nsu:definition "Direction describes the anatomical planes used to transect an organ or body in order to describe the location of the studied structures. There are three basic planes or directions: coronal, axial and sagittal"@en ;
+	rdfs:label "direction"@en .
+
+
+HBP_DTAT:0000002 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	nsu:definition "The resolution is the measure of the sharpness of an image or of the fineness with which a device can produce or record such an image, usually expressed as the total number or density of pixels in the image. For brain it can be expressed in microns per pixel to millimeters per pixel"@en ;
+	rdfs:label "resolution units"@en .
+
+
+HBP_DTAT:0000003 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	nsu:definition "A Zenodo deposition id. This attribute value is of type integer."@en ;
+	rdfs:label "Zenodo deposition id"@en .
+
+
+HBP_DTAT:0000004 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	nsu:definition "An integer value identifying a record in Zenodo"@en ;
+	rdfs:label "Zenodo record id"@en .
+	
+
+HBP_DTAT:0000005 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	nsu:definition "A string identifying the file"@en ;
+	rdfs:label "Zenodo file id"@en .
+

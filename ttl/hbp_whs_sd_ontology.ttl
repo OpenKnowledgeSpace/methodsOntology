@@ -8,1158 +8,844 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix HBP_WHS_SD: <http://www.hbp.FIXME.org/hbp_whs_sd_ontology/> .
 @base <http://www.hbp.FIXME.org/hbp_whs_sd_ontology> .
 
 <http://www.hbp.FIXME.org/hbp_whs_sd_ontology> rdf:type owl:Ontology ;
-                owl:imports <http://www.FIXME.org/nsupper> .
+                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
 
 
 
-:HBP_WHS_SD_0000000 rdf:type owl:Class ;
-
+HBP_WHS_SD:0000000 rdf:type owl:Class ;
                     rdfs:label "neocortex"@en ;
-
                     nsu:definition "This region is identical to region with id 92, the neocortex, in WHS_SD."@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000110 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000110 ] .
 
 
-:HBP_WHS_SD_0000001 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000001 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex"@en ;
-
                     nsu:definition "This region is identical to the region of the same name as described in The Rat Nervous System by G. Paxinos"@en ;
-
                     nsu:synonym "S1"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000000 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000000 ] .
 
 
-:HBP_WHS_SD_0000002 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000002 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex barrel field"@en ;
-
                     nsu:definition "This region is identical to the region of the same name as described in The Rat Nervous System by G. Paxinos"@en ;
-
                     nsu:synonym "S1BF"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000001 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000001 ] .
 
 
-:HBP_WHS_SD_0000003 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000003 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex forelimb"@en ;
-
                     nsu:definition "This region is identical to the region of the same name as described in The Rat Nervous System by G. Paxinos"@en ;
-
                     nsu:synonym "S1FL"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000001 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000001 ] .
 
 
-:HBP_WHS_SD_0000004 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000004 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex hindlimb"@en ;
-
                     nsu:definition "This region is identical to the region of the same name as described in The Rat Nervous System by G. Paxinos"@en ;
-
                     nsu:synonym "S1HL"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000001 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000001 ] .
 
 
-:HBP_WHS_SD_0000005 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000005 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex jaw"@en ;
-
                     nsu:definition "This region is identical to the region of the same name as described in The Rat Nervous System by G. Paxinos"@en ;
-
                     nsu:synonym "S1"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000001 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000001 ] .
 
 
-:HBP_WHS_SD_0000006 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000006 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex jaw oral surface"@en ;
-
                     nsu:definition "This region is identical to the region of the same name as described in The Rat Nervous System by G. Paxinos"@en ;
-
                     nsu:synonym "S1JO"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000001 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000001 ] .
 
 
-:HBP_WHS_SD_0000007 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000007 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex shoulder"@en ;
-
                     nsu:definition "This region is identical to the region of the same name as described in The Rat Nervous System by G. Paxinos"@en ;
-
                     nsu:synonym "S1Sh"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000001 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000001 ] .
 
 
-:HBP_WHS_SD_0000008 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000008 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex trunk"@en ;
-
                     nsu:definition "This region is identical to the region of the same name as described in The Rat Nervous System by G. Paxinos"@en ;
-
                     nsu:synonym "S1Tr"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000001 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000001 ] .
 
 
-:HBP_WHS_SD_0000009 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000009 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex upper lip"@en ;
-
                     nsu:definition "This region is identical to the region of the same name as described in The Rat Nervous System by G. Paxinos"@en ;
-
                     nsu:synonym "S1ULp"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000001 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000001 ] .
 
 
-:HBP_WHS_SD_0000010 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000010 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex hindlimb layer Va"@en ;
-
                     nsu:definition "This region is defined based on the visual perception of cell sensity in the Somatosensory cortex."@en ;
-
                     nsu:synonym "L5a"@en ;
-
                     nsu:synonym "Layer 5a"@en ;
-
                     nsu:synonym "Layer Va"@en ;
-
                     nsu:synonym "Layer va"@en ;
-
                     nsu:synonym "LVa"@en ;
-
                     nsu:synonym "Lva"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000015 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000015 ] .
 
 
-:HBP_WHS_SD_0000011 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000011 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex hindlimb layer Vb"@en ;
-
                     nsu:definition "This region is defined based on the visual perception of cell sensity in the Somatosensory cortex."@en ;
-
                     nsu:synonym "L5b"@en ;
-
                     nsu:synonym "Layer 5b"@en ;
-
                     nsu:synonym "Layer Vb"@en ;
-
                     nsu:synonym "Layer vb"@en ;
-
                     nsu:synonym "LVb"@en ;
-
                     nsu:synonym "Lvb"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000015 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000015 ] .
 
 
-:HBP_WHS_SD_0000012 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000012 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex hindlimb layer I"@en ;
-
                     nsu:definition "This region is defined based on the visual perception of cell sensity in the Somatosensory cortex."@en ;
-
                     nsu:synonym "L1"@en ;
-
                     nsu:synonym "Layer 1"@en ;
-
                     nsu:synonym "Layer I"@en ;
-
                     nsu:synonym "Layer i"@en ;
-
                     nsu:synonym "LI"@en ;
-
                     nsu:synonym "Li"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000004 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000004 ] .
 
 
-:HBP_WHS_SD_0000013 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000013 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex hindlimb layer II/III"@en ;
-
                     nsu:definition "This region is defined based on the visual perception of cell sensity in the Somatosensory cortex."@en ;
-
                     nsu:synonym "L2/3"@en ;
-
                     nsu:synonym "L23"@en ;
-
                     nsu:synonym "Layer 2/3"@en ;
-
                     nsu:synonym "Layer 23"@en ;
-
                     nsu:synonym "Layer II/III"@en ;
-
                     nsu:synonym "Layer ii/iii"@en ;
-
                     nsu:synonym "LII/III"@en ;
-
                     nsu:synonym "Lii/iii"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000004 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000004 ] .
 
 
-:HBP_WHS_SD_0000014 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000014 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex hindlimb layer IV"@en ;
-
                     nsu:definition "This region is defined based on the visual perception of cell sensity in the Somatosensory cortex."@en ;
-
                     nsu:synonym "L4"@en ;
-
                     nsu:synonym "Layer 4"@en ;
-
                     nsu:synonym "Layer IV"@en ;
-
                     nsu:synonym "Layer iv"@en ;
-
                     nsu:synonym "LIV"@en ;
-
                     nsu:synonym "Liv"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000004 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000004 ] .
 
 
-:HBP_WHS_SD_0000015 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000015 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex hindlimb layer V"@en ;
-
                     nsu:definition "This region is defined based on the visual perception of cell sensity in the Somatosensory cortex."@en ;
-
                     nsu:synonym "L5"@en ;
-
                     nsu:synonym "Layer 5"@en ;
-
                     nsu:synonym "Layer V"@en ;
-
                     nsu:synonym "Layer v"@en ;
-
                     nsu:synonym "LV"@en ;
-
                     nsu:synonym "Lv"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000004 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000004 ] .
 
 
-:HBP_WHS_SD_0000016 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000016 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex hindlimb layer VI"@en ;
-
                     nsu:definition "This region is defined based on the visual perception of cell sensity in the Somatosensory cortex."@en ;
-
                     nsu:synonym "L6"@en ;
-
                     nsu:synonym "Layer 6"@en ;
-
                     nsu:synonym "Layer VI"@en ;
-
                     nsu:synonym "Layer vi"@en ;
-
                     nsu:synonym "LVI"@en ;
-
                     nsu:synonym "Lvi"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000004 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000004 ] .
 
 
-:HBP_WHS_SD_0000017 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000017 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex hindlimb layer VIa"@en ;
-
                     nsu:definition "This region is defined based on the visual perception of cell sensity in the Somatosensory cortex."@en ;
-
                     nsu:synonym "L6a"@en ;
-
                     nsu:synonym "Layer 6a"@en ;
-
                     nsu:synonym "Layer VIa"@en ;
-
                     nsu:synonym "Layer via"@en ;
-
                     nsu:synonym "LVIa"@en ;
-
                     nsu:synonym "Lvia"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000016 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000016 ] .
 
 
-:HBP_WHS_SD_0000018 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000018 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex hindlimb layer VIaw"@en ;
-
                     nsu:definition "This region is defined based on the visual perception of cell sensity in the Somatosensory cortex."@en ;
-
                     nsu:synonym "L6aw"@en ;
-
                     nsu:synonym "Layer 6aw"@en ;
-
                     nsu:synonym "Layer VIaw"@en ;
-
                     nsu:synonym "Layer viaw"@en ;
-
                     nsu:synonym "LVIaw"@en ;
-
                     nsu:synonym "Lviaw"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000016 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000016 ] .
 
 
-:HBP_WHS_SD_0000019 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000019 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex hindlimb layer VIb"@en ;
-
                     nsu:definition "This region is defined based on the visual perception of cell sensity in the Somatosensory cortex."@en ;
-
                     nsu:synonym "L6b"@en ;
-
                     nsu:synonym "Layer 6b"@en ;
-
                     nsu:synonym "Layer VIb"@en ;
-
                     nsu:synonym "Layer vib"@en ;
-
                     nsu:synonym "LVIb"@en ;
-
                     nsu:synonym "Lvib"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000016 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000016 ] .
 
 
-:HBP_WHS_SD_0000020 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000020 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex hindlimb layer II"@en ;
-
                     nsu:definition "This region is defined based on the visual perception of cell sensity in the Somatosensory cortex."@en ;
-
                     nsu:synonym "L2"@en ;
-
                     nsu:synonym "Layer 2"@en ;
-
                     nsu:synonym "Layer II"@en ;
-
                     nsu:synonym "Layer ii"@en ;
-
                     nsu:synonym "LII"@en ;
-
                     nsu:synonym "Lii"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000013 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000013 ] .
 
 
-:HBP_WHS_SD_0000021 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000021 rdf:type owl:Class ;
                     rdfs:label "Somatosensory cortex hindlimb layer III"@en ;
-
                     nsu:definition "This region is defined based on the visual perception of cell sensity in the Somatosensory cortex."@en ;
-
                     nsu:synonym "L3"@en ;
-
                     nsu:synonym "Layer 3"@en ;
-
                     nsu:synonym "Layer III"@en ;
-
                     nsu:synonym "Layer iii"@en ;
-
                     nsu:synonym "LIII"@en ;
-
                     nsu:synonym "Liii"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000013 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000013 ] .
 
 
-:HBP_WHS_SD_0000022 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000022 rdf:type owl:Class ;
                     rdfs:label "brain"@en .
 
 
 
-:HBP_WHS_SD_0000023 rdf:type owl:Class ;
-
+HBP_WHS_SD:0000023 rdf:type owl:Class ;
                     rdfs:label "corticofugal pathways"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000101 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000101 ] .
 
 
-:HBP_WHS_SD_0000024 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000024 rdf:type owl:Class ;
                     rdfs:label "substantia nigra"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000025 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000025 rdf:type owl:Class ;
                     rdfs:label "subthalamic nucleus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000026 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000026 rdf:type owl:Class ;
                     rdfs:label "molecular cell layer of the cerebellum"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000112 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000112 ] .
 
 
-:HBP_WHS_SD_0000027 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000027 rdf:type owl:Class ;
                     rdfs:label "deeper cerebellum"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000112 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000112 ] .
 
 
-:HBP_WHS_SD_0000028 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000028 rdf:type owl:Class ;
                     rdfs:label "alveus of the hippocampus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000100 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000100 ] .
 
 
-:HBP_WHS_SD_0000029 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000029 rdf:type owl:Class ;
                     rdfs:label "inferior cerebellar peduncle"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000107 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000107 ] .
 
 
-:HBP_WHS_SD_0000030 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000030 rdf:type owl:Class ;
                     rdfs:label "cingulate cortex, area 2"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000110 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000110 ] .
 
 
-:HBP_WHS_SD_0000031 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000031 rdf:type owl:Class ;
                     rdfs:label "dorsal-lateral entorhinal area"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000110 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000110 ] .
 
 
-:HBP_WHS_SD_0000032 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000032 rdf:type owl:Class ;
                     rdfs:label "dorsal-intermediate entorhinal area"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000110 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000110 ] .
 
 
-:HBP_WHS_SD_0000033 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000033 rdf:type owl:Class ;
                     rdfs:label "perirhinal cortex"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000110 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000110 ] .
 
 
-:HBP_WHS_SD_0000034 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000034 rdf:type owl:Class ;
                     rdfs:label "striatum"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000035 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000035 rdf:type owl:Class ;
                     rdfs:label "globus pallidus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000036 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000036 rdf:type owl:Class ;
                     rdfs:label "entopeduncular nucleus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000037 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000037 rdf:type owl:Class ;
                     rdfs:label "ventricular system"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000022 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000022 ] .
 
 
-:HBP_WHS_SD_0000038 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000038 rdf:type owl:Class ;
                     rdfs:label "medial lemniscus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000102 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000102 ] .
 
 
-:HBP_WHS_SD_0000039 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000039 rdf:type owl:Class ;
                     rdfs:label "facial nerve"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000104 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000104 ] .
 
 
-:HBP_WHS_SD_0000040 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000040 rdf:type owl:Class ;
                     rdfs:label "anterior commissure, anterior part"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000099 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000099 ] .
 
 
-:HBP_WHS_SD_0000041 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000041 rdf:type owl:Class ;
                     rdfs:label "anterior commissure, posterior part"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000099 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000099 ] .
 
 
-:HBP_WHS_SD_0000042 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000042 rdf:type owl:Class ;
                     rdfs:label "ventral hippocampal commissure"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000100 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000100 ] .
 
 
-:HBP_WHS_SD_0000043 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000043 rdf:type owl:Class ;
                     rdfs:label "thalamus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000044 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000044 rdf:type owl:Class ;
                     rdfs:label "septal region"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000045 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000045 rdf:type owl:Class ;
                     rdfs:label "optic nerve"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000105 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000105 ] .
 
 
-:HBP_WHS_SD_0000046 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000046 rdf:type owl:Class ;
                     rdfs:label "optic tract and optic chiasm"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000105 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000105 ] .
 
 
-:HBP_WHS_SD_0000047 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000047 rdf:type owl:Class ;
                     rdfs:label "pineal gland"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000048 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000048 rdf:type owl:Class ;
                     rdfs:label "inner ear"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000022 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000022 ] .
 
 
-:HBP_WHS_SD_0000049 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000049 rdf:type owl:Class ;
                     rdfs:label "spinal cord"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000113 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000113 ] .
 
 
-:HBP_WHS_SD_0000050 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000050 rdf:type owl:Class ;
                     rdfs:label "commissure of the superior colliculus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000106 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000106 ] .
 
 
-:HBP_WHS_SD_0000051 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000051 rdf:type owl:Class ;
                     rdfs:label "brain stem"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000052 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000052 rdf:type owl:Class ;
                     rdfs:label "hypothalamic region"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000053 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000053 rdf:type owl:Class ;
                     rdfs:label "inferior colliculus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000111 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000111 ] .
 
 
-:HBP_WHS_SD_0000054 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000054 rdf:type owl:Class ;
                     rdfs:label "superficial gray layer of the superior colliculus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000111 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000111 ] .
 
 
-:HBP_WHS_SD_0000055 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000055 rdf:type owl:Class ;
                     rdfs:label "periaqueductal gray"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000056 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000056 rdf:type owl:Class ;
                     rdfs:label "fornix"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000100 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000100 ] .
 
 
-:HBP_WHS_SD_0000057 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000057 rdf:type owl:Class ;
                     rdfs:label "mammillothalamic tract"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000103 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000103 ] .
 
 
-:HBP_WHS_SD_0000058 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000058 rdf:type owl:Class ;
                     rdfs:label "commissural stria terminalis"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000103 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000103 ] .
 
 
-:HBP_WHS_SD_0000059 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000059 rdf:type owl:Class ;
                     rdfs:label "deeper layers of the superior colliculus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000111 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000111 ] .
 
 
-:HBP_WHS_SD_0000060 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000060 rdf:type owl:Class ;
                     rdfs:label "periventricular gray"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000061 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000061 rdf:type owl:Class ;
                     rdfs:label "genu of the facial nerve"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000104 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000104 ] .
 
 
-:HBP_WHS_SD_0000062 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000062 rdf:type owl:Class ;
                     rdfs:label "pontine nuclei"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000063 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000063 rdf:type owl:Class ;
                     rdfs:label "fimbria of the hippocampus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000100 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000100 ] .
 
 
-:HBP_WHS_SD_0000064 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000064 rdf:type owl:Class ;
                     rdfs:label "fasciculus retroflexus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000103 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000103 ] .
 
 
-:HBP_WHS_SD_0000065 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000065 rdf:type owl:Class ;
                     rdfs:label "stria medullaris of the thalamus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000103 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000103 ] .
 
 
-:HBP_WHS_SD_0000066 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000066 rdf:type owl:Class ;
                     rdfs:label "stria terminalis"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000103 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000103 ] .
 
 
-:HBP_WHS_SD_0000067 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000067 rdf:type owl:Class ;
                     rdfs:label "posterior commissure"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000098 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000098 ] .
 
 
-:HBP_WHS_SD_0000068 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000068 rdf:type owl:Class ;
                     rdfs:label "glomerular layer of the accessory olfactory bulb"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000109 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000109 ] .
 
 
-:HBP_WHS_SD_0000069 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000069 rdf:type owl:Class ;
                     rdfs:label "glomerular layer of the olfactory bulb"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000109 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000109 ] .
 
 
-:HBP_WHS_SD_0000070 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000070 rdf:type owl:Class ;
                     rdfs:label "olfactory bulb"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000109 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000109 ] .
 
 
-:HBP_WHS_SD_0000071 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000071 rdf:type owl:Class ;
                     rdfs:label "corpus callosum and associated subcortical white matter"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000098 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000098 ] .
 
 
-:HBP_WHS_SD_0000072 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000072 rdf:type owl:Class ;
                     rdfs:label "brachium of the superior colliculus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000106 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000106 ] .
 
 
-:HBP_WHS_SD_0000073 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000073 rdf:type owl:Class ;
                     rdfs:label "commissure of the inferior colliculus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000106 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000106 ] .
 
 
-:HBP_WHS_SD_0000074 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000074 rdf:type owl:Class ;
                     rdfs:label "central canal"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000113 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000113 ] .
 
 
-:HBP_WHS_SD_0000075 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000075 rdf:type owl:Class ;
                     rdfs:label "interpeduncular nucleus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000076 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000076 rdf:type owl:Class ;
                     rdfs:label "ascending fibers of the facial nerve"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000104 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000104 ] .
 
 
-:HBP_WHS_SD_0000077 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000077 rdf:type owl:Class ;
                     rdfs:label "anterior commissure, intrabulbar part"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000099 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000099 ] .
 
 
-:HBP_WHS_SD_0000078 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000078 rdf:type owl:Class ;
                     rdfs:label "inferior olive"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000079 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000079 rdf:type owl:Class ;
                     rdfs:label "spinal trigeminal nucleus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000080 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000080 rdf:type owl:Class ;
                     rdfs:label "spinal trigeminal tract"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000098 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000098 ] .
 
 
-:HBP_WHS_SD_0000081 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000081 rdf:type owl:Class ;
                     rdfs:label "frontal association cortex"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000110 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000110 ] .
 
 
-:HBP_WHS_SD_0000082 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000082 rdf:type owl:Class ;
                     rdfs:label "middle cerebellar peduncle"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000107 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000107 ] .
 
 
-:HBP_WHS_SD_0000083 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000083 rdf:type owl:Class ;
                     rdfs:label "transverse fibers of the pons"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000107 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000107 ] .
 
 
-:HBP_WHS_SD_0000084 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000084 rdf:type owl:Class ;
                     rdfs:label "habenular commissure"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000103 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000103 ] .
 
 
-:HBP_WHS_SD_0000085 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000085 rdf:type owl:Class ;
                     rdfs:label "nucleus of the stria medullaris"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000086 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000086 rdf:type owl:Class ;
                     rdfs:label "basal forebrain region"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000087 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000087 rdf:type owl:Class ;
                     rdfs:label "supraoptic decussation"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000105 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000105 ] .
 
 
-:HBP_WHS_SD_0000088 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000088 rdf:type owl:Class ;
                     rdfs:label "medial lemniscus decussation"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000102 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000102 ] .
 
 
-:HBP_WHS_SD_0000089 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000089 rdf:type owl:Class ;
                     rdfs:label "pyramidal decussation"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000101 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000101 ] .
 
 
-:HBP_WHS_SD_0000090 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000090 rdf:type owl:Class ;
                     rdfs:label "hippocampal formation"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000110 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000110 ] .
 
 
-:HBP_WHS_SD_0000091 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000091 rdf:type owl:Class ;
                     rdfs:label "subiculum"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000110 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000110 ] .
 
 
-:HBP_WHS_SD_0000092 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000092 rdf:type owl:Class ;
                     rdfs:label "postrhinal cortex"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000110 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000110 ] .
 
 
-:HBP_WHS_SD_0000093 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000093 rdf:type owl:Class ;
                     rdfs:label "ventral-intermediate entorhinal area"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000110 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000110 ] .
 
 
-:HBP_WHS_SD_0000094 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000094 rdf:type owl:Class ;
                     rdfs:label "medial entorhinal field"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000110 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000110 ] .
 
 
-:HBP_WHS_SD_0000095 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000095 rdf:type owl:Class ;
                     rdfs:label "caudal entorhinal field"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000110 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000110 ] .
 
 
-:HBP_WHS_SD_0000096 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000096 rdf:type owl:Class ;
                     rdfs:label "bed nucleus of the stria terminalis"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000097 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000097 rdf:type owl:Class ;
                     rdfs:label "pretectal region"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000111 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000111 ] .
 
 
-:HBP_WHS_SD_0000098 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000098 rdf:type owl:Class ;
                     rdfs:label "White matter"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000022 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000022 ] .
 
 
-:HBP_WHS_SD_0000099 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000099 rdf:type owl:Class ;
                     rdfs:label "Anterior commissure"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000098 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000098 ] .
 
 
-:HBP_WHS_SD_0000100 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000100 rdf:type owl:Class ;
                     rdfs:label "Hippocampal white matter"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000098 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000098 ] .
 
 
-:HBP_WHS_SD_0000101 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000101 rdf:type owl:Class ;
                     rdfs:label "Corticofugal pathways"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000098 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000098 ] .
 
 
-:HBP_WHS_SD_0000102 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000102 rdf:type owl:Class ;
                     rdfs:label "Medial lemniscus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000098 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000098 ] .
 
 
-:HBP_WHS_SD_0000103 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000103 rdf:type owl:Class ;
                     rdfs:label "Thalamic tracts"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000098 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000098 ] .
 
 
-:HBP_WHS_SD_0000104 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000104 rdf:type owl:Class ;
                     rdfs:label "Facial nerve"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000098 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000098 ] .
 
 
-:HBP_WHS_SD_0000105 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000105 rdf:type owl:Class ;
                     rdfs:label "Optic fiber system and supraoptic decussation"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000098 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000098 ] .
 
 
-:HBP_WHS_SD_0000106 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000106 rdf:type owl:Class ;
                     rdfs:label "White matter of the tectum"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000098 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000098 ] .
 
 
-:HBP_WHS_SD_0000107 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000107 rdf:type owl:Class ;
                     rdfs:label "Cerebellar and precerebellar white matter"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000098 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000098 ] .
 
 
-:HBP_WHS_SD_0000108 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000108 rdf:type owl:Class ;
                     rdfs:label "Gray matter"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000022 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000022 ] .
 
 
-:HBP_WHS_SD_0000109 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000109 rdf:type owl:Class ;
                     rdfs:label "Olfactory system"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000110 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000110 rdf:type owl:Class ;
                     rdfs:label "Cerebral cortex including the neocortex and the hippocampus"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000111 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000111 rdf:type owl:Class ;
                     rdfs:label "Tectum"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000112 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000112 rdf:type owl:Class ;
                     rdfs:label "Cerebellum"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000108 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000108 ] .
 
 
-:HBP_WHS_SD_0000113 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000113 rdf:type owl:Class ;
                     rdfs:label "Spinal cord"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000022 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000022 ] .
 
 
-:HBP_WHS_SD_0000114 rdf:type owl:Class ;
 
+HBP_WHS_SD:0000114 rdf:type owl:Class ;
                     rdfs:label "dentate gyrus"@en ;
-
                     nsu:synonym "DG"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000090 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000090 ] .
 
 
-:HBP_WHS_SD_0000115 rdf:type owl:Class ;
 
-                    rdfs:label "cornu ammonis area 1"@en ;
-
+HBP_WHS_SD:0000115 rdf:type owl:Class ;
+                    rdfs:label "Cornu Ammonis, Field CA1"@en ;
                     nsu:synonym "CA1"@en ;
-
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000090 ] .
-
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000090 ] .
 
 
-:HBP_WHS_SD_0000116 rdf:type owl:Class ;
 
-                    rdfs:label "cornu ammonis area 3"@en ;
-
+HBP_WHS_SD:0000116 rdf:type owl:Class ;
+                    rdfs:label "Cornu Ammonis, Field CA3"@en ;
                     nsu:synonym "CA3"@en ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000090 ] .
 
-                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom :HBP_WHS_SD_0000090 ] .
+
+HBP_WHS_SD:0000117 rdf:type owl:Class ;
+                    rdfs:label "Field CA1, stratum lacunosum-moleculare"@en ;
+                    nsu:synonym "CA1_SLM"@en ;
+                    nsu:synonym "CA1slm"@en ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000115 ].
+
+HBP_WHS_SD:0000118 rdf:type owl:Class ;
+                    rdfs:label "Field CA1, stratum oriens"@en ;
+                    nsu:synonym "CA1_SO"@en ;
+                    nsu:synonym "CA1so"@en ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000115 ].
+
+HBP_WHS_SD:0000119 rdf:type owl:Class ;
+                    rdfs:label "Field CA1, stratum pyramidale"@en ;
+                    nsu:synonym "CA1_SP"@en ;
+                    nsu:synonym "CA1sp"@en ;
+                    nsu:synonym "Field CA1, pyramidal layer"@en ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000115 ].
+
+HBP_WHS_SD:0000120 rdf:type owl:Class ;
+                    rdfs:label "Field CA1, stratum radiatum"@en ;
+                    nsu:synonym "CA1_SR"@en ;
+                    nsu:synonym "CA1sr"@en ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000115 ].
 

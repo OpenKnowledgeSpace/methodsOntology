@@ -1,0 +1,657 @@
+### WARNING ###
+### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
+### WARNING ###
+@prefix : <http://www.hbp.FIXME.org/hbp_macaca_fascicularis_brain_ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix MFBA: <https://scalablebrainatlas.incf.org/services/listregions.php?template=MERetal14/> .
+@prefix HBP_MFBA: <http://www.hbp.FIXME.org/hbp_macaca_fascicularis_brain_ontology/> .
+@base <http://www.hbp.FIXME.org/hbp_macaca_fascicularis_brain_ontology> .
+
+<http://www.hbp.FIXME.org/hbp_macaca_fascicularis_brain_ontology> rdf:type owl:Ontology ;
+                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
+                
+
+MFBA:00000 rdf:type owl:Class ;
+
+                 rdfs:label "perirhinal"@en ;
+
+                 nsu:synonym "PERI"@en .
+
+
+MFBA:00001 rdf:type owl:Class ;
+
+                 rdfs:label "area TH/TF"@en ;
+
+                 nsu:synonym "TH-TF"@en .
+
+
+MFBA:00002 rdf:type owl:Class ;
+
+                 rdfs:label "area TE, posterior-ventral part"@en ;
+
+                 nsu:synonym "TEpv"@en .
+
+
+MFBA:00003 rdf:type owl:Class ;
+
+                 rdfs:label "entorhinal"@en ;
+
+                 nsu:synonym "ENTO"@en .
+
+
+MFBA:00004 rdf:type owl:Class ;
+
+                 rdfs:label "area TE, anterior-ventral part"@en ;
+
+                 nsu:synonym "TEav"@en .
+
+
+MFBA:00005 rdf:type owl:Class ;
+
+                 rdfs:label "visual area 3"@en ;
+
+                 nsu:synonym "V3"@en .
+
+
+MFBA:00006 rdf:type owl:Class ;
+
+                 rdfs:label "visual area 2"@en ;
+
+                 nsu:synonym "V2"@en .
+
+
+MFBA:00007 rdf:type owl:Class ;
+
+                 rdfs:label "area TE, anterior-dorsal part"@en ;
+
+                 nsu:synonym "TEad"@en .
+
+
+MFBA:00008 rdf:type owl:Class ;
+
+                 rdfs:label "visual area 4"@en ;
+
+                 nsu:synonym "V4"@en .
+
+
+MFBA:00009 rdf:type owl:Class ;
+
+                 rdfs:label "area TEO"@en ;
+
+                 nsu:synonym "TEO"@en .
+
+
+MFBA:00010 rdf:type owl:Class ;
+
+                 rdfs:label "area TE, posterior-dorsal part"@en ;
+
+                 nsu:synonym "TEpd"@en .
+
+
+MFBA:00011 rdf:type owl:Class ;
+
+                 rdfs:label "subiculum"@en ;
+
+                 nsu:synonym "SUB"@en .
+
+
+MFBA:00012 rdf:type owl:Class ;
+
+                 rdfs:label "temporal pole"@en ;
+
+                 nsu:synonym "POLE"@en .
+
+
+MFBA:00013 rdf:type owl:Class ;
+
+                 rdfs:label "superior temporal polysensory, rostral part"@en ;
+
+                 nsu:synonym "STPr"@en .
+
+
+MFBA:00014 rdf:type owl:Class ;
+
+                 rdfs:label "visual area 1"@en ;
+
+                 nsu:synonym "V1"@en .
+
+
+MFBA:00015 rdf:type owl:Class ;
+
+                 rdfs:label "area IPa"@en ;
+
+                 nsu:synonym "IPa"@en .
+
+
+MFBA:00016 rdf:type owl:Class ;
+
+                 rdfs:label "area PGa"@en ;
+
+                 nsu:synonym "PGa"@en .
+
+
+MFBA:00017 rdf:type owl:Class ;
+
+                 rdfs:label "parabelt, rostral part"@en ;
+
+                 nsu:synonym "PBr"@en .
+
+
+MFBA:00018 rdf:type owl:Class ;
+
+                 rdfs:label "insula"@en ;
+
+                 nsu:synonym "INS"@en .
+
+
+MFBA:00019 rdf:type owl:Class ;
+
+                 rdfs:label "superior temporal polysensory, intermediate part"@en ;
+
+                 nsu:synonym "STPi"@en .
+
+
+MFBA:00020 rdf:type owl:Class ;
+
+                 rdfs:label "parainsula"@en ;
+
+                 nsu:synonym "Pi"@en .
+
+
+MFBA:00021 rdf:type owl:Class ;
+
+                 rdfs:label "prostriata"@en ;
+
+                 nsu:synonym "ProSt"@en .
+
+
+MFBA:00022 rdf:type owl:Class ;
+
+                 rdfs:label "fundus of superior temporal area"@en ;
+
+                 nsu:synonym "FST"@en .
+
+
+MFBA:00023 rdf:type owl:Class ;
+
+                 rdfs:label "area TEO medial part"@en ;
+
+                 nsu:synonym "TEOm"@en .
+
+
+MFBA:00024 rdf:type owl:Class ;
+
+                 rdfs:label "middle temporal area"@en ;
+
+                 nsu:synonym "MT"@en .
+
+
+MFBA:00025 rdf:type owl:Class ;
+
+                 rdfs:label "medial belt"@en ;
+
+                 nsu:synonym "MB"@en .
+
+
+MFBA:00026 rdf:type owl:Class ;
+
+                 rdfs:label "piriform"@en ;
+
+                 nsu:synonym "PIR"@en .
+
+
+MFBA:00027 rdf:type owl:Class ;
+
+                 rdfs:label "orbital proisocortex"@en ;
+
+                 nsu:synonym "OPRO"@en .
+
+
+MFBA:00028 rdf:type owl:Class ;
+
+                 rdfs:label "orbital periallocortex"@en ;
+
+                 nsu:synonym "OPAI"@en .
+
+
+MFBA:00029 rdf:type owl:Class ;
+
+                 rdfs:label "area 25"@en ;
+
+                 nsu:synonym "25"@en .
+
+
+MFBA:00030 rdf:type owl:Class ;
+
+                 rdfs:label "area 14"@en ;
+
+                 nsu:synonym "14"@en .
+
+
+MFBA:00031 rdf:type owl:Class ;
+
+                 rdfs:label "parabelt, caudal part"@en ;
+
+                 nsu:synonym "PBc"@en .
+
+
+MFBA:00032 rdf:type owl:Class ;
+
+                 rdfs:label "core region of the auditory cortex"@en ;
+
+                 nsu:synonym "Core"@en .
+
+
+MFBA:00033 rdf:type owl:Class ;
+
+                 rdfs:label "area 23"@en ;
+
+                 nsu:synonym "23"@en .
+
+
+MFBA:00034 rdf:type owl:Class ;
+
+                 rdfs:label "lateral belt"@en ;
+
+                 nsu:synonym "LB"@en .
+
+
+MFBA:00035 rdf:type owl:Class ;
+
+                 rdfs:label "area 12"@en ;
+
+                 nsu:synonym "12"@en .
+
+
+MFBA:00036 rdf:type owl:Class ;
+
+                 rdfs:label "superior temporal polysensory, caudal part"@en ;
+
+                 nsu:synonym "STPc"@en .
+
+
+MFBA:00037 rdf:type owl:Class ;
+
+                 rdfs:label "visual area 3A"@en ;
+
+                 nsu:synonym "V3A"@en .
+
+
+MFBA:00038 rdf:type owl:Class ;
+
+                 rdfs:label "transitional visual area 4"@en ;
+
+                 nsu:synonym "V4t"@en .
+
+
+MFBA:00039 rdf:type owl:Class ;
+
+                 rdfs:label "medial superior temporal area"@en ;
+
+                 nsu:synonym "MST"@en .
+
+
+MFBA:00040 rdf:type owl:Class ;
+
+                 rdfs:label "area ProM"@en ;
+
+                 nsu:synonym "ProM"@en .
+
+
+MFBA:00041 rdf:type owl:Class ;
+
+                 rdfs:label "area V6"@en ;
+
+                 nsu:synonym "V6"@en .
+
+
+MFBA:00042 rdf:type owl:Class ;
+
+                 rdfs:label "area 24a"@en ;
+
+                 nsu:synonym "24a"@en .
+
+
+MFBA:00043 rdf:type owl:Class ;
+
+                 rdfs:label "gustatory cortex"@en ;
+
+                 nsu:synonym "Gu"@en .
+
+
+MFBA:00044 rdf:type owl:Class ;
+
+                 rdfs:label "area 13"@en ;
+
+                 nsu:synonym "13"@en .
+
+
+MFBA:00045 rdf:type owl:Class ;
+
+                 rdfs:label "posterior intraparietal area"@en ;
+
+                 nsu:synonym "PIP"@en .
+
+
+MFBA:00046 rdf:type owl:Class ;
+
+                 rdfs:label "area V6A"@en ;
+
+                 nsu:synonym "V6A"@en .
+
+
+MFBA:00047 rdf:type owl:Class ;
+
+                 rdfs:label "somatosensory area 2"@en ;
+
+                 nsu:synonym "2"@en .
+
+
+MFBA:00048 rdf:type owl:Class ;
+
+                 rdfs:label "secondary somatosensory area"@en ;
+
+                 nsu:synonym "SII"@en .
+
+
+MFBA:00049 rdf:type owl:Class ;
+
+                 rdfs:label "somatosensory area 3"@en ;
+
+                 nsu:synonym "3"@en .
+
+
+MFBA:00050 rdf:type owl:Class ;
+
+                 rdfs:label "area 10"@en ;
+
+                 nsu:synonym "10"@en .
+
+
+MFBA:00051 rdf:type owl:Class ;
+
+                 rdfs:label "temporo-parietal area"@en ;
+
+                 nsu:synonym "TPt"@en .
+
+
+MFBA:00052 rdf:type owl:Class ;
+
+                 rdfs:label "area 44"@en ;
+
+                 nsu:synonym "44"@en .
+
+
+MFBA:00053 rdf:type owl:Class ;
+
+                 rdfs:label "frontal area F5"@en ;
+
+                 nsu:synonym "F5"@en .
+
+
+MFBA:00054 rdf:type owl:Class ;
+
+                 rdfs:label "area 32"@en ;
+
+                 nsu:synonym "32"@en .
+
+
+MFBA:00055 rdf:type owl:Class ;
+
+                 rdfs:label "area 29/30"@en ;
+
+                 nsu:synonym "29-30"@en .
+
+
+MFBA:00056 rdf:type owl:Class ;
+
+                 rdfs:label "frontal area F1"@en ;
+
+                 nsu:synonym "F1"@en .
+
+
+MFBA:00057 rdf:type owl:Class ;
+
+                 rdfs:label "area 45B"@en ;
+
+                 nsu:synonym "45B"@en .
+
+
+MFBA:00058 rdf:type owl:Class ;
+
+                 rdfs:label "area 45A"@en ;
+
+                 nsu:synonym "45A"@en .
+
+
+MFBA:00059 rdf:type owl:Class ;
+
+                 rdfs:label "area 7op (parietal operculum)"@en ;
+
+                 nsu:synonym "7op"@en .
+
+
+MFBA:00060 rdf:type owl:Class ;
+
+                 rdfs:label "dorsal prelunate area"@en ;
+
+                 nsu:synonym "DP"@en .
+
+
+MFBA:00061 rdf:type owl:Class ;
+
+                 rdfs:label "ventral intraparietal area"@en ;
+
+                 nsu:synonym "VIP"@en .
+
+
+MFBA:00062 rdf:type owl:Class ;
+
+                 rdfs:label "area 31"@en ;
+
+                 nsu:synonym "31"@en .
+
+
+MFBA:00063 rdf:type owl:Class ;
+
+                 rdfs:label "area 7A"@en ;
+
+                 nsu:synonym "7A"@en .
+
+
+MFBA:00064 rdf:type owl:Class ;
+
+                 rdfs:label "area 7B"@en ;
+
+                 nsu:synonym "7B"@en .
+
+
+MFBA:00065 rdf:type owl:Class ;
+
+                 rdfs:label "area 11"@en ;
+
+                 nsu:synonym "11"@en .
+
+
+MFBA:00066 rdf:type owl:Class ;
+
+                 rdfs:label "lateral intraparietal area"@en ;
+
+                 nsu:synonym "LIP"@en .
+
+
+MFBA:00067 rdf:type owl:Class ;
+
+                 rdfs:label "medial intraparietal area"@en ;
+
+                 nsu:synonym "MIP"@en .
+
+
+MFBA:00068 rdf:type owl:Class ;
+
+                 rdfs:label "medial part of area 8"@en ;
+
+                 nsu:synonym "8m"@en .
+
+
+MFBA:00069 rdf:type owl:Class ;
+
+                 rdfs:label "lateral part of area 8"@en ;
+
+                 nsu:synonym "8l"@en .
+
+
+MFBA:00070 rdf:type owl:Class ;
+
+                 rdfs:label "area 7m"@en ;
+
+                 nsu:synonym "7m"@en .
+
+
+MFBA:00071 rdf:type owl:Class ;
+
+                 rdfs:label "frontal area F4"@en ;
+
+                 nsu:synonym "F4"@en .
+
+
+MFBA:00072 rdf:type owl:Class ;
+
+                 rdfs:label "area 46, ventral part"@en ;
+
+                 nsu:synonym "46v"@en .
+
+
+MFBA:00073 rdf:type owl:Class ;
+
+                 rdfs:label "anterior intraparietal area"@en ;
+
+                 nsu:synonym "AIP"@en .
+
+
+MFBA:00074 rdf:type owl:Class ;
+
+                 rdfs:label "area 46, dorsal part"@en ;
+
+                 nsu:synonym "46d"@en .
+
+
+MFBA:00075 rdf:type owl:Class ;
+
+                 rdfs:label "area 24c"@en ;
+
+                 nsu:synonym "24c"@en .
+
+
+MFBA:00076 rdf:type owl:Class ;
+
+                 rdfs:label "area 9/46, ventral part"@en ;
+
+                 nsu:synonym "9-46v"@en .
+
+
+MFBA:00077 rdf:type owl:Class ;
+
+                 rdfs:label "area 24b"@en ;
+
+                 nsu:synonym "24b"@en .
+
+
+MFBA:00078 rdf:type owl:Class ;
+
+                 rdfs:label "somatosensory area 5"@en ;
+
+                 nsu:synonym "5"@en .
+
+
+MFBA:00079 rdf:type owl:Class ;
+
+                 rdfs:label "rostral part of area 8"@en ;
+
+                 nsu:synonym "8r"@en .
+
+
+MFBA:00080 rdf:type owl:Class ;
+
+                 rdfs:label "area 8B"@en ;
+
+                 nsu:synonym "8B"@en .
+
+
+MFBA:00081 rdf:type owl:Class ;
+
+                 rdfs:label "area 24d"@en ;
+
+                 nsu:synonym "24d"@en .
+
+
+MFBA:00082 rdf:type owl:Class ;
+
+                 rdfs:label "somatosensory area 1"@en ;
+
+                 nsu:synonym "1"@en .
+
+
+MFBA:00083 rdf:type owl:Class ;
+
+                 rdfs:label "area 9"@en ;
+
+                 nsu:synonym "9"@en .
+
+
+MFBA:00084 rdf:type owl:Class ;
+
+                 rdfs:label "frontal area F2"@en ;
+
+                 nsu:synonym "F2"@en .
+
+
+MFBA:00085 rdf:type owl:Class ;
+
+                 rdfs:label "frontal area F6"@en ;
+
+                 nsu:synonym "F6"@en .
+
+
+MFBA:00086 rdf:type owl:Class ;
+
+                 rdfs:label "frontal area F3"@en ;
+
+                 nsu:synonym "F3"@en .
+
+
+MFBA:00087 rdf:type owl:Class ;
+
+                 rdfs:label "frontal area F7"@en ;
+
+                 nsu:synonym "F7"@en .
+
+
+MFBA:00088 rdf:type owl:Class ;
+
+                 rdfs:label "area 9/46, dorsal part"@en ;
+
+                 nsu:synonym "9-46d"@en .
+
+
+MFBA:00089 rdf:type owl:Class ;
+
+                 rdfs:label "area TE of the superior temporal sulcus, ant part"@en ;
+
+                 nsu:synonym "TEam-a"@en .
+
+
+MFBA:00090 rdf:type owl:Class ;
+
+                 rdfs:label "area TE of the superior temporal sulcus, post part"@en ;
+
+                 nsu:synonym "TEam-p"@en .
+
+
+
+

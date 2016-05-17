@@ -8,93 +8,87 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
-@prefix HBP_DASP: <http://www.hbp.FIXME.org/HBP_DASP_> .
-@prefix HBP_PROP: <http://www.hbp.FIXME.org/> .
+@prefix HBP_DASP: <http://www.hbp.FIXME.org/hbp_domain_aspect/> .
+@prefix HBP_PROP: <http://www.hbp.FIXME.org/hbp_properties/> .
+@prefix HBP_DATT: <http://www.hbp.FIXME.org/hbp_data_type_ontology/> .
 @base <http://www.hbp.FIXME.org/hbp_data_type_ontology> .
 
 <http://www.hbp.FIXME.org/hbp_data_type_ontology> rdf:type owl:Ontology ;
-                owl:imports <http://www.hbp.FIXME.org/hbp_properties> ;
-                owl:imports <http://www.FIXME.org/nsupper> .
+                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/hbp_properties.ttl> .
 
 
 
-:HBP_DATT_0000000 rdf:type owl:Class ;
-
+HBP_DATT:0000000 rdf:type owl:Class ;
                   rdfs:label "data type"@en ;
+                 nsu:definition "A series of actions which can be performed by an actor which results in the generation, observation, or classification of samples or data."@en .
 
-                  nsu:definition "A series of actions which can be performed by an actor which results in the generation, observation, or classification of samples or data."@en .
-
-
-
-:HBP_DATT_0000001 rdf:type owl:Class ;
-
-                  rdfs:label "electrophysiological data"@en ;
-
-                  rdfs:subClassOf :HBP_DATT_0000000 .
+HBP_DATT:0000001 rdf:type owl:Class  ;
+                 rdfs:label "electrophysiological data"@en ;
+                  rdfs:subClassOf HBP_DATT:0000000 .
 
 
 
-:HBP_DATT_0000002 rdf:type owl:Class ;
+HBP_DATT:0000002 rdf:type owl:Class ;
 
                   rdfs:label "single cell data"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000000 .
+                  rdfs:subClassOf HBP_DATT:0000000 .
 
 
 
-:HBP_DATT_0000003 rdf:type owl:Class ;
+HBP_DATT:0000003 rdf:type owl:Class ;
 
                   rdfs:label "1d data"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000000 .
+                  rdfs:subClassOf HBP_DATT:0000000 .
 
 
 
-:HBP_DATT_0000004 rdf:type owl:Class ;
+HBP_DATT:0000004 rdf:type owl:Class ;
 
                   rdfs:label "2d data"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000000 .
+                  rdfs:subClassOf HBP_DATT:0000000 .
 
 
 
-:HBP_DATT_0000005 rdf:type owl:Class ;
+HBP_DATT:0000005 rdf:type owl:Class ;
 
                   rdfs:label "imaging data"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000004 .
+                  rdfs:subClassOf HBP_DATT:0000004 .
 
 
 
-:HBP_DATT_0000006 rdf:type owl:Class ;
+HBP_DATT:0000006 rdf:type owl:Class ;
 
                   rdfs:label "3d data"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000000 .
+                  rdfs:subClassOf HBP_DATT:0000000 .
 
 
 
-:HBP_DATT_0000007 rdf:type owl:Class ;
+HBP_DATT:0000007 rdf:type owl:Class ;
 
                   rdfs:label "3d cell morphological reconstruction data"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000006 .
+                  rdfs:subClassOf HBP_DATT:0000006 .
 
 
 
-:HBP_DATT_0000008 rdf:type owl:Class ;
+HBP_DATT:0000008 rdf:type owl:Class ;
 
                   rdfs:label "freeform text"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000000 .
+                  rdfs:subClassOf HBP_DATT:0000000 .
 
 
 
-:HBP_DATT_0000009 rdf:type owl:Class ;
+HBP_DATT:0000009 rdf:type owl:Class ;
 
                   rdfs:label "comma-seperated values"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000008 ;
+                  rdfs:subClassOf HBP_DATT:0000008 ;
 
                   HBP_PROP:has_file_extension ".csv" ;
 
@@ -102,11 +96,11 @@
 
 
 
-:HBP_DATT_0000010 rdf:type owl:Class ;
+HBP_DATT:0000010 rdf:type owl:Class ;
 
                   rdfs:label "comma-seperated values layout DeFelipe-layer heights"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000009 ;
+                  rdfs:subClassOf HBP_DATT:0000009 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000008 ;
 
@@ -120,11 +114,11 @@
 
 
 
-:HBP_DATT_0000011 rdf:type owl:Class ;
+HBP_DATT:0000011 rdf:type owl:Class ;
 
                   rdfs:label "comma-seperated values layout Toledo-QPCR"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000009 ;
+                  rdfs:subClassOf HBP_DATT:0000009 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000024 ;
 
@@ -140,21 +134,21 @@
 
 
 
-:HBP_DATT_0000012 rdf:type owl:Class ;
+HBP_DATT:0000012 rdf:type owl:Class ;
 
                   rdfs:label "xml"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000000 ;
+                  rdfs:subClassOf HBP_DATT:0000000 ;
 
                   HBP_PROP:has_file_extension ".xml" .
 
 
 
-:HBP_DATT_0000013 rdf:type owl:Class ;
+HBP_DATT:0000013 rdf:type owl:Class ;
 
                   rdfs:label "Microsoft Office - OOXML - Spreadsheet"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000012 ;
+                  rdfs:subClassOf HBP_DATT:0000012 ;
 
                   HBP_PROP:has_file_extension ".xlsx" ;
 
@@ -162,11 +156,11 @@
 
 
 
-:HBP_DATT_0000014 rdf:type owl:Class ;
+HBP_DATT:0000014 rdf:type owl:Class ;
 
                   rdfs:label "Microsoft Office Open XML-Format"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000012 ;
+                  rdfs:subClassOf HBP_DATT:0000012 ;
 
                   HBP_PROP:has_file_extension ".xlsx" ;
 
@@ -174,11 +168,11 @@
 
 
 
-:HBP_DATT_0000015 rdf:type owl:Class ;
+HBP_DATT:0000015 rdf:type owl:Class ;
 
                   rdfs:label "Microsoft Office Open XML-Format - cell density layout"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000014 ;
+                  rdfs:subClassOf HBP_DATT:0000014 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000008 ;
 
@@ -190,11 +184,11 @@
 
 
 
-:HBP_DATT_0000016 rdf:type owl:Class ;
+HBP_DATT:0000016 rdf:type owl:Class ;
 
                   rdfs:label "Microsoft Office Open XML-Format - cell marking layout"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000014 ;
+                  rdfs:subClassOf HBP_DATT:0000014 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000008 ;
 
@@ -206,11 +200,11 @@
 
 
 
-:HBP_DATT_0000017 rdf:type owl:Class ;
+HBP_DATT:0000017 rdf:type owl:Class ;
 
                   rdfs:label "Microsoft Office Open XML-Format - layer height layout"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000014 ;
+                  rdfs:subClassOf HBP_DATT:0000014 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000008 ;
 
@@ -222,11 +216,11 @@
 
 
 
-:HBP_DATT_0000018 rdf:type owl:Class ;
+HBP_DATT:0000018 rdf:type owl:Class ;
 
                   rdfs:label "Tagged Image File Format"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000005 ;
+                  rdfs:subClassOf HBP_DATT:0000005 ;
 
                   HBP_PROP:has_file_extension ".tiff" ;
 
@@ -234,11 +228,11 @@
 
 
 
-:HBP_DATT_0000019 rdf:type owl:Class ;
+HBP_DATT:0000019 rdf:type owl:Class ;
 
                   rdfs:label "Joint Photographic Experts Group"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000005 ;
+                  rdfs:subClassOf HBP_DATT:0000005 ;
 
                   HBP_PROP:has_file_extension ".jfi" ;
 
@@ -256,11 +250,11 @@
 
 
 
-:HBP_DATT_0000020 rdf:type owl:Class ;
+HBP_DATT:0000020 rdf:type owl:Class ;
 
                   rdfs:label "Portable Network Graphics"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000005 ;
+                  rdfs:subClassOf HBP_DATT:0000005 ;
 
                   HBP_PROP:has_file_extension ".png" ;
 
@@ -268,11 +262,11 @@
 
 
 
-:HBP_DATT_0000021 rdf:type owl:Class ;
+HBP_DATT:0000021 rdf:type owl:Class ;
 
                   rdfs:label "PNG - Single Cell Trace Preview"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000020 ;
+                  rdfs:subClassOf HBP_DATT:0000020 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000019 ;
 
@@ -284,13 +278,13 @@
 
 
 
-:HBP_DATT_0000022 rdf:type owl:Class ;
+HBP_DATT:0000022 rdf:type owl:Class ;
 
                   rdfs:label "PNG - Single Cell Reconstruction Preview"@en ;
 
                   nsu:definition "TOOD"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000020 ;
+                  rdfs:subClassOf HBP_DATT:0000020 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000001 ;
 
@@ -304,15 +298,14 @@
 
 
 
-:HBP_DATT_0000023 rdf:type owl:Class ;
+HBP_DATT:0000023 rdf:type owl:Class ;
 
                   rdfs:label "Neurolucida ASC"@en ;
 
                   nsu:definition "Neurolucida ASC is a standard data format defined and maintained by MBF Bioscience."@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000007 ;
-
-                  HBP_PROP:has_domain_aspect HBP_DASP:0000045 ;
+                  rdfs:subClassOf HBP_DATT:0000007 ;
+                 HBP_PROP:has_domain_aspect HBP_DASP:0000045 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000057 ;
 
@@ -320,13 +313,13 @@
 
 
 
-:HBP_DATT_0000024 rdf:type owl:Class ;
+HBP_DATT:0000024 rdf:type owl:Class ;
 
                   rdfs:label "Neurolucida DAT"@en ;
 
                   nsu:definition "Neurolucida DAT is a standatd data format defined and maintained by MBF Bioscience."@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000007 ;
+                  rdfs:subClassOf HBP_DATT:0000007 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000045 ;
 
@@ -336,13 +329,13 @@
 
 
 
-:HBP_DATT_0000025 rdf:type owl:Class ;
+HBP_DATT:0000025 rdf:type owl:Class ;
 
                   rdfs:label "Igor IBW"@en ;
 
                   nsu:definition "The data in these types of files is stored in the Igor Binary Format. It can be considered the successor to Igor BWAV files."@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000001 ;
+                  rdfs:subClassOf HBP_DATT:0000001 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000019 ;
 
@@ -352,13 +345,13 @@
 
 
 
-:HBP_DATT_0000026 rdf:type owl:Class ;
+HBP_DATT:0000026 rdf:type owl:Class ;
 
                   rdfs:label "Igor BWAV"@en ;
 
                   nsu:definition "BWAV is a Igor generated file format. It stands for Igor Binary Wave Data. This files are considered equivalent to \"Igor IBW\" data format."@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000001 ;
+                  rdfs:subClassOf HBP_DATT:0000001 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000019 ;
 
@@ -368,11 +361,11 @@
 
 
 
-:HBP_DATT_0000027 rdf:type owl:Class ;
+HBP_DATT:0000027 rdf:type owl:Class ;
 
                   rdfs:label "Magnetization Prepared Rapid Acquisition Gradient Echo Image Stack"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000005 ;
+                  rdfs:subClassOf HBP_DATT:0000005 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000045 ;
 
@@ -382,11 +375,11 @@
 
 
 
-:HBP_DATT_0000028 rdf:type owl:Class ;
+HBP_DATT:0000028 rdf:type owl:Class ;
 
                   rdfs:label "Neuroimaging Informatics Technology Initiative File Format"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000005 ;
+                  rdfs:subClassOf HBP_DATT:0000005 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000045 ;
 
@@ -396,11 +389,11 @@
 
 
 
-:HBP_DATT_0000029 rdf:type owl:Class ;
+HBP_DATT:0000029 rdf:type owl:Class ;
 
                   rdfs:label "Scalable Vector Graphics"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000005 ;
+                  rdfs:subClassOf HBP_DATT:0000005 ;
 
                   HBP_PROP:has_file_extension ".svg" ;
 
@@ -408,21 +401,21 @@
 
 
 
-:HBP_DATT_0000030 rdf:type owl:Class ;
+HBP_DATT:0000030 rdf:type owl:Class ;
 
                   rdfs:label "vtk"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000005 ;
+                  rdfs:subClassOf HBP_DATT:0000005 ;
 
                   HBP_PROP:has_file_extension ".vtk" .
 
 
 
-:HBP_DATT_0000031 rdf:type owl:Class ;
+HBP_DATT:0000031 rdf:type owl:Class ;
 
                   rdfs:label "Pubmed XML"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000000 ;
+                  rdfs:subClassOf HBP_DATT:0000000 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000003 ;
 
@@ -432,11 +425,11 @@
 
 
 
-:HBP_DATT_0000032 rdf:type owl:Class ;
+HBP_DATT:0000032 rdf:type owl:Class ;
 
                   rdfs:label "Full Text Article"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000000 ;
+                  rdfs:subClassOf HBP_DATT:0000000 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000023 ;
 
@@ -446,31 +439,31 @@
 
 
 
-:HBP_DATT_0000033 rdf:type owl:Class ;
+HBP_DATT:0000033 rdf:type owl:Class ;
 
                   rdfs:label "Entity Recognition Results - Abstracts"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000000 ;
+                  rdfs:subClassOf HBP_DATT:0000000 ;
 
                   HBP_PROP:has_file_extension ".txt" .
 
 
 
-:HBP_DATT_0000034 rdf:type owl:Class ;
+HBP_DATT:0000034 rdf:type owl:Class ;
 
                   rdfs:label "Entity Recognition Results - Full Text Article"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000000 ;
+                  rdfs:subClassOf HBP_DATT:0000000 ;
 
                   HBP_PROP:has_file_extension ".txt" .
 
 
 
-:HBP_DATT_0000035 rdf:type owl:Class ;
+HBP_DATT:0000035 rdf:type owl:Class ;
 
                   rdfs:label "BBP Atlasing h5"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000000 ;
+                  rdfs:subClassOf HBP_DATT:0000000 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000072 ;
 
@@ -478,11 +471,11 @@
 
 
 
-:HBP_DATT_0000036 rdf:type owl:Class ;
+HBP_DATT:0000036 rdf:type owl:Class ;
 
                   rdfs:label "BigBrain Image Stack"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000019 ;
+                  rdfs:subClassOf HBP_DATT:0000019 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000072 ;
 
@@ -490,11 +483,11 @@
 
 
 
-:HBP_DATT_0000037 rdf:type owl:Class ;
+HBP_DATT:0000037 rdf:type owl:Class ;
 
                   rdfs:label "BigBrain Parcelation XML"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000012 ;
+                  rdfs:subClassOf HBP_DATT:0000012 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000008 ;
 
@@ -504,13 +497,13 @@
 
 
 
-:HBP_DATT_0000038 rdf:type owl:Class ;
+HBP_DATT:0000038 rdf:type owl:Class ;
 
                   rdfs:label "Neurolucida Multi-Cell DAT"@en ;
 
                   nsu:definition "Neurolucida DAT is a standatd data format defined and maintained by MBF Bioscience."@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000007 ;
+                  rdfs:subClassOf HBP_DATT:0000007 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000045 ;
 
@@ -520,13 +513,13 @@
 
 
 
-:HBP_DATT_0000039 rdf:type owl:Class ;
+HBP_DATT:0000039 rdf:type owl:Class ;
 
                   rdfs:label "IGORzip"@en ;
 
                   nsu:definition "a zip file containing IGOR files"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000000 ;
+                  rdfs:subClassOf HBP_DATT:0000000 ;
 
                   HBP_PROP:has_domain_aspect HBP_DASP:0000019 ;
 
@@ -534,307 +527,409 @@
 
 
 
-:HBP_DATT_0000040 rdf:type owl:Class ;
+HBP_DATT:0000040 rdf:type owl:Class ;
 
                   rdfs:label "MIME_type"@en .
 
 
 
-:HBP_DATT_0000041 rdf:type owl:Class ;
+HBP_DATT:0000041 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.neurolucida.dat;version=0"@en ;
 
                   nsu:definition "Neurolucida file which could contain single or muliple cell reconstructions"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".dat" .
 
 
 
-:HBP_DATT_0000042 rdf:type owl:Class ;
+HBP_DATT:0000042 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.neurolucida.asc;version=0"@en ;
 
                   nsu:definition "Neurolucida file which could contain single or muliple cell reconstructions"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".asc" .
 
 
 
-:HBP_DATT_0000043 rdf:type owl:Class ;
+HBP_DATT:0000043 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.neurolucida.xml;version=0"@en ;
 
                   nsu:definition "Neurolucida file which could contain single or muliple cell reconstructions"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".xml" .
 
 
 
-:HBP_DATT_0000044 rdf:type owl:Class ;
+HBP_DATT:0000044 rdf:type owl:Class ;
 
                   rdfs:label "text/swc;version=0"@en ;
 
                   nsu:definition "File type provided by the AIB and Neuromorpho which could contain single or muliple cell reconstructions, and requires a codebook"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".swc" .
 
 
 
-:HBP_DATT_0000045 rdf:type owl:Class ;
+HBP_DATT:0000045 rdf:type owl:Class ;
 
                   rdfs:label "text/xml;version=0"@en ;
 
                   nsu:definition "File standard, defined by HBP synthesis team, which could contain single or multiple cell reconstructions, and requires a codebook"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".xml" .
 
 
 
-:HBP_DATT_0000046 rdf:type owl:Class ;
+HBP_DATT:0000046 rdf:type owl:Class ;
 
                   rdfs:label "image/jpeg;version=0"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".jpeg" .
 
 
 
-:HBP_DATT_0000047 rdf:type owl:Class ;
+HBP_DATT:0000047 rdf:type owl:Class ;
 
                   rdfs:label "image/jpeg.imagestack;version=0"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".jpeg" .
 
 
 
-:HBP_DATT_0000048 rdf:type owl:Class ;
+HBP_DATT:0000048 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.imagestack.bbic;version=0"@en ;
 
                   nsu:definition "preferred HBP file format for imagestacks; needs a codebook"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".h5" .
 
 
 
-:HBP_DATT_0000049 rdf:type owl:Class ;
+HBP_DATT:0000049 rdf:type owl:Class ;
 
                   rdfs:label "text/tab-separated-values;version=0"@en ;
 
                   nsu:definition "can be used for electrophysiology data, and is the preferred format by some of the collaborators, e.g. KOKI"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".tsv" .
 
 
 
-:HBP_DATT_0000050 rdf:type owl:Class ;
+HBP_DATT:0000050 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.electrophysiology.hdf5;version=0"@en ;
 
                   nsu:definition "soon to be norm for electrophysiology data, to be used by AIB after March 15, 2015"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".hdf5" .
 
 
 
-:HBP_DATT_0000051 rdf:type owl:Class ;
+HBP_DATT:0000051 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.atlas.bbic;version=0"@en ;
 
                   nsu:definition "preferred HBP format for brain region parcelation data; needs a codebook"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".h5" .
 
 
 
-:HBP_DATT_0000052 rdf:type owl:Class ;
+HBP_DATT:0000052 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.juelich.atlas.xml;version=0"@en ;
 
                   nsu:definition "BigBrain atlas parcelation; needs a codebook"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".xml" .
 
 
 
-:HBP_DATT_0000053 rdf:type owl:Class ;
+HBP_DATT:0000053 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.abis.atlas.xml;version=0"@en ;
 
                   nsu:definition "Allen Brain atlas parcelation, needs a codebook"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".xml" .
 
 
 
-:HBP_DATT_0000054 rdf:type owl:Class ;
+HBP_DATT:0000054 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.cellprofile.csv;version=0"@en ;
 
                   nsu:definition "file containing cell profile information, which could include cell morphology, molecular cell identity, etc.; needs a codebook"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".csv" .
 
 
 
-:HBP_DATT_0000055 rdf:type owl:Class ;
+HBP_DATT:0000055 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.layerheight.csv;version=0"@en ;
 
                   nsu:definition "file containing layer height for a given brain region; needs a codebook"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".csv" .
 
 
 
-:HBP_DATT_0000056 rdf:type owl:Class ;
+HBP_DATT:0000056 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.brainregioncharacterisation.csv;version=0"@en ;
 
                   nsu:definition "file containing brain region information, which could include cell densities and/or cell distributions; needs a codebook"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".csv" .
 
 
 
-:HBP_DATT_0000057 rdf:type owl:Class ;
+HBP_DATT:0000057 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.proteome.csv;version=0"@en ;
 
                   nsu:definition "file containing proteomic data; needs a codebook"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".csv" .
 
 
 
-:HBP_DATT_0000058 rdf:type owl:Class ;
+HBP_DATT:0000058 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.geneexpression.csv;version=0"@en ;
 
                   nsu:definition "file containing gene expression data in specific cell types or brain regions; needs a codebook"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".csv" .
 
 
 
-:HBP_DATT_0000059 rdf:type owl:Class ;
+HBP_DATT:0000059 rdf:type owl:Class ;
 
                   rdfs:label "image/TIFF.imagestack;version=0"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".tiff" .
 
 
 
-:HBP_DATT_0000060 rdf:type owl:Class ;
+HBP_DATT:0000060 rdf:type owl:Class ;
 
                   rdfs:label "image/PFF.imagestack;version=0"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".pff" .
 
 
 
-:HBP_DATT_0000061 rdf:type owl:Class ;
+HBP_DATT:0000061 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.proteome.xls;version=0"@en ;
 
                   nsu:definition "file containing proteomic data; needs a codebook"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".xls" .
 
 
 
-:HBP_DATT_0000062 rdf:type owl:Class ;
+HBP_DATT:0000062 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.transcriptome.txt;version=0"@en ;
 
                   nsu:definition "file containing proteomic data; needs a codebook"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".txt" .
 
 
 
-:HBP_DATT_0000063 rdf:type owl:Class ;
+HBP_DATT:0000063 rdf:type owl:Class ;
 
                   rdfs:label "image/nii;version=0"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".nii" .
 
 
 
-:HBP_DATT_0000064 rdf:type owl:Class ;
+HBP_DATT:0000064 rdf:type owl:Class ;
 
                   rdfs:label "image/gii;version=0"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".gii" .
 
 
 
-:HBP_DATT_0000065 rdf:type owl:Class ;
+HBP_DATT:0000065 rdf:type owl:Class ;
 
                   rdfs:label "image/atlas.gii;version=0"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".gii" .
 
 
 
-:HBP_DATT_0000066 rdf:type owl:Class ;
+HBP_DATT:0000066 rdf:type owl:Class ;
 
                   rdfs:label "image/mesh;version=0"@en ;
 
-                  rdfs:subClassOf :HBP_DATT_0000040 ;
+                  rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".mesh" .
 
 
+HBP_DATT:0000067 rdf:type owl:Class ;
+
+                  rdfs:label "application/vnd.hbp.imagestack.bbic.section;version=0"@en ;
+
+                  nsu:definition "Tiled image pyramid containing projections in coronal, axial and sagittal directions in BBIC file format."@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".h5" .
+
+
+HBP_DATT:0000068 rdf:type owl:Class ;
+
+                  rdfs:label "application/vnd.hbp.imagestack.bbic.annot;version=0"@en ;
+
+                  nsu:definition "Tiled image pyramid containing SVG traces in coronal, axial and sagittal directions in BBIC file format."@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".h5" .
+
+
+HBP_DATT:0000069 rdf:type owl:Class ;
+
+                  rdfs:label "application/vnd.hbp.model.recipe.synthesis;version=0"@en ;
+
+                  nsu:definition "Bundle with the structure to run the synthesis of neurons in a pre-defined space."@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".zip" .
+
+
+HBP_DATT:0000070 rdf:type owl:Class ;
+
+                  rdfs:label "application/zip;version=0"@en ;
+
+                  nsu:definition "zip archive."@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".zip" .
+
+
+HBP_DATT:0000071 rdf:type owl:Class ;
+
+                  rdfs:label "image/vnd.nrrd;version=0"@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".nrrd" .
+
+
+HBP_DATT:0000072 rdf:type owl:Class ;
+
+                  rdfs:label "application/x-gzip;version=0"@en ;
+
+                  nsu:definition ".tar.gz, .tgz, .gz archive."@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".tar.gz, .tgz, .gz" .                  
+
+
+HBP_DATT:0000073 rdf:type owl:Class ;
+
+                  rdfs:label "image/png;version=0"@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".png" .                  
+
+
+HBP_DATT:0000074 rdf:type owl:Class ;
+
+                  rdfs:label "application/cef;version=0"@en ;
+
+                  nsu:definition "cell expression format files are human-readable, tab-delimited text files that can be easily parsed and generated from any scripting language, designed to simplify the exchange and manipulation of very large-scale transcriptomics data, particularly from single-cell RNA-seq."@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".cef" .
+
+
+HBP_DATT:0000075 rdf:type owl:Class ;
+
+                  rdfs:label "application/sbml+xml;version=0"@en ;
+
+                  nsu:definition "The Systems Biology Markup Language (SBML) is a machine-readable exchange format for computational models of biological processes. Its strength is in representating phenomena at the scale of biochemical reactions but it is not limited to that."@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".xml" .
 
 
 
+HBP_DATT:0000076 rdf:type owl:Class ;
+
+                  rdfs:label "application/hoc;version=0"@en ;
+
+                  nsu:definition "Programming language of the NEURON software package"@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".hoc" .
