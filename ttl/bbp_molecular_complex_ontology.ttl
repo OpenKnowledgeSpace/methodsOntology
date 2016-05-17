@@ -81,3 +81,4 @@
 :bbp_relations_1 rdf:type owl:Class ;
 
                  rdfs:label "contains"@en .
+

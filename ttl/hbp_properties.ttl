@@ -27,3 +27,4 @@
 :used_scale rdf:type owl:AnnotationProperty .
 :xref_url rdf:type owl:AnnotationProperty .
 :site_url rdf:type owl:AnnotationProperty .
+
