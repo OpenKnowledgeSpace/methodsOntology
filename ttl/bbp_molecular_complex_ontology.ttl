@@ -42,7 +42,9 @@
 
                                rdfs:label "GABA A receptor"@en ;
 
-                               rdfs:subClassOf :BBP_molecular_complex_0000004 .
+                               rdfs:subClassOf :BBP_molecular_complex_0000004 ;
+
+                               FIXME:relationship bbp_relations_1 BBP_molecular_complex:0000007 .
 
 
 
@@ -79,4 +81,3 @@
 :bbp_relations_1 rdf:type owl:Class ;
 
                  rdfs:label "contains"@en .
-
