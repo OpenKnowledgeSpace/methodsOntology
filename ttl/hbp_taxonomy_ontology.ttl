@@ -46,7 +46,7 @@ obo:NCBITaxon_10116 rdf:type owl:Class ;
 obo:NCBITaxon_40674 rdf:type owl:Class ;
                        rdfs:label "Mammalia"@en ;
                        rdfs:subClassOf nsu:nsu_0000002 ;
-                       HBP_PROP:has_rank HBP_TAX:999997 ;
+                       HBP_PROP:has_rank HBP_TAX:9999997 ;
                        nsu:synonym "mammals"@en .
 
 

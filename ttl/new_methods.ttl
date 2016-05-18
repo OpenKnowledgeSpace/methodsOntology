@@ -1,0 +1,2416 @@
+@prefix : <http://www.semanticweb.org/owl/owlapi/turtle#> .
+@prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix FIXME: <http://fixme.org/> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+] .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://fixme.org/onProperty
+
+FIXME:onProperty rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.FIXME.org/nsupper#synonym
+
+nsu:synonym rdf:type owl:AnnotationProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://fixme.org/n0
+
+FIXME:n0 rdf:type owl:Class ;
+         
+         rdfs:label "method" .
+
+
+
+###  http://fixme.org/n1
+
+FIXME:n1 rdf:type owl:Class ;
+         
+         rdfs:subClassOf FIXME:n0 ;
+         
+         rdfs:comment "or contrast creation?" ;
+         
+         rdfs:label "contrast enhancement" .
+
+
+
+###  http://fixme.org/n10
+
+FIXME:n10 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n0 ;
+          
+          rdfs:label "analysis method" .
+
+
+
+###  http://fixme.org/n100
+
+FIXME:n100 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n134 ;
+           
+           rdfs:label "mixing" .
+
+
+
+###  http://fixme.org/n101
+
+FIXME:n101 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n80 ;
+           
+           rdfs:label "ballistic injection" .
+
+
+
+###  http://fixme.org/n102
+
+FIXME:n102 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n79 ;
+           
+           rdfs:comment "subclass vs is_a" ;
+           
+           rdfs:label "dna delivery method" .
+
+
+
+###  http://fixme.org/n103
+
+FIXME:n103 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n79 ;
+           
+           rdfs:label "electroporation" .
+
+
+
+###  http://fixme.org/n104
+
+FIXME:n104 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n102 ;
+           
+           rdfs:label "viral DNA delivery" .
+
+
+
+###  http://fixme.org/n105
+
+FIXME:n105 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n102 ;
+           
+           rdfs:label "plasmid DNA delivery" .
+
+
+
+###  http://fixme.org/n106
+
+FIXME:n106 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n102 ;
+           
+           rdfs:label "germ line DNA delivery" .
+
+
+
+###  http://fixme.org/n107
+
+FIXME:n107 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n162 ;
+           
+           rdfs:label "knock down" .
+
+
+
+###  http://fixme.org/n108
+
+FIXME:n108 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n162 ;
+           
+           rdfs:comment "needs an intervening superClass because a direct child of molecular is confusing (if correct)" ;
+           
+           rdfs:label "knock out" .
+
+
+
+###  http://fixme.org/n109
+
+FIXME:n109 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n10 ;
+           
+           rdfs:label "classification" .
+
+
+
+###  http://fixme.org/n11
+
+FIXME:n11 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n112 ;
+          
+          rdfs:label "behavioral manipulation" .
+
+
+
+###  http://fixme.org/n110
+
+FIXME:n110 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n10 ;
+           
+           rdfs:label "characterization" .
+
+
+
+###  http://fixme.org/n111
+
+FIXME:n111 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n99 ;
+           
+           rdfs:comment "this is really a tag for any function that produces a real" ;
+           
+           rdfs:label "generation" .
+
+
+
+###  http://fixme.org/n112
+
+FIXME:n112 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n0 ;
+           
+           rdfs:comment "purturbation manipulation" ;
+           
+           rdfs:label "treatment" .
+
+
+
+###  http://fixme.org/n113
+
+FIXME:n113 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n12 ;
+           
+           rdfs:label "illumination" .
+
+
+
+###  http://fixme.org/n114
+
+FIXME:n114 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n12 ;
+           
+           rdfs:label "depolarization" .
+
+
+
+###  http://fixme.org/n115
+
+FIXME:n115 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n12 ;
+           
+           rdfs:label "hyperpolarization" .
+
+
+
+###  http://fixme.org/n116
+
+FIXME:n116 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n12 ;
+           
+           rdfs:label "stimulation method" .
+
+
+
+###  http://fixme.org/n117
+
+FIXME:n117 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n112 ;
+           
+           nsu:synonym "pharmacology" ;
+           
+           rdfs:label "pharmacological manipulation " .
+
+
+
+###  http://fixme.org/n118
+
+FIXME:n118 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n21 ;
+           
+           rdfs:label "craniotomy" .
+
+
+
+###  http://fixme.org/n119
+
+FIXME:n119 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n21 ;
+           
+           rdfs:label "biopsy" .
+
+
+
+###  http://fixme.org/n12
+
+FIXME:n12 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n112 ;
+          
+          rdfs:label "physical manipulation" .
+
+
+
+###  http://fixme.org/n120
+
+FIXME:n120 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n21 ;
+           
+           rdfs:label "stereotaxic surgery" .
+
+
+
+###  http://fixme.org/n121
+
+FIXME:n121 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n10 ;
+           
+           rdfs:label "tracing method" .
+
+
+
+###  http://fixme.org/n122
+
+FIXME:n122 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n121 ;
+           
+           rdfs:label "anterograde tracing" .
+
+
+
+###  http://fixme.org/n123
+
+FIXME:n123 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n121 ;
+           
+           rdfs:label "retrograde tracing" .
+
+
+
+###  http://fixme.org/n124
+
+FIXME:n124 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n121 ;
+           
+           rdfs:label "transsynaptic tracing" .
+
+
+
+###  http://fixme.org/n125
+
+FIXME:n125 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n1 ;
+           
+           rdfs:comment "tracing" ;
+           
+           rdfs:label "labeling" .
+
+
+
+###  http://fixme.org/n126
+
+FIXME:n126 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n1 ;
+           
+           rdfs:comment "vs molecular?" ;
+           
+           rdfs:label "tagging" .
+
+
+
+###  http://fixme.org/n127
+
+FIXME:n127 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n125 ;
+           
+           nsu:synonym "radiolabeling" ;
+           
+           rdfs:label "radioisotope labeling " .
+
+
+
+###  http://fixme.org/n128
+
+FIXME:n128 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n162 ;
+           
+           rdfs:label "knock in" .
+
+
+
+###  http://fixme.org/n129
+
+FIXME:n129 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n7 ;
+           
+           rdfs:label "pull-down" .
+
+
+
+###  http://fixme.org/n13
+
+FIXME:n13 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n3 ;
+          
+          rdfs:label "microscopy" .
+
+
+
+###  http://fixme.org/n130
+
+FIXME:n130 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n7 ;
+           
+           rdfs:label "purification" .
+
+
+
+###  http://fixme.org/n131
+
+FIXME:n131 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n7 ;
+           
+           rdfs:label "extraction" .
+
+
+
+###  http://fixme.org/n132
+
+FIXME:n132 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n7 ;
+           
+           rdfs:label "isolation" .
+
+
+
+###  http://fixme.org/n133
+
+FIXME:n133 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n7 ;
+           
+           rdfs:label "sequencing" .
+
+
+
+###  http://fixme.org/n134
+
+FIXME:n134 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n99 ;
+           
+           rdfs:label "physical synthesis method" .
+
+
+
+###  http://fixme.org/n135
+
+FIXME:n135 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n99 ;
+           
+           rdfs:label "chemical synthesis method" .
+
+
+
+###  http://fixme.org/n136
+
+FIXME:n136 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n5 ;
+           
+           rdfs:label "electrophoresis" .
+
+
+
+###  http://fixme.org/n137
+
+FIXME:n137 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n91 ;
+           
+           rdfs:label "restrained" .
+
+
+
+###  http://fixme.org/n138
+
+FIXME:n138 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n125 ;
+           
+           rdfs:label "anterograde labeling" .
+
+
+
+###  http://fixme.org/n139
+
+FIXME:n139 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n125 ;
+           
+           rdfs:label "retrograde labeling" .
+
+
+
+###  http://fixme.org/n14
+
+FIXME:n14 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n3 ;
+          
+          nsu:synonym "MRI" ;
+          
+          rdfs:label "magnetic resonance imaging " .
+
+
+
+###  http://fixme.org/n140
+
+FIXME:n140 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n0 ;
+           
+           rdfs:label "calorimetry" .
+
+
+
+###  http://fixme.org/n141
+
+FIXME:n141 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n144 ;
+           
+           rdfs:label "developmental" .
+
+
+
+###  http://fixme.org/n142
+
+FIXME:n142 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n141 ;
+           
+           rdfs:label "transplantation" .
+
+
+
+###  http://fixme.org/n143
+
+FIXME:n143 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n141 ;
+           
+           rdfs:label "open book preparation" .
+
+
+
+###  http://fixme.org/n144
+
+FIXME:n144 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n8 ;
+           
+           rdfs:label "tissue culture" .
+
+
+
+###  http://fixme.org/n145
+
+FIXME:n145 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n144 ;
+           
+           rdfs:label "slice culture" .
+
+
+
+###  http://fixme.org/n146
+
+FIXME:n146 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n5 ;
+           
+           rdfs:label "distillation" .
+
+
+
+###  http://fixme.org/n147
+
+FIXME:n147 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n162 ;
+           
+           rdfs:label "overexpression" .
+
+
+
+###  http://fixme.org/n148
+
+FIXME:n148 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n21 ;
+           
+           rdfs:label "durotomy" .
+
+
+
+###  http://fixme.org/n149
+
+FIXME:n149 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n0 ;
+           
+           rdfs:comment "if we switch the other to contrast creation techniques then this could become enhancement but that might just confuse everyone" ;
+           
+           rdfs:label "contrast detection" .
+
+
+
+###  http://fixme.org/n15
+
+FIXME:n15 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n0 ;
+          
+          rdfs:label "diffraction method" .
+
+
+
+###  http://fixme.org/n150
+
+FIXME:n150 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n3 ;
+           
+           rdfs:label "photography" .
+
+
+
+###  http://fixme.org/n153
+
+FIXME:n153 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n0 ;
+           
+           rdfs:label "measurement method" .
+
+
+
+###  http://fixme.org/n158
+
+FIXME:n158 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n10 ;
+           
+           rdfs:label "reconstruction method" .
+
+
+
+###  http://fixme.org/n16
+
+FIXME:n16 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n15 ;
+          
+          rdfs:label "x-ray diffraction" .
+
+
+
+###  http://fixme.org/n162
+
+FIXME:n162 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n7 ;
+           
+           rdfs:label "genetic manipulation" .
+
+
+
+###  http://fixme.org/n164
+
+FIXME:n164 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n107 ;
+           
+           nsu:synonym "RNAi" ;
+           
+           rdfs:label "RNA interference " .
+
+
+
+###  http://fixme.org/n165
+
+FIXME:n165 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n162 ;
+           
+           rdfs:label "conditional manipulation" .
+
+
+
+###  http://fixme.org/n166
+
+FIXME:n166 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n107 ;
+           
+           rdfs:label "morpholino" .
+
+
+
+###  http://fixme.org/n167
+
+FIXME:n167 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n9 ;
+           
+           nsu:synonym "EEG" ;
+           
+           rdfs:label "electroencephalography " .
+
+
+
+###  http://fixme.org/n168
+
+FIXME:n168 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n9 ;
+           
+           nsu:synonym "ECoG" ;
+           
+           rdfs:label "electrocorticography " .
+
+
+
+###  http://fixme.org/n169
+
+FIXME:n169 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n9 ;
+           
+           nsu:synonym "MEG" ;
+           
+           rdfs:label "magnetoencephalography " .
+
+
+
+###  http://fixme.org/n17
+
+FIXME:n17 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n15 ;
+          
+          rdfs:label "neutron diffraction" .
+
+
+
+###  http://fixme.org/n170
+
+FIXME:n170 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n14 ;
+           
+           nsu:synonym "fMRI" ;
+           
+           rdfs:label "functional magnetic resonance imaging " .
+
+
+
+###  http://fixme.org/n171
+
+FIXME:n171 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n172 ;
+           
+           nsu:synonym "DTI" ;
+           
+           rdfs:label "diffusion tensor imaging " .
+
+
+
+###  http://fixme.org/n172
+
+FIXME:n172 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n14 ;
+           
+           rdfs:label "diffusion weighted magnetic resonance imaging" .
+
+
+
+###  http://fixme.org/n173
+
+FIXME:n173 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n3 ;
+           
+           rdfs:label "optical imaging" .
+
+
+
+###  http://fixme.org/n174
+
+FIXME:n174 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n13 ;
+           
+           rdfs:label "super resolution microscopy" .
+
+
+
+###  http://fixme.org/n175
+
+FIXME:n175 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n3 ;
+           
+           rdfs:comment "SPECT (add tomograph defined classes)" ;
+           
+           rdfs:label "single proton emission imaging" .
+
+
+
+###  http://fixme.org/n176
+
+FIXME:n176 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n13 ;
+           
+           rdfs:label "electron microscopy" .
+
+
+
+###  http://fixme.org/n177
+
+FIXME:n177 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n176 ;
+           
+           nsu:synonym "SEM" ;
+           
+           rdfs:label "scanning electron microscopy " .
+
+
+
+###  http://fixme.org/n178
+
+FIXME:n178 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n176 ;
+           
+           nsu:synonym "TEM" ;
+           
+           rdfs:label "transmission electron microscopy " .
+
+
+
+###  http://fixme.org/n179
+
+FIXME:n179 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n176 ;
+           
+           nsu:synonym "STEM" ;
+           
+           rdfs:label "scanning transmission electron microscopy " .
+
+
+
+###  http://fixme.org/n18
+
+FIXME:n18 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n15 ;
+          
+          rdfs:label "electron diffraction" .
+
+
+
+###  http://fixme.org/n180
+
+FIXME:n180 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n173 ;
+           
+           rdfs:label "intrinsic optical imaging" .
+
+
+
+###  http://fixme.org/n181
+
+FIXME:n181 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n13 ;
+           
+           rdfs:comment "missing from synonyms" ;
+           
+           rdfs:label "epifluroescence microscopy" .
+
+
+
+###  http://fixme.org/n182
+
+FIXME:n182 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n125 ;
+           
+           rdfs:label "dye labeling" .
+
+
+
+###  http://fixme.org/n183
+
+FIXME:n183 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n125 ;
+           
+           rdfs:label "fluorescence labeling" .
+
+
+
+###  http://fixme.org/n184
+
+FIXME:n184 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n213 ;
+           
+           nsu:synonym "FRET" ,
+                       "Förster resonance energy transfer" ;
+           
+           rdfs:label "fluorescence resonance energy transfer " .
+
+
+
+###  http://fixme.org/n185
+
+FIXME:n185 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n213 ;
+           
+           nsu:synonym "FRAP" ;
+           
+           rdfs:label "fluorescence recovery after photobleaching " .
+
+
+
+###  http://fixme.org/n186
+
+FIXME:n186 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n112 ;
+           
+           rdfs:label "photobleaching" .
+
+
+
+###  http://fixme.org/n187
+
+FIXME:n187 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n79 ;
+           
+           rdfs:label "uncaging" .
+
+
+
+###  http://fixme.org/n188
+
+FIXME:n188 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n79 ;
+           
+           rdfs:label "photoactivation" .
+
+
+
+###  http://fixme.org/n189
+
+FIXME:n189 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n79 ;
+           
+           rdfs:label "photoconversion" .
+
+
+
+###  http://fixme.org/n19
+
+FIXME:n19 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n0 ;
+          
+          rdfs:label "interferometry" .
+
+
+
+###  http://fixme.org/n190
+
+FIXME:n190 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n103 ;
+           
+           rdfs:label "in utero electroporation" .
+
+
+
+###  http://fixme.org/n191
+
+FIXME:n191 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n80 ;
+           
+           rdfs:label "pressure injection" .
+
+
+
+###  http://fixme.org/n192
+
+FIXME:n192 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n2 ;
+           
+           rdfs:label "tissue fixation" .
+
+
+
+###  http://fixme.org/n193
+
+FIXME:n193 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n194 ;
+           
+           rdfs:label "immunohistochemistry" .
+
+
+
+###  http://fixme.org/n194
+
+FIXME:n194 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n0 ;
+           
+           rdfs:label "immunochemical method" .
+
+
+
+###  http://fixme.org/n195
+
+FIXME:n195 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n194 ;
+           
+           rdfs:label "immunocytochemistry" .
+
+
+
+###  http://fixme.org/n196
+
+FIXME:n196 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n21 ;
+           
+           rdfs:label "implantation method" .
+
+
+
+###  http://fixme.org/n197
+
+FIXME:n197 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n0 ;
+           
+           rdfs:label "curation method" .
+
+
+
+###  http://fixme.org/n198
+
+FIXME:n198 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n51 ;
+           
+           rdfs:label "ultracentrifugation" .
+
+
+
+###  http://fixme.org/n199
+
+FIXME:n199 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n10 ;
+           
+           rdfs:label "colocalization" .
+
+
+
+###  http://fixme.org/n2
+
+FIXME:n2 rdf:type owl:Class ;
+         
+         rdfs:subClassOf FIXME:n23 ;
+         
+         rdfs:label "sample preparation" .
+
+
+
+###  http://fixme.org/n20
+
+FIXME:n20 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n3 ;
+          
+          rdfs:label "positron emission imaging" .
+
+
+
+###  http://fixme.org/n200
+
+FIXME:n200 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n11 ;
+           
+           rdfs:label "behavioral enrichment" .
+
+
+
+###  http://fixme.org/n201
+
+FIXME:n201 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n11 ;
+           
+           rdfs:label "starvation" .
+
+
+
+###  http://fixme.org/n202
+
+FIXME:n202 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n125 ;
+           
+           rdfs:label "transsynaptic labeling" .
+
+
+
+###  http://fixme.org/n203
+
+FIXME:n203 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n0 ;
+           
+           rdfs:label "behavioral assessment" .
+
+
+
+###  http://fixme.org/n204
+
+FIXME:n204 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n0 ;
+           
+           rdfs:label "signal processing" .
+
+
+
+###  http://fixme.org/n205
+
+FIXME:n205 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n204 ;
+           
+           rdfs:label "filtering method" .
+
+
+
+###  http://fixme.org/n206
+
+FIXME:n206 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n205 ;
+           
+           rdfs:label "bandpass filter" .
+
+
+
+###  http://fixme.org/n207
+
+FIXME:n207 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n205 ;
+           
+           rdfs:label "highpass filter" .
+
+
+
+###  http://fixme.org/n208
+
+FIXME:n208 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n205 ;
+           
+           rdfs:label "lowpass filter" .
+
+
+
+###  http://fixme.org/n209
+
+FIXME:n209 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n112 ;
+           
+           rdfs:label "euthanasia" .
+
+
+
+###  http://fixme.org/n21
+
+FIXME:n21 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n12 ;
+          
+          nsu:synonym "surgery" ;
+          
+          rdfs:label "surgical method " .
+
+
+
+###  http://fixme.org/n210
+
+FIXME:n210 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n35 ;
+           
+           rdfs:label "inside out patch" .
+
+
+
+###  http://fixme.org/n211
+
+FIXME:n211 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n35 ;
+           
+           rdfs:label "outside out patch" .
+
+
+
+###  http://fixme.org/n212
+
+FIXME:n212 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n103 ;
+           
+           rdfs:label "single cell electroporation" .
+
+
+
+###  http://fixme.org/n213
+
+FIXME:n213 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n1 ;
+           
+           rdfs:label "state based contrast enhancement" .
+
+
+
+###  http://fixme.org/n214
+
+FIXME:n214 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n213 ;
+           
+           rdfs:label "calcium sensitive contrast" .
+
+
+
+###  http://fixme.org/n215
+
+FIXME:n215 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n213 ;
+           
+           rdfs:label "voltage sensitive contrast" .
+
+
+
+###  http://fixme.org/n216
+
+FIXME:n216 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n100 ;
+           
+           rdfs:label "stirring" .
+
+
+
+###  http://fixme.org/n217
+
+FIXME:n217 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n100 ;
+           
+           rdfs:label "agitating" .
+
+
+
+###  http://fixme.org/n218
+
+FIXME:n218 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n99 ;
+           
+           rdfs:comment "alchemical synthesis method" ;
+           
+           rdfs:label "nuclear synthesis method" .
+
+
+
+###  http://fixme.org/n219
+
+FIXME:n219 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n0 ;
+           
+           rdfs:label "procurement method" .
+
+
+
+###  http://fixme.org/n22
+
+FIXME:n22 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n2 ;
+          
+          rdfs:label "microtomy" .
+
+
+
+###  http://fixme.org/n220
+
+FIXME:n220 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n221 ;
+           
+           nsu:synonym "arteriography" ;
+           
+           rdfs:label "angiography " .
+
+
+
+###  http://fixme.org/n221
+
+FIXME:n221 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n3 ;
+           
+           rdfs:label "x-ray imaging" .
+
+
+
+###  http://fixme.org/n222
+
+FIXME:n222 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n13 ;
+           
+           rdfs:label "light microscopy" .
+
+
+
+###  http://fixme.org/n223
+
+FIXME:n223 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n35 ;
+           
+           rdfs:label "perforated patch" .
+
+
+
+###  http://fixme.org/n224
+
+FIXME:n224 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n35 ;
+           
+           rdfs:label "cell attached patch" .
+
+
+
+###  http://fixme.org/n225
+
+FIXME:n225 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n7 ;
+           
+           nsu:synonym "ISH" ;
+           
+           rdfs:label "in situ hybridization " .
+
+
+
+###  http://fixme.org/n226
+
+FIXME:n226 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n13 ;
+           
+           rdfs:comment "help! where to put this" ;
+           
+           rdfs:label "array tomgraphy" .
+
+
+
+###  http://fixme.org/n227
+
+FIXME:n227 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n193 ;
+           
+           rdfs:label "direct immunohistochemistry" .
+
+
+
+###  http://fixme.org/n228
+
+FIXME:n228 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n193 ;
+           
+           rdfs:label "indirect immunohistochemistry" .
+
+
+
+###  http://fixme.org/n229
+
+FIXME:n229 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n213 ;
+           
+           nsu:synonym "BiFC" ;
+           
+           rdfs:label "bimolecular fluorescence complementation " .
+
+
+
+###  http://fixme.org/n23
+
+FIXME:n23 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n0 ;
+          
+          rdfs:comment " : vs treatment (this post mortem)" ;
+          
+          rdfs:label "specimen preparation" .
+
+
+
+###  http://fixme.org/n230
+
+FIXME:n230 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n7 ;
+           
+           rdfs:label "microarray based methods" .
+
+
+
+###  http://fixme.org/n231
+
+FIXME:n231 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n7 ;
+           
+           rdfs:label "northern blot" .
+
+
+
+###  http://fixme.org/n232
+
+FIXME:n232 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n7 ;
+           
+           rdfs:label "western blot" .
+
+
+
+###  http://fixme.org/n233
+
+FIXME:n233 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n56 ;
+           
+           rdfs:label "fourier analysis" .
+
+
+
+###  http://fixme.org/n234
+
+FIXME:n234 rdf:type owl:Class ;
+           
+           rdfs:subClassOf FIXME:n7 ;
+           
+           rdfs:label "southern blot" .
+
+
+
+###  http://fixme.org/n24
+
+FIXME:n24 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n23 ;
+          
+          rdfs:label "dissection" .
+
+
+
+###  http://fixme.org/n25
+
+FIXME:n25 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n7 ;
+          
+          nsu:synonym "PCR" ;
+          
+          rdfs:label "polymerase chain reaction " .
+
+
+
+###  http://fixme.org/n26
+
+FIXME:n26 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n7 ;
+          
+          rdfs:label "transfection" .
+
+
+
+###  http://fixme.org/n27
+
+FIXME:n27 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n7 ;
+          
+          rdfs:label "cloning" .
+
+
+
+###  http://fixme.org/n28
+
+FIXME:n28 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n162 ;
+          
+          rdfs:label "mutagenesis" .
+
+
+
+###  http://fixme.org/n29
+
+FIXME:n29 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n9 ;
+          
+          rdfs:label "extracellular electrophysiology" .
+
+
+
+###  http://fixme.org/n3
+
+FIXME:n3 rdf:type owl:Class ;
+         
+         rdfs:subClassOf FIXME:n149 ;
+         
+         rdfs:label "imaging method" .
+
+
+
+###  http://fixme.org/n30
+
+FIXME:n30 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n29 ;
+          
+          rdfs:label "multielectrode array" .
+
+
+
+###  http://fixme.org/n31
+
+FIXME:n31 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n29 ;
+          
+          rdfs:label "laminar probe" .
+
+
+
+###  http://fixme.org/n32
+
+FIXME:n32 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n29 ;
+          
+          rdfs:label "tetrode" .
+
+
+
+###  http://fixme.org/n33
+
+FIXME:n33 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n29 ;
+          
+          rdfs:label "single electrode" .
+
+
+
+###  http://fixme.org/n34
+
+FIXME:n34 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n35 ;
+          
+          rdfs:label "loose patch" .
+
+
+
+###  http://fixme.org/n35
+
+FIXME:n35 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n9 ;
+          
+          rdfs:label "patch clamp" .
+
+
+
+###  http://fixme.org/n36
+
+FIXME:n36 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n35 ;
+          
+          rdfs:label "whole cell patch clamp" .
+
+
+
+###  http://fixme.org/n37
+
+FIXME:n37 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n9 ;
+          
+          rdfs:label "sharp intracellular electrophysiology" .
+
+
+
+###  http://fixme.org/n38
+
+FIXME:n38 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n40 ;
+          
+          rdfs:label "blind selection" .
+
+
+
+###  http://fixme.org/n39
+
+FIXME:n39 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n40 ;
+          
+          rdfs:label "targeted selection" .
+
+
+
+###  http://fixme.org/n4
+
+FIXME:n4 rdf:type owl:Class ;
+         
+         rdfs:subClassOf FIXME:n0 ;
+         
+         rdfs:label "spectroscopy" .
+
+
+
+###  http://fixme.org/n40
+
+FIXME:n40 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n0 ;
+          
+          rdfs:label "specimen/subject selection" .
+
+
+
+###  http://fixme.org/n41
+
+FIXME:n41 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n40 ;
+          
+          rdfs:label "random selection" .
+
+
+
+###  http://fixme.org/n42
+
+FIXME:n42 rdf:type owl:Class ;
+          
+          rdfs:label "recording parameter" .
+
+
+
+###  http://fixme.org/n43
+
+FIXME:n43 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n42 ;
+          
+          rdfs:label "current clamp" .
+
+
+
+###  http://fixme.org/n44
+
+FIXME:n44 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n42 ;
+          
+          rdfs:label "voltage clamp" .
+
+
+
+###  http://fixme.org/n45
+
+FIXME:n45 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n42 ;
+          
+          rdfs:label "stimulation protocol" .
+
+
+
+###  http://fixme.org/n46
+
+FIXME:n46 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n1 ;
+          
+          rdfs:label "staining method" .
+
+
+
+###  http://fixme.org/n47
+
+FIXME:n47 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n4 ;
+          
+          rdfs:label "mass spectrometry" .
+
+
+
+###  http://fixme.org/n48
+
+FIXME:n48 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n67 ;
+          
+          rdfs:label "infrared spectrophotometry" .
+
+
+
+###  http://fixme.org/n49
+
+FIXME:n49 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n67 ;
+          
+          rdfs:label "ultraviolet spectrophotometry" .
+
+
+
+###  http://fixme.org/n5
+
+FIXME:n5 rdf:type owl:Class ;
+         
+         rdfs:subClassOf FIXME:n0 ;
+         
+         nsu:synonym "separation" ;
+         
+         rdfs:comment "separation" ;
+         
+         rdfs:label "fractionation" .
+
+
+
+###  http://fixme.org/n50
+
+FIXME:n50 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n4 ;
+          
+          nsu:synonym "NMR" ;
+          
+          rdfs:label "nuclear magnetic resonance spectroscopy " .
+
+
+
+###  http://fixme.org/n51
+
+FIXME:n51 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n5 ;
+          
+          rdfs:label "centrifugation" .
+
+
+
+###  http://fixme.org/n52
+
+FIXME:n52 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n10 ;
+          
+          rdfs:label "stereology" .
+
+
+
+###  http://fixme.org/n53
+
+FIXME:n53 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n158 ;
+          
+          rdfs:label "tomography" .
+
+
+
+###  http://fixme.org/n54
+
+FIXME:n54 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n10 ;
+          
+          rdfs:label "image processing" .
+
+
+
+###  http://fixme.org/n55
+
+FIXME:n55 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n10 ;
+          
+          rdfs:label "statistical analysis" .
+
+
+
+###  http://fixme.org/n56
+
+FIXME:n56 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n10 ;
+          
+          rdfs:label "spectral analysis" .
+
+
+
+###  http://fixme.org/n57
+
+FIXME:n57 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n7 ;
+          
+          rdfs:comment "culture technique?" ;
+          
+          rdfs:label "cell type induction" .
+
+
+
+###  http://fixme.org/n58
+
+FIXME:n58 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n8 ;
+          
+          rdfs:label "cell culture" .
+
+
+
+###  http://fixme.org/n59
+
+FIXME:n59 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n8 ;
+          
+          rdfs:label "bacteria culture" .
+
+
+
+###  http://fixme.org/n6
+
+FIXME:n6 rdf:type owl:Class ;
+         
+         rdfs:subClassOf FIXME:n5 ;
+         
+         rdfs:label "chromatography" .
+
+
+
+###  http://fixme.org/n60
+
+FIXME:n60 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n8 ;
+          
+          rdfs:label "yeast culture" .
+
+
+
+###  http://fixme.org/n61
+
+FIXME:n61 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n8 ;
+          
+          rdfs:label "fly culture" .
+
+
+
+###  http://fixme.org/n62
+
+FIXME:n62 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n8 ;
+          
+          rdfs:label "rodent husbandry" .
+
+
+
+###  http://fixme.org/n63
+
+FIXME:n63 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n8 ;
+          
+          rdfs:label "enclosure design" .
+
+
+
+###  http://fixme.org/n64
+
+FIXME:n64 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n8 ;
+          
+          rdfs:label "mating method" .
+
+
+
+###  http://fixme.org/n65
+
+FIXME:n65 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n8 ;
+          
+          rdfs:label "feeding method" .
+
+
+
+###  http://fixme.org/n66
+
+FIXME:n66 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n8 ;
+          
+          rdfs:label "housing method" .
+
+
+
+###  http://fixme.org/n67
+
+FIXME:n67 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n4 ;
+          
+          rdfs:label "spectrophotometry" .
+
+
+
+###  http://fixme.org/n68
+
+FIXME:n68 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n0 ;
+          
+          rdfs:label "scintillation counting" .
+
+
+
+###  http://fixme.org/n69
+
+FIXME:n69 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n12 ;
+          
+          rdfs:label "lesioning method" .
+
+
+
+###  http://fixme.org/n7
+
+FIXME:n7 rdf:type owl:Class ;
+         
+         rdfs:subClassOf FIXME:n0 ;
+         
+         rdfs:label "molecular method" .
+
+
+
+###  http://fixme.org/n70
+
+FIXME:n70 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n11 ;
+          
+          rdfs:label "water deprivation" .
+
+
+
+###  http://fixme.org/n71
+
+FIXME:n71 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n12 ;
+          
+          rdfs:label "deafferenting" .
+
+
+
+###  http://fixme.org/n72
+
+FIXME:n72 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n12 ;
+          
+          rdfs:label "blinding" .
+
+
+
+###  http://fixme.org/n73
+
+FIXME:n73 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n12 ;
+          
+          rdfs:label "ablation" .
+
+
+
+###  http://fixme.org/n74
+
+FIXME:n74 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n11 ,
+                          FIXME:n12 ;
+          
+          rdfs:comment "" ;
+          
+          rdfs:label "sensory deprivation" .
+
+
+
+###  http://fixme.org/n75
+
+FIXME:n75 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n12 ;
+          
+          rdfs:label "crushing" .
+
+
+
+###  http://fixme.org/n76
+
+FIXME:n76 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n12 ;
+          
+          rdfs:label "transection" .
+
+
+
+###  http://fixme.org/n77
+
+FIXME:n77 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n79 ;
+          
+          rdfs:label "bath application" .
+
+
+
+###  http://fixme.org/n78
+
+FIXME:n78 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n79 ;
+          
+          rdfs:label "topical application" .
+
+
+
+###  http://fixme.org/n79
+
+FIXME:n79 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n0 ;
+          
+          rdfs:comment "ERO is good here" ;
+          
+          rdfs:label "delivery method" .
+
+
+
+###  http://fixme.org/n8
+
+FIXME:n8 rdf:type owl:Class ;
+         
+         rdfs:subClassOf FIXME:n0 ;
+         
+         rdfs:label "culture/husbandry" .
+
+
+
+###  http://fixme.org/n80
+
+FIXME:n80 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n79 ;
+          
+          rdfs:label "injection" .
+
+
+
+###  http://fixme.org/n81
+
+FIXME:n81 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n0 ;
+          
+          rdfs:label "experimental design" .
+
+
+
+###  http://fixme.org/n82
+
+FIXME:n82 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n81 ;
+          
+          rdfs:label "in vivo" .
+
+
+
+###  http://fixme.org/n83
+
+FIXME:n83 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n81 ;
+          
+          rdfs:label "in vitro" .
+
+
+
+###  http://fixme.org/n84
+
+FIXME:n84 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n81 ;
+          
+          rdfs:label "ex vivo" .
+
+
+
+###  http://fixme.org/n85
+
+FIXME:n85 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n93 ;
+          
+          rdfs:label "randomized controlled trial" .
+
+
+
+###  http://fixme.org/n86
+
+FIXME:n86 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n91 ;
+          
+          rdfs:label "awake" .
+
+
+
+###  http://fixme.org/n87
+
+FIXME:n87 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n86 ;
+          
+          rdfs:label "awake behaving" .
+
+
+
+###  http://fixme.org/n88
+
+FIXME:n88 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n91 ;
+          
+          rdfs:label "anesthetized" .
+
+
+
+###  http://fixme.org/n89
+
+FIXME:n89 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n91 ;
+          
+          rdfs:label "head-fixed" .
+
+
+
+###  http://fixme.org/n9
+
+FIXME:n9 rdf:type owl:Class ;
+         
+         rdfs:subClassOf FIXME:n0 ;
+         
+         rdfs:label "electrophysiology" .
+
+
+
+###  http://fixme.org/n90
+
+FIXME:n90 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n91 ;
+          
+          rdfs:label "head-free" .
+
+
+
+###  http://fixme.org/n91
+
+FIXME:n91 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n82 ;
+          
+          rdfs:label "animal" .
+
+
+
+###  http://fixme.org/n92
+
+FIXME:n92 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n93 ;
+          
+          rdfs:label "hypothesis based study" .
+
+
+
+###  http://fixme.org/n93
+
+FIXME:n93 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n0 ;
+          
+          rdfs:label "study design" .
+
+
+
+###  http://fixme.org/n94
+
+FIXME:n94 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n91 ;
+          
+          rdfs:label "freely behaving" .
+
+
+
+###  http://fixme.org/n95
+
+FIXME:n95 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n93 ;
+          
+          rdfs:label "observational study" .
+
+
+
+###  http://fixme.org/n96
+
+FIXME:n96 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n10 ;
+          
+          rdfs:label "allometry" .
+
+
+
+###  http://fixme.org/n97
+
+FIXME:n97 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n93 ;
+          
+          rdfs:label "model testing" .
+
+
+
+###  http://fixme.org/n98
+
+FIXME:n98 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n81 ;
+          
+          rdfs:label "high throughput" .
+
+
+
+###  http://fixme.org/n99
+
+FIXME:n99 rdf:type owl:Class ;
+          
+          rdfs:subClassOf FIXME:n0 ;
+          
+          rdfs:label "synthesis method" .
+
+
+
+
+
+#################################################################
+#
+#    Annotations
+#
+#################################################################
+
+
+FIXME:n154 FIXME:onProperty FIXME:n153 ;
+           
+           rdfs:label "length" .
+
+
+
+FIXME:n155 FIXME:onProperty FIXME:n153 ;
+           
+           rdfs:label "mass" .
+
+
+
+FIXME:n156 rdfs:label "time" ;
+           
+           FIXME:onProperty FIXME:n153 .
+
+
+
+FIXME:n157 FIXME:onProperty FIXME:n153 ;
+           
+           rdfs:label "temperature" .
+
+
+
+FIXME:n159 rdfs:label "DNA" .
+
+
+
+FIXME:n160 rdfs:label "RNA" .
+
+
+
+FIXME:n161 rdfs:label "Protein" .
+
+
+
+
+###  Generated by the OWL API (version 4.1.4) https://github.com/owlcs/owlapi
+
