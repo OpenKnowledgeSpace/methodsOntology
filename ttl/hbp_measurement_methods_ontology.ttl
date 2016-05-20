@@ -749,7 +749,7 @@ HBP_MEM:0000115 rdf:type owl:Class ;
 # http://www.hbp.FIXME.org/hbp_measurement_methods/0000116
 
 HBP_MEM:0000116 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_MEM:0000111 ;
+	rdfs:subClassOf HBP_MEM:0000115 ;
 	nsu:synonym "IEM"@en ;
 	rdfs:label "Immunoelectron microscopy"@en .
 # 
