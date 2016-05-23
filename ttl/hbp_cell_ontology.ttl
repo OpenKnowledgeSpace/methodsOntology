@@ -14,7 +14,8 @@
 @prefix HBP_CELL: <http://www.hbp.FIXME.org/hbp_cell_ontology/> .
 @base <http://www.hbp.FIXME.org/hbp_cell_ontology> .
 
-<http://www.hbp.FIXME.org/hbp_cell_ontology> rdf:type owl:Ontology ;                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
+<http://www.hbp.FIXME.org/hbp_cell_ontology> rdf:type owl:Ontology ;                
+owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
 
 
 HBP_CELL:0000000 rdf:type owl:Class ;
@@ -29,7 +30,9 @@ HBP_CELL:0000001 rdf:type owl:Class ;
 
 
 
-HBP_CELL:0000002 rdf:type owl:Class ;                  owl:equivalentClass ncel:sao313023570;                  rdfs:label "Glial cell"@en ;
+HBP_CELL:0000002 rdf:type owl:Class ;                  
+                  owl:equivalentClass ncel:sao313023570;                  
+                  rdfs:label "Glial cell"@en ;
                   rdfs:subClassOf HBP_CELL:0000000 .
 
 
@@ -1168,3 +1171,9 @@ HBP_CELL:0000149 rdf:type owl:Class ;
                   owl:equivalentClass ncel:sao383526650;  
                   rdfs:label "Hippocampus CA3 pyramidal cell"@en ;
                   nsu:synonym "CA3_PC"@en.
+
+
+HBP_CELL:0000150 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:sao131261273;  
+                  rdfs:label "Hippocampus pyramidal cell"@en ;
+                  nsu:synonym "Hippocampal pyramidal neuron"@en .
