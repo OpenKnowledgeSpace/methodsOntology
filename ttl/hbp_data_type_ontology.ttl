@@ -939,7 +939,7 @@ HBP_DATT:0000077 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.traces.txt;version=0"@en ;
 
-                  nsu:definition "file containing electrophysiological traces; needs a codebook"@en ;
+                  nsu:definition "File containing electrophysiological traces; needs a codebook."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -949,7 +949,9 @@ HBP_DATT:0000077 rdf:type owl:Class ;
 
 HBP_DATT:0000078 rdf:type owl:Class ;
 
-                  rdfs:label "image/autorad.TIFF.imagestack;version=0"@en ;
+                  rdfs:label "image/vnd.juelich.autorad.TIFF.imagestack;version=0"@en ;
+
+                  nsu:definition "Color coded autoradiograph showing the laminar distribution of a receptor in a given cortical area of a single brain. Pial surface is at the top of the image, layer VI/white matter border is at the bottom of the image. Color scale provided to indicate density range from low to high receptor densities."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -958,7 +960,9 @@ HBP_DATT:0000078 rdf:type owl:Class ;
 
 HBP_DATT:0000079 rdf:type owl:Class ;
 
-                  rdfs:label "image/profile.TIFF.imagestack;version=0"@en ;
+                  rdfs:label "image/vnd.juelich.profile.TIFF.imagestack;version=0"@en ;
+
+                  nsu:definition "Course of the receptor density from the pial surface (to the left of the image, 0% on x axis) to the border between layer IV and the white matter (to the right of the image, 100% on x axis). Y axis depicts receptor density in fmol/mg protein."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -967,7 +971,9 @@ HBP_DATT:0000079 rdf:type owl:Class ;
 
 HBP_DATT:0000080 rdf:type owl:Class ;
 
-                  rdfs:label "image/multireceptor.fingerprint.TIFF.imagestack;version=0"@en ;
+                  rdfs:label "image/vnd.juelich.multireceptor.fingerprint.TIFF.imagestack;version=0"@en ;
+
+                  nsu:definition "Polar coordinate plot showing the mean (+ SD; dashed line) densities (in fmol/mg protein) of 16 receptors."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
