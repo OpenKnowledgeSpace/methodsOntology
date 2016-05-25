@@ -292,6 +292,25 @@ efo:EFO_0005184 rdf:type owl:Class ;
                             "DBA/2"@en ,
                             "D2J"@en .
 
+HBP_TAX:0000015 rdf:type owl:Class ;                
+                rdfs:label "C57BL/6J X SJL"@en ;
+                rdfs:subClassOf obo:NCBITaxon_10090 ;
+                HBP_PROP:has_rank HBP_TAX:9999998 ;
+                nsu:definition "C57BL/6J is a mouse strain as described in Jackson Laboratory."@en ;
+                nsu:synonym "B6SJLF1"@en ,
+                            "B6SJLF1/J"@en .
+
+
+HBP_TAX:0000016 rdf:type owl:Class ;                
+                rdfs:label "Tg2576"@en ;
+                rdfs:subClassOf obo:NCBITaxon_10090 ;
+                HBP_PROP:has_rank HBP_TAX:9999998 ;
+                nsu:definition "This is a mouse model for Alzheimer's disease. It overexpresses a mutant form of APP (isoform 695) with the Swedish mutation (KM670/671NL)"@en ;
+                nsu:synonym "Hsiao mice"@en ,
+                            "App-Swe"@en ,
+                            "App-sw"@en ,
+                            "APP(sw)"@en ,
+                            "B6;SJL-Tg(APPSWE)2576Kha"@en .
 
 
 ###  http://www.ebi.ac.uk/efo/EFO_0001352

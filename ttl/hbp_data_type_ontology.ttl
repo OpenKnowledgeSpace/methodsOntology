@@ -933,3 +933,14 @@ HBP_DATT:0000076 rdf:type owl:Class ;
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".hoc" .
+
+
+HBP_DATT:0000077 rdf:type owl:Class ;
+
+                  rdfs:label "application/vnd.hbp.traces.txt;version=0"@en ;
+
+                  nsu:definition "file containing electrophysiological traces; needs a codebook"@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".txt" .
