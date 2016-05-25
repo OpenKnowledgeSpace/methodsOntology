@@ -944,3 +944,31 @@ HBP_DATT:0000077 rdf:type owl:Class ;
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".txt" .
+
+
+
+HBP_DATT:0000078 rdf:type owl:Class ;
+
+                  rdfs:label "image/autorad.TIFF.imagestack;version=0"@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".tiff" .
+
+
+HBP_DATT:0000079 rdf:type owl:Class ;
+
+                  rdfs:label "image/profile.TIFF.imagestack;version=0"@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".tiff" .
+
+
+HBP_DATT:0000080 rdf:type owl:Class ;
+
+                  rdfs:label "image/multireceptor.fingerprint.TIFF.imagestack;version=0"@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".tiff" .
