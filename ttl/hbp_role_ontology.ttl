@@ -341,3 +341,8 @@ HBP_ROLE:0000044 a owl:Class ;
       rdfs:label "data processing"@en ;
       nsu:definition  "the carrying out of operations on data, especially by a computer program, to retrieve, transform, or classify information." @en ;
       rdfs:subClassOf HBP_ROLE:0000000 .
+
+HBP_ROLE:0000045 a owl:Class ;
+      rdfs:label "software engineer"@en ;
+      nsu:definition  "professional that deals with the design, implementation, and maintenance of complex computer programs." @en ;
+      rdfs:subClassOf HBP_ROLE:0000000 .

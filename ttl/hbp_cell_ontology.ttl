@@ -1177,3 +1177,9 @@ HBP_CELL:0000150 rdf:type owl:Class ;
                   owl:equivalentClass ncel:sao131261273;  
                   rdfs:label "Hippocampus pyramidal cell"@en ;
                   nsu:synonym "Hippocampal pyramidal neuron"@en .
+
+
+HBP_CELL:0000151 rdf:type owl:Class ;
+                    
+                  rdfs:label "Stratum radiatum interneuron"@en ;
+                  nsu:synonym "SR_interneuron"@en .
