@@ -485,7 +485,7 @@ HBP_DATT:0000036 rdf:type owl:Class ;
 
 HBP_DATT:0000037 rdf:type owl:Class ;
 
-                  rdfs:label "BigBrain Parcelation XML"@en ;
+                  rdfs:label "BigBrain Parcellation XML"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000012 ;
 
@@ -653,7 +653,7 @@ HBP_DATT:0000051 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.atlas.bbic;version=0"@en ;
 
-                  nsu:definition "preferred HBP format for brain region parcelation data; needs a codebook"@en ;
+                  nsu:definition "preferred HBP format for brain region parcellation data; needs a codebook"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -665,7 +665,7 @@ HBP_DATT:0000052 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.juelich.atlas.xml;version=0"@en ;
 
-                  nsu:definition "BigBrain atlas parcelation; needs a codebook"@en ;
+                  nsu:definition "BigBrain atlas parcellation; needs a codebook"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -677,7 +677,7 @@ HBP_DATT:0000053 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.abis.atlas.xml;version=0"@en ;
 
-                  nsu:definition "Allen Brain atlas parcelation, needs a codebook"@en ;
+                  nsu:definition "Allen Brain atlas parcellation, needs a codebook"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -937,7 +937,7 @@ HBP_DATT:0000076 rdf:type owl:Class ;
 
 HBP_DATT:0000077 rdf:type owl:Class ;
 
-                  rdfs:label "application/vnd.hbp.traces.txt;version=0"@en ;
+                  rdfs:label "application/vnd.ebri.traces.txt;version=0"@en ;
 
                   nsu:definition "File containing electrophysiological traces; needs a codebook."@en ;
 
