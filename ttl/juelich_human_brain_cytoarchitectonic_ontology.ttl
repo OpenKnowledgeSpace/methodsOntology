@@ -1,13 +1,13 @@
 ### WARNING ###
 ### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
 ### WARNING ###
-@prefix     : <http://www.hbp.FIXME.org/juelich_human_brain_cytoarchitectonic_ontology/> .
-@prefix owl : <http://www.w3.org/2002/07/owl#> .
-@prefix rdf : <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml : <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd : <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.hbp.FIXME.org/juelich_human_brain_cytoarchitectonic_ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix nsu : <http://www.FIXME.org/nsupper#> .
+@prefix nsu: <http://www.FIXME.org/nsupper#> .
 @prefix JHBA: <http://www.hbp.FIXME.org/juelich_human_brain_cytoarchitectonic_ontology/> .
 @base <http://www.hbp.FIXME.org/juelich_human_brain_cytoarchitectonic_ontology> .
 
