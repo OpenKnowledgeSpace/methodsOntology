@@ -96,30 +96,26 @@ MESH:D016194 rdf:type owl:Class ;
 	nsu:synonym "N-methyl-D-aspartate receptor"@en ;
 	rdfs:label "NMDA receptor"@en .
 # 
-# http://www.hbp.FIXME.org/hbp_receptor_ontology/0000001
 
-HBP_REC:0000001 rdf:type owl:Class ;
+MESH:C104077 rdf:type owl:Class ;
 	rdfs:subClassOf MESH:D018094 ;
 	nsu:synonym "mGluR1"@en ;
 	rdfs:label "Metabotropic glutamate receptor 1"@en .
 # 
-# http://www.hbp.FIXME.org/hbp_receptor_ontology/0000002
 
-HBP_REC:0000002 rdf:type owl:Class ;
+MESH:C108822 rdf:type owl:Class ;
 	rdfs:subClassOf MESH:D018094 ;
 	nsu:synonym "mGluR2"@en ;
 	rdfs:label "Metabotropic glutamate receptor 2"@en .
 # 
-# http://www.hbp.FIXME.org/hbp_receptor_ontology/0000003
 
-HBP_REC:0000003 rdf:type owl:Class ;
+MESH:C102718 rdf:type owl:Class ;
 	rdfs:subClassOf MESH:D018094 ;
 	nsu:synonym "mGluR3"@en ;
 	rdfs:label "Metabotropic glutamate receptor 3"@en .
 # 
-# http://www.hbp.FIXME.org/hbp_receptor_ontology/0000004
 
-HBP_REC:0000004 rdf:type owl:Class ;
+MESH:C108823 rdf:type owl:Class ;
 	rdfs:subClassOf MESH:D018094 ;
 	nsu:synonym "mGluR4"@en ;
 	rdfs:label "Metabotropic glutamate receptor 4"@en .
@@ -130,23 +126,20 @@ MESH:D064529 rdf:type owl:Class ;
 	nsu:synonym "mGluR5"@en ;
 	rdfs:label "Metabotropic glutamate receptor 5"@en .
 # 
-# http://www.hbp.FIXME.org/hbp_receptor_ontology/0000005
 
-HBP_REC:0000005 rdf:type owl:Class ;
+MESH:C113897 rdf:type owl:Class ;
 	rdfs:subClassOf MESH:D018094 ;
 	nsu:synonym "mGluR6"@en ;
 	rdfs:label "Metabotropic glutamate receptor 6"@en .
 # 
-# http://www.hbp.FIXME.org/hbp_receptor_ontology/0000006
 
-HBP_REC:0000006 rdf:type owl:Class ;
+MESH:C102719 rdf:type owl:Class ;
 	rdfs:subClassOf MESH:D018094 ;
 	nsu:synonym "mGluR7"@en ;
 	rdfs:label "Metabotropic glutamate receptor 7"@en .
 # 
-# http://www.hbp.FIXME.org/hbp_receptor_ontology/0000007
 
-HBP_REC:0000007 rdf:type owl:Class ;
+MESH:C111435 rdf:type owl:Class ;
 	rdfs:subClassOf MESH:D018094 ;
 	nsu:synonym "mGluR8"@en ;
 	rdfs:label "Metabotropic glutamate receptor 8"@en .
@@ -256,15 +249,13 @@ MESH:D043642 rdf:type owl:Class ;
 	rdfs:subClassOf MESH:D011976 ;
 	rdfs:label "Muscarinic receptor M5"@en .
 # 
-# http://www.hbp.FIXME.org/hbp_receptor_ontology/0000008
 
-HBP_REC:0000008 rdf:type owl:Class ;
+MESH:C403531 rdf:type owl:Class ;
 	rdfs:subClassOf MESH:D011978 ;
 	rdfs:label "Nicotinic receptor alpha 4 beta 2"@en .
 # 
-# http://www.hbp.FIXME.org/hbp_receptor_ontology/0000009
 
-HBP_REC:0000009 rdf:type owl:Class ;
+MESH:C403530 rdf:type owl:Class ;
 	rdfs:subClassOf MESH:D011978 ;
 	rdfs:label "Nicotinic receptor alpha 3 beta 4"@en .
 # 

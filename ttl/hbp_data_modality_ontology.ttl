@@ -209,19 +209,19 @@ HBP_DAMO:0000027 rdf:type owl:Class ;
 
 HBP_DAMO:0000028 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000052 ;
-	rdfs:label "Channel distribution map"@en .
+	rdfs:label "Channel distribution"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000029
 
 HBP_DAMO:0000029 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000052 ;
-	rdfs:label "Receptor distribution map"@en .
+	rdfs:label "Receptor density"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000030
 
 HBP_DAMO:0000030 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000052 ;
-	rdfs:label "Cell density map"@en .
+	rdfs:label "Cell density"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000034
 
