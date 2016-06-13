@@ -27,7 +27,7 @@ HBP_DTAT:0000001 rdf:type owl:Class ;
 
 
 HBP_DTAT:0000002 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000000 ;
+	rdfs:subClassOf HBP_DTAT:0000022 ;
 	nsu:definition "The resolution is the measure of the sharpness of an image or of the fineness with which a device can produce or record such an image, usually expressed as the total number or density of pixels in the image. For brain it can be expressed in microns per pixel to millimeters per pixel"@en ;
 	rdfs:label "resolution units"@en .
 
@@ -151,7 +151,32 @@ HBP_DTAT:0000020 rdf:type owl:Class ;
 	nsu:definition "Attributes applicable to electrophysiology"@en ;
 	rdfs:label "Electrophysiology attributes"@en .
 
+
 HBP_DTAT:0000021 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000000 ;
 	nsu:definition "Classification of the type of receptor as defined by MESH and other sources"@en ;
 	rdfs:label "Receptor type"@en .
+
+
+HBP_DTAT:0000022 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	nsu:definition "Attributes applicable to resolution"@en ;
+	rdfs:label "Resolution attributes"@en .
+
+
+HBP_DTAT:0000023 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000022 ;
+	nsu:definition "Resolution of an imaginary plane dividing the body into dorsal and ventral (back and front, or posterior and anterior) parts."@en ;
+	rdfs:label "Coronal plane resolution"@en .
+
+
+HBP_DTAT:0000024 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000022 ;
+	nsu:definition "Resolution of an imaginary plane dividing the body into left and right halves."@en ;
+	rdfs:label "Sagittal plane resolution"@en .
+
+
+HBP_DTAT:0000025 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000022 ;
+	nsu:definition "Resolution of an imaginary plane dividing the body into upper and lower segments."@en ;
+	rdfs:label "Axial plane resolution"@en .	
