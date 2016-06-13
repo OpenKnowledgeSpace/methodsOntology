@@ -18,18 +18,18 @@
 
 HBP_DTAT:0000000 rdf:type owl:Class ;
 	nsu:definition "Attribute associated with a dataset"@en ;
-	rdfs:label "attribute"@en .
+	rdfs:label "Attribute"@en .
 
 HBP_DTAT:0000001 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000000 ;
 	nsu:definition "Direction describes the anatomical planes used to transect an organ or body in order to describe the location of the studied structures. There are three basic planes or directions: coronal, axial and sagittal"@en ;
-	rdfs:label "direction"@en .
+	rdfs:label "Direction"@en .
 
 
 HBP_DTAT:0000002 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000022 ;
 	nsu:definition "The resolution is the measure of the sharpness of an image or of the fineness with which a device can produce or record such an image, usually expressed as the total number or density of pixels in the image. For brain it can be expressed in microns per pixel to millimeters per pixel"@en ;
-	rdfs:label "resolution units"@en .
+	rdfs:label "Resolution units"@en .
 
 
 HBP_DTAT:0000003 rdf:type owl:Class ;
@@ -179,4 +179,16 @@ HBP_DTAT:0000024 rdf:type owl:Class ;
 HBP_DTAT:0000025 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000022 ;
 	nsu:definition "Resolution of an imaginary plane dividing the body into upper and lower segments."@en ;
-	rdfs:label "Axial plane resolution"@en .	
+	rdfs:label "Axial plane resolution"@en .
+
+
+HBP_DTAT:0000026 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000002 ;
+	nsu:definition "Resolution units, pixels per area unit."@en ;
+	rdfs:label "microns per pixel"@en .
+
+
+HBP_DTAT:0000027 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000002 ;
+	nsu:definition "Resolution units, pixels per area unit."@en ;
+	rdfs:label "millimeters per pixel"@en .
