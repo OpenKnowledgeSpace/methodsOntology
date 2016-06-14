@@ -1,0 +1,317 @@
+@prefix : <http://www.hbp.FIXME.org/hbp_receptor_ontology#> .
+@prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix MESH: <http://purl.bioontology.org/ontology/MESH/> .
+@prefix HBP_REC: <http://www.hbp.FIXME.org/hbp_receptor_ontology/> .
+
+<http://www.hbp.FIXME.org/hbp_receptor_ontology> rdf:type owl:Ontology ;
+	owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
+
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+
+MESH:D017981 rdf:type owl:Class ;
+	rdfs:label "Neurotransmitter receptor"@en .
+# 
+
+MESH:D017459 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D017981 ;
+	rdfs:label "Amino acid receptor"@en .
+# 
+
+MESH:D017983 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D017981 ;
+	rdfs:label "Catecholamine receptor"@en .
+# 
+
+MESH:D011950 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D017981 ;
+	rdfs:label "Cholinergic receptor"@en .
+# 
+
+MESH:D011985 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D017981 ;
+	rdfs:label "Serotonin receptor"@en .
+# 
+
+MESH:D018079 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D017459 ;
+	rdfs:label "GABA receptor"@en .
+# 
+
+MESH:D011963 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D018079 ;
+	rdfs:label "GABA-A receptor"@en .
+# 
+
+MESH:D018080 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D018079 ;
+	rdfs:label "GABA-B receptor"@en .
+# 
+
+MESH:D017470 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D017459 ;
+	rdfs:label "Glutamate receptor"@en .
+# 
+
+MESH:D058468 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D017470 ;
+	rdfs:label "Ionotropic glutamate receptor"@en .
+# 
+
+MESH:D018094 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D017470 ;
+	rdfs:label "Metabotropic glutamate receptor"@en .
+# 
+
+MESH:D018009 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D017459 ;
+	rdfs:label "Glycine receptor"@en .
+# 
+
+MESH:D018091 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D058468 ;
+	nsu:synonym "Alpha-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid receptor" , "Quisqualate receptor"@en ;
+	rdfs:label "AMPA receptor"@en .
+# 
+
+MESH:D018092 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D058468 ;
+	nsu:synonym "Kainic acid receptor"@en ;
+	rdfs:label "Kainate receptor"@en .
+
+MESH:D016194 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D058468 ;
+	nsu:synonym "N-methyl-D-aspartate receptor"@en ;
+	rdfs:label "NMDA receptor"@en .
+# 
+
+MESH:C104077 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D018094 ;
+	nsu:synonym "mGluR1"@en ;
+	rdfs:label "Metabotropic glutamate receptor 1"@en .
+# 
+
+MESH:C108822 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D018094 ;
+	nsu:synonym "mGluR2"@en ;
+	rdfs:label "Metabotropic glutamate receptor 2"@en .
+# 
+
+MESH:C102718 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D018094 ;
+	nsu:synonym "mGluR3"@en ;
+	rdfs:label "Metabotropic glutamate receptor 3"@en .
+# 
+
+MESH:C108823 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D018094 ;
+	nsu:synonym "mGluR4"@en ;
+	rdfs:label "Metabotropic glutamate receptor 4"@en .
+# 
+
+MESH:D064529 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D018094 ;
+	nsu:synonym "mGluR5"@en ;
+	rdfs:label "Metabotropic glutamate receptor 5"@en .
+# 
+
+MESH:C113897 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D018094 ;
+	nsu:synonym "mGluR6"@en ;
+	rdfs:label "Metabotropic glutamate receptor 6"@en .
+# 
+
+MESH:C102719 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D018094 ;
+	nsu:synonym "mGluR7"@en ;
+	rdfs:label "Metabotropic glutamate receptor 7"@en .
+# 
+
+MESH:C111435 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D018094 ;
+	nsu:synonym "mGluR8"@en ;
+	rdfs:label "Metabotropic glutamate receptor 8"@en .
+# 
+
+MESH:D011941 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D017983 ;
+	rdfs:label "Adrenergic receptor"@en .
+# 
+
+MESH:D011954 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D017983 ;
+	rdfs:label "Dopamine receptor"@en .
+# 
+
+MESH:D011942 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011941 ;
+	rdfs:label "Adrenergic receptor alpha"@en .
+# 
+
+MESH:D018340 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011942 ;
+	rdfs:label "Adrenergic receptor alpha 1"@en .
+# 
+
+MESH:D018341 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011942 ;
+	rdfs:label "Adrenergic receptor alpha 2"@en .
+# 
+
+MESH:D011943 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011941 ;
+	rdfs:label "Adrenergic receptor beta"@en .
+# 
+
+MESH:D018342 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011943 ;
+	rdfs:label "Adrenergic receptor beta 1"@en .
+# 
+
+MESH:D018343 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011943 ;
+	rdfs:label "Adrenergic receptor beta 2"@en .
+# 
+
+MESH:D022702 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011943 ;
+	rdfs:label "Adrenergic receptor beta 3"@en .
+# 
+
+MESH:D017447 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011954 ;
+	rdfs:label "Dopamine receptor D1"@en .
+# 
+
+MESH:D017448 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011954 ;
+	rdfs:label "Dopamine receptor D2"@en .
+# 
+
+MESH:D050641 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D017447 ;
+	rdfs:label "Dopamine receptor D5"@en .
+# 
+
+MESH:D050637 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D017448 ;
+	rdfs:label "Dopamine receptor D3"@en .
+# 
+
+MESH:D050638 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D017448 ;
+	rdfs:label "Dopamine receptor D4"@en .
+# 
+
+MESH:D011976 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011950 ;
+	rdfs:label "Muscarinic receptor"@en .
+# 
+
+MESH:D011978 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011950 ;
+	rdfs:label "Nicotinic receptor"@en .
+# 
+
+MESH:D043643 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011976 ;
+	rdfs:label "Muscarinic receptor M1"@en .
+# 
+
+MESH:D043585 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011976 ;
+	rdfs:label "Muscarinic receptor M2"@en .
+# 
+
+MESH:D043587 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011976 ;
+	rdfs:label "Muscarinic receptor M3"@en .
+# 
+
+MESH:D043588 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011976 ;
+	rdfs:label "Muscarinic receptor M4"@en .
+# 
+
+MESH:D043642 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011976 ;
+	rdfs:label "Muscarinic receptor M5"@en .
+# 
+
+MESH:C403531 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011978 ;
+	rdfs:label "Nicotinic receptor alpha 4 beta 2"@en .
+# 
+
+MESH:C403530 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011978 ;
+	rdfs:label "Nicotinic receptor alpha 3 beta 4"@en .
+# 
+
+MESH:D064569 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011978 ;
+	rdfs:label "Nicotinic receptor alpha 7"@en .
+
+
+MESH:D044263 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011985 ;
+	rdfs:label "Serotonin receptor 5-HT1"@en .
+# 
+
+MESH:D044348 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011985 ;
+	rdfs:label "Serotonin receptor 5-HT2"@en .
+# 
+
+MESH:D044406 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011985 ;
+	rdfs:label "Serotonin receptor 5-HT3"@en .
+# 
+
+MESH:D044422 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D011985 ;
+	rdfs:label "Serotonin receptor 5-HT4"@en .
+# 
+
+MESH:D044282 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D044263 ;
+	rdfs:label "Serotonin receptor 5-HT1A"@en .
+# 
+
+MESH:D044302 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D044263 ;
+	rdfs:label "Serotonin receptor 5-HT1B"@en .
+# 
+
+MESH:D044346 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D044263 ;
+	rdfs:label "Serotonin receptor 5-HT1D"@en .
+# 
+
+MESH:D044402 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D044348 ;
+	rdfs:label "Serotonin receptor 5-HT2A"@en .
+# 
+
+MESH:D044403 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D044348 ;
+	rdfs:label "Serotonin receptor 5-HT2B"@en .
+# 
+
+MESH:D044405 rdf:type owl:Class ;
+	rdfs:subClassOf MESH:D044348 ;
+	rdfs:label "Serotonin receptor 5-HT2C"@en .
+# 
+# Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi

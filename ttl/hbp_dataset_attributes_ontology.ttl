@@ -8,6 +8,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix HBP_DTAT: <http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/> .
 @base <http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology> .
 
@@ -17,18 +18,18 @@
 
 HBP_DTAT:0000000 rdf:type owl:Class ;
 	nsu:definition "Attribute associated with a dataset"@en ;
-	rdfs:label "attribute"@en .
+	rdfs:label "Attribute"@en .
 
 HBP_DTAT:0000001 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000000 ;
 	nsu:definition "Direction describes the anatomical planes used to transect an organ or body in order to describe the location of the studied structures. There are three basic planes or directions: coronal, axial and sagittal"@en ;
-	rdfs:label "direction"@en .
+	rdfs:label "Direction"@en .
 
 
 HBP_DTAT:0000002 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000000 ;
+	rdfs:subClassOf HBP_DTAT:0000022 ;
 	nsu:definition "The resolution is the measure of the sharpness of an image or of the fineness with which a device can produce or record such an image, usually expressed as the total number or density of pixels in the image. For brain it can be expressed in microns per pixel to millimeters per pixel"@en ;
-	rdfs:label "resolution units"@en .
+	rdfs:label "Resolution units"@en .
 
 
 HBP_DTAT:0000003 rdf:type owl:Class ;
@@ -48,3 +49,146 @@ HBP_DTAT:0000005 rdf:type owl:Class ;
 	nsu:definition "A string identifying the file"@en ;
 	rdfs:label "Zenodo file id"@en .
 
+
+HBP_DTAT:0000006 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Layer of neocortex where the neuron is located as defined in Neobase."@en ;
+	rdfs:label "Neobase layer"@en .
+
+
+HBP_DTAT:0000007 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "It has values of 0 or 1 respectively voltage (mV) or current (pA)."@en ;
+	skos:prefLabel "ecode"@en ;
+	rdfs:label "Neobase ecode"@en .
+
+
+HBP_DTAT:0000008 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Type of stimulus that has been used for the experiment, defined in the eCode specifications for Neobase."@en ;
+	skos:prefLabel "stimuli"@en ;
+	rdfs:label "Neobase stimuli"@en .
+
+
+HBP_DTAT:0000009 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Electrical type of the neuron as described by Neobase."@en ;
+	skos:prefLabel "etype"@en ;
+	rdfs:label "Neobase etype"@en .
+
+
+HBP_DTAT:0000010 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Name of the project as described by Neobase. Values: Thomas data, Sandrine Developmental, Maria Single Cell."@en ;
+	skos:prefLabel "projectname"@en ;
+	rdfs:label "Neobase project name"@en .
+
+
+HBP_DTAT:0000011 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Supplementary information from the experiment."@en ;
+	rdfs:label "Note"@en .
+
+
+HBP_DTAT:0000012 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Username describes the user that generated the data in Neobase. Values: mtoledo, tkberger, sandrine ."@en ;
+	skos:prefLabel "username"@en ;
+	rdfs:label "Neobase username"@en .
+
+
+HBP_DTAT:0000013 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Number identifying the trace in Neobase."@en ;
+	skos:prefLabel "traceid"@en ;	
+	rdfs:label "Neobase trace id"@en .
+
+
+HBP_DTAT:0000014 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Number identifying the animal."@en ;
+	skos:prefLabel "animalid"@en ;	
+	rdfs:label  "Animal id"@en .
+
+
+HBP_DTAT:0000015 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Data units of the voltage (mV) or current (pA)."@en ;
+	skos:prefLabel "dataunits"@en ;	
+	rdfs:label "Data units"@en .
+
+
+HBP_DTAT:0000016 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Number identifying the cell in Neobase."@en ;
+	skos:prefLabel "cellid"@en ;	
+	rdfs:label "Neobase cell id"@en .
+
+
+HBP_DTAT:0000017 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Number identifying the experiment in Neobase."@en ;
+	skos:prefLabel "experimentid"@en ;	
+	rdfs:label "Neobase experiment id"@en .
+
+
+HBP_DTAT:0000018 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Name identifying the cell in Neobase."@en ;
+	skos:prefLabel "cellname"@en ;	
+	rdfs:label "Neobase cell name"@en .
+
+
+HBP_DTAT:0000019 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Time units. Value: s (seconds), m (minutes), hr (hours)"@en ;
+	skos:prefLabel "timeunits"@en ;	
+	rdfs:label "Time units"@en .
+
+
+HBP_DTAT:0000020 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	nsu:definition "Attributes applicable to electrophysiology"@en ;
+	rdfs:label "Electrophysiology attributes"@en .
+
+
+HBP_DTAT:0000021 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	nsu:definition "Classification of the type of receptor as defined by MESH and other sources"@en ;
+	rdfs:label "Receptor type"@en .
+
+
+HBP_DTAT:0000022 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	nsu:definition "Attributes applicable to resolution"@en ;
+	rdfs:label "Resolution attributes"@en .
+
+
+HBP_DTAT:0000023 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000022 ;
+	nsu:definition "Resolution of an imaginary plane dividing the body into dorsal and ventral (back and front, or posterior and anterior) parts."@en ;
+	rdfs:label "Coronal plane resolution"@en .
+
+
+HBP_DTAT:0000024 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000022 ;
+	nsu:definition "Resolution of an imaginary plane dividing the body into left and right halves."@en ;
+	rdfs:label "Sagittal plane resolution"@en .
+
+
+HBP_DTAT:0000025 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000022 ;
+	nsu:definition "Resolution of an imaginary plane dividing the body into upper and lower segments."@en ;
+	rdfs:label "Axial plane resolution"@en .
+
+
+HBP_DTAT:0000026 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000002 ;
+	nsu:definition "Resolution units, pixels per area unit."@en ;
+	rdfs:label "microns per pixel"@en .
+
+
+HBP_DTAT:0000027 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000002 ;
+	nsu:definition "Resolution units, pixels per area unit."@en ;
+	rdfs:label "millimeters per pixel"@en .
