@@ -229,7 +229,7 @@ HBP_DTAT:0000032 rdf:type owl:Class ;
 
 HBP_DTAT:0000033 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000020 ;
-	nsu:definition "Numeric value."@en ;
+	nsu:definition "Trace number, can also be found in the file name. For each cell and ordinal there are usually two files, the voltage and the current channel recordings."@en ;
 	skos:prefLabel "ordinal"@en ;
 	rdfs:label "Neobase ordinal"@en .
 
