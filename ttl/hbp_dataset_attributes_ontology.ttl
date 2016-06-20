@@ -204,3 +204,38 @@ HBP_DTAT:0000029 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000000 ;
 	nsu:definition "URL to website containing information on datasets from a data provider."@en ;
 	rdfs:label "External website URL"@en .
+
+
+HBP_DTAT:0000030 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Electrical cell type of the neuron as described by BBP."@en ;
+	skos:prefLabel "etype_bbp"@en ;
+	rdfs:label "BBP etype"@en .
+
+
+HBP_DTAT:0000031 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Morphology cell type of the neuron as described by Neobase."@en ;
+	skos:prefLabel "mtype"@en ;
+	rdfs:label "Neobase mtype"@en .
+
+
+HBP_DTAT:0000032 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Timestep size used for applying the current, given in seconds or milliseconds."@en ;
+	skos:prefLabel "timestep"@en ;
+	rdfs:label "Time step"@en .
+
+
+HBP_DTAT:0000033 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Numeric value."@en ;
+	skos:prefLabel "ordinal"@en ;
+	rdfs:label "Neobase ordinal"@en .
+
+
+HBP_DTAT:0000034 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000020 ;
+	nsu:definition "Number for identifying a project in Neobase."@en ;
+	skos:prefLabel "projectid"@en ;
+	rdfs:label "Neobase project id"@en .
