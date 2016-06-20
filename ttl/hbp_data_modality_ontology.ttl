@@ -21,7 +21,7 @@
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000000
 
 HBP_DAMO:0000000 rdf:type owl:Class ;
-	rdfs:label "Data modality" .
+	rdfs:label "Data modality" @en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000001
 
@@ -91,7 +91,7 @@ HBP_DAMO:0000010 rdf:type owl:Class ;
 HBP_DAMO:0000011 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000000 ;
 	nsu:definition "The systematic analysis and investigation of human or animal behaviour in response to a praticular situation or stimulus through controlled and naturalistic observation and disciplined scientific experimentation. "@en ;
-	rdfs:label "Behaviour"@en .
+	rdfs:label "Behavioural data"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000012
 
@@ -124,7 +124,7 @@ HBP_DAMO:0000015 rdf:type owl:Class ;
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000016
 
 HBP_DAMO:0000016 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DAMO:0000013 ;
+	rdfs:subClassOf HBP_DAMO:0000036 ;
 	nsu:definition "This modality includes the computational models of biochemical reactions that may include the rate of the reaction, substrates and products, order of binding, reaction conditions (pH, temperature, concentration, etc..) and effectors (inhibitors, activators) . "@en ;
 	rdfs:label "Kinetic model"@en .
 # 
@@ -159,9 +159,9 @@ HBP_DAMO:0000020 rdf:type owl:Class ;
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000021
 
 HBP_DAMO:0000021 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DAMO:0000013 ;
+	rdfs:subClassOf HBP_DAMO:0000057 ;
 	nsu:definition "This modality includes the mathematical description of the properties of nerve cells or neurons that is designed to accurately describe and predict biological processes. Scales can include: multiple cells. "@en ;
-	rdfs:label "Neural network model"@en .
+	rdfs:label "Spiking neural network model"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000022
 
@@ -222,17 +222,19 @@ HBP_DAMO:0000029 rdf:type owl:Class ;
 HBP_DAMO:0000030 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000052 ;
 	rdfs:label "Cell density"@en .
+
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000034
 
 HBP_DAMO:0000034 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DAMO:0000021 ;
-	rdfs:label "Spiking neural network model"@en .
+	rdfs:subClassOf HBP_DAMO:0000061 ;
+	rdfs:label "Astrocyte model"@en .
+
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000035
 
 HBP_DAMO:0000035 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DAMO:0000021 ;
+	rdfs:subClassOf HBP_DAMO:0000057 ;
 	rdfs:label "Neural mass model"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000036
@@ -244,20 +246,20 @@ HBP_DAMO:0000036 rdf:type owl:Class ;
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000037
 
 HBP_DAMO:0000037 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DAMO:0000013 ;
+	rdfs:subClassOf HBP_DAMO:0000036 ;
 	rdfs:label "Ionic current model"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000038
 
 HBP_DAMO:0000038 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DAMO:0000013 ;
+	rdfs:subClassOf HBP_DAMO:0000062 ;
 	rdfs:label "Point neuron model"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000039
 
 HBP_DAMO:0000039 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000000 ;
-	rdfs:label "Simulation"@en .
+	rdfs:label "Simulation data"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000040
 
@@ -344,4 +346,78 @@ HBP_DAMO:0000053 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000039 ;
 	rdfs:label "Digital neuron synthesis"@en .
 # 
+# http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000054
+
+HBP_DAMO:0000054 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DAMO:0000006 ;
+	rdfs:label "Cytoarchitecture"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000055
+
+HBP_DAMO:0000055 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DAMO:0000006 ;
+	rdfs:label "Myeloarchitecture"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000056
+
+HBP_DAMO:0000056 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DAMO:0000002 ;
+	rdfs:label "Proteomics"@en .
+
+# 
+# http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000057
+
+HBP_DAMO:0000057 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DAMO:0000013 ;
+	rdfs:label "Microcircuit model"@en .
+
+# 
+# http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000058
+
+HBP_DAMO:0000058 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DAMO:0000013 ;
+	rdfs:label "Synapse model"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000059
+
+HBP_DAMO:0000059 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DAMO:0000013 ;
+	rdfs:label "Whole brain model"@en .
+
+# 
+# http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000060
+
+HBP_DAMO:0000060 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DAMO:0000013 ;
+	rdfs:label "Brain region model"@en .
+
+# 
+# http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000061
+
+HBP_DAMO:0000061 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DAMO:0000013 ;
+	rdfs:label "Cellular model"@en .
+
+# 
+# http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000062
+
+HBP_DAMO:0000062 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DAMO:0000061 ;
+	rdfs:label "Single neuron model"@en .
+
+# 
+# http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000063
+
+HBP_DAMO:0000063 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DAMO:0000062 ;
+	rdfs:label "Detailed morphological model"@en .
+
+# 
+#http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000064
+
+HBP_DAMO:0000064 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DAMO:0000052 ;
+	rdfs:label "Neurotransmitter transport proteindistribution"@en .
+# 
+
 # Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi

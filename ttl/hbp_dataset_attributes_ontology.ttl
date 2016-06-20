@@ -192,3 +192,15 @@ HBP_DTAT:0000027 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000002 ;
 	nsu:definition "Resolution units, pixels per area unit."@en ;
 	rdfs:label "millimeters per pixel"@en .
+
+
+HBP_DTAT:0000028 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	nsu:definition "External viewer contains the URL of a viewer of images from the data provider."@en ;
+	rdfs:label "External viewer URL"@en .
+
+
+HBP_DTAT:0000029 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	nsu:definition "URL to website containing information on datasets from a data provider."@en ;
+	rdfs:label "External website URL"@en .
