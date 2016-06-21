@@ -313,6 +313,48 @@ HBP_TAX:0000016 rdf:type owl:Class ;
                             "B6;SJL-Tg(APPSWE)2576Kha"@en .
 
 
+HBP_TAX:0000017 rdf:type owl:Class ;                
+                rdfs:label "Tg(PrP-tTA-lacZ)"@en ;
+                rdfs:subClassOf obo:NCBITaxon_10090 ;
+                HBP_PROP:has_rank HBP_TAX:9999998 ;
+                nsu:definition "This is a double transgenic mice produced by crossbreeding the PrP promoter (Prnp-tTA) mouse line F959 (Tremblay et al., 1998) with a responder mouse line transgenic for a bidirectional reporter geneconstruct containing both the Luciferase and LacZ reporter gene, which encodes the enzyme β-galactosidase."@en ;
+                nsu:synonym "Tg(Prnp-tTA:βGal)"@en .
+
+
+HBP_TAX:0000018 rdf:type owl:Class ;                
+                rdfs:label "Tg(CamKII-tTA-lacZ)"@en ;
+                rdfs:subClassOf obo:NCBITaxon_10090 ;
+                HBP_PROP:has_rank HBP_TAX:9999998 ;
+                nsu:definition "This is a double transgenic mice produced by crossbreeding the CamKII promoter (CamKII-tTA) with a responder mouse line transgenic for a bidirectional reporter geneconstruct containing both the Luciferase and LacZ reporter gene, which encodes the enzyme β-galactosidase."@en ;
+                nsu:synonym "Tg(CamKII-tTA:βGal)"@en .
+                            
+
+HBP_TAX:0000019 rdf:type owl:Class ;                
+                rdfs:label "Tg(Nop-tTA-lacZ)"@en ;
+                rdfs:subClassOf obo:NCBITaxon_10090 ;
+                HBP_PROP:has_rank HBP_TAX:9999998 ;
+                nsu:definition "This is a double transgenic mice produced by crossbreeding the NOP promoter (NOP-tTA) with a responder mouse line transgenic for a bidirectional reporter geneconstruct containing both the Luciferase and LacZ reporter gene, which encodes the enzyme β-galactosidase."@en ;
+                nsu:synonym "Tg(NOP-tTA:βGal)"@en .
+                            
+
+HBP_TAX:0000020 rdf:type owl:Class ;                
+                rdfs:label "Tg(tTA-lacZ)"@en ;
+                rdfs:subClassOf obo:NCBITaxon_10090 ;
+                HBP_PROP:has_rank HBP_TAX:9999998 ;
+                nsu:definition "This is a mouse line transgenic for a bidirectional reporter geneconstruct containing both the Luciferase and LacZ reporter gene, which encodes the enzyme β-galactosidase."@en ;
+                nsu:synonym "Tg(TA:βGal)"@en .
+
+
+
+HBP_TAX:0000020 rdf:type owl:Class ;                
+                rdfs:label "Tg(ArcSwe)"@en ;
+                rdfs:subClassOf obo:NCBITaxon_10090 ;
+                HBP_PROP:has_rank HBP_TAX:9999998 ;
+                nsu:definition "This is a mouse model for Alzheimer's disease. It carries the Arctic (E693G) and Swedish (KM670/6701NL) mutations, it develops amyloid-beta (Aβ) deposits in the brain."@en ;
+                nsu:synonym "tg-ArcSwe"@en .
+                            
+                            
+
 ###  http://www.ebi.ac.uk/efo/EFO_0001352
 
 efo:EFO_0001352 rdf:type owl:Class ;
