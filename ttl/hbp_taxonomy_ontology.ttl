@@ -346,14 +346,23 @@ HBP_TAX:0000020 rdf:type owl:Class ;
 
 
 
-HBP_TAX:0000020 rdf:type owl:Class ;                
+HBP_TAX:0000021 rdf:type owl:Class ;                
                 rdfs:label "Tg(ArcSwe)"@en ;
                 rdfs:subClassOf obo:NCBITaxon_10090 ;
                 HBP_PROP:has_rank HBP_TAX:9999998 ;
                 nsu:definition "This is a mouse model for Alzheimer's disease. It carries the Arctic (E693G) and Swedish (KM670/6701NL) mutations, it develops amyloid-beta (Aβ) deposits in the brain."@en ;
                 nsu:synonym "tg-ArcSwe"@en .
-                            
-                            
+
+
+
+HBP_TAX:0000022 rdf:type owl:Class ;                
+                rdfs:label "C57BL/6J X 129/Sv"@en ;
+                rdfs:subClassOf obo:NCBITaxon_10090 ;
+                HBP_PROP:has_rank HBP_TAX:9999998 ;
+                nsu:definition "C57BL/6 X 129/Sv is a mouse strain derived from the mixture of C57BL/6 and 129/Sv strains."@en ;
+                nsu:synonym "129/Sv X C57BL/6"@en .
+                           
+                         
 
 ###  http://www.ebi.ac.uk/efo/EFO_0001352
 
