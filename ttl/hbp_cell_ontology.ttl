@@ -1181,5 +1181,12 @@ HBP_CELL:0000150 rdf:type owl:Class ;
 
 HBP_CELL:0000151 rdf:type owl:Class ;
                     
-                  rdfs:label "Stratum radiatum interneuron"@en ;
+                  rdfs:label "Hippocampus CA1 interneuron"@en ;
                   nsu:synonym "SR_interneuron"@en .
+
+
+HBP_CELL:0000152 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nifext_128;  
+                  rdfs:label "Cerebellum granule cell"@en ;
+                  nsu:synonym "Cerebellar granule cell"@en ;
+                  nsu:synonym "Cerebellar granule neuron"@en.
