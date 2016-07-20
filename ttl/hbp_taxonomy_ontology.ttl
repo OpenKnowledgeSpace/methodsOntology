@@ -360,8 +360,8 @@ HBP_TAX:0000022 rdf:type owl:Class ;
                 rdfs:subClassOf obo:NCBITaxon_10090 ;
                 HBP_PROP:has_rank HBP_TAX:9999998 ;
                 nsu:definition "C57BL/6 X 129/Sv is a mouse strain derived from the mixture of C57BL/6 and 129/Sv strains."@en ;
-                nsu:synonym "129/Sv X C57BL/6"@en .
-                           
+                nsu:synonym "129/Sv X C57BL/6"@en ;
+                nsu:synonym "C57 x Sv129"@en .
                          
 
 ###  http://www.ebi.ac.uk/efo/EFO_0001352
