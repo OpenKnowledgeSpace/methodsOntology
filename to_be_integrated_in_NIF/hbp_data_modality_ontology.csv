@@ -1,0 +1,49 @@
+Ontology|curie|name|synonyms|integred_in_NIF
+hbp_data_modality_ontology|HBP_DAMO:0000050|Gap junction||yes
+hbp_data_modality_ontology|HBP_DAMO:0000052|Densities and distributions||yes
+hbp_data_modality_ontology|HBP_DAMO:0000001|Morphology reconstruction||yes
+hbp_data_modality_ontology|HBP_DAMO:0000051|Synaptic connectivity||yes
+hbp_data_modality_ontology|HBP_DAMO:0000020|Projection tracts||yes
+hbp_data_modality_ontology|HBP_DAMO:0000021|Neural network model||yes
+hbp_data_modality_ontology|HBP_DAMO:0000022|Gene expression||yes
+hbp_data_modality_ontology|HBP_DAMO:0000023|Single cell transcriptomics||yes
+hbp_data_modality_ontology|HBP_DAMO:0000014|Functional connectivity||yes
+hbp_data_modality_ontology|HBP_DAMO:0000046|Dendritic spine morphology||yes
+hbp_data_modality_ontology|HBP_DAMO:0000013|Model||yes
+hbp_data_modality_ontology|HBP_DAMO:0000047|Axonal boutons||yes
+hbp_data_modality_ontology|HBP_DAMO:0000016|Kinetic model||yes
+hbp_data_modality_ontology|HBP_DAMO:0000048|Current traces||yes
+hbp_data_modality_ontology|HBP_DAMO:0000015|Effective connectivity||yes
+hbp_data_modality_ontology|HBP_DAMO:0000049|Voltage traces||yes
+hbp_data_modality_ontology|HBP_DAMO:0000018|Functional imaging||yes
+hbp_data_modality_ontology|HBP_DAMO:0000017|Structural imaging||yes
+hbp_data_modality_ontology|HBP_DAMO:0000019|Single cell morphology reconstruction||yes
+hbp_data_modality_ontology|HBP_DAMO:0000011|Behaviour||yes
+hbp_data_modality_ontology|HBP_DAMO:0000041|Locomotor activity||yes
+hbp_data_modality_ontology|HBP_DAMO:0000012|Expression data||yes
+hbp_data_modality_ontology|HBP_DAMO:0000040|Learning and memory||yes
+hbp_data_modality_ontology|HBP_DAMO:0000030|Cell density map||yes
+hbp_data_modality_ontology|HBP_DAMO:0000010|Reference atlas||yes
+hbp_data_modality_ontology|HBP_DAMO:0000045|Axon morphology||yes
+hbp_data_modality_ontology|HBP_DAMO:0000034|Spiking neural network model||yes
+hbp_data_modality_ontology|HBP_DAMO:0000044|Paired cell morphology reconstruction||yes
+hbp_data_modality_ontology|HBP_DAMO:0000043|Depression||yes
+hbp_data_modality_ontology|HBP_DAMO:0000042|Anxiety||yes
+hbp_data_modality_ontology|HBP_DAMO:0000037|Ionic current model||yes
+hbp_data_modality_ontology|HBP_DAMO:0000027|Commisural tracts||yes
+hbp_data_modality_ontology|HBP_DAMO:0000038|Point neuron model||yes
+hbp_data_modality_ontology|HBP_DAMO:0000026|Association tracts||yes
+hbp_data_modality_ontology|HBP_DAMO:0000008|Electrophysiology||yes
+hbp_data_modality_ontology|HBP_DAMO:0000035|Neural mass model||yes
+hbp_data_modality_ontology|HBP_DAMO:0000025|White matter tracts||yes
+hbp_data_modality_ontology|HBP_DAMO:0000007|Physiological data||yes
+hbp_data_modality_ontology|HBP_DAMO:0000036|Ion channel model||yes
+hbp_data_modality_ontology|HBP_DAMO:0000024|3D protein structure model||yes
+hbp_data_modality_ontology|HBP_DAMO:0000006|Anatomical data||yes
+hbp_data_modality_ontology|HBP_DAMO:0000005|Anatomical connectivity||yes
+hbp_data_modality_ontology|HBP_DAMO:0000004|Parcellation||yes
+hbp_data_modality_ontology|HBP_DAMO:0000039|Simulation||yes
+hbp_data_modality_ontology|HBP_DAMO:0000029|Receptor distribution map||yes
+hbp_data_modality_ontology|HBP_DAMO:0000003|Transcriptomics||yes
+hbp_data_modality_ontology|HBP_DAMO:0000002|Protein expression||yes
+hbp_data_modality_ontology|HBP_DAMO:0000028|Channel distribution map||yes

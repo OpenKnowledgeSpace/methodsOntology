@@ -1,0 +1,4 @@
+Ontology|curie|name|synonyms|integred_in_NIF
+hbp_sex_ontology|HBP_SEX:0000002|female||yes
+hbp_sex_ontology|HBP_SEX:0000001|male||yes
+hbp_sex_ontology|HBP_SEX:0000003|hermaphrodite||yes

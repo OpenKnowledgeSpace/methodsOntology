@@ -1,0 +1,151 @@
+Ontology|curie|name|synonyms|integred_in_NIF
+hbp_cell_ontology|HBP_CELL:0000049|Layer V untufted pyramidal cell|L5_UTPC|yes
+hbp_cell_ontology|HBP_CELL:0000048|Layer V early bifurcating thick tufted pyramidal cell|L5_TTPC2|yes
+hbp_cell_ontology|HBP_CELL:0000047|Layer VI bipolar pyramidal cell|L6_BPC|yes
+hbp_cell_ontology|HBP_CELL:0000040|Late bifurcating thick tufted pyramidal cell|TTPC1|yes
+hbp_cell_ontology|HBP_CELL:0000041|Untufted slender pyramidal cell|USPC|yes
+hbp_cell_ontology|HBP_CELL:0000042|Inverted pyramidal cell|ITPC,IPC|yes
+hbp_cell_ontology|HBP_CELL:0000149|Hippocampus CA3 pyramidal cell|CA3_PC|yes
+hbp_cell_ontology|HBP_CELL:0000148|Neostriatum direct pathway spiny neuron|Striatal medium spiny neuron,MSNs|yes
+hbp_cell_ontology|HBP_CELL:0000147|Hippocampus CA1 Schaffer collateral-associated cell|SP_SCA|yes
+hbp_cell_ontology|HBP_CELL:0000146|Hippocampus CA1 IS-I neuron|SP_IS1|yes
+hbp_cell_ontology|HBP_CELL:0000145|Hippocampus CA1 pyramidal cell|SP_PC|yes
+hbp_cell_ontology|HBP_CELL:0000144|Hippocampus CA1 ivy neuron|SP_IVY|yes
+hbp_cell_ontology|HBP_CELL:0000143|Hippocampus CA1 PV+ basket cell|SP_PVBC|yes
+hbp_cell_ontology|HBP_CELL:0000142|Hippocampus CA1 CCK+ basket cell|SP_CCKBC|yes
+hbp_cell_ontology|HBP_CELL:0000150|Hippocampus pyramidal cell|Hippocampal pyramidal neuron|yes
+hbp_cell_ontology|HBP_CELL:0000033|Neuron classified based on location||yes
+hbp_cell_ontology|HBP_CELL:0000032|Narrow pyramidal cell projecting to thalamus|NPC|yes
+hbp_cell_ontology|HBP_CELL:0000099|Layer V bipolar cell|L5_BP|yes
+hbp_cell_ontology|HBP_CELL:0000035|Tufted pyramidal cell towards layer IV|TPC_L4|yes
+hbp_cell_ontology|HBP_CELL:0000098|Layer IV bipolar cell|L4_BP|yes
+hbp_cell_ontology|HBP_CELL:0000034|Neuron classified base on regional projection||yes
+hbp_cell_ontology|HBP_CELL:0000037|Thick tufted pyramidal cell|TTPC|yes
+hbp_cell_ontology|HBP_CELL:0000036|Tufted pyramidal cell towards layer I|TPC_L1|yes
+hbp_cell_ontology|HBP_CELL:0000039|Early bifurcating thick tufted pyramidal cell|TTPC2|yes
+hbp_cell_ontology|HBP_CELL:0000038|Slender tufted pyramidal cell|STPC|yes
+hbp_cell_ontology|HBP_CELL:0000118|Layer IV Martinotti cell|L4_MC|yes
+hbp_cell_ontology|HBP_CELL:0000074|Accomodating cell|AC|yes
+hbp_cell_ontology|HBP_CELL:0000094|Layer I horizontal axon cell|L1_HAC|yes
+hbp_cell_ontology|HBP_CELL:0000117|Layer II/III Martinotti cell|L2/3_MC,L23_MC|yes
+hbp_cell_ontology|HBP_CELL:0000075|Irregular spiking cell|IR|yes
+hbp_cell_ontology|HBP_CELL:0000095|Layer I large axon cell|L1_LAC|yes
+hbp_cell_ontology|HBP_CELL:0000072|Stuttering cell|STUT|yes
+hbp_cell_ontology|HBP_CELL:0000096|Layer I small axon cell|L1_SAC|yes
+hbp_cell_ontology|HBP_CELL:0000119|Layer V Martinotti cell|L5_MC|yes
+hbp_cell_ontology|HBP_CELL:0000073|Non-accomodating cell|NAC|yes
+hbp_cell_ontology|HBP_CELL:0000097|Layer II/III bipolar cell|L2/3_BP,L23_BP|yes
+hbp_cell_ontology|HBP_CELL:0000070|Neuron classified based on firing behavior||yes
+hbp_cell_ontology|HBP_CELL:0000071|Neuron classified based on spike behavior||yes
+hbp_cell_ontology|HBP_CELL:0000091|Layer I neurogliaform cell with dense axonal arbour|L1_NGC-DA|yes
+hbp_cell_ontology|HBP_CELL:0000092|Layer I neurogliaform cell with sparse axon arbour|L1_NGC-SA|yes
+hbp_cell_ontology|HBP_CELL:0000093|Layer I descending axon cell|L1_DAC|yes
+hbp_cell_ontology|HBP_CELL:0000110|Layer IV double bouquet cell|L4_DBC|yes
+hbp_cell_ontology|HBP_CELL:0000112|Layer VI double bouquet cell|L6_DBC|yes
+hbp_cell_ontology|HBP_CELL:0000111|Layer V double bouquet cell|L5_DBC|yes
+hbp_cell_ontology|HBP_CELL:0000114|Layer IV neurogliaform cell|L4_NGC|yes
+hbp_cell_ontology|HBP_CELL:0000113|Layer II/III neurogliaform cell|L2/3_NGC,L23_NGC|yes
+hbp_cell_ontology|HBP_CELL:0000116|Layer VI neurogliaform cell|L6_NGC|yes
+hbp_cell_ontology|HBP_CELL:0000115|Layer V neurogliaform cell|L5_NGC|yes
+hbp_cell_ontology|HBP_CELL:0000069|Small axon cell|SAC,SLAC|yes
+hbp_cell_ontology|HBP_CELL:0000088|Delayed non-accomodating cell|dNAC|yes
+hbp_cell_ontology|HBP_CELL:0000068|Horizontal axon cell|HAC|yes
+hbp_cell_ontology|HBP_CELL:0000087|Delayed stuttering cell|dSTUT|yes
+hbp_cell_ontology|HBP_CELL:0000067|Large axon cell|LAC|yes
+hbp_cell_ontology|HBP_CELL:0000066|Descending axon cell|DAC|yes
+hbp_cell_ontology|HBP_CELL:0000089|Delayed accomodating cell|dAC|yes
+hbp_cell_ontology|HBP_CELL:0000065|Axonal cell||yes
+hbp_cell_ontology|HBP_CELL:0000085|Burst irregular cell|bIR|yes
+hbp_cell_ontology|HBP_CELL:0000061|Cajal-Retzius cell like cell|CrC|yes
+hbp_cell_ontology|HBP_CELL:0000086|Burst accomodating cell|bAC|yes
+hbp_cell_ontology|HBP_CELL:0000062|Small basket cell|SBC|yes
+hbp_cell_ontology|HBP_CELL:0000129|Layer VI small basket cell|L6_SBC|yes
+hbp_cell_ontology|HBP_CELL:0000083|Burst stuttering cell|bSTUT|yes
+hbp_cell_ontology|HBP_CELL:0000063|Large basket cell|LBC|yes
+hbp_cell_ontology|HBP_CELL:0000128|Layer V small basket cell|L5_SBC|yes
+hbp_cell_ontology|HBP_CELL:0000084|Burst non-accomodating cell|bNAC|yes
+hbp_cell_ontology|HBP_CELL:0000064|Nest basket cell|arcade cell,NBC,willow cell|yes
+hbp_cell_ontology|HBP_CELL:0000081|Classical non-accomodating cell|cNAC|yes
+hbp_cell_ontology|HBP_CELL:0000082|Classical accomodating cell|cAC|yes
+hbp_cell_ontology|HBP_CELL:0000080|Classical irregular cell|cIR|yes
+hbp_cell_ontology|HBP_CELL:0000060|Chandelier cell|Axo-axonic cell,Neocortex chandelier cell,ChC|yes
+hbp_cell_ontology|HBP_CELL:0000123|Layer V large basket cell|L5_LBC|yes
+hbp_cell_ontology|HBP_CELL:0000122|Layer IV large basket cell|L4_LBC|yes
+hbp_cell_ontology|HBP_CELL:0000121|Layer II/III large basket cell|L23_LBC,L2/3_LBC|yes
+hbp_cell_ontology|HBP_CELL:0000120|Layer VI Martinotti cell|L6_MC|yes
+hbp_cell_ontology|HBP_CELL:0000127|Layer IV small basket cell|L4_SBC|yes
+hbp_cell_ontology|HBP_CELL:0000126|Layer II/III small basket cell|L23_SBC,L2/3_SBC|yes
+hbp_cell_ontology|HBP_CELL:0000125|Layer II/III nest basket cell|L23_NBC,L2/3_NBC|yes
+hbp_cell_ontology|HBP_CELL:0000001|Neuron||yes
+hbp_cell_ontology|HBP_CELL:0000002|Glial cell||yes
+hbp_cell_ontology|HBP_CELL:0000000|Cell||yes
+hbp_cell_ontology|HBP_CELL:0000005|Neuron classified based on molecular expression||yes
+hbp_cell_ontology|HBP_CELL:0000006|Neuron classified based on connection properties||yes
+hbp_cell_ontology|HBP_CELL:0000003|Neuron classified base morphological properties||yes
+hbp_cell_ontology|HBP_CELL:0000004|Neuron classified base electrical properties||yes
+hbp_cell_ontology|HBP_CELL:0000009|Neuron classified based on protein expression||yes
+hbp_cell_ontology|HBP_CELL:0000007|Neuron classified based on neurotransmitter release||yes
+hbp_cell_ontology|HBP_CELL:0000008|Neuron classified based on synaptic properties||yes
+hbp_cell_ontology|HBP_CELL:0000102|Layer IV bitufted cell|L4_BTC|yes
+hbp_cell_ontology|HBP_CELL:0000103|Layer V bitufted cell|L5_BTC|yes
+hbp_cell_ontology|HBP_CELL:0000104|Layer VI bitufted cell|L6_BTC|yes
+hbp_cell_ontology|HBP_CELL:0000105|Layer II/III chandelier cell|L23_ChC,L2/3_ChC|yes
+hbp_cell_ontology|HBP_CELL:0000100|Layer VI bipolar cell|L6_BP|yes
+hbp_cell_ontology|HBP_CELL:0000101|Layer II/III bitufted cell|L2/3_BTC,L23_BTC|yes
+hbp_cell_ontology|HBP_CELL:0000106|Layer IV chandelier cell|L4_ChC|yes
+hbp_cell_ontology|HBP_CELL:0000107|Layer V chandelier cell|L5_ChC|yes
+hbp_cell_ontology|HBP_CELL:0000108|Layer VI chandelier cell|L6_ChC|yes
+hbp_cell_ontology|HBP_CELL:0000109|Layer II/III double bouquet cell|L2/3_DBC,L23_DBC|yes
+hbp_cell_ontology|HBP_CELL:0000031|Bipolar pyramidal cell|BPC|yes
+hbp_cell_ontology|HBP_CELL:0000030|Horizontal pyramidal cell|HPC|yes
+hbp_cell_ontology|HBP_CELL:0000027|Star pyramidal cell|SPC,SP|yes
+hbp_cell_ontology|HBP_CELL:0000028|Layer II/III pyramidal cell|L23_PC,Neocortex pyramidal cell layer 2-3,L2/3_PC|yes
+hbp_cell_ontology|HBP_CELL:0000025|Spiny stellate cell|SS,SSC,Neocortex stellate spiny cell|yes
+hbp_cell_ontology|HBP_CELL:0000026|Layer IV spiny stellate cell|L4_SS,Neocortex stellate layer 4 cell|yes
+hbp_cell_ontology|HBP_CELL:0000023|Tufted pyramidal cell|TPC|yes
+hbp_cell_ontology|HBP_CELL:0000024|Untufted pyramidal cell|UTPC|yes
+hbp_cell_ontology|HBP_CELL:0000021|Glutamatergic neuron||yes
+hbp_cell_ontology|HBP_CELL:0000022|GABAergic neuron||yes
+hbp_cell_ontology|HBP_CELL:0000029|Layer IV pyramidal cell|L4_PC|yes
+hbp_cell_ontology|HBP_CELL:0000020|Excitatory neuron||yes
+hbp_cell_ontology|HBP_CELL:0000014|Neuron expressing calbindin|CB+ cell,Calbindin neuron,Calbindin 1 expressing cell|yes
+hbp_cell_ontology|HBP_CELL:0000015|Neuron expressing somatostatin|SOM+ cell,Sst+ cell|yes
+hbp_cell_ontology|HBP_CELL:0000016|Neuron expressing parvalbumin|Pvalb+ cell,PV+ cell,Parvalbumin neuron|yes
+hbp_cell_ontology|HBP_CELL:0000017|Neuron expressing calretinin|Calb2+ cell,CR+ cell,Calretinin neuron|yes
+hbp_cell_ontology|HBP_CELL:0000010|Neuron classified based on gene expression||yes
+hbp_cell_ontology|HBP_CELL:0000011|Neuron expressing neuropeptide y|NPY+ cell|yes
+hbp_cell_ontology|HBP_CELL:0000012|Neuron expressing vasoactive intestinal peptide|VIP+ cell|yes
+hbp_cell_ontology|HBP_CELL:0000013|Neuron expressing cholecystokinin|CCK+ cell|yes
+hbp_cell_ontology|HBP_CELL:0000018|Pyramidal cell|Neocortex pyramidal cell,PC|yes
+hbp_cell_ontology|HBP_CELL:0000019|Inhibitory neuron||yes
+hbp_cell_ontology|HBP_CELL:0000052|Basket cell|BC,Neocortex basket cell|yes
+hbp_cell_ontology|HBP_CELL:0000139|Hippocampus CA1 trilaminar neuron|SO_TRI|yes
+hbp_cell_ontology|HBP_CELL:0000053|Bipolar cell|BP,Neocortex bipolar cell|yes
+hbp_cell_ontology|HBP_CELL:0000050|Layer V slender tufted pyramidal cell|L5_STPC|yes
+hbp_cell_ontology|HBP_CELL:0000051|Layer VI tufted pyramidal cell towards layer I|L6_TPC_L1|yes
+hbp_cell_ontology|HBP_CELL:0000136|Hippocampus CA1 back-projecting cell|SO_BP|yes
+hbp_cell_ontology|HBP_CELL:0000135|Hippocampus CA1 perforant pathway-associated cell|SLM_PPA|yes
+hbp_cell_ontology|HBP_CELL:0000138|Hippocampus CA1 oriens lacunosum moleculare neuron|SO_OLM|yes
+hbp_cell_ontology|HBP_CELL:0000137|Hippocampus CA1 bistratified cell|SP_BS,SO_BS|yes
+hbp_cell_ontology|HBP_CELL:0000132|Layer VI nest basket cell|L6_NBC|yes
+hbp_cell_ontology|HBP_CELL:0000131|Layer V nest basket cell|L5_NBC|yes
+hbp_cell_ontology|HBP_CELL:0000134|Layer IV star pyramidal cell|L4_SP|yes
+hbp_cell_ontology|HBP_CELL:0000133|GABAergic interneuron||yes
+hbp_cell_ontology|HBP_CELL:0000140|Hippocampus CA1 axo-axonic neuron|SP_AA|yes
+hbp_cell_ontology|HBP_CELL:0000141|Hippocampus CA1 basket cell|SP_BC|yes
+hbp_cell_ontology|HBP_CELL:0000046|Layer VI inverted pyramidal cell|L6_IPC|yes
+hbp_cell_ontology|HBP_CELL:0000045|Layer VI untufted pyramidal cell|L6_UTPC|yes
+hbp_cell_ontology|HBP_CELL:0000044|Layer V late bifurcating thick tufted pyramidal cell|L5_TTPC1|yes
+hbp_cell_ontology|HBP_CELL:0000043|Layer VI tufted pyramidal cell towards layer IV|L6_TTPC_L4|yes
+hbp_cell_ontology|HBP_CELL:0000124|Layer VI large basket cell|L6_LBC|yes
+hbp_cell_ontology|HBP_CELL:0000130|Layer IV nest basket cell|L4_NBC|yes
+hbp_cell_ontology|HBP_CELL:0000059|Double bouquet cell|DBC,Neocortex bouquet double cell|yes
+hbp_cell_ontology|HBP_CELL:0000058|Neurogliaform cell with dense axonal arbours|NGC-DA|yes
+hbp_cell_ontology|HBP_CELL:0000079|Classical stuttering cell|cSTUT|yes
+hbp_cell_ontology|HBP_CELL:0000055|Martinotti cell|MC,Neocortex Martinotti cell|yes
+hbp_cell_ontology|HBP_CELL:0000078|Delayed firing cell||yes
+hbp_cell_ontology|HBP_CELL:0000054|Bitufted cell|BTC|yes
+hbp_cell_ontology|HBP_CELL:0000077|Burst firing cell||yes
+hbp_cell_ontology|HBP_CELL:0000057|Neurogliaform cell with sparse axonal arbours|NGC-SA|yes
+hbp_cell_ontology|HBP_CELL:0000076|Classical firing cell||yes
+hbp_cell_ontology|HBP_CELL:0000056|Neurogliaform cell|NGC|yes

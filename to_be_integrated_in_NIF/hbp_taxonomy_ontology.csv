@@ -1,0 +1,11 @@
+Ontology|curie|name|synonyms|integred_in_NIF
+hbp_taxonomy_ontology|HBP_TAX:0000014|5HT3-EGFP||yes
+hbp_taxonomy_ontology|HBP_TAX:9999995|rank||yes
+hbp_taxonomy_ontology|HBP_TAX:0000013|CD-1|CD1|yes
+hbp_taxonomy_ontology|HBP_TAX:9999996|species||yes
+hbp_taxonomy_ontology|HBP_TAX:0000012|VGlut Venus knockin||yes
+hbp_taxonomy_ontology|HBP_TAX:9999997|class||yes
+hbp_taxonomy_ontology|HBP_TAX:0000011|Long-Evans||yes
+hbp_taxonomy_ontology|HBP_TAX:9999999|order||yes
+hbp_taxonomy_ontology|HBP_TAX:0000008|Han wistar||yes
+hbp_taxonomy_ontology|HBP_TAX:9999998|strain||yes
