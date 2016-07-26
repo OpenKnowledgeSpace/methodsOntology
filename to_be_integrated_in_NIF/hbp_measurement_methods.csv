@@ -1,0 +1,205 @@
+Ontology|curie|name|synonyms|integred_in_NIF
+hbp_measurement_methods|HBP_MEM:0000078|Fei Mao dyes|FM dyes|yes
+hbp_measurement_methods|HBP_MEM:0000077|Imaging synaptic transmission||yes
+hbp_measurement_methods|HBP_MEM:0000076|Genetically encoded calcium indicators|GECIs|yes
+hbp_measurement_methods|HBP_MEM:0000075|Ratiometric calcium indicator dyes||yes
+hbp_measurement_methods|HBP_MEM:0000079|pH sensitive fluorescent proteins||yes
+hbp_measurement_methods|HBP_MEM:0000080|Protein function visualization||yes
+hbp_measurement_methods|HBP_MEM:0000081|Time-lapse imaging with reporter genes||yes
+hbp_measurement_methods|HBP_MEM:0000084|Fluorescence recovery after photobleaching|FRAP|yes
+hbp_measurement_methods|HBP_MEM:0000085|Photoactivation and photoconversion||yes
+hbp_measurement_methods|HBP_MEM:0000082|Fluorescence resonance energy transfer|Förster resonance energy transfer,FRET|yes
+hbp_measurement_methods|HBP_MEM:0000083|Bimolecular fluorescence complementation|BiFC|yes
+hbp_measurement_methods|HBP_MEM:0000065|Array tomography||yes
+hbp_measurement_methods|HBP_MEM:0000064|Indirect immunohistochemistry|Indirect IHC|yes
+hbp_measurement_methods|HBP_MEM:0000067|Neural activity visualization||yes
+hbp_measurement_methods|HBP_MEM:0000066|Neural function visualization||yes
+hbp_measurement_methods|HBP_MEM:0000069|Imaging voltage||yes
+hbp_measurement_methods|HBP_MEM:0000068|Static markers of activity||yes
+hbp_measurement_methods|HBP_MEM:0000070|Voltage-sensitive dye imaging|VSDI|yes
+hbp_measurement_methods|HBP_MEM:0000071|Genetically encoded voltage indicators|GEVIs|yes
+hbp_measurement_methods|HBP_MEM:0000072|Imaging calcium dynamics||yes
+hbp_measurement_methods|HBP_MEM:0000073|Calcium indicator dyes||yes
+hbp_measurement_methods|HBP_MEM:0000074|Nonratiometric calcium indicator dyes||yes
+hbp_measurement_methods|HBP_MEM:0000099|Electron microscopy||yes
+hbp_measurement_methods|HBP_MEM:0000098|Total internal reflection fluorescence microscopy|TIRF microscopy|yes
+hbp_measurement_methods|HBP_MEM:0000097|Two-photon microscopy||yes
+hbp_measurement_methods|HBP_MEM:0000199|Time-of-flight|TOF|yes
+hbp_measurement_methods|HBP_MEM:0000198|Mass analyser||yes
+hbp_measurement_methods|HBP_MEM:0000197|Chemical ionization|CI|yes
+hbp_measurement_methods|HBP_MEM:0000196|Fast atom bombardment|FAB|yes
+hbp_measurement_methods|HBP_MEM:0000204|Current clamp voltage recording||yes
+hbp_measurement_methods|HBP_MEM:0000200|Quadrupole mass analyzer||yes
+hbp_measurement_methods|HBP_MEM:0000201|Fourier transform ion cyclotron resonance mass analyzer|FTICR|yes
+hbp_measurement_methods|HBP_MEM:0000202|Ion traps||yes
+hbp_measurement_methods|HBP_MEM:0000203|Voltage clamp current recording||yes
+hbp_measurement_methods|HBP_MEM:0000087|Cellular function in a fixed tissue||yes
+hbp_measurement_methods|HBP_MEM:0000086|Neural activity in a fixed tissue||yes
+hbp_measurement_methods|HBP_MEM:0000089|Light Microscopy||yes
+hbp_measurement_methods|HBP_MEM:0000088|Microscopy||yes
+hbp_measurement_methods|HBP_MEM:0000186|Hematoxylin||yes
+hbp_measurement_methods|HBP_MEM:0000185|Propidium iodide stain||yes
+hbp_measurement_methods|HBP_MEM:0000188|Cresyl violet||yes
+hbp_measurement_methods|HBP_MEM:0000187|Thionine||yes
+hbp_measurement_methods|HBP_MEM:0000189|Toluidine blue||yes
+hbp_measurement_methods|HBP_MEM:0000190|Eosin Y||yes
+hbp_measurement_methods|HBP_MEM:0000191|Methylene blue stain||yes
+hbp_measurement_methods|HBP_MEM:0000192|Hoechst stain|Bis-benzamide stain|yes
+hbp_measurement_methods|HBP_MEM:0000193|Biocytin stain||yes
+hbp_measurement_methods|HBP_MEM:0000194|Neurobiotin stain||yes
+hbp_measurement_methods|HBP_MEM:0000195|Ion sources||yes
+hbp_measurement_methods|HBP_MEM:0000093|Differential interference contrast microscopy|Normarski microscopy,DIC microscopy|yes
+hbp_measurement_methods|HBP_MEM:0000094|Fluorescence microscopy||yes
+hbp_measurement_methods|HBP_MEM:0000095|Epifluorescent microscopy||yes
+hbp_measurement_methods|HBP_MEM:0000096|Confocal microscopy||yes
+hbp_measurement_methods|HBP_MEM:0000090|Brightfield microscopy||yes
+hbp_measurement_methods|HBP_MEM:0000091|Phase-contrast microscopy||yes
+hbp_measurement_methods|HBP_MEM:0000092|Darkfield microscopy||yes
+hbp_measurement_methods|HBP_MEM:0000030|Neural structure visualization||yes
+hbp_measurement_methods|HBP_MEM:0000173|Open field test||yes
+hbp_measurement_methods|HBP_MEM:0000172|Homecage activity||yes
+hbp_measurement_methods|HBP_MEM:0000171|Running wheel||yes
+hbp_measurement_methods|HBP_MEM:0000170|Olfactory assays||yes
+hbp_measurement_methods|HBP_MEM:0000165|Von Frey assay||yes
+hbp_measurement_methods|HBP_MEM:0000166|Formalin assay||yes
+hbp_measurement_methods|HBP_MEM:0000163|Hargreaves assay||yes
+hbp_measurement_methods|HBP_MEM:0000164|Hot plate assay||yes
+hbp_measurement_methods|HBP_MEM:0000169|Taste assays||yes
+hbp_measurement_methods|HBP_MEM:0000028|Inside-out patch||yes
+hbp_measurement_methods|HBP_MEM:0000167|Visual cliff assay||yes
+hbp_measurement_methods|HBP_MEM:0000029|Cell-attached patch||yes
+hbp_measurement_methods|HBP_MEM:0000168|Startle response||yes
+hbp_measurement_methods|HBP_MEM:0000026|Outside-out patch||yes
+hbp_measurement_methods|HBP_MEM:0000027|Whole-cell recording||yes
+hbp_measurement_methods|HBP_MEM:0000024|Loose patch||yes
+hbp_measurement_methods|HBP_MEM:0000025|Perforated patch||yes
+hbp_measurement_methods|HBP_MEM:0000022|Voltage clamp current recording||yes
+hbp_measurement_methods|HBP_MEM:0000023|Sharp electrode technique||yes
+hbp_measurement_methods|HBP_MEM:0000020|Field potentials||yes
+hbp_measurement_methods|HBP_MEM:0000021|Current clamp voltage recording||yes
+hbp_measurement_methods|HBP_MEM:0000041|Phaseolus vulgaris- leucoagglutinin|PHA-L|yes
+hbp_measurement_methods|HBP_MEM:0000040|Biotinylated dextran amine|BDA|yes
+hbp_measurement_methods|HBP_MEM:0000180|Weil stain||yes
+hbp_measurement_methods|HBP_MEM:0000182|Basophilic stain||yes
+hbp_measurement_methods|HBP_MEM:0000181|Luxon fast blue|LFB|yes
+hbp_measurement_methods|HBP_MEM:0000184|DAPI stain|4’,6-diamidino-2-phenylindole stain|yes
+hbp_measurement_methods|HBP_MEM:0000183|Nissl stain||yes
+hbp_measurement_methods|HBP_MEM:0000174|Rotarod test||yes
+hbp_measurement_methods|HBP_MEM:0000175|Footprint pattern assay||yes
+hbp_measurement_methods|HBP_MEM:0000176|Hanging wire assay||yes
+hbp_measurement_methods|HBP_MEM:0000177|Vertical pole test||yes
+hbp_measurement_methods|HBP_MEM:0000178|Diffusion tensor imaging|DTI|yes
+hbp_measurement_methods|HBP_MEM:0000039|Anterograde tracers||yes
+hbp_measurement_methods|HBP_MEM:0000179|Weigert stain||yes
+hbp_measurement_methods|HBP_MEM:0000035|Golgi stain||yes
+hbp_measurement_methods|HBP_MEM:0000036|Intracellular and juxtacellular labeling||yes
+hbp_measurement_methods|HBP_MEM:0000037|Transsynaptic tracers||yes
+hbp_measurement_methods|HBP_MEM:0000038|Retrograde tracers||yes
+hbp_measurement_methods|HBP_MEM:0000031|Morphology visualization||yes
+hbp_measurement_methods|HBP_MEM:0000032|Circuitry visualization||yes
+hbp_measurement_methods|HBP_MEM:0000033|Cell body stains||yes
+hbp_measurement_methods|HBP_MEM:0000034|Fiber stains||yes
+hbp_measurement_methods|HBP_MEM:0000052|Herpes simplex virus|HSV|yes
+hbp_measurement_methods|HBP_MEM:0000051|Pseudorabies virus|PRV|yes
+hbp_measurement_methods|HBP_MEM:0000050|Tetanus toxin, fragment C|TTC|yes
+hbp_measurement_methods|HBP_MEM:0000151|Conditioned place preference and aversion||yes
+hbp_measurement_methods|HBP_MEM:0000150|Progressive ratio||yes
+hbp_measurement_methods|HBP_MEM:0000147|Resident–intruder assay||yes
+hbp_measurement_methods|HBP_MEM:0000148|Social approach/avoidance assay||yes
+hbp_measurement_methods|HBP_MEM:0000145|Geller–Seifter conflict test||yes
+hbp_measurement_methods|HBP_MEM:0000146|Marble burying test||yes
+hbp_measurement_methods|HBP_MEM:0000143|Open field test||yes
+hbp_measurement_methods|HBP_MEM:0000144|Elevated plus maze||yes
+hbp_measurement_methods|HBP_MEM:0000141|Tail suspension test||yes
+hbp_measurement_methods|HBP_MEM:0000142|Sucrose preference test||yes
+hbp_measurement_methods|HBP_MEM:0000044|Fluorescent microspheres||yes
+hbp_measurement_methods|HBP_MEM:0000045|Fluoro-gold diamidino yellow fast blue||yes
+hbp_measurement_methods|HBP_MEM:0000042|Tritiated amino acids||yes
+hbp_measurement_methods|HBP_MEM:0000043|Horseradish peroxidase|HRP|yes
+hbp_measurement_methods|HBP_MEM:0000048|Tritiated amino acids||yes
+hbp_measurement_methods|HBP_MEM:0000049|Wheat-germ agglutinin|WGA|yes
+hbp_measurement_methods|HBP_MEM:0000046|Cholera toxin, subunit B|CTB|yes
+hbp_measurement_methods|HBP_MEM:0000149|Self-administration||yes
+hbp_measurement_methods|HBP_MEM:0000047|Biotinylated dextran amine|BDA|yes
+hbp_measurement_methods|HBP_MEM:0000061|Enzymatic histochemistry||yes
+hbp_measurement_methods|HBP_MEM:0000060|Immunohistochemistry|IHC|yes
+hbp_measurement_methods|HBP_MEM:0000063|Direct immunohistochemistry|Direct IHC|yes
+hbp_measurement_methods|HBP_MEM:0000062|Reporter gene||yes
+hbp_measurement_methods|HBP_MEM:0000160|Barnes maze||yes
+hbp_measurement_methods|HBP_MEM:0000162|Tail flick assay||yes
+hbp_measurement_methods|HBP_MEM:0000161|Radial arm maze||yes
+hbp_measurement_methods|HBP_MEM:0000156|Novel object recognition||yes
+hbp_measurement_methods|HBP_MEM:0000157|Delayed match to sample||yes
+hbp_measurement_methods|HBP_MEM:0000158|Delayed nonmatch to sample||yes
+hbp_measurement_methods|HBP_MEM:0000159|Morris water maze||yes
+hbp_measurement_methods|HBP_MEM:0000152|Go/no-go task||yes
+hbp_measurement_methods|HBP_MEM:0000153|Five choice serial reaction time task||yes
+hbp_measurement_methods|HBP_MEM:0000154|Classical conditioning||yes
+hbp_measurement_methods|HBP_MEM:0000155|Operant conditioning||yes
+hbp_measurement_methods|HBP_MEM:0000053|DiI and DiO lipophilic dyes||yes
+hbp_measurement_methods|HBP_MEM:0000054|DiI and DiO lipophilic dyes||yes
+hbp_measurement_methods|HBP_MEM:0000055|Gene and protein expression visualization||yes
+hbp_measurement_methods|HBP_MEM:0000056|In situ hybridization|ISH|yes
+hbp_measurement_methods|HBP_MEM:0000057|3H-leucine||yes
+hbp_measurement_methods|HBP_MEM:0000058|3H-proline||yes
+hbp_measurement_methods|HBP_MEM:0000059|3H-leucine||yes
+hbp_measurement_methods|HBP_MEM:0000129|Locomotor activity assay||yes
+hbp_measurement_methods|HBP_MEM:0000128|Behaviour assay||yes
+hbp_measurement_methods|HBP_MEM:0000127|Electrospray ionization||yes
+hbp_measurement_methods|HBP_MEM:0000122|Conditional knockout||yes
+hbp_measurement_methods|HBP_MEM:0000121|Knockin||yes
+hbp_measurement_methods|HBP_MEM:0000120|Knockout||yes
+hbp_measurement_methods|HBP_MEM:0000126|Matrix-assisted laser desorption ionization|MALDI|yes
+hbp_measurement_methods|HBP_MEM:0000125|Dominant-negative inhibition||yes
+hbp_measurement_methods|HBP_MEM:0000124|Morpholino||yes
+hbp_measurement_methods|HBP_MEM:0000123|RNA interference|RNAi|yes
+hbp_measurement_methods|HBP_MEM:0000140|Forced swim test|Porsolt test|yes
+hbp_measurement_methods|HBP_MEM:0000139|Depression assay||yes
+hbp_measurement_methods|HBP_MEM:0000138|Anxiety assay||yes
+hbp_measurement_methods|HBP_MEM:0000131|Sensory function assay||yes
+hbp_measurement_methods|HBP_MEM:0000130|Motor coordination assay||yes
+hbp_measurement_methods|HBP_MEM:0000133|Spatial learning and memory assay||yes
+hbp_measurement_methods|HBP_MEM:0000132|Nociception assay||yes
+hbp_measurement_methods|HBP_MEM:0000135|Attention and impulsivity assay||yes
+hbp_measurement_methods|HBP_MEM:0000134|Nonspatial learning and memory assay||yes
+hbp_measurement_methods|HBP_MEM:0000137|Social behavior assay||yes
+hbp_measurement_methods|HBP_MEM:0000136|Reward-system assay||yes
+hbp_measurement_methods|HBP_MEM:0000001|3H-proline||yes
+hbp_measurement_methods|HBP_MEM:0000109|Serial analysis of gene expression|SAGE|yes
+hbp_measurement_methods|HBP_MEM:0000108|Northern blot|NB|yes
+hbp_measurement_methods|HBP_MEM:0000005|Magnetic resonance imaging|MRI|yes
+hbp_measurement_methods|HBP_MEM:0000107|Polymerase chain reaction|PCR|yes
+hbp_measurement_methods|HBP_MEM:0000004|Computerized tomography|CT|yes
+hbp_measurement_methods|HBP_MEM:0000106|Next generation sequencing|NGS|yes
+hbp_measurement_methods|HBP_MEM:0000003|Cerebral angiography||yes
+hbp_measurement_methods|HBP_MEM:0000105|Microarrays||yes
+hbp_measurement_methods|HBP_MEM:0000002|Structural brain imaging||yes
+hbp_measurement_methods|HBP_MEM:0000104|In situ hybridization|ISH|yes
+hbp_measurement_methods|HBP_MEM:0000009|Positron emission tomography|PET|yes
+hbp_measurement_methods|HBP_MEM:0000103|Gene expression measurement/visualization||yes
+hbp_measurement_methods|HBP_MEM:0000008|Functional magnetic resonance imaging|fMRI|yes
+hbp_measurement_methods|HBP_MEM:0000102|Electron tomography|ET|yes
+hbp_measurement_methods|HBP_MEM:0000007|Functional brain imaging||yes
+hbp_measurement_methods|HBP_MEM:0000101|Scanning electron microscopy|SEM|yes
+hbp_measurement_methods|HBP_MEM:0000006|Diffusion magnetic resonance imaging|Diffusion MRI|yes
+hbp_measurement_methods|HBP_MEM:0000100|Transmission electron microscopy|TEM|yes
+hbp_measurement_methods|HBP_MEM:0000010|Single-Proton emission computerized tomography|SPECT|yes
+hbp_measurement_methods|HBP_MEM:0000012|Magnetoencephalography|MEG|yes
+hbp_measurement_methods|HBP_MEM:0000011|Electroencephalography|EEG|yes
+hbp_measurement_methods|HBP_MEM:0000117|Reporter proteins||yes
+hbp_measurement_methods|HBP_MEM:0000014|Electrophysiology recording||yes
+hbp_measurement_methods|HBP_MEM:0000116|Immunoelectron microscopy|IEM|yes
+hbp_measurement_methods|HBP_MEM:0000013|Optical imaging||yes
+hbp_measurement_methods|HBP_MEM:0000119|Endogenous genes manipulation||yes
+hbp_measurement_methods|HBP_MEM:0000016|Intracellular recording||yes
+hbp_measurement_methods|HBP_MEM:0000118|Mass spectrometry||yes
+hbp_measurement_methods|HBP_MEM:0000015|Extracellular recording||yes
+hbp_measurement_methods|HBP_MEM:0000113|Enzyme-linked immunosorbent assay|ELISA|yes
+hbp_measurement_methods|HBP_MEM:0000018|Multiple electrode recording||yes
+hbp_measurement_methods|HBP_MEM:0000112|Western blot|WB|yes
+hbp_measurement_methods|HBP_MEM:0000017|Patch clamp techniques||yes
+hbp_measurement_methods|HBP_MEM:0000115|Immunohistochemistry|IHC|yes
+hbp_measurement_methods|HBP_MEM:0000114|Radioimmunoassay|RIA|yes
+hbp_measurement_methods|HBP_MEM:0000019|Single electrode recording||yes
+hbp_measurement_methods|HBP_MEM:0000111|Protein expression measurement/visualization||yes
+hbp_measurement_methods|HBP_MEM:0000110|Reporter genes||yes

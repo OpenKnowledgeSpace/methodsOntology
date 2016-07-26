@@ -1,0 +1,122 @@
+Ontology|curie|name|synonyms|integred_in_NIF
+hbp_whs_sd_ontology|HBP_WHS_SD:0000120|Field CA1, stratum radiatum|CA1_SR,CA1sr|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000092|postrhinal cortex||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000093|ventral-intermediate entorhinal area||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000090|hippocampal formation||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000091|subiculum||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000096|bed nucleus of the stria terminalis||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000097|pretectal region||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000094|medial entorhinal field||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000095|caudal entorhinal field||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000098|White matter||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000099|Anterior commissure||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000080|spinal trigeminal tract||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000081|frontal association cortex||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000082|middle cerebellar peduncle||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000083|transverse fibers of the pons||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000084|habenular commissure||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000085|nucleus of the stria medullaris||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000086|basal forebrain region||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000087|supraoptic decussation||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000088|medial lemniscus decussation||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000089|pyramidal decussation||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000028|alveus of the hippocampus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000027|deeper cerebellum||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000058|commissural stria terminalis||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000026|molecular cell layer of the cerebellum||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000059|deeper layers of the superior colliculus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000025|subthalamic nucleus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000029|inferior cerebellar peduncle||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000053|inferior colliculus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000052|hypothalamic region||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000020|Somatosensory cortex hindlimb layer II|L2,LII,Layer ii,Layer II,Lii,Layer 2|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000051|brain stem||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000050|commissure of the superior colliculus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000023|corticofugal pathways||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000057|mammillothalamic tract||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000024|substantia nigra||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000056|fornix||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000021|Somatosensory cortex hindlimb layer III|L3,Layer 3,LIII,Layer III,Liii,Layer iii|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000055|periaqueductal gray||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000054|superficial gray layer of the superior colliculus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000022|brain||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000037|ventricular system||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000047|pineal gland||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000048|inner ear||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000036|entopeduncular nucleus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000039|facial nerve||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000049|spinal cord||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000038|medial lemniscus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000040|anterior commissure, anterior part||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000042|ventral hippocampal commissure||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000030|cingulate cortex, area 2||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000041|anterior commissure, posterior part||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000031|dorsal-lateral entorhinal area||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000044|septal region||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000032|dorsal-intermediate entorhinal area||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000043|thalamus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000033|perirhinal cortex||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000046|optic tract and optic chiasm||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000034|striatum||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000045|optic nerve||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000035|globus pallidus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000101|Corticofugal pathways||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000100|Hippocampal white matter||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000009|Somatosensory cortex upper lip|S1ULp|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000008|Somatosensory cortex trunk|S1Tr|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000007|Somatosensory cortex shoulder|S1Sh|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000006|Somatosensory cortex jaw oral surface|S1JO|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000005|Somatosensory cortex jaw|S1|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000004|Somatosensory cortex hindlimb|S1HL|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000003|Somatosensory cortex forelimb|S1FL|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000001|Somatosensory cortex|S1|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000079|spinal trigeminal nucleus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000078|inferior olive||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000002|Somatosensory cortex barrel field|S1BF|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000077|anterior commissure, intrabulbar part||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000000|neocortex||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000076|ascending fibers of the facial nerve||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000075|interpeduncular nucleus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000074|central canal||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000073|commissure of the inferior colliculus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000072|brachium of the superior colliculus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000104|Facial nerve||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000071|corpus callosum and associated subcortical white matter||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000105|Optic fiber system and supraoptic decussation||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000070|olfactory bulb||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000102|Medial lemniscus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000103|Thalamic tracts||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000108|Gray matter||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000109|Olfactory system||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000106|White matter of the tectum||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000107|Cerebellar and precerebellar white matter||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000110|Cerebral cortex including the neocortex and the hippocampus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000112|Cerebellum||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000111|Tectum||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000019|Somatosensory cortex hindlimb layer VIb|L6b,Layer 6b,Lvib,Layer VIb,Layer vib,LVIb|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000018|Somatosensory cortex hindlimb layer VIaw|Lviaw,Layer VIaw,Layer 6aw,L6aw,LVIaw,Layer viaw|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000015|Somatosensory cortex hindlimb layer V|LV,Lv,Layer V,Layer 5,L5,Layer v|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000069|glomerular layer of the olfactory bulb||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000014|Somatosensory cortex hindlimb layer IV|LIV,Layer iv,Layer 4,Liv,L4,Layer IV|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000017|Somatosensory cortex hindlimb layer VIa|Layer VIa,Layer via,Layer 6a,Lvia,LVIa,L6a|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000016|Somatosensory cortex hindlimb layer VI|Layer vi,Lvi,Layer VI,Layer 6,LVI,L6|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000066|stria terminalis||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000010|Somatosensory cortex hindlimb layer Va|L5a,Layer Va,LVa,Layer 5a,Layer va,Lva|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000065|stria medullaris of the thalamus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000011|Somatosensory cortex hindlimb layer Vb|Layer Vb,Lvb,L5b,LVb,Layer vb,Layer 5b|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000068|glomerular layer of the accessory olfactory bulb||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000012|Somatosensory cortex hindlimb layer I|L1,Layer i,Layer I,Li,LI,Layer 1|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000013|Somatosensory cortex hindlimb layer II/III|L23,Layer 23,Layer ii/iii,Layer 2/3,Lii/iii,LII/III,Layer II/III,L2/3|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000067|posterior commissure||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000062|pontine nuclei||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000061|genu of the facial nerve||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000064|fasciculus retroflexus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000063|fimbria of the hippocampus||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000113|Spinal cord||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000114|dentate gyrus|DG|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000060|periventricular gray||yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000115|Cornu Ammonis, Field CA1|CA1|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000116|Cornu Ammonis, Field CA3|CA3|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000117|Field CA1, stratum lacunosum-moleculare|CA1_SLM,CA1slm|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000118|Field CA1, stratum oriens|CA1so,CA1_SO|yes
+hbp_whs_sd_ontology|HBP_WHS_SD:0000119|Field CA1, stratum pyramidale|CA1_SP,CA1sp,Field CA1, pyramidal layer|yes
