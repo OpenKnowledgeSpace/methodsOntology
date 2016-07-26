@@ -1,0 +1,396 @@
+### WARNING ###
+### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
+### WARNING ###
+@prefix : <http://www.hbp.FIXME.org/hbp_hippocampus3d_brain_ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix HIPPOCAMPUS3D: <http://www.hbp.FIXME.org/hbp_hippocampus3d_brain_ontology/> .
+@base <http://www.hbp.FIXME.org/hbp_hippocampus3d_brain_ontology/> .
+
+<http://www.hbp.FIXME.org/hbp_hippocampus3d_brain_ontology> rdf:type owl:Ontology ;
+                owl:imports <http://www.FIXME.org/nsupper> .
+
+
+
+HIPPOCAMPUS3D:00000 rdf:type owl:Class ;
+
+                 rdfs:label "CA"@en .
+
+                 nsu:synonym ""@en .
+
+
+
+HIPPOCAMPUS3D:00100 rdf:type owl:Class ;
+
+                 rdfs:label "CA1"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00000 ] .
+
+
+
+HIPPOCAMPUS3D:00103 rdf:type owl:Class ;
+
+                 rdfs:label "CA1a"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00100 ] .
+
+
+
+HIPPOCAMPUS3D:00001 rdf:type owl:Class ;
+
+                 rdfs:label "SLM CA1a"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00103 ] .
+
+
+
+HIPPOCAMPUS3D:00008 rdf:type owl:Class ;
+
+                 rdfs:label "SR CA1a"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00103 ] .
+
+
+
+HIPPOCAMPUS3D:00015 rdf:type owl:Class ;
+
+                 rdfs:label "SP CA1a"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00103 ] .
+
+
+
+HIPPOCAMPUS3D:00022 rdf:type owl:Class ;
+
+                 rdfs:label "OR CA1a"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00103 ] .
+
+
+
+HIPPOCAMPUS3D:00104 rdf:type owl:Class ;
+
+                 rdfs:label "CA1b"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00100 ] .
+
+
+
+HIPPOCAMPUS3D:00002 rdf:type owl:Class ;
+
+                 rdfs:label "SLM CA1b"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00104 ] .
+
+
+
+HIPPOCAMPUS3D:00009 rdf:type owl:Class ;
+
+                 rdfs:label "SR CA1b"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00104 ] .
+
+
+
+HIPPOCAMPUS3D:00016 rdf:type owl:Class ;
+
+                 rdfs:label "SP CA1b"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00104 ] .
+
+
+
+HIPPOCAMPUS3D:00023 rdf:type owl:Class ;
+
+                 rdfs:label "OR CA1b"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00104 ] .
+
+
+
+HIPPOCAMPUS3D:00105 rdf:type owl:Class ;
+
+                 rdfs:label "CA1c"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00100 ] .
+
+
+
+HIPPOCAMPUS3D:00003 rdf:type owl:Class ;
+
+                 rdfs:label "SLM CA1c"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00105 ] .
+
+
+
+HIPPOCAMPUS3D:00010 rdf:type owl:Class ;
+
+                 rdfs:label "SR CA1c"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00105 ] .
+
+
+
+HIPPOCAMPUS3D:00017 rdf:type owl:Class ;
+
+                 rdfs:label "SP CA1c"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00105 ] .
+
+
+
+HIPPOCAMPUS3D:00024 rdf:type owl:Class ;
+
+                 rdfs:label "OR CA1c"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00105 ] .
+
+
+
+HIPPOCAMPUS3D:00101 rdf:type owl:Class ;
+
+                 rdfs:label "CA2"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00000 ] .
+
+
+
+HIPPOCAMPUS3D:00004 rdf:type owl:Class ;
+
+                 rdfs:label "SLM CA2"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00101 ] .
+
+
+
+HIPPOCAMPUS3D:00011 rdf:type owl:Class ;
+
+                 rdfs:label "SR CA2"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00101 ] .
+
+
+
+HIPPOCAMPUS3D:00018 rdf:type owl:Class ;
+
+                 rdfs:label "SP CA2"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00101 ] .
+
+
+
+HIPPOCAMPUS3D:00025 rdf:type owl:Class ;
+
+                 rdfs:label "OR CA2"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00101 ] .
+
+
+
+HIPPOCAMPUS3D:00102 rdf:type owl:Class ;
+
+                 rdfs:label "CA3"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00000 ] .
+
+
+
+HIPPOCAMPUS3D:00106 rdf:type owl:Class ;
+
+                 rdfs:label "CA3a"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00102 ] .
+
+
+
+HIPPOCAMPUS3D:00005 rdf:type owl:Class ;
+
+                 rdfs:label "SLM CA3a"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00106 ] .
+
+
+
+HIPPOCAMPUS3D:00012 rdf:type owl:Class ;
+
+                 rdfs:label "SR CA3a"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00106 ] .
+
+
+
+HIPPOCAMPUS3D:00019 rdf:type owl:Class ;
+
+                 rdfs:label "SP CA3a"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00106 ] .
+
+
+
+HIPPOCAMPUS3D:00026 rdf:type owl:Class ;
+
+                 rdfs:label "OR CA3a"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00106 ] .
+
+
+
+HIPPOCAMPUS3D:00107 rdf:type owl:Class ;
+
+                 rdfs:label "CA3b"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00102 ] .
+
+
+
+HIPPOCAMPUS3D:00006 rdf:type owl:Class ;
+
+                 rdfs:label "SLM CA3b"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00107 ] .
+
+
+
+HIPPOCAMPUS3D:00013 rdf:type owl:Class ;
+
+                 rdfs:label "SR CA3b"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00107 ] .
+
+
+
+HIPPOCAMPUS3D:00020 rdf:type owl:Class ;
+
+                 rdfs:label "SP CA3b"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00107 ] .
+
+
+
+HIPPOCAMPUS3D:00027 rdf:type owl:Class ;
+
+                 rdfs:label "OR CA3b"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00107 ] .
+
+
+
+HIPPOCAMPUS3D:00108 rdf:type owl:Class ;
+
+                 rdfs:label "CA3c"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00102 ] .
+
+
+
+HIPPOCAMPUS3D:00007 rdf:type owl:Class ;
+
+                 rdfs:label "SLM CA3c"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00108 ] .
+
+
+
+HIPPOCAMPUS3D:00014 rdf:type owl:Class ;
+
+                 rdfs:label "SR CA3c"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00108 ] .
+
+
+
+HIPPOCAMPUS3D:00021 rdf:type owl:Class ;
+
+                 rdfs:label "SP CA3c"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00108 ] .
+
+
+
+HIPPOCAMPUS3D:00028 rdf:type owl:Class ;
+
+                 rdfs:label "OR CA3c"@en .
+
+                 nsu:synonym ""@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HIPPOCAMPUS3D:00108 ] .
+
+
+
