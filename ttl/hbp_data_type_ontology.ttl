@@ -529,7 +529,9 @@ HBP_DATT:0000039 rdf:type owl:Class ;
 
 HBP_DATT:0000040 rdf:type owl:Class ;
 
-                  rdfs:label "MIME_type"@en .
+                  rdfs:label "MIME_type"@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000000.
 
 
 
@@ -973,7 +975,7 @@ HBP_DATT:0000080 rdf:type owl:Class ;
 
                   rdfs:label "image/vnd.juelich.multireceptor.fingerprint.TIFF.imagestack;version=0"@en ;
 
-                  nsu:definition "Polar coordinate plot showing the mean (+ SD; dashed line) densities (in fmol/mg protein) of 16 receptors."@en ;
+                  nsu:definition "Polar coordinate plot showing the mean (+ SD; dashed line) densities (in fmol/mg protein) of receptors."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
