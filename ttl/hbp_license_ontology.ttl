@@ -10,12 +10,21 @@
 <http://www.hbp.FIXME.org/hbp_license_ontology> rdf:type owl:Ontology ;
             owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
             
+HBP_LICENSE:0000000 rdf:type owl:Class ;
+            rdfs:label "License"@en .
+
+HBP_LICENSE:hbpSupportedLicense rdf:type owl:Class ;
+            rdfs:label "HBP supported license"@en ;
+            rdfs:comment "A class parent for hbp supported (for now the one that users of NIP registration app can annotate their datasets with)."@en ;
+            rdfs:subClassOf HBP_LICENSE:0000000 .
+
 HBP_LICENSE:0000001 rdf:type owl:Class ;
             rdfs:label "Creative Commons Attribution-ShareAlike 4.0 International"@en ;
             nsu:synonym "CC BY-SA 4.0"@en ;
             nsu:definition "You are free to share and adapt the information for any purpose, even commercially. You must give appropriate credit, provide a link to the license, and indicate if changes were made. If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original."@en ;
             rdfs:comment "Full rdf description is available in Creative comments github, see rdfs:seeAlso property."@en ;
             rdfs:seeAlso <https://github.com/creativecommons/license.rdf/blob/master/cc/licenserdf/licenses/creativecommons.org_licenses_by-sa_4.0_.rdf>;
+            rdfs:subClassOf HBP_LICENSE:hbpSupportedLicense ;            
             cc:legalcode <http://creativecommons.org/licenses/by-sa/4.0/legalcode> .
 
 
@@ -25,6 +34,7 @@ HBP_LICENSE:0000002 rdf:type owl:Class ;
             nsu:definition "You are free to share and adapt the information for non-commercial purposes. You must give appropriate credit, provide a link to the license, and indicate if changes were made. If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original."@en ;
             rdfs:comment "Full rdf description is available in Creative comments github, see rdfs:seeAlso property."@en ;
             rdfs:seeAlso <https://github.com/creativecommons/license.rdf/blob/master/cc/licenserdf/licenses/creativecommons.org_licenses_by-nc-sa_4.0_.rdf>;
+            rdfs:subClassOf HBP_LICENSE:hbpSupportedLicense ;     
             cc:legalcode <http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode> .
 
 
@@ -33,5 +43,6 @@ HBP_LICENSE:0000003 rdf:type owl:Class ;
             rdfs:label "Allen Institute Terms of Use"@en ;
             nsu:definition "Your use of the Content, including creation of derivative works of the services, data and tools, must be for research or other noncommercial purposes unless it is otherwise set forth in these terms or agreed to in writing by the Allen Institute. For purposes of these Terms, commercial use is the incorporation of the Allen Institute's Content into anything that is designed for the purpose of sale; however, because we encourage use of our Content for research and academic publication, you may, without further permission, publish a limited set of the Content in a scholarly journal, textbook or other professional, academic or journalistic publication (with appropriate citation) and still be compliant with these Terms. Your use must be in accordance with the Freedom to Innovate section below that allows you to make improvements to advance your research purposes, but prohibits you from obtaining intellectual property rights that would limit our freedom to continue innovation. If you use Content provided by the Allen Institute, you must follow the Citation Policy or, if your use is not specifically described in the Citation Policy, you must provide proper attribution of the source in accordance with applicable academic and/or industry customs and standards.If you have any questions about these Terms, or to request written permission to use the Content outside of these Terms, please email info@alleninstitute.org"@en ;
             rdfs:comment "Full description is available on provided link, see rdfs:seeAlso property."@en ;
-            rdfs:seeAlso <http://www.alleninstitute.org/legal/terms-use/>.
+            rdfs:seeAlso <http://www.alleninstitute.org/legal/terms-use/> ;
+            rdfs:subClassOf HBP_LICENSE:0000000 .            
 
