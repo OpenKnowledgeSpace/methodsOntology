@@ -15,19 +15,21 @@
                 owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
 
 
+HBP_SEX:0000000 rdf:type owl:Class ;
+                rdfs:label "sex"@en .
 
 HBP_SEX:0000001 rdf:type owl:Class ;
-
+                 rdfs:subClassOf HBP_SEX:0000000;
                  rdfs:label "male"@en .
 
 
 
 HBP_SEX:0000002 rdf:type owl:Class ;
-
+                 rdfs:subClassOf HBP_SEX:0000000;
                  rdfs:label "female"@en .
 
 
 
 HBP_SEX:0000003 rdf:type owl:Class ;
-
+                 rdfs:subClassOf HBP_SEX:0000000;
                  rdfs:label "hermaphrodite"@en .
