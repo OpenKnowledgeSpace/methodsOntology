@@ -21,7 +21,7 @@ HBP_DTAT:0000000 rdf:type owl:Class ;
 	rdfs:label "Attribute"@en .
 
 HBP_DTAT:0000001 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000000 ;
+	rdfs:subClassOf HBP_DTAT:0000034 ;
 	nsu:definition "Direction describes the anatomical planes used to transect an organ or body in order to describe the location of the studied structures. There are three basic planes or directions: coronal, axial and sagittal"@en ;
 	rdfs:label "Direction"@en .
 
@@ -78,10 +78,10 @@ HBP_DTAT:0000009 rdf:type owl:Class ;
 
 
 HBP_DTAT:0000010 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000020 ;
-	nsu:definition "Name of the project as described by Neobase. Values: Thomas data, Sandrine Developmental, Maria Single Cell."@en ;
+	rdfs:subClassOf HBP_DTAT:0000035 ;
+	nsu:definition "Name of the project as described by Neobase. Values: Thomas data, Sandrine Developmental, Maria Single Cell. It may also be used for other types of datasets with different values"@en ;
 	skos:prefLabel "projectname"@en ;
-	rdfs:label "Neobase project name"@en .
+	rdfs:label "Project name"@en .
 
 
 HBP_DTAT:0000011 rdf:type owl:Class ;
@@ -105,8 +105,8 @@ HBP_DTAT:0000013 rdf:type owl:Class ;
 
 
 HBP_DTAT:0000014 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000020 ;
-	nsu:definition "Number identifying the animal."@en ;
+	rdfs:subClassOf HBP_DTAT:0000035 ;
+	nsu:definition "Number or code identifying the animal."@en ;
 	skos:prefLabel "animalid"@en ;	
 	rdfs:label  "Animal id"@en .
 
@@ -119,24 +119,24 @@ HBP_DTAT:0000015 rdf:type owl:Class ;
 
 
 HBP_DTAT:0000016 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000020 ;
-	nsu:definition "Number identifying the cell in Neobase."@en ;
+	rdfs:subClassOf HBP_DTAT:0000035 ;
+	nsu:definition "Number identifying the cell in Neobase or another dataset."@en ;
 	skos:prefLabel "cellid"@en ;	
-	rdfs:label "Neobase cell id"@en .
+	rdfs:label "Cell id"@en .
 
 
 HBP_DTAT:0000017 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000020 ;
-	nsu:definition "Number identifying the experiment in Neobase."@en ;
+	rdfs:subClassOf HBP_DTAT:0000035 ;
+	nsu:definition "Number identifying the experiment in Neobase or another dataset."@en ;
 	skos:prefLabel "experimentid"@en ;	
-	rdfs:label "Neobase experiment id"@en .
+	rdfs:label "Experiment id"@en .
 
 
 HBP_DTAT:0000018 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000020 ;
-	nsu:definition "Name identifying the cell in Neobase."@en ;
+	rdfs:subClassOf HBP_DTAT:0000035 ;
+	nsu:definition "Name identifying the cell in Neobase or another dataset."@en ;
 	skos:prefLabel "cellname"@en ;	
-	rdfs:label "Neobase cell name"@en .
+	rdfs:label "Cell name"@en .
 
 
 HBP_DTAT:0000019 rdf:type owl:Class ;
@@ -159,7 +159,7 @@ HBP_DTAT:0000021 rdf:type owl:Class ;
 
 
 HBP_DTAT:0000022 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000000 ;
+	rdfs:subClassOf HBP_DTAT:0000034 ;
 	nsu:definition "Attributes applicable to resolution"@en ;
 	rdfs:label "Resolution attributes"@en .
 
@@ -235,7 +235,14 @@ HBP_DTAT:0000033 rdf:type owl:Class ;
 
 
 HBP_DTAT:0000034 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000020 ;
-	nsu:definition "Number for identifying a project in Neobase."@en ;
-	skos:prefLabel "projectid"@en ;
-	rdfs:label "Neobase project id"@en .
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	nsu:definition "Attribute associated with atlas datasets."@en ;
+	rdfs:label "Atlas attributes"@en .
+
+
+HBP_DTAT:0000035 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	nsu:definition "Common attributes associated with any type of dataset."@en ;
+	rdfs:label "Common attributes"@en .
+
+
