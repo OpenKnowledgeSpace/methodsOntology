@@ -22,12 +22,12 @@ HBP_BATT:0000000 rdf:type owl:Class ;
 HBP_BATT:0000001 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_BATT:0000000 ;
 	nsu:definition "Allen mouse common coordinate framework (CCF) version 2 released in 2011 consists of 860 structures were extracted and interpolated to create symetric 3D annotations, provided by the Allen Institute"@en ;
-	rdfs:label "Allen reference atlas V2"@en .
+	rdfs:label "Allen adult mouse brain reference atlas V2"@en .
 
 HBP_BATT:0000002 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_BATT:0000000 ;
 	nsu:definition "Allen mouse common coordinate framework (CCF) version 3 released in 2015 is based on a 3D 10um isotropic highly detailed population average of 1675 specimens, provided by the Allen Institute."@en ;
-	rdfs:label "Allen reference atlas V3"@en .
+	rdfs:label "Allen adult mouse brain reference atlas V3"@en .
 
 
 HBP_BATT:0000003 rdf:type owl:Class ;
@@ -51,5 +51,5 @@ HBP_BATT:0000005 rdf:type owl:Class ;
 HBP_BATT:0000006 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_BATT:0000000 ;
 	nsu:definition "Infant template parecelled in 94 regions (47 on each hemisphere) from a7.1 week-old girl, provided by the Commissariat a l'énergie atomique et aux énergies alternatives (CEA)."@en ;
-	rdfs:label "Infant atlas"@en .
+	rdfs:label "Infant brain atlas"@en .
 	

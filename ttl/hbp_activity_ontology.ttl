@@ -23,6 +23,12 @@
 # 
 # 
 
+
+HBP_ACT:0000001 a owl:Class ;
+	rdfs:label "Activity"@en ;
+	rdfs:isDefinedBy "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities".
+
+
 HBP_ACT:0000002 a owl:Class ;
 	rdfs:label "Annotation"@en ;
 	rdfs:isDefinedBy "Action of adding an annotation to any entity in a PROVenance graph."@en ;
@@ -34,18 +40,22 @@ HBP_ACT:0000004 a owl:Class ;
 	rdfs:isDefinedBy "Computation is any type of calculation that follows a well-defined model understood and expressed as, for example, an algorithm, or a protocol."@en ;
 	rdfs:subClassOf HBP_ACT:0000001 .
 
+
 HBP_ACT:0000005 a owl:Class ;
 	rdfs:label "Classification"@en ;
-	rdfs:isDefinedBy "the action or process of classifying an observation using a computational process"@en ;
+	rdfs:isDefinedBy "The action or process of classifying an observation using a computational process."@en ;
 	rdfs:subClassOf HBP_ACT:0000004 ;
 	rdfs:subClassOf HBP_ACT:0000002 .
+
 
 HBP_ACT:0000006 a owl:Class ;
 	rdfs:label "Experiment"@en ;
 	rdfs:subClassOf HBP_ACT:0000001 .
 
-HBP_ACT:0000001 a owl:Class ;
-	rdfs:label "Activity"@en ;
-	rdfs:isDefinedBy """An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.
+
+HBP_ACT:0000007 a owl:Class ;
+	rdfs:label "Revision"@en ;
+	rdfs:isDefinedBy "A change or a set of changes that correct or improve a previous version of a dataset." ;
+	rdfs:subClassOf HBP_ACT:0000001 .
 
 http://www.w3.org/TR/prov-o/#Activity"""@en .
