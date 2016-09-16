@@ -1190,3 +1190,10 @@ HBP_CELL:0000152 rdf:type owl:Class ;
                   rdfs:label "Cerebellum granule cell"@en ;
                   nsu:synonym "Cerebellar granule cell"@en ;
                   nsu:synonym "Cerebellar granule neuron"@en.
+
+
+HBP_CELL:0000153 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nlx_cell_20090311;  
+                  rdfs:label "Hippocampus CA2 pyramidal cell"@en ;
+                  nsu:synonym "CA2_PC"@en.
+
