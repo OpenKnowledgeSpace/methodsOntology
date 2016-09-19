@@ -58,4 +58,3 @@ HBP_ACT:0000007 a owl:Class ;
 	rdfs:isDefinedBy "A change or a set of changes that correct or improve a previous version of a dataset." ;
 	rdfs:subClassOf HBP_ACT:0000001 .
 
-http://www.w3.org/TR/prov-o/#Activity"""@en .
