@@ -849,3 +849,9 @@ HBP_WHS_SD:0000120 rdf:type owl:Class ;
                     nsu:synonym "CA1sr"@en ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000115 ].
 
+
+HBP_WHS_SD:0000121 rdf:type owl:Class ;
+                    rdfs:label "Cornu Ammonis, Field CA2"@en ;
+                    nsu:synonym "CA2"@en ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom HBP_WHS_SD:0000090 ] .
+
