@@ -1093,27 +1093,26 @@ HBP_CELL:0000134 rdf:type owl:Class ;
 
 HBP_CELL:0000135 rdf:type owl:Class ;
                   owl:equivalentClass ncel:nlx_81310;  
-                  rdfs:label "Hippocampus CA1 perforant pathway-associated cell"@en ;
+                  rdfs:label "Hippocampus CA1 stratum lacunosum-moleculare, perforant pathway-associated cell"@en ;
                   nsu:synonym "SLM_PPA"@en .
 
 HBP_CELL:0000136 rdf:type owl:Class ;
-                  rdfs:label "Hippocampus CA1 back-projecting cell"@en ;
+                  rdfs:label "Hippocampus CA1 stratum oriens, back-projecting cell"@en ;
                   nsu:synonym "SO_BP"@en .
 
        
 HBP_CELL:0000137 rdf:type owl:Class ;
-                  rdfs:label "Hippocampus CA1 bistratified cell"@en ;
+                  rdfs:label "Hippocampus CA1 stratum pyramidale, bistratified cell"@en ;
                   nsu:synonym "SO_BS"@en ;
                   nsu:synonym "SP_BS"@en .
 
 HBP_CELL:0000138 rdf:type owl:Class ;
-                  owl:equivalentClass ncel:nlx_cell_091206;  
-                  rdfs:label "Hippocampus CA1 oriens lacunosum moleculare neuron"@en ;
+                  rdfs:label "Hippocampus CA1 stratum oriens, oriens lacunosum moleculare neuron"@en ;
                   nsu:synonym "SO_OLM"@en .
 
 HBP_CELL:0000139 rdf:type owl:Class ;
                   owl:equivalentClass ncel:nlx_27085;  
-                  rdfs:label "Hippocampus CA1 trilaminar neuron"@en ;
+                  rdfs:label "Hippocampus CA1 stratum pyramidale, trilaminar neuron"@en ;
                   nsu:synonym "SO_TRI"@en .
 
 HBP_CELL:0000140 rdf:type owl:Class ;
@@ -1123,40 +1122,41 @@ HBP_CELL:0000140 rdf:type owl:Class ;
 
 HBP_CELL:0000141 rdf:type owl:Class ;
                   owl:equivalentClass ncel:nlx_cell_091205;  
-                  rdfs:label "Hippocampus CA1 basket cell"@en ;
-                  nsu:synonym "SP_BC"@en .
+                  rdfs:label "Hippocampus CA1 stratum pyramidale, basket cell"@en ;
+                  nsu:synonym "SP_BC"@en ;
+                  rdfs:subClassOf HBP_CELL:0000154.
 
 
 HBP_CELL:0000142 rdf:type owl:Class ;
-                  rdfs:label "Hippocampus CA1 CCK+ basket cell"@en ;
+                  rdfs:label "Hippocampus CA1 stratum pyramidale, CCK+ basket cell"@en ;
                   nsu:synonym "SP_CCKBC"@en;
                   rdfs:subClassOf HBP_CELL:0000141.
 
 
 HBP_CELL:0000143 rdf:type owl:Class ;
-                  rdfs:label "Hippocampus CA1 PV+ basket cell"@en ;
+                  rdfs:label "Hippocampus CA1 stratum pyramidale, PV+ basket cell"@en ;
                   nsu:synonym "SP_PVBC"@en;
                   rdfs:subClassOf HBP_CELL:0000141.
 
 
 HBP_CELL:0000144 rdf:type owl:Class ;
                   owl:equivalentClass ncel:nlx_35220;  
-                  rdfs:label "Hippocampus CA1 ivy neuron"@en ;
-                  nsu:synonym "SP_IVY"@en.
+                  rdfs:label "Hippocampus CA1 stratum pyramidale, ivy neuron"@en ;
+                  nsu:synonym "SP_IVY"@en .
 
 HBP_CELL:0000145 rdf:type owl:Class ;
                   owl:equivalentClass ncel:sao830368389;  
-                  rdfs:label "Hippocampus CA1 pyramidal cell"@en ;
+                  rdfs:label "Hippocampus CA1 stratum pyramidale, pyramidal cell"@en ;
                   nsu:synonym "SP_PC"@en.
 
 HBP_CELL:0000146 rdf:type owl:Class ;
                   owl:equivalentClass ncel:nlx_cell_100209;  
-                  rdfs:label "Hippocampus CA1 IS-I neuron"@en ;
+                  rdfs:label "Hippocampus CA1 stratum pyramidale, IS-I neuron"@en ;
                   nsu:synonym "SP_IS1"@en.
 
 HBP_CELL:0000147 rdf:type owl:Class ;
                   
-                  rdfs:label "Hippocampus CA1 Schaffer collateral-associated cell"@en ;
+                  rdfs:label "Hippocampus CA1 stratum pyramidale, Schaffer collateral-associated cell"@en ;
                   nsu:synonym "SP_SCA"@en.
 
 
@@ -1196,4 +1196,14 @@ HBP_CELL:0000153 rdf:type owl:Class ;
                   owl:equivalentClass ncel:nlx_cell_20090311;  
                   rdfs:label "Hippocampus CA2 pyramidal cell"@en ;
                   nsu:synonym "CA2_PC"@en.
+
+
+HBP_CELL:0000154 rdf:type owl:Class ; 
+                  rdfs:label "Hippocampus CA1 basket cell"@en.
+
+HBP_CELL:0000155 rdf:type owl:Class ;
+                  owl:equivalentClass ncel:nlx_cell_091206;  
+                  rdfs:label "Hippocampus CA1 oriens lacunosum moleculare neuron"@en.
+
+
 
