@@ -8,13 +8,12 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
-@prefix HBP_PROP: <http://www.hbp.FIXME.org/hbp_properties/> .
 @prefix HBP_SCL: <http://www.hbp.FIXME.org/hbp_scale_ontology/> .
 @base <http://www.hbp.FIXME.org/hbp_scale_ontology> .
 
 
 <http://www.hbp.FIXME.org/hbp_scale_ontology> rdf:type owl:Ontology ;
-                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/hbp_properties.ttl> .
+                 owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
 
 
 
@@ -23,116 +22,50 @@ HBP_SCL:0000000 rdf:type owl:Class ;
                  nsu:definition "The Term scale is used for  describing with large approximation the extent or size of a length, distance or area studied or described."@en .
 
 
-
 HBP_SCL:0000001 rdf:type owl:Class ;
-                 rdfs:label "organism scale"@en ;
-                 nsu:definition "This class is defined by the intact animal. While the physical scale is in this context heavily dependent on the species of the subject, as well as other factors, such as age and weight, it is very useful from a laboratory centric procedural perspective."@en ;
-                 rdfs:subClassOf HBP_SCL:0000002 .
-
-
-
-HBP_SCL:0000002 rdf:type owl:Class ;
-                 rdfs:label "biological scale"@en ;
-                 nsu:definition "This term refers to an arbitrarily drawn bounds on a parametric range which is easy for people in biology to accept."@en ;
+                 rdfs:label "organism"@en ;
+                 nsu:definition "Whole organism."@en ;
                  rdfs:subClassOf HBP_SCL:0000000 .
 
 
+HBP_SCL:0000002 rdf:type owl:Class ;
+                 rdfs:label "brain"@en ;
+                 nsu:definition "Whole brain. Group of physically associated neural tissues that form the organ brain"@en ;
+                 rdfs:subClassOf HBP_SCL:0000000 .   
+
+
+HBP_SCL:0000003 rdf:type owl:Class ;
+                 rdfs:label "brain region"@en ;
+                 nsu:definition "An anatomically definied area of the brain."@en ;
+                 rdfs:subClassOf HBP_SCL:0000000 .
+
+
+HBP_SCL:0000004 rdf:type owl:Class ;
+                 rdfs:label "brain slice"@en ;
+                 nsu:definition "Part of a brain region obtained using a microtome. It allows the study of a synapse or neural circuit in isolation from the rest of the brain using controlled physiological conditions."@en ;
+                 rdfs:subClassOf HBP_SCL:0000000 . 
+
 
 HBP_SCL:0000005 rdf:type owl:Class ;
-                 rdfs:label "cell network scale"@en ;
-                 nsu:definition "While the definition of this scale is heavily influenced by the prefered way of electrophysiologists to see neuroscience it still serves the useful purpose to describe a scale which has been used extensively in a branch of neuroscience since Cajal made neuronal networks visible. The closest formal definition would be that the cell network scale referes to a collection of synaptical of gap junction connected cells."@en ;
-                 rdfs:subClassOf HBP_SCL:0000002 ;
-                 HBP_PROP:is_smaller_than HBP_SCL:0000011 ;
-                
-                 HBP_PROP:is_smaller_than HBP_SCL:0000014 .
+                 rdfs:label "multiple cells"@en ;
+                 nsu:definition "More than one cell."@en ;
+                 rdfs:subClassOf HBP_SCL:0000000 . 
 
 
 HBP_SCL:0000006 rdf:type owl:Class ;
-                 rdfs:label "cell scale"@en ;
-                 nsu:definition "This scale is centered at describing samples which fullfill the basics of the cell biological definition. The definition of which is <<The cell is  the basic structural, functional and biological unit of all know living organisms.>> Of course this scale referes to intact cells."@en ;
-                 rdfs:subClassOf HBP_SCL:0000002 ;
-                 HBP_PROP:is_smaller_than HBP_SCL:0000011 ;
-                 HBP_PROP:is_smaller_than HBP_SCL:0000014 .
+                 rdfs:label "single cell"@en ;
+                 nsu:definition "One cell."@en ;
+                 rdfs:subClassOf HBP_SCL:0000000 .
 
 
 HBP_SCL:0000007 rdf:type owl:Class ;
-                 rdfs:label "cellular component scale"@en ;
-                 nsu:definition "This scale is a one-to-one copy of the GO definition of cellular component, which is: The part of a cell or its extracellular environment in which a gene product is located. A gene product may be located in one or more parts of a cell and its location may be as specific as a particular macromolecular complex, that is, a stable, persistent association of macromolecules that function together."@en ;
-                 rdfs:subClassOf HBP_SCL:0000002 ;
-                 HBP_PROP:is_smaller_than HBP_SCL:0000006 .
-
-
-
-HBP_SCL:0000011 rdf:type owl:Class ;
-                 rdfs:label "chunk of organ"@en ;
-                 nsu:definition "This scale is defined base on the reality that in the process of isolating samples from smaller scales it is often more convenient to obtain sub-sample from a sample which exists at the organ scale."@en ;
-                 rdfs:subClassOf HBP_SCL:0000002 ;
-                 HBP_PROP:is_smaller_than HBP_SCL:0000012 .
-
-
-
-HBP_SCL:0000012 rdf:type owl:Class ;
-                 rdfs:label "organ scale"@en ;
-                 nsu:definition "The definition of this class is based on intact organs. Organs which are in this context defined from a biological perspective as a collection of tissues joined in a structural unit to serve a common function."@en ;
-                 rdfs:subClassOf HBP_SCL:0000002 ;
-                 HBP_PROP:is_smaller_than HBP_SCL:0000001 .
-
-
-
-HBP_SCL:0000013 rdf:type owl:Class ;
-                 rdfs:label "brain"@en ;
-                 nsu:definition "whole brain."@en ;
-                 rdfs:subClassOf HBP_SCL:0000002 ;
-                 HBP_PROP:is_smaller_than HBP_SCL:0000001 .   
-
-
-
-HBP_SCL:0000014 rdf:type owl:Class ;
-                 rdfs:label "brain region"@en ;
-                 nsu:definition "an anatomically definied area of the brain."@en ;
-                 rdfs:subClassOf HBP_SCL:0000002 ;
-                 HBP_PROP:is_smaller_than HBP_SCL:0000013 .  
-
-
-
-HBP_SCL:0000015 rdf:type owl:Class ;
-                 rdfs:label "partial region"@en ;
-                 nsu:definition "part of a brain region."@en ;
-                 rdfs:subClassOf HBP_SCL:0000002 ;
-                 HBP_PROP:is_smaller_than HBP_SCL:0000014 . 
-
-
-
-HBP_SCL:0000016 rdf:type owl:Class ;
-                 rdfs:label "multiple cells"@en ;
-                 nsu:definition "more than one cell."@en ;
-                 rdfs:subClassOf HBP_SCL:0000002 ;
-                 HBP_PROP:is_smaller_than HBP_SCL:0000011 ;
-                 HBP_PROP:is_smaller_than HBP_SCL:0000014 . 
-
-
-
-HBP_SCL:0000017 rdf:type owl:Class ;
-                 rdfs:label "single cell"@en ;
-                 nsu:definition "one cell."@en ;
-                 rdfs:subClassOf HBP_SCL:0000002 ;
-                 HBP_PROP:is_smaller_than HBP_SCL:0000011 ;
-                 HBP_PROP:is_smaller_than HBP_SCL:0000014 . 
-
-
-
-HBP_SCL:0000018 rdf:type owl:Class ;
                  rdfs:label "partial cell"@en ;
-                 nsu:definition "part of a cell, as in soma and axon, but no dendrite."@en ;
-                 rdfs:subClassOf HBP_SCL:0000002 ;
-                 HBP_PROP:is_smaller_than HBP_SCL:0000017 .
+                 nsu:definition "Part of a cell, as in soma and axon, but no dendrite."@en ;
+                 rdfs:subClassOf HBP_SCL:0000000 .
 
 
-
-HBP_SCL:0000019 rdf:type owl:Class ;
+HBP_SCL:0000008 rdf:type owl:Class ;
                  rdfs:label "paired cells"@en ;
-                 nsu:definition "two cells with one or more points of contact."@en ;
-                 rdfs:subClassOf HBP_SCL:0000002 ;
-                 HBP_PROP:is_smaller_than HBP_SCL:0000011 ;
-                 HBP_PROP:is_smaller_than HBP_SCL:0000014 .
+                 nsu:definition "Two cells with one or more points of contact."@en ;
+                 rdfs:subClassOf HBP_SCL:0000000 .
 
