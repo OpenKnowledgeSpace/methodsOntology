@@ -601,6 +601,8 @@ HBP_DATT:0000046 rdf:type owl:Class ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
+                  nsu:definition "JPEG stands for Joint Photographic Experts Group. It is a standard method of compressing photographic images. We also call JPEG the file format which employs this compression."@en ;
+
                   HBP_PROP:has_file_extension ".jpeg" .
 
 
@@ -918,7 +920,7 @@ HBP_DATT:0000075 rdf:type owl:Class ;
 
                   rdfs:label "application/sbml+xml;version=0"@en ;
 
-                  nsu:definition "The Systems Biology Markup Language (SBML) is a machine-readable exchange format for computational models of biological processes. Its strength is in representating phenomena at the scale of biochemical reactions but it is not limited to that."@en ;
+                  nsu:definition "The Systems Biology Markup Language (SBML) is a machine-readable exchange format for computational models of biological processes. Its strength is in representing phenomena at the scale of biochemical reactions but it is not limited to that."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -980,3 +982,51 @@ HBP_DATT:0000080 rdf:type owl:Class ;
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".tiff" .
+
+
+
+HBP_DATT:0000081 rdf:type owl:Class ;
+
+                  rdfs:label "application/vnd.abf;version=0"@en ;
+
+                  nsu:definition "Axon Binary File (ABF) format was created for the storage of binary experimental data. Format used by Axon Instruments for pCLAMP electrophysiology data acquisition and analysis software. It is also supported by AxoTape and AxoScope."@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".abf" .
+
+
+HBP_DATT:0000082 rdf:type owl:Class ;
+
+                  rdfs:label "image/bmp;version=0"@en ;
+
+                  nsu:definition "Raster graphics image file format used to store bitmap digital images, independently of the display device."@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".bmp" .
+
+
+
+HBP_DATT:0000083 rdf:type owl:Class ;
+
+                  rdfs:label "image/cdr;version=0"@en ;
+
+                  nsu:definition "CDR is a file format which was developed by the Corel Corporation and is used mainly for vector graphic images and drawings."@en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".cdr" .
+
+
+
+HBP_DATT:0000084 rdf:type owl:Class ;
+
+                  rdfs:label "application/octet-stream.dat;version=0"@en ;
+
+                  nsu:definition "Binary files containing containing information from electrophysiology traces; needs a codebook." @en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".dat" .
+
