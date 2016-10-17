@@ -1030,3 +1030,15 @@ HBP_DATT:0000084 rdf:type owl:Class ;
 
                   HBP_PROP:has_file_extension ".dat" .
 
+
+
+HBP_DATT:0000085 rdf:type owl:Class ;
+
+                  rdfs:label "application/x-rar-compressed;version=0"@en ;
+
+                  nsu:definition "RAR files are compressed files licensed by WinRAR." @en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".rar" .
+
