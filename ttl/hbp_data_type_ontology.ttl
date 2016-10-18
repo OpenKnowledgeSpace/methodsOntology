@@ -1042,3 +1042,28 @@ HBP_DATT:0000085 rdf:type owl:Class ;
 
                   HBP_PROP:has_file_extension ".rar" .
 
+
+
+HBP_DATT:0000086 rdf:type owl:Class ;
+
+                  rdfs:label "image/tiff;version=0"@en ;
+
+                  nsu:definition "TIF is an image format file for high-quality graphics. TIF files are also called .TIFF, which stands for “Tagged Image Format File.” TIF files were created in the 1986 as a file format for scanned images in an attempt to get all companies to use one standard file format instead of multiple." @en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".tif" ;
+                  HBP_PROP:has_file_extension ".tiff" .
+
+
+
+HBP_DATT:0000087 rdf:type owl:Class ;
+
+                  rdfs:label "iimage/jpeg;version=0"@en ;
+
+                  nsu:definition "JPG is a file extension for a lossy graphics file. The JPEG file extension is used interchangeably with JPG. JPEG stands for Joint Photographic Experts Group who created the standard." @en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".jpg" ;
+                  HBP_PROP:has_file_extension ".jpeg" .
