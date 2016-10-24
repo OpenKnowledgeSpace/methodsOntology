@@ -1206,4 +1206,6 @@ HBP_CELL:0000155 rdf:type owl:Class ;
                   rdfs:label "Hippocampus CA1 oriens lacunosum moleculare neuron"@en.
 
 
-
+HBP_CELL:0000156 rdf:type owl:Class ;  
+                  rdfs:label "Hippocampus CA1 ivy neuron"@en ;
+                  nsu:synonym "XX_IVY"@en .
