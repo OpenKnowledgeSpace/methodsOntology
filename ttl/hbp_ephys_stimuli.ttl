@@ -1,0 +1,162 @@
+@prefix : <http://www.hbp.FIXME.org/hbp_ephys_stimuli/> .
+@prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix HBP_EPST: <http://www.hbp.FIXME.org/hbp_ephys_stimuli/> .
+@base <http://www.hbp.FIXME.org/hbp_ephys_stimuli> .
+
+<http://www.hbp.FIXME.org/hbp_ephys_stimuli> rdf:type owl:Ontology ;
+	owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.hbp.FIXME.org/hbp_ephys_stimuli/0000000
+
+HBP_EPST:0000000 rdf:type owl:Class ;
+	rdfs:label "Electrophysiological stimuli type" .
+
+HBP_EPST:0000001 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "ADHPdepol" @en .
+
+HBP_EPST:0000002 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "ADHPhyperpol" @en .
+
+HBP_EPST:0000003 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "ADHPrest" @en .
+
+HBP_EPST:0000004 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "APDrop" @en .
+
+HBP_EPST:0000005 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "APThreshold" @en .
+
+HBP_EPST:0000006 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "APWaveform" @en .
+
+HBP_EPST:0000007 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "BridgeBalance" @en .
+
+HBP_EPST:0000008 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "Delta" @en .
+
+HBP_EPST:0000009 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "HighResThResp" @en .
+
+HBP_EPST:0000010 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "HP" @en .
+
+HBP_EPST:0000011 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "H20S8" @en .
+
+HBP_EPST:0000012 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "H40S8" @en .
+
+HBP_EPST:0000013 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "H70S8" @en .
+
+HBP_EPST:0000014 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "H70S15" @en .
+
+HBP_EPST:0000015 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "Pulse" @en .
+
+HBP_EPST:0000016 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "Step" @en .
+
+HBP_EPST:0000017 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "IDdepol" @en .
+
+HBP_EPST:0000018 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "IDhyperpol" @en .
+
+HBP_EPST:0000019 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "IDrest" @en .
+
+HBP_EPST:0000020 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "IDthresh" @en .
+
+HBP_EPST:0000021 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "IRdepol" @en .
+
+HBP_EPST:0000022 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "IRhyperpol" @en .
+
+HBP_EPST:0000023 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "IRrest" @en .
+
+HBP_EPST:0000024 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "IV" @en .
+
+HBP_EPST:0000025 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "NoisePP" @en .
+
+HBP_EPST:0000026 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "NoiseSpiking" @en .
+
+HBP_EPST:0000027 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "sAHP" @en .
+
+HBP_EPST:0000028 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "SineSpec" @en .
+
+HBP_EPST:0000029 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "SpikeRec" @en .
+
+HBP_EPST:0000030 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "Spontaneous" @en .
+
+HBP_EPST:0000031 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "SpontAPs" @en .
+
+HBP_EPST:0000032 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "TesteCode" @en .
+
+HBP_EPST:0000033 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "Truenoise" @en .
+
+HBP_EPST:0000034 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "VacuumPulses" @en .
+
