@@ -52,4 +52,16 @@ HBP_BATT:0000006 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_BATT:0000000 ;
 	nsu:definition "Infant template parecelled in 94 regions (47 on each hemisphere) from a7.1 week-old girl, provided by the Commissariat a l'énergie atomique et aux énergies alternatives (CEA)."@en ;
 	rdfs:label "Infant brain atlas"@en .
+
+
+HBP_BATT:0000007 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_BATT:0000000 ;
+	nsu:definition "This is a version of the ICBM Average Brain - an average of 152 T1-weighted MRI scans, linearly and non-linearly (6 iterations) transformed to form a symmetric model in Talairach space - that is specially adapted for use with the MNI Linear Registration Package (mni_autoreg). Provided by the McConnell Brain Imaging Centre, Montreal Neurological Institute, McGill University."@en ;
+	rdfs:label "MNI ICBM 152 nonlinear 6th generation."@en .
+
+
+HBP_BATT:0000008 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_BATT:0000000 ;
+	nsu:definition "Axial-free steric brain atlas, a brain from the common marmoset monkey (Callithrix jacchus; female; 2.3 years old; weighting 310 g). Provided by RIKEN Brain Science Institute, Japan."@en ;
+	rdfs:label "Riken Marmoset Atlas"@en .
 	
