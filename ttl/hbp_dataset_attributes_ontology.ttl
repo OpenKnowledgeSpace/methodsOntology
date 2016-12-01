@@ -1,6 +1,3 @@
-### WARNING ###
-### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
-### WARNING ###
 @prefix : <http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -10,239 +7,385 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix HBP_DTAT: <http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/> .
-@base <http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology> .
 
 <http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology> rdf:type owl:Ontology ;
-                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
+owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> ,  <http://www.hbp.FIXME.org/hbp_data_modality_ontology>  .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
 
+skos:prefLabel a owl:AnnotationProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000036
+
+HBP_DTAT:0000036 a owl:ObjectProperty ;
+	rdfs:label "appliesTo"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000008
+
+<http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000008> a owl:Class .
+# 
+# http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000010
+
+<http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000010> a owl:Class .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000000
 
 HBP_DTAT:0000000 rdf:type owl:Class ;
 	nsu:definition "Attribute associated with a dataset"@en ;
 	rdfs:label "Attribute"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000001
 
 HBP_DTAT:0000001 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000034 ;
 	nsu:definition "Direction describes the anatomical planes used to transect an organ or body in order to describe the location of the studied structures. There are three basic planes or directions: coronal, axial and sagittal"@en ;
 	rdfs:label "Direction"@en .
-
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000002
 
 HBP_DTAT:0000002 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000022 ;
 	nsu:definition "The resolution is the measure of the sharpness of an image or of the fineness with which a device can produce or record such an image, usually expressed as the total number or density of pixels in the image. For brain it can be expressed in microns per pixel to millimeters per pixel"@en ;
 	rdfs:label "Resolution units"@en .
-
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000003
 
 HBP_DTAT:0000003 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000000 ;
 	nsu:definition "A Zenodo deposition id. This attribute value is of type integer."@en ;
 	rdfs:label "Zenodo deposition id"@en .
-
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000004
 
 HBP_DTAT:0000004 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000000 ;
 	nsu:definition "An integer value identifying a record in Zenodo"@en ;
 	rdfs:label "Zenodo record id"@en .
-	
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000005
 
 HBP_DTAT:0000005 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000000 ;
 	nsu:definition "A string identifying the file"@en ;
 	rdfs:label "Zenodo file id"@en .
-
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000006
 
 HBP_DTAT:0000006 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000020 ;
+	rdfs:subClassOf HBP_DTAT:0000040 ;
 	nsu:definition "Layer of neocortex where the neuron is located as defined in Neobase."@en ;
-	rdfs:label "Neobase layer"@en .
-
+	rdfs:label "Layer"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000007
 
 HBP_DTAT:0000007 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000020 ;
 	nsu:definition "It has values of 0 or 1 respectively voltage (mV) or current (pA)."@en ;
-	skos:prefLabel "ecode"@en ;
-	rdfs:label "Neobase ecode"@en .
-
+	rdfs:label "Neobase ecode"@en ;
+	skos:prefLabel "ecode"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000008
 
 HBP_DTAT:0000008 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000020 ;
 	nsu:definition "Type of stimulus that has been used for the experiment, defined in the eCode specifications for Neobase."@en ;
-	skos:prefLabel "stimuli"@en ;
-	rdfs:label "Neobase stimuli"@en .
-
+	rdfs:label "Stimuli type"@en ;
+	skos:prefLabel "stimuli"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000009
 
 HBP_DTAT:0000009 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000020 ;
+	rdfs:subClassOf HBP_DTAT:0000035 ;
 	nsu:definition "Electrical type of the neuron as described by Neobase."@en ;
-	skos:prefLabel "etype"@en ;
-	rdfs:label "Neobase etype"@en .
-
+	rdfs:label "Neobase etype label"@en ;
+	skos:prefLabel "etype"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000010
 
 HBP_DTAT:0000010 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000035 ;
+	rdfs:subClassOf HBP_DTAT:0000037 ;
 	nsu:definition "Name of the project as described by Neobase. Values: Thomas data, Sandrine Developmental, Maria Single Cell. It may also be used for other types of datasets with different values"@en ;
-	skos:prefLabel "projectname"@en ;
-	rdfs:label "Project name"@en .
-
+	rdfs:label "Project name"@en ;
+	skos:prefLabel "projectname"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000011
 
 HBP_DTAT:0000011 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000020 ;
 	nsu:definition "Supplementary information from the experiment."@en ;
 	rdfs:label "Note"@en .
-
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000012
 
 HBP_DTAT:0000012 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000020 ;
-	nsu:definition "Username describes the user that generated the data in Neobase. Values: mtoledo, tkberger, sandrine ."@en ;
-	skos:prefLabel "username"@en ;
-	rdfs:label "Neobase username"@en .
-
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	nsu:definition "Username describes the user that generated the data. Neobase values are: mtoledo, tkberger, sandrine ."@en ;
+	rdfs:label "Username"@en ;
+	skos:prefLabel "username"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000013
 
 HBP_DTAT:0000013 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000020 ;
+	rdfs:subClassOf HBP_DTAT:0000020 , HBP_DTAT:0000044 ;
 	nsu:definition "Number identifying the trace in Neobase."@en ;
-	skos:prefLabel "traceid"@en ;	
-	rdfs:label "Neobase trace id"@en .
-
+	rdfs:label "Trace id"@en ;
+	skos:prefLabel "traceid"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000014
 
 HBP_DTAT:0000014 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000035 ;
+	rdfs:subClassOf HBP_DTAT:0000041 , HBP_DTAT:0000044 ;
 	nsu:definition "Number or code identifying the animal."@en ;
-	skos:prefLabel "animalid"@en ;	
-	rdfs:label  "Animal id"@en .
-
+	rdfs:label "Animal id"@en ;
+	skos:prefLabel "animalid"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000015
 
 HBP_DTAT:0000015 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000020 ;
 	nsu:definition "Data units of the voltage (mV) or current (pA)."@en ;
-	skos:prefLabel "dataunits"@en ;	
-	rdfs:label "Data units"@en .
-
+	rdfs:label "Data units"@en ;
+	skos:prefLabel "dataunits"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000016
 
 HBP_DTAT:0000016 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000035 ;
+	rdfs:subClassOf HBP_DTAT:0000040 , HBP_DTAT:0000044 ;
 	nsu:definition "Number identifying the cell in Neobase or another dataset."@en ;
-	skos:prefLabel "cellid"@en ;	
-	rdfs:label "Cell id"@en .
-
+	rdfs:label "Cell id"@en ;
+	skos:prefLabel "cellid"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000017
 
 HBP_DTAT:0000017 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000035 ;
+	rdfs:subClassOf HBP_DTAT:0000039 , HBP_DTAT:0000044 ;
 	nsu:definition "Number identifying the experiment in Neobase or another dataset."@en ;
-	skos:prefLabel "experimentid"@en ;	
-	rdfs:label "Experiment id"@en .
-
+	rdfs:label "Experiment id"@en ;
+	skos:prefLabel "experimentid"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000018
 
 HBP_DTAT:0000018 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000035 ;
+	rdfs:subClassOf HBP_DTAT:0000040 ;
 	nsu:definition "Name identifying the cell in Neobase or another dataset."@en ;
-	skos:prefLabel "cellname"@en ;	
-	rdfs:label "Cell name"@en .
-
+	rdfs:label "Cell name"@en ;
+	skos:prefLabel "cellname"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000019
 
 HBP_DTAT:0000019 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000020 ;
 	nsu:definition "Time units. Value: s (seconds), m (minutes), hr (hours)"@en ;
-	skos:prefLabel "timeunits"@en ;	
-	rdfs:label "Time units"@en .
-
+	rdfs:label "Time units"@en ;
+	skos:prefLabel "timeunits"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000020
 
 HBP_DTAT:0000020 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000000 ;
-	nsu:definition "Attributes applicable to electrophysiology"@en ;
-	rdfs:label "Electrophysiology attributes"@en .
+	rdfs:subClassOf HBP_DTAT:0000037 , _:genid1 .
 
+_:genid1 a owl:Restriction ;
+	owl:onProperty HBP_DTAT:0000036 ;
+	owl:allValuesFrom <http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000008> .
+
+HBP_DTAT:0000020 nsu:definition "Attributes applicable to electrophysiology"@en ;
+	rdfs:label "Electrophysiology dataset attribute"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000021
 
 HBP_DTAT:0000021 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000000 ;
 	nsu:definition "Classification of the type of receptor as defined by MESH and other sources"@en ;
 	rdfs:label "Receptor type"@en .
-
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000022
 
 HBP_DTAT:0000022 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000034 ;
+	rdfs:subClassOf HBP_DTAT:0000042 ;
 	nsu:definition "Attributes applicable to resolution"@en ;
 	rdfs:label "Resolution attributes"@en .
-
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000023
 
 HBP_DTAT:0000023 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000022 ;
 	nsu:definition "Resolution of an imaginary plane dividing the body into dorsal and ventral (back and front, or posterior and anterior) parts."@en ;
 	rdfs:label "Coronal plane resolution"@en .
-
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000024
 
 HBP_DTAT:0000024 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000022 ;
 	nsu:definition "Resolution of an imaginary plane dividing the body into left and right halves."@en ;
 	rdfs:label "Sagittal plane resolution"@en .
-
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000025
 
 HBP_DTAT:0000025 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000022 ;
 	nsu:definition "Resolution of an imaginary plane dividing the body into upper and lower segments."@en ;
 	rdfs:label "Axial plane resolution"@en .
-
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000026
 
 HBP_DTAT:0000026 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000002 ;
 	nsu:definition "Resolution units, pixels per area unit."@en ;
 	rdfs:label "microns per pixel"@en .
-
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000027
 
 HBP_DTAT:0000027 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000002 ;
 	nsu:definition "Resolution units, pixels per area unit."@en ;
 	rdfs:label "millimeters per pixel"@en .
-
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000028
 
 HBP_DTAT:0000028 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000000 ;
 	nsu:definition "External viewer contains the URL of a viewer of images from the data provider."@en ;
 	rdfs:label "External viewer URL"@en .
-
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000029
 
 HBP_DTAT:0000029 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000000 ;
 	nsu:definition "URL to website containing information on datasets from a data provider."@en ;
 	rdfs:label "External website URL"@en .
-
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000030
 
 HBP_DTAT:0000030 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000020 ;
+	rdfs:subClassOf HBP_DTAT:0000035 ;
 	nsu:definition "Electrical cell type of the neuron as described by BBP."@en ;
-	skos:prefLabel "etype_bbp"@en ;
-	rdfs:label "BBP etype"@en .
-
+	rdfs:label "etype"@en ;
+	skos:prefLabel "etype_bbp"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000031
 
 HBP_DTAT:0000031 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000020 ;
+	rdfs:subClassOf HBP_DTAT:0000040 ;
 	nsu:definition "Morphology cell type of the neuron as described by Neobase."@en ;
-	skos:prefLabel "mtype"@en ;
-	rdfs:label "Neobase mtype"@en .
-
+	rdfs:label "Neobase mtype label"@en ;
+	skos:prefLabel "mtype"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000032
 
 HBP_DTAT:0000032 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000020 ;
 	nsu:definition "Timestep size used for applying the current, given in seconds or milliseconds."@en ;
-	skos:prefLabel "timestep"@en ;
-	rdfs:label "Time step"@en .
-
+	rdfs:label "Time step"@en ;
+	skos:prefLabel "timestep"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000033
 
 HBP_DTAT:0000033 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000020 ;
 	nsu:definition "Trace number, can also be found in the file name. For each cell and ordinal there are usually two files, the voltage and the current channel recordings."@en ;
-	skos:prefLabel "ordinal"@en ;
-	rdfs:label "Neobase ordinal"@en .
-
+	rdfs:label "Ordinal"@en ;
+	skos:prefLabel "ordinal"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000034
 
 HBP_DTAT:0000034 rdf:type owl:Class ;
-	rdfs:subClassOf HBP_DTAT:0000000 ;
-	nsu:definition "Attribute associated with atlas datasets."@en ;
-	rdfs:label "Atlas attributes"@en .
+	rdfs:subClassOf HBP_DTAT:0000037 , _:genid2 .
 
+_:genid2 a owl:Restriction ;
+	owl:onProperty HBP_DTAT:0000036 ;
+	owl:allValuesFrom <http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000010> .
+
+HBP_DTAT:0000034 nsu:definition "Attribute associated with atlas datasets."@en ;
+	rdfs:label "Atlas dataset attribute"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000035
 
 HBP_DTAT:0000035 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000040 , _:genid3 .
+
+_:genid3 a owl:Restriction ;
+	owl:onProperty HBP_DTAT:0000036 ;
+	owl:allValuesFrom <http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000008> .
+
+HBP_DTAT:0000035 rdfs:label "Electrophysiology sample attribute"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000037
+
+HBP_DTAT:0000037 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DTAT:0000000 ;
-	nsu:definition "Common attributes associated with any type of dataset."@en ;
-	rdfs:label "Common attributes"@en .
+	rdfs:label "Dataset attribute"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000038
 
+HBP_DTAT:0000038 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	rdfs:label "Resource attribute"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000039
 
+HBP_DTAT:0000039 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	rdfs:label "Activity attribute"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000040
+
+HBP_DTAT:0000040 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	rdfs:label "Sample attribute"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000041
+
+HBP_DTAT:0000041 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	rdfs:label "Specimen attribute"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000042
+
+HBP_DTAT:0000042 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000038 , _:genid4 .
+
+_:genid4 a owl:Restriction ;
+	owl:onProperty HBP_DTAT:0000036 ;
+	owl:allValuesFrom <http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000010> .
+
+HBP_DTAT:0000042 rdfs:label "Atlas resource attributes"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000043
+
+HBP_DTAT:0000043 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000037 ;
+	rdfs:label "Project id"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000044
+
+HBP_DTAT:0000044 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DTAT:0000000 ;
+	rdfs:label "Provider id"@en .
+# 
+# Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi
