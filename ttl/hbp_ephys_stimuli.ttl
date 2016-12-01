@@ -6,7 +6,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix HBP_EPST: <http://www.hbp.FIXME.org/hbp_ephys_stimuli/> .
-@base http://www.hbp.FIXME.org/hbp_ephys_stimuli .
+@base <http://www.hbp.FIXME.org/hbp_ephys_stimuli> .
 
 <http://www.hbp.FIXME.org/hbp_ephys_stimuli> rdf:type owl:Ontology ;
 	owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
