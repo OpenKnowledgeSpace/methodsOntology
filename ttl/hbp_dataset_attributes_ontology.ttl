@@ -7,7 +7,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix HBP_DTAT: <http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/> .
-@base http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology .
+@base <http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology> .
 
 <http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology> rdf:type owl:Ontology ;
 owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> ,  <http://www.hbp.FIXME.org/hbp_data_modality_ontology>  .
