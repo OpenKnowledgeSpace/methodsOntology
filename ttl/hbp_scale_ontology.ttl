@@ -54,7 +54,7 @@ HBP_SCL:0000005 rdf:type owl:Class ;
 
 HBP_SCL:0000006 rdf:type owl:Class ;
                  rdfs:label "single cell"@en ;
-                 nsu:definition "One cell."@en ;
+                 nsu:definition "One cell, one neuron."@en ;
                  rdfs:subClassOf HBP_SCL:0000000 .
 
 
