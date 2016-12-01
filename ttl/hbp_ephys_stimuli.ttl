@@ -22,7 +22,7 @@
 # http://www.hbp.FIXME.org/hbp_ephys_stimuli/0000000
 
 HBP_EPST:0000000 rdf:type owl:Class ;
-	rdfs:label "Electrophysiological Stimuli" .
+	rdfs:label "Electrophysiological stimuli type" .
 
 HBP_EPST:0000001 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_EPST:0000000 ;
