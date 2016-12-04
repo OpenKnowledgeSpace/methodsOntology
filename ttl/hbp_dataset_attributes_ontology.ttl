@@ -10,7 +10,7 @@
 @base <http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology> .
 
 <http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology> rdf:type owl:Ontology ;
-owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> ,  <http://www.hbp.FIXME.org/hbp_data_modality_ontology>  .
+owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> ,  <https://raw.githubusercontent.com/OpenKnowledgeSpace/methodsOntology/master/ttl/hbp_data_modality_ontology.ttl>  .
 # 
 # 
 # #################################################################
