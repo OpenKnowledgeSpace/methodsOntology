@@ -47,13 +47,7 @@ HBP_DTAT:0000036 a owl:ObjectProperty ;
 # #################################################################
 # 
 # 
-# http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000008
 
-<http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000008> a owl:Class .
-# 
-# http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000010
-
-<http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000010> a owl:Class .
 # 
 # http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/0000000
 
