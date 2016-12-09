@@ -89,7 +89,8 @@ HBP_STO:0000009 a owl:Class ;
 
 HBP_STO:0000010 a owl:Class ;
 	rdfs:label "External database"@en ;
-	nsu:definition "External repositories or databases."@en .
+	nsu:definition "External repositories or databases."@en ,
+	rdfs:subClassOf HBP_STO:0000001 .
 
 
 HBP_STO:0000011 a owl:Class ;
