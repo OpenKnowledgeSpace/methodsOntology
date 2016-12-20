@@ -1067,3 +1067,15 @@ HBP_DATT:0000087 rdf:type owl:Class ;
 
                   HBP_PROP:has_file_extension ".jpg" ;
                   HBP_PROP:has_file_extension ".jpeg" .
+
+
+
+HBP_DATT:0000088 rdf:type owl:Class ;
+
+                  rdfs:label "application/json;version=0"@en ;
+
+                  nsu:definition "JSON (JavaScript Object Notation) is an open-standard format that uses human-readable text to transmit data objects consisting of attribute–value pairs. It is the most common data format used for asynchronous browser/server communication." @en ;
+
+                  rdfs:subClassOf HBP_DATT:0000040 ;
+
+                  HBP_PROP:has_file_extension ".json" .
