@@ -160,3 +160,103 @@ HBP_EPST:0000034 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_EPST:0000000 ;
 	rdfs:label "VacuumPulses" @en .
 
+HBP_EPST:0000035 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "DeHyperPol" @en .
+
+HBP_EPST:0000036 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "ElecCal" @en .
+
+HBP_EPST:0000037 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "FirePattern" @en .
+
+HBP_EPST:0000038 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "HyperDePol" @en .
+
+HBP_EPST:0000039 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "IVRest" @en .
+
+HBP_EPST:0000040 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "NegCheops" @en .
+
+HBP_EPST:0000041 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "NoiseOU3" @en .
+
+HBP_EPST:0000042 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "PosCheops" @en .
+
+HBP_EPST:0000043 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "Rac" @en .
+
+HBP_EPST:0000044 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "ResetITC" @en .
+
+HBP_EPST:0000045 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "RPip" @en .
+
+HBP_EPST:0000046 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "RSealClose" @en .
+
+HBP_EPST:0000047 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "RSealOpen" @en .
+
+HBP_EPST:0000048 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "SetAmpl" @en .
+
+HBP_EPST:0000049 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "SetISI" @en .
+
+HBP_EPST:0000050 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "SponHold3" @en .
+
+HBP_EPST:0000051 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "SponHold30" @en .
+
+HBP_EPST:0000052 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "SponNoHold30" @en .
+
+HBP_EPST:0000053 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "StartHold" @en .
+
+HBP_EPST:0000054 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "StartNoHold" @en .
+
+HBP_EPST:0000055 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "SubWhiteNoise" @en .
+
+HBP_EPST:0000056 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "TestAmpl" @en .
+
+HBP_EPST:0000057 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "TestRheo" @en .
+
+HBP_EPST:0000058 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "TestSpikeRec" @en .
+
+HBP_EPST:0000059 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_EPST:0000000 ;
+	rdfs:label "WhiteNoise" @en .
+
