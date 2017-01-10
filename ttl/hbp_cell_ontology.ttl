@@ -11,12 +11,13 @@
 @prefix nmc: <http://ontology.neuinfo.org/NIF/BiomaterialEntities/NIF_Neuron_MolecularConstituent_Bridge.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix HBP_CELL: <http://www.hbp.FIXME.org/hbp_cell_ontology/> .
 @base <http://www.hbp.FIXME.org/hbp_cell_ontology> .
 
 <http://www.hbp.FIXME.org/hbp_cell_ontology> rdf:type owl:Ontology ;                
-owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
-
+owl:imports <http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf> ,
+                                                         <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
 
 HBP_CELL:0000000 rdf:type owl:Class ;
                   rdfs:label "Cell"@en .
@@ -228,6 +229,7 @@ HBP_CELL:0000027 rdf:type owl:Class ;
 HBP_CELL:0000028 rdf:type owl:Class ;
                   owl:equivalentClass ncel:nifext_49;                  
                   rdfs:label "Layer II/III pyramidal cell"@en ;
+                  skos:altLabel "L23_PC"@en ;
                   nsu:synonym "L2/3_PC"@en ;
                   nsu:synonym "L23_PC"@en ;                  
                   nsu:synonym "Neocortex pyramidal cell layer 2-3"@en ;                  
