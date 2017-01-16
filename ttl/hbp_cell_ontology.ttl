@@ -16,8 +16,7 @@
 @base <http://www.hbp.FIXME.org/hbp_cell_ontology> .
 
 <http://www.hbp.FIXME.org/hbp_cell_ontology> rdf:type owl:Ontology ;                
-owl:imports <http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf> ,
-                                                         <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
+owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
 
 HBP_CELL:mtypeName rdf:type owl:AnnotationProperty .
 
