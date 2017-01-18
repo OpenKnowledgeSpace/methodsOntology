@@ -63,3 +63,15 @@ HBP_SCL:0000007 rdf:type owl:Class ;
                  nsu:definition "Two cells with one or more points of contact."@en ;
                  rdfs:subClassOf HBP_SCL:0000000 .
 
+
+HBP_SCL:0000008 rdf:type owl:Class ;
+                 rdfs:label "microcircuit"@en ;
+                 nsu:definition "A microcircuit is a specific pattern of connectivity between neurons within a region, it carries out the specific kinds of processing of a region."@en ;
+                 rdfs:subClassOf HBP_SCL:0000000 .
+
+
+HBP_SCL:0000009 rdf:type owl:Class ;
+                 rdfs:label "subcellular"@en ;
+                 nsu:definition "Smaller than a cell. Located or occurring within a cell."@en ;
+                 rdfs:subClassOf HBP_SCL:0000000 .
+
