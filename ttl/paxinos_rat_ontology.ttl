@@ -21,8 +21,6 @@ PRBA:00000 rdf:type owl:Class ;
 
                  nsu:synonym "root"@en .
 
-
-
 PRBA:00012 rdf:type owl:Class ;
 
                  rdfs:label "optic nerve"@en .
@@ -35,9 +33,9 @@ PRBA:00012 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "aopt"@en .
 
-                 nsu:synonym "aopt"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00012 ] .
 
@@ -65,9 +63,9 @@ PRBA:00967 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "ox"@en .
 
-                 nsu:synonym "ox"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00012 ] .
 
@@ -115,9 +113,9 @@ PRBA:00273 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Amy"@en .
 
-                 nsu:synonym "Amy"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00273 ] .
 
@@ -135,9 +133,9 @@ PRBA:00076 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "AAD"@en .
 
-                 nsu:synonym "AAD"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00076 ] .
 
@@ -145,9 +143,9 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "AAV"@en .
 
-                 nsu:synonym "AAV"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00076 ] .
 
@@ -175,9 +173,9 @@ PRBA:00087 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "AHiAM"@en .
 
-                 nsu:synonym "AHiAM"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00086 ] .
 
@@ -195,9 +193,9 @@ PRBA:00089 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Apir"@en .
 
-                 nsu:synonym "Apir"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:01100 ] .
 
@@ -205,9 +203,9 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Astr"@en .
 
-                 nsu:synonym "Astr"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:01100 ] .
 
@@ -495,19 +493,9 @@ PRBA:00587 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "PLCo-1"@en .
 
-                 nsu:synonym "PLCo-1"@en .
-
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00587 ] .
-
-
-
-PRBA:01100 rdf:type owl:Class ;
-
-                 rdfs:label "-------"@en .
-
-                 nsu:synonym "PLCo-2"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00587 ] .
 
@@ -515,9 +503,19 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "PLCo-2"@en .
 
-                 nsu:synonym "PLCo-3"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00587 ] .
+
+
+
+PRBA:01100 rdf:type owl:Class ;
+
+                 rdfs:label "PLCo-3"@en .
+
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00587 ] .
 
@@ -615,9 +613,9 @@ PRBA:00305 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "LZ"@en .
 
-                 nsu:synonym "LZ"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00332 ] .
 
@@ -725,9 +723,9 @@ PRBA:00918 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "MZ"@en .
 
-                 nsu:synonym "MZ"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00332 ] .
 
@@ -785,9 +783,9 @@ PRBA:00822 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "DMH"@en .
 
-                 nsu:synonym "DMH"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:01100 ] .
 
@@ -835,9 +833,9 @@ PRBA:00494 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "ADP"@en .
 
-                 nsu:synonym "ADP"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00494 ] .
 
@@ -845,9 +843,9 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "AVPO"@en .
 
-                 nsu:synonym "AVPO"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00494 ] .
 
@@ -895,9 +893,9 @@ PRBA:00501 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "PDP"@en .
 
-                 nsu:synonym "PDP"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00494 ] .
 
@@ -1045,9 +1043,9 @@ PRBA:00905 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "PVZ"@en .
 
-                 nsu:synonym "PVZ"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00332 ] .
 
@@ -1145,9 +1143,9 @@ PRBA:00619 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "PaAM"@en .
 
-                 nsu:synonym "PaAM"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00619 ] .
 
@@ -2375,19 +2373,9 @@ PRBA:00341 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Tu-1"@en .
 
-                 nsu:synonym "Tu-1"@en .
-
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00858 ] .
-
-
-
-PRBA:01100 rdf:type owl:Class ;
-
-                 rdfs:label "-------"@en .
-
-                 nsu:synonym "Tu-2"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00858 ] .
 
@@ -2395,9 +2383,19 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Tu-2"@en .
 
-                 nsu:synonym "Tu-3"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00858 ] .
+
+
+
+PRBA:01100 rdf:type owl:Class ;
+
+                 rdfs:label "Tu-3"@en .
+
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00858 ] .
 
@@ -2995,19 +2993,9 @@ PRBA:00216 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "CxA-1"@en .
 
-                 nsu:synonym "CxA-1"@en .
-
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00216 ] .
-
-
-
-PRBA:01100 rdf:type owl:Class ;
-
-                 rdfs:label "-------"@en .
-
-                 nsu:synonym "CxA-2"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00216 ] .
 
@@ -3015,9 +3003,19 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "CxA-2"@en .
 
-                 nsu:synonym "CxA-3"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00216 ] .
+
+
+
+PRBA:01100 rdf:type owl:Class ;
+
+                 rdfs:label "CxA-3"@en .
+
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00216 ] .
 
@@ -3035,19 +3033,9 @@ PRBA:00417 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "LOT-1"@en .
 
-                 nsu:synonym "LOT-1"@en .
-
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00417 ] .
-
-
-
-PRBA:01100 rdf:type owl:Class ;
-
-                 rdfs:label "-------"@en .
-
-                 nsu:synonym "LOT-2"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00417 ] .
 
@@ -3055,9 +3043,9 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "LOT-2"@en .
 
-                 nsu:synonym "LOT-3"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00417 ] .
 
@@ -3065,9 +3053,19 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "LOT-3"@en .
 
-                 nsu:synonym "OlfCx-1"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00417 ] .
+
+
+
+PRBA:01100 rdf:type owl:Class ;
+
+                 rdfs:label "OlfCx-1"@en .
+
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00555 ] .
 
@@ -3095,19 +3093,9 @@ PRBA:00230 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Pir-1"@en .
 
-                 nsu:synonym "Pir-1"@en .
-
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00641 ] .
-
-
-
-PRBA:01100 rdf:type owl:Class ;
-
-                 rdfs:label "-------"@en .
-
-                 nsu:synonym "Pir-1a"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00641 ] .
 
@@ -3115,19 +3103,9 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Pir-1a"@en .
 
-                 nsu:synonym "Pir-1b"@en .
-
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00641 ] .
-
-
-
-PRBA:01100 rdf:type owl:Class ;
-
-                 rdfs:label "-------"@en .
-
-                 nsu:synonym "Pir-2"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00641 ] .
 
@@ -3135,9 +3113,29 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Pir-1b"@en .
 
-                 nsu:synonym "Pir-3"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00641 ] .
+
+
+
+PRBA:01100 rdf:type owl:Class ;
+
+                 rdfs:label "Pir-2"@en .
+
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00641 ] .
+
+
+
+PRBA:01100 rdf:type owl:Class ;
+
+                 rdfs:label "Pir-3"@en .
+
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00641 ] .
 
@@ -3155,19 +3153,9 @@ PRBA:00677 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "RAPir-1"@en .
 
-                 nsu:synonym "RAPir-1"@en .
-
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00677 ] .
-
-
-
-PRBA:01100 rdf:type owl:Class ;
-
-                 rdfs:label "-------"@en .
-
-                 nsu:synonym "RAPir-2"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00677 ] .
 
@@ -3175,9 +3163,19 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "RAPir-2"@en .
 
-                 nsu:synonym "RAPir-3"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00677 ] .
+
+
+
+PRBA:01100 rdf:type owl:Class ;
+
+                 rdfs:label "RAPir-3"@en .
+
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00677 ] .
 
@@ -3495,9 +3493,9 @@ PRBA:00915 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Olf"@en .
 
-                 nsu:synonym "Olf"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00854 ] .
 
@@ -3735,19 +3733,9 @@ PRBA:00264 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "DTT-1"@en .
 
-                 nsu:synonym "DTT-1"@en .
-
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00264 ] .
-
-
-
-PRBA:01100 rdf:type owl:Class ;
-
-                 rdfs:label "-------"@en .
-
-                 nsu:synonym "DTT-2"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00264 ] .
 
@@ -3755,9 +3743,9 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "DTT-2"@en .
 
-                 nsu:synonym "DTT-3"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00264 ] .
 
@@ -3765,9 +3753,19 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "DTT-3"@en .
 
-                 nsu:synonym "DTT-4"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00264 ] .
+
+
+
+PRBA:01100 rdf:type owl:Class ;
+
+                 rdfs:label "DTT-4"@en .
+
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00264 ] .
 
@@ -3785,19 +3783,9 @@ PRBA:00919 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "VTT-1"@en .
 
-                 nsu:synonym "VTT-1"@en .
-
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00919 ] .
-
-
-
-PRBA:01100 rdf:type owl:Class ;
-
-                 rdfs:label "-------"@en .
-
-                 nsu:synonym "VTT-2"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00919 ] .
 
@@ -3805,9 +3793,19 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "VTT-2"@en .
 
-                 nsu:synonym "VTT-3"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00919 ] .
+
+
+
+PRBA:01100 rdf:type owl:Class ;
+
+                 rdfs:label "VTT-3"@en .
+
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00919 ] .
 
@@ -3895,9 +3893,9 @@ PRBA:00771 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "STIL"@en .
 
-                 nsu:synonym "STIL"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00770 ] .
 
@@ -4135,19 +4133,9 @@ PRBA:00447 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "LSI-1"@en .
 
-                 nsu:synonym "LSI-1"@en .
-
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00447 ] .
-
-
-
-PRBA:01100 rdf:type owl:Class ;
-
-                 rdfs:label "-------"@en .
-
-                 nsu:synonym "LSI-2"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00447 ] .
 
@@ -4155,9 +4143,9 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "LSI-2"@en .
 
-                 nsu:synonym "LSI-3"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00447 ] .
 
@@ -4165,9 +4153,19 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "LSI-3"@en .
 
-                 nsu:synonym "LSI-4"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00447 ] .
+
+
+
+PRBA:01100 rdf:type owl:Class ;
+
+                 rdfs:label "LSI-4"@en .
+
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00447 ] .
 
@@ -4305,9 +4303,9 @@ PRBA:00960 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "dcw-ec-cc-gcc-fmi-fmj"@en .
 
-                 nsu:synonym "dcw-ec-cc-gcc-fmi-fmj"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:01078 ] .
 
@@ -4515,9 +4513,9 @@ PRBA:00106 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Acs5"@en .
 
-                 nsu:synonym "Acs5"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00328 ] .
 
@@ -4535,9 +4533,9 @@ PRBA:00125 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Acs7"@en .
 
-                 nsu:synonym "Acs7"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00328 ] .
 
@@ -4585,9 +4583,9 @@ PRBA:00132 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "B4"@en .
 
-                 nsu:synonym "B4"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00328 ] .
 
@@ -4935,9 +4933,9 @@ PRBA:00064 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Ant"@en .
 
-                 nsu:synonym "Ant"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00194 ] .
 
@@ -4955,9 +4953,9 @@ PRBA:00008 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "45Cb"@en .
 
-                 nsu:synonym "45Cb"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:01100 ] .
 
@@ -5175,9 +5173,9 @@ PRBA:00797 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Uvu"@en .
 
-                 nsu:synonym "Uvu"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00194 ] .
 
@@ -5195,9 +5193,9 @@ PRBA:00925 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "cbc"@en .
 
-                 nsu:synonym "cbc"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00194 ] .
 
@@ -5465,9 +5463,9 @@ PRBA:00472 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "MRVL"@en .
 
-                 nsu:synonym "MRVL"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00328 ] .
 
@@ -5695,9 +5693,9 @@ PRBA:00535 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Mo5"@en .
 
-                 nsu:synonym "Mo5"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00328 ] .
 
@@ -5705,19 +5703,9 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Mo5DL"@en .
 
-                 nsu:synonym "Mo5DL"@en .
-
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:01100 ] .
-
-
-
-PRBA:01100 rdf:type owl:Class ;
-
-                 rdfs:label "-------"@en .
-
-                 nsu:synonym "Mo5VM"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:01100 ] .
 
@@ -5725,9 +5713,19 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Mo5VM"@en .
 
-                 nsu:synonym "O"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:01100 ] .
+
+
+
+PRBA:01100 rdf:type owl:Class ;
+
+                 rdfs:label "O"@en .
+
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00328 ] .
 
@@ -5865,9 +5863,9 @@ PRBA:00566 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "PBW"@en .
 
-                 nsu:synonym "PBW"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00564 ] .
 
@@ -5875,9 +5873,9 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "PC5"@en .
 
-                 nsu:synonym "PC5"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00328 ] .
 
@@ -5975,9 +5973,9 @@ PRBA:00662 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Pre-Cb"@en .
 
-                 nsu:synonym "Pre-Cb"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00328 ] .
 
@@ -6085,9 +6083,9 @@ PRBA:00360 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "IODMC"@en .
 
-                 nsu:synonym "IODMC"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00364 ] .
 
@@ -6155,9 +6153,9 @@ PRBA:00649 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "DLPn"@en .
 
-                 nsu:synonym "DLPn"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00649 ] .
 
@@ -6165,9 +6163,9 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "DMPn"@en .
 
-                 nsu:synonym "DMPn"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00649 ] .
 
@@ -6185,9 +6183,9 @@ PRBA:00253 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "MPn"@en .
 
-                 nsu:synonym "MPn"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00649 ] .
 
@@ -6195,9 +6193,9 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "PPTg"@en .
 
-                 nsu:synonym "PPTg"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00649 ] .
 
@@ -6245,9 +6243,9 @@ PRBA:00653 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "VPPn"@en .
 
-                 nsu:synonym "VPPn"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00649 ] .
 
@@ -6265,9 +6263,9 @@ PRBA:00675 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "RLH"@en .
 
-                 nsu:synonym "RLH"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00675 ] .
 
@@ -6295,9 +6293,9 @@ PRBA:00694 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "RA"@en .
 
-                 nsu:synonym "RA"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00328 ] .
 
@@ -6405,9 +6403,9 @@ PRBA:00600 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "RC"@en .
 
-                 nsu:synonym "RC"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:01100 ] .
 
@@ -6465,9 +6463,9 @@ PRBA:00697 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "RPO"@en .
 
-                 nsu:synonym "RPO"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00328 ] .
 
@@ -6505,9 +6503,9 @@ PRBA:00720 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "SGl"@en .
 
-                 nsu:synonym "SGl"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00328 ] .
 
@@ -6685,9 +6683,9 @@ PRBA:00246 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "DMSp5V"@en .
 
-                 nsu:synonym "DMSp5V"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00246 ] .
 
@@ -6725,9 +6723,9 @@ PRBA:00815 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Sp5OVL"@en .
 
-                 nsu:synonym "Sp5OVL"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00815 ] .
 
@@ -6865,9 +6863,9 @@ PRBA:00533 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "PCTg"@en .
 
-                 nsu:synonym "PCTg"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00855 ] .
 
@@ -7065,9 +7063,9 @@ PRBA:00030 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "5Pt"@en .
 
-                 nsu:synonym "5Pt"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00031 ] .
 
@@ -7435,9 +7433,9 @@ PRBA:00236 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "DpMe"@en .
 
-                 nsu:synonym "DpMe"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00473 ] .
 
@@ -7455,9 +7453,9 @@ PRBA:00291 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "EMi"@en .
 
-                 nsu:synonym "EMi"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00473 ] .
 
@@ -7475,9 +7473,9 @@ PRBA:00299 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "I3"@en .
 
-                 nsu:synonym "I3"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00473 ] .
 
@@ -7535,19 +7533,9 @@ PRBA:00284 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "ECIC-1"@en .
 
-                 nsu:synonym "ECIC-1"@en .
-
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00284 ] .
-
-
-
-PRBA:01100 rdf:type owl:Class ;
-
-                 rdfs:label "-------"@en .
-
-                 nsu:synonym "ECIC-2"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00284 ] .
 
@@ -7555,9 +7543,19 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "ECIC-2"@en .
 
-                 nsu:synonym "ECIC-3"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00284 ] .
+
+
+
+PRBA:01100 rdf:type owl:Class ;
+
+                 rdfs:label "ECIC-3"@en .
+
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00284 ] .
 
@@ -7655,9 +7653,9 @@ PRBA:00386 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "InCG"@en .
 
-                 nsu:synonym "InCG"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00473 ] .
 
@@ -7665,9 +7663,9 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "InCo"@en .
 
-                 nsu:synonym "InCo"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00473 ] .
 
@@ -7705,9 +7703,9 @@ PRBA:00521 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Min"@en .
 
-                 nsu:synonym "Min"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00473 ] .
 
@@ -7985,9 +7983,9 @@ PRBA:00756 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "SNM"@en .
 
-                 nsu:synonym "SNM"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00751 ] .
 
@@ -8005,9 +8003,9 @@ PRBA:00758 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "SNRDM"@en .
 
-                 nsu:synonym "SNRDM"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00758 ] .
 
@@ -8015,9 +8013,9 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "SNRVL"@en .
 
-                 nsu:synonym "SNRVL"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00758 ] .
 
@@ -8075,9 +8073,9 @@ PRBA:00963 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "ctg"@en .
 
-                 nsu:synonym "ctg"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00473 ] .
 
@@ -8115,9 +8113,9 @@ PRBA:00036 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "A"@en .
 
-                 nsu:synonym "A"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -8155,9 +8153,9 @@ PRBA:00111 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Ahi"@en .
 
-                 nsu:synonym "Ahi"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -8175,9 +8173,9 @@ PRBA:00128 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "C"@en .
 
-                 nsu:synonym "C"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -8235,9 +8233,9 @@ PRBA:00280 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "ECIC3"@en .
 
-                 nsu:synonym "ECIC3"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -8285,9 +8283,9 @@ PRBA:00302 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "FV"@en .
 
-                 nsu:synonym "FV"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -8515,9 +8513,9 @@ PRBA:00402 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "L"@en .
 
-                 nsu:synonym "L"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -8565,9 +8563,9 @@ PRBA:00455 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "LTe"@en .
 
-                 nsu:synonym "LTe"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -8625,9 +8623,9 @@ PRBA:00483 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "MEntR"@en .
 
-                 nsu:synonym "MEntR"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -9005,9 +9003,9 @@ PRBA:00637 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Pi-3"@en .
 
-                 nsu:synonym "Pi-3"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -9085,9 +9083,9 @@ PRBA:00666 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "PrMC"@en .
 
-                 nsu:synonym "PrMC"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -9215,9 +9213,9 @@ PRBA:00717 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "S1T"@en .
 
-                 nsu:synonym "S1T"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -9305,9 +9303,9 @@ PRBA:00793 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Sp"@en .
 
-                 nsu:synonym "Sp"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -9315,9 +9313,9 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "SpV"@en .
 
-                 nsu:synonym "SpV"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -9405,9 +9403,9 @@ PRBA:00844 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "T"@en .
 
-                 nsu:synonym "T"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -9435,9 +9433,9 @@ PRBA:00850 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Tr"@en .
 
-                 nsu:synonym "Tr"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -9465,9 +9463,9 @@ PRBA:00863 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "V"@en .
 
-                 nsu:synonym "V"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -9545,9 +9543,9 @@ PRBA:00923 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "Ve"@en .
 
-                 nsu:synonym "Ve"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -9565,9 +9563,9 @@ PRBA:00929 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "aa"@en .
 
-                 nsu:synonym "aa"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -9595,9 +9593,9 @@ PRBA:00948 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "b"@en .
 
-                 nsu:synonym "b"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -9615,9 +9613,9 @@ PRBA:00954 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "costr"@en .
 
-                 nsu:synonym "costr"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -9655,19 +9653,9 @@ PRBA:00982 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "e"@en .
 
-                 nsu:synonym "e"@en .
-
-                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
-
-
-
-PRBA:01100 rdf:type owl:Class ;
-
-                 rdfs:label "-------"@en .
-
-                 nsu:synonym "eMC"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -9675,9 +9663,19 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "eMC"@en .
 
-                 nsu:synonym "ePC"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
+
+                 rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
+
+
+
+PRBA:01100 rdf:type owl:Class ;
+
+                 rdfs:label "ePC"@en .
+
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -9795,9 +9793,9 @@ PRBA:01009 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "is"@en .
 
-                 nsu:synonym "is"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -9805,9 +9803,9 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "m"@en .
 
-                 nsu:synonym "m"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -9935,9 +9933,9 @@ PRBA:01043 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "olfa"@en .
 
-                 nsu:synonym "olfa"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -10035,9 +10033,9 @@ PRBA:01061 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "r"@en .
 
-                 nsu:synonym "r"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
@@ -10045,9 +10043,9 @@ PRBA:01100 rdf:type owl:Class ;
 
 PRBA:01100 rdf:type owl:Class ;
 
-                 rdfs:label "-------"@en .
+                 rdfs:label "rLL"@en .
 
-                 nsu:synonym "rLL"@en .
+### TOFIX: rename the ------- to proper name                 rdfs:label "-------"@en .
 
                  rdfs:subClassOf [ rdf:type owl:Restriction ; owl:onProperty nsu:part_of ; owl:someValuesFrom PRBA:00865 ] .
 
