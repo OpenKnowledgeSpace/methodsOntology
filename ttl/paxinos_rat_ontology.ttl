@@ -8,7 +8,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
-@prefix PRBA: <http://www.hbp.FIXME.org/mba2016_ontology> .
+@prefix PRBA: <http://www.hbp.FIXME.org/mba2016_ontology/> .
 @base <http://www.hbp.FIXME.org/mba2016_ontology> .
 
 <http://www.hbp.FIXME.org/PRBA_ontology> rdf:type owl:Ontology ;
