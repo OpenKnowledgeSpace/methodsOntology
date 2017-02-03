@@ -21,20 +21,20 @@
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000000
 
 HBP_DAMO:0000000 rdf:type owl:Class ;
-	rdfs:label "Data modality" @en .
+	rdfs:label "Data category" @en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000001
 
 HBP_DAMO:0000001 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000006 ;
-	nsu:definition "Morphology reconstruction pertain to data which elucidate the morphology of a given entity. The scales which can be used to characterize this data modality include: brain, multiple cells and paired cells."@en ;
+	nsu:definition "Morphology reconstruction pertain to data which elucidate the morphology of a given entity. The scales which can be used to characterize this data category include: brain, multiple cells and paired cells."@en ;
 	rdfs:label "Morphology reconstruction"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000002
 
 HBP_DAMO:0000002 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000012 ;
-	nsu:definition "This modality includes data which delinate the identities and sometimes quantities of proteins found in an entity. Applicable scales include: brain region, partial region, multiple cells, single cell, cellular component."@en ;
+	nsu:definition "This category includes data which delinate the identities and sometimes quantities of proteins found in an entity. Applicable scales include: brain region, partial region, multiple cells, single cell, cellular component."@en ;
 	rdfs:label "Protein expression"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000003
@@ -62,21 +62,21 @@ HBP_DAMO:0000005 rdf:type owl:Class ;
 
 HBP_DAMO:0000006 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000000 ;
-	nsu:definition "This modality broadly characterizes studies which elucidate the structure of an entity. Applicable scales include: brain, brain regions, partial region, multiple cells, and single cell."@en ;
+	nsu:definition "This category broadly characterizes studies which elucidate the structure of an entity. Applicable scales include: brain, brain regions, partial region, multiple cells, and single cell."@en ;
 	rdfs:label "Anatomical data"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000007
 
 HBP_DAMO:0000007 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000000 ;
-	nsu:definition "Data in this modality characterize the chemical and physical functions which are carried out by an entity. Scales include: brain, brain regions, partial region, multiple cells, and single cell, cellular compartment."@en ;
+	nsu:definition "Data in this category characterize the chemical and physical functions which are carried out by an entity. Scales include: brain, brain regions, partial region, multiple cells, and single cell, cellular compartment."@en ;
 	rdfs:label "Physiological data"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000008
 
 HBP_DAMO:0000008 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000007 ;
-	nsu:definition "This modality includes data which characterize the electrical properties of an entity, e.g. by measuring the flow of ions. Scales can include: multiple cells, single cell."@en ;
+	nsu:definition "This category includes data which characterize the electrical properties of an entity, e.g. by measuring the flow of ions. Scales can include: multiple cells, single cell."@en ;
 	rdfs:label "Electrophysiology"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000010
@@ -97,14 +97,14 @@ HBP_DAMO:0000011 rdf:type owl:Class ;
 
 HBP_DAMO:0000012 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000000 ;
-	nsu:definition "This modality includes data which characterize the transcripts or proteins that are detected in a given entity. Scales include: brain region, partial region, multiple cells, single cell, cellular component. "@en ;
+	nsu:definition "This category includes data which characterize the transcripts or proteins that are detected in a given entity. Scales include: brain region, partial region, multiple cells, single cell, cellular component. "@en ;
 	rdfs:label "Expression data"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000013
 
 HBP_DAMO:0000013 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000000 ;
-	nsu:definition "This modality includes the mathematical description of the properties of nerve cells or other biological entities, it is designed to accurately describe and predict biological processes. Scales can include: multiple cells, single cell, proteins. "@en ;
+	nsu:definition "This category includes the mathematical description of the properties of nerve cells or other biological entities, it is designed to accurately describe and predict biological processes. Scales can include: multiple cells, single cell, proteins. "@en ;
 	rdfs:label "Model"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000014
@@ -125,7 +125,7 @@ HBP_DAMO:0000015 rdf:type owl:Class ;
 
 HBP_DAMO:0000016 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000036 ;
-	nsu:definition "This modality includes the computational models of biochemical reactions that may include the rate of the reaction, substrates and products, order of binding, reaction conditions (pH, temperature, concentration, etc..) and effectors (inhibitors, activators) . "@en ;
+	nsu:definition "This category includes the computational models of biochemical reactions that may include the rate of the reaction, substrates and products, order of binding, reaction conditions (pH, temperature, concentration, etc..) and effectors (inhibitors, activators) . "@en ;
 	rdfs:label "Kinetic model"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000017
@@ -146,7 +146,7 @@ HBP_DAMO:0000018 rdf:type owl:Class ;
 
 HBP_DAMO:0000019 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000001 ;
-	nsu:definition "Morphology reconstruction pertain to data which elucidate the morphology of a given entity. The scales which can be used to characterize this data modality include: single cells and partial cells. "@en ;
+	nsu:definition "Morphology reconstruction pertain to data which elucidate the morphology of a given entity. The scales which can be used to characterize this data category include: single cells and partial cells. "@en ;
 	rdfs:label "Single cell morphology reconstruction"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000020
@@ -160,14 +160,14 @@ HBP_DAMO:0000020 rdf:type owl:Class ;
 
 HBP_DAMO:0000021 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000057 ;
-	nsu:definition "This modality includes the mathematical description of the properties of nerve cells or neurons that is designed to accurately describe and predict biological processes. Scales can include: multiple cells. "@en ;
+	nsu:definition "This category includes the mathematical description of the properties of nerve cells or neurons that is designed to accurately describe and predict biological processes. Scales can include: multiple cells. "@en ;
 	rdfs:label "Spiking neural network model"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000022
 
 HBP_DAMO:0000022 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000012 ;
-	nsu:definition "This modality includes the analysis of gene levels by identifying, quantifying or comparing mRNA transcripts by using microarrays, RNA-seq, northern blots, gene-indexed expression profiles etc.. "@en ;
+	nsu:definition "This category includes the analysis of gene levels by identifying, quantifying or comparing mRNA transcripts by using microarrays, RNA-seq, northern blots, gene-indexed expression profiles etc.. "@en ;
 	rdfs:label "Gene expression"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000023
@@ -432,5 +432,13 @@ HBP_DAMO:0000065 rdf:type owl:Class ;
 HBP_DAMO:0000066 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000052 ;
 	rdfs:label "Amyloid-beta deposits distribution"@en .
+
+# 
+#http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000067
+
+HBP_DAMO:0000067 rdf:type owl:Class ;
+	rdfs:subClassOf HBP_DAMO:0000006 ;
+	nsu:definition "Gives the brain slice localization of the neuron morphology."@en ;
+	rdfs:label "Morphology localization"@en .
 
 # Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi
