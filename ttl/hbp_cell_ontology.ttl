@@ -1137,7 +1137,6 @@ HBP_CELL:0000140 rdf:type owl:Class ;
 HBP_CELL:0000141 rdf:type owl:Class ;
                   owl:equivalentClass ncel:nlx_cell_091205;  
                   rdfs:label "Hippocampus CA1 stratum pyramidale, basket cell"@en ;
-                  rdfs:subClassOf HBP_CELL:0000033 ;
                   HBP_CELL:mtypeName "SP_BC"@en ;
                   nsu:synonym "SP_BC"@en ;
                   rdfs:subClassOf HBP_CELL:0000154.
@@ -1145,7 +1144,6 @@ HBP_CELL:0000141 rdf:type owl:Class ;
 
 HBP_CELL:0000142 rdf:type owl:Class ;
                   rdfs:label "Hippocampus CA1 stratum pyramidale, CCK+ basket cell"@en ;
-                  rdfs:subClassOf HBP_CELL:0000033 ;
                   HBP_CELL:mtypeName "SP_CCKBC"@en ;
                   nsu:synonym "SP_CCKBC"@en;
                   rdfs:subClassOf HBP_CELL:0000141.
@@ -1153,7 +1151,6 @@ HBP_CELL:0000142 rdf:type owl:Class ;
 
 HBP_CELL:0000143 rdf:type owl:Class ;
                   rdfs:label "Hippocampus CA1 stratum pyramidale, PV+ basket cell"@en ;
-                  rdfs:subClassOf HBP_CELL:0000033 ;
                   HBP_CELL:mtypeName "SP_PVBC"@en ;
                   nsu:synonym "SP_PVBC"@en;
                   rdfs:subClassOf HBP_CELL:0000141.
