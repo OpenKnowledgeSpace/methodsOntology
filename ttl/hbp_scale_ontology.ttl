@@ -16,10 +16,9 @@
                  owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
 
 
-
 HBP_SCL:0000000 rdf:type owl:Class ;
                  rdfs:label "scale"@en ;
-                 nsu:definition "The Term scale is used for  describing with large approximation the extent or size of a length, distance or area studied or described."@en .
+                 nsu:definition "Scale is used for describing with large approximation the area studied or described."@en .
 
 
 HBP_SCL:0000001 rdf:type owl:Class ;
@@ -30,48 +29,60 @@ HBP_SCL:0000001 rdf:type owl:Class ;
 
 HBP_SCL:0000002 rdf:type owl:Class ;
                  rdfs:label "brain"@en ;
-                 nsu:definition "Whole brain. Group of physically associated neural tissues that form the organ brain"@en ;
+                 nsu:definition "Scale: millimeter to centimeter. Group of physically associated neural tissues that form the organ."@en ;
                  rdfs:subClassOf HBP_SCL:0000000 .   
 
 
 HBP_SCL:0000003 rdf:type owl:Class ;
-                 rdfs:label "brain region"@en ;
-                 nsu:definition "An anatomically definied area of the brain."@en ;
+                 rdfs:label "brain section"@en ;
+                 nsu:definition "Scale: millimeter. Area of the brain that can be anatomically or experimentally definied."@en ;
                  rdfs:subClassOf HBP_SCL:0000000 .
 
 
 HBP_SCL:0000004 rdf:type owl:Class ;
                  rdfs:label "brain slice"@en ;
-                 nsu:definition "Part of a brain region obtained using a microtome. It allows the study of a synapse or neural circuit in isolation from the rest of the brain using controlled physiological conditions."@en ;
-                 rdfs:subClassOf HBP_SCL:0000000 . 
+                 nsu:definition "Scale: about 300 micrometers. Part of a brain region obtained using a microtome. It allows the study of a synapse or neural circuit in isolation from the rest of the brain using controlled physiological conditions."@en ;
+                 rdfs:subClassOf HBP_SCL:0000003 . 
 
 
 HBP_SCL:0000005 rdf:type owl:Class ;
                  rdfs:label "multiple cells"@en ;
-                 nsu:definition "More than one cell."@en ;
-                 rdfs:subClassOf HBP_SCL:0000000 . 
+                 nsu:definition "Scale: micrometer. More than one cell."@en ;
+                 rdfs:subClassOf HBP_SCL:0000010 . 
 
 
 HBP_SCL:0000006 rdf:type owl:Class ;
                  rdfs:label "single cell"@en ;
-                 nsu:definition "One cell."@en ;
-                 rdfs:subClassOf HBP_SCL:0000000 .
+                 nsu:definition "Scale: micrometer. Smallest structural and functional unit of an organism."@en ;
+                 rdfs:subClassOf HBP_SCL:0000010 .
 
 
 HBP_SCL:0000007 rdf:type owl:Class ;
                  rdfs:label "paired cells"@en ;
-                 nsu:definition "Two cells with one or more points of contact."@en ;
-                 rdfs:subClassOf HBP_SCL:0000000 .
+                 nsu:definition "Scale: micrometer. Two cells with one or more points of contact."@en ;
+                 rdfs:subClassOf HBP_SCL:0000010 .
 
 
 HBP_SCL:0000008 rdf:type owl:Class ;
                  rdfs:label "microcircuit"@en ;
-                 nsu:definition "A microcircuit is a specific pattern of connectivity between neurons within a region, it carries out the specific kinds of processing of a region."@en ;
+                 nsu:definition "Scale: 1 - 100 micrometers. A microcircuit is a specific pattern of connectivity between neurons within a region, it carries out the specific kinds of processing of a region."@en ;
                  rdfs:subClassOf HBP_SCL:0000000 .
 
 
 HBP_SCL:0000009 rdf:type owl:Class ;
                  rdfs:label "subcellular"@en ;
-                 nsu:definition "Smaller than a cell. Located or occurring within a cell."@en ;
+                 nsu:definition "Scale: less than 10 micrometers. Smaller than a cell. Located or occurring within a cell."@en ;
                  rdfs:subClassOf HBP_SCL:0000000 .
+
+
+HBP_SCL:0000010 rdf:type owl:Class ;
+                 rdfs:label "cellular"@en ;
+                 nsu:definition "Scale: 1 - 10 micrometers. Refers to the smallest structural and functional unit of an organism."@en ;
+                 rdfs:subClassOf HBP_SCL:0000000 .
+
+
+HBP_SCL:0000011 rdf:type owl:Class ;
+                 rdfs:label "synapse"@en ;
+                 nsu:definition "Scale: nanometer. Structure that permits a neuron (or nerve cell) to pass an electrical or chemical signal to another neuron."@en ;
+                 rdfs:subClassOf HBP_SCL:0000009 .
 
