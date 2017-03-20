@@ -1,6 +1,7 @@
 ### WARNING ###
 ### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
 ### WARNING ###
+###  PARTIAL SOURCE http://learn.genetics.utah.edu/content/cells/scale/, https://doi.org/10.3389/fncir.2015.00044, SH ### 
 @prefix : <http://www.hbp.FIXME.org/hbp_scale_ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -28,61 +29,32 @@ HBP_SCL:0000001 rdf:type owl:Class ;
 
 
 HBP_SCL:0000002 rdf:type owl:Class ;
-                 rdfs:label "brain"@en ;
-                 nsu:definition "Scale: millimeter to centimeter. Group of physically associated neural tissues that form the organ."@en ;
+                 rdfs:label "whole brain"@en ;
+                 nsu:definition "Scale: O(100-1000) millimeter. Group of physically associated neural tissues that form the organ."@en ;
                  rdfs:subClassOf HBP_SCL:0000000 .   
 
 
 HBP_SCL:0000003 rdf:type owl:Class ;
-                 rdfs:label "brain section"@en ;
-                 nsu:definition "Scale: millimeter. Area of the brain that can be anatomically or experimentally definied."@en ;
+                 rdfs:label "brain region"@en ;
+                 nsu:definition "Scale: O(1-100) millimeter. Area of the brain that can be anatomically definied."@en ;
                  rdfs:subClassOf HBP_SCL:0000000 .
-
-
-HBP_SCL:0000004 rdf:type owl:Class ;
-                 rdfs:label "brain slice"@en ;
-                 nsu:definition "Scale: about 300 micrometers. Part of a brain region obtained using a microtome. It allows the study of a synapse or neural circuit in isolation from the rest of the brain using controlled physiological conditions."@en ;
-                 rdfs:subClassOf HBP_SCL:0000003 . 
-
-
-HBP_SCL:0000005 rdf:type owl:Class ;
-                 rdfs:label "multiple cells"@en ;
-                 nsu:definition "Scale: micrometer. More than one cell."@en ;
-                 rdfs:subClassOf HBP_SCL:0000010 . 
-
-
-HBP_SCL:0000006 rdf:type owl:Class ;
-                 rdfs:label "single cell"@en ;
-                 nsu:definition "Scale: micrometer. Smallest structural and functional unit of an organism."@en ;
-                 rdfs:subClassOf HBP_SCL:0000010 .
-
-
-HBP_SCL:0000007 rdf:type owl:Class ;
-                 rdfs:label "paired cells"@en ;
-                 nsu:definition "Scale: micrometer. Two cells with one or more points of contact."@en ;
-                 rdfs:subClassOf HBP_SCL:0000010 .
-
+ 
 
 HBP_SCL:0000008 rdf:type owl:Class ;
                  rdfs:label "microcircuit"@en ;
-                 nsu:definition "Scale: 1 - 100 micrometers. A microcircuit is a specific pattern of connectivity between neurons within a region, it carries out the specific kinds of processing of a region."@en ;
+                 nsu:definition "Scale: O(10 - 1000) micrometers. A microcircuit is a specific pattern of connectivity between neurons within a region, it carries out the specific kinds of processing of a region."@en ;
                  rdfs:subClassOf HBP_SCL:0000000 .
 
 
 HBP_SCL:0000009 rdf:type owl:Class ;
                  rdfs:label "subcellular"@en ;
-                 nsu:definition "Scale: less than 10 micrometers. Smaller than a cell. Located or occurring within a cell."@en ;
+                 nsu:definition "Scale: O(<10) micrometers. Smaller than a cell. Located or occurring within a cell."@en ;
                  rdfs:subClassOf HBP_SCL:0000000 .
 
 
 HBP_SCL:0000010 rdf:type owl:Class ;
                  rdfs:label "cellular"@en ;
-                 nsu:definition "Scale: 1 - 10 micrometers. Refers to the smallest structural and functional unit of an organism."@en ;
+                 nsu:definition "Scale: O(1 - 10) micrometers. Refers to the smallest structural and functional unit of an organism."@en ;
                  rdfs:subClassOf HBP_SCL:0000000 .
 
-
-HBP_SCL:0000011 rdf:type owl:Class ;
-                 rdfs:label "synapse"@en ;
-                 nsu:definition "Scale: nanometer. Structure that permits a neuron (or nerve cell) to pass an electrical or chemical signal to another neuron."@en ;
-                 rdfs:subClassOf HBP_SCL:0000009 .
 
