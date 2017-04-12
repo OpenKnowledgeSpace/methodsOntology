@@ -1,6 +1,3 @@
-### WARNING ###
-### THIS ONTOLOGY IS TEMPORARY DO NOT USE IDENTIFIERS OUTSIDE DEV
-### WARNING ###
 @prefix : <http://www.hbp.FIXME.org/hbp_activity_ontology/> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -11,50 +8,85 @@
 @prefix HBP_ACT: <http://www.hbp.FIXME.org/hbp_activity_ontology/> .
 @base <http://www.hbp.FIXME.org/hbp_activity_ontology> .
 
-<http://www.hbp.FIXME.org/hbp_activity_ontology> rdf:type owl:Ontology ;
-                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
-# 
-# 
-# #################################################################
-# #
-# #    Classes
-# #
-# #################################################################
-# 
-# 
+<http://www.hbp.FIXME.org/hbp_activity_ontology> rdf:type owl:Ontology .
 
 
-HBP_ACT:0000001 a owl:Class ;
-	rdfs:label "Activity"@en ;
-	rdfs:isDefinedBy "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities".
+#################################################################
+#
+#    Classes
+#
+#################################################################
 
 
-HBP_ACT:0000002 a owl:Class ;
-	rdfs:label "Annotation"@en ;
-	rdfs:isDefinedBy "Action of adding an annotation to any entity in a PROVenance graph."@en ;
-	rdfs:subClassOf HBP_ACT:0000001 .
+###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000001
+
+<http://www.hbp.FIXME.org/hbp_activity_ontology/0000001> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:label "Activity"@en ;
+                                                         
+                                                         rdfs:isDefinedBy "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities" .
 
 
-HBP_ACT:0000004 a owl:Class ;
-	rdfs:label "Computation"@en ;
-	rdfs:isDefinedBy "Computation is any type of calculation that follows a well-defined model understood and expressed as, for example, an algorithm, or a protocol."@en ;
-	rdfs:subClassOf HBP_ACT:0000001 .
+
+###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000002
+
+<http://www.hbp.FIXME.org/hbp_activity_ontology/0000002> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:label "Annotation"@en ;
+                                                         
+                                                         rdfs:subClassOf <http://www.hbp.FIXME.org/hbp_activity_ontology/0000001> ;
+                                                         
+                                                         rdfs:isDefinedBy "Action of adding an annotation to any entity in a PROVenance graph."@en .
 
 
-HBP_ACT:0000005 a owl:Class ;
-	rdfs:label "Classification"@en ;
-	rdfs:isDefinedBy "The action or process of classifying an observation using a computational process."@en ;
-	rdfs:subClassOf HBP_ACT:0000004 ;
-	rdfs:subClassOf HBP_ACT:0000002 .
+
+###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000004
+
+<http://www.hbp.FIXME.org/hbp_activity_ontology/0000004> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:label "Computation"@en ;
+                                                         
+                                                         rdfs:subClassOf <http://www.hbp.FIXME.org/hbp_activity_ontology/0000001> ;
+                                                         
+                                                         rdfs:isDefinedBy "Computation is any type of calculation that follows a well-defined model understood and expressed as, for example, an algorithm, or a protocol."@en .
 
 
-HBP_ACT:0000006 a owl:Class ;
-	rdfs:label "Experiment"@en ;
-	rdfs:subClassOf HBP_ACT:0000001 .
+
+###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000005
+
+<http://www.hbp.FIXME.org/hbp_activity_ontology/0000005> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:label "Classification"@en ;
+                                                         
+                                                         rdfs:subClassOf <http://www.hbp.FIXME.org/hbp_activity_ontology/0000002> ,
+                                                                         <http://www.hbp.FIXME.org/hbp_activity_ontology/0000004> ;
+                                                         
+                                                         rdfs:isDefinedBy "The action or process of classifying an observation using a computational process."@en .
 
 
-HBP_ACT:0000007 a owl:Class ;
-	rdfs:label "Revision"@en ;
-	rdfs:isDefinedBy "A change or a set of changes that correct or improve a previous version of a dataset." ;
-	rdfs:subClassOf HBP_ACT:0000001 .
+
+###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000006
+
+<http://www.hbp.FIXME.org/hbp_activity_ontology/0000006> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:label "Experiment"@en ;
+                                                         
+                                                         rdfs:subClassOf <http://www.hbp.FIXME.org/hbp_activity_ontology/0000001> .
+
+
+
+###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000007
+
+<http://www.hbp.FIXME.org/hbp_activity_ontology/0000007> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:label "Revision"@en ;
+                                                         
+                                                         rdfs:subClassOf <http://www.hbp.FIXME.org/hbp_activity_ontology/0000001> ;
+                                                         
+                                                         rdfs:isDefinedBy "A change or a set of changes that correct or improve a previous version of a dataset." .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
 
