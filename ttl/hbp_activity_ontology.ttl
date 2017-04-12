@@ -5,88 +5,56 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix HBP_ACT: <http://www.hbp.FIXME.org/hbp_activity_ontology/> .
-@base <http://www.hbp.FIXME.org/hbp_activity_ontology> .
 
-<http://www.hbp.FIXME.org/hbp_activity_ontology> rdf:type owl:Ontology .
+<http://www.hbp.FIXME.org/hbp_activity_ontology> a owl:Ontology ;
+	owl:imports <http://www.w3.org/2004/02/skos/core> .
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.hbp.FIXME.org/hbp_activity_ontology/0000001
 
+:0000001 a owl:Class ;
+	rdfs:label "Activity"@en ;
+	<http://www.w3.org/2004/02/skos/core#definition> "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_activity_ontology/0000002
 
-#################################################################
-#
-#    Classes
-#
-#################################################################
+:0000002 a owl:Class ;
+	rdfs:subClassOf :0000001 ;
+	rdfs:label "Annotation"@en ;
+	<http://www.w3.org/2004/02/skos/core#definition> "Action of adding an annotation to any entity in a PROVenance graph."@en .
+# 
+# http://www.hbp.FIXME.org/hbp_activity_ontology/0000004
 
+:0000004 a owl:Class ;
+	rdfs:subClassOf :0000001 ;
+	rdfs:label "Computation"@en ;
+	<http://www.w3.org/2004/02/skos/core#definition> "Computation is any type of calculation that follows a well-defined model understood and expressed as, for example, an algorithm, or a protocol."@en .
+# 
+# http://www.hbp.FIXME.org/hbp_activity_ontology/0000005
 
-###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000001
+:0000005 a owl:Class ;
+	rdfs:subClassOf :0000002 , :0000004 ;
+	rdfs:label "Classification"@en ;
+	<http://www.w3.org/2004/02/skos/core#definition> "The action or process of classifying an observation using a computational process."@en .
+# 
+# http://www.hbp.FIXME.org/hbp_activity_ontology/0000006
 
-<http://www.hbp.FIXME.org/hbp_activity_ontology/0000001> rdf:type owl:Class ;
-                                                         
-                                                         rdfs:label "Activity"@en ;
-                                                         
-                                                         rdfs:isDefinedBy "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities" .
+:0000006 a owl:Class ;
+	rdfs:subClassOf :0000001 ;
+	rdfs:label "Experiment"@en .
+# 
+# http://www.hbp.FIXME.org/hbp_activity_ontology/0000007
 
-
-
-###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000002
-
-<http://www.hbp.FIXME.org/hbp_activity_ontology/0000002> rdf:type owl:Class ;
-                                                         
-                                                         rdfs:label "Annotation"@en ;
-                                                         
-                                                         rdfs:subClassOf <http://www.hbp.FIXME.org/hbp_activity_ontology/0000001> ;
-                                                         
-                                                         rdfs:isDefinedBy "Action of adding an annotation to any entity in a PROVenance graph."@en .
-
-
-
-###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000004
-
-<http://www.hbp.FIXME.org/hbp_activity_ontology/0000004> rdf:type owl:Class ;
-                                                         
-                                                         rdfs:label "Computation"@en ;
-                                                         
-                                                         rdfs:subClassOf <http://www.hbp.FIXME.org/hbp_activity_ontology/0000001> ;
-                                                         
-                                                         rdfs:isDefinedBy "Computation is any type of calculation that follows a well-defined model understood and expressed as, for example, an algorithm, or a protocol."@en .
-
-
-
-###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000005
-
-<http://www.hbp.FIXME.org/hbp_activity_ontology/0000005> rdf:type owl:Class ;
-                                                         
-                                                         rdfs:label "Classification"@en ;
-                                                         
-                                                         rdfs:subClassOf <http://www.hbp.FIXME.org/hbp_activity_ontology/0000002> ,
-                                                                         <http://www.hbp.FIXME.org/hbp_activity_ontology/0000004> ;
-                                                         
-                                                         rdfs:isDefinedBy "The action or process of classifying an observation using a computational process."@en .
-
-
-
-###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000006
-
-<http://www.hbp.FIXME.org/hbp_activity_ontology/0000006> rdf:type owl:Class ;
-                                                         
-                                                         rdfs:label "Experiment"@en ;
-                                                         
-                                                         rdfs:subClassOf <http://www.hbp.FIXME.org/hbp_activity_ontology/0000001> .
-
-
-
-###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000007
-
-<http://www.hbp.FIXME.org/hbp_activity_ontology/0000007> rdf:type owl:Class ;
-                                                         
-                                                         rdfs:label "Revision"@en ;
-                                                         
-                                                         rdfs:subClassOf <http://www.hbp.FIXME.org/hbp_activity_ontology/0000001> ;
-                                                         
-                                                         rdfs:isDefinedBy "A change or a set of changes that correct or improve a previous version of a dataset." .
-
-
-
-
-###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
-
+:0000007 a owl:Class ;
+	rdfs:subClassOf :0000001 ;
+	rdfs:label "Revision"@en ;
+	<http://www.w3.org/2004/02/skos/core#definition> "A change or a set of changes that correct or improve a previous version of a dataset."@en .
+# 
+# Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi
