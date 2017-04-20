@@ -1,7 +1,7 @@
 
 @prefix : <http://www.hbp.FIXME.org/hbp_activity_ontology/> .
-@prefix nsu: <http://www.FIXME.org/nsupper#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc:	<http://purl.org/dc/elements/1.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -10,7 +10,12 @@
 @prefix HBP_ACT: <http://www.hbp.FIXME.org/hbp_activity_ontology/> .
 @base <http://www.hbp.FIXME.org/hbp_activity_ontology> .
 
-<http://www.hbp.FIXME.org/hbp_activity_ontology> rdf:type owl:Ontology .
+<http://www.hbp.FIXME.org/hbp_activity_ontology> rdf:type owl:Ontology ;
+												 dc:title "Activity types vocabulary"@en;
+												 dc:subject "Activity types"@en;
+												 dc:creator "Silvia Jimenez <silvia.jimenez@epfl.ch>";
+												 owl:versionInfo "1.0";
+ 												 dc:contributor "Silvia Jimenez <silvia.jimenez@epfl.ch>".
 
 #################################################################
 #    Annotation properties
