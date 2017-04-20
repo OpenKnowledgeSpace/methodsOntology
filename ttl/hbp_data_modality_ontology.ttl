@@ -1,14 +1,13 @@
 @prefix : <http://www.hbp.FIXME.org/hbp_data_modality_ontology/> .
-@prefix nsu: <http://www.FIXME.org/nsupper#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix HBP_DAMO: <http://www.hbp.FIXME.org/hbp_data_modality_ontology/> .
 
-<http://www.hbp.FIXME.org/hbp_data_modality_ontology> rdf:type owl:Ontology ;
-	owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/nsupper.ttl> .
+<http://www.hbp.FIXME.org/hbp_data_modality_ontology> rdf:type owl:Ontology.
 # 
 # 
 # #################################################################
@@ -27,182 +26,182 @@ HBP_DAMO:0000000 rdf:type owl:Class ;
 
 HBP_DAMO:0000001 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000006 ;
-	nsu:definition "Morphology reconstruction pertain to data which elucidate the morphology of a given entity. The scales which can be used to characterize this data category include: brain, multiple cells and paired cells."@en ;
+	skos:definition "Morphology reconstruction pertain to data which elucidate the morphology of a given entity. The scales which can be used to characterize this data category include: brain, multiple cells and paired cells."@en ;
 	rdfs:label "Morphology reconstruction"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000002
 
 HBP_DAMO:0000002 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000012 ;
-	nsu:definition "This category includes data which delinate the identities and sometimes quantities of proteins found in an entity. Applicable scales include: brain region, partial region, multiple cells, single cell, cellular component."@en ;
+	skos:definition "This category includes data which delinate the identities and sometimes quantities of proteins found in an entity. Applicable scales include: brain region, partial region, multiple cells, single cell, cellular component."@en ;
 	rdfs:label "Protein expression"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000003
 
 HBP_DAMO:0000003 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000022 ;
-	nsu:definition "Transcriptome includes data which characterize the entire set of transcripts that are detectable in a given entity. Scales include: brain region, partial region, multiple cells, single cell, cellular component."@en ;
+	skos:definition "Transcriptome includes data which characterize the entire set of transcripts that are detectable in a given entity. Scales include: brain region, partial region, multiple cells, single cell, cellular component."@en ;
 	rdfs:label "Transcriptomics"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000004
 
 HBP_DAMO:0000004 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000006 ;
-	nsu:definition "Parcellations specifically refer to data files in which brain regions and/or structures are defined. Scales include: brain, brain region."@en ;
+	skos:definition "Parcellations specifically refer to data files in which brain regions and/or structures are defined. Scales include: brain, brain region."@en ;
 	rdfs:label "Parcellation"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000005
 
 HBP_DAMO:0000005 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000006 ;
-	nsu:definition "Anatomical connectivity includes data which elucidate the physical or structural (synaptic) interactions between two or more entities. Scales include: brain region, multiple cells, cellular component."@en ;
+	skos:definition "Anatomical connectivity includes data which elucidate the physical or structural (synaptic) interactions between two or more entities. Scales include: brain region, multiple cells, cellular component."@en ;
 	rdfs:label "Anatomical connectivity"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000006
 
 HBP_DAMO:0000006 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000000 ;
-	nsu:definition "This category broadly characterizes studies which elucidate the structure of an entity. Applicable scales include: brain, brain regions, partial region, multiple cells, and single cell."@en ;
+	skos:definition "This category broadly characterizes studies which elucidate the structure of an entity. Applicable scales include: brain, brain regions, partial region, multiple cells, and single cell."@en ;
 	rdfs:label "Anatomical data"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000007
 
 HBP_DAMO:0000007 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000000 ;
-	nsu:definition "Data in this category characterize the chemical and physical functions which are carried out by an entity. Scales include: brain, brain regions, partial region, multiple cells, and single cell, cellular compartment."@en ;
+	skos:definition "Data in this category characterize the chemical and physical functions which are carried out by an entity. Scales include: brain, brain regions, partial region, multiple cells, and single cell, cellular compartment."@en ;
 	rdfs:label "Physiological data"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000008
 
 HBP_DAMO:0000008 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000007 ;
-	nsu:definition "This category includes data which characterize the electrical properties of an entity, e.g. by measuring the flow of ions. Scales can include: multiple cells, single cell."@en ;
+	skos:definition "This category includes data which characterize the electrical properties of an entity, e.g. by measuring the flow of ions. Scales can include: multiple cells, single cell."@en ;
 	rdfs:label "Electrophysiology"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000010
 
 HBP_DAMO:0000010 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000006 ;
-	nsu:definition "Reference atlases are full-color, high-resolution, web-based digital brain atlases accompanied by a systematic, hierarchically organized taxonomy of a specific species brain structures. "@en ;
+	skos:definition "Reference atlases are full-color, high-resolution, web-based digital brain atlases accompanied by a systematic, hierarchically organized taxonomy of a specific species brain structures. "@en ;
 	rdfs:label "Reference atlas"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000011
 
 HBP_DAMO:0000011 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000000 ;
-	nsu:definition "The systematic analysis and investigation of human or animal behaviour in response to a praticular situation or stimulus through controlled and naturalistic observation and disciplined scientific experimentation. "@en ;
+	skos:definition "The systematic analysis and investigation of human or animal behaviour in response to a praticular situation or stimulus through controlled and naturalistic observation and disciplined scientific experimentation. "@en ;
 	rdfs:label "Behavioural data"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000012
 
 HBP_DAMO:0000012 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000000 ;
-	nsu:definition "This category includes data which characterize the transcripts or proteins that are detected in a given entity. Scales include: brain region, partial region, multiple cells, single cell, cellular component. "@en ;
+	skos:definition "This category includes data which characterize the transcripts or proteins that are detected in a given entity. Scales include: brain region, partial region, multiple cells, single cell, cellular component. "@en ;
 	rdfs:label "Expression data"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000013
 
 HBP_DAMO:0000013 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000000 ;
-	nsu:definition "This category includes the mathematical description of the properties of nerve cells or other biological entities, it is designed to accurately describe and predict biological processes. Scales can include: multiple cells, single cell, proteins. "@en ;
+	skos:definition "This category includes the mathematical description of the properties of nerve cells or other biological entities, it is designed to accurately describe and predict biological processes. Scales can include: multiple cells, single cell, proteins. "@en ;
 	rdfs:label "Model"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000014
 
 HBP_DAMO:0000014 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000007 ;
-	nsu:definition "Functional connectivity include data assessing the statistical dependencies (correlations or covariance, spectral coherence or phase-locking) of time-dependent activity between two brain regions. Functional connectivity does not make any explicit reference to specific directional effects or to an underlying structural model. Scales include: Brain, Brain regions."@en ;
+	skos:definition "Functional connectivity include data assessing the statistical dependencies (correlations or covariance, spectral coherence or phase-locking) of time-dependent activity between two brain regions. Functional connectivity does not make any explicit reference to specific directional effects or to an underlying structural model. Scales include: Brain, Brain regions."@en ;
 	rdfs:label "Functional connectivity"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000015
 
 HBP_DAMO:0000015 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000007 ;
-	nsu:definition "Effective connectivity include data assessing the directed dependencies between two anatomical entities (brain regions) typically through Granger causality or by fitting of rdf:type model implying causal relationships such as Dynamical Causal Modelling or transfer entropy. Scales include: Brain, Brain regions."@en ;
+	skos:definition "Effective connectivity include data assessing the directed dependencies between two anatomical entities (brain regions) typically through Granger causality or by fitting of rdf:type model implying causal relationships such as Dynamical Causal Modelling or transfer entropy. Scales include: Brain, Brain regions."@en ;
 	rdfs:label "Effective connectivity"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000016
 
 HBP_DAMO:0000016 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000036 ;
-	nsu:definition "This category includes the computational models of biochemical reactions that may include the rate of the reaction, substrates and products, order of binding, reaction conditions (pH, temperature, concentration, etc..) and effectors (inhibitors, activators) . "@en ;
+	skos:definition "This category includes the computational models of biochemical reactions that may include the rate of the reaction, substrates and products, order of binding, reaction conditions (pH, temperature, concentration, etc..) and effectors (inhibitors, activators) . "@en ;
 	rdfs:label "Kinetic model"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000017
 
 HBP_DAMO:0000017 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000006 ;
-	nsu:definition "Structural imaging investigates the structure of the brain and can be used for the diagnosis of large scale intracranial disease, such as tumor, and injury . "@en ;
+	skos:definition "Structural imaging investigates the structure of the brain and can be used for the diagnosis of large scale intracranial disease, such as tumor, and injury . "@en ;
 	rdfs:label "Structural imaging"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000018
 
 HBP_DAMO:0000018 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000007 ;
-	nsu:definition "Functional imaging reveals the activity in certain brain regions by detecting changes in metabolism, blood flow, regional chemical composition, and absorption. "@en ;
+	skos:definition "Functional imaging reveals the activity in certain brain regions by detecting changes in metabolism, blood flow, regional chemical composition, and absorption. "@en ;
 	rdfs:label "Functional imaging"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000019
 
 HBP_DAMO:0000019 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000001 ;
-	nsu:definition "Morphology reconstruction pertain to data which elucidate the morphology of a given entity. The scales which can be used to characterize this data category include: single cells and partial cells. "@en ;
+	skos:definition "Morphology reconstruction pertain to data which elucidate the morphology of a given entity. The scales which can be used to characterize this data category include: single cells and partial cells. "@en ;
 	rdfs:label "Single cell morphology reconstruction"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000020
 
 HBP_DAMO:0000020 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000025 ;
-	nsu:definition "Tracts connecting the cortex with other areas of the central nervous system"@en ;
+	skos:definition "Tracts connecting the cortex with other areas of the central nervous system"@en ;
 	rdfs:label "Projection tracts"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000021
 
 HBP_DAMO:0000021 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000057 ;
-	nsu:definition "This category includes the mathematical description of the properties of nerve cells or neurons that is designed to accurately describe and predict biological processes. Scales can include: multiple cells. "@en ;
+	skos:definition "This category includes the mathematical description of the properties of nerve cells or neurons that is designed to accurately describe and predict biological processes. Scales can include: multiple cells. "@en ;
 	rdfs:label "Spiking neural network model"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000022
 
 HBP_DAMO:0000022 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000012 ;
-	nsu:definition "This category includes the analysis of gene levels by identifying, quantifying or comparing mRNA transcripts by using microarrays, RNA-seq, northern blots, gene-indexed expression profiles etc.. "@en ;
+	skos:definition "This category includes the analysis of gene levels by identifying, quantifying or comparing mRNA transcripts by using microarrays, RNA-seq, northern blots, gene-indexed expression profiles etc.. "@en ;
 	rdfs:label "Gene expression"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000023
 
 HBP_DAMO:0000023 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000003 ;
-	nsu:definition "Transcriptome includes data which characterize the entire set of transcripts that are detectable in a single cell. Scales include: single cell."@en ;
+	skos:definition "Transcriptome includes data which characterize the entire set of transcripts that are detectable in a single cell. Scales include: single cell."@en ;
 	rdfs:label "Single cell transcriptomics"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000024
 
 HBP_DAMO:0000024 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000013 ;
-	nsu:definition "Protein 3D structure prediction using comparative modeling or other computational methods."@en ;
+	skos:definition "Protein 3D structure prediction using comparative modeling or other computational methods."@en ;
 	rdfs:label "3D protein structure model"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000025
 
 HBP_DAMO:0000025 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000005 ;
-	nsu:definition "White matter tracts also known as white matter fibres are classified into projection tracts, association tracts and commissural tracts."@en ;
+	skos:definition "White matter tracts also known as white matter fibres are classified into projection tracts, association tracts and commissural tracts."@en ;
 	rdfs:label "White matter tracts"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000026
 
 HBP_DAMO:0000026 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000025 ;
-	nsu:definition "Tracts connecting different areas in the same hemisphere"@en ;
+	skos:definition "Tracts connecting different areas in the same hemisphere"@en ;
 	rdfs:label "Association tracts"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000027
 
 HBP_DAMO:0000027 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000025 ;
-	nsu:definition "Tracts connecting the same cortical area in opposite hemispheres"@en ;
+	skos:definition "Tracts connecting the same cortical area in opposite hemispheres"@en ;
 	rdfs:label "Commisural tracts"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000028
@@ -289,7 +288,7 @@ HBP_DAMO:0000043 rdf:type owl:Class ;
 
 HBP_DAMO:0000044 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000001 ;
-	nsu:definition "Morphology reconstruction pertain to data which elucidate the morphology of a given entity. The scales which can be used to characterize this data modality include: paired cells. "@en ;
+	skos:definition "Morphology reconstruction pertain to data which elucidate the morphology of a given entity. The scales which can be used to characterize this data modality include: paired cells. "@en ;
 	rdfs:label "Paired cell morphology reconstruction"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000045
@@ -438,7 +437,7 @@ HBP_DAMO:0000066 rdf:type owl:Class ;
 
 HBP_DAMO:0000067 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000006 ;
-	nsu:definition "Gives the brain slice localization of the neuron morphology."@en ;
+	skos:definition "Gives the brain slice localization of the neuron morphology."@en ;
 	rdfs:label "Morphology localization"@en .
 
 # Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi
