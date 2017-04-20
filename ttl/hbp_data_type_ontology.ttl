@@ -7,7 +7,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix nsu: <http://www.FIXME.org/nsupper#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix HBP_DASP: <http://www.hbp.FIXME.org/hbp_domain_aspect/> .
 @prefix HBP_PROP: <http://www.hbp.FIXME.org/hbp_properties/> .
 @prefix HBP_DATT: <http://www.hbp.FIXME.org/hbp_data_type_ontology/> .
@@ -20,7 +20,7 @@
 
 HBP_DATT:0000000 rdf:type owl:Class ;
                   rdfs:label "data type"@en ;
-                 nsu:definition "A series of actions which can be performed by an actor which results in the generation, observation, or classification of samples or data."@en .
+                 skos:definition "A series of actions which can be performed by an actor which results in the generation, observation, or classification of samples or data."@en .
 
 HBP_DATT:0000001 rdf:type owl:Class  ;
                  rdfs:label "electrophysiological data"@en ;
@@ -282,7 +282,7 @@ HBP_DATT:0000022 rdf:type owl:Class ;
 
                   rdfs:label "PNG - Single Cell Reconstruction Preview"@en ;
 
-                  nsu:definition "TOOD"@en ;
+                  skos:definition "TOOD"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000020 ;
 
@@ -302,7 +302,7 @@ HBP_DATT:0000023 rdf:type owl:Class ;
 
                   rdfs:label "Neurolucida ASC"@en ;
 
-                  nsu:definition "Neurolucida ASC is a standard data format defined and maintained by MBF Bioscience."@en ;
+                  skos:definition "Neurolucida ASC is a standard data format defined and maintained by MBF Bioscience."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000007 ;
                  HBP_PROP:has_domain_aspect HBP_DASP:0000045 ;
@@ -317,7 +317,7 @@ HBP_DATT:0000024 rdf:type owl:Class ;
 
                   rdfs:label "Neurolucida DAT"@en ;
 
-                  nsu:definition "Neurolucida DAT is a standatd data format defined and maintained by MBF Bioscience."@en ;
+                  skos:definition "Neurolucida DAT is a standatd data format defined and maintained by MBF Bioscience."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000007 ;
 
@@ -333,7 +333,7 @@ HBP_DATT:0000025 rdf:type owl:Class ;
 
                   rdfs:label "Igor IBW"@en ;
 
-                  nsu:definition "The data in these types of files is stored in the Igor Binary Format. It can be considered the successor to Igor BWAV files."@en ;
+                  skos:definition "The data in these types of files is stored in the Igor Binary Format. It can be considered the successor to Igor BWAV files."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000001 ;
 
@@ -349,7 +349,7 @@ HBP_DATT:0000026 rdf:type owl:Class ;
 
                   rdfs:label "Igor BWAV"@en ;
 
-                  nsu:definition "BWAV is a Igor generated file format. It stands for Igor Binary Wave Data. This files are considered equivalent to \"Igor IBW\" data format."@en ;
+                  skos:definition "BWAV is a Igor generated file format. It stands for Igor Binary Wave Data. This files are considered equivalent to \"Igor IBW\" data format."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000001 ;
 
@@ -501,7 +501,7 @@ HBP_DATT:0000038 rdf:type owl:Class ;
 
                   rdfs:label "Neurolucida Multi-Cell DAT"@en ;
 
-                  nsu:definition "Neurolucida DAT is a standatd data format defined and maintained by MBF Bioscience."@en ;
+                  skos:definition "Neurolucida DAT is a standatd data format defined and maintained by MBF Bioscience."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000007 ;
 
@@ -517,7 +517,7 @@ HBP_DATT:0000039 rdf:type owl:Class ;
 
                   rdfs:label "IGORzip"@en ;
 
-                  nsu:definition "a zip file containing IGOR files"@en ;
+                  skos:definition "a zip file containing IGOR files"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000000 ;
 
@@ -539,7 +539,7 @@ HBP_DATT:0000041 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.neurolucida.dat;version=0"@en ;
 
-                  nsu:definition "Neurolucida file which could contain single or muliple cell reconstructions"@en ;
+                  skos:definition "Neurolucida file which could contain single or muliple cell reconstructions"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -551,7 +551,7 @@ HBP_DATT:0000042 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.neurolucida.asc;version=0"@en ;
 
-                  nsu:definition "Neurolucida file which could contain single or muliple cell reconstructions"@en ;
+                  skos:definition "Neurolucida file which could contain single or muliple cell reconstructions"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -563,7 +563,7 @@ HBP_DATT:0000043 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.neurolucida.xml;version=0"@en ;
 
-                  nsu:definition "Neurolucida file which could contain single or muliple cell reconstructions"@en ;
+                  skos:definition "Neurolucida file which could contain single or muliple cell reconstructions"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -575,7 +575,7 @@ HBP_DATT:0000044 rdf:type owl:Class ;
 
                   rdfs:label "text/swc;version=0"@en ;
 
-                  nsu:definition "File type provided by the AIB and Neuromorpho which could contain single or muliple cell reconstructions, and requires a codebook"@en ;
+                  skos:definition "File type provided by the AIB and Neuromorpho which could contain single or muliple cell reconstructions, and requires a codebook"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -587,7 +587,7 @@ HBP_DATT:0000045 rdf:type owl:Class ;
 
                   rdfs:label "text/xml;version=0"@en ;
 
-                  nsu:definition "File standard, defined by HBP synthesis team, which could contain single or multiple cell reconstructions, and requires a codebook"@en ;
+                  skos:definition "File standard, defined by HBP synthesis team, which could contain single or multiple cell reconstructions, and requires a codebook"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -601,7 +601,7 @@ HBP_DATT:0000046 rdf:type owl:Class ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
-                  nsu:definition "JPEG stands for Joint Photographic Experts Group. It is a standard method of compressing photographic images. We also call JPEG the file format which employs this compression."@en ;
+                  skos:definition "JPEG stands for Joint Photographic Experts Group. It is a standard method of compressing photographic images. We also call JPEG the file format which employs this compression."@en ;
 
                   HBP_PROP:has_file_extension ".jpeg" .
 
@@ -621,7 +621,7 @@ HBP_DATT:0000048 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.imagestack.bbic;version=0"@en ;
 
-                  nsu:definition "preferred HBP file format for imagestacks; needs a codebook"@en ;
+                  skos:definition "preferred HBP file format for imagestacks; needs a codebook"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -633,7 +633,7 @@ HBP_DATT:0000049 rdf:type owl:Class ;
 
                   rdfs:label "text/tab-separated-values;version=0"@en ;
 
-                  nsu:definition "can be used for electrophysiology data, and is the preferred format by some of the collaborators, e.g. KOKI"@en ;
+                  skos:definition "can be used for electrophysiology data, and is the preferred format by some of the collaborators, e.g. KOKI"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -645,7 +645,7 @@ HBP_DATT:0000050 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.electrophysiology.hdf5;version=0"@en ;
 
-                  nsu:definition "soon to be norm for electrophysiology data, to be used by AIB after March 15, 2015"@en ;
+                  skos:definition "soon to be norm for electrophysiology data, to be used by AIB after March 15, 2015"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -657,7 +657,7 @@ HBP_DATT:0000051 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.atlas.bbic;version=0"@en ;
 
-                  nsu:definition "preferred HBP format for brain region parcellation data; needs a codebook"@en ;
+                  skos:definition "preferred HBP format for brain region parcellation data; needs a codebook"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -669,7 +669,7 @@ HBP_DATT:0000052 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.juelich.atlas.xml;version=0"@en ;
 
-                  nsu:definition "BigBrain atlas parcellation; needs a codebook"@en ;
+                  skos:definition "BigBrain atlas parcellation; needs a codebook"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -681,7 +681,7 @@ HBP_DATT:0000053 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.abis.atlas.xml;version=0"@en ;
 
-                  nsu:definition "Allen Brain atlas parcellation, needs a codebook"@en ;
+                  skos:definition "Allen Brain atlas parcellation, needs a codebook"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -693,7 +693,7 @@ HBP_DATT:0000054 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.cellprofile.csv;version=0"@en ;
 
-                  nsu:definition "file containing cell profile information, which could include cell morphology, molecular cell identity, etc.; needs a codebook"@en ;
+                  skos:definition "file containing cell profile information, which could include cell morphology, molecular cell identity, etc.; needs a codebook"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -705,7 +705,7 @@ HBP_DATT:0000055 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.layerheight.csv;version=0"@en ;
 
-                  nsu:definition "file containing layer height for a given brain region; needs a codebook"@en ;
+                  skos:definition "file containing layer height for a given brain region; needs a codebook"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -717,7 +717,7 @@ HBP_DATT:0000056 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.brainregioncharacterisation.csv;version=0"@en ;
 
-                  nsu:definition "file containing brain region information, which could include cell densities and/or cell distributions; needs a codebook"@en ;
+                  skos:definition "file containing brain region information, which could include cell densities and/or cell distributions; needs a codebook"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -729,7 +729,7 @@ HBP_DATT:0000057 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.proteome.csv;version=0"@en ;
 
-                  nsu:definition "file containing proteomic data; needs a codebook"@en ;
+                  skos:definition "file containing proteomic data; needs a codebook"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -741,7 +741,7 @@ HBP_DATT:0000058 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.geneexpression.csv;version=0"@en ;
 
-                  nsu:definition "file containing gene expression data in specific cell types or brain regions; needs a codebook"@en ;
+                  skos:definition "file containing gene expression data in specific cell types or brain regions; needs a codebook"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -773,7 +773,7 @@ HBP_DATT:0000061 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.proteome.xls;version=0"@en ;
 
-                  nsu:definition "file containing proteomic data; needs a codebook"@en ;
+                  skos:definition "file containing proteomic data; needs a codebook"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -785,7 +785,7 @@ HBP_DATT:0000062 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.transcriptome.txt;version=0"@en ;
 
-                  nsu:definition "file containing proteomic data; needs a codebook"@en ;
+                  skos:definition "file containing proteomic data; needs a codebook"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -836,7 +836,7 @@ HBP_DATT:0000067 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.imagestack.bbic.section;version=0"@en ;
 
-                  nsu:definition "Tiled image pyramid containing projections in coronal, axial and sagittal directions in BBIC file format."@en ;
+                  skos:definition "Tiled image pyramid containing projections in coronal, axial and sagittal directions in BBIC file format."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -847,7 +847,7 @@ HBP_DATT:0000068 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.imagestack.bbic.annot;version=0"@en ;
 
-                  nsu:definition "Tiled image pyramid containing SVG traces in coronal, axial and sagittal directions in BBIC file format."@en ;
+                  skos:definition "Tiled image pyramid containing SVG traces in coronal, axial and sagittal directions in BBIC file format."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -858,7 +858,7 @@ HBP_DATT:0000069 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.hbp.model.recipe.synthesis;version=0"@en ;
 
-                  nsu:definition "Bundle with the structure to run the synthesis of neurons in a pre-defined space."@en ;
+                  skos:definition "Bundle with the structure to run the synthesis of neurons in a pre-defined space."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -869,7 +869,7 @@ HBP_DATT:0000070 rdf:type owl:Class ;
 
                   rdfs:label "application/zip;version=0"@en ;
 
-                  nsu:definition "zip archive."@en ;
+                  skos:definition "zip archive."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -889,7 +889,7 @@ HBP_DATT:0000072 rdf:type owl:Class ;
 
                   rdfs:label "application/x-gzip;version=0"@en ;
 
-                  nsu:definition ".tar.gz, .tgz, .gz archive."@en ;
+                  skos:definition ".tar.gz, .tgz, .gz archive."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -909,7 +909,7 @@ HBP_DATT:0000074 rdf:type owl:Class ;
 
                   rdfs:label "application/cef;version=0"@en ;
 
-                  nsu:definition "cell expression format files are human-readable, tab-delimited text files that can be easily parsed and generated from any scripting language, designed to simplify the exchange and manipulation of very large-scale transcriptomics data, particularly from single-cell RNA-seq."@en ;
+                  skos:definition "cell expression format files are human-readable, tab-delimited text files that can be easily parsed and generated from any scripting language, designed to simplify the exchange and manipulation of very large-scale transcriptomics data, particularly from single-cell RNA-seq."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -920,7 +920,7 @@ HBP_DATT:0000075 rdf:type owl:Class ;
 
                   rdfs:label "application/sbml+xml;version=0"@en ;
 
-                  nsu:definition "The Systems Biology Markup Language (SBML) is a machine-readable exchange format for computational models of biological processes. Its strength is in representing phenomena at the scale of biochemical reactions but it is not limited to that."@en ;
+                  skos:definition "The Systems Biology Markup Language (SBML) is a machine-readable exchange format for computational models of biological processes. Its strength is in representing phenomena at the scale of biochemical reactions but it is not limited to that."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -932,7 +932,7 @@ HBP_DATT:0000076 rdf:type owl:Class ;
 
                   rdfs:label "application/hoc;version=0"@en ;
 
-                  nsu:definition "Programming language of the NEURON software package"@en ;
+                  skos:definition "Programming language of the NEURON software package"@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -943,7 +943,7 @@ HBP_DATT:0000077 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.ebri.traces.txt;version=0"@en ;
 
-                  nsu:definition "File containing electrophysiological traces; needs a codebook."@en ;
+                  skos:definition "File containing electrophysiological traces; needs a codebook."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -955,7 +955,7 @@ HBP_DATT:0000078 rdf:type owl:Class ;
 
                   rdfs:label "image/vnd.juelich.autorad.TIFF.imagestack;version=0"@en ;
 
-                  nsu:definition "Color coded autoradiograph showing the laminar distribution of a receptor in a given cortical area of a single brain. Pial surface is at the top of the image, layer VI/white matter border is at the bottom of the image. Color scale provided to indicate density range from low to high receptor densities."@en ;
+                  skos:definition "Color coded autoradiograph showing the laminar distribution of a receptor in a given cortical area of a single brain. Pial surface is at the top of the image, layer VI/white matter border is at the bottom of the image. Color scale provided to indicate density range from low to high receptor densities."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -966,7 +966,7 @@ HBP_DATT:0000079 rdf:type owl:Class ;
 
                   rdfs:label "image/vnd.juelich.profile.TIFF.imagestack;version=0"@en ;
 
-                  nsu:definition "Course of the receptor density from the pial surface (to the left of the image, 0% on x axis) to the border between layer IV and the white matter (to the right of the image, 100% on x axis). Y axis depicts receptor density in fmol/mg protein."@en ;
+                  skos:definition "Course of the receptor density from the pial surface (to the left of the image, 0% on x axis) to the border between layer IV and the white matter (to the right of the image, 100% on x axis). Y axis depicts receptor density in fmol/mg protein."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -977,7 +977,7 @@ HBP_DATT:0000080 rdf:type owl:Class ;
 
                   rdfs:label "image/vnd.juelich.multireceptor.fingerprint.TIFF.imagestack;version=0"@en ;
 
-                  nsu:definition "Polar coordinate plot showing the mean (+ SD; dashed line) densities (in fmol/mg protein) of receptors."@en ;
+                  skos:definition "Polar coordinate plot showing the mean (+ SD; dashed line) densities (in fmol/mg protein) of receptors."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -989,7 +989,7 @@ HBP_DATT:0000081 rdf:type owl:Class ;
 
                   rdfs:label "application/vnd.abf;version=0"@en ;
 
-                  nsu:definition "Axon Binary File (ABF) format was created for the storage of binary experimental data. Format used by Axon Instruments for pCLAMP electrophysiology data acquisition and analysis software. It is also supported by AxoTape and AxoScope."@en ;
+                  skos:definition "Axon Binary File (ABF) format was created for the storage of binary experimental data. Format used by Axon Instruments for pCLAMP electrophysiology data acquisition and analysis software. It is also supported by AxoTape and AxoScope."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -1000,7 +1000,7 @@ HBP_DATT:0000082 rdf:type owl:Class ;
 
                   rdfs:label "image/bmp;version=0"@en ;
 
-                  nsu:definition "Raster graphics image file format used to store bitmap digital images, independently of the display device."@en ;
+                  skos:definition "Raster graphics image file format used to store bitmap digital images, independently of the display device."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -1012,7 +1012,7 @@ HBP_DATT:0000083 rdf:type owl:Class ;
 
                   rdfs:label "image/cdr;version=0"@en ;
 
-                  nsu:definition "CDR is a file format which was developed by the Corel Corporation and is used mainly for vector graphic images and drawings."@en ;
+                  skos:definition "CDR is a file format which was developed by the Corel Corporation and is used mainly for vector graphic images and drawings."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -1024,7 +1024,7 @@ HBP_DATT:0000084 rdf:type owl:Class ;
 
                   rdfs:label "application/octet-stream.dat;version=0"@en ;
 
-                  nsu:definition "Binary files containing containing information from electrophysiology traces; needs a codebook." @en ;
+                  skos:definition "Binary files containing containing information from electrophysiology traces; needs a codebook." @en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -1036,7 +1036,7 @@ HBP_DATT:0000085 rdf:type owl:Class ;
 
                   rdfs:label "application/x-rar-compressed;version=0"@en ;
 
-                  nsu:definition "RAR files are compressed files licensed by WinRAR." @en ;
+                  skos:definition "RAR files are compressed files licensed by WinRAR." @en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -1048,7 +1048,7 @@ HBP_DATT:0000086 rdf:type owl:Class ;
 
                   rdfs:label "image/tiff;version=0"@en ;
 
-                  nsu:definition "TIF is an image format file for high-quality graphics. TIF files are also called .TIFF, which stands for “Tagged Image Format File.” TIF files were created in the 1986 as a file format for scanned images in an attempt to get all companies to use one standard file format instead of multiple." @en ;
+                  skos:definition "TIF is an image format file for high-quality graphics. TIF files are also called .TIFF, which stands for “Tagged Image Format File.” TIF files were created in the 1986 as a file format for scanned images in an attempt to get all companies to use one standard file format instead of multiple." @en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -1061,7 +1061,7 @@ HBP_DATT:0000087 rdf:type owl:Class ;
 
                   rdfs:label "image/jpeg;version=0"@en ;
 
-                  nsu:definition "JPG is a file extension for a lossy graphics file. The JPEG file extension is used interchangeably with JPG. JPEG stands for Joint Photographic Experts Group who created the standard." @en ;
+                  skos:definition "JPG is a file extension for a lossy graphics file. The JPEG file extension is used interchangeably with JPG. JPEG stands for Joint Photographic Experts Group who created the standard." @en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
@@ -1074,7 +1074,7 @@ HBP_DATT:0000088 rdf:type owl:Class ;
 
                   rdfs:label "application/json;version=0"@en ;
 
-                  nsu:definition "JSON (JavaScript Object Notation) is an open-standard format that uses human-readable text to transmit data objects consisting of attribute–value pairs. It is the most common data format used for asynchronous browser/server communication." @en ;
+                  skos:definition "JSON (JavaScript Object Notation) is an open-standard format that uses human-readable text to transmit data objects consisting of attribute–value pairs. It is the most common data format used for asynchronous browser/server communication." @en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
