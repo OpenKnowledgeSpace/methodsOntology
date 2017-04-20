@@ -4,17 +4,21 @@
 @prefix : <http://www.hbp.FIXME.org/hbp_data_type_ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix HBP_DASP: <http://www.hbp.FIXME.org/hbp_domain_aspect/> .
 @prefix HBP_PROP: <http://www.hbp.FIXME.org/hbp_properties/> .
 @prefix HBP_DATT: <http://www.hbp.FIXME.org/hbp_data_type_ontology/> .
 @base <http://www.hbp.FIXME.org/hbp_data_type_ontology> .
 
 <http://www.hbp.FIXME.org/hbp_data_type_ontology> rdf:type owl:Ontology ;
-                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/hbp_properties.ttl> .
+                owl:imports <https://raw.githubusercontent.com/NeuroscienceKnowledgeSpace/methodsOntology/master/ttl/hbp_properties.ttl>;
+                dc:title "Data type vocabulary"@en;
+				dc:subject "Data types"@en;
+				dc:creator "Silvia Jimenez <silvia.jimenez@epfl.ch>";
+				dc:contributor "Silvia Jimenez <silvia.jimenez@epfl.ch>";
+				owl:versionInfo "1.0".
 
 
 
