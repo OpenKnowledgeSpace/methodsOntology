@@ -1,3 +1,4 @@
+
 @prefix : <http://www.hbp.FIXME.org/hbp_activity_ontology/> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -24,42 +25,42 @@ skos:definition rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000001
-HBP_ACT: rdf:type owl:Class ;
+HBP_ACT:0000001 rdf:type owl:Class ;
          rdfs:label "Activity"@en ;
          skos:definition "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities"@en .
 
 
 ###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000002
-HBP_ACT: rdf:type owl:Class ;
-         rdfs:subClassOf HBP_ACT: ;
+HBP_ACT:0000002 rdf:type owl:Class ;
+         rdfs:subClassOf HBP_ACT:0000001 ;
          rdfs:label "Annotation"@en ;
          skos:definition "Action of adding an annotation to any entity in a PROVenance graph."@en .
 
 
 ###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000004
-HBP_ACT: rdf:type owl:Class ;
-         rdfs:subClassOf HBP_ACT: ;
+HBP_ACT:0000004 rdf:type owl:Class ;
+         rdfs:subClassOf HBP_ACT:0000001 ;
          rdfs:label "Computation"@en ;
          skos:definition "Computation is any type of calculation that follows a well-defined model understood and expressed as, for example, an algorithm, or a protocol."@en .
 
 
 ###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000005
-HBP_ACT: rdf:type owl:Class ;
-         rdfs:subClassOf HBP_ACT: ,
-                         HBP_ACT: ;
+HBP_ACT:0000005 rdf:type owl:Class ;
+         rdfs:subClassOf HBP_ACT:0000004 ,
+                         HBP_ACT:0000002 ;
          rdfs:label "Classification"@en ;
          skos:definition "The action or process of classifying an observation using a computational process."@en .
 
 
 ###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000006
-HBP_ACT: rdf:type owl:Class ;
-         rdfs:subClassOf HBP_ACT: ;
+HBP_ACT:0000006 rdf:type owl:Class ;
+         rdfs:subClassOf HBP_ACT:0000001 ;
          rdfs:label "Experiment"@en .
 
 
 ###  http://www.hbp.FIXME.org/hbp_activity_ontology/0000007
-HBP_ACT: rdf:type owl:Class ;
-         rdfs:subClassOf HBP_ACT: ;
+HBP_ACT:0000007 rdf:type owl:Class ;
+         rdfs:subClassOf HBP_ACT:0000001 ;
          rdfs:label "Revision"@en ;
          skos:definition "A change or a set of changes that correct or improve a previous version of a dataset."@en .
 
