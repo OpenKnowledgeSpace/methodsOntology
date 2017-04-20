@@ -3,10 +3,17 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix HBP_DAMO: <http://www.hbp.FIXME.org/hbp_data_modality_ontology/> .
 
-<http://www.hbp.FIXME.org/hbp_data_modality_ontology> rdf:type owl:Ontology.
+<http://www.hbp.FIXME.org/hbp_data_modality_ontology> rdf:type owl:Ontology;
+	dc:title "Data category vocabulary"@en;
+	dc:subject "Data category types"@en;
+	dc:creator "Silvia Jimenez <silvia.jimenez@epfl.ch>";
+	dc:contributor "Silvia Jimenez <silvia.jimenez@epfl.ch>";
+	owl:versionInfo "1.0".
+
 # 
 # 
 # #################################################################
