@@ -4,10 +4,16 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix HBP_DTAT: <http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @base <http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology> .
 
 <http://www.hbp.FIXME.org/hbp_dataset_attributes_ontology> rdf:type owl:Ontology ;
-	owl:imports <https://raw.githubusercontent.com/OpenKnowledgeSpace/methodsOntology/master/ttl/hbp_data_modality_ontology.ttl>  .
+	owl:imports <https://raw.githubusercontent.com/OpenKnowledgeSpace/methodsOntology/master/ttl/hbp_data_modality_ontology.ttl>;
+	dc:title "Dataset attributes"@en;
+	dc:subject "Collection of attributes that can be used to annotate datasets"@en;
+	dc:creator "Silvia Jimenez <silvia.jimenez@epfl.ch>";
+	dc:contributor "Silvia Jimenez <silvia.jimenez@epfl.ch>";
+	owl:versionInfo "1.0".
 # 
 # 
 # #################################################################
