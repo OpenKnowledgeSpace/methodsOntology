@@ -114,7 +114,7 @@ obo:NCBITaxon_9989 rdf:type owl:Class ;
 
 
 HBP_TAX:0000008 rdf:type owl:Class ;
-                 rdfs:label "Han wistar"@en ;
+                 rdfs:label "Wistar Han"@en ;
                  rdfs:subClassOf obo:NCBITaxon_10116 ;
                  HBP_PROP:has_rank HBP_TAX:9999998 .
 
