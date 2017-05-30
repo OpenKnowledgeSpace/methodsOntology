@@ -118,7 +118,7 @@ HBP_DAMO:0000014 rdf:type owl:Class ;
 
 HBP_DAMO:0000015 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000007 ;
-	nsu:definition "Effective connectivity include data assessing the directed dependencies between two anatomical entities (brain regions) typically through Granger causality or by fitting of rdf:type model implying causal relationships such as Dynamical Causal Modelling or transfer entropy. Scales include: Brain, Brain regions."@en ;
+	nsu:definition "Effective connectivity include data assessing the directed dependencies between two anatomical entities (brain regions) typically through Granger causality or by fitting of a type model implying causal relationships such as Dynamical Causal Modelling or transfer entropy. Scales include: Brain, Brain regions."@en ;
 	rdfs:label "Effective connectivity"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000016
@@ -132,7 +132,7 @@ HBP_DAMO:0000016 rdf:type owl:Class ;
 
 HBP_DAMO:0000017 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000006 ;
-	nsu:definition "Structural imaging investigates the structure of the brain and can be used for the diagnosis of large scale intracranial disease, such as tumor, and injury . "@en ;
+	nsu:definition "Structural imaging investigates the structure of the brain and can be used for the diagnosis of large scale intracranial disease, such as tumor, and injury. "@en ;
 	rdfs:label "Structural imaging"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000018
@@ -153,7 +153,7 @@ HBP_DAMO:0000019 rdf:type owl:Class ;
 
 HBP_DAMO:0000020 rdf:type owl:Class ;
 	rdfs:subClassOf HBP_DAMO:0000025 ;
-	nsu:definition "Tracts connecting the cortex with other areas of the central nervous system"@en ;
+	nsu:definition "Tracts connecting the cortex with other areas of the central nervous system."@en ;
 	rdfs:label "Projection tracts"@en .
 # 
 # http://www.hbp.FIXME.org/hbp_data_modality_ontology/0000021
