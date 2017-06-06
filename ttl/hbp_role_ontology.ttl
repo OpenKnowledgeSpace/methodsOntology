@@ -346,3 +346,13 @@ HBP_ROLE:0000045 a owl:Class ;
       rdfs:label "software engineer"@en ;
       nsu:definition  "professional that deals with the design, implementation, and maintenance of complex computer programs." @en ;
       rdfs:subClassOf HBP_ROLE:0000000 .
+
+HBP_ROLE:0000046 a owl:Class ;
+      rdfs:label "cell morphology reconstruction expert"@en ;
+      nsu:definition  "professional that carries out the morphology reconstruction of a neuron." @en ;
+      rdfs:subClassOf HBP_ROLE:0000000 .
+
+HBP_ROLE:0000047 a owl:Class ;
+      rdfs:label "technical assistant"@en ;
+      nsu:definition  "professional that provides support for scientific and research activities performing a variety of defined research and laboratory tests and experiments." @en ;
+      rdfs:subClassOf HBP_ROLE:0000000 .
