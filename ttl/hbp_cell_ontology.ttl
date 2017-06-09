@@ -40,13 +40,13 @@ HBP_CELL:0000002 rdf:type owl:Class ;
 
 
 HBP_CELL:0000003 rdf:type owl:Class ;
-                  rdfs:label "Neuron classified base morphological properties"@en ;
+                  rdfs:label "Neuron classified based on morphology types"@en ;
                   rdfs:subClassOf HBP_CELL:0000001 .
 
 
 
 HBP_CELL:0000004 rdf:type owl:Class ;
-                  rdfs:label "Neuron classified base electrical properties"@en ;
+                  rdfs:label "Neuron classified based on electrical properties"@en ;
                   rdfs:subClassOf HBP_CELL:0000001 .
 
 
