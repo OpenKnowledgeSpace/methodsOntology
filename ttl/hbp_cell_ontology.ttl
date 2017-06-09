@@ -1090,7 +1090,7 @@ HBP_CELL:0000133 rdf:type owl:Class ;
 HBP_CELL:0000134 rdf:type owl:Class ;
                   rdfs:label "Layer IV star pyramidal cell"@en ;
                   nsu:synonym "L4_SP"@en ;
-                  rdfs:subClassOf HBP_CELL:0000018 ;
+                  rdfs:subClassOf HBP_CELL:0000027 ;
                   rdfs:subClassOf HBP_CELL:0000033 .
 
 
