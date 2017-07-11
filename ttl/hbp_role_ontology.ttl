@@ -41,7 +41,7 @@ HBP_ROLE:0000038 a owl:Class ;
       rdfs:subClassOf HBP_ROLE:0000000 .
 
 HBP_ROLE:0000039 a owl:Class ;
-      rdfs:label "data management"@en ;
+      rdfs:label "data manager"@en ;
       nsu:definition "person in charge of the development, execution and supervision of plans, policies, programs and practices that control, protect, deliver and enhance the value of data and information assets" @en ;
       rdfs:subClassOf HBP_ROLE:0000000 .
 
