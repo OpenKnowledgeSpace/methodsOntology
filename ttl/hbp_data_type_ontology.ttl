@@ -880,6 +880,8 @@ HBP_DATT:0000071 rdf:type owl:Class ;
 
                   rdfs:label "image/vnd.nrrd;version=0"@en ;
 
+                  nsu:definition "Nrrd ("nearly raw raster data") is a library and file format for the representation and processing of N-dimensional raster data. It is intended to support scientific visualization and image processing applications."@en ;
+
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
                   HBP_PROP:has_file_extension ".nrrd" .
@@ -909,7 +911,7 @@ HBP_DATT:0000074 rdf:type owl:Class ;
 
                   rdfs:label "application/cef;version=0"@en ;
 
-                  nsu:definition "cell expression format files are human-readable, tab-delimited text files that can be easily parsed and generated from any scripting language, designed to simplify the exchange and manipulation of very large-scale transcriptomics data, particularly from single-cell RNA-seq."@en ;
+                  nsu:definition "Cell expression format files are human-readable, tab-delimited text files that can be easily parsed and generated from any scripting language, designed to simplify the exchange and manipulation of very large-scale transcriptomics data, particularly from single-cell RNA-seq."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
