@@ -880,7 +880,7 @@ HBP_DATT:0000071 rdf:type owl:Class ;
 
                   rdfs:label "image/vnd.nrrd;version=0"@en ;
 
-                  nsu:definition "Nrrd ("nearly raw raster data") is a library and file format for the representation and processing of N-dimensional raster data. It is intended to support scientific visualization and image processing applications."@en ;
+                  nsu:definition "Nrrd ('nearly raw raster data') is a library and file format for the representation and processing of N-dimensional raster data. It is intended to support scientific visualization and image processing applications."@en ;
 
                   rdfs:subClassOf HBP_DATT:0000040 ;
 
